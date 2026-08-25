@@ -1,0 +1,53 @@
+{
+    "categories": [
+        {
+            "category": "Guide",
+            "keywords": [
+                "scavland beginner guide",
+                "scavland weapons guide",
+                "scavland faction guide",
+                "scavland where to find",
+                "scavland how to craft"
+            ]
+        },
+        {
+            "category": "Release",
+            "keywords": [
+                "scavland release date",
+                "scavland demo",
+                "scavland test build"
+            ]
+        },
+        {
+            "category": "Platforms",
+            "keywords": [
+                "scavland steam",
+                "scavland mobile",
+                "scavland ps5",
+                "scavland gog",
+                "scavland download"
+            ]
+        },
+        {
+            "category": "Community",
+            "keywords": [
+                "scavland discord",
+                "scavland reddit",
+                "scavland patreon"
+            ]
+        },
+        {
+            "category": "Localization",
+            "keywords": [
+                "scavland how to enable russian",
+                "scavland russian patch"
+            ]
+        },
+        {
+            "category": "Co-op",
+            "keywords": [
+                "scavland co op extract"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+---
+const { guide } = Astro.props;
+const isVideo = guide.image.endsWith('.mp4');
+---
+<a class="guide-card" href={`/guide/${guide.slug}/`}><div class="card-media">{isVideo ? <video src={guide.image} muted loop autoplay playsinline aria-label={guide.imageAlt}></video> : <img src={guide.image} alt={guide.imageAlt} loading="lazy" />}</div><div class="card-copy"><span class="eyebrow">{guide.category} · {guide.evidence}</span><h3>{guide.shortTitle}</h3><p>{guide.description}</p><span class="read-link">Read field notes <span aria-hidden="true">↗</span></span></div></a>

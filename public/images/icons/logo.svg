@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1c2420"/>
+      <stop offset="100%" stop-color="#0d100f"/>
+    </radialGradient>
+    <radialGradient id="toxicGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3fa66b" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#246843" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#153623" stop-opacity="0.1"/>
+    </radialGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4a5750"/>
+      <stop offset="50%" stop-color="#2c3631"/>
+      <stop offset="100%" stop-color="#1a211e"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="96" fill="none" stroke="#3fa66b" stroke-width="4" stroke-opacity="0.4"/>
+
+  <!-- Subtle Radiation Symbol Background -->
+  <g opacity="0.12" fill="#3fa66b">
+    <circle cx="256" cy="256" r="40"/>
+    <path d="M 256 186 L 226 70 A 190 190 0 0 1 286 70 Z"/>
+    <path d="M 195 291 L 94 350 A 190 190 0 0 1 64 298 Z"/>
+    <path d="M 317 291 L 368 408 A 190 190 0 0 1 318 436 Z"/>
+  </g>
+
+  <!-- Gas Mask / Vulture Survivor Silhouette -->
+  <!-- Hood/Helmet Outline -->
+  <path d="M146 360 C130 290 140 180 200 130 C230 105 282 105 312 130 C372 180 382 290 366 360 C350 430 310 440 256 440 C202 440 162 430 146 360 Z" fill="url(#metalGrad)" stroke="#232d28" stroke-width="6"/>
+
+  <!-- Eye Lenses with Toxic Glow -->
+  <!-- Left Eye -->
+  <circle cx="206" cy="235" r="44" fill="#151a18" stroke="#3fa66b" stroke-width="6"/>
+  <circle cx="206" cy="235" r="36" fill="url(#toxicGlow)" filter="url(#glow)"/>
+  <circle cx="206" cy="235" r="28" fill="#3fa66b" opacity="0.3"/>
+  <circle cx="196" cy="223" r="10" fill="#a7f3d0" opacity="0.6"/>
+
+  <!-- Right Eye -->
+  <circle cx="306" cy="235" r="44" fill="#151a18" stroke="#3fa66b" stroke-width="6"/>
+  <circle cx="306" cy="235" r="36" fill="url(#toxicGlow)" filter="url(#glow)"/>
+  <circle cx="306" cy="235" r="28" fill="#3fa66b" opacity="0.3"/>
+  <circle cx="296" cy="223" r="10" fill="#a7f3d0" opacity="0.6"/>
+
+  <!-- Bridge connector between eyes -->
+  <rect x="242" y="228" width="28" height="14" rx="4" fill="#1f2723" stroke="#3fa66b" stroke-width="2"/>
+
+  <!-- Central Filter Canister / Respirator -->
+  <circle cx="256" cy="345" r="46" fill="#18201c" stroke="#3fa66b" stroke-width="5"/>
+  <circle cx="256" cy="345" r="34" fill="#121614" stroke="#2a3830" stroke-width="3"/>
+  
+  <!-- Filter grid slits -->
+  <line x1="236" y1="335" x2="276" y2="335" stroke="#3fa66b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="230" y1="345" x2="282" y2="345" stroke="#3fa66b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="236" y1="355" x2="276" y2="355" stroke="#3fa66b" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Cheek Valve Left -->
+  <ellipse cx="170" cy="325" rx="16" ry="22" fill="#151a18" stroke="#2a3830" stroke-width="3"/>
+  <!-- Cheek Valve Right -->
+  <ellipse cx="342" cy="325" rx="16" ry="22" fill="#151a18" stroke="#2a3830" stroke-width="3"/>
+</svg>

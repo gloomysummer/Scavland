@@ -1,0 +1,24 @@
+---
+import '../styles/global.css';
+const { title = 'Scavland Wiki', description = 'Evidence-led guides for surviving, scavenging and exploring Scavland.', canonical = Astro.url.pathname } = Astro.props;
+const siteUrl = 'https://scavland.wiki';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={`${siteUrl}${canonical}`} />
+    <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:image" content={`${siteUrl}/images/hero/header.jpg`} />
+    <link rel="icon" href="/images/icons/logo.svg" type="image/svg+xml" />
+    <slot name="schema" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header"><a class="brand" href="/"><img src="/images/icons/logo.svg" alt="" width="32" height="32" /><span>SCAVLAND<span class="brand-sub">FIELD NOTES</span></span></a><nav aria-label="Primary"><a href="/guide/scavland-beginner-guide/">Start here</a><a href="/guide/scavland-weapons-and-attachments/">Gear</a><a href="/guide/scavland-map-and-locations/">Map</a><a href="/search/" class="nav-search">Search <kbd>/</kbd></a></nav></header>
+    <main><slot /></main>
+    <footer class="site-footer"><div><strong>Scavland Field Notes</strong><p>Independent, evidence-labelled guides for the wasteland. Not affiliated with NoShadow.</p></div><div class="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Official Steam</a></div><small>Research updated 25 Aug 2026 · Evidence before certainty.</small></footer>
+  </body>
+</html>
