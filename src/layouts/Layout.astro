@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-const { title = 'Scavland Wiki', description = 'Evidence-led guides for surviving, scavenging and exploring Scavland.', canonical = Astro.url.pathname } = Astro.props;
+const { title = 'Scavland Wiki', description = 'Evidence-led guides for surviving, scavenging and exploring Scavland.', keywords = 'Scavland, survival RPG, weapons, loot, quests, factions, Mist, crafting', canonical = Astro.url.pathname } = Astro.props;
 const siteUrl = 'https://scavland.wiki';
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => currentPath === path || (path !== '/' && currentPath.startsWith(path));
@@ -12,6 +12,7 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
     <meta name="viewport" content="width=device-width" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <link rel="canonical" href={`${siteUrl}${canonical}`} />
     <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:image" content={`${siteUrl}/images/hero/header.jpg`} />
     <link rel="icon" href="/images/icons/logo.svg" type="image/svg+xml" />
