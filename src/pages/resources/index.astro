@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { guides } from '../../data/guides';
+const resources = guides.filter((guide) => ['Resources','Gear','Systems'].includes(guide.category));
+---
+<Layout title="Scavland resources | Scavland Wiki" description="Find Scavland loot, scavenging, crafting and gear resources with clear evidence labels." canonical="/resources/"><section class="listing"><p class="eyebrow">Resource desk</p><h1 class="page-title">Find<br/><span style="color:var(--acid)">useful.</span></h1><p class="lede">Loot, materials, weapons and trade decisions grouped for the next run. No invented drop tables.</p><div class="listing-grid">{resources.map((guide) => <GuideCard guide={guide} />)}</div></section></Layout>

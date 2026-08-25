@@ -2,6 +2,8 @@
 import '../styles/global.css';
 const { title = 'Scavland Wiki', description = 'Evidence-led guides for surviving, scavenging and exploring Scavland.', canonical = Astro.url.pathname } = Astro.props;
 const siteUrl = 'https://scavland.wiki';
+const currentPath = Astro.url.pathname;
+const isActive = (path: string) => currentPath === path || (path !== '/' && currentPath.startsWith(path));
 ---
 <!doctype html>
 <html lang="en">
@@ -17,8 +19,9 @@ const siteUrl = 'https://scavland.wiki';
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
-    <header class="site-header"><a class="brand" href="/"><img src="/images/icons/logo.svg" alt="" width="32" height="32" /><span>SCAVLAND<span class="brand-sub">FIELD NOTES</span></span></a><nav aria-label="Primary"><a href="/guide/scavland-beginner-guide/">Start here</a><a href="/guide/scavland-weapons-and-attachments/">Gear</a><a href="/guide/scavland-map-and-locations/">Map</a><a href="/search/" class="nav-search">Search <kbd>/</kbd></a></nav></header>
-    <main><slot /></main>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header"><a class="brand" href="/"><img src="/images/icons/logo.svg" alt="" width="32" height="32" /><span>SCAVLAND<span class="brand-sub">FIELD NOTES</span></span></a><nav aria-label="Primary"><a class:list={{active:isActive('/guide/')}} href="/guide/">Guides</a><a class:list={{active:isActive('/wiki/')}} href="/wiki/">Systems</a><a class:list={{active:isActive('/resources/')}} href="/resources/">Resources</a><a class:list={{active:isActive('/maps/')}} href="/maps/">World</a><a class:list={{active:isActive('/updates/')}} href="/updates/">Updates</a><a href="/search/" class="nav-search" aria-label="Search guides">Search <kbd>/</kbd></a></nav></header>
+    <main id="main-content"><slot /></main>
     <footer class="site-footer"><div><strong>Scavland Field Notes</strong><p>Independent, evidence-labelled guides for the wasteland. Not affiliated with NoShadow.</p></div><div class="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Official Steam</a></div><small>Research updated 25 Aug 2026 · Evidence before certainty.</small></footer>
   </body>
 </html>

@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { guides } from '../../data/guides';
+const world = guides.filter((guide) => ['Exploration','Resources'].includes(guide.category));
+---
+<Layout title="Scavland map and world | Scavland Wiki" description="Explore the Scavland map, locations, Mist hazards and safe route notes." canonical="/maps/"><section class="listing"><p class="eyebrow">World index</p><h1 class="page-title">Read<br/><span style="color:var(--acid)">the world.</span></h1><p class="lede">Locations are useful only when their evidence is clear. Start with the map notes and hazard guide.</p><div class="listing-grid">{world.map((guide) => <GuideCard guide={guide} />)}</div></section></Layout>

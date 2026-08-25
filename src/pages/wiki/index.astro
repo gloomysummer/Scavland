@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { guides } from '../../data/guides';
+const systems = guides.filter((guide) => ['Systems','Gear','Progression'].includes(guide.category));
+---
+<Layout title="Scavland systems wiki | Scavland Wiki" description="Scavland systems reference for weapons, attachments, crafting, trading, quests and faction decisions." canonical="/wiki/"><section class="listing"><p class="eyebrow">Systems index</p><h1 class="page-title">The<br/><span style="color:var(--acid)">systems.</span></h1><p class="lede">A reference layer for the things you control: gear, jobs, factions, crafting and trade. Mechanics stay labelled until tested.</p><div class="listing-grid">{systems.map((guide) => <GuideCard guide={guide} />)}</div></section></Layout>

@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { guides } from '../../data/guides';
+---
+<Layout title="Scavland guides | Scavland Wiki" description="Browse Scavland survival, gear, progression, exploration and crafting guides." canonical="/guide/"><section class="listing"><p class="eyebrow">Primary index</p><h1 class="page-title">All<br/><span style="color:var(--acid)">guides.</span></h1><p class="lede">Start with the learning path, then move into systems and locations as your runs become more ambitious.</p><div class="listing-grid">{guides.map((guide) => <GuideCard guide={guide} />)}</div></section></Layout>
