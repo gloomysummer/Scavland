@@ -17,7 +17,12 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
     <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:image" content={`${siteUrl}/images/hero/header.jpg`} />
     <link rel="icon" href="/images/icons/logo.svg" type="image/svg+xml" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFV7HR5LJR"></script>
-    <script is:inline define:vars={{ measurementId: 'G-EFV7HR5LJR' }}>{`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config',measurementId);`}</script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-EFV7HR5LJR');
+    </script>
     <slot name="schema" />
   </head>
   <body>
