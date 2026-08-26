@@ -13,9 +13,25 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={`${siteUrl}${canonical}`} />
-    <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:image" content={`${siteUrl}/images/hero/header.jpg`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${siteUrl}${canonical}`} />
+    <meta property="og:site_name" content="Scavland Wiki" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={`${siteUrl}/images/og-scavland.jpg`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Scavland Field Notes survival RPG wiki" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${siteUrl}/images/og-scavland.jpg`} />
+    <link rel="icon" href="/images/icons/favicon-48.png" sizes="48x48" type="image/png" />
     <link rel="icon" href="/images/icons/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="192x192" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFV7HR5LJR"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
