@@ -1,4 +1,99 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const timeline = [
+  {
+    date: 'August 29, 2026',
+    tag: 'Developer Confirmation',
+    title: 'Lucasmml Steam Developer Q&A: Anomaly Scanner & Core Mechanics',
+    summary: 'Lead developer Lucasmml addressed community feedback on Steam, confirming vital in-game mechanics ahead of launch.',
+    details: [
+      'Anomaly Scanner: Confirmed equipping via slot [3] and following increasing audio beep frequency/pitch to locate hidden artifacts.',
+      'Ammo Management: Stack-aware vertical slot ammo unloading system confirmed in active development.',
+      'Loot Utility: High-value industrial scrap (spark plugs, lighters, toolboxes) has specialized merchant priority; future patches will expand utility of crowbars and blades beyond basic barter.',
+      'Weapon Customization: Dedicated weapon modding, repair stations, and attachment fitting confirmed for ongoing rollout.'
+    ]
+  },
+  {
+    date: 'August 23, 2026',
+    tag: 'Milestone',
+    title: '100,000+ Steam Wishlist Milestone Announced',
+    summary: 'NoShadow and community partners celebrated crossing 100K wishlists as development expanded across 6 years from a 3-person team to 15 contributors.',
+    details: [
+      'Confirmed September 4, 2026 Early Access target launch date.',
+      'Showcased finalized overworld map topology for the Zalesye exclusion zone.',
+      'Highlighted 10 distinct factions with dynamic reputation and trade standing.'
+    ]
+  },
+  {
+    date: 'June 9, 2026',
+    tag: 'Playtest Patch v0.2.4.1',
+    title: 'Combat Responsiveness & Visual Polish Update',
+    summary: 'Pre-launch build refinements for visual readability, bleeding debuff balancing, and enemy perception ranges.',
+    details: [
+      'Adjusted item hover delay from 0.25s to 0.125s for snappier inventory sorting.',
+      'Capped shotgun bleeding effect trigger to a maximum of 1 stack per blast.',
+      'Enhanced outline visibility radius for containers and distant targets while aiming down sights.'
+    ]
+  }
+];
 ---
-<Layout title="Scavland updates and release watch | Scavland Wiki" description="Track Scavland release context, official announcements and the evidence changes that affect this guide site." canonical="/updates/"><section class="listing"><p class="eyebrow">Release watch</p><h1 class="page-title">Updates<br/><span style="color:var(--acid)">with receipts.</span></h1><div class="prose"><p>This page is intentionally compact until the Early Access build supplies patch notes and reproducible tests. We will record source date, build version and what changed before updating guides.</p><h2>Current baseline</h2><p>The Steam store and developer announcements are the official references for planned release timing and feature scope. Pre-release screenshots and videos are labelled community demonstrations where they do not establish a mechanic.</p><h2>What gets updated</h2><ul><li>Release date or platform facts from official sources.</li><li>Guide claims after a reproducible in-game test.</li><li>Maps, loot and recipes only after versioned captures.</li></ul></div></section></Layout>
+<Layout 
+  title="Scavland Updates & Release Timeline | Scavland Wiki" 
+  description="Verified timeline of Scavland announcements, developer mechanic confirmations, Early Access launch timing, and changelogs." 
+  canonical="/updates/"
+>
+  <section class="listing">
+    <p class="eyebrow">Release watch &amp; verification log</p>
+    <h1 class="page-title">Updates<br/><span style="color:var(--acid)">with verified receipts.</span></h1>
+    <p class="lede" style="max-width:720px;margin-bottom:2.5rem;color:var(--muted)">
+      Every claim on Scavland Field Notes is backed by dated official announcements, developer statements, or reproducible in-game tests.
+    </p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;margin-bottom:3rem;">
+      <div style="padding:1.25rem;background:rgba(218,255,125,0.05);border:1px solid rgba(218,255,125,0.2);border-radius:8px;">
+        <span style="font-size:0.8rem;color:var(--acid);font-family:var(--font-mono,monospace);text-transform:uppercase;">Launch Target</span>
+        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;">Sept 4, 2026</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">Steam Early Access (Act I Region)</p>
+      </div>
+      <div style="padding:1.25rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
+        <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono,monospace);text-transform:uppercase;">Community Scale</span>
+        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;">100K+</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">Global Steam Wishlists</p>
+      </div>
+      <div style="padding:1.25rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
+        <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono,monospace);text-transform:uppercase;">Launch Scope</span>
+        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;">25+ Guns / 10 Factions</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">300+ Weapon Attachments</p>
+      </div>
+    </div>
+
+    <h2 style="font-size:1.5rem;margin-bottom:1.5rem;">Timeline of Official Statements &amp; Verified Changes</h2>
+    
+    <div style="position:relative;border-left:2px solid rgba(255,255,255,0.1);padding-left:1.5rem;margin-left:0.5rem;">
+      {timeline.map((item) => (
+        <div style="position:relative;margin-bottom:2.5rem;">
+          <div style="position:absolute;left:-1.95rem;top:0.25rem;width:12px;height:12px;border-radius:50%;background:var(--acid,#daff7d);box-shadow:0 0 8px var(--acid,#daff7d);"></div>
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.4rem;">
+            <span style="font-family:var(--font-mono,monospace);font-size:0.85rem;color:var(--text-muted);">{item.date}</span>
+            <span style="font-size:0.7rem;padding:0.15rem 0.45rem;border-radius:3px;background:rgba(255,255,255,0.08);color:#fff;font-weight:600;">{item.tag}</span>
+          </div>
+          <h3 style="margin:0 0 0.5rem;font-size:1.2rem;color:var(--heading,#fff);">{item.title}</h3>
+          <p style="margin:0 0 0.75rem;color:var(--text-muted,#bbb);line-height:1.5;">{item.summary}</p>
+          <ul style="margin:0;padding-left:1.25rem;color:var(--text-muted,#aaa);font-size:0.95rem;line-height:1.6;">
+            {item.details.map((detail) => (
+              <li>{detail}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <div style="margin-top:2rem;padding:1.25rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:6px;">
+      <h3 style="margin-top:0;font-size:1.05rem;">How we update this site</h3>
+      <p style="margin-bottom:0;color:var(--text-muted);font-size:0.9rem;">
+        When the September 4 Early Access build goes live, our testing ledger will verify weapon damage tables, artifact spawn coordinates, trader prices, and bunker layout seeds through repeatable in-game test captures.
+      </p>
+    </div>
+  </section>
+</Layout>

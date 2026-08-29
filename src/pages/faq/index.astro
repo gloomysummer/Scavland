@@ -1,4 +1,108 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  {
+    category: 'Release & Platforms',
+    question: 'When is the Scavland Early Access release date?',
+    answer: 'Scavland officially launches into Steam Early Access on September 4, 2026. The initial release features the full Act I territory of the Zalesye wasteland, procedural bunkers, 10 factions, and over 25 weapons.'
+  },
+  {
+    category: 'Release & Platforms',
+    question: 'Is there still a demo available on Steam?',
+    answer: 'The playable Steam demo was made available during pre-launch playtests to test core movement, combat, and inventory systems. Prior to Early Access launch on September 4, 2026, the developer transition moves all progress into the full Early Access build.'
+  },
+  {
+    category: 'Gameplay & Mechanics',
+    question: 'Is Scavland a rogue-lite or permadeath game?',
+    answer: 'No. Scavland is a persistent top-down survival RPG with persistent stash and quest progression. While dying in the wasteland drops your equipped backpack at the spot of defeat, you do not lose your base storage or character progress, and you can mount a recovery run to retrieve your dropped backpack.'
+  },
+  {
+    category: 'Gameplay & Mechanics',
+    question: 'How do you use the Anomaly Scanner to find artifacts?',
+    answer: 'Equip the handheld Anomaly Scanner using key slot [3]. Point the device towards visible heat/electrical distortions and move carefully. As confirmed by developer Lucasmml, the scanner audio beeps faster and louder as you close in on the epicenter where rare artifacts manifest on the ground.'
+  },
+  {
+    category: 'Gameplay & Mechanics',
+    question: 'What happens when you die in Scavland?',
+    answer: 'When you die, your active backpack drops at that exact world coordinate as a retrievable container. You respawn safely in your base hub, where you can gear up with secondary fallback items and travel back to retrieve your lost loot.'
+  },
+  {
+    category: 'Equipment & Economy',
+    question: 'Which junk items are most valuable to keep for traders?',
+    answer: 'Not all junk is equal. Settlement merchants pay significantly higher barter prices for functional industrial parts such as spark plugs, lighters, toolboxes, electrical relays, and medical supplies compared to common scrap.'
+  },
+  {
+    category: 'Equipment & Economy',
+    question: 'What should I do with Crowbars and Knives?',
+    answer: 'In the current build, crowbars and blades function primarily as valuable barter items to sell to merchants. The development team has confirmed that future content updates will introduce dedicated utility interactions (such as container prying and lock manipulation).'
+  },
+  {
+    category: 'Equipment & Economy',
+    question: 'Will there be weapon modding and ammo unloading?',
+    answer: 'Yes. The full game features 25+ base firearms and over 300 attachments. Developer Lucasmml confirmed dedicated weapon modding stations, item repairs, and stack-aware vertical ammo unloading are actively in the development roadmap.'
+  },
+  {
+    category: 'Community & Mods',
+    question: 'Will Scavland support Steam Workshop and user mods?',
+    answer: 'Modding and deep customization are part of the game design philosophy. Official Steam Workshop integration is currently on the post-launch roadmap as core gameplay systems stabilize during Early Access.'
+  },
+  {
+    category: 'Community & Mods',
+    question: 'Is this an official wiki?',
+    answer: 'No. Scavland Field Notes (scavland.wiki) is an independent, evidence-labelled fan guide site. Every guide clearly differentiates between verified official developer statements, in-game test results, and community demonstrations.'
+  }
+];
+
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqs.map(faq => ({
+    '@type': 'Question',
+    'name': faq.question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.answer
+    }
+  }))
+};
 ---
-<Layout title="Scavland FAQ | Scavland Wiki" description="Clear answers about Scavland's release, sources, platforms and what this independent guide site can verify." canonical="/faq/"><section class="listing"><p class="eyebrow">Fast answers</p><h1 class="page-title">FAQ<span style="color:var(--acid)">/</span></h1><div class="prose faq-list"><details open><summary>What is Scavland?</summary><p>Scavland is a top-down survival RPG set in a post-apocalyptic world, built around scavenging, combat, quests, factions, crafting and trading.</p></details><details><summary>When is Early Access?</summary><p>The current date is the one listed by the official Steam page and developer announcements. Check the release-watch page for the latest source date.</p></details><details><summary>Is this an official wiki?</summary><p>No. Scavland Field Notes is an independent, fan-made guide site and is not affiliated with or endorsed by NoShadow.</p></details><details><summary>Why are some answers cautious?</summary><p>Pre-release footage can show context without proving a universal rule. We label official claims, community demonstrations and personal tests separately.</p></details></div></section></Layout>
+<Layout 
+  title="Scavland FAQ: Release Date, Gameplay Mechanics, Scanner & Loot" 
+  description="Comprehensive answers to top community questions for Scavland: Early Access release date, Anomaly Scanner usage, death mechanics, trader items, weapon modding, and mod support." 
+  canonical="/faq/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </Fragment>
+
+  <section class="listing">
+    <p class="eyebrow">Evidence-based answers</p>
+    <h1 class="page-title">Frequently Asked Questions<span style="color:var(--acid)">.</span></h1>
+    <p class="lede" style="max-width:720px;margin-bottom:2.5rem;color:var(--muted)">
+      Everything you need to know about Scavland's September 4, 2026 Early Access launch, core survival mechanics, developer-confirmed systems, and wasteland extraction.
+    </p>
+
+    <div class="prose faq-list">
+      {faqs.map((faq, index) => (
+        <details open={index < 4} style="margin-bottom:1.25rem;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.02);border-radius:6px;padding:1rem 1.25rem;">
+          <summary style="cursor:pointer;font-weight:600;font-size:1.1rem;color:var(--heading,#fff);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+            <span>{faq.question}</span>
+            <span style="font-size:0.75rem;padding:0.2rem 0.5rem;border-radius:4px;background:rgba(218,255,125,0.1);color:var(--acid,#daff7d);font-family:var(--font-mono,monospace);">{faq.category}</span>
+          </summary>
+          <p style="margin-top:0.75rem;margin-bottom:0;color:var(--text-muted,#c5c5c5);line-height:1.6;">
+            {faq.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+
+    <div style="margin-top:3rem;padding:1.5rem;border-left:3px solid var(--acid,#daff7d);background:rgba(218,255,125,0.05);border-radius:0 6px 6px 0;">
+      <h3 style="margin-top:0;font-size:1.1rem;">Have a question not listed here?</h3>
+      <p style="margin-bottom:0.75rem;color:var(--text-muted,#bbb);">
+        Check out our comprehensive field guides for in-depth breakdowns on weapons, maps, factions, and survival routes.
+      </p>
+      <a class="button" href="/guide/">Browse All Field Guides <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</Layout>
