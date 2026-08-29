@@ -80,11 +80,39 @@ const timeline = [
           </div>
           <h3 style="margin:0 0 0.5rem;font-size:1.2rem;color:var(--heading,#fff);">{item.title}</h3>
           <p style="margin:0 0 0.75rem;color:var(--text-muted,#bbb);line-height:1.5;">{item.summary}</p>
-          <ul style="margin:0;padding-left:1.25rem;color:var(--text-muted,#aaa);font-size:0.95rem;line-height:1.6;">
+          <ul style="margin:0 0 1rem 0;padding-left:1.25rem;color:var(--text-muted,#aaa);font-size:0.95rem;line-height:1.6;">
             {item.details.map((detail) => (
               <li>{detail}</li>
             ))}
           </ul>
+          {item.date === 'August 29, 2026' && (
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;margin-top:0.75rem;">
+              <figure style="margin:0;">
+                <img src="/images/screenshots/steam_ss_09.jpg" alt="In-game radioactive anomaly scan test" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
+                <figcaption style="font-size:0.75rem;color:var(--text-muted,#888);margin-top:0.3rem;">Anomaly scanner sweep &amp; artifact extraction</figcaption>
+              </figure>
+              <figure style="margin:0;">
+                <img src="/images/screenshots/steam_ss_05.jpg" alt="In-game inventory grid and ammo management" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
+                <figcaption style="font-size:0.75rem;color:var(--text-muted,#888);margin-top:0.3rem;">Inventory stacking &amp; ammo unloading preview</figcaption>
+              </figure>
+              <figure style="margin:0;">
+                <img src="/images/community/yt_dropin_letsplay.jpg" alt="Dropin community gameplay demonstration" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
+                <figcaption style="font-size:0.75rem;color:var(--text-muted,#888);margin-top:0.3rem;">Community test: trader junk value &amp; barter</figcaption>
+              </figure>
+            </div>
+          )}
+          {item.date === 'August 23, 2026' && (
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;margin-top:0.75rem;">
+              <figure style="margin:0;">
+                <img src="/images/screenshots/steam_ss_08.jpg" alt="Zalesye overworld map layout" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
+                <figcaption style="font-size:0.75rem;color:var(--text-muted,#888);margin-top:0.3rem;">Official overworld zone map (Act I)</figcaption>
+              </figure>
+              <figure style="margin:0;">
+                <img src="/images/screenshots/steam_ss_01.jpg" alt="Tactical ruin exploration at night" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
+                <figcaption style="font-size:0.75rem;color:var(--text-muted,#888);margin-top:0.3rem;">Night scavenging &amp; tactical combat</figcaption>
+              </figure>
+            </div>
+          )}
         </div>
       ))}
     </div>

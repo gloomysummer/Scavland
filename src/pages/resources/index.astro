@@ -2,6 +2,42 @@
 import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import { guides } from '../../data/guides';
-const resources = guides.filter((guide) => ['Resources','Gear','Systems'].includes(guide.category));
+import { media } from '../../data/media';
+
+const resources = guides.filter((guide) => ['Resources','Gear','Systems','Exploration'].includes(guide.category));
+const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'community');
 ---
-<Layout title="Scavland resources | Scavland Wiki" description="Find Scavland loot, scavenging, crafting and gear resources with clear evidence labels." canonical="/resources/"><section class="listing"><p class="eyebrow">Resource desk</p><h1 class="page-title">Find<br/><span style="color:var(--acid)">useful.</span></h1><p class="lede">Loot, materials, weapons and trade decisions grouped for the next run. No invented drop tables.</p><div class="listing-grid">{resources.map((guide) => <GuideCard guide={guide} />)}</div></section></Layout>
+<Layout title="Scavland Resources & Media Vault | Scavland Wiki" description="Find Scavland loot, scavenging, crafting, weapons, and 1080p verified in-game screenshots." canonical="/resources/">
+  <section class="listing">
+    <p class="eyebrow">Resource desk &amp; media vault</p>
+    <h1 class="page-title">Find<br/><span style="color:var(--acid)">verified gear &amp; evidence.</span></h1>
+    <p class="lede">Loot, materials, weapons, anomaly equipment, and 1080p in-game screenshots captured from official store media and community playtests.</p>
+    
+    <div class="listing-grid">{resources.map((guide) => <GuideCard guide={guide} />)}</div>
+
+    <div style="margin-top:4rem;">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Visual Evidence</p>
+          <h2 style="font-size:1.6rem;color:var(--heading,#fff);">1080p In-Game Capture Gallery</h2>
+        </div>
+        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;">High-resolution gameplay captures from the Zalesye exclusion zone.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin-top:1.5rem;">
+        {gallery.map((item) => (
+          <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:6px;overflow:hidden;">
+            <img src={item.path} alt={item.caption} style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy" />
+            <div style="padding:0.75rem 1rem;">
+              <p style="margin:0 0 0.4rem;font-size:0.9rem;font-weight:600;color:var(--heading,#fff);">{item.caption}</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted,#888);font-family:var(--font-mono,monospace);">
+                <span>{item.source}</span>
+                <span style="color:var(--acid,#daff7d);">{item.evidenceLevel}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
