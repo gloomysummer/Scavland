@@ -3,128 +3,138 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Scavland Weapons Database — Complete Firearms & Attachment Stats" description="The complete Scavland weapons database: 25+ firearms, ammo calibers, 300+ attachment slots, ballistics, recoil control, durability, and workbench repair recipes." keywords="Scavland weapons, Scavland attachments, firearms database, weapon stats, gun modification, ammo calibers, weapon repair, Scavland wiki" canonical="/weapons/">
-  <article class="article-layout">
-    <header class="guide-header">
-      <div class="meta-row">
-        <span class="badge official">ARSENAL DATABASE</span>
-        <time datetime="2026-08-31">Updated August 31, 2026</time>
-      </div>
-      <h1>Scavland Weapons &amp; Attachments Database</h1>
+  <article class="article-shell">
+    <header class="article-header">
+      <p class="eyebrow">Arsenal Database · Updated August 31, 2026</p>
+      <h1 class="page-title">Weapons &amp; Attachments</h1>
       <p class="lede">Comprehensive field catalog of all 25+ firearms, 300+ modular attachment configurations, ammo ballistics, recoil curves, and workbench maintenance in Zalesye.</p>
+      <span class="evidence">Evidence: Official Verified Baseline</span>
     </header>
 
-    <div class="media-strip" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;margin:1.5rem 0;">
-      <figure style="margin:0;">
-        <img src="/images/screenshots/steam_ss_01.jpg" alt="Official Scavland tactical firefight and weapon handling" style="width:100%;border-radius:6px;border:1px solid var(--border-color,#333);aspect-ratio:16/9;object-fit:cover;" loading="lazy"/>
-        <figcaption style="font-size:0.8rem;color:var(--text-muted,#aaa);margin-top:0.35rem;">Tactical firefight and ballistic spread during overworld exploration</figcaption>
-      </figure>
-      <figure style="margin:0;">
-        <img src="/images/screenshots/steam_ss_10.jpg" alt="Official Scavland weapon modification and attachment station" style="width:100%;border-radius:6px;border:1px solid var(--border-color,#333);aspect-ratio:16/9;object-fit:cover;" loading="lazy"/>
-        <figcaption style="font-size:0.8rem;color:var(--text-muted,#aaa);margin-top:0.35rem;">Modular attachment slots: optics, muzzle devices, handguards, and magazines</figcaption>
-      </figure>
-    </div>
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="media-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;">
+          <figure style="margin:0;">
+            <img src="/images/screenshots/steam_ss_01.jpg" alt="Official Scavland tactical firefight and weapon handling" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <figcaption class="caption">Tactical firefight and ballistic spread during overworld exploration</figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <img src="/images/screenshots/steam_ss_10.jpg" alt="Official Scavland weapon modification and attachment station" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <figcaption class="caption">Modular attachment slots: optics, muzzle devices, handguards, and magazines</figcaption>
+          </figure>
+        </div>
 
-    <div class="note" style="margin-bottom:2rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.25rem;border-radius:8px;">
-      <h3 style="margin:0 0 0.5rem 0;color:var(--accent,#ffaa00);">Key Gunplay Systems</h3>
-      <p style="margin:0;line-height:1.6;color:var(--text-muted,#ccc);">Firearms in Scavland are governed by <strong>four interacting systems</strong>: Caliber Penetration, Modular Attachments (300+ parts), Durability Degradation, and Dynamic Jam Probability. Choosing the right tool for the environment (tight bunker hallways vs. wide open radioactive marshes) is the single most critical survival skill.</p>
-    </div>
+        <div class="quick-answer" style="margin-bottom:32px;">
+          <strong>Key Gunplay Systems</strong>
+          Firearms in Scavland are governed by four interacting systems: Caliber Penetration, Modular Attachments (300+ parts), Durability Degradation, and Dynamic Jam Probability. Choosing the right tool for the environment (tight bunker hallways vs. wide open radioactive marshes) is the single most critical survival skill.
+        </div>
 
-    <div class="prose">
-      <h2>Firearms Roster &amp; Caliber Specifications</h2>
-      <p>Below is the verified weapon baseline organized by tactical role, effective engagement distance, and standard ammunition types.</p>
+        <h2 id="roster">Firearms Roster &amp; Caliber Specifications</h2>
+        <p>Below is the verified weapon baseline organized by tactical role, effective engagement distance, and standard ammunition types.</p>
 
-      <div style="overflow-x:auto;margin:1.5rem 0;">
-        <table style="width:100%;border-collapse:collapse;text-align:left;font-size:0.9rem;">
-          <thead>
-            <tr style="border-bottom:2px solid var(--border-color,#444);background:rgba(255,255,255,0.03);">
-              <th style="padding:0.75rem;">Category</th>
-              <th style="padding:0.75rem;">Representative Weapon</th>
-              <th style="padding:0.75rem;">Caliber</th>
-              <th style="padding:0.75rem;">Optimal Range</th>
-              <th style="padding:0.75rem;">Mod Slots</th>
-              <th style="padding:0.75rem;">Tactical Role &amp; Verdict</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
-              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Sidearm</td>
-              <td style="padding:0.75rem;">Makarov PM / TT-33</td>
-              <td style="padding:0.75rem;"><code>9x18mm / 7.62x25mm</code></td>
-              <td style="padding:0.75rem;">0 – 15m</td>
-              <td style="padding:0.75rem;">Muzzle, Mag, Grip</td>
-              <td style="padding:0.75rem;">Lightweight emergency sidearm; 0 weight penalty. Essential when primary rifle jams.</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
-              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">SMG</td>
-              <td style="padding:0.75rem;">PP-19 Bizon / MP5</td>
-              <td style="padding:0.75rem;"><code>9x19mm Parabellum</code></td>
-              <td style="padding:0.75rem;">5 – 25m</td>
-              <td style="padding:0.75rem;">Optic, Suppressor, Drum</td>
-              <td style="padding:0.75rem;">High burst DPS against unarmored mutant swarms. Eats ammo rapidly.</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
-              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Assault Rifle</td>
-              <td style="padding:0.75rem;">AK-74M / AS Val</td>
-              <td style="padding:0.75rem;"><code>5.45x39mm / 9x39mm</code></td>
-              <td style="padding:0.75rem;">15 – 60m</td>
-              <td style="padding:0.75rem;">Full Modular (6 slots)</td>
-              <td style="padding:0.75rem;">All-around wasteland workhorse. High armor penetration and manageable vertical kick.</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
-              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Battle Rifle</td>
-              <td style="padding:0.75rem;">AK-47 / AK-50 Improvised</td>
-              <td style="padding:0.75rem;"><code>7.62x39mm / .50 BMG</code></td>
-              <td style="padding:0.75rem;">20 – 80m</td>
-              <td style="padding:0.75rem;">Optic, Brake, Heavy Stock</td>
-              <td style="padding:0.75rem;">Massive single-shot stopping power against armored Warden patrols and mutant brutes.</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
-              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Shotgun</td>
-              <td style="padding:0.75rem;">TOZ-34 / Saiga-12</td>
-              <td style="padding:0.75rem;"><code>12-Gauge Buck / Slug</code></td>
-              <td style="padding:0.75rem;">0 – 12m</td>
-              <td style="padding:0.75rem;">Choke, Extended Tube</td>
-              <td style="padding:0.75rem;">King of close-quarters bunker corridor clearance. High stagger chance against charging beasts.</td>
-            </tr>
-            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
-              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Sniper / DMR</td>
-              <td style="padding:0.75rem;">Mosin-Nagant / SVD Dragunov</td>
-              <td style="padding:0.75rem;"><code>7.62x54mmR</code></td>
-              <td style="padding:0.75rem;">50 – 120m+</td>
-              <td style="padding:0.75rem;">4x/8x Scope, Cheek Pad</td>
-              <td style="padding:0.75rem;">Long-range scout weapon. Eliminates sniper lookouts before entering contested outposts.</td>
-            </tr>
-          </tbody>
-        </table>
+        <div style="overflow-x:auto;margin:20px 0;">
+          <table class="facts" style="width:100%;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">CATEGORY</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">REPRESENTATIVE</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">CALIBER</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">OPTIMAL RANGE</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">MOD SLOTS</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">TACTICAL ROLE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Sidearm</td>
+                <td>Makarov PM / TT-33</td>
+                <td><code>9x18mm / 7.62x25mm</code></td>
+                <td>0 – 15m</td>
+                <td>Muzzle, Mag, Grip</td>
+                <td>Lightweight emergency sidearm; 0 weight penalty. Essential backup when primary rifle jams.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">SMG</td>
+                <td>PP-19 Bizon / MP5</td>
+                <td><code>9x19mm Parabellum</code></td>
+                <td>5 – 25m</td>
+                <td>Optic, Suppressor, Drum</td>
+                <td>High burst DPS against unarmored mutant swarms. High ammo consumption.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Assault Rifle</td>
+                <td>AK-74M / AS Val</td>
+                <td><code>5.45x39mm / 9x39mm</code></td>
+                <td>15 – 60m</td>
+                <td>Full Modular (6 slots)</td>
+                <td>All-around wasteland workhorse. High armor penetration and manageable vertical kick.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Battle Rifle</td>
+                <td>AK-47 / AK-50 Improvised</td>
+                <td><code>7.62x39mm / .50 BMG</code></td>
+                <td>20 – 80m</td>
+                <td>Optic, Brake, Heavy Stock</td>
+                <td>Massive single-shot stopping power against armored Warden patrols and mutant brutes.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Shotgun</td>
+                <td>TOZ-34 / Saiga-12</td>
+                <td><code>12-Gauge Buck / Slug</code></td>
+                <td>0 – 12m</td>
+                <td>Choke, Extended Tube</td>
+                <td>King of close-quarters bunker corridor clearance. High stagger chance against charging beasts.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Sniper / DMR</td>
+                <td>Mosin-Nagant / SVD Dragunov</td>
+                <td><code>7.62x54mmR</code></td>
+                <td>50 – 120m+</td>
+                <td>4x/8x Scope, Cheek Pad</td>
+                <td>Long-range scout weapon. Eliminates sniper lookouts before entering contested outposts.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="attachments">300+ Attachment Customization System</h2>
+        <p>Modifying a weapon alters its weight, ergonomics (aim-down-sight speed), recoil impulse, and sound profile:</p>
+        <ul>
+          <li><strong>Muzzle Slots:</strong> Suppressors eliminate muzzle flash and shrink sound detection radius by 75%, preventing nearby mutant nests from waking up. Flash hiders and compensators reduce recoil climb during automatic spray.</li>
+          <li><strong>Optic Rails:</strong> Reflex sights offer wide field-of-view for bunker raids; 4x PSO-1 and variable scopes provide precise hit registration through foggy mist zones.</li>
+          <li><strong>Foregrips &amp; Laser Modules:</strong> Angled grips stabilize horizontal sway, while underbarrel tactical lights illuminate pitch-black Soviet bunker corridors.</li>
+          <li><strong>Magazines &amp; Drums:</strong> High-capacity drum magazines increase total ammunition pool between reloads at the cost of slower reload animations and weapon handling speed.</li>
+        </ul>
+
+        <div class="article-media">
+          <img src="/images/screenshots/steam_ss_06.jpg" alt="Combat stance and aiming in Scavland" />
+          <p class="caption">Long-range target engagement across foggy sector borders</p>
+        </div>
+
+        <h2 id="durability">Durability, Jams &amp; Maintenance</h2>
+        <p>Firing weapons in bad weather or neglected condition leads to dangerous mechanical jams:</p>
+        <ul>
+          <li><strong>100% – 70% Condition:</strong> Pristine operation. 0% jam probability. Maximum ballistic accuracy.</li>
+          <li><strong>69% – 40% Condition:</strong> Moderate barrel fouling. Slight accuracy deviation and occasional delayed hammer strike.</li>
+          <li><strong>Under 40% Condition:</strong> Critical wear. High chance of cartridge stovepiping or failure to feed during automatic fire.</li>
+        </ul>
+        <p>To repair and maintain firearms, use <strong>Gun Cleaning Oil</strong> in the field or visit a Safehouse <strong>Weapon Workbench</strong> with scrap springs and gun parts.</p>
+
+        <h2 id="next">Related Guides</h2>
+        <div class="related-grid">
+          <a href="/guide/scavland-weapon-repair-and-durability/"><strong>Weapon Repair &amp; Jams</strong><br/>Step-by-step field cleaning and workbench repair guide</a>
+          <a href="/factions/"><strong>10 Factions &amp; Vendors</strong><br/>Faction weapon shops and loyalty discount tiers</a>
+          <a href="/guide/scavland-beginner-guide/"><strong>Beginner Guide</strong><br/>Essential first-run survival, inventory and looting</a>
+        </div>
       </div>
 
-      <h2>300+ Attachment Customization System</h2>
-      <p>Modifying a weapon alters its weight, ergonomics (aim-down-sight speed), recoil impulse, and sound profile:</p>
-      <ul>
-        <li><strong>Muzzle Slots:</strong> Suppressors eliminate muzzle flash and shrink your sound detection radius by 75%, preventing nearby mutant nests from waking up. Flash hiders and compensators reduce recoil climb during automatic spray.</li>
-        <li><strong>Optic Rails:</strong> Reflex sights offer wide field-of-view for bunker raids; 4x PSO-1 and variable scopes provide precise hit registration through foggy mist zones.</li>
-        <li><strong>Foregrips &amp; Laser Modules:</strong> Angled grips stabilize horizontal sway, while underbarrel tactical lights illuminate pitch-black Soviet bunker corridors.</li>
-        <li><strong>Magazines &amp; Drums:</strong> High-capacity drum magazines increase total ammunition pool between reloads at the cost of slower reload animations and weapon handling speed.</li>
-      </ul>
-
-      <figure style="margin:2rem 0;">
-        <img src="/images/screenshots/steam_ss_06.jpg" alt="Combat stance and aiming in Scavland" style="width:100%;border-radius:6px;border:1px solid var(--border-color,#333);aspect-ratio:16/9;object-fit:cover;" loading="lazy"/>
-        <figcaption style="font-size:0.8rem;color:var(--text-muted,#aaa);margin-top:0.35rem;">Long-range target engagement across foggy sector borders</figcaption>
-      </figure>
-
-      <h2>Weapon Durability, Jams &amp; Maintenance</h2>
-      <p>Firing weapons in bad weather or neglected condition leads to dangerous mechanical jams:</p>
-      <ul>
-        <li><strong>100% – 70% Condition:</strong> Pristine operation. 0% jam probability. Maximum ballistic accuracy.</li>
-        <li><strong>69% – 40% Condition:</strong> Moderate barrel fouling. Slight accuracy deviation and occasional delayed hammer strike.</li>
-        <li><strong>Under 40% Condition:</strong> Critical wear. High chance of cartridge stovepiping or failure to feed during automatic fire.</li>
-      </ul>
-      <p>To repair and maintain firearms, use <strong>Gun Cleaning Oil</strong> in the field or visit a Safehouse <strong>Weapon Workbench</strong> with scrap springs and gun parts.</p>
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#roster">Firearms Roster</a>
+        <a href="#attachments">300+ Attachments</a>
+        <a href="#durability">Durability &amp; Jams</a>
+        <a href="#next">Related Guides</a>
+      </aside>
     </div>
-
-    <footer class="guide-footer" style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-color,#333);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
-      <a class="button secondary" href="/guide/scavland-weapon-repair-and-durability/">Weapon Repair &amp; Jamming Guide →</a>
-      <a class="button" href="/factions/">10 Factions &amp; Vendors →</a>
-    </footer>
   </article>
 </Layout>
