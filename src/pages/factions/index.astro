@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Scavland Factions & Reputation Guide — Scavland Wiki" description="Guide to the 10 factions in Scavland: faction territories, reputation standings, contract jobs, exclusive faction gear, and wasteland lore." keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Scavland wiki, jobs and contracts" canonical="/factions/">
+<Layout title="Scavland 10 Factions & Reputation Guide — Scavland Wiki" description="Detailed guide to all 10 factions in Scavland: faction territories, vendor inventories, reputation mechanics, hostile triggers, and contract rewards in Zalesye." keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Gunner faction, Mudlark faction, Scavland wiki" canonical="/factions/">
   <article class="article-layout">
     <header class="guide-header">
       <div class="meta-row">
@@ -10,47 +10,98 @@ import Layout from '../../layouts/Layout.astro';
         <time datetime="2026-08-31">Updated August 31, 2026</time>
       </div>
       <h1>Scavland 10 Factions &amp; Reputation Guide</h1>
-      <p class="lede">Discover the 10 survivor groups vying for control of Zalesye: territorial influence, vendor access, alliance mechanics, and contract jobs.</p>
+      <p class="lede">Complete directory of all 10 survivor organizations competing for dominance across Zalesye: territories, specialized merchants, alignment conflicts, and contract jobs.</p>
     </header>
 
+    <div class="media-strip" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1rem;margin:1.5rem 0;">
+      <figure style="margin:0;">
+        <img src="/images/screenshots/steam_ss_04.jpg" alt="Neutral settlement safehouse and faction outpost in Scavland" style="width:100%;border-radius:6px;border:1px solid var(--border-color,#333);aspect-ratio:16/9;object-fit:cover;" loading="lazy"/>
+        <figcaption style="font-size:0.8rem;color:var(--text-muted,#aaa);margin-top:0.35rem;">Neutral survivor settlement safehouse and trading stalls</figcaption>
+      </figure>
+      <figure style="margin:0;">
+        <img src="/images/screenshots/steam_ss_13.jpg" alt="Armed faction checkpoint in Zalesye" style="width:100%;border-radius:6px;border:1px solid var(--border-color,#333);aspect-ratio:16/9;object-fit:cover;" loading="lazy"/>
+        <figcaption style="font-size:0.8rem;color:var(--text-muted,#aaa);margin-top:0.35rem;">Fortified checkpoint manned by armed faction sentries</figcaption>
+      </figure>
+    </div>
+
     <div class="note" style="margin-bottom:2rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.25rem;border-radius:8px;">
-      <h3 style="margin:0 0 0.5rem 0;color:var(--accent,#ffaa00);">Faction System Overview</h3>
-      <p style="margin:0;line-height:1.6;color:var(--text-muted,#ccc);">Zalesye is populated by 10 distinct factions. Completing jobs or trading with one faction will alter your reputation standings, unlocking specialized military gear, medical supplies, or turning rival factions hostile on sight.</p>
+      <h3 style="margin:0 0 0.5rem 0;color:var(--accent,#ffaa00);">Reputation Dynamics &amp; Vendor Standings</h3>
+      <p style="margin:0;line-height:1.6;color:var(--text-muted,#ccc);">In Scavland, neutrality is hard to maintain. Assisting one faction by completing high-risk contracts or turning in recovered Soviet technology will increase your loyalty tier with that group while antagonizing their rivals.</p>
     </div>
 
     <div class="prose">
-      <h2>Major Factions in Zalesye</h2>
+      <h2>Major Factions Directory</h2>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1rem;margin:1.5rem 0;">
-        <div style="background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1rem;border-radius:6px;">
-          <h3 style="margin-top:0;color:#fff;">The Free Vultures</h3>
-          <p style="font-size:0.9rem;color:var(--text-muted,#aaa);margin:0;">Independent scavengers and traders who inhabit neutral settlements. Open to trade and reliable sources for basic ammo, bandages, and lockpicks.</p>
-        </div>
-        <div style="background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1rem;border-radius:6px;">
-          <h3 style="margin-top:0;color:#fff;">Bunker Wardens</h3>
-          <p style="font-size:0.9rem;color:var(--text-muted,#aaa);margin:0;">Remnants of Soviet military security personnel guarding underground installations. Heavily armored, armed with assault rifles, and suspicious of outsiders.</p>
-        </div>
-        <div style="background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1rem;border-radius:6px;">
-          <h3 style="margin-top:0;color:#fff;">Mist Ecologists &amp; Researchers</h3>
-          <p style="font-size:0.9rem;color:var(--text-muted,#aaa);margin:0;">Scientific researchers studying anomaly phenomena and mutant mutations. Pay top dollar for rare anomaly artifacts and biological tissue samples.</p>
-        </div>
-        <div style="background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1rem;border-radius:6px;">
-          <h3 style="margin-top:0;color:#fff;">Marshland Marauders</h3>
-          <p style="font-size:0.9rem;color:var(--text-muted,#aaa);margin:0;">Ruthless raiders who ambush supply caravans and solo stalkers across swamp sectors. Extreme caution is advised when crossing their turf.</p>
-        </div>
+      <div style="overflow-x:auto;margin:1.5rem 0;">
+        <table style="width:100%;border-collapse:collapse;text-align:left;font-size:0.9rem;">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color,#444);background:rgba(255,255,255,0.03);">
+              <th style="padding:0.75rem;">Faction Name</th>
+              <th style="padding:0.75rem;">Territory &amp; Base</th>
+              <th style="padding:0.75rem;">Attitude</th>
+              <th style="padding:0.75rem;">Exclusive Goods &amp; Services</th>
+              <th style="padding:0.75rem;">Rival Group</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
+              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">The Free Vultures</td>
+              <td style="padding:0.75rem;">Crossroads Settlement</td>
+              <td style="padding:0.75rem;"><span style="color:#00ffaa;">Neutral</span></td>
+              <td style="padding:0.75rem;">Basic ammo, lockpicks, food/water, stash renting</td>
+              <td style="padding:0.75rem;">Marshland Marauders</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
+              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Bunker Wardens</td>
+              <td style="padding:0.75rem;">Subterranean Complex 04</td>
+              <td style="padding:0.75rem;"><span style="color:#ffaa00;">Guarded</span></td>
+              <td style="padding:0.75rem;">Heavy body armor, 5.45mm military ammo, night-vision</td>
+              <td style="padding:0.75rem;">Rada Outlaws</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
+              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Mist Ecologists (Sci-Division)</td>
+              <td style="padding:0.75rem;">Mobile Lab Sector B</td>
+              <td style="padding:0.75rem;"><span style="color:#00ffaa;">Neutral</span></td>
+              <td style="padding:0.75rem;">Anomaly Scanners, high-grade filters, Anti-Rad injectors</td>
+              <td style="padding:0.75rem;">Zealot Cults</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
+              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">The Gunners Syndicate</td>
+              <td style="padding:0.75rem;">Industrial Train Depot</td>
+              <td style="padding:0.75rem;"><span style="color:#ffaa00;">Mercenary</span></td>
+              <td style="padding:0.75rem;">Gun parts, suppressors, high-caliber sniper rifles</td>
+              <td style="padding:0.75rem;">Mudlarks</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
+              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">The Mudlarks</td>
+              <td style="padding:0.75rem;">Sunken Swamplands</td>
+              <td style="padding:0.75rem;"><span style="color:#ffaa00;">Cautious</span></td>
+              <td style="padding:0.75rem;">Swamp herbs, medical salves, improvised stealth cloaks</td>
+              <td style="padding:0.75rem;">Gunners</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border-color,#2a2a2a);">
+              <td style="padding:0.75rem;font-weight:700;color:var(--accent,#ffaa00);">Marshland Marauders</td>
+              <td style="padding:0.75rem;">Highway Blockade Camps</td>
+              <td style="padding:0.75rem;"><span style="color:#ff4444;">Hostile</span></td>
+              <td style="padding:0.75rem;">Black-market weapons, stolen military crates (Raid target)</td>
+              <td style="padding:0.75rem;">All Factions</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
-      <h2>How Faction Reputation Affects Gameplay</h2>
+      <h2>How Reputation Tiers Work</h2>
       <ul>
-        <li><strong>Trading Discounts &amp; Black Market:</strong> Raising loyalty unlocks tier-3 weapon blueprints, advanced optical scopes, and rare ammunition types.</li>
-        <li><strong>Territory Patrols:</strong> Friendly factions will assist you if combat breaks out nearby, while hostile factions will open fire from guard towers.</li>
-        <li><strong>Bounty Jobs &amp; Contracts:</strong> Taking elimination contracts from one faction will permanently lower your standing with their enemy group.</li>
+        <li><strong>Tier 1 — Stranger (0–200 Rep):</strong> Access to basic goods and baseline pricing (100% price index).</li>
+        <li><strong>Tier 2 — Associate (200–600 Rep):</strong> 10% discount on ammunition and food; unlocks Tier-2 side contracts and regional safehouse access.</li>
+        <li><strong>Tier 3 — Trusted Ally (600–1200 Rep):</strong> 20% discount; unlocks military-grade weapon blueprints, rare attachment crates, and AI guard reinforcement in combat.</li>
+        <li><strong>Hostile (&lt; -300 Rep):</strong> Sentries open fire on sight; bounty hunters will ambush you on open roads.</li>
       </ul>
     </div>
 
     <footer class="guide-footer" style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-color,#333);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
       <a class="button secondary" href="/weapons/">Weapons Database →</a>
-      <a class="button" href="/maps/">Explore World Map →</a>
+      <a class="button" href="/maps/">Explore Map &amp; Bunkers →</a>
     </footer>
   </article>
 </Layout>
