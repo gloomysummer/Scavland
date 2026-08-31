@@ -4,12 +4,136 @@ import GuideCard from '../components/GuideCard.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki — Survival RPG, Weapons & Loot" description="Explore Scavland with guides for survival, weapons, quests, loot, factions, the Mist, crafting, and everything you need to survive Zalesye and more." keywords="Scavland, PC, survival RPG, weapons, loot, quests, factions, Mist, crafting, anomaly scanner" canonical="/">
-  <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'WebSite', name:'Scavland Wiki', url:'https://scavland.wiki', potentialAction:{'@type':'SearchAction',target:'https://scavland.wiki/search/?q={search_term_string}', 'query-input':'required name=search_term_string'} })} /></Fragment>
-  <section class="hero"><p class="eyebrow">Fan-made community wiki · Official media</p><h1>Scavland</h1><p class="lede">Scavland is a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet world. Explore Zalesye, scavenge abandoned places, take dangerous jobs, fight mutants and hostile survivors, and uncover the mystery of the deadly Mist.</p><div class="hero-actions"><a class="button" href="/guide/scavland-beginner-guide/">Start beginner guide <span aria-hidden="true">↗</span></a><a class="button secondary" href="/guide/scavland-anomaly-scanner-and-artifacts/">Anomaly scanner guide</a><a class="button secondary" href="/faq/">Launch &amp; mechanics FAQ</a></div><div class="stats"><div class="stat"><strong>Sep 04, 2026</strong><span>Early Access</span></div><div class="stat"><strong>100K+</strong><span>Steam wishlists</span></div><div class="stat"><strong>25+</strong><span>Weapons</span></div><div class="stat"><strong>300+</strong><span>Attachments</span></div></div></section>
-  <section class="section"><div class="section-head"><div><p class="eyebrow">Start here</p><h2>Essential wasteland field guides</h2></div><p>Every page distinguishes official claims from demonstrations and tests. Follow the question you actually have.</p></div><div class="guide-grid">{featured.map((guide) => <GuideCard guide={guide} />)}</div></section>
-  <section class="section"><div class="section-head"><div><p class="eyebrow">The evidence desk</p><h2>Look before you leap</h2></div><p>Official 1080p gameplay captures and community playtests make the site useful now; versioned testing will turn field notes into dependable tables later.</p></div><div class="media-strip"><img src="/images/screenshots/steam_ss_08.jpg" alt="Official Scavland overworld sector map" loading="lazy"/><img src="/images/screenshots/steam_ss_05.jpg" alt="Official Scavland inventory and item inspection" loading="lazy"/><img src="/images/screenshots/steam_ss_09.jpg" alt="Official Scavland anomaly hazard zone detection" loading="lazy"/></div><p class="caption">Media source: Official Steam Store 1080p captures · Evidence level: Official verified baseline · Mechanics require separate version testing.</p></section>
-  <section class="section"><div class="note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;"><div><strong>Early Access Release Watch: September 4, 2026</strong><br/><span style="color:var(--text-muted,#aaa);font-size:0.95rem;">100,000+ Wishlists reached · Act I launch includes 10 factions, 25+ guns, 300+ attachments, and persistent death loot recovery.</span></div><div style="display:flex;gap:0.75rem;"><a class="button" href="/updates/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">View verified timeline →</a><a class="button secondary" href="/faq/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Read FAQ →</a></div></div></section>
-  <section class="section about-home"><div class="section-head"><div><p class="eyebrow">The game</p><h2>What is Scavland?</h2></div></div><div class="prose"><p>Scavland is a hardcore top-down pixel art survival RPG set in Zalesye, a post-apocalyptic land devastated by war and the mysterious Mist. You play as a Vulture, a scavenger who survives by exploring dangerous locations, finding useful supplies, completing jobs, and fighting mutants and hostile survivors.</p><p>Survival depends on preparation, careful combat, inventory management, trading, and knowing when to push deeper into the wasteland. The handcrafted open world includes abandoned settlements, bunkers, forests, irradiated swamps, factions, NPCs, quests, hidden locations, and dangerous underground areas.</p></div><div class="hero-actions"><a class="button" href="/guide/">Explore all guides</a></div></section>
-  <section class="section final-cta"><div class="section-head"><div><p class="eyebrow">Your next run</p><h2>Ready to master Scavland?</h2></div><p>From your first scavenging run to dangerous bunkers, faction quests, rare loot and the mysteries of the Mist, keep the evidence close.</p></div><div class="hero-actions"><a class="button" href="/guide/scavland-beginner-guide/">Read the beginner guide</a><a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Play on Steam</a></div></section>
+<Layout title="Scavland Wiki — Guides, Weapons, Maps & Release Date" description="The definitive Scavland Wiki: comprehensive survival guides, weapons, attachments, factions, maps, release date, system specs, and game mechanics for Zalesye." keywords="Scavland Wiki, Scavland, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements, map, codes" canonical="/">
+  <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'WebSite', name:'Scavland Wiki', url:'https://scavland.wiki', description:'The definitive community wiki for Scavland survival RPG.', potentialAction:{'@type':'SearchAction',target:'https://scavland.wiki/search/?q={search_term_string}', 'query-input':'required name=search_term_string'} })} /></Fragment>
+  <section class="hero">
+    <p class="eyebrow">Official Baseline · Community-Driven Wiki</p>
+    <h1>Scavland Wiki &amp; Database</h1>
+    <p class="lede">The complete database and tactical survival guide for Scavland, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
+    <div class="hero-actions">
+      <a class="button" href="/guide/scavland-beginner-guide/">Start beginner guide <span aria-hidden="true">↗</span></a>
+      <a class="button secondary" href="/weapons/">Weapons &amp; Attachments</a>
+      <a class="button secondary" href="/release-date/">Release &amp; System Specs</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>Sep 04, 2026</strong><span>Early Access</span></div>
+      <div class="stat"><strong>100K+</strong><span>Steam Wishlists</span></div>
+      <div class="stat"><strong>10</strong><span>Factions</span></div>
+      <div class="stat"><strong>25+</strong><span>Weapons</span></div>
+      <div class="stat"><strong>300+</strong><span>Attachments</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Quick Navigation</p>
+        <h2>Scavland Database &amp; Hub</h2>
+      </div>
+      <p>Instant access to official launch facts, system requirements, tactical guides, and game mechanics.</p>
+    </div>
+    <div class="card-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+      <a class="guide-card" href="/guide/scavland-beginner-guide/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">01 · SURVIVAL</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Beginner Guide</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Core gameplay loop, inventory management, first run survival, and extraction tips.</p>
+      </a>
+      <a class="guide-card" href="/release-date/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">02 · LAUNCH</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Release Date &amp; Platforms</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Steam Early Access unlock times, platforms, pricing caveats, and roadmaps.</p>
+      </a>
+      <a class="guide-card" href="/system-requirements/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">03 · HARDWARE</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">System Requirements</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Minimum and recommended PC specs, Steam Deck verification, and controller notes.</p>
+      </a>
+      <a class="guide-card" href="/weapons/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">04 · ARSENAL</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Weapons &amp; Attachments</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">25+ firearms, 300+ attachment slots, recoil mechanics, and weapon repair.</p>
+      </a>
+      <a class="guide-card" href="/factions/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">05 · FACTIONS</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">10 Wasteland Factions</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Reputation system, faction vendors, hostile encounters, and contract jobs.</p>
+      </a>
+      <a class="guide-card" href="/maps/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">06 · EXPLORATION</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Zalesye Map &amp; Bunkers</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Overworld sector maps, radiation zones, anomaly clusters, and underground vaults.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Start here</p>
+        <h2>Essential wasteland field guides</h2>
+      </div>
+      <p>Every page distinguishes official claims from demonstrations and tests. Follow the question you actually have.</p>
+    </div>
+    <div class="guide-grid">{featured.map((guide) => <GuideCard guide={guide} />)}</div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The evidence desk</p>
+        <h2>Look before you leap</h2>
+      </div>
+      <p>Official 1080p gameplay captures and community playtests make the site useful now; versioned testing will turn field notes into dependable tables later.</p>
+    </div>
+    <div class="media-strip">
+      <img src="/images/screenshots/steam_ss_08.jpg" alt="Official Scavland overworld sector map" loading="lazy"/>
+      <img src="/images/screenshots/steam_ss_05.jpg" alt="Official Scavland inventory and item inspection" loading="lazy"/>
+      <img src="/images/screenshots/steam_ss_09.jpg" alt="Official Scavland anomaly hazard zone detection" loading="lazy"/>
+    </div>
+    <p class="caption">Media source: Official Steam Store 1080p captures · Evidence level: Official verified baseline · Mechanics require separate version testing.</p>
+  </section>
+
+  <section class="section" id="codes">
+    <div class="note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">
+      <div>
+        <span style="font-size:0.75rem;text-transform:uppercase;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">Community Notice</span>
+        <h3 style="margin:0.35rem 0 0.5rem 0;color:#fff;">Scavland Codes &amp; Cheats Status</h3>
+        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;margin:0;">There are currently <strong>no official promo codes or cheat console commands</strong> enabled for Scavland in Early Access. Any sites advertising secret codes or item generators are unverified. We will track and verify all official developer gift codes here as they are announced.</p>
+      </div>
+      <div style="display:flex;gap:0.75rem;">
+        <a class="button" href="/faq/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Mechanics FAQ →</a>
+        <a class="button secondary" href="/updates/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Update Timeline →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-home">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">The game</p>
+        <h2>What is Scavland?</h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Scavland is a hardcore top-down pixel art survival RPG set in Zalesye, a post-apocalyptic land devastated by war and the mysterious Mist. You play as a Vulture, a scavenger who survives by exploring dangerous locations, finding useful supplies, completing jobs, and fighting mutants and hostile survivors.</p>
+      <p>Survival depends on preparation, careful combat, inventory management, trading, and knowing when to push deeper into the wasteland. The handcrafted open world includes abandoned settlements, bunkers, forests, irradiated swamps, factions, NPCs, quests, hidden locations, and dangerous underground areas.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/guide/">Explore all guides</a>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Your next run</p>
+        <h2>Ready to master Scavland?</h2>
+      </div>
+      <p>From your first scavenging run to dangerous bunkers, faction quests, rare loot and the mysteries of the Mist, keep the Scavland Wiki close.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/guide/scavland-beginner-guide/">Read the beginner guide</a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Play on Steam</a>
+    </div>
+  </section>
 </Layout>

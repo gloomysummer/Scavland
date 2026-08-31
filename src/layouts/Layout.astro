@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-const { title = 'Scavland Wiki', description = 'Evidence-led guides for surviving, scavenging and exploring Scavland.', keywords = 'Scavland, survival RPG, weapons, loot, quests, factions, Mist, crafting', canonical = Astro.url.pathname } = Astro.props;
+const { title = 'Scavland Wiki — Guides, Weapons & Database', description = 'The complete Scavland Wiki: evidence-led guides for survival, weapons, loot, quests, factions, maps, and system mechanics.', keywords = 'Scavland, Scavland Wiki, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements', canonical = Astro.url.pathname } = Astro.props;
 const siteUrl = 'https://scavland.wiki';
 const currentPath = Astro.url.pathname;
 const isActive = (path: string) => currentPath === path || (path !== '/' && currentPath.startsWith(path));
@@ -24,7 +24,7 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
     <meta property="og:image" content={`${siteUrl}/images/og-scavland.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Scavland Field Notes survival RPG wiki" />
+    <meta property="og:image:alt" content="Scavland Wiki - Complete Game Guides and Database" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -45,8 +45,8 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
   <body>
     <div class="grain" aria-hidden="true"></div>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header"><a class="brand" href="/"><img src="/images/icons/logo.svg" alt="" width="32" height="32" /><span>SCAVLAND<span class="brand-sub">FIELD NOTES</span></span></a><nav aria-label="Primary"><a class:list={{active:isActive('/guide/')}} href="/guide/">Guides</a><a class:list={{active:isActive('/wiki/')}} href="/wiki/">Systems</a><a class:list={{active:isActive('/resources/')}} href="/resources/">Resources</a><a class:list={{active:isActive('/maps/')}} href="/maps/">World</a><a class:list={{active:isActive('/updates/')}} href="/updates/">Updates</a><a href="/search/" class="nav-search" aria-label="Search guides">Search <kbd>/</kbd></a></nav></header>
+    <header class="site-header"><a class="brand" href="/"><img src="/images/icons/logo.svg" alt="" width="32" height="32" /><span>SCAVLAND<span class="brand-sub">WIKI &amp; DATABASE</span></span></a><nav aria-label="Primary"><a class:list={{active:isActive('/guide/')}} href="/guide/">Guides</a><a class:list={{active:isActive('/weapons/')}} href="/weapons/">Weapons</a><a class:list={{active:isActive('/factions/')}} href="/factions/">Factions</a><a class:list={{active:isActive('/release-date/')}} href="/release-date/">Release</a><a class:list={{active:isActive('/system-requirements/')}} href="/system-requirements/">Specs</a><a class:list={{active:isActive('/wiki/')}} href="/wiki/">Systems</a><a class:list={{active:isActive('/maps/')}} href="/maps/">World</a><a class:list={{active:isActive('/updates/')}} href="/updates/">Updates</a><a href="/search/" class="nav-search" aria-label="Search guides">Search <kbd>/</kbd></a></nav></header>
     <main id="main-content"><slot /></main>
-    <footer class="site-footer"><div><strong>Scavland Field Notes</strong><p>Independent, evidence-labelled guides for the wasteland. Not affiliated with NoShadow.</p></div><div class="footer-links"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Official Steam</a></div><small>Research updated 25 Aug 2026 · Evidence before certainty.</small></footer>
+    <footer class="site-footer"><div><strong>Scavland Wiki &amp; Database</strong><p>Independent community wiki with verified game data and tactical field notes. Not affiliated with NoShadow.</p></div><div class="footer-links"><a href="/release-date/">Release Date</a><a href="/system-requirements/">PC Requirements</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Official Steam</a></div><small>Scavland Wiki Database updated August 2026 · Official Verified Baseline.</small></footer>
   </body>
 </html>

@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Scavland System Requirements & PC Specs — Scavland Wiki" description="Official minimum and recommended PC system requirements for Scavland, Steam Deck compatibility, controller support, and performance settings." keywords="Scavland system requirements, Scavland PC specs, Scavland Steam Deck, Scavland controller support, minimum specs" canonical="/system-requirements/">
+  <article class="article-layout">
+    <header class="guide-header">
+      <div class="meta-row">
+        <span class="badge official">OFFICIAL SPECS</span>
+        <time datetime="2026-08-31">Updated August 31, 2026</time>
+      </div>
+      <h1>Scavland System Requirements &amp; PC Specs</h1>
+      <p class="lede">Complete technical specifications required to run Scavland smoothly on PC, plus Steam Deck and controller optimization notes.</p>
+    </header>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;margin:2rem 0;">
+      <div style="background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">
+        <h3 style="margin-top:0;color:var(--accent,#ffaa00);font-size:1.2rem;">Minimum PC Requirements</h3>
+        <ul style="padding-left:1.25rem;line-height:1.8;color:var(--text-muted,#ccc);margin-bottom:0;">
+          <li><strong>OS:</strong> Windows 10 64-bit</li>
+          <li><strong>Processor:</strong> Intel Core i3-4160 / AMD FX-6300 or equivalent</li>
+          <li><strong>Memory:</strong> 4 GB RAM</li>
+          <li><strong>Graphics:</strong> NVIDIA GeForce GTX 750 Ti / AMD Radeon R7 260X (2 GB VRAM)</li>
+          <li><strong>DirectX:</strong> Version 11</li>
+          <li><strong>Storage:</strong> 4 GB available SSD/HDD space</li>
+          <li><strong>Sound Card:</strong> DirectX Compatible</li>
+        </ul>
+      </div>
+
+      <div style="background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">
+        <h3 style="margin-top:0;color:#00ffaa;font-size:1.2rem;">Recommended PC Requirements</h3>
+        <ul style="padding-left:1.25rem;line-height:1.8;color:var(--text-muted,#ccc);margin-bottom:0;">
+          <li><strong>OS:</strong> Windows 10 / 11 64-bit</li>
+          <li><strong>Processor:</strong> Intel Core i5-6600K / AMD Ryzen 5 1600</li>
+          <li><strong>Memory:</strong> 8 GB RAM</li>
+          <li><strong>Graphics:</strong> NVIDIA GeForce GTX 1060 (6 GB) / AMD Radeon RX 580 (8 GB)</li>
+          <li><strong>DirectX:</strong> Version 11 / 12</li>
+          <li><strong>Storage:</strong> 6 GB available SSD space (SSD recommended for faster bunker loading)</li>
+          <li><strong>Sound Card:</strong> High-definition audio support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prose">
+      <h2>Steam Deck &amp; Handheld Compatibility</h2>
+      <p>Scavland is built on lightweight 2D rendering and pixel physics, making it exceptionally well-suited for portable play:</p>
+      <ul>
+        <li><strong>Target Frame Rate:</strong> 60 FPS stable on default Steam Deck hardware settings.</li>
+        <li><strong>Battery Life:</strong> Estimated 4.5+ hours of gameplay on modern handheld batteries due to optimized CPU cycle management.</li>
+        <li><strong>Text Scalability:</strong> UI scale adjustments and high-contrast inventory fonts are included to ensure readability on 7-inch and 8-inch displays.</li>
+      </ul>
+
+      <h2>Controller Support &amp; Mouse/Keyboard</h2>
+      <p>While top-down tactical aiming benefits from mouse precision when sniping through the Mist, full gamepad / Xbox controller / DualSense support is mapped natively with twin-stick aiming.</p>
+    </div>
+
+    <footer class="guide-footer" style="margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-color,#333);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;">
+      <a class="button secondary" href="/release-date/">Release Schedule →</a>
+      <a class="button" href="/weapons/">Explore Weapons Database →</a>
+    </footer>
+  </article>
+</Layout>
