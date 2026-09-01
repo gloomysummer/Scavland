@@ -7,37 +7,137 @@ import { media } from '../../data/media';
 const resources = guides.filter((guide) => ['Resources','Gear','Systems','Exploration'].includes(guide.category));
 const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'community');
 ---
-<Layout title="Scavland Resources & Media Vault | Scavland Wiki" description="Find Scavland loot, scavenging, crafting, weapons, and 1080p verified in-game screenshots." canonical="/resources/">
-  <section class="listing">
-    <p class="eyebrow">Resource desk &amp; media vault</p>
-    <h1 class="page-title">Find<br/><span style="color:var(--acid)">verified gear &amp; evidence.</span></h1>
-    <p class="lede">Loot, materials, weapons, anomaly equipment, and 1080p in-game screenshots captured from official store media and community playtests.</p>
-    
-    <div class="listing-grid">{resources.map((guide) => <GuideCard guide={guide} />)}</div>
 
-    <div style="margin-top:4rem;">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Visual Evidence</p>
-          <h2 style="font-size:1.6rem;color:var(--heading,#fff);">1080p In-Game Capture Gallery</h2>
+<Layout title="Scavland Resources, Loot Tables & Trader Barter — Scavland Wiki" description="Comprehensive Scavland loot tables: valuable junk items, merchant barter prices, crafting components, weapon maintenance materials, and 1080p screenshot gallery." keywords="Scavland resources, Scavland loot tables, valuable junk, trader barter, crafting materials, spark plugs, weapon repair parts" canonical="/resources/">
+  <article class="article-shell">
+    <header class="article-header">
+      <p class="eyebrow">Resource Desk &amp; Loot Database · Updated September 1, 2026</p>
+      <h1 class="page-title">Resources &amp; Barter Tables</h1>
+      <p class="lede">High-density loot evaluation, merchant barter values, crafting component allocations, and verified 1080p visual field evidence across Zalesye.</p>
+      <span class="evidence">Evidence: Official Verified Baseline</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="media-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;">
+          <figure style="margin:0;">
+            <img src="/images/screenshots/steam_ss_05.jpg" alt="Official Scavland inventory and item inspection" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <figcaption class="caption">Item weight, condition metrics, and stack-aware container sorting</figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <img src="/images/screenshots/steam_ss_11.jpg" alt="Official Scavland trading and merchant barter interface" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <figcaption class="caption">Settlement merchant trading stall and dynamic price indices</figcaption>
+          </figure>
         </div>
-        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;">High-resolution gameplay captures from the Zalesye exclusion zone.</p>
-      </div>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;margin-top:1.5rem;">
-        {gallery.map((item) => (
-          <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:6px;overflow:hidden;">
-            <img src={item.path} alt={item.caption} style="width:100%;height:180px;object-fit:cover;display:block;" loading="lazy" />
-            <div style="padding:0.75rem 1rem;">
-              <p style="margin:0 0 0.4rem;font-size:0.9rem;font-weight:600;color:var(--heading,#fff);">{item.caption}</p>
-              <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.75rem;color:var(--text-muted,#888);font-family:var(--font-mono,monospace);">
-                <span>{item.source}</span>
-                <span style="color:var(--acid,#daff7d);">{item.evidenceLevel}</span>
+        <div class="quick-answer" style="margin-bottom:32px;">
+          <strong>Loot Density &amp; Barter Strategy</strong>
+          Not all wasteland junk is worth the pack weight. Functional electrical and automotive components (spark plugs, lighters, wire relays, toolboxes) have a <strong>3x to 5x higher value-to-weight ratio</strong> than scrap metal or empty bottles. Always prioritize high-density barter goods on your extraction runs.
+        </div>
+
+        <h2 id="loot-table">High-Value Scavenging &amp; Barter Cheat Sheet</h2>
+        <p>Use this reference table to decide what to extract, what to sell immediately, and what to hoard in your safehouse stash for weapon maintenance and crafting.</p>
+
+        <div style="overflow-x:auto;margin:20px 0;">
+          <table class="facts" style="width:100%;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">ITEM NAME</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">CATEGORY</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">WEIGHT</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">BARTER TIER</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">PRIMARY PURPOSE &amp; ACTION</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Spark Plugs</td>
+                <td>Automotive Junk</td>
+                <td>0.2 kg</td>
+                <td><span style="color:#00ffaa;">Very High ($$$)</span></td>
+                <td><strong>Sell to Traders:</strong> Premium barter value across all settlement merchants.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Functional Lighter</td>
+                <td>Household Junk</td>
+                <td>0.1 kg</td>
+                <td><span style="color:#00ffaa;">Very High ($$$)</span></td>
+                <td><strong>Keep / Sell:</strong> Essential for campfires and highly demanded by neutral stalkers.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Gun Cleaning Oil</td>
+                <td>Maintenance</td>
+                <td>0.3 kg</td>
+                <td><span style="color:#ffaa00;">High Utility</span></td>
+                <td><strong>Never Sell:</strong> Field maintenance tool; restores +15% gun durability to prevent jams.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Industrial Tool Set</td>
+                <td>Hardware</td>
+                <td>1.5 kg</td>
+                <td><span style="color:#00ffaa;">High ($$)</span></td>
+                <td><strong>Workbench Upgrade:</strong> Required to unlock advanced firearm modification tables.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Charcoal Filter</td>
+                <td>Survival Gear</td>
+                <td>0.4 kg</td>
+                <td><span style="color:#ffaa00;">Life-Saving</span></td>
+                <td><strong>Keep on Person:</strong> Replaces exhausted gas mask filters during Mist radiation storms.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Scrap Metal &amp; Springs</td>
+                <td>Raw Crafting</td>
+                <td>0.8 kg</td>
+                <td><span style="color:var(--muted);">Medium ($)</span></td>
+                <td><strong>Hoard in Stash:</strong> Essential consumable for repairing damaged weapon receivers.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Crowbar / Hunting Knife</td>
+                <td>Tools &amp; Barter</td>
+                <td>1.0 kg</td>
+                <td><span style="color:var(--muted);">Medium ($)</span></td>
+                <td><strong>Sell Surplus:</strong> Trade extras to faction merchants for medical packs and ammo.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="merchants">Specialized Merchant Preferences</h2>
+        <ul>
+          <li><strong>General Outpost Traders:</strong> Pay premium prices for food rations, clean water, spark plugs, and functional lighters.</li>
+          <li><strong>Gunsmith Merchants (Gunners Syndicate):</strong> Buy damaged firearms, gun parts, springs, and optical scopes at 20% above average market rates.</li>
+          <li><strong>Scientist Ecologists (Mobile Lab):</strong> Offer top dollar and rare anti-rad injectors in exchange for raw Anomaly Artifacts and mutant biological samples.</li>
+        </ul>
+
+        <h2 id="guides">Essential Field Guides</h2>
+        <div class="guide-grid" style="margin:20px 0;">{resources.map((guide) => <GuideCard guide={guide} />)}</div>
+
+        <h2 id="gallery">1080p Gameplay Capture Gallery</h2>
+        <p>Official verified captures from the Zalesye exclusion zone.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:16px;margin-top:16px;">
+          {gallery.map((item) => (
+            <div style="background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;">
+              <img src={item.path} alt={item.caption} style="width:100%;height:160px;object-fit:cover;display:block;" loading="lazy" />
+              <div style="padding:12px 16px;">
+                <p style="margin:0 0 6px;font-size:0.85rem;font-weight:600;color:var(--ink);">{item.caption}</p>
+                <div style="display:flex;justify-content:space-between;align-items:center;font-size:0.68rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;">
+                  <span>{item.source}</span>
+                  <span style="color:var(--acid);">{item.evidenceLevel}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#loot-table">Loot Cheat Sheet</a>
+        <a href="#merchants">Trader Preferences</a>
+        <a href="#guides">Related Guides</a>
+        <a href="#gallery">Visual Gallery</a>
+      </aside>
     </div>
-  </section>
+  </article>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GuideCard from '../components/GuideCard.astro';
+import Countdown from '../components/Countdown.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
@@ -10,10 +11,13 @@ const featured = guides.slice(0, 6);
     <p class="eyebrow">Official Baseline · Community-Driven Wiki</p>
     <h1>Scavland Wiki &amp; Database</h1>
     <p class="lede">The complete database and tactical survival guide for Scavland, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
+    
+    <Countdown />
+
     <div class="hero-actions">
       <a class="button" href="/guide/scavland-beginner-guide/">Start beginner guide <span aria-hidden="true">↗</span></a>
       <a class="button secondary" href="/weapons/">Weapons &amp; Attachments</a>
-      <a class="button secondary" href="/release-date/">Release &amp; System Specs</a>
+      <a class="button secondary" href="/resources/">Loot &amp; Barter Tables</a>
     </div>
     <div class="stats">
       <div class="stat"><strong>Sep 04, 2026</strong><span>Early Access</span></div>

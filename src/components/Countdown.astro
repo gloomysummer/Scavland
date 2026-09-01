@@ -1,0 +1,64 @@
+---
+---
+
+<div class="countdown-card" id="scavland-countdown" style="background:linear-gradient(135deg, rgba(185,232,108,0.06), rgba(0,0,0,0.6));border:1px solid var(--acid,#b9e86c);border-radius:8px;padding:1.25rem 1.5rem;margin:1.5rem 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+  <div>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+      <span class="live-pulse" style="width:8px;height:8px;background:var(--acid,#b9e86c);border-radius:50%;display:inline-block;box-shadow:0 0 8px var(--acid,#b9e86c);"></span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;">Early Access Launch Countdown</span>
+    </div>
+    <div style="font-size:0.9rem;color:var(--muted,#9aa9a0);">Steam Release: <strong>September 4, 2026</strong></div>
+  </div>
+
+  <div class="countdown-timer" style="display:flex;gap:12px;font-family:'Barlow Condensed',sans-serif;">
+    <div class="time-block" style="background:#121a16;border:1px solid #26362e;padding:6px 12px;border-radius:4px;text-align:center;min-width:55px;">
+      <span id="cd-days" style="display:block;font-size:1.8rem;font-weight:800;color:#fff;line-height:1;">--</span>
+      <span style="font-size:0.65rem;color:var(--muted,#9aa9a0);text-transform:uppercase;font-family:'IBM Plex Mono',monospace;">Days</span>
+    </div>
+    <div class="time-block" style="background:#121a16;border:1px solid #26362e;padding:6px 12px;border-radius:4px;text-align:center;min-width:55px;">
+      <span id="cd-hours" style="display:block;font-size:1.8rem;font-weight:800;color:#fff;line-height:1;">--</span>
+      <span style="font-size:0.65rem;color:var(--muted,#9aa9a0);text-transform:uppercase;font-family:'IBM Plex Mono',monospace;">Hours</span>
+    </div>
+    <div class="time-block" style="background:#121a16;border:1px solid #26362e;padding:6px 12px;border-radius:4px;text-align:center;min-width:55px;">
+      <span id="cd-mins" style="display:block;font-size:1.8rem;font-weight:800;color:#fff;line-height:1;">--</span>
+      <span style="font-size:0.65rem;color:var(--muted,#9aa9a0);text-transform:uppercase;font-family:'IBM Plex Mono',monospace;">Mins</span>
+    </div>
+    <div class="time-block" style="background:#121a16;border:1px solid #26362e;padding:6px 12px;border-radius:4px;text-align:center;min-width:55px;">
+      <span id="cd-secs" style="display:block;font-size:1.8rem;font-weight:800;color:var(--acid,#b9e86c);line-height:1;">--</span>
+      <span style="font-size:0.65rem;color:var(--muted,#9aa9a0);text-transform:uppercase;font-family:'IBM Plex Mono',monospace;">Secs</span>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  function updateCountdown() {
+    // September 4, 2026 18:00:00 UTC
+    const targetDate = new Date('2026-09-04T18:00:00Z').getTime();
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      const el = document.getElementById('scavland-countdown');
+      if (el) el.innerHTML = '<div style="font-weight:700;color:var(--acid,#b9e86c);font-size:1.1rem;width:100%;text-align:center;">🎮 Scavland Early Access is NOW LIVE on Steam!</div>';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const dEl = document.getElementById('cd-days');
+    const hEl = document.getElementById('cd-hours');
+    const mEl = document.getElementById('cd-mins');
+    const sEl = document.getElementById('cd-secs');
+
+    if (dEl) dEl.innerText = String(days).padStart(2, '0');
+    if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+    if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+    if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
