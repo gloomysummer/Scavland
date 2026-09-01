@@ -1,0 +1,29 @@
+---
+import { siteConfig } from '../data/siteConfig';
+
+interface Props {
+  className?: string;
+}
+const { className = '' } = Astro.props;
+const shouldShow = siteConfig.ads.enabled && siteConfig.ads.articleBanner.enabled;
+const adKey = siteConfig.ads.articleBanner.key;
+const scriptUrl = siteConfig.ads.articleBanner.scriptUrl;
+---
+
+{shouldShow && (
+  <aside class={`adsterra-article-banner ${className}`} aria-label="Advertisement" style="margin: 2rem 0; text-align: center;">
+    <span style="display:block; font-size:0.65rem; text-transform:uppercase; color:var(--muted,#9aa9a0); margin-bottom:0.4rem; letter-spacing:0.05em; font-family:'IBM Plex Mono',monospace;">Advertisement</span>
+    <div class="adsterra-article-banner-slot" style="min-height:250px; display:flex; justify-content:center; align-items:center;">
+      <script is:inline define:vars={{ adKey }}>
+        window.atOptions = {
+          key: adKey,
+          format: 'iframe',
+          height: 250,
+          width: 300,
+          params: {},
+        };
+      </script>
+      <script is:inline async src={scriptUrl}></script>
+    </div>
+  </aside>
+)}

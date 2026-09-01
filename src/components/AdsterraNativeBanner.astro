@@ -1,0 +1,17 @@
+---
+import { ADSTERRA_CONFIG } from '../data/adsterra';
+
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+const isVisible = ADSTERRA_CONFIG.SHOW_ADS && ADSTERRA_CONFIG.nativeBanner.enabled;
+---
+
+{isVisible && (
+  <div class={`adsterra-native-banner ${className}`} aria-label="Advertisement">
+    <script async="async" data-cfasync="false" src={ADSTERRA_CONFIG.nativeBanner.scriptUrl}></script>
+    <div id={ADSTERRA_CONFIG.nativeBanner.containerId}></div>
+  </div>
+)}

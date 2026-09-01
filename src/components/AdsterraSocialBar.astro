@@ -1,0 +1,11 @@
+---
+import { siteConfig } from '../data/siteConfig';
+
+const shouldShow = siteConfig.ads.enabled && siteConfig.ads.socialBar.enabled;
+const scriptUrl = siteConfig.ads.socialBar.scriptUrl;
+---
+
+{shouldShow && (
+  <!-- Adsterra Social Bar: High-CPM ($4~$8) non-intrusive in-page push banner -->
+  <script is:inline async="async" data-cfasync="false" src={scriptUrl}></script>
+)}
