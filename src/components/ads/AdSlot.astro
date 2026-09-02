@@ -1,0 +1,107 @@
+---
+import { adConfig } from "../../data/adConfig";
+
+interface Props {
+  slotId: "article-banner" | "feed-native";
+  className?: string;
+  label?: string;
+}
+
+const { slotId, className = "", label = "Advertisement" } = Astro.props;
+
+const isEnabled = adConfig.enabled && adConfig.provider !== "none";
+const provider = adConfig.provider;
+const adsterraSlot = adConfig.adsterra.slots[slotId];
+const adsenseSlot = adConfig.adsense.slots[slotId];
+
+// Calculate layout reserve sizes for Zero-CLS
+const minHeight = adsterraSlot ? `${adsterraSlot.height}px` : "250px";
+const minWidth = adsterraSlot && adsterraSlot.format === "iframe" ? `${adsterraSlot.width}px` : "100%";
+---
+
+{isEnabled && (
+  <aside 
+    class={`ad-slot-wrapper ad-slot-${slotId} ${className}`} 
+    aria-label={label}
+  >
+    <span class="ad-slot-tag">{label}</span>
+    <div 
+      class="ad-slot-container"
+      style={`min-height: ${minHeight}; min-width: ${minWidth};`}
+    >
+      {provider === "adsterra" && adsterraSlot && (
+        adsterraSlot.format === "iframe" ? (
+          <div class="adsterra-iframe-box">
+            <script is:inline define:vars={{ options: { key: adsterraSlot.key, format: "iframe", height: adsterraSlot.height, width: adsterraSlot.width, params: {} } }}>
+              window.atOptions = options;
+            </script>
+            <script is:inline async src={adsterraSlot.scriptUrl}></script>
+          </div>
+        ) : (
+          <div class="adsterra-native-box">
+            <script async="async" data-cfasync="false" src={adsterraSlot.scriptUrl}></script>
+            <div id={adsterraSlot.containerId}></div>
+          </div>
+        )
+      )}
+
+      {provider === "adsense" && adsenseSlot && (
+        <div class="adsense-box">
+          <ins 
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client={adConfig.adsense.clientId}
+            data-ad-slot={adsenseSlot.slotId}
+            data-ad-format={adsenseSlot.format}
+            data-full-width-responsive={adsenseSlot.responsive ? "true" : "false"}
+          ></ins>
+          <script is:inline>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      )}
+    </div>
+  </aside>
+)}
+
+<style>
+  .ad-slot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem auto;
+    padding: 0.75rem 1rem;
+    background: rgba(14, 17, 22, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ad-slot-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted, #8a99a8);
+    margin-bottom: 0.5rem;
+    user-select: none;
+    font-family: var(--font-mono, monospace);
+  }
+
+  .ad-slot-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+  }
+
+  .adsterra-iframe-box, .adsterra-native-box, .adsense-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+</style>
