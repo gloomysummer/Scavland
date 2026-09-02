@@ -3,11 +3,162 @@ import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import AdsterraArticleBanner from '../../components/AdsterraArticleBanner.astro';
 import { guides, guideBySlug } from '../../data/guides';
-export function getStaticPaths(){ return guides.map((guide) => ({ params:{ slug:guide.slug }, props:{ guide } })); }
+
+export function getStaticPaths() {
+  return guides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+
 const { guide } = Astro.props;
 const related = guide.related.map((slug) => guideBySlug[slug]).filter(Boolean);
+const canonicalUrl = `https://scavland.wiki/guide/${guide.slug}/`;
+const imageUrl = `https://scavland.wiki${guide.image.startsWith('/images') ? guide.image : '/images/hero/header.jpg'}`;
+
+// 1. Article Schema
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: guide.title,
+  description: guide.description,
+  image: imageUrl,
+  datePublished: '2026-08-20T00:00:00Z',
+  dateModified: `${guide.updated}T00:00:00Z`,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+  author: {
+    '@type': 'Organization',
+    name: 'Scavland Wiki Editorial Team',
+    url: 'https://scavland.wiki',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Scavland Wiki',
+    url: 'https://scavland.wiki',
+    logo: 'https://scavland.wiki/images/icons/logo.svg',
+  },
+  about: {
+    '@type': 'VideoGame',
+    name: 'Scavland',
+    url: 'https://store.steampowered.com/app/3373500/Scavland/',
+  },
+};
+
+// 2. BreadcrumbList Schema
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://scavland.wiki/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Guides',
+      item: 'https://scavland.wiki/guide/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: guide.title,
+      item: canonicalUrl,
+    },
+  ],
+};
+
+// 3. FAQPage Schema (for SERP rich snippet expander dropdowns)
+const faqSchema = guide.faq && guide.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: guide.faq.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer,
+    },
+  })),
+} : null;
 ---
+
 <Layout title={`${guide.title} | Scavland Wiki`} description={guide.description} canonical={`/guide/${guide.slug}/`}>
-  <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@type':'Article',headline:guide.title,description:guide.description,dateModified:guide.updated,author:{'@type':'Organization',name:'Scavland Field Notes'},image:`https://scavland.wiki${guide.image.startsWith('/images')?guide.image:'/images/hero/header.jpg'}`})} /></Fragment>
-  <article class="article-shell"><header class="article-header"><p class="eyebrow">{guide.category} · Updated {guide.updated}</p><h1 class="page-title">{guide.title}</h1><p class="lede">{guide.description}</p><span class="evidence">Evidence: {guide.evidence}</span></header><div class="article-layout"><div class="article-content"><div class="quick-answer"><strong>Quick answer</strong>{guide.answer}</div><div class="article-media">{guide.image.endsWith('.mp4') ? <video src={guide.image} controls muted playsinline preload="metadata" aria-label={guide.imageAlt}></video> : <img src={guide.image} alt={guide.imageAlt} />}</div><p class="caption">Media: user-provided authorized asset pack · {guide.evidence}. This image supports context, not every mechanic described on the page.</p><h2 id="field-notes">Field notes</h2><ul>{guide.steps.map((step) => <li>{step}</li>)}</ul><AdsterraArticleBanner /><h2 id="evidence">Evidence boundary</h2><table class="facts"><tbody>{guide.facts.map(([key,value]) => <tr><td>{key}</td><td>{value}</td></tr>)}</tbody></table><h2 id="faq">Questions players ask</h2><div class="faq-list">{guide.faq.map(([question,answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}</div><h2 id="related">Related guides</h2><div class="related-grid">{related.map((item) => <GuideCard guide={item} />)}</div></div><aside class="toc" aria-label="On this page"><strong>On this page</strong><a href="#field-notes">Field notes</a><a href="#evidence">Evidence boundary</a><a href="#faq">Questions</a><a href="#related">Related guides</a></aside></div></article>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  </Fragment>
+
+  <article class="article-shell">
+    <header class="article-header">
+      <p class="eyebrow">{guide.category} · Updated {guide.updated}</p>
+      <h1 class="page-title">{guide.title}</h1>
+      <p class="lede">{guide.description}</p>
+      <span class="evidence">Evidence: {guide.evidence}</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="quick-answer">
+          <strong>Quick answer</strong>{guide.answer}
+        </div>
+
+        <div class="article-media">
+          {guide.image.endsWith('.mp4') ? (
+            <video src={guide.image} controls muted playsinline preload="metadata" aria-label={guide.imageAlt}></video>
+          ) : (
+            <img src={guide.image} alt={guide.imageAlt} />
+          )}
+        </div>
+        <p class="caption">
+          Media: user-provided authorized asset pack · {guide.evidence}. This image supports context, not every mechanic described on the page.
+        </p>
+
+        <h2 id="field-notes">Field notes</h2>
+        <ul>
+          {guide.steps.map((step) => <li>{step}</li>)}
+        </ul>
+
+        <AdsterraArticleBanner />
+
+        <h2 id="evidence">Evidence boundary</h2>
+        <table class="facts">
+          <tbody>
+            {guide.facts.map(([key, value]) => (
+              <tr>
+                <td>{key}</td>
+                <td>{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <h2 id="faq">Questions players ask</h2>
+        <div class="faq-list">
+          {guide.faq.map(([question, answer]) => (
+            <details>
+              <summary>{question}</summary>
+              <p>{answer}</p>
+            </details>
+          ))}
+        </div>
+
+        <h2 id="related">Related guides</h2>
+        <div class="related-grid">
+          {related.map((item) => <GuideCard guide={item} />)}
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#field-notes">Field notes</a>
+        <a href="#evidence">Evidence boundary</a>
+        <a href="#faq">Questions</a>
+        <a href="#related">Related guides</a>
+      </aside>
+    </div>
+  </article>
 </Layout>

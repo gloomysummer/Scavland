@@ -1,6 +1,7 @@
 /**
  * Unified Ad Monetization Configuration for Scavland Wiki
- * Centralized control for Adsterra, future Google AdSense hot-swap, and CLS safety.
+ * Centralized control for Adsterra, Google AdSense Auto Ads, Grow.me, and CLS safety.
+ * Modeled after top-performing gaming publisher moonlightpeaks.wiki (55k+ monthly visits).
  */
 
 export type AdProvider = 'adsterra' | 'adsense' | 'none';
@@ -22,10 +23,15 @@ export interface AdSenseSlotConfig {
 
 export interface AdMonetizationConfig {
   provider: AdProvider;
-  enabled: boolean; // Set to true on 9.4 launch day to light up ads
+  enabled: boolean; // Global master switch: set to true on 9.4 launch to activate
   adsense: {
     clientId: string; // e.g., 'ca-pub-xxxxxxxxxxxxxxxx'
+    autoAds: boolean; // Enable Google AdSense Auto Ads (AI-driven native insertions like moonlightpeaks.wiki)
     slots: Record<string, AdSenseSlotConfig>;
+  };
+  growMe: {
+    enabled: boolean; // Mediavine Grow.me 1st-party audience network for 50%+ CPM lift
+    siteId: string;
   };
   adsterra: {
     slots: Record<string, AdsterraSlotConfig>;
@@ -33,15 +39,16 @@ export interface AdMonetizationConfig {
 }
 
 export const adConfig: AdMonetizationConfig = {
-  // Provider can be 'adsterra' (initial) -> 'adsense' (future) -> 'none' (paused)
+  // Provider can be 'adsterra' (launch) -> 'adsense' (post-approval) -> 'none' (pause)
   provider: 'adsterra',
   
-  // Set enabled = true on Sept 4 release to activate all compliant ad slots
+  // Master switch (set true when ready)
   enabled: false,
 
-  // Reserved for future Google AdSense hot-swap
+  // Google AdSense Configuration (Future-proof Auto Ads architecture)
   adsense: {
     clientId: 'ca-pub-0000000000000000',
+    autoAds: true, // Google AI manages automated high-value in-article insertions
     slots: {
       'article-banner': {
         slotId: '1234567890',
@@ -54,6 +61,12 @@ export const adConfig: AdMonetizationConfig = {
         responsive: true,
       },
     },
+  },
+
+  // Mediavine Grow.me 1st-party audience network interface
+  growMe: {
+    enabled: false,
+    siteId: '',
   },
 
   // Active Adsterra configuration

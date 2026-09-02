@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { adConfig } from '../data/adConfig';
 
 const { title = 'Scavland Wiki — Guides, Weapons & Database', description = 'The complete Scavland Wiki: evidence-led guides for survival, weapons, loot, quests, factions, maps, and system mechanics.', keywords = 'Scavland, Scavland Wiki, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements', canonical = Astro.url.pathname } = Astro.props;
 const siteUrl = 'https://scavland.wiki';
@@ -44,6 +45,14 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
       gtag('js', new Date());
       gtag('config', 'G-EFV7HR5LJR');
     </script>
+    {adConfig.enabled && adConfig.provider === 'adsense' && adConfig.adsense.autoAds && (
+      <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adConfig.adsense.clientId}`} crossorigin="anonymous"></script>
+    )}
+    {adConfig.growMe?.enabled && adConfig.growMe.siteId && (
+      <script async data-grow-initializer="" define:vars={{ siteId: adConfig.growMe.siteId }}>
+        (function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");e.type="text/javascript",e.src="https://faves.grow.me/main.js",e.defer=!0,e.setAttribute("data-grow-faves-site-id",siteId);var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
+      </script>
+    )}
     <slot name="schema" />
   </head>
   <body>
