@@ -9,10 +9,15 @@ interface Props {
 
 const { slotId, className = "", label = "Advertisement" } = Astro.props;
 
-const isEnabled = adConfig.enabled && adConfig.provider !== "none";
 const provider = adConfig.provider;
 const adsterraSlot = adConfig.adsterra.slots[slotId];
 const adsenseSlot = adConfig.adsense.slots[slotId];
+
+// In AdSense Auto Ads mode, Google AI handles all insertions dynamically from <head>; do not render empty manual skeleton boxes.
+const isRealAdSenseSlot = provider === "adsense" && !adConfig.adsense.autoAds && adsenseSlot && !adsenseSlot.slotId.includes("1234567890");
+const isRealAdsterraSlot = provider === "adsterra" && !!adsterraSlot;
+
+const isEnabled = adConfig.enabled && provider !== "none" && (isRealAdSenseSlot || isRealAdsterraSlot);
 
 // Calculate layout reserve sizes for Zero-CLS
 const minHeight = adsterraSlot ? `${adsterraSlot.height}px` : "250px";
