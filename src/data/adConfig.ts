@@ -39,15 +39,15 @@ export interface AdMonetizationConfig {
 }
 
 export const adConfig: AdMonetizationConfig = {
-  // Provider can be 'adsterra' (launch) -> 'adsense' (post-approval) -> 'none' (pause)
-  provider: 'adsterra',
+  // Switched to 'adsense' for Google AdSense site review and monetization
+  provider: 'adsense',
   
-  // Master switch (set true when ready)
-  enabled: false,
+  // Master switch
+  enabled: true,
 
   // Google AdSense Configuration (Future-proof Auto Ads architecture)
   adsense: {
-    clientId: 'ca-pub-0000000000000000',
+    clientId: 'ca-pub-9054706633269604',
     autoAds: true, // Google AI manages automated high-value in-article insertions
     slots: {
       'article-banner': {
