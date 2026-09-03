@@ -11,7 +11,7 @@ export function getStaticPaths() {
 const { guide } = Astro.props;
 const related = guide.related.map((slug) => guideBySlug[slug]).filter(Boolean);
 const canonicalUrl = `https://scavland.wiki/guide/${guide.slug}/`;
-const imageUrl = `https://scavland.wiki${guide.image.startsWith('/images') ? guide.image : '/images/hero/header.jpg'}`;
+const imageUrl = `https://scavland.wiki${guide.image.startsWith('/images') ? guide.image : '/images/hero/header.webp'}`;
 
 // 1. Article Schema
 const articleSchema = {

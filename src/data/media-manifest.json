@@ -1,9 +1,9 @@
 [
-  {"path":"/images/hero/page_bg_raw.jpg","kind":"screenshot","caption":"Authorized Scavland world background","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
-  {"path":"/images/hero/header.jpg","kind":"card","caption":"Scavland header artwork","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
-  {"path":"/images/cards/card_1_beginner_guide.jpg","kind":"card","caption":"Beginner survival route","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
-  {"path":"/images/cards/card_2_weapons_gear.jpg","kind":"card","caption":"Weapons and gear","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
-  {"path":"/images/cards/card_3_quests_factions.jpg","kind":"card","caption":"Quests and factions","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
-  {"path":"/images/cards/card_4_mist_exploration.jpg","kind":"card","caption":"Mist exploration","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
+  {"path":"/images/hero/page_bg_raw.webp","kind":"screenshot","caption":"Authorized Scavland world background","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
+  {"path":"/images/hero/header.webp","kind":"card","caption":"Scavland header artwork","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
+  {"path":"/images/cards/card_1_beginner_guide.webp","kind":"card","caption":"Beginner survival route","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
+  {"path":"/images/cards/card_2_weapons_gear.webp","kind":"card","caption":"Weapons and gear","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
+  {"path":"/images/cards/card_3_quests_factions.webp","kind":"card","caption":"Quests and factions","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
+  {"path":"/images/cards/card_4_mist_exploration.webp","kind":"card","caption":"Mist exploration","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"},
   {"path":"/images/icons/logo.svg","kind":"logo","caption":"Scavland Field Notes logo","source":"User-provided asset pack","license":"Authorized for this site","evidenceLevel":"Community demonstration"}
 ]

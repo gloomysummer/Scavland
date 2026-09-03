@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap');
-:root{--ink:#e7eee9;--muted:#9aa9a0;--bg:#0b100e;--panel:#121a16;--line:#26362e;--acid:#b9e86c;--orange:#e39155;--max:1180px;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+@import './fonts.css';
+:root{--ink:#e7eee9;--muted:#9aa9a0;--bg:#0b100e;--panel:#121a16;--line:#26362e;--acid:#b9e86c;--orange:#e39155;--max:1180px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:var(--bg)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:92px}
 body{margin:0;line-height:1.6;background:radial-gradient(circle at 88% 10%,#1b2b20 0,transparent 30rem),var(--bg);overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--acid);outline-offset:4px}
-.grain{position:fixed;inset:0;pointer-events:none;opacity:.04;background-image:url('/images/hero/page_bg_raw.jpg');background-size:720px;mix-blend-mode:screen}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.04;background-image:url('/images/hero/page_bg_raw.webp');background-size:720px;mix-blend-mode:screen}
 .skip-link{position:fixed;left:16px;top:12px;z-index:10;transform:translateY(-180%);background:var(--acid);color:#182119;padding:10px 14px;font-weight:700}
 .skip-link:focus{transform:translateY(0)}
 
@@ -25,7 +25,7 @@ main{position:relative;z-index:1}
 
 /* Hero */
 .hero{max-width:var(--max);margin:0 auto;padding:106px 24px 90px;min-height:600px;position:relative;overflow:hidden}
-.hero:before{content:'';position:absolute;inset:0 0 0 44%;background:linear-gradient(90deg,var(--bg),transparent 25%),url('/images/hero/page_bg_raw.jpg') center/cover;opacity:.65;z-index:-1}
+.hero:before{content:'';position:absolute;inset:0 0 0 44%;background:linear-gradient(90deg,var(--bg),transparent 25%),url('/images/hero/page_bg_raw.webp') center/cover;opacity:.65;z-index:-1}
 .hero h1,.page-title{font:800 clamp(3.2rem,8vw,7.5rem)/.88 'Barlow Condensed',sans-serif;letter-spacing:.025em;text-transform:uppercase;margin:18px 0 24px;max-width:850px;word-break:break-word}
 .hero h1{color:#f1f6ee;text-shadow:0 8px 35px #000}
 .lede{font-size:1.1rem;color:#c6d1c9;max-width:560px}
@@ -145,7 +145,7 @@ main{position:relative;z-index:1}
   .hero:before{
     inset:0;
     opacity:.35;
-    background:linear-gradient(0deg,var(--bg) 10%,transparent 70%),url('/images/hero/page_bg_raw.jpg') center/cover;
+    background:linear-gradient(0deg,var(--bg) 10%,transparent 70%),url('/images/hero/page_bg_raw.webp') center/cover;
   }
   .hero h1{
     font-size:clamp(2.7rem, 11vw, 4.2rem) !important;
