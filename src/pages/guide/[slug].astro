@@ -52,7 +52,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Home',
+      name: 'Scavland Wiki',
       item: 'https://scavland.wiki/',
     },
     {
@@ -93,6 +93,14 @@ const faqSchema = guide.faq && guide.faq.length > 0 ? {
   </Fragment>
 
   <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <a href="/guide/" style="color:var(--text-muted,#aaa);text-decoration:none;">Guides</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">{guide.title}</span>
+    </nav>
+
     <header class="article-header">
       <p class="eyebrow">{guide.category} · Updated {guide.updated}</p>
       <h1 class="page-title">{guide.title}</h1>

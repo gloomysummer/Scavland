@@ -3,7 +3,22 @@ import Layout from '../../layouts/Layout.astro';
 ---
 
 <Layout title="Scavland Weapons Database — Complete Firearms & Attachment Stats" description="The complete Scavland weapons database: 25+ firearms, ammo calibers, 300+ attachment slots, ballistics, recoil control, durability, and workbench repair recipes." keywords="Scavland weapons, Scavland attachments, firearms database, weapon stats, gun modification, ammo calibers, weapon repair, Scavland wiki" canonical="/weapons/">
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+        { '@type': 'ListItem', position: 2, name: 'Weapons & Attachments', item: 'https://scavland.wiki/weapons/' }
+      ]
+    })} />
+  </Fragment>
   <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Weapons &amp; Attachments</span>
+    </nav>
     <header class="article-header">
       <p class="eyebrow">Arsenal Database · Updated August 31, 2026</p>
       <h1 class="page-title">Weapons &amp; Attachments</h1>

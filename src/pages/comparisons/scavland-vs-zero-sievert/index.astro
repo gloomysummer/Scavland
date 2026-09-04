@@ -13,9 +13,24 @@ import Layout from '../../../layouts/Layout.astro';
       author: { '@type': 'Organization', name: 'Scavland Wiki Research' },
       image: 'https://scavland.wiki/images/screenshots/scavland_vs_zero_sievert.webp'
     })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+        { '@type': 'ListItem', position: 2, name: 'Comparisons', item: 'https://scavland.wiki/comparisons/scavland-vs-zero-sievert/' },
+        { '@type': 'ListItem', position: 3, name: 'Scavland vs Zero Sievert', item: 'https://scavland.wiki/comparisons/scavland-vs-zero-sievert/' }
+      ]
+    })} />
   </Fragment>
 
   <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Scavland vs Zero Sievert</span>
+    </nav>
+
     <header class="article-header">
       <p class="eyebrow">Tactical Analysis · Updated September 2, 2026</p>
       <h1 class="page-title">Scavland vs Zero Sievert:<br/><span style="color:var(--acid)">7 Core Gameplay Differences</span></h1>
