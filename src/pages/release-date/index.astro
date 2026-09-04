@@ -1,64 +1,217 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Countdown from '../../components/Countdown.astro';
+
+const faqs = [
+  {
+    q: "Are there difficulty settings? How punishing is death?",
+    a: "Scavland does not feature artificial difficulty sliders (e.g. Easy/Normal/Hard). Instead, the game employs a true hardcore extraction loop: when you perish in the field, equipped weapons and backpack loot remain on your fallen corpse (with death coordinates logged onto your map for recovery). Your Safehouse permanent stash is 100% secure. You manage difficulty through preparation: selecting low-radiation routes, wearing gas masks with fresh filters, and avoiding sound alarms during nighttime."
+  },
+  {
+    q: "What is the state of Base Building and Game Endings in Act I?",
+    a: "At Early Access launch, base management centers on your personal Safehouse. You can upgrade weapon workbenches, install battery generators, expand personal storage lockers, and craft medical serums. Full exterior modular base building will arrive in later roadmap phases. Act I includes a distinct narrative progression climax when players power the central Soviet relay station inside the deep bunker complex."
+  },
+  {
+    q: "Is there a macOS or Console release? How does it run on Steam Deck?",
+    a: "Scavland launched as a PC exclusive on Steam. A native macOS Apple Silicon build is fully compiled and currently undergoing Apple notarization and store approval review. Console ports will be evaluated after Early Access v1.0. For handheld gamers, the game features verified Steam Deck control presets, 60 FPS performance profiles, and scaled UI readability."
+  },
+  {
+    q: "Is melee combat viable against mutants and armored patrols?",
+    a: "Lead developer Lucasmml issued an explicit combat warning on Steam: melee weapons (combat knives, crowbars, trench shovels) are designed strictly as emergency silent finishers against lone, wounded scavengers. Facing mutant packs or armored Warden soldiers with melee will result in rapid death. Ballistic firearms, cover, and ammunition management remain the primary survival pillar."
+  },
+  {
+    q: "How does Scavland compare to Zero Sievert?",
+    a: "While both share a top-down post-apocalyptic extraction genre, Scavland has been in development for over 6 years with distinct pillars: dynamic 3D line-of-sight fog, multi-level procedural underground bunker facilities, a 300+ attachment gunsmith bench, and 10 living factions with dynamic outpost control and dynamic trader pricing."
+  }
+];
+
+const roadmap = [
+  {
+    phase: "Phase 1: Launch Stability & UX",
+    timeline: "September 2026 (Weeks 1 - 4)",
+    status: "Active In Progress",
+    items: [
+      "Rapid Day 1 patch hotfixes for quest trigger edge cases and audio occlusion.",
+      "Inventory Quickbar drag-and-drop improvements and stack-aware ammo unloading.",
+      "Fine-tuning weapon jamming curves for sub-40% condition firearms.",
+      "Official Valve Steam Deck Verified green checkmark submission."
+    ]
+  },
+  {
+    phase: "Phase 2: Bunker Facilities & Salvage 2.0",
+    timeline: "Q4 2026 (October – December)",
+    status: "In Development",
+    items: [
+      "Procedural Bunker Overhaul: 3 new underground laboratory tiers with hazardous gas chambers.",
+      "Scrap Salvaging System: Break down junk metal and electronics into weapon modification components.",
+      "Expanded Faction Contracts: High-risk assassination and artifact delivery missions for Tier 3 loyalty.",
+      "Full Controller & Gamepad Aim-Assist implementation."
+    ]
+  },
+  {
+    phase: "Phase 3: The Northern Expanse & Story Climax",
+    timeline: "First Half 2027",
+    status: "Planned",
+    items: [
+      "World Map 3x Expansion: Unlocking the Northern Radioactive Swamps and Abandoned Nuclear Cooling Towers.",
+      "Vehicle & Rail Transit repair missions across contested sectors.",
+      "Act II & Act III Campaign story conclusion with multi-branching faction endings.",
+      "Full 1.0 Commercial Release departure from Early Access."
+    ]
+  }
+];
 ---
 
-<Layout title="Scavland Release Date & Early Access Schedule — Scavland Wiki" description="Official Scavland release date, Steam Early Access roadmap, platform support, price tier, and launch countdown details for Zalesye." keywords="Scavland release date, Scavland Early Access, Steam launch, Scavland price, Scavland demo" canonical="/release-date/">
+<Layout 
+  title="Scavland Early Access Launch Guide — Day 1 Scope, Pricing, FAQ & Roadmap" 
+  description="Official Scavland Steam Early Access launch hub: Day 1 playable content, $19 pricing, difficulty rules, community FAQ, and the 2026-2027 development roadmap." 
+  keywords="Scavland release date, Scavland Early Access, Steam launch, Scavland price, Scavland roadmap, Scavland difficulty, Scavland base building" 
+  canonical="/release-date/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+        { '@type': 'ListItem', position: 2, name: 'Early Access & Roadmap', item: 'https://scavland.wiki/release-date/' }
+      ]
+    })} />
+  </Fragment>
+
   <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Early Access &amp; Roadmap</span>
+    </nav>
+
     <header class="article-header">
-      <p class="eyebrow">Release Schedule · Updated August 31, 2026</p>
-      <h1 class="page-title">Release Date &amp; Platforms</h1>
-      <p class="lede">All verified information regarding the official Early Access launch date, release roadmap, platform availability, and pricing caveats for Scavland.</p>
-      <span class="evidence">Evidence: Official Steam Confirmed</span>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Launched September 4, 2026</span>
+      </div>
+      <h1 class="page-title">Scavland Early Access Launch &amp; Official Roadmap</h1>
+      <p class="lede">Complete overview of Scavland’s Day 1 Early Access content scope, pricing policy, community decision FAQ, and the multi-phase development roadmap.</p>
+      <span class="evidence">Evidence: Steam Official Announcement + Community Lead Developer Q&amp;A</span>
     </header>
 
     <div class="article-layout">
       <div class="article-content">
+        <!-- Live Status Component -->
         <Countdown />
 
+        <!-- Key Launch Facts Box -->
         <div class="quick-answer" style="margin-bottom:32px;">
-          <strong>Confirmed Launch Key Facts</strong>
-          <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;">
-            <li><strong>Early Access Release Date:</strong> September 4, 2026</li>
-            <li><strong>Platform:</strong> PC (Steam Exclusive initially)</li>
-            <li><strong>Developer:</strong> NoShadow</li>
-            <li><strong>Launch State:</strong> Act I Content Complete (10 Factions, 25+ Weapons, 300+ Attachments)</li>
+          <strong style="color:var(--acid);font-size:1.05rem;">Confirmed Launch Key Facts</strong>
+          <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
+            <li><strong>Official EA Release:</strong> September 4, 2026 (Global Release)</li>
+            <li><strong>Pricing Policy:</strong> $19.00 USD (10% launch week discount at $17.10). Developer NoShadow has committed to maintaining this low entry price throughout Early Access.</li>
+            <li><strong>Platform:</strong> PC via Steam (Apple Silicon macOS version under Apple store review).</li>
+            <li><strong>Community Traction:</strong> Launched with over 175,000 Steam wishlists worldwide.</li>
+            <li><strong>Launch Scale:</strong> Complete Act I territory, 25+ firearms, 300+ attachment modifications, 10 interacting factions, and the dynamic Mist hazard.</li>
           </ul>
         </div>
 
-        <h2 id="timeline">Early Access Launch Timeline</h2>
-        <p>Developer NoShadow has officially slated <strong>Scavland</strong> for release into Steam Early Access on <strong>September 4, 2026</strong>. Following extensive playtest feedback and reaching over 100,000 Steam wishlists, the initial Early Access release will deliver the foundation of Zalesye's hardcore survival experience.</p>
+        <!-- Section 1: Day 1 Scope -->
+        <h2 id="content">What Is Included in the Day 1 Early Access Build?</h2>
+        <p>Scavland enters Steam Early Access not as a barebones prototype, but as a fully realized Act I survival sandbox with dozens of hours of replayable progression:</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:16px;margin:20px 0;">
+          <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+            <div style="font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:0.8rem;text-transform:uppercase;margin-bottom:4px;">Overworld &amp; Bunkers</div>
+            <h4 style="margin:0 0 8px;color:#fff;">The Zalesye Exclusion Zone</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Handcrafted open-world sectors including toxic wetlands, industrial rail yards, decayed villages, and procedurally seeded subterranean Soviet bunkers.</p>
+          </div>
+
+          <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+            <div style="font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:0.8rem;text-transform:uppercase;margin-bottom:4px;">Tactical Arsenal</div>
+            <h4 style="margin:0 0 8px;color:#fff;">25+ Weapons &amp; 300+ Attachments</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Deep ballistic gunplay featuring 6 ammo calibers, modular optics, suppressors, foregrips, drum magazines, and realistic fouling/jam mechanics.</p>
+          </div>
+
+          <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+            <div style="font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:0.8rem;text-transform:uppercase;margin-bottom:4px;">Living Faction Ecosystem</div>
+            <h4 style="margin:0 0 8px;color:#fff;">10 Dynamic Factions</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Earn standing, unlock black-market trade tiers, accept assassination contracts, or raid opposing fortified strongholds.</p>
+          </div>
+
+          <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+            <div style="font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:0.8rem;text-transform:uppercase;margin-bottom:4px;">Environmental Hazard</div>
+            <h4 style="margin:0 0 8px;color:#fff;">The Mist &amp; Anomaly Scanner</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Dynamic radioactive green fog rolls across sectors. Equip your frequency audio scanner on Slot [3] to locate valuable mutant artifacts amidst the haze.</p>
+          </div>
+        </div>
 
         <div class="article-media">
           <img src="/images/screenshots/steam_ss_08.webp" alt="Official Scavland sector map and launch zones" />
-          <p class="caption">The overworld of Zalesye features handcrafted sectors and procedural underground bunkers</p>
+          <p class="caption">The overworld of Zalesye features handcrafted overworld sectors coupled with procedural bunker seeds</p>
         </div>
 
-        <h2 id="content">What Is Included in Day 1 Release?</h2>
-        <ul>
-          <li><strong>Handcrafted Overworld &amp; Bunkers:</strong> Multiple distinct sectors across Zalesye, including irradiated wetlands, Soviet bunker complexes, industrial ruins, and mutant nests.</li>
-          <li><strong>Full Weapons &amp; Ballistics Arsenal:</strong> 25+ firearms ranging from handguns to high-caliber battle rifles, supported by modular attachment customization (300+ attachments).</li>
-          <li><strong>10 Wasteland Factions:</strong> Dynamic NPC factions offering contracts, trading outposts, unique gear, and reputation systems.</li>
-          <li><strong>The Mist Phenomenon:</strong> Dynamic anomaly scanner mechanics and hazardous weather shifts that mutate wildlife and spawn rare artifacts.</li>
-        </ul>
+        <!-- Section 2: Community Decision FAQ -->
+        <h2 id="faq">Top Community Questions &amp; Purchasing Decisions</h2>
+        <p>Before stepping into Zalesye, here are authoritative answers to the most common questions raised by players on Steam Discussions and YouTube:</p>
 
-        <h2 id="platforms">Platforms &amp; Pricing</h2>
-        <p>Scavland is built primarily for PC via Steam. While a future console port is being evaluated, the development team is focusing 100% of launch resources on PC stability, high-precision mouse aiming, and Steam Deck verification.</p>
+        <div class="faq-list" style="margin:20px 0 35px;display:flex;flex-direction:column;gap:14px;">
+          {faqs.map((faq) => (
+            <div style="padding:16px 20px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+              <h3 style="margin:0 0 8px;font-size:1.1rem;color:#fff;display:flex;align-items:baseline;gap:8px;">
+                <span style="color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.9rem;">Q:</span>
+                {faq.q}
+              </h3>
+              <p style="margin:0;font-size:0.9rem;line-height:1.6;color:var(--ink);padding-left:22px;">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
 
-        <h2 id="next">Related Links</h2>
+        <!-- Section 3: Development Roadmap -->
+        <h2 id="roadmap">Official Development Roadmap (2026 – 2027)</h2>
+        <p>Developer NoShadow has committed to a transparent, multi-stage roadmap as Scavland matures toward full commercial 1.0 release:</p>
+
+        <div class="roadmap-timeline" style="margin:24px 0 35px;position:relative;border-left:2px solid var(--line);padding-left:24px;margin-left:8px;">
+          {roadmap.map((stage) => (
+            <div style="position:relative;margin-bottom:32px;">
+              <!-- Marker Dot -->
+              <div style={`position:absolute;left:-31px;top:4px;width:12px;height:12px;border-radius:50%;${
+                stage.status === 'Active In Progress' ? 'background:var(--acid);box-shadow:0 0 10px var(--acid);' : 'background:var(--muted);'
+              }`}></div>
+
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:0.8rem;color:var(--acid);">{stage.timeline}</span>
+                <span style={`font-size:0.7rem;padding:2px 8px;border-radius:3px;${
+                  stage.status === 'Active In Progress' ? 'background:rgba(185,232,108,0.15);color:var(--acid);border:1px solid rgba(185,232,108,0.3);' :
+                  'background:rgba(255,255,255,0.05);color:var(--muted);'
+                }`}>
+                  {stage.status}
+                </span>
+              </div>
+
+              <h3 style="margin:0 0 10px;font-size:1.25rem;color:#fff;">{stage.phase}</h3>
+              <ul style="margin:0;padding-left:18px;color:var(--ink);font-size:0.9rem;line-height:1.7;">
+                {stage.items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <h2 id="next">Explore the Scavland Field Guides</h2>
         <div class="related-grid">
+          <a href="/weapons/"><strong>Weapons &amp; Attachments Database</strong><br/>Detailed stats on all 25+ guns, ammo penetration, and 300+ attachment slots</a>
           <a href="/system-requirements/"><strong>System Requirements</strong><br/>PC hardware specifications &amp; Steam Deck testing</a>
-          <a href="/weapons/"><strong>Weapons Database</strong><br/>25+ guns and 300+ attachment modifications</a>
-          <a href="/faq/"><strong>Launch FAQ</strong><br/>Common questions on prices, demo, and gameplay</a>
+          <a href="/factions/"><strong>10 Factions &amp; Outposts</strong><br/>Reputation ranks, trade hubs, and faction-exclusive contracts</a>
         </div>
       </div>
 
       <aside class="toc" aria-label="On this page">
         <strong>On this page</strong>
-        <a href="#timeline">Launch Timeline</a>
-        <a href="#content">Day 1 Content</a>
-        <a href="#platforms">Platforms &amp; Pricing</a>
-        <a href="#next">Related Links</a>
+        <a href="#content">Day 1 Content Scope</a>
+        <a href="#faq">Community Decision FAQ</a>
+        <a href="#roadmap">Official Roadmap</a>
+        <a href="#next">Field Guides</a>
       </aside>
     </div>
   </article>
