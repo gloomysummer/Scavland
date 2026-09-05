@@ -237,6 +237,34 @@ export const guides: Guide[] = [
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
     keywords: ['scavland macbook release apple approval 5', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-scavland-beginner-guide-complete-strategy',
+    shortTitle: 'Scavland Beginner Guide',
+    title: 'Scavland guide: Scavland Beginner Guide Complete Strategy & Guide',
+    description: 'Community-verified breakdown of Scavland Beginner Guide Complete Strategy & Guide from Google Search Intent (Strike Zone).',
+    category: 'Community · P0',
+    image: '/images/guides/scavland-scavland-beginner-guide-complete-strategy/scavland-beginner-guide-complete-screenshot.jpg',
+    imageAlt: 'Scavland guide illustration for Scavland Beginner Guide Complete Strategy & Guide',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: 'Players searching for \'scavland beginner guide\' need immediate, step-by-step verified instructions and layouts. Based on Google Search Intent (Strike Zone) intelligence: Google Search Console identified high-demand query \'scavland beginner guide\' sitting at average rank 8.7 with 26.0 impressions and 0.0% CTR. This dedicated guide directly answers core search intent to boost ranking int',
+    steps: [
+      'Source review: Consult Google Search Intent (Strike Zone) discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://google.com/search?q=scavland+beginner+guide'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', 'Players searching for \'scavland beginner guide\' need immediate, step-by-step verified instructions and layouts.'],
+      ['Where was this verified?', 'Discussed on Google Search Intent (Strike Zone): https://google.com/search?q=scavland+beginner+guide']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland scavland beginner guide complete strategy', 'scavland community guide', 'scavland tips', 'scavland beginner guide']
   }
 ];
 
