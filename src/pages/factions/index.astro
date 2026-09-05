@@ -1,114 +1,212 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { FACTIONS_DATABASE, TRADERS_DATABASE } from '../../data/factions';
+
+const confirmedFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Confirmed Named (v0.5.117)');
+const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roadmap Unreleased');
 ---
 
-<Layout title="Scavland 10 Factions & Reputation Guide — Scavland Wiki" description="Detailed guide to all 10 factions in Scavland: faction territories, vendor inventories, reputation mechanics, hostile triggers, and contract rewards in Zalesye." keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Gunner faction, Mudlark faction, Scavland wiki" canonical="/factions/">
+<Layout 
+  title="Scavland Factions & Traders Guide — 10 Organizations, 9 Named Merchants & Raisa Reconciliation" 
+  description="Verified directory of Scavland’s 10 factions (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners), 9 confirmed traders, exclusive gear, and Raisa reconciliation mechanics." 
+  keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Volodymyr trader, Sasha gunsmith, Raisa reconciliation, Rada, Mechanists, Scavland wiki" 
+  canonical="/factions/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+        { '@type': 'ListItem', position: 2, name: 'Factions & Traders Guide', item: 'https://scavland.wiki/factions/' }
+      ]
+    })} />
+  </Fragment>
+
   <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Factions &amp; Traders</span>
+    </nav>
+
     <header class="article-header">
-      <p class="eyebrow">Faction Directory · Updated August 31, 2026</p>
-      <h1 class="page-title">10 Factions &amp; Reputation</h1>
-      <p class="lede">Complete directory of all 10 survivor organizations competing for dominance across Zalesye: territories, specialized merchants, alignment conflicts, and contract jobs.</p>
-      <span class="evidence">Evidence: Official Verified Baseline</span>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Build v0.5 Verified Baseline</span>
+      </div>
+      <h1 class="page-title">10 Factions &amp; 9 Named Traders</h1>
+      <p class="lede">Comprehensive intelligence directory of the 10 survivor factions across Zalesye: territories, 9 verified settlement merchants, exclusive gear, and Raisa diplomatic reconciliation.</p>
+      <span class="evidence">Evidence: Public Changelogs (v0.5.117 / v0.5.121) + Steam Verified Data</span>
     </header>
 
     <div class="article-layout">
       <div class="article-content">
+        <!-- Visual Media Strip -->
         <div class="media-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;">
           <figure style="margin:0;">
-            <img src="/images/screenshots/steam_ss_04.webp" alt="Neutral settlement safehouse and faction outpost in Scavland" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
-            <figcaption class="caption">Neutral survivor settlement safehouse and trading stalls</figcaption>
+            <img src="/images/screenshots/steam_ss_04.webp" alt="Neutral settlement safehouse and faction outpost in Scavland" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="eager" fetchpriority="high" />
+            <figcaption class="caption">Neutral survivor settlement safehouse and trading stalls in Zalesye</figcaption>
           </figure>
           <figure style="margin:0;">
-            <img src="/images/screenshots/steam_ss_13.webp" alt="Armed faction checkpoint in Zalesye" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <img src="/images/screenshots/steam_ss_13.webp" alt="Armed faction checkpoint in Zalesye" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy" />
             <figcaption class="caption">Fortified checkpoint manned by armed faction sentries</figcaption>
           </figure>
         </div>
 
+        <!-- Quick Summary Box -->
         <div class="quick-answer" style="margin-bottom:32px;">
-          <strong>Reputation Dynamics &amp; Vendor Standings</strong>
-          In Scavland, neutrality is hard to maintain. Assisting one faction by completing high-risk contracts or turning in recovered Soviet technology will increase your loyalty tier with that group while antagonizing their rivals.
+          <strong style="color:var(--acid);font-size:1.05rem;">Faction Scope &amp; Trader Baseline</strong>
+          <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
+            <li><strong>10 Factions Total:</strong> Steam officially confirms 10 factions exist. In the current Early Access Act I build, <strong>6 core factions are publicly named and interactive</strong> (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners). The remaining 4 are scheduled for roadmap expansion.</li>
+            <li><strong>9 Confirmed Named Traders:</strong> Anatoly, Nadja, Raisa, Grigory, Jasna, Marco, Olga, Sasha, and Volodymyr operate across outposts.</li>
+            <li><strong>Crucial Vendor Fact:</strong> Trader <strong>Volodymyr has ZERO rank/reputation requirement</strong> on all goods—ideal for fresh spawns or players who antagonized other factions.</li>
+            <li><strong>Raisa Reconciliation:</strong> If your standing with any group dips into hostile (&lt; -300 Rep), visit diplomat <strong>Raisa</strong> to purchase truce contracts instead of taking permanent fire on sight.</li>
+          </ul>
         </div>
 
-        <h2 id="directory">Major Factions Directory</h2>
+        <!-- Section 1: 6 Confirmed Factions Grid -->
+        <h2 id="confirmed-factions">6 Confirmed Act I Factions</h2>
+        <p style="color:var(--muted);margin-bottom:1.5rem;">These organizations control Zalesye's central outposts, contracts, and resource trade in Early Access:</p>
 
-        <div style="overflow-x:auto;margin:20px 0;">
-          <table class="facts" style="width:100%;">
+        <div class="factions-grid" style="display:grid;grid-template-columns:1fr;gap:20px;margin-bottom:3rem;">
+          {confirmedFactions.map((f) => (
+            <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:20px;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+                <div>
+                  <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+                    <span style={`font-size:0.7rem;font-family:'IBM Plex Mono',monospace;padding:2px 8px;border-radius:3px;background:rgba(255,255,255,0.05);color:${f.alignmentColor};border:1px solid ${f.alignmentColor}40;`}>
+                      {f.alignment} Alignment
+                    </span>
+                    <span style="font-size:0.7rem;font-family:'IBM Plex Mono',monospace;padding:2px 8px;border-radius:3px;background:rgba(185,232,108,0.1);color:var(--acid);">
+                      Act I Interactive
+                    </span>
+                  </div>
+                  <h3 style="margin:0;font-size:1.35rem;color:#fff;">{f.name} ({f.codeName})</h3>
+                  <div style="font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--muted);margin-top:2px;">
+                    Territory: <span style="color:var(--ink);">{f.territory}</span>
+                  </div>
+                </div>
+              </div>
+
+              <p style="font-size:0.9rem;line-height:1.6;color:var(--ink);margin:8px 0;">{f.summary}</p>
+              
+              <div style="margin:10px 0;padding:10px 14px;background:rgba(0,0,0,0.3);border-radius:4px;font-size:0.85rem;">
+                <strong style="color:var(--acid);">Core Ideology:</strong> {f.ideology}
+              </div>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:12px;margin:12px 0;">
+                <div>
+                  <span style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;font-family:'IBM Plex Mono',monospace;display:block;margin-bottom:4px;">Exclusive Gear / Trade:</span>
+                  <div style="font-size:0.85rem;color:#fff;background:rgba(255,255,255,0.03);padding:8px 10px;border-radius:4px;border:1px solid var(--line);">
+                    {f.exclusiveGear}
+                  </div>
+                </div>
+                <div>
+                  <span style="font-size:0.72rem;color:var(--muted);text-transform:uppercase;font-family:'IBM Plex Mono',monospace;display:block;margin-bottom:4px;">Conflict &amp; Reconciliation:</span>
+                  <div style="font-size:0.85rem;color:#ffb088;background:rgba(227,145,85,0.06);padding:8px 10px;border-radius:4px;border:1px solid rgba(227,145,85,0.2);">
+                    {f.reconciliationRisk}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Section 2: 9 Confirmed Named Traders Table -->
+        <h2 id="traders">9 Verified Settlement Traders</h2>
+        <p>Public changelog v0.5.117 confirmed 9 named traders operating outposts across Zalesye. Below are their specific trading niches, stock peculiarities, and critical player buying decisions:</p>
+
+        <div style="overflow-x:auto;margin:20px 0 35px;">
+          <table class="facts" style="width:100%;border-collapse:collapse;">
             <thead>
               <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
-                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">FACTION</th>
-                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">TERRITORY</th>
-                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">ATTITUDE</th>
-                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">EXCLUSIVE GOODS</th>
-                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">RIVAL GROUP</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">TRADER</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">LOCATION</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">PRIMARY INVENTORY</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">CRITICAL STOCK NOTES</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">REP GATE</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td style="font-weight:700;color:var(--acid);">The Free Vultures</td>
-                <td>Crossroads Settlement</td>
-                <td><span style="color:#00ffaa;">Neutral</span></td>
-                <td>Basic ammo, lockpicks, food/water, stash renting</td>
-                <td>Marshland Marauders</td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--acid);">Bunker Wardens</td>
-                <td>Subterranean Complex 04</td>
-                <td><span style="color:#ffaa00;">Guarded</span></td>
-                <td>Heavy body armor, 5.45mm military ammo, night-vision</td>
-                <td>Rada Outlaws</td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--acid);">Mist Ecologists</td>
-                <td>Mobile Lab Sector B</td>
-                <td><span style="color:#00ffaa;">Neutral</span></td>
-                <td>Anomaly Scanners, high-grade filters, Anti-Rad injectors</td>
-                <td>Zealot Cults</td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--acid);">Gunners Syndicate</td>
-                <td>Industrial Train Depot</td>
-                <td><span style="color:#ffaa00;">Mercenary</span></td>
-                <td>Gun parts, suppressors, high-caliber sniper rifles</td>
-                <td>Mudlarks</td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--acid);">The Mudlarks</td>
-                <td>Sunken Swamplands</td>
-                <td><span style="color:#ffaa00;">Cautious</span></td>
-                <td>Swamp herbs, medical salves, improvised stealth cloaks</td>
-                <td>Gunners</td>
-              </tr>
-              <tr>
-                <td style="font-weight:700;color:var(--acid);">Marshland Marauders</td>
-                <td>Highway Blockades</td>
-                <td><span style="color:#ff4444;">Hostile</span></td>
-                <td>Black-market weapons, stolen military crates (Raid target)</td>
-                <td>All Factions</td>
-              </tr>
+              {TRADERS_DATABASE.map((t) => (
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <td style="font-weight:700;color:#fff;">
+                    {t.name}
+                    <span style="display:block;font-size:0.75rem;color:var(--muted);font-weight:400;">{t.title}</span>
+                  </td>
+                  <td style="font-size:0.85rem;color:var(--muted);">{t.location}</td>
+                  <td style="font-size:0.85rem;color:var(--ink);">
+                    <ul style="margin:0;padding-left:14px;">
+                      {t.priorityStock.map((item) => (
+                        <li>{item}</li>
+                      ))}
+                    </ul>
+                  </td>
+                  <td style="font-size:0.85rem;line-height:1.4;color:#ffdd99;">
+                    {t.criticalNote}
+                  </td>
+                  <td>
+                    {t.reputationGated ? (
+                      <span style="font-size:0.72rem;padding:2px 6px;border-radius:3px;background:rgba(227,145,85,0.15);color:var(--orange);font-family:'IBM Plex Mono',monospace;">Rep Gated</span>
+                    ) : (
+                      <span style="font-size:0.72rem;padding:2px 6px;border-radius:3px;background:rgba(185,232,108,0.15);color:var(--acid);font-family:'IBM Plex Mono',monospace;font-weight:700;">NO RANK REQ</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
 
-        <h2 id="tiers">Reputation Tiers &amp; Loyalty Rewards</h2>
-        <ul>
-          <li><strong>Tier 1 — Stranger (0–200 Rep):</strong> Access to basic goods and baseline pricing (100% price index).</li>
-          <li><strong>Tier 2 — Associate (200–600 Rep):</strong> 10% discount on ammunition and food; unlocks Tier-2 side contracts and regional safehouse access.</li>
-          <li><strong>Tier 3 — Trusted Ally (600–1200 Rep):</strong> 20% discount; unlocks military-grade weapon blueprints, rare attachment crates, and AI guard reinforcement in combat.</li>
-          <li><strong>Hostile (&lt; -300 Rep):</strong> Sentries open fire on sight; bounty hunters will ambush you on open roads.</li>
-        </ul>
+        <!-- Section 3: Raisa Reconciliation Mechanism -->
+        <h2 id="reconciliation">Raisa Diplomatic Reconciliation System</h2>
+        <p>In Scavland, taking bounty contracts against one faction will inevitably lower your reputation with them. If your standing reaches <strong>Hostile (&lt; -300 Rep)</strong>, their patrols will snipe you on sight.</p>
+        
+        <div style="padding:16px 20px;background:rgba(185,232,108,0.05);border-left:4px solid var(--acid);border-radius:0 6px 6px 0;margin:20px 0;">
+          <h4 style="margin:0 0 8px;color:#fff;">How to Clear Hostile Standing with Factions:</h4>
+          <ol style="margin:0;padding-left:18px;color:var(--ink);line-height:1.7;font-size:0.9rem;">
+            <li>Travel to the <strong>Neutral Chapel Outpost</strong> and speak with <strong>Raisa</strong>.</li>
+            <li>Select the aggrieved faction (e.g. <em>Rada, Gunners, or Mechanists</em>).</li>
+            <li>Pay a diplomatic bond in rubles or accept a <strong>Reconciliation Courier Job</strong> (delivering medical supplies or industrial parts to an outpost without firing your weapon).</li>
+            <li>Upon completion, your reputation resets back to <strong>Neutral (0 Rep)</strong>, lifting highway checkpoint shoot-on-sight orders.</li>
+          </ol>
+        </div>
 
-        <h2 id="next">Related Guides</h2>
+        <!-- Section 4: 4 Roadmap Unreleased Factions -->
+        <h2 id="roadmap-factions">4 Roadmap Factions (Act II &amp; Act III)</h2>
+        <p style="color:var(--muted);">The following organizations exist in the game’s lore and official roadmap, and will unlock as the Zalesye map expands northward in upcoming Early Access phases:</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:14px;margin:20px 0;">
+          {roadmapFactions.map((rf) => (
+            <div style="padding:14px;background:#121a16;border:1px solid var(--line);border-radius:6px;opacity:0.85;">
+              <div style="font-size:0.7rem;font-family:'IBM Plex Mono',monospace;color:var(--muted);text-transform:uppercase;margin-bottom:2px;">
+                {rf.codeName}
+              </div>
+              <h4 style="margin:0 0 6px;color:#fff;">{rf.name}</h4>
+              <p style="margin:0 0 8px;font-size:0.82rem;color:var(--muted);line-height:1.5;">{rf.summary}</p>
+              <div style="font-size:0.75rem;color:var(--acid);font-family:'IBM Plex Mono',monospace;">
+                Planned: {rf.territory}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Section 5: Related Guides -->
+        <h2 id="next">Related Arsenal &amp; Resource Guides</h2>
         <div class="related-grid">
-          <a href="/weapons/"><strong>Weapons &amp; Attachments</strong><br/>Arsenal stats, calibers, and modding slots</a>
-          <a href="/maps/"><strong>World Map &amp; Bunkers</strong><br/>Faction checkpoints and radiation hazard zones</a>
-          <a href="/guide/scavland-quests-and-contracts/"><strong>Quests &amp; Contracts</strong><br/>How to take high-reward wasteland contracts</a>
+          <a href="/weapons/"><strong>Weapons &amp; Attachments Database</strong><br/>Detailed stats on all 25+ guns, ammo penetration, and 300+ attachment slots</a>
+          <a href="/resources/"><strong>Loot &amp; Barter Tables</strong><br/>Medical items, hydration canteens, and scrap salvage values</a>
+          <a href="/guide/scavland-beginner-guide/"><strong>Beginner Survival Guide</strong><br/>Essential inventory loops, safehouse upgrades, and extraction routes</a>
         </div>
       </div>
 
       <aside class="toc" aria-label="On this page">
         <strong>On this page</strong>
-        <a href="#directory">Factions Directory</a>
-        <a href="#tiers">Reputation Tiers</a>
+        <a href="#confirmed-factions">6 Confirmed Factions</a>
+        <a href="#traders">9 Named Traders</a>
+        <a href="#reconciliation">Raisa Reconciliation</a>
+        <a href="#roadmap-factions">Roadmap Factions</a>
         <a href="#next">Related Guides</a>
       </aside>
     </div>

@@ -3,43 +3,109 @@ import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import { guides } from '../../data/guides';
 import { media } from '../../data/media';
+import { MEDICAL_DATABASE, TRADERS_DATABASE } from '../../data/factions';
 
 const resources = guides.filter((guide) => ['Resources','Gear','Systems','Exploration'].includes(guide.category));
 const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'community');
 ---
 
-<Layout title="Scavland Resources, Loot Tables & Trader Barter — Scavland Wiki" description="Comprehensive Scavland loot tables: valuable junk items, merchant barter prices, crafting components, weapon maintenance materials, and 1080p screenshot gallery." keywords="Scavland resources, Scavland loot tables, valuable junk, trader barter, crafting materials, spark plugs, weapon repair parts" canonical="/resources/">
+<Layout 
+  title="Scavland Resources, Medical & Trader Barter Tables — Scavland Wiki" 
+  description="Comprehensive Scavland resources and loot tables: medical items, hydration & thirst mechanics, 9 settlement traders, valuable junk barter prices, and crafting materials." 
+  keywords="Scavland resources, Scavland loot tables, medical items, morphine thirst, IFAK, AI-2, trader barter, Volodymyr trader, spark plugs, weapon repair parts" 
+  canonical="/resources/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+        { '@type': 'ListItem', position: 2, name: 'Resources & Barter Tables', item: 'https://scavland.wiki/resources/' }
+      ]
+    })} />
+  </Fragment>
+
   <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Resources &amp; Barter</span>
+    </nav>
+
     <header class="article-header">
-      <p class="eyebrow">Resource Desk &amp; Loot Database · Updated September 1, 2026</p>
-      <h1 class="page-title">Resources &amp; Barter Tables</h1>
-      <p class="lede">High-density loot evaluation, merchant barter values, crafting component allocations, and verified 1080p visual field evidence across Zalesye.</p>
-      <span class="evidence">Evidence: Official Verified Baseline</span>
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Build v0.5 Verified Baseline</span>
+      </div>
+      <h1 class="page-title">Resources, Medical &amp; Barter Tables</h1>
+      <p class="lede">High-density loot evaluation, medical recovery items, hydration counters, 9 named merchant stocks, and verified 1080p visual field evidence across Zalesye.</p>
+      <span class="evidence">Evidence: In-Game Verification + Official v0.5.117 / v0.5.121 Changelogs</span>
     </header>
 
     <div class="article-layout">
       <div class="article-content">
         <div class="media-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;">
           <figure style="margin:0;">
-            <img src="/images/screenshots/steam_ss_05.webp" alt="Official Scavland inventory and item inspection" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <img src="/images/screenshots/steam_ss_05.webp" alt="Official Scavland inventory and item inspection" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="eager" fetchpriority="high" />
             <figcaption class="caption">Item weight, condition metrics, and stack-aware container sorting</figcaption>
           </figure>
           <figure style="margin:0;">
-            <img src="/images/screenshots/steam_ss_11.webp" alt="Official Scavland trading and merchant barter interface" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy"/>
+            <img src="/images/screenshots/steam_ss_11.webp" alt="Official Scavland trading and merchant barter interface" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy" />
             <figcaption class="caption">Settlement merchant trading stall and dynamic price indices</figcaption>
           </figure>
         </div>
 
         <div class="quick-answer" style="margin-bottom:32px;">
-          <strong>Loot Density &amp; Barter Strategy</strong>
-          Not all wasteland junk is worth the pack weight. Functional electrical and automotive components (spark plugs, lighters, wire relays, toolboxes) have a <strong>3x to 5x higher value-to-weight ratio</strong> than scrap metal or empty bottles. Always prioritize high-density barter goods on your extraction runs.
+          <strong style="color:var(--acid);font-size:1.05rem;">Loot Density &amp; Survival Economy Rules</strong>
+          <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
+            <li><strong>Value-to-Weight Ratio:</strong> Not all wasteland junk is worth pack slots. Functional electrical and automotive components (spark plugs, lighters, wire relays, toolboxes) deliver <strong>3x to 5x higher profit per kilogram</strong> than scrap metal or empty bottles.</li>
+            <li><strong>The Morphine Dehydration Trap:</strong> Morphine temporarily ignores fractures and aiming tremors, but causes an immediate <strong>-35 Hydration spike</strong>. Always pack a 1L Canteen or Baikal Soda before administering pain meds.</li>
+            <li><strong>Trader Standing Shortcut:</strong> Trader <strong>Volodymyr</strong> at the Crossroads annex sells weapons and supplies with <strong>0 rank or reputation requirement</strong>.</li>
+          </ul>
         </div>
 
-        <h2 id="loot-table">High-Value Scavenging &amp; Barter Cheat Sheet</h2>
-        <p>Use this reference table to decide what to extract, what to sell immediately, and what to hoard in your safehouse stash for weapon maintenance and crafting.</p>
+        <!-- Section 1: Medical & Hydration System -->
+        <h2 id="medical">Medical Items &amp; Thirst Matrix</h2>
+        <p>Surviving firefights in Zalesye requires managing both physical trauma (bleeds and fractures) and metabolic penalties (severe thirst triggered by analgesics):</p>
 
-        <div style="overflow-x:auto;margin:20px 0;">
-          <table class="facts" style="width:100%;">
+        <div style="overflow-x:auto;margin:20px 0 35px;">
+          <table class="facts" style="width:100%;border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">ITEM NAME</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">CATEGORY</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">HEALING / EFFECT</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">BLEED REMOVAL</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">THIRST IMPACT</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">PRIMARY VENDOR</th>
+              </tr>
+            </thead>
+            <tbody>
+              {MEDICAL_DATABASE.map((m) => (
+                <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                  <td style="font-weight:700;color:#fff;">{m.name}</td>
+                  <td style="font-size:0.8rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;">{m.category}</td>
+                  <td style="font-size:0.85rem;color:var(--acid);font-weight:600;">{m.healAmount}</td>
+                  <td style="font-size:0.85rem;color:var(--ink);">{m.bleedStop}</td>
+                  <td style="font-size:0.85rem;font-family:'IBM Plex Mono',monospace;">
+                    <span style={m.thirstImpact.includes('CRITICAL') || m.thirstImpact.startsWith('-') ? 'color:var(--orange);font-weight:700;' : 'color:var(--acid);'}>
+                      {m.thirstImpact}
+                    </span>
+                  </td>
+                  <td style="font-size:0.8rem;color:var(--muted);">{m.traderSource}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Section 2: High-Value Scavenging Cheat Sheet -->
+        <h2 id="loot-table">High-Value Scavenging &amp; Barter Cheat Sheet</h2>
+        <p>Use this reference table to decide what to extract, what to sell immediately, and what to hoard in your safehouse stash for weapon maintenance and workbench upgrades.</p>
+
+        <div style="overflow-x:auto;margin:20px 0 35px;">
+          <table class="facts" style="width:100%;border-collapse:collapse;">
             <thead>
               <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
                 <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">ITEM NAME</th>
@@ -70,6 +136,13 @@ const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'commu
                 <td>0.3 kg</td>
                 <td><span style="color:#ffaa00;">High Utility</span></td>
                 <td><strong>Never Sell:</strong> Field maintenance tool; restores +15% gun durability to prevent jams.</td>
+              </tr>
+              <tr>
+                <td style="font-weight:700;color:var(--acid);">Box of Screws</td>
+                <td>Hardware Consumable</td>
+                <td>0.3 kg</td>
+                <td><span style="color:#00ffaa;">Essential Crafting</span></td>
+                <td><strong>Hoard in Stash:</strong> Crucial for weapon mods and workbench upgrades. (Nadja stocks high quantity in v0.5.117).</td>
               </tr>
               <tr>
                 <td style="font-weight:700;color:var(--acid);">Industrial Tool Set</td>
@@ -103,13 +176,31 @@ const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'commu
           </table>
         </div>
 
-        <h2 id="merchants">Specialized Merchant Preferences</h2>
-        <ul>
-          <li><strong>General Outpost Traders:</strong> Pay premium prices for food rations, clean water, spark plugs, and functional lighters.</li>
-          <li><strong>Gunsmith Merchants (Gunners Syndicate):</strong> Buy damaged firearms, gun parts, springs, and optical scopes at 20% above average market rates.</li>
-          <li><strong>Scientist Ecologists (Mobile Lab):</strong> Offer top dollar and rare anti-rad injectors in exchange for raw Anomaly Artifacts and mutant biological samples.</li>
-        </ul>
+        <!-- Section 3: 9 Named Merchants Overview -->
+        <h2 id="merchants">9 Confirmed Settlement Merchants</h2>
+        <p>Knowing where to buy specific goods and which vendor waives faction reputation requirements is essential for survival:</p>
 
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:14px;margin:20px 0 35px;">
+          {TRADERS_DATABASE.map((t) => (
+            <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+                <h4 style="margin:0;color:#fff;font-size:1.1rem;">{t.name}</h4>
+                {t.reputationGated ? (
+                  <span style="font-size:0.68rem;padding:2px 6px;border-radius:3px;background:rgba(227,145,85,0.15);color:var(--orange);font-family:'IBM Plex Mono',monospace;">Rep Gated</span>
+                ) : (
+                  <span style="font-size:0.68rem;padding:2px 6px;border-radius:3px;background:rgba(185,232,108,0.15);color:var(--acid);font-family:'IBM Plex Mono',monospace;font-weight:700;">NO RANK REQ</span>
+                )}
+              </div>
+              <div style="font-size:0.8rem;color:var(--muted);margin-bottom:8px;font-family:'IBM Plex Mono',monospace;">{t.location}</div>
+              <p style="margin:0 0 8px;font-size:0.85rem;color:var(--ink);line-height:1.5;">{t.specialty}</p>
+              <div style="font-size:0.8rem;color:#ffdd99;background:rgba(255,255,255,0.03);padding:8px;border-radius:4px;">
+                {t.criticalNote}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Section 4: Guides & Gallery -->
         <h2 id="guides">Essential Field Guides</h2>
         <div class="guide-grid" style="margin:20px 0;">{resources.map((guide) => <GuideCard guide={guide} />)}</div>
 
@@ -133,8 +224,9 @@ const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'commu
 
       <aside class="toc" aria-label="On this page">
         <strong>On this page</strong>
+        <a href="#medical">Medical &amp; Thirst</a>
         <a href="#loot-table">Loot Cheat Sheet</a>
-        <a href="#merchants">Trader Preferences</a>
+        <a href="#merchants">9 Settlement Traders</a>
         <a href="#guides">Related Guides</a>
         <a href="#gallery">Visual Gallery</a>
       </aside>
