@@ -207,7 +207,7 @@ const categories = [
         <h2 id="ballistics">Ammunition Ballistics &amp; Penetration Matrix</h2>
         <p>In Scavland, armor protects targets based on 5 discrete resistance tiers. Choosing the proper cartridge determines whether a bullet punches through enemy body armor or ricochets harmlessly.</p>
 
-        <div style="overflow-x:auto;margin:20px 0 35px;">
+        <div class="table-responsive" style="overflow-x:auto;margin:20px 0 35px;">
           <table class="facts" style="width:100%;border-collapse:collapse;">
             <thead>
               <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
@@ -225,11 +225,22 @@ const categories = [
                   <td style="font-weight:700;color:var(--acid);font-family:'IBM Plex Mono',monospace;">{b.caliber}</td>
                   <td style="font-size:0.85rem;color:#ccc;">{b.rounds}</td>
                   <td>
-                    <div style="display:flex;gap:3px;align-items:center;">
-                      {[1, 2, 3, 4, 5].map((level) => (
-                        <span style={`width:10px;height:10px;border-radius:2px;display:inline-block;${level <= b.penTier ? 'background:var(--acid);' : 'background:rgba(255,255,255,0.1);'}`}></span>
-                      ))}
-                      <span style="font-size:0.75rem;margin-left:4px;color:var(--muted);font-family:'IBM Plex Mono',monospace;">Tier {b.penTier}</span>
+                    <div style="display:flex;gap:4px;align-items:center;">
+                      <span class={`tier-pill tier-${b.penTier}`}>
+                        Tier {b.penTier}
+                      </span>
+                      <div style="display:flex;gap:2px;margin-left:4px;">
+                        {[1, 2, 3, 4, 5].map((level) => (
+                          <span style={`width:8px;height:8px;border-radius:1px;display:inline-block;${
+                            level <= b.penTier ? 
+                              (b.penTier === 5 ? 'background:var(--t5-gold);box-shadow:0 0 4px var(--t5-gold);' :
+                               b.penTier === 4 ? 'background:var(--t4-purple);' :
+                               b.penTier === 3 ? 'background:var(--t3-blue);' :
+                               b.penTier === 2 ? 'background:var(--t2-green);' : 'background:var(--t1-white);') :
+                              'background:rgba(255,255,255,0.1);'
+                          }`}></span>
+                        ))}
+                      </div>
                     </div>
                   </td>
                   <td style="font-size:0.9rem;font-weight:600;">{b.damageRating}</td>

@@ -93,12 +93,12 @@ const faqSchema = guide.faq && guide.faq.length > 0 ? {
   </Fragment>
 
   <article class="article-shell">
-    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
-      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.85rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">Scavland Wiki</a>
       <span style="opacity:0.4;">/</span>
-      <a href="/guide/" style="color:var(--text-muted,#aaa);text-decoration:none;">Guides</a>
+      <a href="/guide/" style="color:var(--text-muted,#aaa);text-decoration:none;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">Guides</a>
       <span style="opacity:0.4;">/</span>
-      <span style="color:#bbb;">{guide.title}</span>
+      <span style="color:#bbb;padding:4px 0;">{guide.title}</span>
     </nav>
 
     <header class="article-header">
@@ -107,6 +107,19 @@ const faqSchema = guide.faq && guide.faq.length > 0 ? {
       <p class="lede">{guide.description}</p>
       <span class="evidence">Evidence: {guide.evidence}</span>
     </header>
+
+    <!-- Mobile Collapsible Table of Contents -->
+    <details class="toc-mobile" style="display:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:24px 0;">
+      <summary style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:700;color:var(--acid);cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;user-select:none;display:flex;align-items:center;min-height:44px;">
+        Table of contents (Jump to section ▾)
+      </summary>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);font-size:0.88rem;">
+        <a href="#field-notes" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Field notes</a>
+        <a href="#evidence" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Evidence boundary</a>
+        <a href="#faq" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Questions players ask</a>
+        <a href="#related" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Related guides</a>
+      </div>
+    </details>
 
     <div class="article-layout">
       <div class="article-content">

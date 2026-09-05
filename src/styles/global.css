@@ -1,5 +1,22 @@
 @import './fonts.css';
-:root{--ink:#e7eee9;--muted:#9aa9a0;--bg:#0b100e;--panel:#121a16;--line:#26362e;--acid:#b9e86c;--orange:#e39155;--max:1180px;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:var(--bg)}
+:root{
+  --ink:#e7eee9;
+  --muted:#9aa9a0;
+  --bg:#0b100e;
+  --panel:#121a16;
+  --line:#26362e;
+  --acid:#b9e86c;
+  --orange:#e39155;
+  --max:1180px;
+  --t1-white:#e2e8f0;
+  --t2-green:#4ade80;
+  --t3-blue:#60a5fa;
+  --t4-purple:#c084fc;
+  --t5-gold:#fbbf24;
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:92px;overflow-x:hidden;max-width:100%}
 body{margin:0;line-height:1.6;background:radial-gradient(circle at 88% 10%,#1b2b20 0,transparent 30rem),var(--bg);overflow-x:hidden;max-width:100%;width:100%}
@@ -10,22 +27,59 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 .skip-link:focus{transform:translateY(0)}
 
 /* Header & Nav */
-.site-header{min-height:76px;display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:auto;padding:0 24px;border-bottom:1px solid var(--line);position:relative;z-index:2}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  background:rgba(11,16,14,0.85);
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:var(--max);
+  margin:auto;
+  padding:0 24px;
+  border-bottom:1px solid var(--line);
+  transition:background .25s ease, border-color .25s ease;
+}
 .brand{display:flex;gap:10px;align-items:center;font:700 1.15rem/1 'Barlow Condensed',sans-serif;letter-spacing:.1em;white-space:nowrap}
 .brand img{width:32px;height:32px}
 .brand-sub{display:block;color:var(--acid);font:500 .5rem/1.4 'IBM Plex Mono';letter-spacing:.19em}
 .site-header nav{display:flex;gap:18px;align-items:center;font-size:.82rem;color:var(--muted)}
 .site-header nav a{min-height:44px;display:inline-flex;align-items:center;position:relative;white-space:nowrap}
 .site-header nav a:hover,.site-header nav a.active{color:var(--ink)}
-.site-header nav a.active:after{content:'';position:absolute;left:0;right:0;bottom:3px;height:2px;background:var(--acid)}
+.site-header nav a.active:after{
+  content:'';
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:3px;
+  height:2px;
+  background:var(--acid);
+  box-shadow:0 0 10px rgba(185,232,108,0.5);
+}
 kbd,.eyebrow,.stamp{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase}
 .nav-search{border:1px solid var(--line);padding:0 10px;border-radius:4px}
 .nav-search kbd{color:var(--acid)}
 main{position:relative;z-index:1}
 
 /* Hero */
+@keyframes mist-pulse{
+  0%, 100%{ opacity: 0.65; transform: scale(1); }
+  50%{ opacity: 0.82; transform: scale(1.03); }
+}
 .hero{max-width:var(--max);margin:0 auto;padding:106px 24px 90px;min-height:600px;position:relative;overflow:hidden}
-.hero:before{content:'';position:absolute;inset:0 0 0 44%;background:linear-gradient(90deg,var(--bg),transparent 25%),url('/images/hero/page_bg_raw.webp') center/cover;opacity:.65;z-index:-1}
+.hero:before{
+  content:'';
+  position:absolute;
+  inset:0 0 0 44%;
+  background:linear-gradient(90deg,var(--bg),transparent 25%),url('/images/hero/page_bg_raw.webp') center/cover;
+  opacity:.65;
+  z-index:-1;
+  animation: mist-pulse 10s ease-in-out infinite alternate;
+}
 .hero h1,.page-title{font:800 clamp(3.2rem,8vw,7.5rem)/.88 'Barlow Condensed',sans-serif;letter-spacing:.025em;text-transform:uppercase;margin:18px 0 24px;max-width:850px;word-break:break-word}
 .hero h1{color:#f1f6ee;text-shadow:0 8px 35px #000}
 .lede{font-size:1.1rem;color:#c6d1c9;max-width:560px}
@@ -97,6 +151,34 @@ main{position:relative;z-index:1}
 .faq-list summary{cursor:pointer;font-weight:600}
 .faq-list p{color:var(--muted)}
 
+/* Tactical Tier Badges & Micro-Interactions */
+.tier-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:0.7rem;
+  font-weight:700;
+  padding:2px 8px;
+  border-radius:3px;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.tier-1{background:rgba(226,232,240,0.1);color:var(--t1-white);border:1px solid rgba(226,232,240,0.25);}
+.tier-2{background:rgba(74,222,128,0.1);color:var(--t2-green);border:1px solid rgba(74,222,128,0.3);}
+.tier-3{background:rgba(96,165,250,0.1);color:var(--t3-blue);border:1px solid rgba(96,165,250,0.3);}
+.tier-4{background:rgba(192,132,252,0.1);color:var(--t4-purple);border:1px solid rgba(192,132,252,0.3);}
+.tier-5{background:rgba(251,191,36,0.12);color:var(--t5-gold);border:1px solid rgba(251,191,36,0.35);box-shadow:0 0 8px rgba(251,191,36,0.15);}
+
+.guide-card, .weapon-card, .faction-card{
+  transition:transform .2s cubic-bezier(0.16, 1, 0.3, 1),border-color .2s ease,box-shadow .2s ease;
+}
+.guide-card:hover, .weapon-card:hover, .faction-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(185,232,108,0.45);
+  box-shadow:0 10px 28px rgba(0,0,0,0.5), 0 0 14px rgba(185,232,108,0.12);
+}
+
 /* ═══════════════════════════════════════════════════
    Mobile Responsive Rules (Optimized for Handhelds)
    ═══════════════════════════════════════════════════ */
@@ -114,27 +196,34 @@ main{position:relative;z-index:1}
   }
   .site-header nav{
     display:flex;
-    gap:14px;
+    gap:16px;
     flex-wrap:nowrap;
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
     margin:0 -16px;
-    padding:4px 16px 8px;
+    padding:4px 20px 8px 16px;
     border-top:1px solid rgba(255,255,255,0.04);
+    -webkit-mask-image:linear-gradient(to right, black 84%, transparent 100%);
+    mask-image:linear-gradient(to right, black 84%, transparent 100%);
   }
   .site-header nav::-webkit-scrollbar{
     display:none;
   }
   .site-header nav a{
-    min-height:38px;
-    font-size:0.85rem;
-    padding:0 2px;
+    min-height:44px;
+    font-size:0.88rem;
+    padding:0 4px;
     flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
   }
   .site-header .nav-search{
-    padding:0 8px;
+    padding:0 12px;
+    min-height:44px;
     margin-left:auto;
+    display:inline-flex;
+    align-items:center;
   }
 
   /* 2. Hero & Headlines: Prevent Word Cut-off */
@@ -211,13 +300,11 @@ main{position:relative;z-index:1}
   .article-layout{
     display:block;
   }
+  .toc-mobile{
+    display:block !important;
+  }
   .toc{
-    position:static;
-    margin:0 0 28px;
-    padding:14px 16px;
-    border:1px solid var(--line);
-    border-radius:6px;
-    background:rgba(255,255,255,0.01);
+    display:none !important;
   }
   .related-grid{
     grid-template-columns:1fr;
