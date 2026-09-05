@@ -133,16 +133,18 @@ const faqSchema = guide.faq && guide.faq.length > 0 ? {
         <AdsterraArticleBanner />
 
         <h2 id="evidence">Evidence boundary</h2>
-        <table class="facts">
-          <tbody>
-            {guide.facts.map(([key, value]) => (
-              <tr>
-                <td>{key}</td>
-                <td>{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div class="table-responsive" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:16px 0;">
+          <table class="facts">
+            <tbody>
+              {guide.facts.map(([key, value]) => (
+                <tr>
+                  <td>{key}</td>
+                  <td>{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="faq">Questions players ask</h2>
         <div class="faq-list">
