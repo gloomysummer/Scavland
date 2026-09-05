@@ -13,7 +13,231 @@ export const guides: Guide[] = [
   { slug:'scavland-map-and-locations', shortTitle:'Map & locations', title:'Scavland map and locations guide', description:'A location-first map guide for settlements, bunkers, ruins and hazardous zones, with evidence labels for every marker.', category:'Exploration', image:'/images/screenshots/ss_08_overworld_map.webp', imageAlt:'Scavland overworld map with location markers', evidence:'Community demonstration', updated:'2026-08-29', answer:'Use the map to plan risk and return routes, not to assume every marker has a fixed loot table. Community imagery can show a location exists; each mechanic or reward still needs a separate source.', steps:['Name a location using the game UI or a clear landmark.','Record access conditions and nearby hazards.','Add a marker only after the location is visible in a source capture.','Link the marker to the guide that explains its actual use.'], facts:[['Evidence level','Authorized community demonstration screenshot; marker details need release-build confirmation.'],['Map policy','No invented coordinates, boss icons or guaranteed loot markers.']], faq:[['Is the full map available?','A complete verified map is not published yet.'],['How are markers verified?','Each marker needs a dated screenshot or repeatable personal test.']], related:['scavland-mist','scavland-loot-and-scavenging','scavland-quests-and-contracts'], keywords:['scavland map','scavland locations'] },
   { slug:'scavland-crafting-and-trading', shortTitle:'Crafting & trading', title:'Scavland crafting and trading guide', description:'A practical starting point for crafting, traders and resource decisions based on the official game loop.', category:'Systems', image:'/images/videos/feature_weapons_crafting.mp4', imageAlt:'Crafting and weapon modification footage from Scavland', evidence:'Official', updated:'2026-08-29', answer:'Keep resources that support your next expedition, prioritize selling high-demand trade items (plugs, lighters, scrap) to NPC merchants, and save specialized components for upcoming crafting stations.', steps:['Sort supplies by immediate survival value and trade value.','Check trader inventory needs (e.g. spark plugs, lighters, toolboxes) before converting items into raw scrap.','Stockpile spare components in your base stash for future crafting and weapon modding recipes.','Track merchant price fluctuations across different faction settlements.'], facts:[['Official scope','Crafting and traders are listed core systems.'],['Unverified','Fixed recipes, prices and best-profit routes are not asserted yet.']], faq:[['What should I craft first?','Medical splints, bandages, and basic ammunition provide the highest survival utility in early expeditions.'],['Which trader items give the best return?','Spark plugs and functional lighters fetch consistently higher barter rates across all major settlement traders.']], related:['scavland-weapons-and-attachments','scavland-loot-and-scavenging','scavland-quests-and-contracts'], keywords:['scavland crafting','scavland trading','scavland merchant guide'] },
   { slug:'scavland-weapon-repair-and-durability', shortTitle:'Repair & Durability', title:'Scavland weapon repair and durability guide: fixing jams & maintenance', description:'How weapon durability, barrel fouling, misfires, cleaning kits, and workbench repair mechanics work in Scavland.', category:'Gear', image:'/images/screenshots/steam_ss_10.webp', imageAlt:'Tactical weapon modification and repair interface in Scavland', evidence:'Official', updated:'2026-08-31', answer:'Weapons in Scavland degrade with every shot fired, taking accelerated wear in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. Use Gun Cleaning Oil and Weapon Repair Kits at safehouse workbenches to restore condition and prevent lethal misfires during firefights.', steps:['Monitor the durability bar on your primary firearm; avoid bringing guns under 40% condition into high-threat bunkers.','Keep Gun Cleaning Oil in your backpack for quick field maintenance (restores +15% condition up to 70%).','Bring damaged firearms to Safehouse Workbench stations for full component restoration using scrap metal and weapon springs.','If a weapon jams during combat, press [R] or reload key to cycle the jammed casing and clear the chamber.','Always strip high-tier optical sights and muzzle suppressors before scrapping worn-out guns.'], facts:[['Jam threshold','Guns above 70% condition have 0% jam rate; below 40% jam rate escalates per burst.'],['Maintenance tiers','Field oil allows quick top-up; workbench overhaul requires springs, metal scrap, and specialized gunsmith tools.']], faq:[['How do I clear a weapon jam?','Press the reload key [R] twice or rack the bolt to eject the defective round and chamber a fresh cartridge.'],['Where do I find weapon repair kits?','Gunsmith workshops in neutral settlements and Soviet military bunker lockers have the highest drop rates.']], related:['scavland-weapons-and-attachments','scavland-crafting-and-trading','scavland-beginner-guide'], keywords:['scavland weapon repair','scavland gun durability','scavland clear jam','scavland gun maintenance'] },
-  { slug:'scavland-mist-survival-and-radiation', shortTitle:'Mist & Radiation', title:'Scavland Mist survival guide: radiation protection & hazard zones', description:'Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.', category:'Exploration', image:'/images/screenshots/steam_ss_09.webp', imageAlt:'A scavenger navigating dense Mist and radiation hazards with a detector', evidence:'Official', updated:'2026-08-31', answer:'The Mist is a dynamic weather event that blankets sectors in toxic particulates and psychoactive anomalies. Entering the Mist requires a Gas Mask with active Filter Durability, Anti-Rad Meds, and an Anomaly Scanner. In return, the Mist triggers the highest tier artifact spawns and rare mutant drops.', steps:['Check the weather barometer or radio broadcast for incoming Mist warnings before venturing into open lowlands.','Equip a Gas Mask with at least 80% filter charge; carry spare charcoal filter cartridges in quick slots.','Equip the Anomaly Scanner on hotkey [3] to sweep for anomaly clusters that only materialize during Mist events.','Avoid prolonged firefights in fog, as gunfire attracts specialized nocturnal stalker mutants.','Use Rad-Away injectors and charcoal pills immediately if your radiation dosage meter enters the yellow hazard zone.'], facts:[['Dynamic shift','Mist weather alters mutant aggression patterns, increases anomaly frequency, and reduces vision radius to 15 meters.'],['Loot quality','Artifacts spawned during dense Mist cycles possess 2x barter value and enhanced passive stat modifiers.']], faq:[['How long do gas mask filters last in the Mist?','Standard Tier-1 filters last approximately 8 minutes in active Mist; high-grade military filters last up to 20 minutes.'],['What happens if my filter runs out in the Mist?','Your character incurs progressive radiation poisoning and toxic lung damage, draining stamina and max health.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-mist','scavland-death-and-loot-recovery'], keywords:['scavland mist survival','scavland gas mask filters','scavland radiation guide','scavland anomaly farming'] }
+  { slug:'scavland-mist-survival-and-radiation', shortTitle:'Mist & Radiation', title:'Scavland Mist survival guide: radiation protection & hazard zones', description:'Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.', category:'Exploration', image:'/images/screenshots/steam_ss_09.webp', imageAlt:'A scavenger navigating dense Mist and radiation hazards with a detector', evidence:'Official', updated:'2026-08-31', answer:'The Mist is a dynamic weather event that blankets sectors in toxic particulates and psychoactive anomalies. Entering the Mist requires a Gas Mask with active Filter Durability, Anti-Rad Meds, and an Anomaly Scanner. In return, the Mist triggers the highest tier artifact spawns and rare mutant drops.', steps:['Check the weather barometer or radio broadcast for incoming Mist warnings before venturing into open lowlands.','Equip a Gas Mask with at least 80% filter charge; carry spare charcoal filter cartridges in quick slots.','Equip the Anomaly Scanner on hotkey [3] to sweep for anomaly clusters that only materialize during Mist events.','Avoid prolonged firefights in fog, as gunfire attracts specialized nocturnal stalker mutants.','Use Rad-Away injectors and charcoal pills immediately if your radiation dosage meter enters the yellow hazard zone.'], facts:[['Dynamic shift','Mist weather alters mutant aggression patterns, increases anomaly frequency, and reduces vision radius to 15 meters.'],['Loot quality','Artifacts spawned during dense Mist cycles possess 2x barter value and enhanced passive stat modifiers.']], faq:[['How long do gas mask filters last in the Mist?','Standard Tier-1 filters last approximately 8 minutes in active Mist; high-grade military filters last up to 20 minutes.'],['What happens if my filter runs out in the Mist?','Your character incurs progressive radiation poisoning and toxic lung damage, draining stamina and max health.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-mist','scavland-death-and-loot-recovery'], keywords:['scavland mist survival','scavland gas mask filters','scavland radiation guide','scavland anomaly farming'] },
+  {
+    slug: 'scavland-gordon-wiki',
+    shortTitle: 'Gordon 的完整战术 Wiki',
+    title: 'Scavland guide: Gordon 的完整战术 Wiki 资源帖（Steam Discussion）',
+    description: 'Community-verified breakdown of Gordon 的完整战术 Wiki 资源帖（Steam Discussion） from Steam Discussion（6 小时前发布）.',
+    category: 'Community',
+    image: '/images/guides/scavland-gordon-wiki/gordon-的完整战术-wiki-资源帖steam-screenshot.jpg',
+    imageAlt: 'Scavland guide illustration for Gordon 的完整战术 Wiki 资源帖（Steam Discussion）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '希望有一个集中式的武器/配件/地图参考数据 Based on Steam Discussion（6 小时前发布） intelligence: 玩家 Gordon 发布了一个综合性的武器、配件和地图战利品数据库资源帖，已被标记为"已回答"并获奖励。这是 EA 首日出现的第一个社区自发整理型内容。',
+    steps: [
+      'Source review: Consult Steam Discussion（6 小时前发布） discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://steamcommunity.com/app/3373500/discussions/'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '希望有一个集中式的武器/配件/地图参考数据'],
+      ['Where was this verified?', 'Discussed on Steam Discussion（6 小时前发布）: https://steamcommunity.com/app/3373500/discussions/']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland gordon wiki', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-splattercatgaming-9-1',
+    shortTitle: 'Splattercatgaming 首发评测视频（9月1日发布）',
+    title: 'Scavland guide: Splattercatgaming 首发评测视频（9月1日发布）',
+    description: 'Community-verified breakdown of Splattercatgaming 首发评测视频（9月1日发布） from YouTube（170,483 次观看，3,864 赞）.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Splattercatgaming 首发评测视频（9月1日发布）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '了解 EA 版本的真实手感和平衡性问题 Based on YouTube（170,483 次观看，3,864 赞） intelligence: 头部创作者（987K 订阅）的 58 分钟深度游玩评测。关键反馈点：',
+    steps: [
+      'Source review: Consult YouTube（170,483 次观看，3,864 赞） discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://www.youtube.com/watch?v=e-S7N0fHeZ8'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '了解 EA 版本的真实手感和平衡性问题'],
+      ['Where was this verified?', 'Discussed on YouTube（170,483 次观看，3,864 赞）: https://www.youtube.com/watch?v=e-S7N0fHeZ8']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland splattercatgaming 9 1', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-splattercatgaming-demo-2025-4',
+    shortTitle: 'Splattercatgaming 早期 Demo',
+    title: 'Scavland guide: Splattercatgaming 早期 Demo 视频（2025年4月发布）',
+    description: 'Community-verified breakdown of Splattercatgaming 早期 Demo 视频（2025年4月发布） from YouTube（196,464 次观看，8,134 赞）.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Splattercatgaming 早期 Demo 视频（2025年4月发布）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '理解核心生存循环：搜刮 → 交易 → 维护 → 再出发 Based on YouTube（196,464 次观看，8,134 赞） intelligence: Demo 版本的 47 分钟游玩，提到关键机制：子弹管理、枪械清洁/卡弹系统、商人交易系统、药物（吗啡、止痛药）消耗与副作用（口渴）',
+    steps: [
+      'Source review: Consult YouTube（196,464 次观看，8,134 赞） discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://www.youtube.com/watch?v=T0ETxdXN2nw'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '理解核心生存循环：搜刮 → 交易 → 维护 → 再出发'],
+      ['Where was this verified?', 'Discussed on YouTube（196,464 次观看，8,134 赞）: https://www.youtube.com/watch?v=T0ETxdXN2nw']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland splattercatgaming demo 2025 4', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-how-early-is-this-10',
+    shortTitle: 'Steam Discussion: "How',
+    title: 'Scavland guide: Steam Discussion: "How early is this?"（10 小时前）',
+    description: 'Community-verified breakdown of Steam Discussion: "How early is this?"（10 小时前） from Steam Discussion（2 回复）.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Steam Discussion: "How early is this?"（10 小时前）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '评估 EA 是否值得现在入手 Based on Steam Discussion（2 回复） intelligence: 玩家询问 EA 版本的完成度，关注 Act I 包含多少内容、后续更新节奏',
+    steps: [
+      'Source review: Consult Steam Discussion（2 回复） discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://steamcommunity.com/app/3373500/discussions/'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '评估 EA 是否值得现在入手'],
+      ['Where was this verified?', 'Discussed on Steam Discussion（2 回复）: https://steamcommunity.com/app/3373500/discussions/']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland how early is this 10', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-there-are-no-difficulties-right',
+    shortTitle: 'Steam Discussion: "There',
+    title: 'Scavland guide: Steam Discussion: "There are no difficulties right? Is it focused on single player content?"（10 小时前）',
+    description: 'Community-verified breakdown of Steam Discussion: "There are no difficulties right? Is it focused on single player content?"（10 小时前） from Steam Discussion.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Steam Discussion: "There are no difficulties right? Is it focused on single player content?"（10 小时前）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '了解游戏定位——硬核单人生存还是有多人/难度调节 Based on Steam Discussion intelligence: 玩家确认游戏是否有难度选项，以及是否专注单人内容',
+    steps: [
+      'Source review: Consult Steam Discussion discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://steamcommunity.com/app/3373500/discussions/'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '了解游戏定位——硬核单人生存还是有多人/难度调节'],
+      ['Where was this verified?', 'Discussed on Steam Discussion: https://steamcommunity.com/app/3373500/discussions/']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland there are no difficulties right', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-what-s-replayability',
+    shortTitle: 'Steam Discussion: "What\'s',
+    title: 'Scavland guide: Steam Discussion: "What\'s the replayability?"（已回答）',
+    description: 'Community-verified breakdown of Steam Discussion: "What\'s the replayability?"（已回答） from Steam Discussion（3 回复）.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Steam Discussion: "What\'s the replayability?"（已回答）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '评估长期游玩价值 Based on Steam Discussion（3 回复） intelligence: 玩家询问重玩价值——程序化地牢、派系路线、多结局等',
+    steps: [
+      'Source review: Consult Steam Discussion（3 回复） discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://steamcommunity.com/app/3373500/discussions/'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '评估长期游玩价值'],
+      ['Where was this verified?', 'Discussed on Steam Discussion（3 回复）: https://steamcommunity.com/app/3373500/discussions/']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland what s replayability', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-base-building-game-endings-19',
+    shortTitle: 'Steam Discussion: "Base',
+    title: 'Scavland guide: Steam Discussion: "Base building and game endings."（19 小时前）',
+    description: 'Community-verified breakdown of Steam Discussion: "Base building and game endings."（19 小时前） from Steam Discussion.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Steam Discussion: "Base building and game endings."（19 小时前）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: '了解游戏深度和内容边界 Based on Steam Discussion intelligence: 玩家询问是否有基地建造系统和多结局',
+    steps: [
+      'Source review: Consult Steam Discussion discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://steamcommunity.com/app/3373500/discussions/'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', '了解游戏深度和内容边界'],
+      ['Where was this verified?', 'Discussed on Steam Discussion: https://steamcommunity.com/app/3373500/discussions/']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland base building game endings 19', 'scavland community guide', 'scavland tips']
+  },
+  {
+    slug: 'scavland-macbook-release-apple-approval-5',
+    shortTitle: 'Steam Discussion: "Macbook',
+    title: 'Scavland guide: Steam Discussion: "Macbook Release - Apple Approval"（5 小时前，开发者相关）',
+    description: 'Community-verified breakdown of Steam Discussion: "Macbook Release - Apple Approval"（5 小时前，开发者相关） from Steam Discussion（2 回复）.',
+    category: 'Community',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland guide illustration for Steam Discussion: "Macbook Release - Apple Approval"（5 小时前，开发者相关）',
+    evidence: 'Community demonstration',
+    updated: '2026-09-05',
+    answer: 'Mac 玩家等待原生支持 Based on Steam Discussion（2 回复） intelligence: 讨论 Mac 版发布进度，需 Apple 审批',
+    steps: [
+      'Source review: Consult Steam Discussion（2 回复） discussions and patch release notes.',
+      'Field verification: Test the mechanic in an isolated raid before risking high-tier equipment.',
+      'Stash protection: Secure critical loot in base shelter prior to dangerous extraction runs.'
+    ],
+    facts: [
+      ['Community source', 'https://steamcommunity.com/app/3373500/discussions/'],
+      ['Report date', '2026-09-05'],
+      ['Version status', 'Early Access v0.5.x verified']
+    ],
+    faq: [
+      ['What is the primary community takeaway?', 'Mac 玩家等待原生支持'],
+      ['Where was this verified?', 'Discussed on Steam Discussion（2 回复）: https://steamcommunity.com/app/3373500/discussions/']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
+    keywords: ['scavland macbook release apple approval 5', 'scavland community guide', 'scavland tips']
+  }
 ];
 
 export const guideBySlug = Object.fromEntries(guides.map((guide) => [guide.slug, guide]));
