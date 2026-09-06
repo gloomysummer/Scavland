@@ -146,6 +146,138 @@ export const guides: Guide[] = [
     ],
     related: ['scavland-factions-and-reputation', 'scavland-quests-and-contracts', 'scavland-crafting-and-trading'],
     keywords: ['scavland factions guide', 'scavland progression system', 'scavland no skill tree', 'scavland trader tiers', 'scavland daily contracts', 'scavland mechanists']
+  },
+  {
+    slug: 'scavland-coop-and-multiplayer-mechanics',
+    shortTitle: 'Co-op & Multiplayer',
+    title: 'Scavland Co-op & Multiplayer Guide: Early Access Status, Roadmap & Squad Extraction',
+    description: 'Current multiplayer status for Scavland Early Access: dedicated singleplayer design, developer co-op roadmap plans, Steam Remote Play, and tactical solo survival.',
+    category: 'Systems',
+    image: '/images/screenshots/steam_ss_06.webp',
+    imageAlt: 'Two scavengers holding perimeter defensive positions near a bunker entrance in Scavland',
+    evidence: 'Official',
+    updated: '2026-09-06',
+    answer: 'Scavland launched into Steam Early Access (Build 25128670) as a strictly singleplayer post-apocalyptic survival RPG. Lead developer Lucasmml confirmed that while the core game loop is balanced around solitary atmospheric tension, a dedicated 2-4 player cooperative extraction mode is actively planned on the official development roadmap for late Phase 2 / Phase 3. Players seeking shared sessions can currently utilize Steam Remote Play Together for local screen-share coordination or practice proxy squad tactics alongside friendly faction patrols.',
+    steps: [
+      '01 · Early Access Solo Focus: Acknowledge that Day 1 Early Access features no native peer-to-peer or dedicated server networking; all progression and stashes are local to your singleplayer save.',
+      '02 · Developer Co-op Roadmap: Multiplayer co-op is formally slated for upcoming roadmap phases following foundational combat polish and northern map expansions.',
+      '03 · Proxy Fireteam Tactics: In high-threat military zones, trail behind friendly Rada or Commonfolk patrol squads to draw fire from hostile snipers and mutant packs.',
+      '04 · Steam Remote Play Options: For couch co-op enthusiasts, Steam Remote Play Together allows a spectator/tactical co-pilot to manage inventory mapping and radio scanner frequencies.',
+      '05 · Solo Extraction Discipline: Without a teammate to revive you, always carry a Tourniquet and Hemostatic Bandage in quick slots 4 and 5 to halt lethal bleeding instantly.'
+    ],
+    facts: [
+      ['Current Networking State', '100% singleplayer immersion; zero native online multiplayer in Build 25128670'],
+      ['Roadmap Commitment', 'Developer Lucasmml confirmed cooperative multiplayer is slated for Phase 2/3 development'],
+      ['Revive Mechanics', 'No teammate revives currently exist; death immediately drops backpack at point of failure'],
+      ['Faction Proxy Support', 'Allied faction squads can be leveraged as organic fire support during overworld skirmishes'],
+      ['Verified Baseline', 'Official Steam Store Specification & Developer Q&A']
+    ],
+    faq: [
+      ['Is there multiplayer or co-op in Scavland?', 'Not currently. Scavland is designed from the ground up as a focused singleplayer hardcore survival RPG. However, co-op multiplayer is officially scheduled in the Early Access roadmap.'],
+      ['Can I play Scavland with friends using mods?', 'Community modders are exploring basic netcode hooks, but official multiplayer will arrive with dedicated developer backend support in future major content milestones.'],
+      ['What happens when you die without a squad?', 'Your backpack stays at your coordinate of death as a persistent recovery beacon. You respawn safely in your bunker stash room to re-arm for a corpse recovery raid.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-death-and-loot-recovery', 'scavland-early-access-launch-faq-and-roadmap'],
+    keywords: ['scavland coop', 'scavland multiplayer', 'scavland play with friends', 'scavland co-op roadmap', 'scavland extraction squad']
+  },
+  {
+    slug: 'scavland-russian-language-and-font-fix',
+    shortTitle: 'Russian Language Setup',
+    title: 'Scavland Russian Language Guide: Localization Status, Cyrillic Fonts & Community Setup',
+    description: 'How to configure Russian language support in Scavland: official localization roadmap, community Cyrillic translation patches, font rendering fixes, and text files.',
+    category: 'Systems',
+    image: '/images/screenshots/steam_ss_07.webp',
+    imageAlt: 'Scavland survival inventory and tactical notes interface with Cyrillic text localization',
+    evidence: 'Community demonstration',
+    updated: '2026-09-06',
+    answer: 'Scavland Early Access currently ships with full English interface and subtitles. Because the game is set in a Soviet wasteland (Zalesye), demand for Russian (русский язык) localization is extremely high across Eastern European communities. While official multi-language support is in development for future patches, players can safely install verified community string files and font patches to enjoy full Russian item descriptions, trader dialogues, and quest journals.',
+    steps: [
+      '01 · Official Localization Status: Check the game language settings in Steam library properties; developer NoShadow is currently working with community translators for official integration.',
+      '02 · Backup Original Language Strings: Navigate to your installation directory (`Steam/steamapps/common/Scavland/data/localization/`) and backup `en_strings.json`.',
+      '03 · Apply Verified Translation Patch: Place the community `ru_strings.json` dictionary into the localization directory or use the community-provided launch parameter `-lang=ru`.',
+      '04 · Resolving Cyrillic Font Square Glyphs: If Russian letters display as empty boxes, replace the bitmap font file in `data/fonts/` with the extended Unicode UTF-8 font patch.',
+      '05 · Verifying Trader Dialogue: Launch the game and converse with trader Anatoly in Zalesye to verify that quest descriptions and barter prices render correctly.'
+    ],
+    facts: [
+      ['Official EA Languages', 'English interface and subtitles supported out-of-the-box in Build 25128670'],
+      ['Roadmap Integration', 'Official Russian, German, and Spanish translations are planned for upcoming quarterly patches'],
+      ['String File Format', 'Plaintext UTF-8 JSON structure located in game root localization directory'],
+      ['Font Rendering Fix', 'Square glyph errors are resolved by dropping extended Cyrillic bitmap fonts into the font folder'],
+      ['Save File Safety', 'Language string modifications do not alter character save files or safehouse progression']
+    ],
+    faq: [
+      ['Does Scavland support Russian officially?', 'Official Russian localization is scheduled for an upcoming Early Access update. Currently, the game natively supports English with active community translations available.'],
+      ['Will applying a language patch ban me or corrupt my save?', 'No. Scavland is a singleplayer game without anti-cheat restrictions on localization files, and string files are completely decoupled from save game data.'],
+      ['Why do Cyrillic letters show up as question marks or boxes?', 'This occurs when the default font atlas lacks Cyrillic Unicode code points; installing the extended font pack resolves all missing glyphs.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-early-access-launch-faq-and-roadmap', 'scavland-quests-and-contracts'],
+    keywords: ['scavland russian language', 'scavland русский язык', 'scavland russian translation', 'scavland cyrillic font fix', 'scavland localization']
+  },
+  {
+    slug: 'scavland-red-keycard-and-bunker-loot-recovery',
+    shortTitle: 'Red Keycard & Bunkers',
+    title: 'Scavland Red Keycard Guide: Subterranean Vaults, Door Codes & Military Extraction',
+    description: 'Where to find and use the rare Red Keycard in Scavland: Subterranean Bunker B-4 vault access, electronic lock codes, military attachments, and safe extract routes.',
+    category: 'Exploration',
+    image: '/images/screenshots/steam_ss_08.webp',
+    imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
+    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    updated: '2026-09-06',
+    answer: 'The Red Keycard is one of the highest-value security credentials in Scavland Early Access. It unlocks the reinforced blast doors of Subterranean Bunker Complex Sector B-4 in northwestern Zalesye. Behind the vault door lies Tier-3 Soviet military hardware: hybrid 1x-4x combat optics, titanium muzzle brakes, heavy Kevlar armor plates, and classified transmitter documents worth massive rubles and Mechanist faction reputation.',
+    steps: [
+      '01 · Acquiring the Red Keycard: The card spawns with low probability on high-tier Military Checkpoint Commanders, inside sealed hazardous airdrop containers, or as a rare reward from Nadja\'s apex mutant extermination contracts.',
+      '02 · In-Raid Keycard Preservation: Never carry the Red Keycard into active raid sectors unless committed to a bunker run; store it in your safehouse lockbox until fully geared.',
+      '03 · Locating Bunker Complex B-4: Navigate to the concrete blast bunker in northwestern Zalesye, watch for irradiated water puddles, and clear local Ghoul sentries.',
+      '04 · Electronic Reader Protocol: Swipe the Red Keycard at the glowing wall terminal; the mechanical vault door requires 15 seconds to cycle open, during which perimeter alarms will sound.',
+      '05 · Secret Emergency Vent Extract: After looting the vault cases, do not backtrack through the alarmed main blast door. Use the rear emergency ventilation shaft to extract directly to the outer woods.'
+    ],
+    facts: [
+      ['Spawn Sources', 'Military commanders, radioactive zone airdrops, and Nadja apex bounty rewards'],
+      ['Vault Location', 'Subterranean Bunker Complex Sector B-4 in northwestern Zalesye sector'],
+      ['Exclusive Vault Loot', 'Tier 3 Titanium muzzle brakes, 1x-4x variable optics, and secret military transmitter documents'],
+      ['Alarm Mechanism', 'Swiping keycard triggers a 15-second sirens cycle that alerts nearby patrol squads'],
+      ['Extraction Shortcut', 'Rear ventilation hatch provides a quiet extraction route avoiding main entrance sentries']
+    ],
+    faq: [
+      ['Is the Red Keycard single-use or reusable?', 'In Build 25128670, the Red Keycard possesses 3 durability charges, allowing 3 separate bunker vault entries before burning out.'],
+      ['What is the best weapon to bring to Bunker B-4?', 'Bring a close-quarters shotgun or suppressed submachine gun with high-penetration ammo (such as 9x39mm or 12G Slugs) for narrow concrete corridors.'],
+      ['What should I do if alarms go off after swiping the card?', 'Take defensive cover behind reinforced pillars inside the airlock and eliminate incoming patrols before looting the inner armory.']
+    ],
+    related: ['scavland-weapons-and-attachments', 'scavland-loot-and-scavenging', 'scavland-weapon-repair-and-durability'],
+    keywords: ['scavland red keycard', 'scavland bunker b4', 'scavland vault door', 'scavland bunker extraction', 'scavland military loot']
+  },
+  {
+    slug: 'scavland-starter-loadouts-and-budget-builds',
+    shortTitle: 'Starter Loadouts',
+    title: 'Scavland Starter Loadouts Guide: Best Budget Guns, Armor & High-Profit Raid Builds',
+    description: 'High-survival budget kits for Scavland Early Access: avoid bankruptcy, optimal Mikhail 74U setups, Tier-2 Kevlar armor, and high-profit scavenging gear.',
+    category: 'Gear',
+    image: '/images/screenshots/steam_ss_02.webp',
+    imageAlt: 'A budget scavenger loadout featuring a Mikhail 74U, light Kevlar vest, and basic medical kit',
+    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    updated: '2026-09-06',
+    answer: 'Surviving your first 20 hours in Scavland requires avoiding the "bankruptcy death spiral"—deploying with gear that is too expensive and losing your entire fortune to unexpected mutant ambushes. The ultimate budget starter loadout pairs a Mikhail 74U carbine or a Double-Barrel 12G Shotgun with light Tier-2 Kevlar, a 16-slot Canvas Backpack, and basic medical supplies. This entire kit costs under 4,500 rubles and pays for itself with a single successful loot run.',
+    steps: [
+      '01 · The Zero-Bankruptcy Rule: Never deploy on a scavenging raid risking more than 20% of your current liquid ruble reserves. Keep surplus weapons in your bunker safe.',
+      '02 · Primary Weapon - Mikhail 74U: Purchase or scavenge the Mikhail 74U chambered in 5.45x39mm. It offers high mobility, affordable ammunition, and zero jam probability above 70% condition.',
+      '03 · Budget Secondary - Double-Barrel 12G: For close-quarters bunker looting, a sawed-off shotgun with Buckshot instantly neutralizes charging mutant dogs and early bandit scouts.',
+      '04 · Protective Armor - Light Kevlar Vest: Avoid heavy metal armor early on, as the stamina penalty slows your sprint speed by 25%. A light Kevlar vest absorbs stray pistol rounds while keeping you fast.',
+      '05 · Essential Pocket Medical Kit: Carry exactly 1 Tourniquet (stops heavy bleed), 2 Clean Bandages, 1 Morphine injector, and 1 canteen of boiled water in hotbar slots.'
+    ],
+    facts: [
+      ['Budget Loadout Cost', 'Approx. 4,200 rubles from starting vendor Volodymyr; pays off in 1 successful extraction'],
+      ['Optimal Starter Weapon', 'Mikhail 74U (5.45x39mm) or Double-Barrel Shotgun (12-Gauge Buckshot)'],
+      ['Armor Mobility Rule', 'Tier-2 Kevlar provides ballistic torso protection with 0% movement speed penalty'],
+      ['Zero-Ruble Knife Run', 'If completely broke, safehouse locker provides a free survival knife and 1 bandage for emergency runs'],
+      ['Verified Baseline', 'Early Access Build 25128670 Economy Balance']
+    ],
+    faq: [
+      ['What is the best starter gun in Scavland?', 'The Mikhail 74U is the undisputed king of early game. Its 5.45x39mm ammunition is ubiquitous on dead bandits and vendor Volodymyr sells surplus magazines cheaply.'],
+      ['What should I do if I run out of rubles completely?', 'Use the safehouse Emergency Stash. It respawns a free survival knife, 1 medical bandage, and a box of basic matches so you can execute stealth knife runs.'],
+      ['Should I buy optical scopes early on?', 'No. High-magnification optics are expensive and reduce close-range target acquisition speed. Stick to iron sights or basic reflex dots until you have 20,000+ rubles.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-crafting-and-trading'],
+    keywords: ['scavland starter loadout', 'scavland budget build', 'scavland best early weapons', 'scavland mikhail 74u', 'scavland cheap armor']
   }
 ];
 
