@@ -79,95 +79,73 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-night-survival-and-stealth-mechanics',
     shortTitle: 'Night Survival & Stealth',
-    title: 'Scavland Night Survival Guide: Audio Cues, Flashlights & Night Mutations',
-    description: 'Verified Early Access tactics for surviving the extreme visibility drop at night, managing gunshot audio radius, and countering aggressive nocturnal mutants.',
+    title: 'Scavland Night Survival Guide: Audio Radii, Flashlights & Nocturnal Mutations',
+    description: 'Evidence-based Early Access survival guide for night raids: handling the 10-meter flashlight cone, suppressor audio radius, Shift+Click looting, and avoiding nocturnal predator ambushes.',
     category: 'Survival',
-    image: '/images/guides/scavland-launch-review/review-yt-cover.jpg',
-    imageAlt: 'Scavland night survival combat and stealth mechanics review',
-    evidence: 'Community demonstration',
+    image: '/images/screenshots/ss_01_ruins_night.webp',
+    imageAlt: 'Scavland nocturnal exploration through dark ruins with weapon flashlight cone',
+    evidence: 'In-Game Playtest Verification · Splattercatgaming & Singleplayer Squad EA Baseline',
     updated: '2026-09-06',
-    answer: 'Surviving after dark in Scavland requires fundamental adjustments to sensory habits: field visibility drops down to a 10-meter flashlight cone, while mutant aggression and nocturnal stalker spawn rates increase significantly. Unsuppressed weapon discharge creates a 200-meter audio ripple that draws roaming mutant packs, making suppressed sub-caliber weapons or silent melee strikes mandatory for night scavenging.',
+    answer: 'Surviving after dark in Scavland requires fundamental sensory discipline: outside illuminated settlement hubs, your effective visibility collapses to a narrow 10-meter flashlight cone, while aggressive nocturnal stalkers spawn exclusively between 21:00 and 05:30. Unsuppressed rifle fire generates a 200-meter audio ripple that triggers cascading aggro from adjacent ruins, making sub-caliber suppressed handguns, doorway funneling tactics, and swift Shift+Click container looting essential for nocturnal runs.',
     steps: [
-      '01 · Audio Awareness: Ambient audio cues provide your earliest hazard warning; listen for distinctive footfalls and anomaly resonance before crossing open plazas.',
-      '02 · Flashlight Discipline: Toggle weapon-mounted flashlights only during room clearance; keeping a light active in open wasteland fields attracts hostile scavenger snipers.',
-      '03 · Suppressor Priority: Equip suppressors on 9x18 or 9x19 sidearms; firing unsuppressed weapons at night triggers cascade aggro from adjacent ruins.',
-      '04 · Shelter Timetable: If low on medical supplies or gas mask filters, hold up in neutral settlement bunkers until 06:00 dawn when visibility and spawn rates normalize.'
+      '01 · Suppressor Sound Radius: Unsuppressed rifle fire alerts mutants across a 200m radius. Equipping a suppressor on 9x18mm or 9x19mm sidearms shrinks your audible footprint down to ~25 meters, allowing isolated takedowns without waking the entire district.',
+      '02 · Flashlight Discipline in the Open: Keep your weapon flashlight switched OFF in open wasteland fields; illuminated cones draw hostile bandit snipers from over 40 meters away. Only toggle illumination when clearing tight, blind-cornered rooms.',
+      '03 · Narrow Doorway Funneling: When ambushed by high-speed nocturnal stalkers, disengage backward into narrow concrete doorways or freight containers. Funneling pack enemies into a single column eliminates the risk of being flanked or circled in open terrain.',
+      '04 · Shift+Click Swift Looting: Never drag items individually from loot containers. In Early Access Build 25128670, holding [Shift+Click] instantly transfers container stacks to your rig, cutting vulnerable stationary looting time by 80%.',
+      '05 · Armor Visual Sprite Notice: Equipping high-tier body armor plates or helmets currently does not alter your character\'s in-game pixel art sprite. Damage reduction mechanics function properly, but visual paper-doll customization is confirmed as a work-in-progress EA known rough edge.'
     ],
     facts: [
-      ['Night Visibility', 'Visual range drops to ~10 meters outside illuminated settlement hubs'],
-      ['Audio Detection Radius', 'Unsuppressed rifle fire alerts mutant packs within a 200-meter radius'],
-      ['Nocturnal Spawns', 'High-tier stalkers and mist predators only patrol between 21:00 and 05:30'],
-      ['Source Review', 'Splattercatgaming 58-minute Early Access playtest verified']
+      ['Wasteland Night Visibility', 'Shrinks to ~10 meters flashlight cone outside illuminated settlement hubs'],
+      ['Unsuppressed Rifle Audio', 'Alerts mutant packs and hostile scavengers within a 200-meter radius'],
+      ['Suppressed Sidearm Audio', 'Dampens detection footprint down to ~25 meters (Makarov & 9mm pistols)'],
+      ['Nocturnal Spawns Window', 'Exclusive high-tier stalkers and mist predators only patrol between 21:00 and 05:30'],
+      ['Quick Looting Shortcut', 'Shift+Click instantly transfers item stacks from containers into inventory'],
+      ['Character Armor Visuals', 'Sprite does not change with armor (known EA cosmetic limitation; stat DR works)'],
+      ['Verified Baseline', 'Splattercatgaming & The Singleplayer Squad Early Access launch evaluations']
     ],
     faq: [
-      ['Should I scavenge at night in Scavland?', 'Night scavenging yields higher-value anomaly artifacts and unlooted container drops, but survival risk doubles due to reduced sightlines and aggressive nocturnal mutants.'],
-      ['Do enemies hear my footsteps?', 'Yes. Sprinting generates substantial noise audible through walls. Crouch-walking completely dampens footstep audio, allowing close-quarters stealth takedowns.'],
-      ['How do I handle sudden mutant ambush at night?', 'Disengage backward into narrow doorways or corridors to funnel mutant packs into a single line of fire rather than fighting in open fields.']
+      ['Is night scavenging worth the extreme risk in Scavland?', 'Yes. Nighttime incursions yield significantly higher anomaly artifact drop rates, rare safehouse loot container resets, and unpicked medicinal herbs, though survival risk doubles due to restricted vision.'],
+      ['Do mutants hear my footsteps while moving?', 'Yes. Full sprinting creates substantial audio cues audible through walls and ceilings. Crouch-walking completely dampens footstep noise, enabling silent melee takedowns from behind.'],
+      ['Why does my character look identical after equipping heavy armor?', 'This is a verified Early Access limitation in Build 25128670. While physical and ballistic damage reduction stats apply correctly in the inventory inspect panel, character sprite updates are scheduled for future content updates.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-mist'],
-    keywords: ['scavland night survival', 'scavland stealth guide', 'scavland audio detection', 'scavland night mutants', 'scavland flashlight']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-death-and-loot-recovery'],
+    keywords: ['scavland night survival', 'scavland stealth mechanics', 'scavland audio detection radius', 'scavland night mutants', 'scavland flashlight discipline', 'scavland shift click loot']
   },
   {
     slug: 'scavland-factions-progression-and-traders',
     shortTitle: 'Factions & Progression',
-    title: 'Scavland 10 Factions & Progression Guide: No Skill Tree, Vendor Tiers & Contracts',
-    description: 'How character progression works in Scavland without arbitrary skill trees: mastering 10 wasteland factions, trader inventory tiers, and contract rewards.',
+    title: 'Scavland 10 Factions & Progression Guide: No Skill Tree, Vendor Tiers & Daily Contracts',
+    description: 'Systemic character progression in Scavland: zero artificial skill trees, 10 wasteland factions, trader inventory tiers, and 24-hour contract refreshes in Zalesye.',
     category: 'Progression',
     image: '/images/screenshots/steam_ss_12.webp',
-    imageAlt: 'Scavland in-game jobs journal showing Grigory contract, 25 reputation reward, and faction relations',
-    evidence: 'Official',
+    imageAlt: 'Scavland in-game jobs journal showing Anatoly contract, reputation rewards, and faction relations',
+    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
     updated: '2026-09-06',
-    answer: 'Progression in Scavland is strictly systemic rather than level-based: there are no skill trees or point allocations. Your character\'s combat survivability, carrying capacity, and tactical efficiency are entirely dictated by gear quality, safehouse workbench upgrades, and reputation standing with Zalesye\'s 10 major wasteland factions (including the Red Common Folk, Mechanists, Palatines, Gunners, and Acolytes).',
+    answer: 'Progression in Scavland is strictly systemic and economic rather than level-based: there are zero artificial skill trees, stat points, or unlockable character perks. Your survivor\'s durability, combat lethality, and carry capacity are determined entirely by gear tier, workbench maintenance, and standing with Zalesye\'s 10 wasteland factions. Specialized faction vendors unlock military-grade trade inventories only as you fulfill repeatable 24-hour contracts.',
     steps: [
-      '01 · Reputation over Grinding: Accept repeatable contracts from faction leaders (like Anatoly and Nadja) to elevate your standing and unlock military-grade trade tiers.',
-      '02 · Faction Specialization: The Mechanists supply high-tier weapon attachments and repair kits, while the Red Common Folk offer food, medicine, and basic ammunition.',
-      '03 · Fast Inventory Sorting: Utilize the batch transfer hotkeys [Shift+Click] to swiftly transfer loot containers into your backpack during high-risk bunker runs.',
-      '04 · Camera Zoom & Threat Identification: Because the default camera zoom is tight, maintain constant peripheral scanning to distinguish neutral scavengers from hostile bandits.'
+      '01 · Understand No Skill Tree Mechanics: Do not look for experience points or leveling menus. Character growth is measured through wealth accumulation, modded firearms, body armor tier, and faction trust ratings.',
+      '02 · Faction Trade Specialization: Never sell goods indiscriminately. The Mechanists provide high-tier weapon attachments and workbench repair scrap; the Red Common Folk supply food, potable water, and medical bandages; and the Gunners stock high-penetration AP ammunition.',
+      '03 · Daily 24-Hour Contract Cycles: Job pools offered by key handlers (including Anatoly and Nadja) reset every 24 in-game hours or upon sleeping in a designated safehouse bunker bed. Always accept contracts matching your intended raid vector.',
+      '04 · High-Value Bounty Targets: Progress from introductory Bandit Hunts and Mutant Exterminations to priority bounties targeting Hellhounds, Big Bears, and Splatters to earn elite faction reputation tokens and cash bonuses.',
+      '05 · Rival Faction Standing: Supporting militant syndicates will actively decrease your standing with neutral survivor enclaves; monitor faction balance before committing to high-reward assault contracts.'
     ],
     facts: [
-      ['Progression Model', '100% economy, gear, and faction reputation driven; zero artificial skill trees'],
-      ['Named Factions', 'Red Common Folk, Acolytes, Mechanists, Palatines, Gunners, and independent syndicates'],
-      ['Contract Reset', 'Faction job pools refresh every 24 in-game hours upon sleeping or returning to hub'],
-      ['Source Review', 'The Singleplayer Squad Early Access launch analysis verified']
+      ['Progression Model', '100% economy, weapon attachments, and faction reputation; zero artificial skill trees'],
+      ['Named Major Factions', 'Red Common Folk, Mechanists, Palatines, Gunners, Acolytes, and regional syndicates'],
+      ['Mechanists Specialty', 'Tier 2 & Tier 3 weapon attachments, optics, receivers, and ultrasonic repair kits'],
+      ['Red Common Folk Specialty', 'Fresh provisions, clean water, sterile bandages, and basic caliber ammunition'],
+      ['Contract Reset Interval', 'Job rosters refresh every 24 in-game hours or upon sleeping in safehouse'],
+      ['Elite Bounty Targets', 'Hellhounds, Big Bears, and toxic Splatters award maximum reputation tokens'],
+      ['Verified Baseline', 'The Singleplayer Squad EA Review & Steam Community Gordon Tactical Directory']
     ],
     faq: [
-      ['Can I unlock perks or stats in Scavland?', 'No. Scavland features no arbitrary leveling perks. Passive buffs come from equipping rare artifacts, body armor plates, and modified weapon ergonomics.'],
-      ['Can aiding one faction make another hostile?', 'Yes. Competing factions have mutual rivalries; elevating standing with militant groups will decrease trust with opposing survivor syndicates.'],
-      ['How do I increase trader inventory tiers?', 'Completing high-priority contracts for a faction unlocks Tier 2 and Tier 3 vendor stock, granting access to advanced optics, armor-piercing ammunition, and suppressors.']
+      ['Can I unlock passive perks or stats in Scavland?', 'No. Scavland features no arbitrary leveling perks. Passive buffs come from equipping rare artifacts, body armor plates, and modified weapon ergonomics.'],
+      ['How do I increase trader inventory tiers?', 'Completing high-priority contracts for a faction unlocks Tier 2 and Tier 3 vendor stock, granting access to advanced optics, armor-piercing ammunition, and suppressors.'],
+      ['Can aiding one faction make another hostile?', 'Yes. Competing factions maintain bitter rivalries; elevating standing with militant groups will decrease trust with opposing survivor syndicates.'],
+      ['What is the best way to earn early rubles?', 'Take basic scavenging contracts from the Red Common Folk in the starting settlement and sell medical supplies specifically to doctors and weapon parts to gunsmiths for full value.']
     ],
-    related: ['scavland-factions-and-reputation', 'scavland-quests-and-contracts', 'scavland-beginner-guide'],
-    keywords: ['scavland factions guide', 'scavland progression system', 'scavland no skill tree', 'scavland trader tiers', 'scavland contracts']
-  },
-  {
-    slug: 'scavland-scavland-beginner-guide-complete-strategy',
-    shortTitle: 'Beginner Survival Guide',
-    title: 'Scavland Beginner Guide: Essential Day 1 Survival, Bunker Raids & Extraction',
-    description: 'Comprehensive tactical starter guide for Scavland: mastering stamina pacing, weapon maintenance, surviving the deadly Mist anomalies, and safe bunker extraction.',
-    category: 'Tactical Guide',
-    image: '/images/guides/scavland-scavland-beginner-guide-complete-strategy/scavland-beginner-guide-complete-screenshot.jpg',
-    imageAlt: 'Scavland tactical beginner survival guide illustration',
-    evidence: 'Community demonstration & verified Early Access launch build',
-    updated: '2026-09-05',
-    answer: 'Early raid survival in Scavland requires disciplined stamina conservation, stealth clearing of abandoned settlements, and tracking Mist anomaly weather patterns before timed extraction points collapse.',
-    steps: [
-      'Bunker Preparation: Always equip 2 sterile bandages in your quick-slots and inspect weapon durability before leaving base.',
-      'Sound & Stance Discipline: Unsuppressed gunfire alerts mutant packs within 200 meters; crouch-walk when entering industrial loot zones.',
-      'Mist Anomaly Protocol: When volumetric purple mist descends, visibility drops and anomaly damage begins; immediately seek underground concrete shelter or extract.',
-      'Stash Preservation: Never carry irreplaceable military-grade weapons on reconnaissance raids; stockpile barter scrap and ammo at base first.'
-    ],
-    facts: [
-      ['Guide Focus', 'Day 1 Survival & Extraction'],
-      ['Recommended Weapon', 'Makarov 9x18 suppressed or SKS'],
-      ['Anomaly Hazard', 'Volumetric Mist & Radiation Pockets'],
-      ['Version Status', 'Early Access v0.5.x verified']
-    ],
-    faq: [
-      ['What should I prioritize on my very first raid in Scavland?', 'Focus on collecting medical bandages, clean water, and scrap metal, then locate the nearest green extraction flare before dark.'],
-      ['How do I survive the toxic Mist anomaly?', 'Equip a gas mask with fresh filters or take shelter in underground bunkers until the anomalous weather clears.'],
-      ['What happens to my gear if I die during a raid?', 'You lose backpack inventory and carried weapons, but all items stored in your base shelter remain 100% safe.']
-    ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments'],
-    keywords: ['scavland beginner guide', 'scavland survival tips', 'scavland extraction guide', 'scavland early game']
+    related: ['scavland-factions-and-reputation', 'scavland-quests-and-contracts', 'scavland-crafting-and-trading'],
+    keywords: ['scavland factions guide', 'scavland progression system', 'scavland no skill tree', 'scavland trader tiers', 'scavland daily contracts', 'scavland mechanists']
   }
 ];
 
