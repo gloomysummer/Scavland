@@ -9,7 +9,7 @@ export const deGuides: Guide[] = [
     description: 'Der ultimative Einsteiger-Guide für Scavland: Grundlagen des Zalesye-Ödlands, Überleben im ersten Raid, Inventar-Management und sichere Extraktion.',
     evidence: 'Verifiziert mit Early Access Patch v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_beginner_guide.webp',
+    image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Scavland Einsteiger-Guide — Taktischer Raid und Überlebensstrategie',
     answer: 'Überprüfe vor jedem Aufbruch die Gebietskarte. Meide dichten Nebel ohne Schutzmaske, priorisiere Munition und Verbandszeug gegenüber schwerem Schrott und merke dir den grünen Extraktionspunkt.',
     steps: [
@@ -41,7 +41,7 @@ export const deGuides: Guide[] = [
     description: 'Alle Infos zum Scavland-Kaufpreis auf Steam: 19,99 € UVP, 10% Eröffnungsrabatt, Early-Access-Umfang und Steam Deck Kompatibilität.',
     evidence: 'Offizielle Steam-Store-Daten vom 4. September 2026',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_price_editions.webp',
+    image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Scavland Steam-Preis, Editionen und Rabattaktion',
     answer: 'Der Grundpreis für Scavland beträgt 19,99 € auf Steam. In der ersten Launch-Woche gilt ein Rabatt von 10% (17,99 €). Es gibt keine Pay-to-Win-Mikrotransaktionen.',
     steps: [
@@ -71,7 +71,7 @@ export const deGuides: Guide[] = [
     description: 'Optimale Grafikeinstellungen und Controller-Belegung für Scavland auf dem Steam Deck (OLED & LCD): Stabile 60 FPS bei 9W TDP und leisen Lüftern.',
     evidence: 'Getestet auf Steam Deck OLED mit SteamOS 3.6',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_steam_deck.webp',
+    image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland Steam Deck Einstellungen für 60 FPS und lange Akkulaufzeit',
     answer: 'Mit 9W TDP-Begrenzung läuft Scavland auf dem Steam Deck mit butterweichen 60 FPS bei über 4 Stunden Akkulaufzeit und unter 60°C Chiptemperatur.',
     steps: [
@@ -101,7 +101,7 @@ export const deGuides: Guide[] = [
     description: 'Direkter Systemvergleich zwischen Scavland und Zero Sievert: Ballistik, 300+ Waffenaufsätze, dynamischer Giftnebel und Mehrspieler-Roadmap.',
     evidence: 'Vergleichende Analyse beider Spielsysteme (Stand September 2026)',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_vs_zero_sievert.webp',
+    image: '/images/screenshots/scavland_vs_zero_sievert.webp',
     imageAlt: 'Vergleich Scavland vs Zero Sievert — 7 Kernunterschiede',
     answer: 'Scavland bietet tiefere Waffenmodifikationen (300+ Teile), ein physikalisches Abprall- und Querschläger-System, dynamischen giftigen Nebel und eine offizielle Koop-Roadmap.',
     steps: [
@@ -131,7 +131,7 @@ export const deGuides: Guide[] = [
     description: 'Umfassende Waffendatenbank für Scavland: Pistolen, Sturmgewehre, Schrotflinten, Schalldämpfer, Optiken und ballistische Munitionsdaten.',
     evidence: 'Datenbasis Patch v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_weapons_attachments.webp',
+    image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: 'Scavland Waffen- und Zubehör-Datenbank',
     answer: 'Scavland umfasst über 25 Primär- und Sekundärwaffen sowie 300+ Anbauteile. Haltbarkeit, Kaliber und Mündungsaufsätze bestimmen Schusspräzision und Lautstärke.',
     steps: [
@@ -161,7 +161,7 @@ export const deGuides: Guide[] = [
     description: 'Überlebenshandbuch für die toxische Nebelzone und radioaktive Hotspots: Gasmaskenfilter, Radioprotektoren, Antidote und Artefaktjagd.',
     evidence: 'Toxizitätsmessungen Patch v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_mist_survival.webp',
+    image: '/images/screenshots/steam_ss_09.webp',
     imageAlt: 'Nebelüberleben und Strahlungsschutz in Scavland',
     answer: 'Ohne intakte Schutzmaske ist der Nebel tödlich. Behalte die Filter-Haltbarkeit im Auge und führe immer mindestens 2 Dosen Strahlenschutzmittel mit.',
     steps: [
@@ -189,7 +189,7 @@ export const deGuides: Guide[] = [
     description: 'Was passiert beim Tod in Scavland: 25-Minuten-Todesmarker, Sicherer Container, Fraktionsversicherung und Taktiken zur Ausrüstungsrettung.',
     evidence: 'Verlust- und Bergungsmechanik v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_death_loot.webp',
+    image: '/images/screenshots/ss_07_underground_corridor.webp',
     imageAlt: 'Todesmechanik und Beutebergung in Scavland',
     answer: 'Nach dem Tod bleibt dein Rucksack 25 Echtzeit-Minuten lang an Ort und Stelle. Gegenstände im Sicheren Container (2x2) gehen niemals verloren.',
     steps: [
@@ -218,7 +218,7 @@ export const deGuides: Guide[] = [
     description: 'Detaillierter Leitfaden zu den 10 Fraktionen im Zalesye-Ödland: Militär-Stalker, Freie Schürfer, Nebel-Kultisten und Wissenschaftler.',
     evidence: 'Fraktions- und Reputationsdaten v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_factions_reputation.webp',
+    image: '/images/cards/card_3_quests_factions.webp',
     imageAlt: '10 Fraktionen und Rufsystem in Scavland',
     answer: 'Scavland bietet 10 Fraktionen mit eigenen Agenden. Durch Aufträge steigerst du deinen Ruf und schaltest 4 Händler-Stufen mit High-End-Equipment frei.',
     steps: [
@@ -241,8 +241,13 @@ export const deGuides: Guide[] = [
   }
 ];
 
+const enGuideMap = Object.fromEntries(enGuides.map((g) => [g.slug, g]));
+
 export const allDeGuides: Guide[] = [
-  ...deGuides,
+  ...deGuides.map((de) => ({
+    ...de,
+    image: enGuideMap[de.slug]?.image || '/images/hero/header.webp',
+  })),
   ...enGuides
     .filter(en => !deGuides.some(de => de.slug === en.slug))
     .map(en => ({

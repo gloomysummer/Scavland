@@ -9,7 +9,7 @@ export const ruGuides: Guide[] = [
     description: 'Пошаговое руководство по выживанию в Scavland: управление инвентарем, ориентирование в Залесье, выживание в первом рейде и безопасная эвакуация.',
     evidence: 'Проверено в патче v0.5.169 (Ранний доступ)',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_beginner_guide.webp',
+    image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Гайд для новичков по Scavland — тактический рейд и инвентарь',
     answer: 'Всегда проверяйте карту перед выходом с базы. В первом рейде избегайте густого Тумана без противогаза, собирайте только ценный лут весом менее 0.5 кг на ячейку и запомните зеленый маркер эвакуации на компасе.',
     steps: [
@@ -41,7 +41,7 @@ export const ruGuides: Guide[] = [
     description: 'Актуальная стоимость Scavland в Steam: цены в долларах, евро, рублях и тенге. Информация о стартовой скидке 10%, системных требованиях и бонусах раннего доступа.',
     evidence: 'Официальные данные Steam Store от 4 сентября 2026',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_price_editions.webp',
+    image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Официальная цена Scavland в Steam и региональные скидки',
     answer: 'Базовая цена Scavland в Steam составляет $19.99 (в СНГ регионах действует региональная скидка, около 710 ₽ / 4800 ₸). В течение релизной недели действует дополнительная скидка 10%.',
     steps: [
@@ -72,7 +72,7 @@ export const ruGuides: Guide[] = [
     description: 'Полное руководство по запуску Scavland на Steam Deck OLED/LCD, ROG Ally и Legion Go: пресет для стабильных 60 кадров, кастомная раскладка кнопок и 4+ часа автономности.',
     evidence: 'Тесты на Steam Deck OLED (SteamOS 3.6, Proton Experimental)',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_steam_deck.webp',
+    image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Оптимизация Scavland для Steam Deck портативного гейминга',
     answer: 'Scavland идеально работает на Steam Deck при лимите TDP 9W: стабильные 60 FPS, температура чипа до 58°C и время автономной работы более 4 часов на OLED.',
     steps: [
@@ -103,7 +103,7 @@ export const ruGuides: Guide[] = [
     description: 'Подробный тактический анализ Scavland и Zero Sievert: сравнение баллистики, глубины модификации оружия, поведения аномалий и дорожной карты мультиплеера.',
     evidence: 'Сравнительный анализ игровых билдов за сентябрь 2026',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_vs_zero_sievert.webp',
+    image: '/images/screenshots/scavland_vs_zero_sievert.webp',
     imageAlt: 'Сравнение Scavland и Zero Sievert — 7 ключевых отличий',
     answer: 'Главные отличия: Scavland предлагает продвинутую систему из 300+ оружейных обвесов с реалистичной баллистикой рикошетов, динамическую механику токсичного Тумана и официальную разработку кооперативного режима.',
     steps: [
@@ -134,7 +134,7 @@ export const ruGuides: Guide[] = [
     description: 'Полная база данных вооружения Scavland: пистолеты, штурмовые винтовки, дробовики, снайперские системы, глушители, прицелы и характеристики патронов.',
     evidence: 'Данные таблицы оружия v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_weapons_attachments.webp',
+    image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: 'База данных оружия и оружейного тюнинга Scavland',
     answer: 'В Scavland представлено более 25 видов базового огнестрельного оружия и 300+ взаимозаменяемых модулей. Характеристики оружия определяются калибром, длиной ствола и состоянием дульного тормоза.',
     steps: [
@@ -165,7 +165,7 @@ export const ruGuides: Guide[] = [
     description: 'Руководство по преодолению токсичного Тумана и радиационных аномалий: типы фильтров противогаза, радиопротекторы, антидоты и поиск артефактов.',
     evidence: 'Замеры токсичности билда v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_mist_survival.webp',
+    image: '/images/screenshots/steam_ss_09.webp',
     imageAlt: 'Выживание в Тумане и радиационная безопасность в Scavland',
     answer: 'Туман в Scavland смертельно опасен без исправного противогаза. Следите за таймером ресурса фильтра и держите в быстром слоте минимум 2 шприца радиопротектора.',
     steps: [
@@ -194,7 +194,7 @@ export const ruGuides: Guide[] = [
     description: 'Что происходит при гибели сталкера в Scavland: таймер маркера тела, защищенный контейнер, страховка фракций и тактика эвакуации хабара.',
     evidence: 'Механики эвакуации патча v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_death_loot.webp',
+    image: '/images/screenshots/ss_07_underground_corridor.webp',
     imageAlt: 'Механика смерти и возврата хабара в Scavland',
     answer: 'После гибели ваш рюкзак остается на месте смерти с таймером в 25 минут. Все предметы в защищенном контейнере (Secure Case 2x2) гарантированно сохраняются на базе.',
     steps: [
@@ -223,7 +223,7 @@ export const ruGuides: Guide[] = [
     description: 'Полный обзор 10 группировок Залесья: военные сталкеры, вольные старатели, культисты Тумана, бандиты и ученые. Как открыть доступ к элитному снаряжению.',
     evidence: 'База фракций и таблица репутации v0.5.169',
     updated: '2026-09-07',
-    image: '/images/guides/scavland_factions_reputation.webp',
+    image: '/images/cards/card_3_quests_factions.webp',
     imageAlt: '10 фракций и таблица репутации группировок Scavland',
     answer: 'В Scavland 10 уникальных фракций со своими целями. Выполнение контрактов повышает репутацию и открывает 4 тира ассортимента торговцев, но портит отношения с враждебными кланами.',
     steps: [
@@ -246,9 +246,14 @@ export const ruGuides: Guide[] = [
   }
 ];
 
-// Combine custom translated guides with fallback for remaining guides
+const enGuideMap = Object.fromEntries(enGuides.map((g) => [g.slug, g]));
+
+// Combine custom translated guides with fallback for remaining guides, ensuring 100% verified image paths
 export const allRuGuides: Guide[] = [
-  ...ruGuides,
+  ...ruGuides.map((ru) => ({
+    ...ru,
+    image: enGuideMap[ru.slug]?.image || '/images/hero/header.webp',
+  })),
   ...enGuides
     .filter(en => !ruGuides.some(ru => ru.slug === en.slug))
     .map(en => ({
