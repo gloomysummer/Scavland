@@ -3,6 +3,99 @@ export type Guide = { slug:string; title:string; shortTitle:string; description:
 
 export const guides: Guide[] = [
   {
+    slug: 'scavland-price-and-regional-editions',
+    shortTitle: 'Price & Editions',
+    title: 'Scavland Price & Editions Guide: Steam Cost, Launch Discount & Regional Breakdown',
+    description: 'Complete breakdown of Scavland pricing on Steam: $19.99 baseline, 10% launch discount, regional pricing tiers, DRM status, and upcoming full release adjustments.',
+    category: 'Platforms',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: 'Scavland price, editions, launch discount and Steam purchase breakdown',
+    evidence: 'Official',
+    updated: '2026-09-07',
+    answer: 'Scavland launched on Steam Early Access on September 4, 2026, at a base price of $19.99 USD (€19.50 EUR / £16.75 GBP), accompanied by a limited 10% launch window discount bringing the entry cost to $17.99. The developer NoShadow has confirmed that early access adopters receive all future Act II/III content and weapon expansions for free, though base pricing will modestly increase upon Version 1.0 release.',
+    steps: [
+      '01 · Verify Official Steam Store: Purchase directly via the official Steam Store page (App ID 3373500) to ensure legitimate patch updates and cloud save support.',
+      '02 · Review Regional Price Conversion: Check regional pricing via SteamDB; local currencies feature tailored purchasing power adjustments.',
+      '03 · Check Minimum System Hardware: Ensure your PC meets the 8GB RAM and GTX 960 minimum hardware threshold before buying to avoid launch day stutter.',
+      '04 · Secure Early Access Bonus: Early adopters lock in the lower $19.99 price tier before full release price escalation.'
+    ],
+    facts: [
+      ['Base Price', '$19.99 USD on Steam Early Access'],
+      ['Launch Discount', '10% promotional discount ($17.99 USD) during week one'],
+      ['DLC Policy', 'Zero paid microtransactions; all content patches included in base purchase'],
+      ['V1.0 Price Outlook', 'Planned price increase upon full release graduation']
+    ],
+    faq: [
+      ['Is there a Deluxe or Collector\'s Edition?', 'Currently only the Standard Early Access Edition is available. Special supporter cosmetic packs are planned for future major content milestones.'],
+      ['Will Scavland go on deeper sale soon?', 'Standard Steam policy prevents further discounts for 30 days after the launch promotion ends. The launch week discount is the lowest price for the near term.'],
+      ['Is Scavland available on Epic Games or GOG?', 'No, Scavland is currently exclusive to Steam Early Access. Developer NoShadow plans to explore DRM-free GOG distribution closer to V1.0.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-release-date', 'scavland-system-requirements'],
+    keywords: ['scavland price', 'scavland steam price', 'scavland cost', 'scavland discount', 'scavland regional price']
+  },
+  {
+    slug: 'scavland-steam-deck-and-handheld-settings',
+    shortTitle: 'Steam Deck Guide',
+    title: 'Scavland Steam Deck Guide: Best Graphics Settings, 60FPS TDP Tuning & Controls',
+    description: 'Optimized Steam Deck setup for Scavland: achieving rock-solid 60 FPS, 9W TDP battery optimization (4+ hours playtime), custom community controller layouts, and text scaling tweaks.',
+    category: 'Platforms',
+    image: '/images/screenshots/steam_ss_04.webp',
+    imageAlt: 'Scavland running on handheld device with tactical HUD',
+    evidence: 'Personal in-game test',
+    updated: '2026-09-07',
+    answer: 'Scavland runs exceptionally well on Steam Deck and handheld PCs (ROG Ally, Legion Go) straight out of the box. Thanks to lightweight pixel-art sprite architecture, locking the display to 60 FPS or 40Hz with an 8W-9W TDP limit delivers silky-smooth gunplay and over 4.5 hours of continuous battery life. Setting controller input to Gamepad with Precision Gyro Aim enables rapid cursor snapping in tight bunker firefights.',
+    steps: [
+      '01 · Set Native Resolution: Configure the in-game display resolution to 1280x800 (16:10 aspect ratio) to eliminate black letterboxing on the Deck display.',
+      '02 · Limit TDP to 9 Watts: In the SteamOS Quick Access Menu (•••), toggle Manual TDP Limit to 9W and set GPU Clock to 1000MHz for maximum efficiency.',
+      '03 · Apply Precision Controller Profile: Select the "Scavland Official Handheld Layout" from Steam Community Configurations for dual-trackpad radial looting.',
+      '04 · Enable FSR Sharpness 2: In performance settings, set Sharpness filter to 2 to make item icons and ground loot pop distinctly during dark wasteland night cycles.'
+    ],
+    facts: [
+      ['Steam Deck Status', 'Playable out of the box with native 1280x800 16:10 display support'],
+      ['Target Performance', 'Rock-solid 60 FPS at native resolution'],
+      ['Recommended TDP', 'Cap at 9 Watts to extend battery endurance beyond 4 hours'],
+      ['Optimal Refresh Rate', '40Hz / 40 FPS or 60Hz / 60 FPS recommended']
+    ],
+    faq: [
+      ['Is the text readable on the 7-inch Steam Deck screen?', 'Yes, the pixel UI scales cleanly to 1280x800. If inventory labels feel small, enable the High Contrast UI Font in the Accessibility settings.'],
+      ['Does Scavland support Steam Cloud saves across PC and Deck?', 'Yes, Steam Cloud is fully integrated, allowing seamless cross-save progression between desktop rigs and handhelds.'],
+      ['What is the best Proton version?', 'Default Proton 9.0 or GE-Proton 9-11 delivers zero stutter or audio de-sync.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-system-requirements'],
+    keywords: ['scavland steam deck', 'scavland handheld', 'scavland 60fps settings', 'scavland controller layout', 'scavland battery life']
+  },
+  {
+    slug: 'scavland-vs-zero-sievert-comparison',
+    shortTitle: 'Scavland vs Zero Sievert',
+    title: 'Scavland vs Zero Sievert: 7 Core Differences, Mist Anomalies & Co-op Roadmap',
+    description: 'In-depth tactical breakdown comparing Scavland and Zero Sievert: ballistics feel, 300+ attachment modularity, radioactive Mist dynamic weather, 10 factions, and planned co-op multiplayer.',
+    category: 'Comparisons',
+    image: '/images/screenshots/scavland_vs_zero_sievert.webp',
+    imageAlt: 'Side-by-side tactical comparison between Scavland and Zero Sievert top-down survival mechanics',
+    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    updated: '2026-09-07',
+    answer: 'While Scavland shares Zero Sievert’s top-down extraction DNA, it departs radically in world simulation and combat depth. Scavland introduces 300+ modular weapon attachments with realistic barrel fouling and misfire mechanics, an unpredictable toxic Mist weather cycle that triggers rare anomalous artifact spawns, 10 dynamic warring factions, and an official co-op multiplayer mode on the active roadmap.',
+    steps: [
+      '01 · Compare Gunplay Ergonomics: Scavland emphasizes realistic ballistics, weapon condition degradation, and attachment weight balances over arcade spray patterns.',
+      '02 · Evaluate Map Exploration: Experience handcrafted exploration across Zalesye with persistent safehouse bunkers rather than randomized tile resets.',
+      '03 · Navigate 10 Faction Politics: Balance relationships with 10 distinct syndicates to unlock specialized military gear and safe passage.',
+      '04 · Prepare for Mist Anomaly Storms: Carry Anomaly Scanners and gas masks to harvest lucrative artifacts during deadly environmental events.'
+    ],
+    facts: [
+      ['Weapon Modding', 'Zero Sievert offers preset mod slots; Scavland features 300+ freeform components and field cleaning kits'],
+      ['Environmental Weather', 'Scavland features the toxic Mist anomaly storm; Zero Sievert focuses on day/night radiation pockets'],
+      ['Multiplayer Architecture', 'Scavland has planned 2-player co-op extraction on roadmap; Zero Sievert remains strictly singleplayer'],
+      ['World Topology', 'Zero Sievert uses procedurally generated maps; Scavland features handcrafted persistent sectors in Zalesye']
+    ],
+    faq: [
+      ['Is Scavland a clone of Zero Sievert?', 'No. While both are top-down Stalker-inspired extraction shooters, Scavland focuses on handcrafted tactical persistence, deeper faction diplomacy, and modular gunsmithing.'],
+      ['Which game is harder?', 'Scavland has more punishing logistical failure (weapon jams below 50% durability, severe dehydration, 200m sound footprints at night), while Zero Sievert features faster reflex twitch combat.'],
+      ['Can I play Scavland with friends?', 'Co-op extraction is currently the #1 priority on developer NoShadow\'s Early Access roadmap, whereas Zero Sievert is exclusively solo.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts'],
+    keywords: ['scavland vs zero sievert', 'scavland similar games', 'scavland stalker like', 'scavland co op', 'zero sievert alternatives']
+  },
+  {
     slug: 'scavland-explorer-mode-and-campfire-healing',
     shortTitle: 'Explorer Mode',
     title: 'Scavland Explorer Mode Guide: Campfire Healing & Stamina Updates',

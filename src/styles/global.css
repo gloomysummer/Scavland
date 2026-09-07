@@ -87,9 +87,54 @@ main{position:relative;z-index:1}
 .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0}
 .button{display:inline-flex;align-items:center;min-height:46px;padding:0 16px;background:var(--acid);color:#182119;font-weight:700;font-size:.84rem;border-radius:3px}
 .button.secondary{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.hero-metrics-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:16px;
+  margin-top:44px;
+}
+.metric-card{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:20px 22px;
+  background:linear-gradient(145deg, rgba(24, 35, 29, 0.75), rgba(14, 20, 17, 0.95));
+  border:1px solid var(--line);
+  border-radius:6px;
+  text-decoration:none;
+  transition:all .2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow:0 4px 20px rgba(0,0,0,0.25);
+}
+.metric-card:hover{
+  border-color:var(--acid);
+  transform:translateY(-3px);
+  box-shadow:0 8px 30px rgba(185,232,108,0.12);
+  background:linear-gradient(145deg, rgba(30, 44, 36, 0.9), rgba(18, 26, 22, 0.98));
+}
+.metric-value{
+  font:800 2.4rem/1 'Barlow Condensed', sans-serif;
+  color:#f1f6ee;
+  letter-spacing:0.02em;
+  margin-bottom:6px;
+}
+.metric-label{
+  font:700 0.85rem/1.3 'IBM Plex Mono', monospace;
+  color:var(--acid);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+}
+.metric-sub{
+  font:400 0.75rem/1.4 Inter, sans-serif;
+  color:var(--muted);
+  margin-top:8px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+}
 .stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:54px}
 .stat strong{display:block;font:700 1.55rem 'Barlow Condensed';color:var(--acid)}
 .stat span{color:var(--muted);font:.63rem 'IBM Plex Mono';text-transform:uppercase}
+
 
 /* Layout & Sections */
 .section,.listing{max-width:var(--max);margin:auto;padding:74px 24px}
@@ -269,6 +314,21 @@ main{position:relative;z-index:1}
   .stat strong{
     font-size:1.35rem;
   }
+  .hero-metrics-grid{
+    grid-template-columns:repeat(2, 1fr);
+    gap:10px;
+    margin-top:24px;
+  }
+  .metric-card{
+    padding:14px 12px;
+  }
+  .metric-value{
+    font-size:1.8rem;
+  }
+  .metric-label{
+    font-size:0.75rem;
+  }
+
 
   /* 3. Layouts, Padding & Cards */
   .section,.article-shell,.listing{
