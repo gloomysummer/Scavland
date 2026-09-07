@@ -15,7 +15,12 @@ const featured = allRuGuides.slice(0, 6);
       name: 'Scavland Wiki (Русский)',
       url: 'https://scavland.wiki/ru/',
       description: 'Официальная независимая база знаний и тактические руководства по Scavland.',
-      inLanguage: 'ru-RU'
+      inLanguage: 'ru-RU',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://scavland.wiki/ru/search/?q={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
     })} />
   </Fragment>
 
@@ -99,16 +104,123 @@ const featured = allRuGuides.slice(0, 6);
     </div>
   </section>
 
+  <!-- Mirror of "Start here" section with exact .guide-grid styling -->
   <section class="section">
     <div class="section-head">
       <div>
-        <p class="eyebrow">Избранное</p>
-        <h2>Популярные тактические гайды</h2>
+        <p class="eyebrow">С чего начать</p>
+        <h2>Полевые руководства сталкера</h2>
       </div>
-      <p>Проверенные инструкции от сообщества сталкеров Залесья.</p>
+      <p>Каждая статья проверена в игре и отделяет официальные заявления разработчиков от тестов сообщества.</p>
     </div>
-    <div class="card-grid">
-      {featured.map((guide) => <GuideCard guide={guide} lang="ru" />)}
+    <div class="guide-grid">
+      {featured.map((guide, idx) => <GuideCard guide={guide} priority={idx < 2} lang="ru" />)}
+    </div>
+  </section>
+
+  <!-- Mirror of "Critical Acclaim & Reception" section -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Оценки и отзывы сообщества</p>
+        <h2>Мнение профильных изданий и стримеров</h2>
+      </div>
+      <p>Независимые СМИ и ветераны выживалок делятся первыми впечатлениями об атмосфере, стрельбе и рейдах в Scavland.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Scavland может стать лучшей инди-игрой 2026 года, если ранний доступ продолжит развиваться в том же духе. Атмосферный ретро-визуал, плотные квесты и модульная стрельба.&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Insider Gaming</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">Обзор релиза</span>
+        </div>
+      </div>
+
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Новая постапокалиптическая песочница, от которой невозможно оторваться! Превосходный саунд-дизайн, плавная пиксельная анимация и напряженный хаос пустошей.&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Splattercatgaming</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">170K+ Просмотров</span>
+        </div>
+      </div>
+
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Scavland — мрачный тактический RPG-сурвайвал, заслуживающий внимания. Жесткие боевые столкновения и высокая цена ошибки делают каждый рейд незабываемым.&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">AddictingGames</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">Первый взгляд</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mirror of "The evidence desk" section -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">База фактов</p>
+        <h2>Смотри, прежде чем рисковать</h2>
+      </div>
+      <p>Официальные скриншоты в 1080p и записи геймплея служат надежным источником данных для планирования каждого выхода в Зону.</p>
+    </div>
+    <div class="media-strip">
+      <img src="/images/screenshots/steam_ss_08.webp" alt="Официальная карта секторов Залесья в Scavland" loading="lazy" decoding="async" width="400" height="170" />
+      <img src="/images/screenshots/steam_ss_05.webp" alt="Интерфейс инвентаря и осмотра предметов в Scavland" loading="lazy" decoding="async" width="400" height="170" />
+      <img src="/images/screenshots/steam_ss_09.webp" alt="Детекция аномалий и радиации в Scavland" loading="lazy" decoding="async" width="400" height="170" />
+    </div>
+    <p class="caption">Источник материалов: Официальный магазин Steam Store (1080p) · Уровень подтверждения: Официальная верифицированная база данных.</p>
+  </section>
+
+  <!-- Mirror of "Community Notice" section -->
+  <section class="section" id="codes">
+    <div class="note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">
+      <div>
+        <span style="font-size:0.75rem;text-transform:uppercase;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">Важное уведомление</span>
+        <h3 style="margin:0.35rem 0 0.5rem 0;color:#fff;">Статус промокодов и чит-кодов в Scavland</h3>
+        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;margin:0;">В текущей версии раннего доступа в Scavland <strong>полностью отсутствуют официальные промокоды или консольные команды</strong>. Любые сторонние сайты, предлагающие секретные коды или генераторы предметов — не верифицированы. Мы отслеживаем все официальные анонсы разработчиков и сразу опубликуем их здесь.</p>
+      </div>
+      <div style="display:flex;gap:0.75rem;">
+        <a class="button" href="/ru/guide/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Все гайды →</a>
+        <a class="button secondary" href="/updates/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">История патчей →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mirror of "The game - What is Scavland?" section -->
+  <section class="section about-home">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Об игре</p>
+        <h2>Что такое Scavland?</h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Scavland — это хардкорный изометрический пиксель-арт RPG-сурвайвал, действие которого разворачивается в Залесье — регионе, опустошенном войной и загадочным Туманом. Вы играете за Стервятника (Vulture) — вольного сталкера, который выживает, исследуя опасные сектора, собирая ценные припасы, выполняя контракты и сражаясь с мутантами и враждебными выжившими.</p>
+      <p>Успех зависит от тактической подготовки, выверенной стрельбы, контроля веса рюкзака, торговли и умения вовремя отступить. Проработанный открытый мир включает заброшенные поселения, советские бункеры, леса, радиоактивные болота, 10 фракций, квесты и смертоносные подземные лаборатории.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/ru/guide/">Смотреть все гайды</a>
+    </div>
+  </section>
+
+  <!-- Mirror of "Final CTA" section -->
+  <section class="section final-cta">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Твой следующий рейд</p>
+        <h2>Готовы покорить Залесье?</h2>
+      </div>
+      <p>От первого выхода за забор лагеря до штурма укрепленных бункеров, фракционных войн и тайн Тумана — держите базу Scavland Wiki под рукой.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/ru/guide/scavland-beginner-guide/">Читать гайд для новичков</a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Купить в Steam</a>
     </div>
   </section>
 </Layout>

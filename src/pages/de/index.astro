@@ -15,7 +15,12 @@ const featured = allDeGuides.slice(0, 6);
       name: 'Scavland Wiki (Deutsch)',
       url: 'https://scavland.wiki/de/',
       description: 'Offizielle unabhängige Community-Datenbank und Guides für Scavland.',
-      inLanguage: 'de-DE'
+      inLanguage: 'de-DE',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://scavland.wiki/de/search/?q={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
     })} />
   </Fragment>
 
@@ -99,6 +104,7 @@ const featured = allDeGuides.slice(0, 6);
     </div>
   </section>
 
+  <!-- Mirror of "Start here" section with exact .guide-grid styling -->
   <section class="section">
     <div class="section-head">
       <div>
@@ -107,8 +113,114 @@ const featured = allDeGuides.slice(0, 6);
       </div>
       <p>Von der Community verifizierte Anleitungen für den Alltag im Ödland.</p>
     </div>
-    <div class="card-grid">
-      {featured.map((guide) => <GuideCard guide={guide} lang="de" />)}
+    <div class="guide-grid">
+      {featured.map((guide, idx) => <GuideCard guide={guide} priority={idx < 2} lang="de" />)}
+    </div>
+  </section>
+
+  <!-- Mirror of "Critical Acclaim & Reception" section -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Pressestimmen &amp; Community-Echo</p>
+        <h2>Urteile von Taktik-Experten und Streamern</h2>
+      </div>
+      <p>Erste Reaktionen renommierter Gaming-Outlets und Survival-Veteranen zur Atmosphäre, Ballistik und Raid-Spannung von Scavland.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Scavland könnte mein Top-Indie-Titel 2026 werden. Atmosphärischer Retro-Look, enorme Quest-Dichte und modulares Gunplay.&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Insider Gaming</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">Launch-Review</span>
+        </div>
+      </div>
+
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Eine neue postapokalyptische Survival-Sandbox, die man kaum weglegen kann! Tolles Sounddesign und packendes Ödland-Chaos.&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Splattercatgaming</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">170K+ Views</span>
+        </div>
+      </div>
+
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Scavland ist ein düsteres neues Survival-RPG, das man im Auge behalten sollte. Knallharte Gefechte und hoher Einsatz bei jedem Raid.&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">AddictingGames</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">First Look</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mirror of "The evidence desk" section -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Verifizierte Daten</p>
+        <h2>Erst prüfen, dann vorstoßen</h2>
+      </div>
+      <p>Offizielle 1080p-Screenshots und Playtest-Aufnahmen liefern verlässliche Daten für deine Einsatzplanung im Ödland.</p>
+    </div>
+    <div class="media-strip">
+      <img src="/images/screenshots/steam_ss_08.webp" alt="Offizielle Sektorkarte von Zalesye in Scavland" loading="lazy" decoding="async" width="400" height="170" />
+      <img src="/images/screenshots/steam_ss_05.webp" alt="Inventarverwaltung und Item-Inspektion in Scavland" loading="lazy" decoding="async" width="400" height="170" />
+      <img src="/images/screenshots/steam_ss_09.webp" alt="Anomalie-Erkennung und Strahlungszone in Scavland" loading="lazy" decoding="async" width="400" height="170" />
+    </div>
+    <p class="caption">Medienquelle: Offizielle 1080p Steam Store Aufnahmen · Datenbasis: Verifizierter Baseline-Standard.</p>
+  </section>
+
+  <!-- Mirror of "Community Notice" section -->
+  <section class="section" id="codes">
+    <div class="note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">
+      <div>
+        <span style="font-size:0.75rem;text-transform:uppercase;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">Wichtiger Hinweis</span>
+        <h3 style="margin:0.35rem 0 0.5rem 0;color:#fff;">Status von Codes &amp; Cheats in Scavland</h3>
+        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;margin:0;">In der aktuellen Early-Access-Version von Scavland existieren <strong>keine offiziellen Promo-Codes oder Konsolen-Befehle</strong>. Webseiten, die angebliche Gratis-Codes versprechen, sind unseriös. Sobald Entwickler NoShadow offizielle Belohnungscodes herausgibt, verifizieren wir diese hier umgehend.</p>
+      </div>
+      <div style="display:flex;gap:0.75rem;">
+        <a class="button" href="/de/guide/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Alle Guides →</a>
+        <a class="button secondary" href="/updates/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Update-Verlauf →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mirror of "The game - What is Scavland?" section -->
+  <section class="section about-home">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Das Spiel</p>
+        <h2>Was ist Scavland?</h2>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Scavland ist ein kompromissloses Top-Down-Pixel-Art-Survival-RPG im sowjetischen Postapokalypse-Szenario von Zalesye — verwüstet durch Kriege und den mysteriösen Nebel. Du schlüpfst in die Rolle eines "Vulture" (Aasgeiers) — eines Plünderers, der gefährliche Sektoren erkundet, Ressourcen birgt, Fraktionsverträge erfüllt und gegen Mutanten kämpft.</p>
+      <p>Überleben verlangt gründliche Vorbereitung, taktisches Vorgehen, Rucksack-Disziplin und das Gespür für den richtigen Zeitpunkt zum Rückzug. Die handgebaute Welt bietet verlassene Siedlungen, Bunkerkomplexe, Wälder, Strahlungsmoore, 10 Fraktionen und unterirdische Laboratorien.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/de/guide/">Alle Guides durchsuchen</a>
+    </div>
+  </section>
+
+  <!-- Mirror of "Final CTA" section -->
+  <section class="section final-cta">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Dein nächster Raid</p>
+        <h2>Bereit für Zalesye?</h2>
+      </div>
+      <p>Vom ersten Ausrüstungs-Run über tödliche Bunker bis hin zu Fraktionskonflikten und den Geheimnissen des Nebels — halte das Scavland Wiki griffbereit.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button" href="/de/guide/scavland-beginner-guide/">Anfänger-Guide lesen</a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Auf Steam spielen</a>
     </div>
   </section>
 </Layout>
