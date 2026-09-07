@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import Countdown from '../../components/Countdown.astro';
+import { allRuGuides } from '../../data/guides-ru';
+
+const featured = allRuGuides.slice(0, 6);
+---
+
+<Layout title="Scavland Wiki на русском — Гайды, Оружие, Карта и База данных" description="Официальная база знаний Scavland на русском языке: подробные гайды по выживанию, оружие, обвесы, фракции, карта Залесья, дата выхода и системные требования." keywords="Scavland на русском, Scavland wiki ru, гайд Scavland, оружие Scavland, системные требования, карта Залесья, Steam Deck" canonical="/ru/" lang="ru">
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Scavland Wiki (Русский)',
+      url: 'https://scavland.wiki/ru/',
+      description: 'Официальная независимая база знаний и тактические руководства по Scavland.',
+      inLanguage: 'ru-RU'
+    })} />
+  </Fragment>
+
+  <section class="hero">
+    <p class="eyebrow">Официальные данные · Вики сообщества</p>
+    <h1>Scavland Вики &amp; База Знаний</h1>
+    <p class="lede">Полная база данных и тактическое руководство по Scavland — хардкорной изометрической RPG на выживание в декорациях советского постапокалипсиса. Исследуйте Залесье, зачищайте подземные бункеры, настраивайте 25+ видов оружия и выживайте в смертоносном Тумане.</p>
+    
+    <Countdown />
+
+    <div class="hero-actions">
+      <a class="button" href="/ru/guide/scavland-beginner-guide/">Гайд для новичков <span aria-hidden="true">➔</span></a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Купить в Steam <span aria-hidden="true">↗</span></a>
+      <a class="button secondary" href="/weapons/">Арсенал оружия</a>
+    </div>
+
+    <!-- 4-metric tactical authority cards -->
+    <div class="hero-metrics-grid">
+      <a class="metric-card" href="/weapons/">
+        <span class="metric-value">25+</span>
+        <span class="metric-label">Моделей оружия</span>
+        <span class="metric-sub">Пистолеты, автоматы и СВД ➔</span>
+      </a>
+      <a class="metric-card" href="/weapons/">
+        <span class="metric-value">300+</span>
+        <span class="metric-label">Модификаций и обвесов</span>
+        <span class="metric-sub">Оптика, глушители, цевья ➔</span>
+      </a>
+      <a class="metric-card" href="/factions/">
+        <span class="metric-value">10</span>
+        <span class="metric-label">Группировок Зоны</span>
+        <span class="metric-sub">Уровни торговцев и репутация ➔</span>
+      </a>
+      <a class="metric-card" href="/release-date/">
+        <span class="metric-value" style="color:var(--orange);">4 сен 2026</span>
+        <span class="metric-label">Ранний доступ Steam</span>
+        <span class="metric-sub">Патч v0.5.169 активен ➔</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Быстрый переход</p>
+        <h2>Тактическая база Scavland</h2>
+      </div>
+      <p>Мгновенный доступ к проверенным фактам о релизе, системным требованиям, ценам в Steam и ключевым руководствам.</p>
+    </div>
+    <div class="card-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+      <a class="guide-card" href="/ru/guide/scavland-vs-zero-sievert-comparison/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--acid,#b9e86c);background:linear-gradient(135deg, rgba(185,232,108,0.06), #161616);">
+        <span style="font-size:0.8rem;color:var(--acid,#b9e86c);font-weight:700;letter-spacing:1px;">★ ГЛАВНОЕ СРАВНЕНИЕ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Scavland против Zero Sievert</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">7 ключевых отличий: баллистика рикошетов, 300+ обвесов, механика Тумана и мультиплеер.</p>
+      </a>
+      <a class="guide-card" href="/ru/guide/scavland-beginner-guide/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">01 · ВЫЖИВАНИЕ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Гайд для новичков</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Первый рейд, менеджмент рюкзака, костры и безопасный выход из локации.</p>
+      </a>
+      <a class="guide-card" href="/ru/guide/scavland-price-and-regional-editions/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">02 · СТОИМОСТЬ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Цена в Steam и скидки</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Региональные цены в рублях и тенге, скидка 10% на старте и издания.</p>
+      </a>
+      <a class="guide-card" href="/ru/guide/scavland-steam-deck-and-handheld-settings/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">03 · ПОРТАТИВ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Scavland на Steam Deck</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Настройки для стабильных 60 FPS при 9W TDP и 4+ часов работы от батареи.</p>
+      </a>
+      <a class="guide-card" href="/ru/guide/scavland-weapons-and-attachments/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">04 · АРСЕНАЛ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Оружие и модификации</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Каталог 25+ стволов, 300+ обвесов, типы боеприпасов и ремонт оружия.</p>
+      </a>
+      <a class="guide-card" href="/ru/guide/scavland-factions-and-reputation/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">05 · ФРАКЦИИ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">10 группировок Зоны</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Репутация, контракты, тиры доверия торговцев и нейтральный рынок.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Избранное</p>
+        <h2>Популярные тактические гайды</h2>
+      </div>
+      <p>Проверенные инструкции от сообщества сталкеров Залесья.</p>
+    </div>
+    <div class="card-grid">
+      {featured.map((guide) => <GuideCard guide={guide} lang="ru" />)}
+    </div>
+  </section>
+</Layout>

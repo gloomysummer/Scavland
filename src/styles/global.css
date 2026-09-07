@@ -63,6 +63,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 kbd,.eyebrow,.stamp{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase}
 .nav-search{border:1px solid var(--line);padding:0 10px;border-radius:4px}
 .nav-search kbd{color:var(--acid)}
+.lang-switcher{display:inline-flex;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:4px;padding:2px;gap:2px;margin-left:8px;flex-shrink:0}
+.lang-btn{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;padding:2px 8px!important;min-height:26px!important;border-radius:3px;color:var(--muted)!important;text-decoration:none;transition:all .2s ease;line-height:1}
+.lang-btn:hover{color:var(--ink)!important;background:rgba(255,255,255,0.08)}
+.lang-btn.active{color:#0b0c10!important;background:var(--acid)!important;font-weight:700}
+.lang-btn.active:after{display:none!important}
 main{position:relative;z-index:1}
 
 /* Hero */

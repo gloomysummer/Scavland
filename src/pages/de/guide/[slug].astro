@@ -1,0 +1,188 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import AdsterraArticleBanner from '../../../components/AdsterraArticleBanner.astro';
+import { allDeGuides, deGuideBySlug } from '../../../data/guides-de';
+
+export function getStaticPaths() {
+  return allDeGuides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+
+const { guide } = Astro.props;
+const related = guide.related.map((slug) => deGuideBySlug[slug]).filter(Boolean);
+const canonicalUrl = `https://scavland.wiki/de/guide/${guide.slug}/`;
+const imageUrl = `https://scavland.wiki${guide.image.startsWith('/images') ? guide.image : '/images/hero/header.webp'}`;
+
+// 1. Article Schema
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: guide.title,
+  description: guide.description,
+  image: imageUrl,
+  inLanguage: 'de-DE',
+  datePublished: '2026-08-20T00:00:00Z',
+  dateModified: `${guide.updated}T00:00:00Z`,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalUrl,
+  },
+  author: {
+    '@type': 'Organization',
+    name: 'Scavland Wiki Editorial Team',
+    url: 'https://scavland.wiki/de/',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Scavland Wiki',
+    url: 'https://scavland.wiki',
+    logo: 'https://scavland.wiki/images/icons/logo.svg',
+  },
+  about: {
+    '@type': 'VideoGame',
+    name: 'Scavland',
+    url: 'https://store.steampowered.com/app/3373500/Scavland/',
+  },
+};
+
+// 2. BreadcrumbList Schema
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Scavland Wiki',
+      item: 'https://scavland.wiki/de/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Guides',
+      item: 'https://scavland.wiki/de/guide/',
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: guide.title,
+      item: canonicalUrl,
+    },
+  ],
+};
+
+// 3. FAQPage Schema
+const faqSchema = guide.faq && guide.faq.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: guide.faq.map(([question, answer]) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer,
+    },
+  })),
+} : null;
+---
+
+<Layout title={`${guide.title} | Scavland Wiki`} description={guide.description} canonical={`/de/guide/${guide.slug}/`} lang="de">
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  </Fragment>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Navigation" style="font-size:0.85rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
+      <a href="/de/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <a href="/de/guide/" style="color:var(--text-muted,#aaa);text-decoration:none;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">Guides</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;padding:4px 0;">{guide.shortTitle || guide.title}</span>
+    </nav>
+
+    <header class="article-header">
+      <p class="eyebrow">{guide.category} · Aktualisiert {guide.updated}</p>
+      <h1 class="page-title">{guide.title}</h1>
+      <p class="lede">{guide.description}</p>
+      <span class="evidence">Datenbasis: {guide.evidence}</span>
+    </header>
+
+    <!-- Mobile Collapsible Table of Contents -->
+    <details class="toc-mobile" style="display:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:24px 0;">
+      <summary style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;font-weight:700;color:var(--acid);cursor:pointer;text-transform:uppercase;letter-spacing:0.06em;user-select:none;display:flex;align-items:center;min-height:44px;">
+        Inhaltsverzeichnis (Zum Abschnitt springen ▾)
+      </summary>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);font-size:0.88rem;">
+        <a href="#field-notes" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Feldnotizen</a>
+        <a href="#evidence" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Verifizierte Daten</a>
+        <a href="#faq" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Häufige Fragen</a>
+        <a href="#related" style="color:var(--ink);min-height:44px;display:flex;align-items:center;padding:0 4px;">→ Verwandte Guides</a>
+      </div>
+    </details>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="quick-answer">
+          <strong>Kurzantwort</strong>{guide.answer}
+        </div>
+
+        <div class="article-media">
+          {guide.image.endsWith('.mp4') ? (
+            <video src={guide.image} controls muted playsinline preload="metadata" aria-label={guide.imageAlt}></video>
+          ) : (
+            <img src={guide.image} alt={guide.imageAlt} />
+          )}
+        </div>
+        <p class="caption">
+          Medien: Autorisierte Scavland-Spieldaten · {guide.evidence}.
+        </p>
+
+        <h2 id="field-notes">Feldnotizen</h2>
+        <ul>
+          {guide.steps.map((step) => <li>{step}</li>)}
+        </ul>
+
+        <AdsterraArticleBanner />
+
+        <h2 id="evidence">Verifizierte Daten &amp; Faktenlage</h2>
+        <div class="table-responsive" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:16px 0;">
+          <table class="facts">
+            <tbody>
+              {guide.facts.map(([key, value]) => (
+                <tr>
+                  <td>{key}</td>
+                  <td>{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="faq">Häufig gestellte Fragen</h2>
+        <div class="faq-list">
+          {guide.faq.map(([question, answer]) => (
+            <details>
+              <summary>{question}</summary>
+              <p>{answer}</p>
+            </details>
+          ))}
+        </div>
+
+        <h2 id="related">Verwandte Guides</h2>
+        <div class="related-grid">
+          {related.map((item) => <GuideCard guide={item} lang="de" />)}
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="Auf dieser Seite">
+        <strong>Auf dieser Seite</strong>
+        <a href="#field-notes">Feldnotizen</a>
+        <a href="#evidence">Verifizierte Daten</a>
+        <a href="#faq">Fragen</a>
+        <a href="#related">Verwandte Guides</a>
+      </aside>
+    </div>
+  </article>
+</Layout>

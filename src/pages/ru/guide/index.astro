@@ -1,0 +1,16 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import { allRuGuides } from '../../../data/guides-ru';
+---
+
+<Layout title="Гайды по Scavland | База знаний и тактические руководства" description="Все руководства и тактические гайды по Scavland: выживание в Залесье, модификации оружия, фракции, крафт и эвакуация." canonical="/ru/guide/" lang="ru">
+  <section class="listing">
+    <p class="eyebrow">Основной каталог</p>
+    <h1 class="page-title">Все<br/><span style="color:var(--acid)">гайды.</span></h1>
+    <p class="lede">Начните с базового гайда для новичков, затем переходите к детальному изучению арсенала оружия, погодных аномалий и подземных бункеров.</p>
+    <div class="listing-grid">
+      {allRuGuides.map((guide) => <GuideCard guide={guide} lang="ru" />)}
+    </div>
+  </section>
+</Layout>

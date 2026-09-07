@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import Countdown from '../../components/Countdown.astro';
+import { allDeGuides } from '../../data/guides-de';
+
+const featured = allDeGuides.slice(0, 6);
+---
+
+<Layout title="Scavland Wiki Deutsch — Guides, Waffen, Karten &amp; Release-Infos" description="Das ultimative deutschsprachige Scavland-Wiki: Guides, Waffen-Tuning, Fraktionen, Zalesye-Karten, Steam-Release und Systemanforderungen." keywords="Scavland Deutsch, Scavland Wiki de, Scavland Guide, Scavland Waffen, Systemanforderungen, Steam Deck" canonical="/de/" lang="de">
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Scavland Wiki (Deutsch)',
+      url: 'https://scavland.wiki/de/',
+      description: 'Offizielle unabhängige Community-Datenbank und Guides für Scavland.',
+      inLanguage: 'de-DE'
+    })} />
+  </Fragment>
+
+  <section class="hero">
+    <p class="eyebrow">Offizielle Faktenbasis · Community-Wiki</p>
+    <h1>Scavland Wiki &amp; Datenbank</h1>
+    <p class="lede">Die vollständige Datenbank und taktische Überlebensanleitung für Scavland — das kompromisslose Top-Down-Pixel-Art-Survival-RPG im sowjetischen Postapokalypse-Szenario. Erkunde Zalesye, plündere Bunker, meistere 25+ Waffen und überlebe den tödlichen Nebel.</p>
+    
+    <Countdown />
+
+    <div class="hero-actions">
+      <a class="button" href="/de/guide/scavland-beginner-guide/">Kostenlose Guides <span aria-hidden="true">➔</span></a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Auf Steam spielen <span aria-hidden="true">↗</span></a>
+      <a class="button secondary" href="/weapons/">Waffenarsenal</a>
+    </div>
+
+    <!-- 4-metric tactical authority cards -->
+    <div class="hero-metrics-grid">
+      <a class="metric-card" href="/weapons/">
+        <span class="metric-value">25+</span>
+        <span class="metric-label">Waffen im Spiel</span>
+        <span class="metric-sub">Pistolen, Gewehre &amp; Ballistik ➔</span>
+      </a>
+      <a class="metric-card" href="/weapons/">
+        <span class="metric-value">300+</span>
+        <span class="metric-label">Aufsätze &amp; Tuning</span>
+        <span class="metric-sub">Visiere, Schalldämpfer &amp; Griffe ➔</span>
+      </a>
+      <a class="metric-card" href="/factions/">
+        <span class="metric-value">10</span>
+        <span class="metric-label">Ödland-Fraktionen</span>
+        <span class="metric-sub">Händler-Tiers &amp; Rufsystem ➔</span>
+      </a>
+      <a class="metric-card" href="/release-date/">
+        <span class="metric-value" style="color:var(--orange);">4. Sep. 2026</span>
+        <span class="metric-label">Early Access Start</span>
+        <span class="metric-sub">Aktiver Patch v0.5.169 ➔</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Schnellübersicht</p>
+        <h2>Scavland Datenbank &amp; Hub</h2>
+      </div>
+      <p>Schnellzugriff auf verifizierte Launch-Fakten, Systemanforderungen, Guides und Spielmechaniken.</p>
+    </div>
+    <div class="card-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+      <a class="guide-card" href="/de/guide/scavland-vs-zero-sievert-comparison/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--acid,#b9e86c);background:linear-gradient(135deg, rgba(185,232,108,0.06), #161616);">
+        <span style="font-size:0.8rem;color:var(--acid,#b9e86c);font-weight:700;letter-spacing:1px;">★ WICHTIGER VERGLEICH</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Scavland vs Zero Sievert</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">7 Kernunterschiede: Querschläger-Ballistik, 300+ Modifikationen, Giftnebel und Koop-Roadmap.</p>
+      </a>
+      <a class="guide-card" href="/de/guide/scavland-beginner-guide/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">01 · ÜBERLEBEN</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Anfänger-Guide</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Erster Raid, Rucksackorganisation, Lagerfeuer-Heilung und Extraktionszonen.</p>
+      </a>
+      <a class="guide-card" href="/de/guide/scavland-price-and-regional-editions/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">02 · PREISE</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Steam-Preis &amp; Editionen</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">19,99 € UVP, 10% Eröffnungsrabatt, Roadmap und Rückgaberichtlinien.</p>
+      </a>
+      <a class="guide-card" href="/de/guide/scavland-steam-deck-and-handheld-settings/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">03 · STEAM DECK</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Steam Deck Optimierung</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Einstellungen für flüssige 60 FPS bei 9W TDP und über 4 Stunden Akkulaufzeit.</p>
+      </a>
+      <a class="guide-card" href="/de/guide/scavland-weapons-and-attachments/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">04 · ARSENAL</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Waffen &amp; Modifikationen</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Interaktiver Katalog mit 25+ Schusswaffen, 300+ Anbauteilen und Kaliberdaten.</p>
+      </a>
+      <a class="guide-card" href="/de/guide/scavland-factions-and-reputation/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">05 · FRAKTIONEN</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">10 Ödland-Fraktionen</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">Rufsystem, Händler-Vertrauensstufen und lukrative Fraktionsaufträge.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Empfohlen</p>
+        <h2>Wesentliche Feldhandbücher</h2>
+      </div>
+      <p>Von der Community verifizierte Anleitungen für den Alltag im Ödland.</p>
+    </div>
+    <div class="card-grid">
+      {featured.map((guide) => <GuideCard guide={guide} lang="de" />)}
+    </div>
+  </section>
+</Layout>

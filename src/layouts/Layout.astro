@@ -1,14 +1,41 @@
 ---
 import '../styles/global.css';
 import { adConfig } from '../data/adConfig';
+import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, stripLocale, type Language } from '../data/i18n';
 
-const { title = 'Scavland Wiki — Guides, Weapons & Database', description = 'The complete Scavland Wiki: evidence-led guides for survival, weapons, loot, quests, factions, maps, and system mechanics.', keywords = 'Scavland, Scavland Wiki, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements', canonical = Astro.url.pathname } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  lang?: Language;
+}
+
+const { 
+  title = 'Scavland Wiki — Guides, Weapons & Database', 
+  description = 'The complete Scavland Wiki: evidence-led guides for survival, weapons, loot, quests, factions, maps, and system mechanics.', 
+  keywords = 'Scavland, Scavland Wiki, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements', 
+  canonical = Astro.url.pathname,
+  lang: propLang
+} = Astro.props;
+
 const siteUrl = 'https://scavland.wiki';
 const currentPath = Astro.url.pathname;
-const isActive = (path: string) => currentPath === path || (path !== '/' && currentPath.startsWith(path));
+const lang: Language = propLang || getLanguageFromPath(currentPath);
+const t = uiTranslations[lang];
+
+const cleanCanonical = stripLocale(canonical);
+const enUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'en')}`;
+const ruUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'ru')}`;
+const deUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'de')}`;
+
+const isActive = (path: string) => {
+  const locPath = getLocalizedUrl(path, lang);
+  return currentPath === locPath || (locPath !== '/' && locPath !== `/${lang}/` && currentPath.startsWith(locPath));
+};
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -17,12 +44,19 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
     <meta name="keywords" content={keywords} />
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={`${siteUrl}${canonical}`} />
+    
+    <!-- Multi-language hreflang SEO cluster for Googlebot -->
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="ru" href={ruUrl} />
+    <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`${siteUrl}${canonical}`} />
     <meta property="og:site_name" content="Scavland Wiki" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content={supportedLanguages[lang].locale} />
     <meta property="og:image" content={`${siteUrl}/images/og-scavland.jpg`} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -64,8 +98,45 @@ const isActive = (path: string) => currentPath === path || (path !== '/' && curr
   <body>
     <div class="grain" aria-hidden="true"></div>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <header class="site-header"><a class="brand" href="/"><img src="/images/icons/logo.svg" alt="" width="32" height="32" /><span>SCAVLAND<span class="brand-sub">WIKI &amp; DATABASE</span></span></a><nav aria-label="Primary"><a class:list={{active:isActive('/guide/')}} href="/guide/">Guides</a><a class:list={{active:isActive('/weapons/')}} href="/weapons/">Weapons</a><a class:list={{active:isActive('/factions/')}} href="/factions/">Factions</a><a class:list={{active:isActive('/release-date/')}} href="/release-date/">Release</a><a class:list={{active:isActive('/system-requirements/')}} href="/system-requirements/">Specs</a><a class:list={{active:isActive('/wiki/')}} href="/wiki/">Systems</a><a class:list={{active:isActive('/maps/')}} href="/maps/">World</a><a class:list={{active:isActive('/updates/')}} href="/updates/">Updates</a><a href="/search/" class="nav-search" aria-label="Search guides">Search <kbd>/</kbd></a></nav></header>
+    <header class="site-header">
+      <a class="brand" href={getLocalizedUrl('/', lang)}>
+        <img src="/images/icons/logo.svg" alt="" width="32" height="32" />
+        <span>SCAVLAND<span class="brand-sub">{t.brandSub}</span></span>
+      </a>
+      <nav aria-label="Primary">
+        <a class:list={{active:isActive('/guide/')}} href={getLocalizedUrl('/guide/', lang)}>{t.nav.guides}</a>
+        <a class:list={{active:isActive('/weapons/')}} href={getLocalizedUrl('/weapons/', lang)}>{t.nav.weapons}</a>
+        <a class:list={{active:isActive('/factions/')}} href={getLocalizedUrl('/factions/', lang)}>{t.nav.factions}</a>
+        <a class:list={{active:isActive('/release-date/')}} href={getLocalizedUrl('/release-date/', lang)}>{t.nav.release}</a>
+        <a class:list={{active:isActive('/system-requirements/')}} href={getLocalizedUrl('/system-requirements/', lang)}>{t.nav.specs}</a>
+        <a class:list={{active:isActive('/wiki/')}} href={getLocalizedUrl('/wiki/', lang)}>{t.nav.systems}</a>
+        <a class:list={{active:isActive('/maps/')}} href={getLocalizedUrl('/maps/', lang)}>{t.nav.world}</a>
+        <a class:list={{active:isActive('/updates/')}} href={getLocalizedUrl('/updates/', lang)}>{t.nav.updates}</a>
+        <a href={getLocalizedUrl('/search/', lang)} class="nav-search" aria-label="Search guides">{t.nav.search} <kbd>/</kbd></a>
+        
+        <!-- Tactical Language Switcher -->
+        <div class="lang-switcher" aria-label="Change Language">
+          <a href={getLocalizedUrl(currentPath, 'en')} class:list={['lang-btn', { active: lang === 'en' }]} title="English">EN</a>
+          <a href={getLocalizedUrl(currentPath, 'ru')} class:list={['lang-btn', { active: lang === 'ru' }]} title="Русский">RU</a>
+          <a href={getLocalizedUrl(currentPath, 'de')} class:list={['lang-btn', { active: lang === 'de' }]} title="Deutsch">DE</a>
+        </div>
+      </nav>
+    </header>
     <main id="main-content"><slot /></main>
-    <footer class="site-footer"><div><strong>Scavland Wiki &amp; Database</strong><p>Independent community wiki with verified game data and tactical field notes. Not affiliated with NoShadow.</p></div><div class="footer-links"><a href="/release-date/">Release Date</a><a href="/system-requirements/">PC Requirements</a><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/privacy-policy/">Privacy</a><a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">Official Steam</a></div><small>Scavland Wiki Database updated September 2026 · Official Verified Baseline.</small></footer>
+    <footer class="site-footer">
+      <div>
+        <strong>Scavland Wiki &amp; Database</strong>
+        <p>{t.common.footerDisclaimer}</p>
+      </div>
+      <div class="footer-links">
+        <a href={getLocalizedUrl('/release-date/', lang)}>{t.nav.release}</a>
+        <a href={getLocalizedUrl('/system-requirements/', lang)}>{t.nav.specs}</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">{t.common.officialSteam}</a>
+      </div>
+      <small>{t.common.footerUpdated}</small>
+    </footer>
   </body>
 </html>
