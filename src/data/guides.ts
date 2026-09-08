@@ -234,7 +234,7 @@ export const guides: Guide[] = [
       ['Where do I find medical crafting blueprints?', 'Basic medical recipes are unlocked automatically at safehouse workbenches; advanced blueprints (IFAKs, Rad-Away) are purchased from Physician Anna after completing the Hospital Quest.'],
       ['How does the v0.5.169 stash buff affect crafting?', 'Safehouse stash capacity was doubled (200% base size), allowing scavengers to stockpile bulky crafting components like sheet metal and scrap iron without running out of room.']
     ],
-    related: ['scavland-starter-loadouts-and-budget-builds', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts'],
+    related: ['scavland-starter-loadouts-and-budget-builds', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts', 'scavland-merchant-prices-and-barter-guide'],
     keywords: ['scavland crafting recipes', 'scavland trading guide', 'scavland workbench recipes', 'scavland cooking', 'scavland medical blueprints', 'scavland volodymyr trader']
   },
   {
