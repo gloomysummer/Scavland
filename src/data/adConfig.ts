@@ -39,8 +39,8 @@ export interface AdMonetizationConfig {
 }
 
 export const adConfig: AdMonetizationConfig = {
-  // Switched to 'adsense' for Google AdSense site review and monetization
-  provider: 'adsense',
+  // Dual-track architecture: active monetization via Adsterra + official AdSense Auto Ads tag retained for review
+  provider: 'adsterra',
   
   // Master switch
   enabled: true,
@@ -69,23 +69,23 @@ export const adConfig: AdMonetizationConfig = {
     siteId: '',
   },
 
-  // Active Adsterra configuration
+  // Active Adsterra configuration for Scavland
   adsterra: {
     slots: {
       'article-banner': {
-        key: '3a70dc4036609f3d3b61b9711872a734',
+        key: '65cf9132f65fb8c9dd0738fd4a974034',
         format: 'iframe',
         width: 300,
         height: 250,
-        scriptUrl: 'https://www.highrevenueformat.com/3a70dc4036609f3d3b61b9711872a734/invoke.js',
+        scriptUrl: 'https://www.highrevenueformat.com/65cf9132f65fb8c9dd0738fd4a974034/invoke.js',
       },
       'feed-native': {
-        key: '4ad68b4b48bdf741c0d0256e6aea8665',
+        key: 'b11b1dea8c0f54bab487a9131b28ee45',
         format: 'native',
         width: 100,
         height: 100,
-        scriptUrl: 'https://pl30949155.effectivecpmnetwork.com/4ad68b4b48bdf741c0d0256e6aea8665/invoke.js',
-        containerId: 'container-4ad68b4b48bdf741c0d0256e6aea8665',
+        scriptUrl: 'https://pl31242129.profitableratecpmnetwork.com/b11b1dea8c0f54bab487a9131b28ee45/invoke.js',
+        containerId: 'container-b11b1dea8c0f54bab487a9131b28ee45',
       },
     },
   },

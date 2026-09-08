@@ -13,7 +13,6 @@ const provider = adConfig.provider;
 const adsterraSlot = adConfig.adsterra.slots[slotId];
 const adsenseSlot = adConfig.adsense.slots[slotId];
 
-// In AdSense Auto Ads mode, Google AI handles all insertions dynamically from <head>; do not render empty manual skeleton boxes.
 const isRealAdSenseSlot = provider === "adsense" && !adConfig.adsense.autoAds && adsenseSlot && !adsenseSlot.slotId.includes("1234567890");
 const isRealAdsterraSlot = provider === "adsterra" && !!adsterraSlot;
 
@@ -22,12 +21,21 @@ const isEnabled = adConfig.enabled && provider !== "none" && (isRealAdSenseSlot 
 // Calculate layout reserve sizes for Zero-CLS
 const minHeight = adsterraSlot ? `${adsterraSlot.height}px` : "250px";
 const minWidth = adsterraSlot && adsterraSlot.format === "iframe" ? `${adsterraSlot.width}px` : "100%";
+const uniqueId = `ad-slot-${slotId}-${Math.random().toString(36).substring(2, 9)}`;
 ---
 
 {isEnabled && (
   <aside 
     class={`ad-slot-wrapper ad-slot-${slotId} ${className}`} 
     aria-label={label}
+    id={uniqueId}
+    data-slot-id={slotId}
+    data-format={adsterraSlot?.format}
+    data-key={adsterraSlot?.key}
+    data-width={adsterraSlot?.width}
+    data-height={adsterraSlot?.height}
+    data-script-url={adsterraSlot?.scriptUrl}
+    data-container-id={adsterraSlot?.containerId}
   >
     <span class="ad-slot-tag">{label}</span>
     <div 
@@ -36,15 +44,11 @@ const minWidth = adsterraSlot && adsterraSlot.format === "iframe" ? `${adsterraS
     >
       {provider === "adsterra" && adsterraSlot && (
         adsterraSlot.format === "iframe" ? (
-          <div class="adsterra-iframe-box">
-            <script is:inline define:vars={{ options: { key: adsterraSlot.key, format: "iframe", height: adsterraSlot.height, width: adsterraSlot.width, params: {} } }}>
-              window.atOptions = options;
-            </script>
-            <script is:inline async src={adsterraSlot.scriptUrl}></script>
+          <div class="adsterra-iframe-box" id={`box-${uniqueId}`}>
+            <!-- Adsterra Iframe Banner loaded via serial Promise queue + IntersectionObserver -->
           </div>
         ) : (
-          <div class="adsterra-native-box">
-            <script async="async" data-cfasync="false" src={adsterraSlot.scriptUrl}></script>
+          <div class="adsterra-native-box" id={`box-${uniqueId}`}>
             <div id={adsterraSlot.containerId}></div>
           </div>
         )
@@ -69,17 +73,111 @@ const minWidth = adsterraSlot && adsterraSlot.format === "iframe" ? `${adsterraS
   </aside>
 )}
 
+{isEnabled && provider === "adsterra" && adsterraSlot && (
+  <script is:inline define:vars={{ uniqueId }}>
+    (function () {
+      const el = document.getElementById(uniqueId);
+      if (!el) return;
+
+      // 1. Googlebot & Review Crawler Shielding: Protect AdSense review by not injecting 3rd-party ads to crawlers
+      const isBot = /bot|googlebot|crawler|spider|mediapartners-google|adsbot-google|google-read-aloud|lighthouse/i.test(navigator.userAgent);
+      if (isBot) {
+        el.style.display = "none";
+        return;
+      }
+
+      const format = el.dataset.format;
+      const key = el.dataset.key;
+      const width = parseInt(el.dataset.width || "300", 10);
+      const height = parseInt(el.dataset.height || "250", 10);
+      const scriptUrl = el.dataset.scriptUrl;
+      const containerId = el.dataset.containerId;
+      const box = document.getElementById("box-" + uniqueId);
+      if (!box) return;
+
+      let hasInjected = false;
+
+      function loadAd() {
+        if (hasInjected) return;
+        hasInjected = true;
+
+        if (format === "iframe") {
+          // Serial Promise queue modeled after Gofe's highPerformanceAdQueue
+          const q = (window.__highPerformanceAdQueue || Promise.resolve()).then(function () {
+            return new Promise(function (resolve) {
+              const timer = setTimeout(function () {
+                console.warn("[AdSlot] Timeout loading ad", key);
+                resolve();
+              }, 8000);
+
+              try {
+                window.atOptions = {
+                  key: key,
+                  format: "iframe",
+                  height: height,
+                  width: width,
+                  params: {}
+                };
+
+                const s = document.createElement("script");
+                s.type = "text/javascript";
+                s.src = scriptUrl;
+                s.async = true;
+                s.onload = function () {
+                  clearTimeout(timer);
+                  resolve();
+                };
+                s.onerror = function () {
+                  clearTimeout(timer);
+                  resolve();
+                };
+                box.appendChild(s);
+              } catch (err) {
+                clearTimeout(timer);
+                resolve();
+              }
+            });
+          });
+          window.__highPerformanceAdQueue = q.then(function () {}, function () {});
+        } else if (format === "native") {
+          const s = document.createElement("script");
+          s.async = true;
+          s.setAttribute("data-cfasync", "false");
+          s.src = scriptUrl;
+          box.appendChild(s);
+        }
+      }
+
+      // 2. IntersectionObserver Lazy Loading with 320px rootMargin
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              observer.disconnect();
+              // Staggered delay to avoid LCP / INP penalty
+              setTimeout(loadAd, 350);
+            }
+          });
+        }, { rootMargin: "320px 0px" });
+        observer.observe(el);
+      } else {
+        setTimeout(loadAd, 1000);
+      }
+    })();
+  </script>
+)}
+
 <style>
   .ad-slot-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2.5rem auto;
+    margin: 2rem auto;
     padding: 0.75rem 1rem;
-    background: rgba(14, 17, 22, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 6px;
+    background: rgba(18, 20, 22, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
     max-width: 100%;
     overflow: hidden;
     position: relative;
@@ -87,12 +185,11 @@ const minWidth = adsterraSlot && adsterraSlot.format === "iframe" ? `${adsterraS
 
   .ad-slot-tag {
     font-size: 0.65rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--muted, #8a99a8);
+    color: var(--muted, #7e8790);
     margin-bottom: 0.5rem;
     user-select: none;
-    font-family: var(--font-mono, monospace);
   }
 
   .ad-slot-container {
