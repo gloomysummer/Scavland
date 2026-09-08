@@ -2,4 +2,57 @@
 import Layout from '../../layouts/Layout.astro';
 import { guides } from '../../data/guides';
 ---
-<Layout title="Search Scavland guides | Scavland Wiki" description="Search evidence-labelled Scavland guides for survival, weapons, loot, quests, factions and exploration." canonical="/search/"><section class="listing"><p class="eyebrow">Field index</p><h1 class="page-title">Search<br/><span style="color:var(--acid)">the notes.</span></h1><input class="search-box" id="guide-search" type="search" placeholder="Try “mist”, “loot” or “weapons”" aria-label="Search Scavland guides"/><div class="listing-grid" id="results">{guides.map((guide) => <a class="guide-card" data-search={`${guide.title} ${guide.description} ${guide.keywords.join(' ')}`} href={`/guide/${guide.slug}/`}><div class="card-copy"><span class="eyebrow">{guide.category} · {guide.evidence}</span><h3>{guide.shortTitle}</h3><p>{guide.description}</p><span class="read-link">Open guide ↗</span></div></a>)}</div></section><script is:inline>{`const input=document.querySelector('#guide-search');const cards=[...document.querySelectorAll('[data-search]')];input?.addEventListener('input',()=>{const q=input.value.toLowerCase();cards.forEach(card=>card.hidden=q&&!card.dataset.search.toLowerCase().includes(q));});document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==input){e.preventDefault();input?.focus();}});`}</script></Layout>
+<Layout title="Search Scavland guides | Scavland Wiki" description="Search evidence-labelled Scavland guides for survival, weapons, loot, quests, factions and exploration." canonical="/search/">
+  <section class="listing">
+    <p class="eyebrow">Field index</p>
+    <h1 class="page-title">Search<br/><span style="color:var(--acid)">the notes.</span></h1>
+    <input class="search-box" id="guide-search" type="search" placeholder="Try “mist”, “loot” or “weapons”" aria-label="Search Scavland guides"/>
+    <div class="listing-grid" id="results">
+      {guides.map((guide) => (
+        <a class="guide-card" data-search={`${guide.title} ${guide.description} ${guide.keywords.join(' ')}`} href={`/guide/${guide.slug}/`}>
+          <div class="card-copy">
+            <span class="eyebrow">{guide.category} · {guide.evidence}</span>
+            <h3>{guide.shortTitle}</h3>
+            <p>{guide.description}</p>
+            <span class="read-link">Open guide ↗</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+  <script is:inline>
+    const input = document.querySelector('#guide-search');
+    const cards = [...document.querySelectorAll('[data-search]')];
+    let searchDebounceTimer = null;
+
+    input?.addEventListener('input', () => {
+      const q = input.value.toLowerCase().trim();
+      let matchCount = 0;
+      cards.forEach(card => {
+        const matches = !q || card.dataset.search.toLowerCase().includes(q);
+        card.hidden = !matches;
+        if (matches) matchCount++;
+      });
+
+      // Gofe SEO Flywheel: report search terms and capture 0-result user intents
+      clearTimeout(searchDebounceTimer);
+      if (q.length >= 2) {
+        searchDebounceTimer = setTimeout(() => {
+          if (typeof gtag === 'function') {
+            gtag('event', 'view_search_results', {
+              search_term: q,
+              result_count: matchCount
+            });
+          }
+        }, 500);
+      }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== input) {
+        e.preventDefault();
+        input?.focus();
+      }
+    });
+  </script>
+</Layout>

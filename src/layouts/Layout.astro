@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { adConfig } from '../data/adConfig';
-import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, stripLocale, type Language } from '../data/i18n';
+import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, stripLocale, isMultiLangPath, type Language } from '../data/i18n';
 
 interface Props {
   title?: string;
@@ -25,6 +25,7 @@ const lang: Language = propLang || getLanguageFromPath(currentPath);
 const t = uiTranslations[lang];
 
 const cleanCanonical = stripLocale(canonical);
+const isMultiLang = isMultiLangPath(cleanCanonical);
 const enUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'en')}`;
 const ruUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'ru')}`;
 const deUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'de')}`;
@@ -46,12 +47,21 @@ const isActive = (path: string) => {
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={`${siteUrl}${canonical}`} />
     
-    <!-- Multi-language hreflang SEO cluster for Googlebot -->
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="ru" href={ruUrl} />
-    <link rel="alternate" hreflang="de" href={deUrl} />
-    <link rel="alternate" hreflang="ja" href={jaUrl} />
-    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    <!-- Multi-language hreflang SEO cluster for Googlebot (Defensive against 404 targets) -->
+    {isMultiLang ? (
+      <>
+        <link rel="alternate" hreflang="en" href={enUrl} />
+        <link rel="alternate" hreflang="ru" href={ruUrl} />
+        <link rel="alternate" hreflang="de" href={deUrl} />
+        <link rel="alternate" hreflang="ja" href={jaUrl} />
+        <link rel="alternate" hreflang="x-default" href={enUrl} />
+      </>
+    ) : (
+      <>
+        <link rel="alternate" hreflang="x-default" href={enUrl} />
+        <link rel="alternate" hreflang="en" href={enUrl} />
+      </>
+    )}
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -119,9 +129,19 @@ const isActive = (path: string) => {
         <!-- Tactical Language Switcher -->
         <div class="lang-switcher" aria-label="Change Language">
           <a href={getLocalizedUrl(currentPath, 'en')} class:list={['lang-btn', { active: lang === 'en' }]} title="English">EN</a>
-          <a href={getLocalizedUrl(currentPath, 'ru')} class:list={['lang-btn', { active: lang === 'ru' }]} title="Русский">RU</a>
-          <a href={getLocalizedUrl(currentPath, 'de')} class:list={['lang-btn', { active: lang === 'de' }]} title="Deutsch">DE</a>
-          <a href={getLocalizedUrl(currentPath, 'ja')} class:list={['lang-btn', { active: lang === 'ja' }]} title="日本語">JA</a>
+          {isMultiLang ? (
+            <>
+              <a href={getLocalizedUrl(currentPath, 'ru')} class:list={['lang-btn', { active: lang === 'ru' }]} title="Русский">RU</a>
+              <a href={getLocalizedUrl(currentPath, 'de')} class:list={['lang-btn', { active: lang === 'de' }]} title="Deutsch">DE</a>
+              <a href={getLocalizedUrl(currentPath, 'ja')} class:list={['lang-btn', { active: lang === 'ja' }]} title="日本語">JA</a>
+            </>
+          ) : (
+            <>
+              <span class="lang-btn disabled" title="Russian translation available for Home & Guides only" style="opacity:0.35;cursor:not-allowed;font-size:0.75rem;padding:2px 6px;">RU</span>
+              <span class="lang-btn disabled" title="German translation available for Home & Guides only" style="opacity:0.35;cursor:not-allowed;font-size:0.75rem;padding:2px 6px;">DE</span>
+              <span class="lang-btn disabled" title="Japanese translation available for Home & Guides only" style="opacity:0.35;cursor:not-allowed;font-size:0.75rem;padding:2px 6px;">JA</span>
+            </>
+          )}
         </div>
       </nav>
     </header>

@@ -1,0 +1,16 @@
+# Locale Normalization (Gofe SEO Engineering)
+/en             /               301
+/en/*           /:splat         301
+
+# Pagination Weight Consolidation
+/guide/1        /guide/         301
+/guide/0        /guide/         301
+/de/guide/1     /de/guide/      301
+/de/guide/0     /de/guide/      301
+/ru/guide/1     /ru/guide/      301
+/ru/guide/0     /ru/guide/      301
+/ja/guide/1     /ja/guide/      301
+/ja/guide/0     /ja/guide/      301
+
+# Sitemap Fallback
+/sitemap.xml    /sitemap-index.xml  301

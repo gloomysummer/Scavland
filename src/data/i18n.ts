@@ -189,14 +189,27 @@ export function stripLocale(pathname: string): string {
 }
 
 /**
+ * Checks whether a given canonical path actually has translations in ru/de.
+ * In Scavland, only the homepage ('/') and guide pages ('/guide/*') have ru and de localized pages.
+ */
+export function isMultiLangPath(pathname: string): boolean {
+  const base = stripLocale(pathname);
+  return base === '/' || base.startsWith('/guide/');
+}
+
+/**
  * Converts any pathname into the target language's equivalent URL.
  * E.g., ('/guide/', 'ru') -> '/ru/guide/'
  *       ('/ru/guide/', 'en') -> '/guide/'
  *       ('/', 'de') -> '/de/'
+ * If the page is English-only (e.g. /weapons/, /factions/), safely returns base URL.
  */
 export function getLocalizedUrl(currentPath: string, targetLang: Language): string {
   const base = stripLocale(currentPath);
   if (targetLang === 'en') {
+    return base;
+  }
+  if (!isMultiLangPath(base)) {
     return base;
   }
   if (base === '/') {
