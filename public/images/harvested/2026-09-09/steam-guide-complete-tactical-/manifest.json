@@ -1,0 +1,10 @@
+{
+  "topic_slug": "steam-guide-complete-tactical-",
+  "source_url": "https://store.steampowered.com/news/app/3373500/view/701026688965805465",
+  "page_title": "Scavland - Day One Patch — Update 0.5.169 - Steam News",
+  "harvested_at": "2026-09-09T06:00:07.862680",
+  "verified": false,
+  "verification_notes": "Web CDP fetch error: BrowserType.connect_over_cdp: Protocol error (Browser.setDownloadBehavior): Browser context management is not supported.\nCall log:\n  - <ws preparing> retrieving websocket url from http://127.0.0.1:18800\n  - <ws connecting> ws://127.0.0.1:18800/devtools/browser/e6234b9a-5340-4222-b848-372ad3db4d03\n  - <ws connected> ws://127.0.0.1:18800/devtools/browser/e6234b9a-5340-4222-b848-372ad3db4d03\n  - <ws disconnecting> ws://127.0.0.1:18800/devtools/browser/e6234b9a-5340-4222-b848-372ad3db4d03\n  - <ws disconnected> ws://127.0.0.1:18800/devtools/browser/e6234b9a-5340-4222-b848-372ad3db4d03 code=1000 reason=\n; falling back to HTTP",
+  "images": [],
+  "text_preview": "Scavland - Day One Patch — Update 0.5.169 - Steam News \n\t \n\n\t\n\t\n\t \n \n \n \n \n \n  \n $J = jQuery.noConflict();  VALVE_PUBLIC_PATH = \"https:\\/\\/store.fastly.steamstatic.com\\/public\\/\";   \n\n  \n\n  \n\n  \n\n  \n\n Object.seal && [ Object, Array, String, Number ].map( function( builtin ) { Object.seal( builtin.pr"
+}

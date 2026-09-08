@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import { guides } from './src/data/guides.ts';
 
 const guideDateMap = new Map(guides.map((g) => [g.slug, g.updated]));
-const defaultDate = '2026-09-08';
+const defaultDate = '2026-09-09';
 
 export default defineConfig({
   site: 'https://scavland.wiki',
