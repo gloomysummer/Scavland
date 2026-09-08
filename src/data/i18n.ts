@@ -1,4 +1,4 @@
-export type Language = 'en' | 'ru' | 'de';
+export type Language = 'en' | 'ru' | 'de' | 'ja';
 
 export interface LanguageMeta {
   code: Language;
@@ -25,6 +25,12 @@ export const supportedLanguages: Record<Language, LanguageMeta> = {
     label: 'DE',
     fullName: 'Deutsch',
     locale: 'de_DE',
+  },
+  ja: {
+    code: 'ja',
+    label: 'JA',
+    fullName: '日本語',
+    locale: 'ja_JP',
   },
 };
 
@@ -122,28 +128,60 @@ export const uiTranslations = {
       footerUpdated: 'Scavland Wiki-Datenbank aktualisiert im September 2026 · Verifizierte Basis.',
     },
   },
+  ja: {
+    brandSub: 'Wiki & 攻略データベース',
+    nav: {
+      guides: '攻略ガイド',
+      weapons: '武器一覧',
+      factions: '派閥一覧',
+      release: '発売日',
+      specs: '動作環境',
+      systems: 'システム',
+      world: 'マップ',
+      updates: 'アプデ情報',
+      search: '検索',
+    },
+    common: {
+      quickAnswer: 'クイックアンサー',
+      fieldNotes: '戦術フィールドノート',
+      evidenceBoundary: '検証データ・根拠',
+      questionsTitle: 'よくある質問 (FAQ)',
+      relatedGuides: '関連ガイド',
+      onThisPage: '目次',
+      readFieldNotes: 'ガイドを読む',
+      exploreGuides: '攻略ガイド一覧',
+      playOnSteam: 'Steamで購入',
+      tacticalArsenal: '武器アーセナル',
+      officialSteam: '公式Steamストア',
+      tableOfContents: '目次 (セクションへ移動 ▾)',
+      mediaCaption: 'メディア: 検証済みゲームデータおよび公式アセット。',
+      footerDisclaimer: '有志による非公式ファン攻略Wikiです。ゲームデータは検証済み公式ベースラインに基づきます。NoShadowとは提携していません。',
+      footerUpdated: 'Scavland Wiki 攻略データベース 2026年9月更新 · 公式検証データ。',
+    },
+  },
 };
 
 /**
  * Extracts language from a given pathname.
- * E.g., '/ru/guide/' -> 'ru', '/de/' -> 'de', '/guide/' -> 'en'
+ * E.g., '/ru/guide/' -> 'ru', '/de/' -> 'de', '/ja/' -> 'ja', '/guide/' -> 'en'
  */
 export function getLanguageFromPath(pathname: string): Language {
   const segments = pathname.split('/').filter(Boolean);
   if (segments[0] === 'ru') return 'ru';
   if (segments[0] === 'de') return 'de';
+  if (segments[0] === 'ja') return 'ja';
   return 'en';
 }
 
 /**
  * Strips the language prefix from a pathname.
  * E.g., '/ru/guide/foo/' -> '/guide/foo/'
- *       '/de/' -> '/'
+ *       '/ja/' -> '/'
  *       '/weapons/' -> '/weapons/'
  */
 export function stripLocale(pathname: string): string {
   const segments = pathname.split('/').filter(Boolean);
-  if (segments[0] === 'ru' || segments[0] === 'de') {
+  if (segments[0] === 'ru' || segments[0] === 'de' || segments[0] === 'ja') {
     segments.shift();
   }
   const clean = '/' + segments.join('/');

@@ -1,0 +1,192 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import Countdown from '../../components/Countdown.astro';
+import { allJaGuides } from '../../data/guides-ja';
+
+const featured = allJaGuides.slice(0, 6);
+---
+
+<Layout title="Scavland Wiki 日本語攻略 — ガイド・武器データ・マップ＆最新アプデ" description="Scavland（スカブランド）の完全日本語攻略Wikiデータベース：序盤のサバイバル、武器改造、チート・コマンド、派閥、Zalesyeマップ、Steam Deck最適設定を網羅。" keywords="Scavland 日本語, Scavland 攻略, Scavland Wiki ja, Scavland 初心者, Scavland 武器, Steam Deck, チート" canonical="/ja/" lang="ja">
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Scavland Wiki (日本語攻略データベース)',
+      url: 'https://scavland.wiki/ja/',
+      description: 'Scavland 有志による非公式完全日本語攻略データベース＆サバイバルガイド。',
+      inLanguage: 'ja-JP',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://scavland.wiki/ja/search/?q={search_term_string}',
+        'query-input': 'required name=search_term_string'
+      }
+    })} />
+  </Fragment>
+
+  <section class="hero">
+    <p class="eyebrow">公式検証データ · 有志コミュニティ攻略Wiki</p>
+    <h1>Scavland Wiki &amp; 攻略データベース</h1>
+    <p class="lede">ソビエト荒野のポストアポカリプスを舞台にした見下ろし型ハードコア・ピクセルアートサバイバルRPG『Scavland（スカブランド）』の完全攻略ガイド。Zalesyeの廃墟探索、放棄された地下バンカーの物資回収、25種類以上の火器カスタム、10の派閥取引、そして有毒なミスト（霧）を生き抜く術を網羅。</p>
+    
+    <Countdown />
+
+    <div class="hero-actions">
+      <a class="button" href="/ja/guide/scavland-beginner-guide/">初心者攻略ガイド <span aria-hidden="true">➔</span></a>
+      <a class="button secondary" href="/ja/guide/scavland-cheats-and-console-commands/">チート＆コマンド</a>
+      <a class="button secondary" href="/weapons/">武器アーセナル</a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Steam公式ストア <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <!-- 4-metric tactical authority cards -->
+    <div class="hero-metrics-grid">
+      <a class="metric-card" href="/weapons/">
+        <span class="metric-value">25+</span>
+        <span class="metric-label">登場銃器バリエーション</span>
+        <span class="metric-sub">ハンドガン・小銃・弾薬データ ➔</span>
+      </a>
+      <a class="metric-card" href="/weapons/">
+        <span class="metric-value">300+</span>
+        <span class="metric-label">アタッチメント改造パーツ</span>
+        <span class="metric-sub">スコープ・サプレッサー・グリップ ➔</span>
+      </a>
+      <a class="metric-card" href="/factions/">
+        <span class="metric-value">10</span>
+        <span class="metric-label">荒野の生存者派閥</span>
+        <span class="metric-sub">商人ランク＆名声システム ➔</span>
+      </a>
+      <a class="metric-card" href="/release-date/">
+        <span class="metric-value" style="color:var(--orange);">2026年9月4日</span>
+        <span class="metric-label">早期アクセス配信開始</span>
+        <span class="metric-sub">最新パッチ v0.5.169 対応 ➔</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">重要トピック</p>
+        <h2>Scavland 攻略ハブ＆ピックアップ</h2>
+      </div>
+      <p>検証済みローンチデータ、システム要件、初心者ガイド、銃器メンテナンスへのクイックアクセス。</p>
+    </div>
+    <div class="card-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1rem;">
+      <a class="guide-card" href="/ja/guide/scavland-beginner-guide/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--acid,#b9e86c);background:linear-gradient(135deg, rgba(185,232,108,0.06), #161616);">
+        <span style="font-size:0.8rem;color:var(--acid,#b9e86c);font-weight:700;letter-spacing:1px;">★ まず読むべきガイド</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">初心者サバイバルガイド</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">初レイドの生き残り、高速ルート、武器耐久度50%の弾詰まり対策と安全な夜間脱出。</p>
+      </a>
+      <a class="guide-card" href="/ja/guide/scavland-cheats-and-console-commands/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">01 · システム</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">チート＆コンソール</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">エクスプローラーモード公式設定、-dev起動オプション、アイテム生成構文とセーブバックアップ。</p>
+      </a>
+      <a class="guide-card" href="/ja/guide/scavland-weapon-repair-and-durability/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">02 · 装備メンテ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">武器耐久度＆ジャム修理</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">発砲による銃器劣化、携行オイルでの応急修理、拠点作業台での完全オーバーホール。</p>
+      </a>
+      <a class="guide-card" href="/ja/guide/scavland-steam-deck-and-handheld-settings/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">03 · STEAM DECK</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">Steam Deck 最適設定</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">60FPS固定、9W TDP制限によるバッテリー4時間運用、トラックパッド精密照準設定。</p>
+      </a>
+      <a class="guide-card" href="/ja/guide/scavland-death-and-loot-recovery/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">04 · デスペナ</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">死亡とバックパック回収</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">マップ死亡マーカーの確認手順、安全な遺品回収レイドの組み立て方と拠点保管庫の安全性。</p>
+      </a>
+      <a class="guide-card" href="/ja/guide/scavland-vs-zero-sievert-comparison/" style="padding:1.25rem;display:block;text-decoration:none;border-radius:8px;border:1px solid var(--border-color,#333);background:var(--card-bg,#161616);">
+        <span style="font-size:0.8rem;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">05 · 比較レビュー</span>
+        <h3 style="margin:0.5rem 0;font-size:1.1rem;color:#fff;">vs ZERO Sievert 徹底比較</h3>
+        <p style="font-size:0.85rem;color:var(--text-muted,#aaa);margin:0;">固定マップ探索、跳弾・弾詰まりの銃撃戦、ミスト異常現象、今後のCo-op協力プレイの違い。</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Essential Guides -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">おすすめ攻略</p>
+        <h2>主要フィールドサバイバルガイド</h2>
+      </div>
+      <p>コミュニティと実機検証で裏付けられた荒野サバイバルの必須知識。</p>
+    </div>
+    <div class="guide-grid">
+      {featured.map((guide, idx) => <GuideCard guide={guide} priority={idx < 2} lang="ja" />)}
+    </div>
+  </section>
+
+  <!-- Media & Community Voices -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">メディア評価＆プレイヤーの声</p>
+        <h2>サバイバルゲームファンの反響</h2>
+      </div>
+      <p>重厚な荒野の雰囲気、リアルな銃器挙動、緊張感あふれる脱出メカニクスへの初期評価。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.25rem;">
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Scavlandは2026年屈指のインディーサバイバルになり得る。雰囲気抜群のレトロピクセル、膨大なクエスト、そして奥深い銃器カスタマイズが素晴らしい。&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Insider Gaming</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">ローンチレビュー</span>
+        </div>
+      </div>
+
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;ZERO SievertやS.T.A.L.K.E.R.のファンなら即買いレベル。夜間探索の絶望感と、無事セーフハウスに帰還したときの安堵感がたまらない。&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Steam コミュニティ</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">高評価レビュー</span>
+        </div>
+      </div>
+
+      <div style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;display:flex;flex-direction:column;justify-content:space-between;">
+        <blockquote style="margin:0 0 1rem;font-size:0.95rem;line-height:1.6;color:var(--ink,#dcdcdc);font-style:italic;">
+          &ldquo;Steam Deckでの動作が極めて快適。9W TDP制限で4時間以上動き、寝転がりながら荒野を探索できるのが最高。&rdquo;
+        </blockquote>
+        <div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid rgba(255,255,255,0.08);padding-top:0.75rem;">
+          <span style="font-weight:700;color:var(--acid,#b9e86c);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;">Handheld Central</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--muted,#888);">Deck検証レポート</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Database Navigation -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">データベース</p>
+        <h2>各セクションへのダイレクトアクセス</h2>
+      </div>
+      <p>武器カタログ、派閥勢力図、動作環境、パッチノートへジャンプ。</p>
+    </div>
+    <div class="action-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;">
+      <a class="action-card" href="/weapons/" style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:inherit;display:block;">
+        <h3 style="margin:0 0 0.5rem;color:#fff;">武器アーセナル ➔</h3>
+        <p style="margin:0;font-size:0.85rem;color:var(--text-muted,#888);">25種類以上の火器、弾薬特性、アタッチメント一覧。</p>
+      </a>
+      <a class="action-card" href="/factions/" style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:inherit;display:block;">
+        <h3 style="margin:0 0 0.5rem;color:#fff;">派閥一覧 ➔</h3>
+        <p style="margin:0;font-size:0.85rem;color:var(--text-muted,#888);">10派閥の勢力図、商人解放ランク、停戦協定。</p>
+      </a>
+      <a class="action-card" href="/system-requirements/" style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:inherit;display:block;">
+        <h3 style="margin:0 0 0.5rem;color:#fff;">システム要件 ➔</h3>
+        <p style="margin:0;font-size:0.85rem;color:var(--text-muted,#888);">PC最低スペック・推奨環境・Steam Deck対応状況。</p>
+      </a>
+      <a class="action-card" href="/updates/" style="padding:1.5rem;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:inherit;display:block;">
+        <h3 style="margin:0 0 0.5rem;color:#fff;">アプデ履歴 ➔</h3>
+        <p style="margin:0;font-size:0.85rem;color:var(--text-muted,#888);">最新パッチノートと早期アクセス開発ロードマップ。</p>
+      </a>
+    </div>
+  </section>
+</Layout>

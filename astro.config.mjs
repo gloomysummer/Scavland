@@ -9,7 +9,7 @@ export default defineConfig({
   site: 'https://scavland.wiki',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'ru', 'de'],
+    locales: ['en', 'ru', 'de', 'ja'],
     routing: {
       prefixDefaultLocale: false,
     }

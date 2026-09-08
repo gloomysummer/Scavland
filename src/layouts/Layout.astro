@@ -28,6 +28,7 @@ const cleanCanonical = stripLocale(canonical);
 const enUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'en')}`;
 const ruUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'ru')}`;
 const deUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'de')}`;
+const jaUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'ja')}`;
 
 const isActive = (path: string) => {
   const locPath = getLocalizedUrl(path, lang);
@@ -49,6 +50,7 @@ const isActive = (path: string) => {
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="ru" href={ruUrl} />
     <link rel="alternate" hreflang="de" href={deUrl} />
+    <link rel="alternate" hreflang="ja" href={jaUrl} />
     <link rel="alternate" hreflang="x-default" href={enUrl} />
 
     <meta property="og:title" content={title} />
@@ -119,6 +121,7 @@ const isActive = (path: string) => {
           <a href={getLocalizedUrl(currentPath, 'en')} class:list={['lang-btn', { active: lang === 'en' }]} title="English">EN</a>
           <a href={getLocalizedUrl(currentPath, 'ru')} class:list={['lang-btn', { active: lang === 'ru' }]} title="Русский">RU</a>
           <a href={getLocalizedUrl(currentPath, 'de')} class:list={['lang-btn', { active: lang === 'de' }]} title="Deutsch">DE</a>
+          <a href={getLocalizedUrl(currentPath, 'ja')} class:list={['lang-btn', { active: lang === 'ja' }]} title="日本語">JA</a>
         </div>
       </nav>
     </header>

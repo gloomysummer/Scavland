@@ -5,19 +5,20 @@ import Countdown from '../components/Countdown.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki — Guides, Weapons, Maps & Release Date" description="The definitive Scavland Wiki: comprehensive survival guides, weapons, attachments, factions, maps, release date, system specs, and game mechanics for Zalesye." keywords="Scavland Wiki, Scavland, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements, map, codes" canonical="/">
-  <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'WebSite', name:'Scavland Wiki', url:'https://scavland.wiki', description:'The definitive community wiki for Scavland survival RPG.', potentialAction:{'@type':'SearchAction',target:'https://scavland.wiki/search/?q={search_term_string}', 'query-input':'required name=search_term_string'} })} /></Fragment>
+<Layout title="Scavland Wiki (Scav Land) — Guides, Weapons, Maps, Cheats & Systems" description="The definitive Scavland Wiki (Scav Land Guide): comprehensive survival guides, cheats & console commands, weapons, attachments, factions, maps, and extraction mechanics for Zalesye." keywords="Scavland Wiki, Scavland, Scav Land, Scav Land guide, scav land wiki, Scavland cheats, Scavland beginner guide, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements, map, codes" canonical="/">
+  <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({ '@context':'https://schema.org', '@type':'WebSite', name:'Scavland Wiki (Scav Land Guide)', url:'https://scavland.wiki', description:'The definitive community wiki for Scavland survival RPG.', potentialAction:{'@type':'SearchAction',target:'https://scavland.wiki/search/?q={search_term_string}', 'query-input':'required name=search_term_string'} })} /></Fragment>
   <section class="hero">
     <p class="eyebrow">Official Baseline · Community-Driven Wiki</p>
     <h1>Scavland Wiki &amp; Database</h1>
-    <p class="lede">The complete database and tactical survival guide for Scavland, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
+    <p class="lede">The complete database and tactical survival guide for <strong>Scavland (Scav Land)</strong>, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
     
     <Countdown />
 
     <div class="hero-actions">
-      <a class="button" href="/guide/scavland-beginner-guide/">Explore Free Guides <span aria-hidden="true">➔</span></a>
-      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Play on Steam <span aria-hidden="true">↗</span></a>
+      <a class="button" href="/guide/scavland-beginner-guide/">Beginner Guide (2026) <span aria-hidden="true">➔</span></a>
+      <a class="button secondary" href="/guide/scavland-cheats-and-console-commands/">Cheats &amp; Console</a>
       <a class="button secondary" href="/weapons/">Tactical Arsenal</a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Play on Steam <span aria-hidden="true">↗</span></a>
     </div>
 
     <div class="hero-metrics-grid">

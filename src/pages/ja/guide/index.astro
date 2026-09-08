@@ -1,0 +1,16 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GuideCard from '../../../components/GuideCard.astro';
+import { allJaGuides } from '../../../data/guides-ja';
+---
+
+<Layout title="Scavland 攻略ガイド一覧 | Scavland Wiki 日本語" description="Scavland（スカブランド）の全攻略ガイド一覧：初心者向けサバイバル、武器耐久度・ジャム修理、チート・コンソールコマンド、派閥、脱出ルートを網羅。" canonical="/ja/guide/" lang="ja">
+  <section class="listing">
+    <p class="eyebrow">ガイド一覧</p>
+    <h1 class="page-title">全攻略<br/><span style="color:var(--acid)">ガイド.</span></h1>
+    <p class="lede">まずは初心者サバイバルガイドから始め、武器の耐久度管理、バンカー探索、派閥取引の知識を深めましょう。</p>
+    <div class="listing-grid">
+      {allJaGuides.map((guide) => <GuideCard guide={guide} lang="ja" />)}
+    </div>
+  </section>
+</Layout>
