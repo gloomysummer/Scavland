@@ -1,0 +1,78 @@
+# Scavland Wiki & Tactical Extraction Knowledge Base
+
+> The authoritative survival wiki, weapon database, and tactical guide for Scavland, the post-apocalyptic top-down extraction shooter developed by NoShadow on Steam Early Access.
+
+This file serves as a structured Markdown index optimized for LLMs, AI agents, and generative search engines (ChatGPT Search, Perplexity AI, Claude, Google Gemini). It indexes verified game mechanics, extraction protocols, trader pricing formulas, weapon stats, and community-tested survival strategies.
+
+## Quick Facts & Canonical Links
+- **Official Site**: https://scavland.wiki
+- **Game Title**: Scavland (Steam App ID: 3373500)
+- **Developer**: NoShadow
+- **Engine**: Unity
+- **Release Status**: Steam Early Access (September 4, 2026)
+- **Genre**: Top-Down Extraction Shooter / Tactical Survival RPG
+
+## Core Tactical Guides & Walkthroughs
+### Systems Guides
+- [Scavland Cheats, Console Commands & Trainer Guide: Debug Mode & Item Spawning](https://scavland.wiki/guide/scavland-cheats-and-console-commands/): Complete guide to Scavland cheats, console commands, trainer tools, and debug mode: launch options, item spawning IDs, god mode, stamina toggles, and safe offline play.
+- [Scavland Crafting & Trading Guide: Workbench Recipes, Medical Blueprints & Barter Loops](https://scavland.wiki/guide/scavland-crafting-and-trading/): Complete v0.5.169 crafting and merchant guide: safehouse workbench recipes, medical blueprints (dehydration cures, splints), essential barter components, and zero-rep trader Volodymyr.
+- [Scavland Co-op & Multiplayer Guide: Early Access Status, Roadmap & Squad Extraction](https://scavland.wiki/guide/scavland-coop-and-multiplayer-mechanics/): Current multiplayer status for Scavland Early Access: dedicated singleplayer design, developer co-op roadmap plans, Steam Remote Play, and tactical solo survival.
+- [Scavland Russian Language Guide: Localization Status, Cyrillic Fonts & Community Setup](https://scavland.wiki/guide/scavland-russian-language-and-font-fix/): How to configure Russian language support in Scavland: official localization roadmap, community Cyrillic translation patches, font rendering fixes, and text files.
+
+### Platforms Guides
+- [Scavland Price & Editions Guide: Steam Cost, Launch Discount & Regional Breakdown](https://scavland.wiki/guide/scavland-price-and-regional-editions/): Complete breakdown of Scavland pricing on Steam: $19.99 baseline, 10% launch discount, regional pricing tiers, DRM status, and upcoming full release adjustments.
+- [Scavland Steam Deck Guide: Best Graphics Settings, 60FPS TDP Tuning & Controls](https://scavland.wiki/guide/scavland-steam-deck-and-handheld-settings/): Optimized Steam Deck setup for Scavland: achieving rock-solid 60 FPS, 9W TDP battery optimization (4+ hours playtime), custom community controller layouts, and text scaling tweaks.
+
+### Comparisons Guides
+- [Scavland vs Zero Sievert: 7 Core Differences, Mist Anomalies & Co-op Roadmap](https://scavland.wiki/guide/scavland-vs-zero-sievert-comparison/): In-depth tactical breakdown comparing Scavland and Zero Sievert: ballistics feel, 300+ attachment modularity, radioactive Mist dynamic weather, 10 factions, and planned co-op multiplayer.
+
+### Survival Guides
+- [Scavland Beginner Guide: 10 Essential Tips, Extraction & Jam Prevention (2026)](https://scavland.wiki/guide/scavland-beginner-guide/): The definitive Scavland beginner guide (Scav Land starter tips): first run extraction, Shift+Click rapid looting, 50% weapon jam prevention, safehouse stash security, Explorer Mode, and daylight survival.
+- [Scavland Death Mechanics & Loot Recovery Guide: Corpse Runs, Beacon Persistence & Stash Security](https://scavland.wiki/guide/scavland-death-and-loot-recovery/): Complete guide to Scavland death penalties in v0.5.169: Explorer Mode vs Veteran Mode rules, backpack beacon persistence, recovery route planning, and safehouse stash defense.
+- [Scavland Night Survival Guide: Audio Radii, Flashlights & Nocturnal Mutations](https://scavland.wiki/guide/scavland-night-survival-and-stealth-mechanics/): Evidence-based Early Access survival guide for night raids: handling the 10-meter flashlight cone, suppressor audio radius, Shift+Click looting, and avoiding nocturnal predator ambushes.
+
+### Exploration Guides
+- [Scavland Anomaly Scanner Guide: Core Detector Locating, Bug Fix & Artifacts](https://scavland.wiki/guide/scavland-anomaly-scanner-and-artifacts/): Official step-by-step method for using the handheld Anomaly Scanner (Core Detector) to locate spatial anomalies, harvest artifacts, and fix audio desync bugs.
+- [Scavland Mist guide: hazards and exploration](https://scavland.wiki/guide/scavland-mist/): What the official material establishes about the Mist, plus a careful field-note format for testing its dangers.
+- [Scavland map and locations guide](https://scavland.wiki/guide/scavland-map-and-locations/): A location-first map guide for settlements, bunkers, ruins and hazardous zones, with evidence labels for every marker.
+- [Scavland Mist survival guide: radiation protection & hazard zones](https://scavland.wiki/guide/scavland-mist-survival-and-radiation/): Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.
+- [Scavland Red Keycard Guide: Subterranean Vaults, Door Codes & Military Extraction](https://scavland.wiki/guide/scavland-red-keycard-and-bunker-loot-recovery/): Where to find and use the rare Red Keycard in Scavland: Subterranean Bunker B-4 vault access, electronic lock codes, military attachments, and safe extract routes.
+
+### Gear Guides
+- [Scavland weapons and attachments guide](https://scavland.wiki/guide/scavland-weapons-and-attachments/): How to think about Scavland weapons, gear and attachment choices without pretending unverified stats are final.
+- [Scavland Weapon Repair & Durability Guide: Field Tools, Workbench Kits & Jam Fixes](https://scavland.wiki/guide/scavland-weapon-repair-and-durability/): Verified v0.5.169 weapon repair guide for Scavland: oil-free field repair tools, heavy armor kit glue discounts, jam thresholds (<50%), and Petar workbench overhauls.
+- [Scavland Starter Loadouts Guide: Best Budget Guns, Armor & High-Profit Raid Builds](https://scavland.wiki/guide/scavland-starter-loadouts-and-budget-builds/): High-survival budget kits for Scavland Early Access: avoid bankruptcy, optimal Mikhail 74U setups, Tier-2 Kevlar armor, and high-profit scavenging gear.
+
+### Resources Guides
+- [Scavland loot and scavenging guide](https://scavland.wiki/guide/scavland-loot-and-scavenging/): A practical framework for searching ruins, managing inventory space and judging risk while the Scavland loot tables mature.
+
+### Progression Guides
+- [Scavland Quests & Contracts Guide: Anatoly & Nadja Job Pools, 24-Hour Reset & Bounties](https://scavland.wiki/guide/scavland-quests-and-contracts/): Verified Early Access guide to Scavland contracts: daily 24-hour job pool refreshes, Anatoly & Nadja contract pools, mutant bounties (Hellhounds, Big Bears, Splatters), and faction reputation payouts.
+- [Scavland Factions & Reputation Guide: 10 Organizations, Vendor Tiers & Raisa Truces](https://scavland.wiki/guide/scavland-factions-and-reputation/): Evidence-based breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, vendor tier unlocks, territory borders, and diplomatic truces with Raisa.
+- [Scavland Early Access Scope: Factions, Progression & Known Launch Issues](https://scavland.wiki/guide/scavland-early-access-launch-faq-and-roadmap/): Everything you need to know about Scavland Early Access launch (Build 25128670): singleplayer progression across 10 factions, roadmap expectations, and known UI behaviors.
+- [Scavland 10 Factions & Progression Guide: No Skill Tree, Vendor Tiers & Daily Contracts](https://scavland.wiki/guide/scavland-factions-progression-and-traders/): Systemic character progression in Scavland: zero artificial skill trees, 10 wasteland factions, trader inventory tiers, and 24-hour contract refreshes in Zalesye.
+
+### Tactical Guide Guides
+- [Scavland Tactical Database: Weapon Durability, Jamming & Loot Extraction](https://scavland.wiki/guide/scavland-tactical-database-weapons-loot/): Verified Early Access breakdown of weapon jamming thresholds (<50% condition), cleaning oil maintenance, and reliable loot extraction in Scavland.
+
+### Economy Guides
+- [Scavland Merchant Prices & Barter Guide: 50% Off-Category Penalty, 9 Vendor Specialties & Petar Relocation](https://scavland.wiki/guide/scavland-merchant-prices-and-barter-guide/): Complete v0.5.169 merchant trading guide for Scavland: avoiding the 50% off-category sell penalty, relocated gunsmith Petar, 9 trader specialties, and zero-rep Volodymyr.
+
+## Database & Equipment Hubs
+- [Scavland Weapons & Attachment Database](https://scavland.wiki/weapons/): Complete catalog of 300+ firearm attachments, caliber damage profiles, muzzle velocities, and jam mechanics.
+- [Scavland 10 Factions & Reputation Directory](https://scavland.wiki/factions/): Comprehensive guide to all 10 organizations, vendor unlock tiers, contract reset timers, and neutral truces.
+- [Scavland Sector Maps & Extraction Zones](https://scavland.wiki/maps/): Detailed sector maps highlighting subterranean bunkers, radioactive Mist anomalies, and conditional extraction gates.
+- [Scavland vs Zero Sievert Feature Comparison](https://scavland.wiki/comparisons/scavland-vs-zero-sievert/): Exhaustive tactical comparison covering gunplay ballistics, durability systems, and upcoming co-op architecture.
+
+## System, Performance & Platform Guidance
+- [Scavland System Requirements & Hardware Specs](https://scavland.wiki/system-requirements/): Minimum and recommended PC hardware requirements, DirectX 11/12 compatibility, and RAM allocation advice.
+- [Scavland Steam Deck & Handheld Settings](https://scavland.wiki/guide/scavland-steam-deck-and-handheld-settings/): 60 FPS performance lock, 9W TDP battery optimization, and custom community gamepad profiles.
+- [Scavland Russian Localization & Font Fix](https://scavland.wiki/guide/scavland-russian-language-and-font-fix/): Community Cyrillic font installation and Russian language configuration.
+
+## Updates, Patch Notes & Roadmap
+- [Scavland Patch Updates & Version Tracker](https://scavland.wiki/updates/): Chronological changelog, balance adjustments, hotfix notes, and Early Access roadmap milestones.
+- [Scavland FAQ Knowledge Base](https://scavland.wiki/faq/): Direct answers to 40+ frequently asked beginner and endgame survival questions.
+
+## Contact & Integrity Policy
+- [About Scavland Wiki](https://scavland.wiki/about/): Editorial independence declaration, community verification standards, and editorial team background.
+- [Contact & Fact-Check Desk](https://scavland.wiki/contact/): Corrections desk and direct contact channel for game balance updates.
