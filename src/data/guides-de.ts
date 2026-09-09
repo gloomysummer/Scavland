@@ -238,6 +238,38 @@ export const deGuides: Guide[] = [
       ['Wer verkauft die besten Scharfschützenvisiere?', 'Die Omega-Forschungsgruppe im Tiefbunker B-4.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-death-and-loot-recovery']
+  },
+  {
+    slug: 'scavland-sleep-and-world-reset-guide',
+    category: 'Überleben',
+    title: 'Scavland Schlaf & Welt-Reset Guide: 24-Stunden-Zyklus, Lagerfeuer & Bunker-Respawn',
+    shortTitle: 'Schlaf & Welt-Reset',
+    description: 'Vollständiger Leitfaden zum Schlafsystem in Scavland: Nachtzeiten überspringen (21:00–06:00), 24-Stunden-Reset für Händler und Beutekisten, Lagerfeuer-Regeneration und Bunker-Regeln.',
+    evidence: 'Verifiziert in Patch v0.5.169 (Early Access)',
+    updated: '2026-09-09',
+    image: '/images/screenshots/ss_01_ruins_night.webp',
+    imageAlt: 'Ein Scavenger ruht an einer Pritsche im Schutzbunker von Scavland',
+    answer: 'Schlafen ist in Scavland die zentrale Mechanik zum Voranschreiten der Zeit, Vermeiden der tödlichen Nachtmutanten (21:00 bis 06:00 Uhr) und Auslösen des 24-Stunden-Weltzyklus. Das Schlafen in Safehouse-Pritschen setzt Vertragstafeln (Anatoly & Nadja) sowie Oberflächen-Beutekisten zurück. In Patch v0.5.169 regenerieren Lagerfeuer passive Gesundheit, jedoch blockiert Schlafen bei starker Dehydrierung die Ausdauerregeneration — trinke stets abgekochtes Wasser vor dem Schlafengehen.',
+    steps: [
+      '01 · Schlafen im Safehouse: Interagiere mit der Pritsche in einem Schutzbunker, um 1 bis 12 Stunden zu rasten und sicher den Tagesanbruch (06:00 Uhr) abzuwarten.',
+      '02 · 24-Stunden-Welt-Reset: Das Überschreiten von 24 Ingame-Stunden setzt Händler-Bestände, Oberflächenkisten und Kopfgeldverträge von Anatoly und Nadja zurück.',
+      '03 · Bunker-Sperrzeiten: Unterirdische Militärbunker (z. B. Bunker B-4) respawnen nicht durch einfaches Schlafen, um unbegrenztes Beutefarmen zu verhindern.',
+      '04 · Lagerfeuer-Rast & Hydrierung: Lagerfeuer bieten passive Heilung. Koche kontaminiertes Wasser ab, um tödliche Dehydrierungs-Debuffs nach dem Aufwachen zu vermeiden.',
+      '05 · Ausgangssperre bei Nacht (21:00 Uhr): Nachts schrumpft die Sicht auf 10 Meter und gefährliche Mutanten lauern in der Dunkelheit. Starte bei Sonnenaufgang und kehre vor der Dämmerung zurück.'
+    ],
+    facts: [
+      ['Schlaforte', 'Pritschen in Safehouses und befreundeten Lagern (1–12 Stunden)'],
+      ['24-Stunden-Zyklus', 'Aktualisiert Händler-Inventare, Oberflächenkisten und Aufträge'],
+      ['Bunker-Regel', 'Unterirdische Tresore haben feste Abklingzeiten und respawnen nicht sofort'],
+      ['Lagerfeuer-Vorteil', 'Passive HP-Regeneration in v0.5.169 bei ausreichender Hydrierung'],
+      ['Nachtgefahren', 'Sichtweite auf 10m beschränkt; Schüsse locken Jäger an']
+    ],
+    faq: [
+      ['Wie kann man die Zeit im Spiel vorspulen?', 'Nähere dich einem Bett in einem Safehouse, drücke die Interaktionstaste [E] und wähle die gewünschte Stundenzahl.'],
+      ['Warum regeneriert sich meine Ausdauer nach dem Schlafen nicht?', 'Das liegt am verborgenen Debuff "Starke Dehydrierung". Trinke sauberes Wasser und raste an einem brennenden Lagerfeuer.'],
+      ['Respawnen Kisten in Bunkern nach dem Schlafen?', 'Nein. Bunker und Kartenschlüssel-Tresore besitzen eigene mehrstündige Sperrzeiten, um Endlos-Farming zu unterbinden.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts']
   }
 ];
 

@@ -247,7 +247,7 @@ export const guides: Guide[] = [
     imageAlt: 'Tactical weapon modification and workbench repair interface in Scavland',
     evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
     updated: '2026-09-09',
-    answer: 'Firearms in Scavland degrade with every shot fired, accelerating in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. Patch v0.5.169 reworked field maintenance: gun field tools no longer require consumable Gun Cleaning Oil for baseline restoration up to 70%, and heavy armor repair kits received a glue cost discount. For complete restoration above 70%, bring damaged firearms and armor to safehouse workbenches or Gunsmith Petar in Zalesye.',
+    answer: 'Firearms in Scavland degrade with every shot fired, accelerating in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. Patch v0.5.169 reworked field maintenance: gun field tools no longer require consumable Gun Cleaning Oil for baseline restoration up to 70%, and heavy armor repair kits received a glue cost discount. For complete restoration above 70%, bring damaged firearms and armor to safehouse workbenches or Gunsmith Petar in Zalesye. Before deploying into dangerous raids, consult the [Scavland Beginner Guide](/guide/scavland-beginner-guide/) for survival fundamentals, browse our full [Weapons Arsenal](/weapons/) for exact stat tables, check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for parts trading, or see [Sleep & World Reset](/guide/scavland-sleep-and-world-reset-guide/) to refresh trader inventories.',
     steps: [
       '01 · Monitor Jam Thresholds (50% / 70% Rules): Firearms operating above 70% condition have a 0% mechanical failure rate. Below 50% condition, weapons suffer frequent stovepipe jams during sustained automatic fire. Condition below 30% risks catastrophic misfires that damage internal components.',
       '02 · Oil-Free Field Tool Maintenance (v0.5.169 Buff): Patch v0.5.169 uncoupled the basic Gun Field Tool from Gun Cleaning Oil. You can now use the field tool anywhere in the wasteland to service firearms up to the 70% threshold without expending rare oil bottles.',
@@ -268,7 +268,7 @@ export const guides: Guide[] = [
       ['Where do I find Gunsmith Petar for advanced weapon repairs?', 'Petar was relocated in v0.5.169 from the southern perimeter directly into the central Zalesye settlement square next to trader Grigory.'],
       ['What materials are required to repair heavy armor vests?', 'Heavy Armor Repair Kits require Ballistic Fiber, Sheet Metal Scrap, and Industrial Glue (glue cost discounted in v0.5.169).']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide'],
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands', 'scavland-sleep-and-world-reset-guide', 'scavland-merchant-prices-and-barter-guide'],
     keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location']
   },
   { slug:'scavland-mist-survival-and-radiation', shortTitle:'Mist & Radiation', title:'Scavland Mist survival guide: radiation protection & hazard zones', description:'Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.', category:'Exploration', image:'/images/screenshots/steam_ss_09.webp', imageAlt:'A scavenger navigating dense Mist and radiation hazards with a detector', evidence:'Official', updated:'2026-08-31', answer:'The Mist is a dynamic weather event that blankets sectors in toxic particulates and psychoactive anomalies. Entering the Mist requires a Gas Mask with active Filter Durability, Anti-Rad Meds, and an Anomaly Scanner. In return, the Mist triggers the highest tier artifact spawns and rare mutant drops.', steps:['Check the weather barometer or radio broadcast for incoming Mist warnings before venturing into open lowlands.','Equip a Gas Mask with at least 80% filter charge; carry spare charcoal filter cartridges in quick slots.','Equip the Anomaly Scanner on hotkey [3] to sweep for anomaly clusters that only materialize during Mist events.','Avoid prolonged firefights in fog, as gunfire attracts specialized nocturnal stalker mutants.','Use Rad-Away injectors and charcoal pills immediately if your radiation dosage meter enters the yellow hazard zone.'], facts:[['Dynamic shift','Mist weather alters mutant aggression patterns, increases anomaly frequency, and reduces vision radius to 15 meters.'],['Loot quality','Artifacts spawned during dense Mist cycles possess 2x barter value and enhanced passive stat modifiers.']], faq:[['How long do gas mask filters last in the Mist?','Standard Tier-1 filters last approximately 8 minutes in active Mist; high-grade military filters last up to 20 minutes.'],['What happens if my filter runs out in the Mist?','Your character incurs progressive radiation poisoning and toxic lung damage, draining stamina and max health.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-mist','scavland-death-and-loot-recovery'], keywords:['scavland mist survival','scavland gas mask filters','scavland radiation guide','scavland anomaly farming'] },
@@ -606,6 +606,40 @@ export const guides: Guide[] = [
     ],
     related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-factions-and-reputation', 'scavland-weapon-repair-and-durability'],
     keywords: ['scavland merchant prices', 'scavland barter guide', 'scavland 50 percent trade penalty', 'scavland petar location', 'scavland volodymyr trader', 'scavland best items to sell']
+  },
+  {
+    slug: 'scavland-sleep-and-world-reset-guide',
+    shortTitle: 'Sleep & World Reset',
+    title: 'Scavland Sleep & World Reset Guide: 24-Hour Cycle, Campfire Rest & Bunker Respawns',
+    description: 'Master Scavland’s sleep mechanics, 24-hour world resets, avoiding night horrors (21:00-06:00), campfire hydration tricks, and bunker persistent lock rules.',
+    category: 'Survival',
+    image: '/images/screenshots/ss_01_ruins_night.webp',
+    imageAlt: 'A scavenger resting by a safehouse bunker bunk and active campfire in Scavland',
+    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
+    updated: '2026-09-09',
+    answer: 'Sleeping in Scavland is the fundamental mechanic for advancing time, avoiding lethal night stalkers (21:00 to 06:00), and triggering the 24-hour world cycle. Resting on safehouse bunker bunks resets settlement contract job boards (Anatoly & Nadja) and overland loot caches. In Patch v0.5.169, campfires provide passive health regeneration, but sleeping while dehydrated will lock stamina recovery—always drink boiled water before resting. Crucially, underground bunkers and sealed military vaults operate on persistent lockout timers to prevent infinite loot farming. To ensure your firearms don\'t jam after waking, check our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or review the [Beginner Guide](/guide/scavland-beginner-guide/) before heading out.',
+    steps: [
+      '01 · Safehouse Bunker Bunk Sleeping: Locate the canvas cot inside any unlocked settlement safehouse bunker. Interacting with the bunk allows you to set rest duration (1 to 12 hours) to advance daylight and bypass pitch-black night raids.',
+      '02 · 24-Hour World Reset Protocol: Sleeping past a 24-hour in-game threshold triggers the world reset: overland supply crates respawn, merchant stock refreshes, and daily contracts from Anatoly and Nadja reroll fresh bounty targets.',
+      '03 · Bunker & Vault Persistent Lockout: Underground bunkers (such as Bunker B-4 and military silos) do NOT reset immediately upon sleeping or leaving the sector. They follow multi-day instance cooldowns and require keycard renewals to prevent infinite weapon duping.',
+      '04 · Campfire Resting & Hydration Safety: Patch v0.5.169 introduced passive health regeneration when resting near lit campfires. However, resting with severe dehydration drains stamina to zero upon waking. Always boil contaminated water canteens over the campfire first.',
+      '05 · Nighttime Evacuation (21:00 curfew): Night in Zalesye reduces visibility to a narrow 10-meter cone and spawns aggressive nocturnal horrors. Depart on scavenging runs at dawn (06:00) and return to sleep before dusk (21:00).'
+    ],
+    facts: [
+      ['Sleep Location', 'Safehouse bunker cots and unlocked faction beds allow 1-12 hour sleep cycles'],
+      ['24-Hour Reset Cycle', 'Refreshes overland junk crates, merchant inventories, and daily contract job pools'],
+      ['Bunker Lockout Rule', 'Underground bunkers and sealed vaults do not respawn loot on simple safehouse sleep'],
+      ['Campfire Rest Perk', 'v0.5.169 adds passive HP recovery near lit fires; requires clean water to avoid stamina lock'],
+      ['Night Curfew Hours', '21:00 to 06:00 brings zero-visibility darkness and heightened mutant predation']
+    ],
+    faq: [
+      ['How do I sleep and pass time in Scavland?', 'Walk up to a bed or sleeping cot inside any settlement safehouse, press [E] or interaction key, and choose how many hours you wish to rest.'],
+      ['Do underground bunkers reset when you sleep?', 'No. Underground military bunkers and keycard vaults use persistent multi-day cooldowns to prevent loot abuse. Only overland surface crates and daily contracts reset every 24 hours.'],
+      ['Why does my stamina not recover after sleeping?', 'If you go to sleep while suffering from the "Severe Dehydration" debuff, your stamina regeneration remains locked at 0%. Drink clean boiled water and rest near an active campfire to clear the debuff.'],
+      ['What happens if I get caught outside at night?', 'Nighttime (21:00–06:00) reduces visibility to 10 meters and spawns lethal nocturnal predators. Firearm discharge creates sound ripples up to 200m that draw mutant packs.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-red-keycard-and-bunker-loot-recovery'],
+    keywords: ['scavland sleep', 'scavland wait time', 'scavland rest campfire', 'scavland bunker reset', 'scavland 24 hour reset', 'scavland stamina bug sleep']
   }
 ];
 
