@@ -3,7 +3,7 @@ import sitemap from '@astrojs/sitemap';
 import { guides } from './src/data/guides.ts';
 
 const guideDateMap = new Map(guides.map((g) => [g.slug, g.updated]));
-const defaultDate = '2026-09-09';
+const defaultDate = '2026-09-10';
 
 export default defineConfig({
   site: 'https://scavland.wiki',
@@ -34,7 +34,7 @@ export default defineConfig({
           return item;
         }
 
-        if (url.includes('/faq/') || url.includes('/updates/') || url.includes('/weapons/') || url.includes('/factions/') || url.includes('/resources/') || url.includes('/guide/')) {
+        if (url.includes('/faq/') || url.includes('/updates/') || url.includes('/weapons/') || url.includes('/factions/') || url.includes('/resources/') || url.includes('/guide/') || url.includes('/wiki/')) {
           item.lastmod = new Date(defaultDate);
           item.changefreq = 'daily';
           item.priority = 0.8;
@@ -48,7 +48,7 @@ export default defineConfig({
           return item;
         }
 
-        if (url.includes('/system-requirements/') || url.includes('/release-date/') || url.includes('/maps/') || url.includes('/wiki/')) {
+        if (url.includes('/system-requirements/') || url.includes('/release-date/') || url.includes('/maps/')) {
           item.lastmod = new Date('2026-09-06');
           item.changefreq = 'weekly';
           item.priority = 0.6;

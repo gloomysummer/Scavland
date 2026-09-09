@@ -146,6 +146,26 @@ const faqs = [
     category: 'Gameplay & Mechanics',
     question: 'Where is the second player stash unlocked in Patch v0.5.169?',
     answer: 'Patch v0.5.169 unlocked a second permanent player stash locker inside the Crossroads outpost bunker annex, right next to trader Volodymyr. This forward stash shares the same 100% death loss immunity as your primary Zalesye safehouse locker, allowing you to stockpile weapons, ammunition, and medical kits deeper in the wasteland.'
+  },
+  {
+    category: 'Gameplay & Mechanics',
+    question: 'Why did my inventory freeze or items disappear when pressing number keys in trading?',
+    answer: 'Rapidly tapping numeric hotkeys (such as [1], [2], [3] for quick slots) while inside a merchant trade menu or safehouse container triggers an inventory state race condition that can delete items or lock the trading window. To prevent this known Early Access bug, always interact using mouse clicks or hold [Shift + Left Click] for stack transfers, and avoid pressing hotkey numbers while containers are open.'
+  },
+  {
+    category: 'Equipment & Economy',
+    question: 'Why can\'t I repair a broken gun with Gun Cleaning Oil or basic kits?',
+    answer: 'Gun Cleaning Oil and basic field kits only restore firearm condition up to 70% and cannot be applied to weapons below 20% durability (classified as heavily broken/damaged). Guns under 20% condition require a complete overhaul at a Safehouse Workbench using matched Weapon Springs and Scrap Metal, or paying Gunsmith Petar in central Zalesye market for professional restoration.'
+  },
+  {
+    category: 'Equipment & Economy',
+    question: 'What materials are required to craft and use Medium Armor Repair Kits?',
+    answer: 'Unlike Light Armor Kits (which use cloth bandages and adhesive tape), Medium Armor Repair Kits require Reinforced Ballistic Nylon, Sheet Metal Scrap, and Industrial Glue (glue cost reduced in Patch v0.5.169). The crafting blueprint unlocks automatically upon reaching Tier 2 reputation with the Mechanists faction.'
+  },
+  {
+    category: 'Gameplay & Mechanics',
+    question: 'Why do my hunger, thirst, or detector audio settings reset after loading a quicksave?',
+    answer: 'Early Access Build 25128670 has a known serialization issue where reloading a manual quicksave during an active raid can occasionally reset character hydration meters and desync the Core Detector audio listener. Developer Lucasmml confirmed a fix is coming in an upcoming hotfix. In the meantime, carry spare boiled water bottles and cycle your equipped firearm once to reset audio if your detector fails to beep.'
   }
 ];
 
