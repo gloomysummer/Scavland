@@ -11,7 +11,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Personal in-game test',
-    updated: '2026-09-10',
+    updated: '2026-09-11',
     answer: 'In Scavland, players looking for cheats, debug commands, or trainers have several verified options for single-player and Explorer Mode sessions. Built on the Unity engine, Scavland supports command-line launch parameters (-dev, -console) for accessing internal developer tools, while single-player offline trainers (WeMod, Cheat Engine tables) allow unlimited stamina, infinite backpack carrying capacity, and zero weapon jamming. Developer NoShadow emphasizes that modifying memory during future multiplayer sessions will corrupt character saves or trigger integrity bans.',
     steps: [
       '01 · Enable Explorer Mode (Official Safe Cheats): Before using third-party memory trainers, activate "Explorer Mode" in world settings. This native toggle provides campfire instant recovery, reduced stamina drain, and relaxed death penalties without risking save corruption.',
@@ -29,12 +29,13 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—eliminating severe stamina penalties and enabling instant campfire health recovery. Console debug access requires -dev launch flags.'],
+      ['Are there working PC trainers for Scavland Build 25128670?', 'Yes. Verified offline trainers and WeMod support Build 25128670, offering hotkey toggles for infinite stamina, unlimited carry weight, zero weapon durability degradation, and custom ruble counts. Always back up your save folder before activating memory hooks.'],
       ['Can you get banned for using a trainer in single-player?', 'No. Using single-player trainers or Cheat Engine tables to bypass inventory weight limits in offline solo play will not trigger a Steam VAC ban. However, modified saves should never be brought into co-op sessions.'],
       ['How do I spawn items or infinite rubles in Scavland?', 'In single-player debug builds, commands follow the "spawn [item_id] [quantity]" syntax. For standard players, trading high-demand salvage (spark plugs, lighters, wire coils) with settlement traders remains the fastest legitimate ruble generator.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland cheats', 'scav land cheats', 'scavland console commands', 'scavland trainer', 'scavland cheat engine', 'scavland debug mode', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland cheats', 'scav land cheats', 'scavland console commands', 'scavland trainer', 'scavland pc trainer', 'scavland wemod', 'scavland cheat engine', 'scavland debug mode', 'scavland item spawn', 'scavland god mode']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -715,6 +716,58 @@ export const guides: Guide[] = [
     ],
     related: ['scavland-factions-and-reputation', 'scavland-factions-progression-and-traders', 'scavland-quests-and-contracts', 'scavland-beginner-guide'],
     keywords: ['scavland faction identification', 'scavland friendly fire', 'scavland hud reticle', 'scavland faction uniforms', 'scavland green dot npc', 'scavland how to tell friendly from hostile']
+  },
+  {
+    slug: 'scavland-developer-commitments-and-patch-roadmap',
+    shortTitle: 'Developer Commitments & Roadmap',
+    title: 'Scavland Developer Commitments & Patch Roadmap: Death Choice, A-Life Spawns & Economy Rebalance',
+    description: 'Official Scavland roadmap and developer commitment tracker: Lucasmml\'s Steam responses on save-loading vs respawn choices, dynamic mutant spawns, v0.5.169 economy rebalances, and co-op timeline.',
+    category: 'Progression',
+    image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
+    imageAlt: 'Scavland developer update review showcasing v0.5.169 gameplay balance adjustments and roadmap features',
+    evidence: 'Official',
+    updated: '2026-09-11',
+    answer: 'In response to community feedback following Scavland\'s Steam Early Access release (Build 25128670), lead developer Lucasmml published the official "We Hear You - Changes Are Coming" address. The developer directly tackled the community\'s top 5 concerns: testing an optional save-game loading prompt upon death (mitigating forced corpse run fatigue), resolving dynamic mutant proximity spawns, expanding safehouse stash capacity, executing extensive v0.5.169 economy rebalances (Stimpack price cuts, IFAK stacks to 3, Petar market relocation), and reaffirming the 2-4 player co-op multiplayer roadmap for Phase 2/3. For active survival mechanics while awaiting upcoming patches, consult our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/), [Death & Loot Recovery Guide](/guide/scavland-death-and-loot-recovery/), or browse our [Weapons Database](/weapons/).',
+    steps: [
+      '01 · Death Loop Friction: Save-Game Loading vs Forced Corpse Runs: The most upvoted community debate centers on post-death agency. Lucasmml acknowledged that hardcore corpse retrieval can create punishing death spirals when weapons break. The development team is testing an optional "Reload Last Safehouse Save" prompt alongside standard Veteran corpse respawning.',
+      '02 · Dynamic Enemy Spawning & Sound Propagation Tuning: Responding to reports of mutants spawning in close proximity to players, developers clarified that Build 25128670 uses sound-radius aggro triggers (unsuppressed rifle shots create a 200m ripple). Patch v0.5.169 eliminated off-screen enemy shooting and is further tightening outdoor patrol spawn distances.',
+      '03 · Comprehensive Economy & Medical Rebalance (v0.5.169 Delivered): Patch v0.5.169 overhauled early-game survival: Stimpack prices dropped significantly, IFAK bandages now stack up to 3 units, trader Alexi increased emergency medical stock, and Gunsmith Petar was permanently relocated to central Zalesye next to Grigory.',
+      '04 · Quest Items & Inventory De-Cluttering: Players with full safehouse containers will soon see quest items moved to a dedicated non-encumbering inventory pouch. v0.5.169 also unlocked a second permanent player stash locker at the Zalesye hospital wing.',
+      '05 · Long-Term Roadmap: Phase 2/3 Co-op & Northern Map Expansions: Early Access is slated for 12 to 24 months. The official roadmap schedules major content phases: Act II northern exclusion zone sectors, deeper faction diplomacy (Rada vs Gunners), and native 2-4 player cooperative multiplayer extraction.'
+    ],
+    facts: [
+      ['Official Address', 'Lead developer Lucasmml posted "We Hear You" addressing Day 1 feedback on Steam'],
+      ['Death Mechanic Decision', 'Optional "Load Last Save" feature in active development alongside Veteran corpse runs'],
+      ['v0.5.169 Medical Buff', 'IFAK bandages stack to 3; Stimpack purchase price reduced across all settlement doctors'],
+      ['Vendor Relocation', 'Gunsmith Petar moved from perimeter outpost into central Zalesye market plaza'],
+      ['Secondary Stash Point', 'Permanent second stash locker unlocked in Zalesye hospital medical wing'],
+      ['Handheld UI Scaling', 'Dynamic font scaling in active development for 7-inch Steam Deck and handheld displays'],
+      ['Verified Baseline', 'Official Steam Discussions Pinned Developer Response & Early Access Patch v0.5.169']
+    ],
+    faq: [
+      ['Will Scavland add an option to reload saves when you die?', 'Yes. Lucasmml confirmed developers are testing an option allowing players to reload their latest safehouse save rather than being forced into an un-geared corpse recovery run.'],
+      ['Do enemies really spawn directly on top of the player?', 'Mutants do not spawn from thin air on your coordinate; rather, unsuppressed gunfire radiates a 200m sound cone that draws surrounding roaming packs. Build v0.5.169 patched off-screen enemy shooting to ensure fair line-of-sight engagements.'],
+      ['When is co-op multiplayer coming to Scavland?', 'Co-op multiplayer (2-4 player squad extraction) is confirmed on the official development roadmap for late Phase 2 / Phase 3, following singleplayer balancing and engine optimization.'],
+      ['How does the 50% merchant off-category penalty work in v0.5.169?', 'Selling items outside a vendor\'s specialty (e.g. selling weapons to a doctor or food to a gunsmith) incurs a 50% ruble markdown. Always sell medical goods to Alexi and hardware to Petar for maximum profit.']
+    ],
+    related: [
+      'scavland-early-access-launch-faq-and-roadmap',
+      'scavland-death-and-loot-recovery',
+      'scavland-merchant-prices-and-barter-guide',
+      'scavland-coop-and-multiplayer-mechanics',
+      'scavland-weapons-and-attachments'
+    ],
+    keywords: [
+      'scavland roadmap',
+      'scav land roadmap',
+      'scavland developer commitments',
+      'scavland we hear you',
+      'scavland changes coming',
+      'scavland death save reload',
+      'scavland enemy spawn around player',
+      'scavland patch 0.5.169',
+      'scavland lucasmml update'
+    ]
   }
 ];
 
