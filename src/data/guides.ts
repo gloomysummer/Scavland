@@ -102,12 +102,12 @@ export const guides: Guide[] = [
     slug: 'scavland-vs-zero-sievert-comparison',
     shortTitle: 'Scavland vs Zero Sievert',
     title: 'Scavland vs Zero Sievert: 7 Core Differences, Mist Anomalies & Co-op Roadmap',
-    description: 'In-depth tactical breakdown comparing Scavland and Zero Sievert: ballistics feel, 300+ attachment modularity, radioactive Mist dynamic weather, 10 factions, and planned co-op multiplayer.',
+    description: 'In-depth tactical breakdown comparing Scavland (Scav Land) and Zero Sievert: ballistics feel, 300+ attachment modularity, radioactive Mist dynamic weather, 10 factions, and planned co-op multiplayer.',
     category: 'Comparisons',
     image: '/images/screenshots/scavland_vs_zero_sievert.webp',
     imageAlt: 'Side-by-side tactical comparison between Scavland and Zero Sievert top-down survival mechanics',
     evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
-    updated: '2026-09-07',
+    updated: '2026-09-10',
     answer: 'While Scavland shares Zero Sievert’s top-down extraction DNA, it departs radically in world simulation and combat depth. Scavland introduces 300+ modular weapon attachments with realistic barrel fouling and misfire mechanics, an unpredictable toxic Mist weather cycle that triggers rare anomalous artifact spawns, 10 dynamic warring factions, and an official co-op multiplayer mode on the active roadmap.',
     steps: [
       '01 · Compare Gunplay Ergonomics: Scavland emphasizes realistic ballistics, weapon condition degradation, and attachment weight balances over arcade spray patterns.',
@@ -127,7 +127,7 @@ export const guides: Guide[] = [
       ['Can I play Scavland with friends?', 'Co-op extraction is currently the #1 priority on developer NoShadow\'s Early Access roadmap, whereas Zero Sievert is exclusively solo.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts'],
-    keywords: ['scavland vs zero sievert', 'scavland similar games', 'scavland stalker like', 'scavland co op', 'zero sievert alternatives']
+    keywords: ['scavland vs zero sievert', 'scav land vs zero sievert', 'scavland similar games', 'scavland stalker like', 'scavland co op', 'zero sievert alternatives']
   },
   {
     slug: 'scavland-explorer-mode-and-campfire-healing',
@@ -382,8 +382,8 @@ export const guides: Guide[] = [
     image: '/images/screenshots/ss_01_ruins_night.webp',
     imageAlt: 'Scavland nocturnal exploration through dark ruins with weapon flashlight cone',
     evidence: 'In-Game Playtest Verification · Splattercatgaming & Singleplayer Squad EA Baseline',
-    updated: '2026-09-06',
-    answer: 'Surviving after dark in Scavland requires fundamental sensory discipline: outside illuminated settlement hubs, your effective visibility collapses to a narrow 10-meter flashlight cone, while aggressive nocturnal stalkers spawn exclusively between 21:00 and 05:30. Unsuppressed rifle fire generates a 200-meter audio ripple that triggers cascading aggro from adjacent ruins, making sub-caliber suppressed handguns, doorway funneling tactics, and swift Shift+Click container looting essential for nocturnal runs.',
+    updated: '2026-09-10',
+    answer: 'Surviving after dark in Scavland requires fundamental sensory discipline: outside illuminated settlement hubs, your effective visibility collapses to a narrow 10-meter flashlight cone, while aggressive nocturnal stalkers spawn exclusively between 21:00 and 05:30. Unsuppressed rifle fire generates a 200-meter audio ripple that triggers cascading aggro from adjacent ruins, making sub-caliber suppressed handguns, doorway funneling tactics, and swift Shift+Click container looting essential for nocturnal runs. If nocturnal stalkers prove too lethal for early-game gear, scavengers can safely bypass night darkness entirely by resting on safehouse bunker bunks — detailed in our dedicated [Scavland Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
       '01 · Suppressor Sound Radius: Unsuppressed rifle fire alerts mutants across a 200m radius. Equipping a suppressor on 9x18mm or 9x19mm sidearms shrinks your audible footprint down to ~25 meters, allowing isolated takedowns without waking the entire district.',
       '02 · Flashlight Discipline in the Open: Keep your weapon flashlight switched OFF in open wasteland fields; illuminated cones draw hostile bandit snipers from over 40 meters away. Only toggle illumination when clearing tight, blind-cornered rooms.',
@@ -403,10 +403,11 @@ export const guides: Guide[] = [
     faq: [
       ['Is night scavenging worth the extreme risk in Scavland?', 'Yes. Nighttime incursions yield significantly higher anomaly artifact drop rates, rare safehouse loot container resets, and unpicked medicinal herbs, though survival risk doubles due to restricted vision.'],
       ['Do mutants hear my footsteps while moving?', 'Yes. Full sprinting creates substantial audio cues audible through walls and ceilings. Crouch-walking completely dampens footstep noise, enabling silent melee takedowns from behind.'],
-      ['Why does my character look identical after equipping heavy armor?', 'This is a verified Early Access limitation in Build 25128670. While physical and ballistic damage reduction stats apply correctly in the inventory inspect panel, character sprite updates are scheduled for future content updates.']
+      ['Why does my character look identical after equipping heavy armor?', 'This is a verified Early Access limitation in Build 25128670. While physical and ballistic damage reduction stats apply correctly in the inventory inspect panel, character sprite updates are scheduled for future content updates.'],
+      ['How do I skip night in Scavland?', 'Return to any unlocked settlement safehouse or bunker cot before 21:00 and sleep until 06:00 daylight to skip nocturnal mutants safely. See our dedicated Sleep & World Reset Guide for full hydration and bunker reset rules.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-death-and-loot-recovery'],
-    keywords: ['scavland night survival', 'scavland stealth mechanics', 'scavland audio detection radius', 'scavland night mutants', 'scavland flashlight discipline', 'scavland shift click loot']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-death-and-loot-recovery', 'scavland-sleep-and-world-reset-guide'],
+    keywords: ['scavland night survival', 'scavland stealth mechanics', 'scavland audio detection radius', 'scavland night mutants', 'scavland flashlight discipline', 'scavland shift click loot', 'scavland sleep night', 'scavland skip night']
   },
   {
     slug: 'scavland-factions-progression-and-traders',
@@ -448,12 +449,12 @@ export const guides: Guide[] = [
     slug: 'scavland-coop-and-multiplayer-mechanics',
     shortTitle: 'Co-op & Multiplayer',
     title: 'Scavland Co-op & Multiplayer Guide: Early Access Status, Roadmap & Squad Extraction',
-    description: 'Current multiplayer status for Scavland Early Access: dedicated singleplayer design, developer co-op roadmap plans, Steam Remote Play, and tactical solo survival.',
+    description: 'Current multiplayer status for Scavland Early Access (Scav Land co-op): dedicated singleplayer design, developer co-op roadmap plans, Steam Remote Play, and tactical solo survival.',
     category: 'Systems',
     image: '/images/screenshots/steam_ss_06.webp',
     imageAlt: 'Two scavengers holding perimeter defensive positions near a bunker entrance in Scavland',
     evidence: 'Official',
-    updated: '2026-09-06',
+    updated: '2026-09-10',
     answer: 'Scavland launched into Steam Early Access (Build 25128670) as a strictly singleplayer post-apocalyptic survival RPG. Lead developer Lucasmml confirmed that while the core game loop is balanced around solitary atmospheric tension, a dedicated 2-4 player cooperative extraction mode is actively planned on the official development roadmap for late Phase 2 / Phase 3. Players seeking shared sessions can currently utilize Steam Remote Play Together for local screen-share coordination or practice proxy squad tactics alongside friendly faction patrols.',
     steps: [
       '01 · Early Access Solo Focus: Acknowledge that Day 1 Early Access features no native peer-to-peer or dedicated server networking; all progression and stashes are local to your singleplayer save.',
@@ -475,7 +476,7 @@ export const guides: Guide[] = [
       ['What happens when you die without a squad?', 'Your backpack stays at your coordinate of death as a persistent recovery beacon. You respawn safely in your bunker stash room to re-arm for a corpse recovery raid.']
     ],
     related: ['scavland-beginner-guide', 'scavland-death-and-loot-recovery', 'scavland-early-access-launch-faq-and-roadmap'],
-    keywords: ['scavland coop', 'scavland multiplayer', 'scavland play with friends', 'scavland co-op roadmap', 'scavland extraction squad']
+    keywords: ['scavland coop', 'scavland multiplayer', 'scav land multiplayer', 'scavland co op', 'scavland play with friends', 'scavland co-op roadmap', 'scavland extraction squad']
   },
   {
     slug: 'scavland-russian-language-and-font-fix',
@@ -650,12 +651,12 @@ export const guides: Guide[] = [
     slug: 'scavland-sleep-and-world-reset-guide',
     shortTitle: 'Sleep & World Reset',
     title: 'Scavland Sleep & World Reset Guide: 24-Hour Cycle, Campfire Rest & Bunker Respawns',
-    description: 'Master Scavland’s sleep mechanics, 24-hour world resets, avoiding night horrors (21:00-06:00), campfire hydration tricks, and bunker persistent lock rules.',
+    description: 'Master Scavland’s sleep mechanics (Scav Land rest guide), 24-hour world resets, avoiding night horrors (21:00-06:00), campfire hydration tricks, and bunker persistent lock rules.',
     category: 'Survival',
     image: '/images/screenshots/ss_01_ruins_night.webp',
     imageAlt: 'A scavenger resting by a safehouse bunker bunk and active campfire in Scavland',
     evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
-    updated: '2026-09-09',
+    updated: '2026-09-10',
     answer: 'Sleeping in Scavland is the fundamental mechanic for advancing time, avoiding lethal night stalkers (21:00 to 06:00), and triggering the 24-hour world cycle. Resting on safehouse bunker bunks resets settlement contract job boards (Anatoly & Nadja) and overland loot caches. In Patch v0.5.169, campfires provide passive health regeneration, but sleeping while dehydrated will lock stamina recovery—always drink boiled water before resting. Crucially, underground bunkers and sealed military vaults operate on persistent lockout timers to prevent infinite loot farming. To ensure your firearms don\'t jam after waking, check our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or review the [Beginner Guide](/guide/scavland-beginner-guide/) before heading out.',
     steps: [
       '01 · Safehouse Bunker Bunk Sleeping: Locate the canvas cot inside any unlocked settlement safehouse bunker. Interacting with the bunk allows you to set rest duration (1 to 12 hours) to advance daylight and bypass pitch-black night raids.',
@@ -677,8 +678,8 @@ export const guides: Guide[] = [
       ['Why does my stamina not recover after sleeping?', 'If you go to sleep while suffering from the "Severe Dehydration" debuff, your stamina regeneration remains locked at 0%. Drink clean boiled water and rest near an active campfire to clear the debuff.'],
       ['What happens if I get caught outside at night?', 'Nighttime (21:00–06:00) reduces visibility to 10 meters and spawns lethal nocturnal predators. Firearm discharge creates sound ripples up to 200m that draw mutant packs.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-red-keycard-and-bunker-loot-recovery'],
-    keywords: ['scavland sleep', 'scavland wait time', 'scavland rest campfire', 'scavland bunker reset', 'scavland 24 hour reset', 'scavland stamina bug sleep']
+    related: ['scavland-beginner-guide', 'scavland-night-survival-and-stealth-mechanics', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-red-keycard-and-bunker-loot-recovery'],
+    keywords: ['scavland sleep', 'scav land sleep', 'scavland wait time', 'scavland rest campfire', 'scavland bunker reset', 'scavland 24 hour reset', 'scavland stamina bug sleep']
   },
   {
     slug: 'scavland-faction-identification-and-hud-guide',
