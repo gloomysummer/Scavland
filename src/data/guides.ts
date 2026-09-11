@@ -11,7 +11,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Personal in-game test',
-    updated: '2026-09-11',
+    updated: '2026-09-12',
     answer: 'In Scavland, players looking for cheats, debug commands, or trainers have several verified options for single-player and Explorer Mode sessions. Built on the Unity engine, Scavland supports command-line launch parameters (-dev, -console) for accessing internal developer tools, while single-player offline trainers (WeMod, Cheat Engine tables) allow unlimited stamina, infinite backpack carrying capacity, and zero weapon jamming. Developer NoShadow emphasizes that modifying memory during future multiplayer sessions will corrupt character saves or trigger integrity bans.',
     steps: [
       '01 · Enable Explorer Mode (Official Safe Cheats): Before using third-party memory trainers, activate "Explorer Mode" in world settings. This native toggle provides campfire instant recovery, reduced stamina drain, and relaxed death penalties without risking save corruption.',
@@ -25,7 +25,8 @@ export const guides: Guide[] = [
       ['Launch Flags', '-dev and -console command flags activate developer diagnostic tools'],
       ['Console Hotkey', 'Press [~] (Tilde) or [F1] in test builds to toggle the console window'],
       ['Save Path', 'Saves are stored locally at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/'],
-      ['Fair Play Policy', 'Memory editors and trainers are strictly for offline single-player use']
+      ['Fair Play Policy', 'Memory editors and trainers are strictly for offline single-player use'],
+      ['Trainer & Cheat Engine', 'WeMod and Cheat Engine tables verified for offline solo play in v0.6.0']
     ],
     faq: [
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—eliminating severe stamina penalties and enabling instant campfire health recovery. Console debug access requires -dev launch flags.'],
@@ -767,6 +768,56 @@ export const guides: Guide[] = [
       'scavland enemy spawn around player',
       'scavland patch 0.5.169',
       'scavland lucasmml update'
+    ]
+  },
+  {
+    slug: 'scavland-patch-0-6-0-update-and-changes',
+    shortTitle: 'Patch 0.6.0 Guide',
+    title: 'Scavland Patch 0.6.0 Guide: Steam Deck Verified, Sleep & Balance',
+    description: 'Complete breakdown of Scavland Patch v0.6.0: Steam Deck Verified status, sleep system mechanics, gun range buffs, armor durability, and stash crafting.',
+    category: 'Updates',
+    image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-166s.jpg',
+    imageAlt: 'Scavland Patch v0.6.0 update notes, Steam Deck verified verification, and gameplay balance changes',
+    evidence: 'Official',
+    updated: '2026-09-12',
+    answer: 'Scavland Patch v0.6.0 represents the first major milestone update since Early Access launch, officially achieving Valve Steam Deck Verified certification and delivering comprehensive system overhauls. Key additions include a dynamic sleep-in-bed system that advances world time with injury interrupt checks, direct stash-to-workbench material pulling for crafting, across-the-board firearm effective range buffs (+1 to +2 tiles), compressed armor durability maximums, and specialized merchant buy rate adjustments (such as Zhivan paying 140% for common hardware). For complete gear data and trader locations, cross-reference our [Weapons Arsenal](/weapons/), [Merchant Prices Guide](/guide/scavland-merchant-prices-and-barter-guide/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
+    steps: [
+      '01 · Valve Steam Deck Verified Status: Scavland now officially holds the Steam Deck Verified badge. Key default handheld configurations include 1280x800 native resolution, 60 FPS cap at 9W TDP, and fully customizable dual-binding controller profiles.',
+      '02 · Bed Sleep System & Ambient World Clock: Sleeping on canvas beds in safehouses now skips 1 to 12 hours of in-game time to bypass hazardous night mutants (21:00 to 06:00). Unlike simple pause-skips, the world simulation continues running, and sleep immediately cancels if you take environmental damage or reach critical hunger/thirst thresholds.',
+      '03 · Gun Range Buffs & Weapon Reclassifications: All base firearms received a +1 to +2 tile effective range extension to improve medium-range engagements. Long rifles now occupy 3 full horizontal backpack rows, while the MK-47 has been reclassified into the Basic weapon tier to smooth early-game raider combat.',
+      '04 · Direct Workbench Stash Pulling: Safehouse craft stations now directly pull required components (ballistic fiber, metal scrap, toolkits) from your nearby stash chest, eliminating tedious manual container swapping. Sewing kit recipes now require Pliers rather than glue bottles.',
+      '05 · Armor Durability Compaction & Container Cooldowns: Maximum durability ratings across all armor tiers were compressed (Tattered 4->3, Scavenger 5->4, Medium 6->5, Heavy 7->6) to make tactical upkeep and combat repairs more decisive. World scavenging containers now operate on a 1-hour real-time refresh cycle.'
+    ],
+    facts: [
+      ['Update Milestone', 'Patch v0.6.0 officially awarded Valve Steam Deck Verified certification'],
+      ['Weapon Range Buff', 'All rifles and pistols gained +1 to +2 tiles of effective engagement range'],
+      ['Armor Durability', 'Durability caps rebalanced: Tattered (3), Scavenger (4), Medium (5), Heavy (6)'],
+      ['Stash Crafting', 'Workbenches automatically pull crafting components directly from safehouse stash'],
+      ['Sewing Kit Recipe', 'Crafting Sewing Kits now requires Pliers instead of Industrial Glue'],
+      ['World Loot Timer', 'Scavenge containers now refresh on a 1-hour real-time cooldown'],
+      ['Explorer Mode Buff', 'Explorer Mode granted +20% trader sell values and 150 maximum stamina pool']
+    ],
+    faq: [
+      ['What are the biggest changes in Scavland Patch v0.6.0?', 'Patch v0.6.0 brings official Steam Deck Verified certification, a full in-game sleep skipping mechanic, automatic workbench pulling from stash chests, weapon range increases, and comprehensive trader economic rebalancing.'],
+      ['Does crafting in v0.6.0 take items directly from the stash?', 'Yes. Safehouse workbenches now automatically access resources in your adjacent storage lockers, so you no longer need to carry heavy scrap and wires in your personal inventory.'],
+      ['Why did armor durability numbers decrease in v0.6.0?', 'Developer NoShadow compressed armor durability ratings (e.g. Heavy Armor from 7 to 6) to make plate repairs and vest condition management more impactful during sustained wasteland firefights.'],
+      ['How does the sleep system work in v0.6.0?', 'Interacting with any safehouse bed lets you sleep between 1 and 12 hours. World cycles advance, daily merchant contracts refresh, but active bleeding or severe dehydration will wake your scavenger prematurely.']
+    ],
+    related: [
+      'scavland-sleep-and-world-reset-guide',
+      'scavland-steam-deck-and-handheld-settings',
+      'scavland-merchant-prices-and-barter-guide',
+      'scavland-weapon-repair-and-durability',
+      'scavland-developer-commitments-and-patch-roadmap'
+    ],
+    keywords: [
+      'scavland patch 0.6.0',
+      'scavland v0.6.0',
+      'scavland update 0.6.0',
+      'scavland patch notes',
+      'scavland steam deck verified',
+      'scavland we hear you',
+      'scavland balance changes'
     ]
   }
 ];
