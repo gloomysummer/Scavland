@@ -1,9 +1,8 @@
 {
   "https://scavland.wiki/guide/scavland-beginner-guide/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-anomaly-scanner-and-artifacts/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -12,16 +11,14 @@
     "note": "Pre-existing page before today"
   },
   "https://scavland.wiki/guide/scavland-death-and-loot-recovery/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-weapons-and-attachments/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-loot-and-scavenging/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -60,16 +57,14 @@
     "note": "Pre-existing page before today"
   },
   "https://scavland.wiki/guide/scavland-weapon-repair-and-durability/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-mist-survival-and-radiation/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-tactical-database-weapons-loot/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -138,10 +133,9 @@
     "note": "Pre-existing static page"
   },
   "https://scavland.wiki/factions/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing static page"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/faq/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -150,16 +144,14 @@
     "note": "Pre-existing static page"
   },
   "https://scavland.wiki/guide/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing static page"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/maps/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing static page"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/privacy-policy/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -186,22 +178,19 @@
     "note": "Pre-existing static page"
   },
   "https://scavland.wiki/weapons/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing static page"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/wiki/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing static page"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/": {
-    "last_submitted": "2026-09-07T05:36:00Z",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Submitted today 13:36"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-price-and-regional-editions/": {
     "last_submitted": "2026-09-07T08:15:00Z",
@@ -210,7 +199,7 @@
     "note": "Submitted today 16:15"
   },
   "https://scavland.wiki/ru/": {
-    "last_submitted": "2026-09-07T08:20:56.218237+00:00",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -230,7 +219,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/de/": {
-    "last_submitted": "2026-09-07T08:20:56.218237+00:00",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -320,7 +309,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-steam-deck-and-handheld-settings/": {
-    "last_submitted": "2026-09-07T08:20:56.218237+00:00",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -530,12 +519,12 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/ja/": {
-    "last_submitted": "2026-09-09T02:19:25.617755+00:00",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-cheats-and-console-commands/": {
-    "last_submitted": "2026-09-09T02:19:25.617755+00:00",
+    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
