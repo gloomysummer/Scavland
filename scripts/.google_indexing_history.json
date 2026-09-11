@@ -138,13 +138,12 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/faq/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing static page"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/": {
-    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -188,7 +187,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/": {
-    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -299,7 +298,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/updates/": {
-    "last_submitted": "2026-09-07T08:20:56.218237+00:00",
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -690,6 +689,26 @@
   },
   "https://scavland.wiki/ja/guide/scavland-tactical-database-weapons-loot/": {
     "last_submitted": "2026-09-09T02:19:25.617755+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/de/guide/scavland-patch-0-6-0-update-and-changes/": {
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/ru/guide/scavland-patch-0-6-0-update-and-changes/": {
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/guide/scavland-patch-0-6-0-update-and-changes/": {
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/ja/guide/scavland-patch-0-6-0-update-and-changes/": {
+    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   }
