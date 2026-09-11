@@ -244,7 +244,7 @@ export const deGuides: Guide[] = [
     category: 'Überleben',
     title: 'Scavland Schlaf & Welt-Reset Guide: 24-Stunden-Zyklus, Lagerfeuer & Bunker-Respawn',
     shortTitle: 'Schlaf & Welt-Reset',
-    description: 'Vollständiger Leitfaden zum Schlafsystem in Scavland: Nachtzeiten überspringen (21:00–06:00), 24-Stunden-Reset für Händler und Beutekisten, Lagerfeuer-Regeneration und Bunker-Regeln.',
+    description: 'Schlafsystem in Scavland: Nacht überspringen (21:00–06:00), 24-Stunden-Reset für Händler und Beutekisten, Lagerfeuer-Regeneration und Bunker-Regeln.',
     evidence: 'Verifiziert in Patch v0.5.169 (Early Access)',
     updated: '2026-09-09',
     image: '/images/screenshots/ss_01_ruins_night.webp',
@@ -284,7 +284,7 @@ export const allDeGuides: Guide[] = [
     .filter(en => !deGuides.some(de => de.slug === en.slug))
     .map(en => ({
       ...en,
-      description: `${en.description} (Übersetzt für die Scavland-Community).`,
+      description: en.description,
     }))
 ];
 

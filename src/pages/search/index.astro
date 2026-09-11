@@ -2,10 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import { guides } from '../../data/guides';
 ---
-<Layout title="Search Scavland guides | Scavland Wiki" description="Search evidence-labelled Scavland guides for survival, weapons, loot, quests, factions and exploration." canonical="/search/">
+<Layout title="Search Scavland Guides & Database — Scavland Wiki" description="Search verified Scavland survival guides: weapons, attachment mods, underground bunkers, factions, quests, and game mechanics." canonical="/search/">
   <section class="listing">
-    <p class="eyebrow">Field index</p>
-    <h1 class="page-title">Search<br/><span style="color:var(--acid)">the notes.</span></h1>
+    <p class="eyebrow">Field index · Instant Query</p>
+    <h1 class="page-title">Search Scavland <br/><span style="color:var(--acid)">Tactical Notes.</span></h1>
     <input class="search-box" id="guide-search" type="search" placeholder="Try “mist”, “loot” or “weapons”" aria-label="Search Scavland guides"/>
     <div class="listing-grid" id="results">
       {guides.map((guide) => (

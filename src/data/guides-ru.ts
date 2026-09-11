@@ -38,7 +38,7 @@ export const ruGuides: Guide[] = [
     category: 'Релиз и Цены',
     title: 'Цена Scavland в Steam: региональные цены, скидка на релизе и издания',
     shortTitle: 'Цена и издания в Steam',
-    description: 'Актуальная стоимость Scavland в Steam: цены в долларах, евро, рублях и тенге. Информация о стартовой скидке 10%, системных требованиях и бонусах раннего доступа.',
+    description: 'Стоимость Scavland в Steam: цены в долларах, евро, рублях и тенге. Данные о стартовой скидке 10%, системных требованиях и бонусах раннего доступа.',
     evidence: 'Официальные данные Steam Store от 4 сентября 2026',
     updated: '2026-09-07',
     image: '/images/cards/card_1_beginner_guide.webp',
@@ -69,7 +69,7 @@ export const ruGuides: Guide[] = [
     category: 'Оптимизация',
     title: 'Scavland на Steam Deck и портативных ПК: настройки 60 FPS и управление',
     shortTitle: 'Настройки для Steam Deck',
-    description: 'Полное руководство по запуску Scavland на Steam Deck OLED/LCD, ROG Ally и Legion Go: пресет для стабильных 60 кадров, кастомная раскладка кнопок и 4+ часа автономности.',
+    description: 'Гайд по запуску Scavland на Steam Deck, ROG Ally и Legion Go: настройки для стабильных 60 кадров, кастомная раскладка кнопок и 4+ часа автономности.',
     evidence: 'Тесты на Steam Deck OLED (SteamOS 3.6, Proton Experimental)',
     updated: '2026-09-07',
     image: '/images/screenshots/steam_ss_04.webp',
@@ -249,7 +249,7 @@ export const ruGuides: Guide[] = [
     category: 'Выживание',
     title: 'Гайд по сну и сбросу мира 24 часа в Scavland: костры, респаун лута и бункеры',
     shortTitle: 'Сон и сброс мира',
-    description: 'Полное руководство по механике сна в Scavland: пропуск опасной ночи (21:00–06:00), 24-часовой сброс контрактов Анатолия и Нади, регенерация у костра и правила подземных бункеров.',
+    description: 'Механика сна в Scavland: пропуск ночи (21:00–06:00), 24-часовой сброс контрактов Анатолия и Нади, регенерация у костра и таймеры подземных бункеров.',
     evidence: 'Проверено в патче v0.5.169 (Ранний доступ)',
     updated: '2026-09-09',
     image: '/images/screenshots/ss_01_ruins_night.webp',
@@ -290,7 +290,7 @@ export const allRuGuides: Guide[] = [
     .filter(en => !ruGuides.some(ru => ru.slug === en.slug))
     .map(en => ({
       ...en,
-      description: `${en.description} (Перевод подготовлен сообществом Scavland Wiki).`,
+      description: en.description,
     }))
 ];
 

@@ -5,9 +5,9 @@ import { guides } from '../../data/guides';
 const world = guides.filter((guide) => ['Exploration','Resources'].includes(guide.category));
 ---
 <Layout 
-  title="Scavland Map (Scav Land Locations) — Zalesye Overworld, Bunkers & Extraction Guide" 
-  description="Verified Scavland map and world guide (Scav Land locations): Zalesye sector layout, underground bunkers, hazard radiation zones, Mist anomalies, and safe extraction routes." 
-  keywords="Scavland map, Scav Land map, Scavland locations, Zalesye map, bunker locations, overworld map, Mist zones, extraction points, Scavland wiki" 
+  title="Scavland Map — Zalesye Overworld & Bunker Locations" 
+  description="Verified Scavland map and world guide: Zalesye sector layout, underground bunker locations, radiation hazard zones, Mist anomalies, and extraction routes." 
+  keywords="Scavland map, Scavland locations, Zalesye map, bunker locations, overworld map, Mist zones, extraction points, Scavland wiki" 
   canonical="/maps/"
 >
   <Fragment slot="schema">
@@ -21,8 +21,8 @@ const world = guides.filter((guide) => ['Exploration','Resources'].includes(guid
     })} />
   </Fragment>
   <section class="listing">
-    <p class="eyebrow">World index</p>
-    <h1 class="page-title">Read<br/><span style="color:var(--acid)">the world.</span></h1>
+    <p class="eyebrow">World Index · Tactical Cartography</p>
+    <h1 class="page-title">Scavland Map &amp;<br/><span style="color:var(--acid)">Locations.</span></h1>
     <p class="lede">Locations are useful only when their evidence is clear. Start with the map notes, bunker access rules, and hazard guides.</p>
     <div class="listing-grid">{world.map((guide) => <GuideCard guide={guide} />)}</div>
   </section>

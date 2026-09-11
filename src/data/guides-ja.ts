@@ -330,7 +330,7 @@ export const allJaGuides: Guide[] = [
     .filter(en => !jaGuides.some(ja => ja.slug === en.slug))
     .map(en => ({
       ...en,
-      description: `${en.description} (日本語コミュニティ向け機械翻訳版).`,
+      description: en.description,
     }))
 ];
 

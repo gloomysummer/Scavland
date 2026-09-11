@@ -84,9 +84,21 @@ const faqSchema = guide.faq && guide.faq.length > 0 ? {
     },
   })),
 } : null;
+
+// Construct gold-standard SEO title (<= 60 chars)
+const coreTitle = guide.title.includes(':') ? guide.title.split(':')[0].trim() : guide.title;
+const subtitle = guide.title.includes(':') ? guide.title.split(':')[1].trim() : null;
+
+let pageTitle = `${coreTitle} — Scavland Wiki 日本語`;
+if (pageTitle.length > 60) {
+  pageTitle = `${coreTitle} | Wiki 日本語`;
+}
+if (pageTitle.length > 60) {
+  pageTitle = `${guide.shortTitle || coreTitle} — Wiki 日本語`;
+}
 ---
 
-<Layout title={`${guide.title} | Scavland Wiki 日本語`} description={guide.description} canonical={`/ja/guide/${guide.slug}/`} lang="ja">
+<Layout title={pageTitle} description={guide.description} canonical={`/ja/guide/${guide.slug}/`} lang="ja">
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -99,12 +111,17 @@ const faqSchema = guide.faq && guide.faq.length > 0 ? {
       <span style="opacity:0.4;">/</span>
       <a href="/ja/guide/" style="color:var(--text-muted,#aaa);text-decoration:none;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">攻略ガイド</a>
       <span style="opacity:0.4;">/</span>
-      <span style="color:#bbb;padding:4px 0;">{guide.shortTitle || guide.title}</span>
+      <span style="color:#bbb;padding:4px 0;">{coreTitle}</span>
     </nav>
 
     <header class="article-header">
       <p class="eyebrow">{guide.category} · 更新日 {guide.updated}</p>
-      <h1 class="page-title">{guide.title}</h1>
+      <h1 class="page-title">{coreTitle}</h1>
+      {subtitle && (
+        <p class="subtitle" style="font-family:'IBM Plex Mono',monospace;font-size:0.9rem;color:var(--acid,#b9e86c);margin:-0.25rem 0 1rem;letter-spacing:0.02em;font-weight:600;">
+          {subtitle}
+        </p>
+      )}
       <p class="lede">{guide.description}</p>
       <span class="evidence">検証データ：{guide.evidence}</span>
     </header>
