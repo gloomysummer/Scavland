@@ -7,34 +7,60 @@ import { allRuGuides } from '../../data/guides-ru';
 const featured = allRuGuides.slice(0, 6);
 ---
 
-<Layout title="Scavland Wiki на русском — Гайды, Оружие, Карта и База данных" description="Официальная база знаний Scavland на русском языке: подробные гайды по выживанию, оружие, обвесы, фракции, карта Залесья, дата выхода и системные требования." keywords="Scavland на русском, Scavland wiki ru, гайд Scavland, оружие Scavland, системные требования, карта Залесья, Steam Deck" canonical="/ru/" lang="ru">
+<Layout title="Scavland Wiki на русском — Гайды, Оружие и Карта" description="Официальная база знаний Scavland на русском языке: подробные гайды по выживанию, оружие, обвесы, фракции, карта Залесья, дата выхода и системные требования." keywords="Scavland на русском, Scavland wiki ru, гайд Scavland, оружие Scavland, системные требования, карта Залесья, Steam Deck" canonical="/ru/" lang="ru">
   <Fragment slot="schema">
     <script type="application/ld+json" set:html={JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'WebSite',
-      name: 'Scavland Wiki (Русский)',
-      url: 'https://scavland.wiki/ru/',
-      description: 'Официальная независимая база знаний и тактические руководства по Scavland.',
-      inLanguage: 'ru-RU',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: 'https://scavland.wiki/ru/search/?q={search_term_string}',
-        'query-input': 'required name=search_term_string'
-      }
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          '@id': 'https://scavland.wiki/ru/#website',
+          name: 'Scavland Wiki (Русский)',
+          url: 'https://scavland.wiki/ru/',
+          description: 'Официальная база знаний и тактические руководства по Scavland на русском языке.',
+          inLanguage: 'ru-RU',
+          about: { '@id': 'https://scavland.wiki/#game' },
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: 'https://scavland.wiki/ru/search/?q={search_term_string}',
+            'query-input': 'required name=search_term_string'
+          }
+        },
+        {
+          '@type': 'VideoGame',
+          '@id': 'https://scavland.wiki/#game',
+          name: 'Scavland',
+          alternateName: ['Сковленд', 'Скавленд'],
+          description: 'Хардкорная изометрическая RPG на выживание в декорациях советского постапокалипсиса.',
+          url: 'https://store.steampowered.com/app/3373500/Scavland/',
+          genre: ['Survival RPG', 'Extraction Shooter', 'Action RPG'],
+          gamePlatform: ['PC (Windows)', 'Steam Deck'],
+          datePublished: '2026-09-04',
+          publisher: {
+            '@type': 'Organization',
+            name: 'NoShadow'
+          },
+          sameAs: [
+            'https://store.steampowered.com/app/3373500/Scavland/',
+            'https://steamcommunity.com/app/3373500'
+          ]
+        }
+      ]
     })} />
   </Fragment>
 
   <section class="hero">
-    <p class="eyebrow">Официальные данные · Вики сообщества</p>
-    <h1>Scavland Вики &amp; База Знаний</h1>
+    <p class="eyebrow">База знаний сообщества · Версия раннего доступа</p>
+    <h1>Scavland Вики</h1>
     <p class="lede">Полная база данных и тактическое руководство по Scavland — хардкорной изометрической RPG на выживание в декорациях советского постапокалипсиса. Исследуйте Залесье, зачищайте подземные бункеры, настраивайте 25+ видов оружия и выживайте в смертоносном Тумане.</p>
     
     <Countdown />
 
     <div class="hero-actions">
       <a class="button" href="/ru/guide/scavland-beginner-guide/">Гайд для новичков <span aria-hidden="true">➔</span></a>
-      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Купить в Steam <span aria-hidden="true">↗</span></a>
+      <a class="button secondary" href="/maps/">Карта Залесья и Бункеры ➔</a>
       <a class="button secondary" href="/weapons/">Арсенал оружия</a>
+      <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Купить в Steam <span aria-hidden="true">↗</span></a>
     </div>
 
     <!-- 4-metric tactical authority cards -->

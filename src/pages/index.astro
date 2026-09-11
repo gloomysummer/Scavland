@@ -5,7 +5,7 @@ import Countdown from '../components/Countdown.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki (Scav Land) — Guides, Weapons, Maps, Cheats & Systems" description="The definitive Scavland Wiki (Scav Land Guide): comprehensive survival guides, cheats & console commands, weapons, attachments, factions, maps, and extraction mechanics for Zalesye." keywords="Scavland Wiki, Scavland, Scav Land, Scav Land guide, scav land wiki, Scavland cheats, Scavland beginner guide, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements, map, codes" canonical="/">
+<Layout title="Scavland Wiki — Tactical Guides, Weapons & Maps" description="The official community Scavland Wiki: comprehensive survival guides, weapons, ballistics & attachments, Zalesye bunker maps, and extraction mechanics." keywords="Scavland Wiki, Scavland, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
   <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -15,11 +15,13 @@ const featured = guides.slice(0, 6);
         'name': 'Scavland Wiki',
         'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database'],
         'url': 'https://scavland.wiki',
-        'description': 'The definitive Scavland Wiki (Scav Land Guide): comprehensive survival guides, cheats & console commands, weapons, attachments, factions, maps, and extraction mechanics for Zalesye.',
+        'description': 'The definitive community Scavland Wiki: comprehensive survival guides, weapons, attachments, factions, maps, and extraction mechanics for Zalesye.',
         'inLanguage': 'en-US',
         'dateModified': '2026-09-11T00:00:00Z',
+        'about': { '@id': 'https://scavland.wiki/#game' },
         'sameAs': [
-          'https://store.steampowered.com/app/3373500/Scavland/'
+          'https://store.steampowered.com/app/3373500/Scavland/',
+          'https://steamcommunity.com/app/3373500'
         ],
         'publisher': {
           '@type': 'Organization',
@@ -36,6 +38,25 @@ const featured = guides.slice(0, 6);
           'target': 'https://scavland.wiki/search/?q={search_term_string}',
           'query-input': 'required name=search_term_string'
         }
+      },
+      {
+        '@type': 'VideoGame',
+        '@id': 'https://scavland.wiki/#game',
+        'name': 'Scavland',
+        'alternateName': ['Scav Land'],
+        'description': 'Hardcore top-down pixel art survival RPG set in Zalesye, featuring realistic ballistics, 300+ modular attachments, underground bunkers, and dynamic Mist extraction.',
+        'url': 'https://store.steampowered.com/app/3373500/Scavland/',
+        'genre': ['Survival RPG', 'Extraction Shooter', 'Action RPG'],
+        'gamePlatform': ['PC (Windows)', 'Steam Deck'],
+        'datePublished': '2026-09-04',
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'NoShadow'
+        },
+        'sameAs': [
+          'https://store.steampowered.com/app/3373500/Scavland/',
+          'https://steamcommunity.com/app/3373500'
+        ]
       },
       {
         '@type': 'FAQPage',
@@ -70,15 +91,15 @@ const featured = guides.slice(0, 6);
     ]
   })} /></Fragment>
   <section class="hero">
-    <p class="eyebrow">Official Baseline · Community-Driven Wiki</p>
-    <h1>Scavland Wiki &amp; Database</h1>
+    <p class="eyebrow">Community Tactical Database · Early Access Baseline</p>
+    <h1>Scavland Wiki</h1>
     <p class="lede">The complete database and tactical survival guide for <strong>Scavland (Scav Land)</strong>, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
     
     <Countdown />
 
     <div class="hero-actions">
       <a class="button" href="/guide/scavland-beginner-guide/">Beginner Guide (2026) <span aria-hidden="true">➔</span></a>
-      <a class="button secondary" href="/guide/scavland-cheats-and-console-commands/">Cheats &amp; Console</a>
+      <a class="button secondary" href="/maps/">Zalesye Bunkers &amp; Map ➔</a>
       <a class="button secondary" href="/weapons/">Tactical Arsenal</a>
       <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Play on Steam <span aria-hidden="true">↗</span></a>
     </div>
