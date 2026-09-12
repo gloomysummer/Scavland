@@ -307,7 +307,8 @@ export const guides: Guide[] = [
       ['How do I clear a weapon jam during combat?', 'Press the reload key [R] twice or manually cycle the bolt to eject the jammed casing and chamber a fresh cartridge. Retreat behind hard cover if under automatic fire.'],
       ['Do field repair tools still require Gun Cleaning Oil in v0.5.169?', 'No. Patch v0.5.169 made the basic Gun Field Tool independent from Gun Cleaning Oil, allowing scavengers to perform emergency maintenance up to 70% condition without consuming oil.'],
       ['Where do I find Gunsmith Petar for advanced weapon repairs?', 'Petar was relocated in v0.5.169 from the southern perimeter directly into the central Zalesye settlement square next to trader Grigory.'],
-      ['What materials are required to repair heavy armor vests?', 'Heavy Armor Repair Kits require Ballistic Fiber, Sheet Metal Scrap, and Industrial Glue (glue cost discounted in v0.5.169).']
+      ['What materials are required to repair heavy armor vests?', 'Heavy Armor Repair Kits require Ballistic Fiber, Sheet Metal Scrap, and Industrial Glue (glue cost discounted in v0.5.169).'],
+      ['How do I reduce weapon durability degradation during combat?', 'To slow down firearm wear: avoid firing while wading through muddy water or irradiated swamps (which accelerates barrel fouling by 2.5x), fire in controlled semi-auto bursts instead of full-auto mag dumps to prevent receiver overheating, and always use field repair tools to service guns above 70% before entering high-tier raids.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands', 'scavland-sleep-and-world-reset-guide', 'scavland-merchant-prices-and-barter-guide'],
     keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location']
@@ -818,6 +819,56 @@ export const guides: Guide[] = [
       'scavland steam deck verified',
       'scavland we hear you',
       'scavland balance changes'
+    ]
+  },
+  {
+    slug: 'scavland-safehouses-and-fast-travel-guide',
+    shortTitle: 'Safehouses & Travel',
+    title: 'Scavland Safehouses & Fast Travel Guide: Stash Lockers, Beds & Transit Routes',
+    description: 'Complete guide to Scavland safehouses and travel: stash locker locations, bed sleep mechanics, quasi-fast travel routes, and safe wasteland transit.',
+    category: 'Survival',
+    image: '/images/screenshots/ss_04_settlement_camp.webp',
+    imageAlt: 'Safehouse bunker settlement and player stash storage in Scavland',
+    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    updated: '2026-09-13',
+    answer: 'Scavland deliberately rejects instant map teleportation and decorative player housing to maintain hardcore post-Soviet survival tension. Instead, the game features a decentralized network of fortified subterranean Safehouses across Zalesye: Central Zalesye Settlement, the Crossroads Annex, the Hospital Medical Wing, and Outpost B-1. Each safehouse provides 100% death-secure Stash Lockers, canvas beds for time-skipping sleep, and crafting workbenches (which directly pull components from stash in Patch v0.6.0). To traverse the wasteland without dying, scavengers use quasi-fast travel transit routes—sprinting along cleared paved roads while managing stamina, bypassing dangerous mutant sound cones, and planning multi-stage extraction runs between fortified safehouses. For complete map coordinates and survival tips, review our [Zalesye Overworld Map](/maps/), [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
+    steps: [
+      '01 · Understand the Safehouse Network (4 Key Hubs): Scavland features four distinct safehouse shelters across the exclusion zone: the Central Zalesye Starter Bunker, the Crossroads Annex (near trader Volodymyr), the Hospital Medical Wing (unlocked via the Hospital Quest), and Outpost B-1 on the eastern border. Each serves as an operational base for resting, repairs, and stash access.',
+      '02 · Stash Locker Storage & Death Security: Safehouse Stash containers are completely immune to death penalties—never take all your resources on a raid. With Patch v0.6.0, safehouse workbenches automatically detect and pull crafting materials directly from adjacent stash lockers, meaning you never need to carry heavy scrap metal in your backpack to craft.',
+      '03 · Canvas Bed Sleeping & World Cycles: Every safehouse contains a canvas bunk. Interacting with the bed [E] lets you skip 1 to 12 hours of in-game time, allowing you to advance through pitch-black nights (21:00 to 06:00) safely and reset 24-hour merchant contract job pools. Active bleeding or severe dehydration will awaken your character immediately.',
+      '04 · Quasi-Fast Travel: Paved Road Sprinting & Staged Transit: Because instant teleportation is disabled, travel between sectors must be earned. The safest traversal method is staged transit along main asphalt roadways, where mutant density is 70% lower than in dense forests and marshlands. Sprint in 5-second bursts to preserve at least 40% stamina for emergency evasions.',
+      '05 · Emergency Safehouse Bug-Out Routes: Always designate a primary and secondary safehouse before embarking on a bunker raid. If your weapon drops below 50% durability or you run low on ammunition, do not push toward the main extraction gate; retreat to the nearest intermediate safehouse locker to rearm and repair.'
+    ],
+    facts: [
+      ['Instant Fast Travel', 'Disabled by design; transit is tactical and executed in-world on foot'],
+      ['Safehouse Hubs', '4 verified safehouses: Central Zalesye, Crossroads Annex, Hospital Wing, Outpost B-1'],
+      ['Stash Immunity', 'Locker storage is 100% immune to death penalties and persistent across world resets'],
+      ['Workbench Stash Link', 'v0.6.0 workbenches pull crafting ingredients directly from nearby safehouse lockers'],
+      ['Bed Sleep Mechanic', 'Safehouse canvas bunks skip 1-12 hours; resets daily merchant contracts'],
+      ['Paved Road Traversal', 'Asphalt highways have 70% lower mutant spawn density than deep wilderness'],
+      ['Verified Baseline', 'Early Access Patch v0.6.0 Baseline']
+    ],
+    faq: [
+      ['Is there fast travel or player housing in Scavland?', 'No. Scavland has no magical fast travel teleportation or sandbox player housing. Survival is built on traversing Zalesye on foot between four persistent subterranean Safehouses equipped with stashes, beds, and workbenches.'],
+      ['Where are all the player stash lockers located in Scavland?', 'Stash lockers are located in the Central Zalesye Safehouse, the Crossroads Annex (adjacent to merchant Volodymyr), the Hospital Medical Wing, and the eastern perimeter at Outpost B-1.'],
+      ['Can other players or bandits raid my safehouse stash?', 'No. Items stored in safehouse lockers are permanently protected, completely secure from hostile AI raiders, and never drop upon player death.'],
+      ['How do I travel across the map quickly without dying?', 'Stick to paved highways and cleared rail lines rather than cutting through dense woods, keep sprint stamina above 40% to outrun Hellhounds, and equip a weapon with a suppressor (like PBS-4) to avoid triggering a 200m mutant sound ripple.']
+    ],
+    related: [
+      'scavland-sleep-and-world-reset-guide',
+      'scavland-beginner-guide',
+      'scavland-death-and-loot-recovery',
+      'scavland-crafting-and-trading',
+      'scavland-merchant-prices-and-barter-guide'
+    ],
+    keywords: [
+      'scavland fast travel',
+      'scav land fast travel',
+      'scavland player housing',
+      'scavland safehouses',
+      'scavland safehouse locations',
+      'scavland stash locations',
+      'scavland travel guide'
     ]
   }
 ];
