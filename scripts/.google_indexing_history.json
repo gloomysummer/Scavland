@@ -11,7 +11,7 @@
     "note": "Pre-existing page before today"
   },
   "https://scavland.wiki/guide/scavland-death-and-loot-recovery/": {
-    "last_submitted": "2026-09-11T04:05:01.892714+00:00",
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -27,10 +27,9 @@
     "note": "Pre-existing page before today"
   },
   "https://scavland.wiki/guide/scavland-quests-and-contracts/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-factions-and-reputation/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -67,10 +66,9 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-tactical-database-weapons-loot/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-early-access-launch-faq-and-roadmap/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -138,12 +136,12 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/faq/": {
-    "last_submitted": "2026-09-12T22:01:48.057271+00:00",
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/": {
-    "last_submitted": "2026-09-12T22:01:48.057271+00:00",
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -729,6 +727,26 @@
   },
   "https://scavland.wiki/ja/guide/scavland-safehouses-and-fast-travel-guide/": {
     "last_submitted": "2026-09-12T22:01:48.057271+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/de/guide/scavland-binoculars-and-scouting-guide/": {
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/ja/guide/scavland-binoculars-and-scouting-guide/": {
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/ru/guide/scavland-binoculars-and-scouting-guide/": {
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/guide/scavland-binoculars-and-scouting-guide/": {
+    "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   }
