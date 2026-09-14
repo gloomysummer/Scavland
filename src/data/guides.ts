@@ -287,14 +287,14 @@ export const guides: Guide[] = [
     category: 'Gear',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Tactical weapon modification and workbench repair interface in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
-    updated: '2026-09-09',
-    answer: 'Firearms in Scavland degrade with every shot fired, accelerating in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. Patch v0.5.169 reworked field maintenance: gun field tools no longer require consumable Gun Cleaning Oil for baseline restoration up to 70%, and heavy armor repair kits received a glue cost discount. For complete restoration above 70%, bring damaged firearms and armor to safehouse workbenches or Gunsmith Petar in Zalesye. Before deploying into dangerous raids, consult the [Scavland Beginner Guide](/guide/scavland-beginner-guide/) for survival fundamentals, browse our full [Weapons Arsenal](/weapons/) for exact stat tables, check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for parts trading, or see [Sleep & World Reset](/guide/scavland-sleep-and-world-reset-guide/) to refresh trader inventories.',
+    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    updated: '2026-09-15',
+    answer: 'Firearms in Scavland degrade with every shot fired, accelerating 2x faster in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. Patch v0.5.169 reworked field maintenance: gun field tools no longer require consumable Gun Cleaning Oil for baseline restoration up to 70%, and heavy armor repair kits received a glue cost discount. For complete restoration above 70%, bring damaged firearms and armor to safehouse workbenches or Gunsmith Petar in Zalesye. Before deploying into dangerous raids, consult the [Scavland Beginner Guide](/guide/scavland-beginner-guide/) for survival fundamentals, browse our full [Weapons Arsenal](/weapons/) for exact stat tables, check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for parts trading, or see [Sleep & World Reset](/guide/scavland-sleep-and-world-reset-guide/) to refresh trader inventories.',
     steps: [
       '01 · Monitor Jam Thresholds (50% / 70% Rules): Firearms operating above 70% condition have a 0% mechanical failure rate. Below 50% condition, weapons suffer frequent stovepipe jams during sustained automatic fire. Condition below 30% risks catastrophic misfires that damage internal components.',
       '02 · Oil-Free Field Tool Maintenance (v0.5.169 Buff): Patch v0.5.169 uncoupled the basic Gun Field Tool from Gun Cleaning Oil. You can now use the field tool anywhere in the wasteland to service firearms up to the 70% threshold without expending rare oil bottles.',
       '03 · Clearing In-Combat Stovepipes: If your trigger clicks without firing, immediately double-tap the reload key [R] or rack the bolt to eject the defective casing. Disengage behind cover to evaluate barrel fouling before continuing the firefight.',
-      '04 · Full Workbench & Petar Overhauls: Restoring weapon condition from 70% to 100% requires a Safehouse Workbench (combining Weapon Springs + Metal Scrap) or paying Gunsmith Petar (relocated right next to Grigory in the Zalesye market).',
+      '04 · Full Workbench & Petar Overhauls: Restoring weapon condition from 70% to 100% requires a Safehouse Workbench (combining Weapon Springs + Metal Scrap) or paying Gunsmith Petar (relocated right next to Grigory in the Zalesye market). Always keep spare Weapon Springs and Electronic Relays in your tactical rig for field maintenance in deep irradiated zones.',
       '05 · Heavy Armor Repair & Glue Discount: Patch v0.5.169 lowered the industrial glue requirement on Heavy Armor Repair Kits by 50%, making plate carrier and ballistic helmet upkeep significantly more affordable after mutant encounters.'
     ],
     facts: [
@@ -302,13 +302,16 @@ export const guides: Guide[] = [
       ['Field Tool Independence', 'v0.5.169 removed Gun Cleaning Oil requirement for basic field repair tool use (restores up to 70%)'],
       ['Armor Kit Glue Discount', 'Heavy armor repair kit recipe glue requirement reduced in Patch v0.5.169'],
       ['Gunsmith Relocation', 'Petar the gunsmith relocated adjacent to Grigory in central Zalesye market'],
-      ['Verified Baseline', 'Early Access Patch v0.5.169 Baseline']
+      ['Radiated Degradation', 'Active Mist and irradiated sectors accelerate barrel wear and carbon fouling by 2x'],
+      ['Crucial Spares', 'Weapon Springs and Electronic Relays are essential components for high-tier field repairs'],
+      ['Verified Baseline', 'Early Access Patch v0.6.0 Baseline']
     ],
     faq: [
       ['How do I clear a weapon jam during combat?', 'Press the reload key [R] twice or manually cycle the bolt to eject the jammed casing and chamber a fresh cartridge. Retreat behind hard cover if under automatic fire.'],
       ['Do field repair tools still require Gun Cleaning Oil in v0.5.169?', 'No. Patch v0.5.169 made the basic Gun Field Tool independent from Gun Cleaning Oil, allowing scavengers to perform emergency maintenance up to 70% condition without consuming oil.'],
       ['Where do I find Gunsmith Petar for advanced weapon repairs?', 'Petar was relocated in v0.5.169 from the southern perimeter directly into the central Zalesye settlement square next to trader Grigory.'],
       ['What materials are required to repair heavy armor vests?', 'Heavy Armor Repair Kits require Ballistic Fiber, Sheet Metal Scrap, and Industrial Glue (glue cost discounted in v0.5.169).'],
+      ['What spare parts should I carry for emergency field repairs?', 'Always carry 2x Weapon Springs, 1x Electronic Relay, and 1x Gun Field Tool in your tactical rig. In irradiated sectors where weapon degradation accelerates by 2x, these components let you restore guns above the 70% threshold without returning to base.'],
       ['How do I reduce weapon durability degradation during combat?', 'To slow down firearm wear: avoid firing while wading through muddy water or irradiated swamps (which accelerates barrel fouling by 2.5x), fire in controlled semi-auto bursts instead of full-auto mag dumps to prevent receiver overheating, and always use field repair tools to service guns above 70% before entering high-tier raids.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands', 'scavland-sleep-and-world-reset-guide', 'scavland-merchant-prices-and-barter-guide'],
@@ -923,8 +926,61 @@ export const guides: Guide[] = [
       'scavland optics recon',
       'scavland view distance'
     ]
+  },
+  {
+    slug: 'scavland-consumables-and-medical-supplies',
+    shortTitle: 'Consumables & Meds',
+    title: 'Scavland Consumables & Medical Guide: Healing, Food, Water & Radiation',
+    description: 'Complete Scavland consumables and medical guide: bandages for bleeding, boiled water vs dehydration, painkillers, medkits, splints, and anti-rad items.',
+    category: 'Survival',
+    image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
+    imageAlt: 'Scavenger managing medical supplies, food rations, and clean water in Scavland',
+    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    updated: '2026-09-15',
+    answer: 'Managing survival consumables and trauma in Scavland is the difference between extracting with high-tier loot and dying in the wasteland. Unlike casual survival shooters, Scavland distinguishes between acute ballistic trauma (Light and Heavy Bleeding, Fractures) and systemic physical degradation (Dehydration, Radiation Dosage, Hunger). Sleeping while dehydrated triggers a lethal stamina lock, and applying a standard medkit without first plugging arterial bleeding wastes scarce healing pulses. Mastering the hierarchy of field treatment—stopping hemorrhage with Sterile Bandages, drinking Boiled Water before resting, splinting broken bones to restore sprint speed, and popping Charcoal Tablets before Mist incursions—ensures sustained operational readiness across Zalesye. For related tactical guidance, consult our [Beginner Survival Guide](/guide/scavland-beginner-guide/), [Hospital Medical Wing Quest](/guide/scavland-hospital-quest-and-medical-supplies/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
+    steps: [
+      '01 · Prioritize Hydration & Clean Water Protocol: Never venture into raids without at least one bottle of Boiled Water. Collecting dirty water bottles from sinks and boiling them at safehouse campfires using an Empty Tin Can eliminates intestinal bacteria. Crucially, sleeping while dehydrated locks stamina recovery to zero upon waking.',
+      '02 · Stop Hemorrhage Before Healing HP: Arterial and venous bleeding drain health at up to 5 HP/sec and will cancel incoming medkit regeneration. Keep Sterile Bandages or Military Hemostatic Gauze bound to quick slot [5] to seal active hemorrhage in under 2 seconds before using healing salves.',
+      '03 · Stabilize Fractures with Field Splints: High-altitude falls from watchtowers and heavy shotgun blasts cause limb fractures, penalizing character movement speed by 40% and inflating weapon sway by 60%. Always carry a Wooden Splint (crafted from Scrap Wood and Clean Cloth) to immediately normalize movement.',
+      '04 · Radiation Flush & Anti-Rad Dosage: Environmental hotspots and the toxic Mist accumulate millisieverts (mSv) on your Geiger counter. Consume Charcoal Tablets early in yellow radiation zones; reserve rare military-grade Rad-Away auto-injectors for red-line radiation spikes encountered during deep anomaly farming.',
+      '05 · Combat Stimulants & High-Calorie Rations: Canned Beef (Tushonka) and MRE Rations restore lost hunger bars that cap maximum stamina. In high-threat extraction scenarios, pop Adrenaline Stims or Energy Drinks to grant temporary +10kg carry capacity and rapid stamina recharge to sprint past bandit ambushes.'
+    ],
+    facts: [
+      ['Boiled Water', 'Cures dehydration; crafted by boiling Dirty Water at safehouse campfires; restores 40 Hydration'],
+      ['Sterile Bandage', 'Stops Light Bleeding in 2s; crafts from 2x Clean Cloth + 1x Antiseptic Solution'],
+      ['Military Hemostatic Gauze', 'Instantly stops Heavy Bleeding; rare hospital and military vault spawn'],
+      ['Wooden Splint', 'Eliminates broken limb debuff (-40% sprint speed, +60% weapon sway)'],
+      ['Rad-Away Injector', 'Flushes 150 mSv radiation dosage; sold by Physician Anna at Zalesye Clinic'],
+      ['Dehydration Lock', 'Sleeping while dehydrated completely locks stamina regeneration; drink water before rest'],
+      ['Verified Baseline', 'Early Access Patch v0.6.0 Baseline']
+    ],
+    faq: [
+      ['How do you stop bleeding in Scavland?', 'Assign Bandages or Hemostatic Gauze to a quickbar slot. Press the hotkey to apply. Standard medkits will not restore hit points while active arterial bleeding continues to drain your health pool.'],
+      ['Why won\'t my stamina recover after sleeping in a safehouse?', 'Sleeping while dehydrated triggers the Dehydration Exhaustion debuff, locking stamina regeneration to zero. Always consume Boiled Water or canned drinks before interacting with safehouse canvas bunks.'],
+      ['Where is the best place to find medical supplies in Scavland?', 'The Zalesye Hospital Medical Wing is the richest spawn area for pharmaceutical items, defended by Tongue Monsters. You can also purchase medical kits directly from Physician Anna in the central settlement.'],
+      ['Can you purify dirty water without a campfire?', 'In Patch v0.6.0, Water Purification Tablets can be combined with Dirty Water bottles directly in your inventory, producing potable Clean Water without building a fire.'],
+      ['Do food rations expire or spoil in your backpack?', 'No. Canned goods, MRE rations, and hardtack biscuits have permanent shelf life in current Early Access builds and do not spoil in your inventory or safehouse stash.']
+    ],
+    related: [
+      'scavland-beginner-guide',
+      'scavland-hospital-quest-and-medical-supplies',
+      'scavland-sleep-and-world-reset-guide',
+      'scavland-merchant-prices-and-barter-guide',
+      'scavland-mist-survival-and-radiation'
+    ],
+    keywords: [
+      'scavland consumables',
+      'scavland medical supplies',
+      'scavland heal bleeding',
+      'scavland boiled water',
+      'scavland dehydration stamina',
+      'scavland rad away',
+      'scavland medkits',
+      'scavland food and water'
+    ]
   }
 ];
 
 export const guideBySlug = Object.fromEntries(guides.map((guide) => [guide.slug, guide]));
+
 

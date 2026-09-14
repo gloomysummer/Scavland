@@ -270,6 +270,39 @@ export const deGuides: Guide[] = [
       ['Respawnen Kisten in Bunkern nach dem Schlafen?', 'Nein. Bunker und Kartenschlüssel-Tresore besitzen eigene mehrstündige Sperrzeiten, um Endlos-Farming zu unterbinden.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts']
+  },
+  {
+    slug: 'scavland-consumables-and-medical-supplies',
+    category: 'Überleben',
+    title: 'Scavland Medizin & Vorräte: Heilung, Wasser, Nahrung & Strahlung',
+    shortTitle: 'Medizin & Vorräte',
+    description: 'Kompletter Scavland-Guide für medizinische Versorgung: Blutungen stoppen, Dehydrierung kurieren, Schmerzmittel, Verbände und Strahlenschutz.',
+    evidence: 'Verifiziert mit Early Access Patch v0.6.0',
+    updated: '2026-09-15',
+    image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
+    imageAlt: 'Scavenger verwaltet Vorräte, Verbandszeug und sauberes Wasser in Scavland',
+    answer: 'Die richtige Handhabung von Vorräten und Traumata in Scavland entscheidet über erfolgreiche Evakuierung oder Tod im Ödland. Blutungen müssen vor der Medkit-Nutzung gestillt werden, und Dehydrierung blockiert die Ausdauerregeneration nach dem Schlafen.',
+    steps: [
+      '01 · Sauberes Trinkwasser priorisieren: Verunreinigtes Wasser aus Waschbecken stets an Lagerfeuern abkochen. Schlafen bei Dehydrierung blockiert die Ausdauerregeneration vollständig.',
+      '02 · Blutungen vor Medkits stoppen: Arterielle Blutungen leeren bis zu 5 TP/s. Nutze sterile Verbände oder Hämostase-Gaze auf Schnelltaste [5], bevor du Heilmittel anwendest.',
+      '03 · Knochenbrüche schienen: Stürze und Schrotflintreffer verursachen Frakturen (-40% Tempo, +60% Waffenwackeln). Holzschienen stellen die normale Mobilität sofort wieder her.',
+      '04 · Strahlenschutz & Rad-Away: Bei gelbem Strahlungswert Aktivkohletabletten schlucken. Spare militärische Rad-Away-Injektoren für rote Gefahrenzonen im dichten Nebel auf.',
+      '05 · Kampfdoping & Kalorien: Dosenfleisch (Tuschonka) stellt verlorene Ausdauerkapazitäten wieder her. Adrenalin-Stims gewähren temporär +10kg Tragekraft für Flucht-Sprints.'
+    ],
+    facts: [
+      ['Abgekochtes Wasser', 'Kuriert Dehydrierung; wird an Lagerfeuern aus Schmutzwasser hergestellt'],
+      ['Steriler Verband', 'Stoppt leichte Blutungen in 2 Sekunden; Handwerk aus Stoff + Antiseptikum'],
+      ['Militär-Hämostase-Gaze', 'Stoppt schwere Blutungen sofort; seltene Beute in Krankenhäusern'],
+      ['Holzschiene', 'Entfernt Fraktur-Debuffs (-40% Tempo, +60% Waffenwackeln)'],
+      ['Rad-Away Injektor', 'Beseitigt 150 mSv Strahlendosis; erhältlich bei Ärztin Anna in Zalesye'],
+      ['Dehydrierungs-Sperre', 'Schlafen bei Dehydrierung friert die Ausdauerregeneration komplett ein']
+    ],
+    faq: [
+      ['Wie stoppe ich Blutungen in Scavland?', 'Lege Verbände auf eine Schnelltaste. Normale Medkits stellen keine Gesundheit wieder her, solange eine aktive arterielle Blutung besteht.'],
+      ['Warum regeneriert sich meine Ausdauer nach dem Schlafen nicht?', 'Starke Dehydrierung blockiert die Ausdauererholung. Trinke stets abgekochtes Wasser, bevor du dich schlafen legst.'],
+      ['Wo findet man die meisten Medikamente?', 'Der Krankenhaustrakt von Zalesye bietet die dichtesten Fundorte für Pharmazeutika, wird jedoch von Zungenmonstern bewacht.']
+    ],
+    related: ['scavland-beginner-guide', 'scavland-sleep-and-world-reset-guide', 'scavland-hospital-quest-and-medical-supplies']
   }
 ];
 
