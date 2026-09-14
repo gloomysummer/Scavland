@@ -63,11 +63,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(-
 kbd,.eyebrow,.stamp{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.05em;text-transform:uppercase}
 .nav-search{border:1px solid var(--line);padding:0 10px;border-radius:4px}
 .nav-search kbd{color:var(--acid)}
-.lang-switcher{display:inline-flex;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:4px;padding:2px;gap:2px;margin-left:8px;flex-shrink:0}
-.lang-btn{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;padding:2px 8px!important;min-height:26px!important;border-radius:3px;color:var(--muted)!important;text-decoration:none;transition:all .2s ease;line-height:1}
-.lang-btn:hover{color:var(--ink)!important;background:rgba(255,255,255,0.08)}
-.lang-btn.active{color:#0b0c10!important;background:var(--acid)!important;font-weight:700}
-.lang-btn.active:after{display:none!important}
+.lang-switcher{display:inline-flex;align-items:center;background:rgba(255,255,255,0.04);border:1px solid var(--line);border-radius:4px;padding:2px;gap:2px;margin-left:12px;flex-shrink:0}
+.lang-btn{font-family:'IBM Plex Mono',monospace;font-size:.72rem;font-weight:600;padding:4px 8px;min-height:28px;border-radius:3px;color:var(--muted);text-decoration:none;transition:all .2s ease;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+.lang-btn:hover{color:var(--ink);background:rgba(255,255,255,0.08)}
+.lang-btn.active{color:#0b0c10;background:var(--acid);font-weight:700}
+.lang-btn.active:after{display:none}
 main{position:relative;z-index:1}
 
 /* Hero */
@@ -232,36 +232,81 @@ main{position:relative;z-index:1}
 /* ═══════════════════════════════════════════════════
    Mobile Responsive Rules (Optimized for Handhelds)
    ═══════════════════════════════════════════════════ */
+@media(max-width:1024px) and (min-width:769px){
+  .site-header nav{
+    gap:12px;
+    font-size:0.78rem;
+  }
+  .site-header{
+    padding:0 16px;
+  }
+}
+
 @media(max-width:768px){
-  /* 1. Header: Smooth Horizontal Scroll Tabs */
+  /* 1. Header: Top Row (Brand + Language Switcher), Bottom Row (Scroll Tabs) */
   .site-header{
     min-height:auto;
-    padding:14px 16px 6px;
-    flex-direction:column;
-    align-items:stretch;
-    gap:10px;
+    padding:10px 16px 6px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:0;
   }
   .brand{
+    order:1;
+    flex:0 0 auto;
     justify-content:flex-start;
   }
+  .lang-switcher{
+    order:2;
+    flex:0 0 auto;
+    margin-left:auto;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:6px;
+    padding:3px;
+    gap:3px;
+    touch-action:manipulation;
+  }
+  .lang-btn{
+    min-height:34px;
+    min-width:34px;
+    padding:4px 8px;
+    font-size:0.76rem;
+    font-weight:700;
+    border-radius:4px;
+    touch-action:manipulation;
+    -webkit-tap-highlight-color:rgba(185,232,108,0.25);
+    user-select:none;
+    -webkit-user-select:none;
+  }
+  .lang-btn:active{
+    background:rgba(185,232,108,0.3) !important;
+    color:#0b0c10 !important;
+    transform:scale(0.93);
+  }
   .site-header nav{
+    order:3;
+    flex:0 0 100%;
+    width:100%;
     display:flex;
     gap:16px;
     flex-wrap:nowrap;
     overflow-x:auto;
     -webkit-overflow-scrolling:touch;
     scrollbar-width:none;
-    margin:0 -16px;
-    padding:4px 20px 8px 16px;
-    border-top:1px solid rgba(255,255,255,0.04);
-    -webkit-mask-image:linear-gradient(to right, black 84%, transparent 100%);
-    mask-image:linear-gradient(to right, black 84%, transparent 100%);
+    margin:8px -16px 0;
+    padding:4px 20px 6px 16px;
+    border-top:1px solid rgba(255,255,255,0.06);
+    -webkit-mask-image:linear-gradient(to right, black 86%, transparent 100%);
+    mask-image:linear-gradient(to right, black 86%, transparent 100%);
   }
   .site-header nav::-webkit-scrollbar{
     display:none;
   }
   .site-header nav a{
-    min-height:44px;
+    min-height:40px;
     font-size:0.88rem;
     padding:0 4px;
     flex-shrink:0;
@@ -269,8 +314,8 @@ main{position:relative;z-index:1}
     align-items:center;
   }
   .site-header .nav-search{
-    padding:0 12px;
-    min-height:44px;
+    padding:0 10px;
+    min-height:40px;
     margin-left:auto;
     display:inline-flex;
     align-items:center;

@@ -217,3 +217,24 @@ export function getLocalizedUrl(currentPath: string, targetLang: Language): stri
   }
   return `/${targetLang}${base}`;
 }
+
+/**
+ * Returns the target URL for language switcher buttons.
+ * If the current page has a direct translation (e.g. '/' or '/guide/*'), switches to that translated page.
+ * If the current page is English-only (e.g. '/weapons/', '/factions/'), navigates to that language's home hub
+ * ('/ru/', '/de/', '/ja/') instead of disabling the button or rendering a dead element.
+ */
+export function getLanguageSwitcherUrl(currentPath: string, targetLang: Language): string {
+  const base = stripLocale(currentPath);
+  if (targetLang === 'en') {
+    return base;
+  }
+  if (!isMultiLangPath(base)) {
+    return `/${targetLang}/`;
+  }
+  if (base === '/') {
+    return `/${targetLang}/`;
+  }
+  return `/${targetLang}${base}`;
+}
+

@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { adConfig } from '../data/adConfig';
-import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, stripLocale, isMultiLangPath, type Language } from '../data/i18n';
+import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, getLanguageSwitcherUrl, stripLocale, isMultiLangPath, type Language } from '../data/i18n';
 
 interface Props {
   title?: string;
@@ -115,7 +115,7 @@ const isActive = (path: string) => {
         <img src="/images/icons/logo.svg" alt="" width="32" height="32" />
         <span>SCAVLAND<span class="brand-sub">{t.brandSub}</span></span>
       </a>
-      <nav aria-label="Primary">
+      <nav aria-label="Primary" class="site-nav">
         <a class:list={{active:isActive('/guide/')}} href={getLocalizedUrl('/guide/', lang)}>{t.nav.guides}</a>
         <a class:list={{active:isActive('/weapons/')}} href={getLocalizedUrl('/weapons/', lang)}>{t.nav.weapons}</a>
         <a class:list={{active:isActive('/factions/')}} href={getLocalizedUrl('/factions/', lang)}>{t.nav.factions}</a>
@@ -125,25 +125,14 @@ const isActive = (path: string) => {
         <a class:list={{active:isActive('/maps/')}} href={getLocalizedUrl('/maps/', lang)}>{t.nav.world}</a>
         <a class:list={{active:isActive('/updates/')}} href={getLocalizedUrl('/updates/', lang)}>{t.nav.updates}</a>
         <a href={getLocalizedUrl('/search/', lang)} class="nav-search" aria-label="Search guides">{t.nav.search} <kbd>/</kbd></a>
-        
-        <!-- Tactical Language Switcher -->
-        <div class="lang-switcher" aria-label="Change Language">
-          <a href={getLocalizedUrl(currentPath, 'en')} class:list={['lang-btn', { active: lang === 'en' }]} title="English">EN</a>
-          {isMultiLang ? (
-            <>
-              <a href={getLocalizedUrl(currentPath, 'ru')} class:list={['lang-btn', { active: lang === 'ru' }]} title="Русский">RU</a>
-              <a href={getLocalizedUrl(currentPath, 'de')} class:list={['lang-btn', { active: lang === 'de' }]} title="Deutsch">DE</a>
-              <a href={getLocalizedUrl(currentPath, 'ja')} class:list={['lang-btn', { active: lang === 'ja' }]} title="日本語">JA</a>
-            </>
-          ) : (
-            <>
-              <span class="lang-btn disabled" title="Russian translation available for Home & Guides only" style="opacity:0.35;cursor:not-allowed;font-size:0.75rem;padding:2px 6px;">RU</span>
-              <span class="lang-btn disabled" title="German translation available for Home & Guides only" style="opacity:0.35;cursor:not-allowed;font-size:0.75rem;padding:2px 6px;">DE</span>
-              <span class="lang-btn disabled" title="Japanese translation available for Home & Guides only" style="opacity:0.35;cursor:not-allowed;font-size:0.75rem;padding:2px 6px;">JA</span>
-            </>
-          )}
-        </div>
       </nav>
+      <!-- Tactical Language Switcher -->
+      <div class="lang-switcher" role="navigation" aria-label="Language selector">
+        <a href={getLanguageSwitcherUrl(currentPath, 'en')} class:list={['lang-btn', { active: lang === 'en' }]} title="English">EN</a>
+        <a href={getLanguageSwitcherUrl(currentPath, 'ru')} class:list={['lang-btn', { active: lang === 'ru' }]} title="Русский">RU</a>
+        <a href={getLanguageSwitcherUrl(currentPath, 'de')} class:list={['lang-btn', { active: lang === 'de' }]} title="Deutsch">DE</a>
+        <a href={getLanguageSwitcherUrl(currentPath, 'ja')} class:list={['lang-btn', { active: lang === 'ja' }]} title="日本語">JA</a>
+      </div>
     </header>
     <main id="main-content"><slot /></main>
     <footer class="site-footer">
