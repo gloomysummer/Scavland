@@ -749,5 +749,25 @@
     "last_submitted": "2026-09-13T22:03:13.839577+00:00",
     "status": 200,
     "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/guide/scavland-consumables-and-medical-supplies/": {
+    "last_submitted": "2026-09-14T22:03:12.183994+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/ru/guide/scavland-consumables-and-medical-supplies/": {
+    "last_submitted": "2026-09-14T22:03:12.183994+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/ja/guide/scavland-consumables-and-medical-supplies/": {
+    "last_submitted": "2026-09-14T22:03:12.183994+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
+  },
+  "https://scavland.wiki/de/guide/scavland-consumables-and-medical-supplies/": {
+    "last_submitted": "2026-09-14T22:03:12.183994+00:00",
+    "status": 200,
+    "action": "URL_UPDATED"
   }
 }
