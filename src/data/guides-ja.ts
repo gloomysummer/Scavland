@@ -157,7 +157,7 @@ export const jaGuides: Guide[] = [
     category: 'リリース＆価格',
     title: 'Scavland Steam価格・早期アクセス割引・日本語対応情報まとめ',
     shortTitle: '価格＆エディション情報',
-    description: 'ScavlandのSteam販売価格、ローンチ10%割引、早期アクセス配信範囲、今後の正式版（v1.0）価格改定についての詳細解説。',
+    description: 'ScavlandのSteam販売価格、ローンチ10%割引、早期アクセス配信範囲についての解説。',
     evidence: 'Steam公式ストアデータ 2026年9月確認',
     updated: '2026-09-08',
     image: '/images/cards/card_1_beginner_guide.webp',

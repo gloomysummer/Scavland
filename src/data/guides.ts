@@ -855,15 +855,15 @@ export const guides: Guide[] = [
     slug: 'scavland-patch-0-6-0-update-and-changes',
     shortTitle: 'Patch 0.6.0 Guide',
     title: 'Scavland Patch 0.6.0 Guide: Sleep, Control Rework & Traders',
-    description: 'Complete breakdown of Scavland Patch v0.6.0: Steam Deck compatibility, sleep system mechanics, gun range buffs, armor durability, and stash crafting.',
+    description: 'Complete breakdown of Scavland Patch v0.6.0: the sleep system, the rebuilt controls and keybinding system, a Jobs overhaul, Trader and loot rebalancing, and armor durability changes.',
     category: 'Updates',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-166s.jpg',
-    imageAlt: 'Scavland Patch v0.6.0 update notes, handheld and controller support, and gameplay balance changes',
+    imageAlt: 'Scavland Patch v0.6.0 update notes covering the sleep system, controls rework and balance changes',
     evidence: 'Official Steam announcements',
     updated: '2026-09-12',
     answer: 'Scavland Patch v0.6.0 represents the first major milestone update since Early Access launch, and delivers comprehensive system overhauls. The Steam store page states Scavland was built with controller and Steam Deck support in mind, and lists Full controller support. Key additions include a dynamic sleep-in-bed system that advances world time with injury interrupt checks, direct stash-to-workbench material pulling for crafting, across-the-board firearm effective range buffs (+1 to +2 tiles), compressed armor durability maximums, and specialized merchant buy rate adjustments (such as Zhivan paying 140% for common hardware). For complete gear data and trader locations, cross-reference our [Weapons Arsenal](/weapons/), [Merchant Prices Guide](/guide/scavland-merchant-prices-and-barter-guide/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
-      '01 · Handheld & Controller Support: the Steam store page states Scavland was built with controller and Steam Deck support in mind, and lists Full controller support. Recommended handheld settings are 1280x800 native resolution, a 60 FPS cap at 9W TDP, and fully customizable dual-binding controller profiles.',
+      '01 · Controller Support: the Steam store page states Scavland was built with controller and Steam Deck support in mind, and lists Full controller support. Every action is rebindable, including hold and tap variants, so build a layout that suits you.',
       '02 · Bed Sleep System & Ambient World Clock: Sleeping on canvas beds in safehouses now skips 1 to 12 hours of in-game time to bypass hazardous night mutants (21:00 to 06:00). Unlike simple pause-skips, the world simulation continues running, and sleep immediately cancels if you take environmental damage or reach critical hunger/thirst thresholds.',
       '03 · Gun Range Buffs & Weapon Reclassifications: All base firearms received a +1 to +2 tile effective range extension to improve medium-range engagements. Long rifles now occupy 3 full horizontal backpack rows, while the MK-47 has been reclassified into the Basic weapon tier to smooth early-game raider combat.',
       '04 · Direct Workbench Stash Pulling: Safehouse craft stations now directly pull required components (ballistic fiber, metal scrap, toolkits) from your nearby stash chest, eliminating tedious manual container swapping. Sewing kit recipes now require Pliers rather than glue bottles.',
@@ -879,7 +879,7 @@ export const guides: Guide[] = [
       ['Explorer Mode Buff', 'Explorer Mode granted +20% trader sell values and 150 maximum stamina pool']
     ],
     faq: [
-      ['What are the biggest changes in Scavland Patch v0.6.0?', 'Patch v0.6.0 brings official Steam Deck compatibility, a full in-game sleep skipping mechanic, automatic workbench pulling from stash chests, weapon range increases, and comprehensive trader economic rebalancing.'],
+      ['What are the biggest changes in Scavland Patch v0.6.0?', 'Patch v0.6.0 brings a full in-game sleep skipping mechanic, a completely rebuilt Controls & Keybinding system, automatic workbench pulling from stash chests, weapon range increases across all guns, and extensive Trader and loot rebalancing.'],
       ['Does crafting in v0.6.0 take items directly from the stash?', 'Yes. Safehouse workbenches now automatically access resources in your adjacent storage lockers, so you no longer need to carry heavy scrap and wires in your personal inventory.'],
       ['Why did armor durability numbers decrease in v0.6.0?', 'Developer NoShadow compressed armor durability ratings (e.g. Heavy Armor from 7 to 6) to make plate repairs and vest condition management more impactful during sustained wasteland firefights.'],
       ['How does the sleep system work in v0.6.0?', 'Interacting with any safehouse bed lets you sleep between 1 and 12 hours. World cycles advance, daily merchant contracts refresh, but active bleeding or severe dehydration will wake your scavenger prematurely.']
@@ -896,7 +896,7 @@ export const guides: Guide[] = [
       'scavland v0.6.0',
       'scavland update 0.6.0',
       'scavland patch notes',
-      'scavland steam deck verified',
+      'scavland steam deck settings',
       'scavland we hear you',
       'scavland balance changes'
     ]
