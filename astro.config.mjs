@@ -27,7 +27,7 @@ export default defineConfig({
           return item;
         }
 
-        if (url === 'https://scavland.wiki/' || url === 'https://scavland.wiki/de/' || url === 'https://scavland.wiki/ru/') {
+        if (url === 'https://scavland.wiki/' || url === 'https://scavland.wiki/de/' || url === 'https://scavland.wiki/ru/' || url === 'https://scavland.wiki/ja/') {
           item.lastmod = new Date(defaultDate);
           item.changefreq = 'daily';
           item.priority = 1.0;

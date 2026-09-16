@@ -388,17 +388,9 @@ export const jaGuides: Guide[] = [
 
 const enGuideMap = Object.fromEntries(enGuides.map((g) => [g.slug, g]));
 
-export const allJaGuides: Guide[] = [
-  ...jaGuides.map((ja) => ({
-    ...ja,
-    image: enGuideMap[ja.slug]?.image || '/images/hero/header.webp',
-  })),
-  ...enGuides
-    .filter(en => !jaGuides.some(ja => ja.slug === en.slug))
-    .map(en => ({
-      ...en,
-      description: en.description,
-    }))
-];
+export const allJaGuides: Guide[] = jaGuides.map((ja) => ({
+  ...ja,
+  image: enGuideMap[ja.slug]?.image || '/images/hero/header.webp',
+}));
 
 export const jaGuideBySlug = Object.fromEntries(allJaGuides.map((g) => [g.slug, g]));

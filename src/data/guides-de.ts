@@ -308,17 +308,9 @@ export const deGuides: Guide[] = [
 
 const enGuideMap = Object.fromEntries(enGuides.map((g) => [g.slug, g]));
 
-export const allDeGuides: Guide[] = [
-  ...deGuides.map((de) => ({
-    ...de,
-    image: enGuideMap[de.slug]?.image || '/images/hero/header.webp',
-  })),
-  ...enGuides
-    .filter(en => !deGuides.some(de => de.slug === en.slug))
-    .map(en => ({
-      ...en,
-      description: en.description,
-    }))
-];
+export const allDeGuides: Guide[] = deGuides.map((de) => ({
+  ...de,
+  image: enGuideMap[de.slug]?.image || '/images/hero/header.webp',
+}));
 
 export const deGuideBySlug = Object.fromEntries(allDeGuides.map((g) => [g.slug, g]));

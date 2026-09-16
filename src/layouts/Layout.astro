@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 import { adConfig } from '../data/adConfig';
-import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, getLanguageSwitcherUrl, stripLocale, isMultiLangPath, type Language } from '../data/i18n';
+import { supportedLanguages, uiTranslations, getLanguageFromPath, getLocalizedUrl, getLanguageSwitcherUrl, stripLocale, getAvailableLanguages, type Language } from '../data/i18n';
 
 interface Props {
   title?: string;
@@ -25,11 +25,8 @@ const lang: Language = propLang || getLanguageFromPath(currentPath);
 const t = uiTranslations[lang];
 
 const cleanCanonical = stripLocale(canonical);
-const isMultiLang = isMultiLangPath(cleanCanonical);
-const enUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'en')}`;
-const ruUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'ru')}`;
-const deUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'de')}`;
-const jaUrl = `${siteUrl}${getLocalizedUrl(cleanCanonical, 'ja')}`;
+const availableLangs = getAvailableLanguages(cleanCanonical);
+const enUrl = `${siteUrl}${cleanCanonical}`;
 
 const isActive = (path: string) => {
   const locPath = getLocalizedUrl(path, lang);
@@ -47,21 +44,11 @@ const isActive = (path: string) => {
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href={`${siteUrl}${canonical}`} />
     
-    <!-- Multi-language hreflang SEO cluster for Googlebot (Defensive against 404 targets) -->
-    {isMultiLang ? (
-      <>
-        <link rel="alternate" hreflang="en" href={enUrl} />
-        <link rel="alternate" hreflang="ru" href={ruUrl} />
-        <link rel="alternate" hreflang="de" href={deUrl} />
-        <link rel="alternate" hreflang="ja" href={jaUrl} />
-        <link rel="alternate" hreflang="x-default" href={enUrl} />
-      </>
-    ) : (
-      <>
-        <link rel="alternate" hreflang="x-default" href={enUrl} />
-        <link rel="alternate" hreflang="en" href={enUrl} />
-      </>
-    )}
+    <!-- Multi-language hreflang SEO cluster for Googlebot (Dynamic & Reciprocal) -->
+    <link rel="alternate" hreflang="x-default" href={enUrl} />
+    {availableLangs.map((l) => (
+      <link rel="alternate" hreflang={l} href={`${siteUrl}${getLocalizedUrl(cleanCanonical, l)}`} />
+    ))}
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

@@ -1,4 +1,12 @@
+import { deGuides } from './guides-de';
+import { ruGuides } from './guides-ru';
+import { jaGuides } from './guides-ja';
+
 export type Language = 'en' | 'ru' | 'de' | 'ja';
+
+export const deGuideSlugs = new Set(deGuides.map((g) => g.slug));
+export const ruGuideSlugs = new Set(ruGuides.map((g) => g.slug));
+export const jaGuideSlugs = new Set(jaGuides.map((g) => g.slug));
 
 export interface LanguageMeta {
   code: Language;
@@ -189,12 +197,32 @@ export function stripLocale(pathname: string): string {
 }
 
 /**
- * Checks whether a given canonical path actually has translations in ru/de.
- * In Scavland, only the homepage ('/') and guide pages ('/guide/*') have ru and de localized pages.
+ * Returns list of languages that actually have content for the given canonical path.
+ * - '/' and '/guide/' exist in en, ru, de, ja.
+ * - Specific '/guide/[slug]/' pages only list languages that actually translated that slug.
+ * - All other sections (weapons, factions, maps, etc.) are English-only.
+ */
+export function getAvailableLanguages(pathname: string): Language[] {
+  const base = stripLocale(pathname);
+  if (base === '/' || base === '/guide/') {
+    return ['en', 'ru', 'de', 'ja'];
+  }
+  if (base.startsWith('/guide/')) {
+    const slug = base.replace(/^\/guide\//, '').replace(/\/$/, '');
+    const langs: Language[] = ['en'];
+    if (ruGuideSlugs.has(slug)) langs.push('ru');
+    if (deGuideSlugs.has(slug)) langs.push('de');
+    if (jaGuideSlugs.has(slug)) langs.push('ja');
+    return langs;
+  }
+  return ['en'];
+}
+
+/**
+ * Checks whether a given canonical path actually has translations in multiple languages.
  */
 export function isMultiLangPath(pathname: string): boolean {
-  const base = stripLocale(pathname);
-  return base === '/' || base.startsWith('/guide/');
+  return getAvailableLanguages(pathname).length > 1;
 }
 
 /**
@@ -202,14 +230,15 @@ export function isMultiLangPath(pathname: string): boolean {
  * E.g., ('/guide/', 'ru') -> '/ru/guide/'
  *       ('/ru/guide/', 'en') -> '/guide/'
  *       ('/', 'de') -> '/de/'
- * If the page is English-only (e.g. /weapons/, /factions/), safely returns base URL.
+ * If the page is not translated in targetLang, safely returns canonical English URL.
  */
 export function getLocalizedUrl(currentPath: string, targetLang: Language): string {
   const base = stripLocale(currentPath);
   if (targetLang === 'en') {
     return base;
   }
-  if (!isMultiLangPath(base)) {
+  const available = getAvailableLanguages(base);
+  if (!available.includes(targetLang)) {
     return base;
   }
   if (base === '/') {
@@ -220,21 +249,26 @@ export function getLocalizedUrl(currentPath: string, targetLang: Language): stri
 
 /**
  * Returns the target URL for language switcher buttons.
- * If the current page has a direct translation (e.g. '/' or '/guide/*'), switches to that translated page.
- * If the current page is English-only (e.g. '/weapons/', '/factions/'), navigates to that language's home hub
- * ('/ru/', '/de/', '/ja/') instead of disabling the button or rendering a dead element.
+ * If the current page has a direct translation, switches to that translated page.
+ * If the current page is not translated in targetLang:
+ * - for guide detail pages, navigates to the target language's Guide Hub ('/[targetLang]/guide/')
+ * - for other pages, navigates to the target language's Home Hub ('/[targetLang]/')
  */
 export function getLanguageSwitcherUrl(currentPath: string, targetLang: Language): string {
   const base = stripLocale(currentPath);
   if (targetLang === 'en') {
     return base;
   }
-  if (!isMultiLangPath(base)) {
-    return `/${targetLang}/`;
+  const available = getAvailableLanguages(base);
+  if (available.includes(targetLang)) {
+    if (base === '/') {
+      return `/${targetLang}/`;
+    }
+    return `/${targetLang}${base}`;
   }
-  if (base === '/') {
-    return `/${targetLang}/`;
+  if (base.startsWith('/guide/')) {
+    return `/${targetLang}/guide/`;
   }
-  return `/${targetLang}${base}`;
+  return `/${targetLang}/`;
 }
 

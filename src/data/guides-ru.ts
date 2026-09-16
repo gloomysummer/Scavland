@@ -345,18 +345,9 @@ export const ruGuides: Guide[] = [
 
 const enGuideMap = Object.fromEntries(enGuides.map((g) => [g.slug, g]));
 
-// Combine custom translated guides with fallback for remaining guides, ensuring 100% verified image paths
-export const allRuGuides: Guide[] = [
-  ...ruGuides.map((ru) => ({
-    ...ru,
-    image: enGuideMap[ru.slug]?.image || '/images/hero/header.webp',
-  })),
-  ...enGuides
-    .filter(en => !ruGuides.some(ru => ru.slug === en.slug))
-    .map(en => ({
-      ...en,
-      description: en.description,
-    }))
-];
+export const allRuGuides: Guide[] = ruGuides.map((ru) => ({
+  ...ru,
+  image: enGuideMap[ru.slug]?.image || '/images/hero/header.webp',
+}));
 
 export const ruGuideBySlug = Object.fromEntries(allRuGuides.map((g) => [g.slug, g]));
