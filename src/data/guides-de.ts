@@ -38,7 +38,7 @@ export const deGuides: Guide[] = [
     category: 'Release & Preise',
     title: 'Scavland Preis auf Steam: Editionen, Release-Rabatt & Systemanforderungen',
     shortTitle: 'Preis & Editionen auf Steam',
-    description: 'Alle Infos zum Scavland-Kaufpreis auf Steam: 19,99 € UVP, 10% Eröffnungsrabatt, Early-Access-Umfang und Steam Deck Kompatibilität.',
+    description: 'Alle Infos zum Scavland-Kaufpreis auf Steam: 19,99 € UVP, 10% Eröffnungsrabatt und Early-Access-Umfang.',
     evidence: 'Offizielle Steam-Store-Daten vom 4. September 2026',
     updated: '2026-09-07',
     image: '/images/cards/card_1_beginner_guide.webp',
@@ -58,7 +58,7 @@ export const deGuides: Guide[] = [
       ['Mikrotransaktionen', 'Keine']
     ],
     faq: [
-      ['Steigt der Preis nach Verlassen des Early Access?', 'Ja, Entwickler NoShadow plant eine Preisanpassung auf ca. 24,99 € zum 1.0-Release.'],
+      ['Steigt der Preis nach Verlassen des Early Access?', 'NoShadow hat noch keinen neuen Preis für die Vollversion angekündigt. Solange sich Scavland im Early Access befindet, gilt der aktuelle Steam-Preis; Änderungen würden über die Steam-News mitgeteilt.'],
       ['Wird Koop-Multiplayer extra kosten?', 'Nein, das geplante Koop-Update wird für alle Besitzer des Hauptspiels kostenlos nachgeliefert.']
     ],
     related: ['scavland-steam-deck-and-handheld-settings', 'scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison']
@@ -66,26 +66,26 @@ export const deGuides: Guide[] = [
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
     category: 'Hardware-Tuning',
-    title: 'Scavland auf Steam Deck: Beste Einstellungen für 60 FPS & 4h Akkulaufzeit',
+    title: 'Scavland auf Steam Deck & Handhelds: Controller, Display und Einstellungen',
     shortTitle: 'Steam Deck Einstellungen',
-    description: 'Optimale Grafikeinstellungen und Controller-Belegung für Scavland auf dem Steam Deck (OLED & LCD): Stabile 60 FPS bei 9W TDP und leisen Lüftern.',
-    evidence: 'Steam-Deck-Kompatibilität laut Community-Berichten',
+    description: 'Einstellungen als Ausgangspunkt für Scavland auf Steam Deck und Handheld-PCs: Auflösung, Framerate- und TDP-Optionen, Controller-Belegung und Textgröße. Das sind Vorschläge, keine gemessenen Werte.',
+    evidence: 'Offizielle Steam-Ankündigung (Controller-Support, für Steam Deck ausgelegt); Einstellungen sind Vorschläge',
     updated: '2026-09-07',
     image: '/images/screenshots/steam_ss_04.webp',
-    imageAlt: 'Scavland Steam Deck Einstellungen für 60 FPS und lange Akkulaufzeit',
-    answer: 'Mit 9W TDP-Begrenzung läuft Scavland auf dem Steam Deck mit butterweichen 60 FPS bei über 4 Stunden Akkulaufzeit und unter 60°C Chiptemperatur.',
+    imageAlt: 'Scavland auf einem Handheld-Display mit taktischem HUD',
+    answer: 'Scavland erscheint mit vollem Controller-Support und wurde laut Entwickler „mit Blick auf Steam Deck und Handheld-Spiel entwickelt“, sodass kein eigenes Setup nötig ist. Update 0.7.0 nennt außerdem eine „verbesserte Textgröße auf dem Steam Deck“. Die folgenden Punkte sind Startwerte und keine Messergebnisse: Beginne mit dem Standard-Preset des Spiels und senke Framerate- oder Leistungslimit schrittweise, wenn du es leiser und ausdauernder möchtest.',
     steps: [
-      'Proton-Kompatibilität: Verwende Proton Experimental für fehlerfreie Licht- und Schattendarstellung.',
-      'Auflösung & Display: 1280x800 nativ im 16:10-Vollbildmodus, SMAA-Kantenglättung, Schattenqualität auf "Mittel".',
-      'Leistungsmenü (... Taste): Framerate-Limit auf 60 FPS / 60 Hz setzen, TDP-Begrenzung aktivieren und auf 9 Watt justieren.',
-      'Trackpad-Steuerung: Rechtes Trackpad als Maus emulieren für millimetergenaues Zielen in dunklen Bunkergängen.'
+      'Proton: Das Verhalten hängt vom System ab. Bei Shader- oder Audioproblemen zuerst das Kompatibilitätswerkzeug in den Spiel-Eigenschaften in Steam wechseln.',
+      'Auflösung: Beginne mit der nativen Auflösung des Steam Deck, 1280x800 im 16:10-Vollbildmodus, und passe Schatten und Kantenglättung nach Geschmack an.',
+      'Leistungsmenü (... Taste): SteamOS erlaubt ein Framerate-Limit sowie TDP- und GPU-Takt-Grenzen. Senke die Werte schrittweise und beobachte dabei die Framerate.',
+      'Controller: Das rechte Trackpad lässt sich als Maus belegen; Community-Layouts findest du in den Controller-Einstellungen von Steam.'
     ],
     facts: [
-      ['Steam Deck Status', 'Playable / Verifiziert (Hervorragende Performance)'],
-      ['Framerate', 'Konstante 60 FPS ohne Ruckler'],
-      ['Akkulaufzeit (OLED)', 'Ca. 4,2 bis 4,8 Stunden bei 9W TDP'],
-      ['Controller-Support', 'Natives XInput mit Glyphenanzeige'],
-      ['Offline-Modus', 'Vollständig offline spielbar']
+      ['Handheld-Unterstützung', 'Voller Controller-Support laut Store-Seite; laut Entwickler für Steam Deck und Handheld-Spiel ausgelegt'],
+      ['Valve-Deck-Badge', 'Auf der Steam-Store-Seite ist kein Deck-Kompatibilitäts-Badge ausgewiesen'],
+      ['Framerate', 'Hier werden keine Messwerte genannt — nutze das Framerate-Limit im Quick-Access-Menü'],
+      ['Leistungslimit', 'Im SteamOS-Quick-Access-Menü einstellbar; schrittweise senken'],
+      ['Auflösung', '1280x800 (16:10) ist die native Auflösung des Steam-Deck-Displays']
     ],
     faq: [
       ['Ist der Text auf dem Display lesbar?', 'Ja, die Option "Große Benutzeroberfläche" in den Einstellungen skaliert Item-Beschreibungen perfekt.'],

@@ -5,58 +5,78 @@ import Countdown from '../../components/Countdown.astro';
 const faqs = [
   {
     q: "Are there difficulty settings? How punishing is death?",
-    a: "Scavland does not feature artificial difficulty sliders (e.g. Easy/Normal/Hard). Instead, the game employs a true hardcore extraction loop: when you perish in the field, equipped weapons and backpack loot remain on your fallen corpse (with death coordinates logged onto your map for recovery). Your Safehouse permanent stash is 100% secure. You manage difficulty through preparation: selecting low-radiation routes, wearing gas masks with fresh filters, and avoiding sound alarms during nighttime."
+    a: "Scavland uses named game modes rather than Easy/Normal/Hard sliders. The official announcements list Explorer, Returner and Iron Man. Explorer was added in the Day One Patch (Update 0.5.169) for players who want a less punishing experience: you keep your equipment when you die (not all backpack items), Jobs reward Money and Reputation faster, combat is more forgiving, and autosave is enabled. Beyond what the mode descriptions on the death screen say, the announcements do not document the exact penalties for Returner and Iron Man, so we do not claim any."
   },
   {
-    q: "What is the state of Base Building and Game Endings in Act I?",
-    a: "At Early Access launch, base management centers on your personal Safehouse. You can upgrade weapon workbenches, install battery generators, expand personal storage lockers, and craft medical serums. Full exterior modular base building will arrive in later roadmap phases. Act I includes a distinct narrative progression climax when players power the central Soviet relay station inside the deep bunker complex."
+    q: "What is the state of base building and progression?",
+    a: "The announcements describe a Safehouse-centred loop rather than free-form building. Update 0.5.169 added a second Player Stash at the hospital and increased stash capacity, with all stash locations sharing one inventory. Update 0.7.0 added crafting tables and stashes to all main camps, made stash expansions purchasable from a Trader for 50,000 Rubles, rebuilt the Death Screen, and gave each run its own autosave slot. No modular exterior base building, and no Act II or Act III structure, is documented in the announcements we hold."
   },
   {
-    q: "Is there a macOS or Console release? How does it run on Steam Deck?",
-    a: "Scavland launched as a PC exclusive on Steam. A native macOS Apple Silicon build is fully compiled and currently undergoing Apple notarization and store approval review. Console ports will be evaluated after Early Access v1.0. For handheld gamers, the game features verified Steam Deck control presets, 60 FPS performance profiles, and scaled UI readability."
+    q: "Is there a macOS or console release? How does it run on Steam Deck?",
+    a: "Scavland launched on Steam as a PC release: the store page lists Windows only, so we cannot confirm any native macOS build or console version. For handheld play, the developers state the game was designed with Steam Deck and handheld play in mind and the store page lists Full controller support; Update 0.7.0 also notes improved text sizing on Steam Deck. No Valve Deck compatibility badge is listed on the store page."
   },
   {
     q: "Is melee combat viable against mutants and armored patrols?",
-    a: "The developer issued an explicit combat warning on Steam: melee weapons (combat knives, crowbars, trench shovels) are designed strictly as emergency silent finishers against lone, wounded scavengers. Facing mutant packs or armored Warden soldiers with melee will result in rapid death. Ballistic firearms, cover, and ammunition management remain the primary survival pillar."
+    a: "The announcements we hold do not include a developer statement on melee viability, so we do not claim one. What the store page and patch notes do describe is a hardcore survival RPG built around 25+ firearms and hundreds of weapon parts, where maintenance and repair matter: weapons can explode below 30% condition since Update 0.5.169, and Update 0.7.0 made repairs significantly less punishing and increased weapon durability across the arsenal."
   },
   {
     q: "How does Scavland compare to Zero Sievert?",
-    a: "While both share a top-down post-apocalyptic extraction genre, Scavland has been in development for over 6 years with distinct pillars: dynamic 3D line-of-sight fog, multi-level procedural underground bunker facilities, a 300+ attachment gunsmith bench, and 10 living factions with dynamic outpost control and dynamic trader pricing."
+    a: "Both sit in the top-down post-apocalyptic extraction genre, but we do not hold a head-to-head comparison source, so this page sticks to Scavland's own documented features. The launch announcement states the game grew from a small project to around 15 developers, with a world roughly 3x larger, procedurally generated underground bunkers, 25+ weapons and hundreds of weapon parts and attachments, 10 factions with unique identities, and a faction and trader reputation system."
   }
 ];
 
 const roadmap = [
   {
-    phase: "Phase 1: Launch Stability & UX",
-    timeline: "September 2026 (Weeks 1 - 4)",
-    status: "Active In Progress",
+    phase: "Early Access launch",
+    timeline: "4 September 2026",
+    status: "Shipped",
     items: [
-      "Rapid Day 1 patch hotfixes for quest trigger edge cases and audio occlusion.",
-      "Inventory Quickbar drag-and-drop improvements and stack-aware ammo unloading.",
-      "Fine-tuning weapon jamming curves for sub-40% condition firearms.",
-      "Official Valve Steam Deck compatible green checkmark submission."
+      "Scavland entered Steam Early Access; the announcement is titled \"SCAVLAND IS OUT NOW!\".",
+      "Store page features: Single-player, Steam Achievements, Full controller support, DualSense/DualShock support, Steam Cloud and Family Sharing.",
+      "The developers describe a world roughly 3x larger, procedurally generated underground bunkers, 25+ weapons and hundreds of weapon parts and attachments, 10 factions and a rebuilt UI."
     ]
   },
   {
-    phase: "Phase 2: Bunker Facilities & Salvage 2.0",
-    timeline: "Q4 2026 (October – December)",
-    status: "In Development",
+    phase: "Day One Patch — Update 0.5.169",
+    timeline: "5 September 2026",
+    status: "Shipped",
     items: [
-      "Procedural Bunker Overhaul: 3 new underground laboratory tiers with hazardous gas chambers.",
-      "Scrap Salvaging System: Break down junk metal and electronics into weapon modification components.",
-      "Expanded Faction Contracts: High-risk assassination and artifact delivery missions for Tier 3 loyalty.",
-      "Full Controller & Gamepad Aim-Assist implementation."
+      "Added the Explorer game mode: keep your equipment on death (not all backpack items), faster Job rewards, autosave.",
+      "Lit campfires now heal you while your Energy and Hydration are good.",
+      "A second Player Stash was added at the hospital, stash capacity was significantly increased, and all stash locations share one inventory.",
+      "New medical blueprints: Advanced Bandage, Army AI-2, IFAK and Stimpack — sold by Alexei.",
+      "AI no longer shoots from outside the screen; player stamina was doubled; Gun Field Tools no longer require Gun Lube."
     ]
   },
   {
-    phase: "Phase 3: The Northern Expanse & Story Climax",
-    timeline: "First Half 2027",
-    status: "Planned",
+    phase: "Update 0.6.0",
+    timeline: "9 September 2026",
+    status: "Shipped",
     items: [
-      "World Map 3x Expansion: Unlocking the Northern Radioactive Swamps and Abandoned Nuclear Cooling Towers.",
-      "Vehicle & Rail Transit repair missions across contested sectors.",
-      "Act II & Act III Campaign story conclusion with multi-branching faction endings.",
-      "Full 1.0 Commercial Release departure from Early Access."
+      "Sleeping in beds to skip time; the world keeps running while you sleep and taking damage wakes you.",
+      "The Controls & Keybinding system was completely rebuilt, with rebindable actions, hold/tap variants and an Action Hint Bar.",
+      "Jobs overhaul: multiple tracked Jobs, partial Fetch turn-ins and a Reputation cost for cancelling.",
+      "Trader specialisation, an armour durability rebalance, weapon range increases and an early version of Simplified Chinese localisation."
+    ]
+  },
+  {
+    phase: "Update 0.7.0 (plus Hotfix 0.7.1)",
+    timeline: "16 September 2026",
+    status: "Shipped",
+    items: [
+      "Stash expansions purchasable from a Trader for 50,000 Rubles; crafting tables and stashes added to all main camps.",
+      "Death Screen rebuilt with proper actions, with full gamepad support.",
+      "A major durability and repair pass: weapons last significantly longer, jamming is less frequent, and much of the arsenal was buffed.",
+      "Improved text sizing on Steam Deck."
+    ]
+  },
+  {
+    phase: "What comes next",
+    timeline: "No date published",
+    status: "Not dated",
+    items: [
+      "The developers state that \"the final stretch is all about testing, polishing, balancing, and listening to feedback as we prepare to open the gates to Zalesye\".",
+      "No dated feature roadmap, and no release date for a full version, appears in the announcements we hold — so this page does not invent phases, features or dates."
     ]
   }
 ];
@@ -133,13 +153,13 @@ const roadmap = [
           <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
             <div style="font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:0.8rem;text-transform:uppercase;margin-bottom:4px;">Living Faction Ecosystem</div>
             <h4 style="margin:0 0 8px;color:#fff;">10 Dynamic Factions</h4>
-            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Earn standing, unlock black-market trade tiers, accept assassination contracts, or raid opposing fortified strongholds.</p>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">The store page lists a faction and trader reputation system: earn standing and unlock tiered trade options as you progress.</p>
           </div>
 
           <div style="padding:16px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
             <div style="font-family:'IBM Plex Mono',monospace;color:var(--acid);font-size:0.8rem;text-transform:uppercase;margin-bottom:4px;">Environmental Hazard</div>
-            <h4 style="margin:0 0 8px;color:#fff;">The Mist &amp; Anomaly Scanner</h4>
-            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Dynamic radioactive green fog rolls across sectors. Equip your frequency audio scanner on Slot [3] to locate valuable mutant artifacts amidst the haze.</p>
+            <h4 style="margin:0 0 8px;color:#fff;">The Mist</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">The store page names "the deadly Mist" as one of the hazards you survive alongside mutants, hostile survivors and radiation.</p>
           </div>
         </div>
 

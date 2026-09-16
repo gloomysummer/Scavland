@@ -71,31 +71,32 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
-    shortTitle: 'Steam Deck Guide',
-    title: 'Scavland Steam Deck Guide: Best Graphics Settings, 60FPS TDP Tuning & Controls',
-    description: 'Optimized Steam Deck setup for Scavland: rock-solid 60 FPS, 9W TDP battery profile (4+ hours playtime), custom controller layouts, and text scaling.',
+    shortTitle: 'Steam Deck & Handheld Guide',
+    title: 'Scavland Steam Deck & Handheld Guide: Controller Setup, Display and Settings Tips',
+    description: 'Handheld setup for Scavland on Steam Deck and portable PCs: display scaling, frame-rate and power options, controller layouts, and text sizing. The settings below are suggestions to try, not measured benchmarks.',
     category: 'Platforms',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland running on handheld device with tactical HUD',
-    evidence: 'Community reports',
+    evidence: 'Official Steam announcement (built for PC, controller and Steam Deck); suggested settings',
     updated: '2026-09-07',
-    answer: 'Scavland runs exceptionally well on Steam Deck and handheld PCs (ROG Ally, Legion Go) straight out of the box. Thanks to lightweight pixel-art sprite architecture, locking the display to 60 FPS or 40Hz with an 8W-9W TDP limit delivers silky-smooth gunplay and over 4.5 hours of continuous battery life. Setting controller input to Gamepad with Precision Gyro Aim enables rapid cursor snapping in tight bunker firefights.',
+    answer: 'Scavland ships with full controller support and, in the developers\u2019 own words, was "designed with Steam Deck and handheld play in mind", so handheld play works without a custom setup. Update 0.7.0 also lists "Improved text sizing on Steam Deck". The suggestions below are starting points rather than measured results: begin from the game\u2019s own default preset, lower the frame-rate or power limit step by step if you want a quieter and longer-running session, and raise the UI text size from the accessibility options if inventory labels feel tight on a 7-inch panel.',
     steps: [
-      '01 · Set Native Resolution: Configure the in-game display resolution to 1280x800 (16:10 aspect ratio) to eliminate black letterboxing on the Deck display.',
-      '02 · Limit TDP to 9 Watts: In the SteamOS Quick Access Menu (•••), toggle Manual TDP Limit to 9W and set GPU Clock to 1000MHz for maximum efficiency.',
-      '03 · Apply Precision Controller Profile: Select the "Scavland Official Handheld Layout" from Steam Community Configurations for dual-trackpad radial looting.',
-      '04 · Enable FSR Sharpness 2: In performance settings, set Sharpness filter to 2 to make item icons and ground loot pop distinctly during dark wasteland night cycles.'
+      '01 · Try the panel\u2019s native mode: the Steam Deck display is 1280x800 at 16:10, so start there and check the aspect ratio before you settle on another resolution.',
+      '02 · Tune the power limit: the SteamOS Quick Access Menu (•••) exposes a manual TDP limit and a GPU clock cap. Start at the default and lower them gradually, watching the frame-rate counter, until you find your own balance of noise, heat and battery.',
+      '03 · Pick a controller layout: Steam\u2019s controller settings let you browse community configurations for trackpad aiming and radial looting, then save your own as the default.',
+      '04 · Adjust sharpness if the image looks soft: if item icons and ground loot blur together at 1280x800, raise the sharpening filter in the performance settings until labels read cleanly.'
     ],
     facts: [
-      ['Steam Deck Status', 'Playable out of the box with native 1280x800 16:10 display support'],
-      ['Target Performance', 'Rock-solid 60 FPS at native resolution'],
-      ['Recommended TDP', 'Cap at 9 Watts to extend battery endurance beyond 4 hours'],
-      ['Optimal Refresh Rate', '40Hz / 40 FPS or 60Hz / 60 FPS recommended']
+      ['Handheld support', 'Full controller support; the developer states the game was designed with Steam Deck and handheld play in mind'],
+      ['Valve Deck badge', 'No Valve Deck compatibility badge is listed on the store page for this game'],
+      ['Frame rate', 'No benchmark is published here \u2014 use the frame-rate limit in the Quick Access Menu'],
+      ['Power limit', 'Adjustable in the SteamOS Quick Access Menu; lower it step by step for longer sessions'],
+      ['Refresh rate', 'SteamOS offers 40Hz and 60Hz presets, both selectable on Deck']
     ],
     faq: [
-      ['Is the text readable on the 7-inch Steam Deck screen?', 'Yes, the pixel UI scales cleanly to 1280x800. If inventory labels feel small, enable the High Contrast UI Font in the Accessibility settings.'],
-      ['Does Scavland support Steam Cloud saves across PC and Deck?', 'Yes, Steam Cloud is fully integrated, allowing seamless cross-save progression between desktop rigs and handhelds.'],
-      ['What is the best Proton version?', 'Default Proton 9.0 or GE-Proton 9-11 delivers zero stutter or audio de-sync.']
+      ['Is the text readable on the 7-inch Steam Deck screen?', 'The pixel-art UI scales to 1280x800, and Update 0.7.0 explicitly lists improved text sizing on Steam Deck. If inventory labels still feel small, raise the UI text size in the accessibility options.'],
+      ['Does Scavland support Steam Cloud saves across PC and Deck?', 'Yes. Steam Cloud is listed among the game\u2019s official store features, so saves carry between desktop and handheld.'],
+      ['Do I need to change the Proton version?', 'Proton behaviour varies by system. If you hit shader compilation or audio problems, try switching the compatibility tool from the game\u2019s properties in Steam before changing anything else.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-system-requirements'],
     keywords: ['scavland steam deck', 'scavland handheld', 'scavland 60fps settings', 'scavland controller layout', 'scavland battery life']
@@ -125,7 +126,7 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['Is Scavland a clone of Zero Sievert?', 'No. While both are top-down Stalker-inspired extraction shooters, Scavland focuses on handcrafted tactical persistence, deeper faction diplomacy, and modular gunsmithing.'],
-      ['Which game is harder?', 'Scavland has more punishing logistical failure (weapon jams below 50% durability, severe dehydration, 200m sound footprints at night), while Zero Sievert features faster reflex twitch combat.'],
+      ['Which game is harder?', 'Scavland leans on logistics and consequence: weapons wear out and can jam, and hydration and stamina have to be managed. Zero Sievert is generally framed as the faster, more reflex-driven of the two. We hold no head-to-head comparison source, so treat this as a genre framing rather than a benchmark.'],
       ['Can I play Scavland with friends?', 'Co-op extraction is currently the #1 priority on developer NoShadow\'s Early Access roadmap, whereas Zero Sievert is exclusively solo.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts'],
@@ -155,7 +156,7 @@ export const guides: Guide[] = [
       ['Patch Version', 'Introduced in Early Access 0.6.3 (v0.5.169)']
     ],
     faq: [
-      ['Does Explorer Mode change combat difficulty?', 'No, enemy AI aggressiveness, mutant spawns, and ballistics remain lethal. It primarily reduces the logistical friction of death penalties, stamina drain, and stash limits.'],
+      ['Does Explorer Mode change combat difficulty?', 'Yes, in part: the Day One Patch describes Explorer as having "more forgiving combat" alongside faster Job rewards, keeping your equipment on death and autosave. It does not make every encounter trivial — mutants and hostile survivors remain lethal.'],
       ['Can I heal completely using campfires?', 'Yes, resting at a campfire restores base health over time, but it does not cure radiation poisoning or severe bleeding without proper medical items.'],
       ['Is this mode permanent for my save?', 'Explorer Mode can be selected to tailor the difficulty curve of your survival experience, easing the steep learning curve for new scavengers.']
     ],
@@ -177,20 +178,20 @@ export const guides: Guide[] = [
       '01 · Choose Your Game Mode: New players can opt for Explorer Mode (Patch v0.5.169) to retain equipped weapons on death and enable campfire passive healing, or Veteran Mode for the pure hardcore corpse-run experience.',
       '02 · Hit "The Mire" Starter Supply Cache: Directly northwest of Zalesye settlement lies "The Mire" wetland depot, a guaranteed safe starter stash containing free boiled water canteens, 12-Gauge shells, and antiseptic gauze with zero hostile bandit patrols.',
       '03 · Master Shift+Click Fast Looting: Never drag items individually from loot stashes. Holding [Shift+Click] instantly transfers container stacks to your inventory, slashing vulnerable stationary looting time by 80%.',
-      '04 · Maintain Weapon Durability Above 50%: Check firearm condition before leaving safety. Weapons under 50% condition suffer frequent jamming; carry Gun Cleaning Oil for instant +15% field restoration (field tool no longer requires oil in v0.5.169).',
+      '04 · Check weapon condition before leaving safety: guns can explode below 30% condition, and jamming becomes likelier as condition falls. Carry repair supplies and service firearms before you deploy; since Update 0.5.169 Gun Field Tools no longer require Gun Lube.',
       '05 · Combat Evasion & Off-Screen AI Nerf: Patch v0.5.169 eliminated off-screen enemy sniping. If ambushed, use doubled sprint stamina to sprint in a zig-zag pattern around tree trunks to break line-of-sight and de-aggro hostiles.',
       '06 · Daylight Scavenging & Nighttime Evacuation: Depart at dawn (06:00) and return to a safehouse before 21:00. Lit campfires across Zalesye slowly regenerate health over time.',
       '07 · Prioritize High-Profit Barter Goods: Focus backpack capacity on spark plugs, functional lighters, wire coils, and weapon springs. Sell these to settlement merchants for fast early rubles rather than hoarding heavy scrap.',
-      '08 · Safehouse Stashing & Death Recovery: Base safehouse storage is doubled in v0.5.169 with an additional locker at Crossroads. Store surplus ammunition, medical packs, and spare guns in your shelter before departing.'
+      '08 · Safehouse Stashing & Death Recovery: Update 0.5.169 significantly increased stash capacity and added a second Player Stash at the hospital; all stash locations share one inventory. Store surplus ammunition, medical packs, and spare guns before departing.'
     ],
     facts: [
       ['Evidence Boundary', 'Early Access Patch v0.5.169 verified; persistent survival RPG with optional Explorer Mode'],
       ['Starter Supply Point', 'The Mire northwest of Zalesye provides free water, 12G ammo, and bandages with no bandits'],
-      ['AI Vision Clamping', 'v0.5.169 clamped AI detection to player screen boundary; no more off-screen sniper deaths'],
-      ['Stamina & Stash Buff', 'v0.5.169 doubled base sprint stamina and safehouse locker storage by 200%'],
+      ['Off-screen AI fire', 'Update 0.5.169 stopped AI from shooting outside the screen, removing off-screen deaths'],
+      ['Stamina & Stash Buff', 'Update 0.5.169 doubled player stamina and significantly increased stash capacity'],
       ['Fast Loot Shortcut', 'Shift+Click immediately transfers container stacks into inventory'],
-      ['Jam Threshold', 'Condition >70% has 0% jam chance; <50% condition causes rapid mechanical failures'],
-      ['Corpse Run Recovery', 'Equipped gear drops at death coordinate for recovery; safehouse stash is permanent']
+      ['Jam Threshold', 'Weapons can explode below 30% condition since Update 0.5.169; jamming begins later and occurs less often since Update 0.7.0'],
+      ['Corpse Run Recovery', 'Equipped gear drops at your death coordinate for recovery; the stash is a separate inventory you keep']
     ],
     faq: [
       ['Where should I go on my very first raid in Scavland?', 'Head immediately northwest to The Mire wetland cache. It provides clean drinking water, starter ammo, and medical items without armed bandit opposition, preventing an early death spiral.'],
@@ -259,7 +260,7 @@ export const guides: Guide[] = [
     facts: [
       ['Recovery Time Limit', 'Zero expiration timer; dropped backpacks persist indefinitely in the world until retrieved'],
       ['Marker Overwrite Rule', 'Dying a second time updates the map skull marker to the new death spot; original bag remains physically in world'],
-      ['Safehouse Stash Security', '100% safe from death penalties; v0.5.169 added a second player stash locker at Crossroads'],
+      ['Safehouse Stash Security', 'The stash is a separate, shared inventory, so stored items are not carried on you; Update 0.5.169 added a second Player Stash at the hospital'],
       ['Explorer Mode Protection', 'Retains all equipped weapons and body armor upon death; only unequipped backpack loot drops'],
       ['Verified Baseline', 'Early Access Patch v0.5.169 Baseline']
     ],
@@ -296,13 +297,13 @@ export const guides: Guide[] = [
       ['Crafting vs Junk Status', 'Rope, Batteries, and Light Bulbs currently have 0 workbench recipes (pure vendor barter salvage)'],
       ['Active Crafting Materials', 'Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Clean Water, Gunpowder, and Ballistic Fiber'],
       ['Top Barter Value Density', 'Spark Plugs and Military Lighters are single-slot, high value-per-slot items'],
-      ['Specialized Vendor Premium', 'Anatoly and Mechanist traders pay 100% price for tech salvage; off-category merchants pay 50%'],
+      ['Specialised vendors', 'Update 0.6.0 made traders more specialised in what they buy: Zhivan pays 140% for Common items, Vesna 75%, Nadja 90% for Common and 80% for Crafting items'],
       ['Fast Loot Shortcut', 'Shift + Left Click transfers whole item stacks instantly between containers and inventory'],
       ['Verified Baseline', 'Early Access Patch v0.6.0 Playtest Verification']
     ],
     faq: [
       ['Are rope, batteries, and light bulbs used in crafting in Scavland?', 'No. In current Early Access Patch v0.6.0, rope, household batteries, incandescent light bulbs, and electrical wiring do not have active workbench crafting recipes. Developer NoShadow confirmed expanded recipes are planned for future roadmap updates; currently, they serve as vendor barter commodities.'],
-      ['Which merchant pays the most for scrap and industrial components?', 'Anatoly in Zalesye and Mechanist faction traders offer maximum barter payouts for electronic relays, spark plugs, and copper wiring. Selling industrial items to weaponsmith Petar or medic Anna triggers an automatic 50% off-category price reduction.'],
+      ['Which merchant pays the most for scrap and industrial components?', 'Traders are specialised since Update 0.6.0. Bogdan pays 40% more for Mutant Parts, Zhivan pays 140% for Common items, and Grigory no longer buys Medical, Food or Crafting items but pays more for Weapon Attachments. Match the goods to the vendor.'],
       ['What loot should I prioritize during early-game raids?', 'Prioritize medical consumables (bandages, clean water), ammunition matching your equipped firearms, and high-value 1-slot electronics (spark plugs, relays, lighters). Leave heavy metal scrap behind unless needed for immediate safehouse repairs.'],
       ['Should I hoard junk items for future updates?', 'Keep a working reserve of 10x Weapon Springs and 20x Metal Scrap for weapon and armor repairs. Miscellaneous junk like rope, empty tin cans, and light bulbs should be sold immediately for rubles to upgrade your backpack and tactical rig.']
     ],
@@ -335,7 +336,7 @@ export const guides: Guide[] = [
       ['Cooking System Status', 'No culinary minigame; food is pre-packaged; campfires boil water and provide passive healing'],
       ['v0.5.169 Medical Blueprints', 'Added dehydration cure recipes and lowered component craft requirements for bandages'],
       ['Top Barter Items', 'Spark plugs, functioning lighters, intact vacuum tubes, and copper wire coils'],
-      ['Workbench Repair Recipe', '2x Metal Scrap + 1x Weapon Spring crafts +15% Gun Cleaning Oil'],
+      ['Repair supplies', 'Repair Kits can be used regardless of how damaged your equipment is since Update 0.7.0, and are available again as world loot'],
       ['Zero-Rep Merchant', 'Trader Volodymyr trades all tiers regardless of negative faction reputation'],
       ['Verified Baseline', 'Early Access Patch v0.5.169']
     ],
@@ -352,7 +353,7 @@ export const guides: Guide[] = [
     slug: 'scavland-weapon-repair-and-durability',
     shortTitle: 'Weapon Repair & Durability',
     title: 'Scavland Weapon Repair & Durability Guide: Field Tools, Workbench Kits & Jam Fixes',
-    description: 'Scavland weapon repair guide: oil-free field tools, 50% jam threshold, Petar market overhaul, no-blueprint mid-game repair, and armor kit discounts.',
+    description: 'Scavland weapon repair guide: field tools without Gun Lube, the durability and jamming changes in Updates 0.5.169 and 0.7.0, Petar’s relocation, and the repair kit changes.',
     category: 'Gear',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Tactical weapon modification and workbench repair interface in Scavland',
@@ -360,15 +361,15 @@ export const guides: Guide[] = [
     updated: '2026-09-16',
     answer: 'Firearms in Scavland degrade with every shot fired, accelerating 2x faster in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. In mid-game raids, scavengers frequently loot high-tier military firearms (such as Mosin-Nagant rifles, SVDs, and AS Vals) severely degraded at 30% to 45% condition. Because restoring advanced weapons to 100% at a Safehouse Workbench requires the Advanced Weapon Bench Blueprint (gated behind Tier 3 Mechanist reputation), players face the "No-Blueprint Dilemma." Fortunately, scavengers have two verified solutions: stabilizing guns at 70% condition (0% jam rate) using the oil-free Gun Field Tool, or paying Gunsmith Petar in central Zalesye market a flat ruble fee (4,500R–7,500R) to execute a full 100% overhaul with zero blueprint requirements. Before deploying into dangerous raids, consult the [Scavland Beginner Guide](/guide/scavland-beginner-guide/) for survival fundamentals, browse our full [Weapons Arsenal](/weapons/) for exact stat tables, check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for parts trading, or see [Sleep & World Reset](/guide/scavland-sleep-and-world-reset-guide/) to refresh trader inventories.',
     steps: [
-      '01 · Monitor Jam Thresholds (50% / 70% Rules): Firearms operating above 70% condition have a 0% mechanical failure rate. Below 50% condition, weapons suffer frequent stovepipe jams during sustained automatic fire. Condition below 30% risks catastrophic misfires that damage internal components.',
-      '02 · Oil-Free Field Tool Maintenance (v0.5.169 Buff): Patch v0.5.169 uncoupled the basic Gun Field Tool from Gun Cleaning Oil. You can now use the field tool anywhere in the wasteland to service firearms up to the 70% threshold without expending rare oil bottles.',
+      '01 · Monitor weapon condition: guns can explode below 30% condition since Update 0.5.169. Update 0.7.0 increased durability across almost the entire arsenal, made jamming begin later and occur less often, and lowered the hard-jam chance at 10% durability from 45% to 33%.',
+      '02 · Field tool maintenance: Update 0.5.169 removed the Gun Lube requirement from Gun Field Tools, so you can service firearms in the field without spending lube.',
       '03 · Clearing In-Combat Stovepipes: If your trigger clicks without firing, immediately double-tap the reload key [R] or rack the bolt to eject the defective casing. Disengage behind cover to evaluate barrel fouling before continuing the firefight.',
       '04 · Solving the Mid-Game "No-Blueprint Dilemma": High-tier raider drops (Mosin snipers, SVDs, AS Vals) frequently spawn at 30% to 45% condition. Restoring military guns above 70% at a workbench requires the Advanced Weapon Bench Blueprint (locked behind Tier 3 Mechanist reputation). To bypass this grind, bring degraded rifles directly to Gunsmith Petar in central Zalesye market: Petar charges a flat ruble fee (4,500R to 7,500R) to restore advanced guns to 100% with zero blueprint requirements.',
-      '05 · Heavy Armor Repair & Glue Discount: Patch v0.5.169 lowered the industrial glue requirement on Heavy Armor Repair Kits by 50%, making plate carrier and ballistic helmet upkeep significantly more affordable after mutant encounters.'
+      '05 · Heavy armor repairs: Update 0.5.169 lowered the glue requirement on Heavy Armor Repair Kits, and Update 0.7.0 lets Repair Kits be used regardless of how damaged your equipment is.'
     ],
     facts: [
-      ['Jam Threshold Rules', 'Condition >70% has 0% jam chance; <50% causes frequent stovepipe misfires'],
-      ['Field Tool Independence', 'v0.5.169 removed Gun Cleaning Oil requirement for basic field repair tool use (restores up to 70%)'],
+      ['Jamming', 'Begins later and occurs less often since Update 0.7.0; hard-jam chance at 10% durability is 33%, down from 45%'],
+      ['Field tool independence', 'Update 0.5.169 removed the Gun Lube requirement from Gun Field Tools'],
       ['No-Blueprint Workaround', 'Gunsmith Petar repairs advanced military guns to 100% for rubles with 0 blueprint requirements'],
       ['Mid-Game Gun Drops', 'Looted military rifles spawn at 30-45% condition; field tools stabilize them to 70% zero-jam state'],
       ['Armor Kit Glue Discount', 'Heavy armor repair kit recipe glue requirement reduced in Patch v0.5.169'],
@@ -379,7 +380,7 @@ export const guides: Guide[] = [
     faq: [
       ['How do I clear a weapon jam during combat?', 'Press the reload key [R] twice or manually cycle the bolt to eject the jammed casing and chamber a fresh cartridge. Retreat behind hard cover if under automatic fire.'],
       ['How do I repair advanced military guns without the workbench blueprint?', 'High-tier firearms like the Mosin-Nagant or SVD require Tier 3 Mechanist blueprints for 100% workbench overhauls. If you lack the blueprint, use the oil-free Gun Field Tool to service the weapon to 70% condition for 0% jam risk, or pay Gunsmith Petar in central Zalesye market to fully restore it to 100% for a ruble fee.'],
-      ['Do field repair tools still require Gun Cleaning Oil in v0.5.169?', 'No. Patch v0.5.169 made the basic Gun Field Tool independent from Gun Cleaning Oil, allowing scavengers to perform emergency maintenance up to 70% condition without consuming oil.'],
+      ['Do field repair tools still require Gun Lube?', 'No. Update 0.5.169 removed the Gun Lube requirement from the basic Gun Field Tool, so you can perform emergency maintenance without spending lube.'],
       ['Where do I find Gunsmith Petar for advanced weapon repairs?', 'Petar was relocated in v0.5.169 from the southern perimeter directly into the central Zalesye settlement square next to trader Grigory.'],
       ['What materials are required to repair heavy armor vests?', 'Heavy Armor Repair Kits require Ballistic Fiber, Sheet Metal Scrap, and Industrial Glue (glue cost discounted in v0.5.169).'],
       ['What spare parts should I carry for emergency field repairs?', 'Always carry 2x Weapon Springs, 1x Electronic Relay, and 1x Gun Field Tool in your tactical rig. In irradiated sectors where weapon degradation accelerates by 2x, these components let you restore guns above the 70% threshold without returning to base.']
@@ -392,31 +393,32 @@ export const guides: Guide[] = [
     slug: 'scavland-tactical-database-weapons-loot',
     shortTitle: 'Tactical Database',
     title: 'Scavland Tactical Database: Weapon Durability, Jamming & Loot Extraction',
-    description: 'Verified Early Access breakdown of weapon jamming thresholds (<50% condition), cleaning oil maintenance, and reliable loot extraction in Scavland.',
+    description: 'Breakdown of weapon durability and jamming in Scavland after Updates 0.5.169 and 0.7.0, plus reliable loot extraction.',
     category: 'Tactical Guide',
     image: '/images/screenshots/steam_ss_11.webp',
     imageAlt: 'Scavland Mikhail 74U tactical weapon workbench showing durability stats and attachment slots',
     evidence: 'Official Steam announcements',
     updated: '2026-09-06',
-    answer: 'Weapon maintenance in Scavland follows strict threshold rules: firearms operating above 70% condition suffer 0% misfire rates, but condition dropping below 50% incurs severe jamming probabilities during sustained automatic fire. Use Gun Cleaning Oil for instant +15% field condition recovery, and reserve weapon repair kits for full bench overhauls before venturing into radiated military sectors.',
+    answer: 'Weapon condition in Scavland is tracked per item and maintenance is part of the survival loop. Durability and repair were reworked twice after launch: Update 0.5.169 made Guns able to explode below 30% durability (previously 50%) and removed the Gun Lube requirement from Gun Field Tools; Update 0.7.0 then made a major pass in which weapons last significantly longer, jamming begins later and happens less often (hard-jam chance at 10% durability fell from 45% to 33%), and Repair Kits can be used regardless of how damaged your equipment is.',
     steps: [
-      '01 · Jam Threshold Monitoring: Never deploy into subterranean bunkers with firearms below 50% durability, as barrel fouling causes lethal mid-burst jams.',
-      '02 · Field Maintenance Protocol: Carry at least one flask of Gun Cleaning Oil to restore condition on the fly after intense skirmishes.',
-      '03 · Clearing Weapon Jams: When a click occurs instead of a discharge, immediately tap [R] twice to rack the bolt and clear the stovepiped cartridge.',
-      '04 · Death Recovery Beacon: Dropped backpacks remain permanently at your coordinate of death until retrieved; use secondary gear to reclaim high-tier weapons.'
+      '01 · Watch the condition bar: Guns can explode below 30% condition since Update 0.5.169, so do not deploy with a badly worn firearm. Scrap-tier weapons also lose durability faster than Basic-tier ones.',
+      '02 · Field maintenance: Gun Field Tools no longer require Gun Lube since Update 0.5.169. In Update 0.7.0, Cleaning Rods and Field Repair Kits became usable from 70% durability, previously 75%.',
+      '03 · Clearing jams: When a click replaces the shot, rack the bolt to clear the round. Jamming begins later and occurs less frequently since Update 0.7.0.',
+      '04 · Death recovery: Equipped gear and backpack contents drop at your death coordinate, which stays on the map for recovery; the stash is a separate, shared inventory you keep.'
     ],
     facts: [
-      ['Jam Threshold', 'Condition <50% triggers rapid misfires; >70% has zero jam chance'],
-      ['Cleaning Oil Utility', 'Field consumable providing immediate +15% durability restoration'],
-      ['Backpack Drop Mechanics', 'Dropped loot marker persists in the persistent world map upon death'],
-      ['Thread Cutter Footprint', 'v0.6.0 rebalanced to 3 vertical slots (1x3) to reflect heavy kinetic stopping power'],
-      ['Launch Version', 'Early Access 0.6.3 verified']
+      ['Durability', 'Guns can explode below 30% condition since Update 0.5.169; weapon durability increased significantly across the arsenal in Update 0.7.0'],
+      ['Hard-jam chance', 'At 10% durability, reduced from 45% to 33% in Update 0.7.0'],
+      ['Repair Kits', 'Usable regardless of how damaged your equipment is (Update 0.7.0); Glue and Gun Lube apply from 80% durability'],
+      ['Backpack Drop Mechanics', 'Equipped gear and backpack contents drop at your death coordinate and remain there for recovery'],
+      ['Thread Cutter footprint', 'Update 0.6.0 rebalanced many long guns, including the Thread Cutter, to occupy 3 inventory rows instead of 2'],
+      ['Latest documented build', 'Update 0.7.0 plus Hotfix 0.7.1 (16 September 2026)']
     ],
     faq: [
-      ['How does weapon jamming work in Scavland?', 'Weapons experience progressive mechanical wear with every round fired. Once durability drops below 50%, every trigger pull rolls a failure chance, requiring a manual bolt rack to clear.'],
-      ['Can I recover my backpack after dying in Scavland?', 'Yes. Scavland is a persistent survival RPG rather than a permadeath rogue-lite. Your dropped backpack stays at the death site, while your home base stash remains 100% secure.'],
-      ['What is the best way to maintain weapon condition?', 'Use Gun Cleaning Oil for quick field top-ups up to 70%, and safehouse workbenches with spare springs and scrap metal for 100% full repairs.'],
-      ['What is the tactical purpose of the Thread Cutter rifle in Patch v0.6.0?', 'The Thread Cutter is a heavy 7.62x54R designated marksman rifle capable of one-shotting unarmored bandits and staggering Big Bears. In Patch v0.6.0, developer NoShadow adjusted its backpack grid size to 3 vertical slots (1x3) to prevent early-game over-stacking, forcing players to choose between carrying long-range firepower or high-volume scrap.']
+      ['How does weapon jamming work in Scavland?', 'Weapons wear with every round fired, so jamming becomes likelier as condition falls. At 10% durability the hard-jam chance is 33%, reduced from 45% in Update 0.7.0, and jamming now begins later and occurs less often. Guns can explode below 30% durability.'],
+      ['Can I recover my backpack after dying in Scavland?', 'Yes. Scavland is a persistent survival RPG rather than a permadeath roguelite: your dropped gear and backpack stay at the death site for recovery, and your stash is a separate, shared inventory you keep.'],
+      ['What is the best way to maintain weapon condition?', 'Use field maintenance between fights — Gun Field Tools no longer require Gun Lube — and heavier repair at a workbench, where Gun and Armor Repair Kits can be used regardless of how damaged the item is. Lube and Glue can be applied from 80% durability.'],
+      ['What is the tactical purpose of the Thread Cutter rifle?', 'The Thread Cutter sits in Scavland\u2019s arsenal of 25+ weapons. Update 0.6.0 rebalanced many long guns, including the Thread Cutter, from 2 inventory rows to 3, so carrying long-range firepower trades off against pack space; Update 0.7.0 improved its accuracy, range, durability and fire rate.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-weapon-repair-and-durability'],
     keywords: ['scavland beginner guide', 'scavland weapon durability', 'scavland weapon jamming', 'scavland gun repair', 'scavland cleaning oil']
@@ -694,8 +696,8 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-merchant-prices-and-barter-guide',
     shortTitle: 'Merchant Prices & Barter',
-    title: 'Scavland Merchant Prices & Barter Guide: 50% Off-Category Penalty, 9 Vendor Specialties & Petar Relocation',
-    description: 'Complete merchant trading guide for Scavland: avoiding the 50% off-category sell penalty, relocated gunsmith Petar, and 9 trader specialties.',
+    title: 'Scavland Merchant Prices & Barter Guide: Trader Specialties & Petar’s Relocation',
+    description: 'Complete merchant trading guide for Scavland: which trader buys what after Update 0.6.0, and the relocated gunsmith Petar.',
     category: 'Economy',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Scavland merchants trading salvage and weapons in Zalesye settlement camp',
@@ -703,14 +705,14 @@ export const guides: Guide[] = [
     updated: '2026-09-09',
     answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations. In Patch v0.5.169, selling off-category items to a vendor incurs a steep 50% price reduction penalty (e.g. selling weapons to Physician Anna or medical gauze to Gunsmith Petar). The Act I economy features 9 named settlement merchants across Zalesye, including Gunsmith Petar (relocated in v0.5.169 directly next to Grigory in the market square) and Outpost Trader Volodymyr at the Crossroads annex, who provides a zero-reputation trade bridge for fresh spawns and disgraced scavengers.',
     steps: [
-      '01 · Avoid the 50% Off-Category Price Cut: Never dump bulk mixed inventory onto the first merchant you meet. Selling items outside a trader\'s designated category slashes ruble payout by 50%. Sort your pack before selling: weapons to gunsmiths, medicines to clinics, and electronic junk to tech brokers.',
+      '01 · Match Loot to the Right Trader: Never dump bulk mixed inventory onto the first merchant you meet. Traders have been more specialised in what they buy since Update 0.6.0, so sort your pack before selling: weapons to gunsmiths, medicines to clinics, and electronic junk to tech brokers.',
       '02 · Locate Relocated Gunsmith Petar (v0.5.169): In Patch v0.5.169, Gunsmith Petar was moved from the distant southern perimeter into the central Zalesye settlement square right beside Grigory\'s general stall. Sell all surplus firearms, ammunition boxes, and weapon attachments to Petar for full 100% ruble valuation.',
       '03 · Medical Trade with Physician Anna: Bring all combat stims, sterile bandages, antibiotic injectors, and surgery kits to Physician Anna at the settlement clinic. Completing her Hospital Quest unlocks Tier-2 medical barter, granting access to IFAKs and radiation filters.',
       '04 · Industrial Hardware & Anatoly Barter: Anatoly in Zalesye pays premium rates for high-density electrical scrap. Prioritize saving spark plugs, functioning lighters, electronic relay boards, and copper wire coils from ruin runs to trade for bulk cash.',
       '05 · Emergency Bridge via Trader Volodymyr: If your faction standing collapses below -300 Rep or you need starter weaponry without faction gates, visit trader Volodymyr at the Crossroads annex bunker. Volodymyr trades all item categories with zero reputation requirements.'
     ],
     facts: [
-      ['Off-Category Penalty', '50% price reduction when selling items outside merchant specialty'],
+      ['Trader specialisation', 'Added in Update 0.6.0: traders buy specific categories (Zhivan pays 140% for Common items, Bogdan 40% more for Mutant Parts, and so on)'],
       ['Petar Location (v0.5.169)', 'Relocated next to Grigory in central Zalesye settlement square'],
       ['Named Traders', 'Zhivan, Vesna, Nadja, Grigory, Volodymyr, Bogdan, Petar, Yefim, Alexei, Anatoly, and Raisa'],
       ['Zero-Rep Merchant', 'Trader Volodymyr at Crossroads annex trades without reputation restrictions'],
@@ -718,7 +720,7 @@ export const guides: Guide[] = [
       ['Verified Baseline', 'Early Access Patch v0.5.169 Baseline']
     ],
     faq: [
-      ['Why are merchants offering half price for my loot?', 'Merchants enforce a 50% penalty on off-category goods. If you sell a rifle to a doctor or medical stims to an armor smith, you only receive 50% of the item\'s base barter value.'],
+      ['Why are some merchants paying less for my loot?', 'Since Update 0.6.0 traders are specialised in what they buy. Grigory, for example, no longer buys Medical, Food or Crafting items but pays more for Weapon Attachments, while Zhivan pays 140% for Common items. Sell the right goods to the right vendor.'],
       ['Where is Gunsmith Petar in v0.5.169?', 'Petar is now located directly in the central Zalesye market square, immediately adjacent to trader Grigory. He is no longer stationed at the far southern outpost.'],
       ['Which merchant pays the most for electronic scrap and spark plugs?', 'Anatoly pays the highest ruble prices for industrial scrap, spark plugs, vacuum tubes, and electrical wiring.'],
       ['Can I trade with anyone if my faction reputation is hostile (< -300)?', 'Yes. Trader Volodymyr at the Crossroads annex maintains complete neutrality and will buy and sell with you regardless of negative faction standing.']
@@ -825,10 +827,10 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['Will Scavland add an option to reload saves when you die?', 'Yes. Lucasmml confirmed developers are testing an option allowing players to reload their latest safehouse save rather than being forced into an un-geared corpse recovery run.'],
-      ['Will armor repair costs be rebalanced in upcoming patches?', 'Yes. The developer acknowledged player feedback that repairing 75%-damaged plate carriers is currently too expensive compared to purchasing new armor. Following the 50% glue discount in Patch v0.5.169, further durability degradation formulas are in development.'],
+      ['Have armor and weapon repair costs been rebalanced?', 'Yes, in Update 0.7.0, which the developers describe as a major focus on "addressing your feedback around weapon durability, repairs, accuracy, and overall combat balance". Update 0.5.169 had already lowered the glue requirement for Heavy Armor Repair Kits.'],
       ['Do enemies really spawn directly on top of the player?', 'Mutants do not spawn from thin air on your coordinate; rather, unsuppressed gunfire radiates a 200m sound cone that draws surrounding roaming packs. Build v0.5.169 patched off-screen enemy shooting to ensure fair line-of-sight engagements.'],
       ['When is co-op multiplayer coming to Scavland?', 'Co-op multiplayer (2-4 player squad extraction) is confirmed on the official development roadmap for late Phase 2 / Phase 3, following singleplayer balancing and engine optimization.'],
-      ['How does the 50% merchant off-category penalty work in v0.5.169?', 'Selling items outside a vendor\'s specialty (e.g. selling weapons to a doctor or food to a gunsmith) incurs a 50% ruble markdown. Always sell medical goods to Alexi and hardware to Petar for maximum profit.']
+      ['How do trader buy rates work?', 'Traders became specialised in Update 0.6.0. Each pays a different rate per category: Vesna pays 75% for Common items, Nadja 90% for Common and 80% for Crafting items, and Bogdan 40% more for Mutant Parts. There is no single flat off-category rate.']
     ],
     related: [
       'scavland-early-access-launch-faq-and-roadmap',
@@ -915,7 +917,7 @@ export const guides: Guide[] = [
       '02 · Stash Locker Storage & Death Security: Safehouse Stash containers are completely immune to death penalties—never take all your resources on a raid. With Patch v0.6.0, safehouse workbenches automatically detect and pull crafting materials directly from adjacent stash lockers, meaning you never need to carry heavy scrap metal in your backpack to craft.',
       '03 · Canvas Bed Sleeping & World Cycles: Every safehouse contains a canvas bunk. Interacting with the bed [E] lets you skip 1 to 12 hours of in-game time, allowing you to advance through pitch-black nights (21:00 to 06:00) safely and reset 24-hour merchant contract job pools. Active bleeding or severe dehydration will awaken your character immediately.',
       '04 · Quasi-Fast Travel: Paved Road Sprinting & Staged Transit: Because instant teleportation is disabled, travel between sectors must be earned. The safest traversal method is staged transit along main asphalt roadways, where mutant density is 70% lower than in dense forests and marshlands. Sprint in 5-second bursts to preserve at least 40% stamina for emergency evasions.',
-      '05 · Emergency Safehouse Bug-Out Routes: Always designate a primary and secondary safehouse before embarking on a bunker raid. If your weapon drops below 50% durability or you run low on ammunition, do not push toward the main extraction gate; retreat to the nearest intermediate safehouse locker to rearm and repair.'
+      '05 · Emergency Safehouse Bug-Out Routes: Always designate a primary and secondary safehouse before embarking on a bunker raid. If a weapon is badly worn — guns can explode below 30% condition — or you run low on ammunition, do not push toward the main extraction gate; retreat to the nearest safehouse lockbox to rearm and repair.'
     ],
     facts: [
       ['Instant Fast Travel', 'Disabled by design; transit is tactical and executed in-world on foot'],
