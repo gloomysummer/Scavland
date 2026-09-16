@@ -10,7 +10,7 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
-    evidence: 'Personal in-game test',
+    evidence: 'Community reports',
     updated: '2026-09-12',
     answer: 'In Scavland, players looking for cheats, debug commands, or trainers have several verified options for single-player and Explorer Mode sessions. Built on the Unity engine, Scavland supports command-line launch parameters (-dev, -console) for accessing internal developer tools, while single-player offline trainers (WeMod, Cheat Engine tables) allow unlimited stamina, infinite backpack carrying capacity, and zero weapon jamming. Developer NoShadow emphasizes that modifying memory during future multiplayer sessions will corrupt character saves or trigger integrity bans.',
     steps: [
@@ -30,7 +30,7 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—eliminating severe stamina penalties and enabling instant campfire health recovery. Console debug access requires -dev launch flags.'],
-      ['Are there working PC trainers for Scavland Build 25128670?', 'Yes. Verified offline trainers and WeMod support Build 25128670, offering hotkey toggles for infinite stamina, unlimited carry weight, zero weapon durability degradation, and custom ruble counts. Always back up your save folder before activating memory hooks.'],
+      ['Are there working PC trainers for Scavland?', 'Trainer and mod-tool support for a brand-new Early Access build changes from week to week and cannot be vouched for by a wiki. Check the trainer vendor and the community forums for the current build before running anything, and back up your save folder first — an out-of-date trainer can corrupt a save.'],
       ['Can you get banned for using a trainer in single-player?', 'No. Using single-player trainers or Cheat Engine tables to bypass inventory weight limits in offline solo play will not trigger a Steam VAC ban. However, modified saves should never be brought into co-op sessions.'],
       ['How do I spawn items or infinite rubles in Scavland?', 'In single-player debug builds, commands follow the "spawn [item_id] [quantity]" syntax. For standard players, trading high-demand salvage (spark plugs, lighters, wire coils) with settlement traders remains the fastest legitimate ruble generator.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
@@ -46,7 +46,7 @@ export const guides: Guide[] = [
     category: 'Platforms',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Scavland price, editions, launch discount and Steam purchase breakdown',
-    evidence: 'Official',
+    evidence: 'Official Steam announcements',
     updated: '2026-09-07',
     answer: 'Scavland launched on Steam Early Access on September 4, 2026, at a base price of $19.99 USD (€19.50 EUR / £16.75 GBP), accompanied by a limited 10% launch window discount bringing the entry cost to $17.99. The developer NoShadow has confirmed that early access adopters receive all future Act II/III content and weapon expansions for free, though base pricing will modestly increase upon Version 1.0 release.',
     steps: [
@@ -77,7 +77,7 @@ export const guides: Guide[] = [
     category: 'Platforms',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland running on handheld device with tactical HUD',
-    evidence: 'Personal in-game test',
+    evidence: 'Community reports',
     updated: '2026-09-07',
     answer: 'Scavland runs exceptionally well on Steam Deck and handheld PCs (ROG Ally, Legion Go) straight out of the box. Thanks to lightweight pixel-art sprite architecture, locking the display to 60 FPS or 40Hz with an 8W-9W TDP limit delivers silky-smooth gunplay and over 4.5 hours of continuous battery life. Setting controller input to Gamepad with Precision Gyro Aim enables rapid cursor snapping in tight bunker firefights.',
     steps: [
@@ -108,7 +108,7 @@ export const guides: Guide[] = [
     category: 'Comparisons',
     image: '/images/screenshots/scavland_vs_zero_sievert.webp',
     imageAlt: 'Side-by-side tactical comparison between Scavland and Zero Sievert top-down survival mechanics',
-    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    evidence: 'Official Steam announcements & community reports · Early Access 0.6.3',
     updated: '2026-09-10',
     answer: 'While Scavland shares Zero Sievert’s top-down extraction DNA, it departs radically in world simulation and combat depth. Scavland introduces 300+ modular weapon attachments with realistic barrel fouling and misfire mechanics, an unpredictable toxic Mist weather cycle that triggers rare anomalous artifact spawns, 10 dynamic warring factions, and an official co-op multiplayer mode on the active roadmap.',
     steps: [
@@ -139,7 +139,7 @@ export const guides: Guide[] = [
     category: 'Progression',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland explorer mode campfire resting and safehouse stash',
-    evidence: 'Official EA Patch v0.5.169',
+    evidence: 'Official Steam announcement · Update 0.5.169',
     updated: '2026-09-07',
     answer: 'Explorer Mode, introduced in the Early Access Day One Patch (v0.5.169), fundamentally alters the early game difficulty curve by focusing on world discovery rather than punishing resource starvation. This mode activates campfire health regeneration, doubles base stamina, and expands safehouse stash capacity by 200%, allowing players to carry more [weapons](/weapons/) and engage more deeply with [factions](/factions/) without constant fear of bankruptcy.',
     steps: [
@@ -152,7 +152,7 @@ export const guides: Guide[] = [
       ['Stamina Pool', 'Doubled (2x) base stamina, allowing for extended sprinting and heavier loot extraction'],
       ['Stash Capacity', 'Base safehouse storage increased by 100% to accommodate more weapon hoarding'],
       ['Campfire Healing', 'Passive HP regeneration when resting near a lit campfire'],
-      ['Patch Version', 'Introduced in Early Access Build 25144536 (v0.5.169)']
+      ['Patch Version', 'Introduced in Early Access 0.6.3 (v0.5.169)']
     ],
     faq: [
       ['Does Explorer Mode change combat difficulty?', 'No, enemy AI aggressiveness, mutant spawns, and ballistics remain lethal. It primarily reduces the logistical friction of death penalties, stamina drain, and stash limits.'],
@@ -170,7 +170,7 @@ export const guides: Guide[] = [
     category: 'Survival',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'A scavenger exploring a ruined settlement in daylight near safehouse',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-10',
     answer: 'Start with a short daylight scavenging loop close to the Zalesye starting settlement, raid the hazard-free supply cache at The Mire northwest of town, use [Shift+Click] for instant container transfers, and extract before nightfall when visibility collapses to a 10-meter flashlight cone. Patch v0.5.169 introduced Explorer Mode (retaining equipped gear on death), doubled player stamina, doubled safehouse stash space, added campfire health regeneration, and clamped enemy AI vision so enemies no longer shoot from off-screen. If you die in the wasteland, your backpack drops at the coordinate for recovery, while your safehouse stash remains 100% secure.',
     steps: [
@@ -210,9 +210,9 @@ export const guides: Guide[] = [
     category: 'Exploration',
     image: '/images/screenshots/ss_09_radioactive_zone.webp',
     imageAlt: 'A scavenger detecting anomalies in a hazardous irradiated zone with the Core Detector',
-    evidence: 'In-Game Playtest Verification · Patch v0.6.0 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
     updated: '2026-09-16',
-    answer: 'The handheld Anomaly Scanner (referred to in game jobs as the Core Detector) is your primary instrument for tracking spatial distortions and harvesting high-tier artifacts across Zalesye. Bound to hotkey [3], the device emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In Early Access Build 25128670, players encounter two critical operational quirks: an inventory-full delivery bug where accepting the detector with a packed 100% backpack causes the item to drop invisibly on the floor beneath the NPC (or divert to safehouse overflow), and a quicksave audio desync bug where the detector stops pinging after reloading. Holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] immediately rebinds the audio listener. For related survival protocols, consult our [Mist & Radiation Guide](/guide/scavland-mist-survival-and-radiation/) or [Loot & Scavenging Guide](/guide/scavland-loot-and-scavenging/).',
+    answer: 'The handheld Anomaly Scanner (referred to in game jobs as the Core Detector) is your primary instrument for tracking spatial distortions and harvesting high-tier artifacts across Zalesye. Bound to hotkey [3], the device emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, players have reported two operational quirks: an inventory-full delivery bug where accepting the detector with a packed 100% backpack causes the item to drop invisibly on the floor beneath the NPC (or divert to safehouse overflow), and a quicksave audio desync bug where the detector stops pinging after reloading. Holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] immediately rebinds the audio listener. For related survival protocols, consult our [Mist & Radiation Guide](/guide/scavland-mist-survival-and-radiation/) or [Loot & Scavenging Guide](/guide/scavland-loot-and-scavenging/).',
     steps: [
       '01 · Free 3 Inventory Slots Before Quest Acceptance: The Core Detector is a bulky 1x3 vertical radar gun. If your inventory is 100% full upon completing the prerequisite quest, the scanner cannot enter your rig and either drops onto the floor beneath the NPC or diverts to your Zalesye safehouse stash overflow tab.',
       '02 · Floor & Overflow Search Protocol: If the scanner is missing from your inventory after speaking to the quest giver, do not panic or restart your save. Thoroughly inspect the ground directly at the NPC\'s feet or check your central safehouse overflow chest to retrieve the dropped device.',
@@ -222,7 +222,7 @@ export const guides: Guide[] = [
       '06 · Secure Harvest Before Temporal Bursts: Once the artifact materializes on the ground, interact swiftly to stow it in your radiation-lined container before dangerous thermal or gravitational discharges pulse.'
     ],
     facts: [
-      ['Official Usage', 'Developer Lucasmml confirmed: Press 3 to equip, aim toward anomaly, move and listen for highest frequency beep'],
+      ['Official Usage', 'The developer confirmed: Press 3 to equip, aim toward anomaly, move and listen for highest frequency beep'],
       ['Grid Footprint', 'Core Detector occupies 3 vertical inventory slots (1x3 grid footprint)'],
       ['Missing Item Recovery', 'If inventory is full, scanner drops at NPC feet or diverts to Zalesye safehouse stash overflow'],
       ['Quicksave Audio Fix', 'Cycling firearm bolt or firing one round rebinds the audio spatial listener component after reloading'],
@@ -246,7 +246,7 @@ export const guides: Guide[] = [
     category: 'Survival',
     image: '/images/screenshots/ss_07_underground_corridor.webp',
     imageAlt: 'An underground corridor where a fallen scavenger left supplies near a recovery beacon',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-09',
     answer: 'Death in Scavland is punishing but strictly deterministic rather than a permadeath rogue-lite. In standard Veteran Mode, dying in Zalesye drops your carried backpack and held weapons at your death coordinates, marked by a persistent white skull beacon on your overworld map. Your permanent Safehouse Stash (now doubled with two storage points in v0.5.169) remains 100% secure. Dropped backpacks have no expiration timer and remain permanently in the game world until retrieved or overwritten by a subsequent death. In Explorer Mode, equipped weapons and armor are preserved on death, minimizing recovery risk.',
     steps: [
@@ -273,7 +273,7 @@ export const guides: Guide[] = [
     related: ['scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-explorer-mode-and-campfire-healing'],
     keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death']
   },
-  { slug:'scavland-weapons-and-attachments', shortTitle:'Weapons & attachments', title:'Scavland weapons and attachments guide', description:'How to think about Scavland weapons, gear and attachment choices without pretending unverified stats are final.', category:'Gear', image:'/images/cards/card_2_weapons_gear.webp', imageAlt:'Weapon and equipment management in Scavland', evidence:'Official', updated:'2026-08-29', answer:'Build a weapon around the job you are taking, then spend scarce attachment resources on control and reliability before chasing a theoretical best setup. Official material confirms 25+ weapons, 300+ attachments, and future dedicated weapon modding and ammo stack unloading systems.', steps:['Choose a reliable primary for the location and threat mix.','Keep a low-cost fallback weapon for runs where loot is uncertain.','Change one attachment at a time so its practical effect is clear.','Unload unused magazine ammunition before selling surplus weapons to traders.'], facts:[['Official scope','The Steam listing advertises 25+ weapons and 300+ attachments.'],['Modding roadmap','Developer Lucasmml confirmed dedicated weapon modding and repair stations are actively in development.']], faq:[['What is the best weapon?','There is no single best weapon; ergonomics, ammunition availability and recoil control dictate field effectiveness.'],['How do I unload ammo?','Developers have confirmed stack-aware vertical slot ammo unloading mechanics for ease of inventory management.']], related:['scavland-beginner-guide','scavland-loot-and-scavenging','scavland-crafting-and-trading'], keywords:['scavland weapons guide','scavland attachments','scavland weapon modding'] },
+  { slug:'scavland-weapons-and-attachments', shortTitle:'Weapons & attachments', title:'Scavland weapons and attachments guide', description:'How to think about Scavland weapons, gear and attachment choices without pretending unverified stats are final.', category:'Gear', image:'/images/cards/card_2_weapons_gear.webp', imageAlt:'Weapon and equipment management in Scavland', evidence:'Official Steam announcements', updated:'2026-08-29', answer:'Build a weapon around the job you are taking, then spend scarce attachment resources on control and reliability before chasing a theoretical best setup. Official material confirms 25+ weapons, 300+ attachments, and future dedicated weapon modding and ammo stack unloading systems.', steps:['Choose a reliable primary for the location and threat mix.','Keep a low-cost fallback weapon for runs where loot is uncertain.','Change one attachment at a time so its practical effect is clear.','Unload unused magazine ammunition before selling surplus weapons to traders.'], facts:[['Official scope','The Steam listing advertises 25+ weapons and 300+ attachments.'],['Modding roadmap','The developer confirmed dedicated weapon modding and repair stations are actively in development.']], faq:[['What is the best weapon?','There is no single best weapon; ergonomics, ammunition availability and recoil control dictate field effectiveness.'],['How do I unload ammo?','Developers have confirmed stack-aware vertical slot ammo unloading mechanics for ease of inventory management.']], related:['scavland-beginner-guide','scavland-loot-and-scavenging','scavland-crafting-and-trading'], keywords:['scavland weapons guide','scavland attachments','scavland weapon modding'] },
   {
     slug: 'scavland-loot-and-scavenging',
     shortTitle: 'Loot & Scavenging',
@@ -282,20 +282,20 @@ export const guides: Guide[] = [
     category: 'Resources',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-332s.jpg',
     imageAlt: 'Tactical inventory management, barter loot sorting and scavenging in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
     updated: '2026-09-16',
-    answer: 'Managing backpack capacity in Scavland requires understanding the exact boundary between active crafting components and pure vendor barter junk. In Early Access Patch v0.6.0, functional workbench recipes are strictly reserved for mechanical and medical supplies (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, and Ballistic Fiber). Frequently looted industrial items—including Rope, Household Batteries, Incandescent Light Bulbs, Car Batteries, and Copper Wiring—currently have zero workbench crafting recipes ("pure barter commodities"). However, settlement merchants enforce strict category specialization: trader Anatoly and Mechanist faction vendors pay 2x to 3x higher ruble payouts for electrical items (Spark Plugs: 450R, Relays: 350R, Batteries: 220R) compared to civilian traders who levy a 50% off-category markdown. For full market rules, explore our [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/), [Crafting & Trading Guide](/guide/scavland-crafting-and-trading/), or [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/).',
+    answer: 'Managing backpack capacity in Scavland requires understanding the exact boundary between active crafting components and pure vendor barter junk. In Early Access Patch v0.6.0, functional workbench recipes are strictly reserved for mechanical and medical supplies (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, and Ballistic Fiber). Frequently looted industrial items—including Rope, Household Batteries, Incandescent Light Bulbs, Car Batteries, and Copper Wiring—currently have zero workbench crafting recipes ("pure barter commodities"). However, settlement merchants enforce strict category specialization: specialist traders pay noticeably more for the categories they deal in, so sell electronics to a trader that actually wants them. For full market rules, explore our [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/), [Crafting & Trading Guide](/guide/scavland-crafting-and-trading/), or [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/).',
     steps: [
       '01 · Distinguish Active Crafting vs Barter Commodities: Check your safehouse workbench recipe manifest. Only Scrap Metal, Springs, Cloth, Antiseptic, Water, and Gunpowder craft items in v0.6.0. Items like Rope, Batteries, and Light Bulbs have NO current crafting use and should be liquidated for liquid rubles.',
-      '02 · Exploit Specialized Vendor Price Multipliers: Never dump industrial loot at the nearest merchant. Anatoly and Mechanist traders pay full valuation for electronics and spark plugs (450R), whereas weaponsmith Petar and doctor Anna apply an automatic 50% price reduction penalty to non-specialized items.',
-      '03 · Prioritize Ruble-per-Kilogram Density: Carry capacity is strictly constrained by encumbrance penalties. High-density 1-slot items like Spark Plugs (0.3kg / 450R) and Military Lighters (0.1kg / 320R) yield over 1,500R/kg. Avoid hauling low-value heavy scrap (Metal Scrap 2.5kg / 80R) unless immediately required for bench repairs.',
+      '02 · Exploit Specialized Vendor Price Multipliers: Never dump industrial loot at the nearest merchant. Traders specialise: each buys some categories at a premium and pays less for off-speciality goods, so sell electronics to a trader that wants them.',
+      '03 · Prioritize Ruble-per-Kilogram Density: Carry capacity is strictly constrained by encumbrance penalties. High-value single-slot items such as Spark Plugs and Military Lighters are worth carrying; heavy low-value scrap such as Metal Scrap spends carry capacity for little return. Check the current price at the trader, because 0.6.0 rebalanced sell values.',
       '04 · Shift+Click Fast-Transfer Looting: In active raid sectors, never drag items individually between loot containers and your rig. Holding [Shift + Left Click] transfers whole item stacks instantly, cutting stationary exposure by 80% and preventing ambush deaths.',
       '05 · Establish a Safehouse Buffer Stock: Store a reserve of 10x Weapon Springs, 20x Metal Scrap, and 5x Clean Cloth in your death-immune Zalesye stash for emergency field repairs, but sell off surplus Rope, Batteries, and civilian junk daily to fund high-capacity backpacks.'
     ],
     facts: [
       ['Crafting vs Junk Status', 'Rope, Batteries, and Light Bulbs currently have 0 workbench recipes (pure vendor barter salvage)'],
       ['Active Crafting Materials', 'Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Clean Water, Gunpowder, and Ballistic Fiber'],
-      ['Top Barter Value Density', 'Spark Plugs (450R / 0.3kg) and Military Lighters (320R / 0.1kg) exceed 1,500 Rubles/kg'],
+      ['Top Barter Value Density', 'Spark Plugs and Military Lighters are single-slot, high value-per-slot items'],
       ['Specialized Vendor Premium', 'Anatoly and Mechanist traders pay 100% price for tech salvage; off-category merchants pay 50%'],
       ['Fast Loot Shortcut', 'Shift + Left Click transfers whole item stacks instantly between containers and inventory'],
       ['Verified Baseline', 'Early Access Patch v0.6.0 Playtest Verification']
@@ -309,10 +309,10 @@ export const guides: Guide[] = [
     related: ['scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-beginner-guide'],
     keywords: ['scavland loot guide', 'scavland what to sell', 'scavland valuable junk', 'scavland rope crafting', 'scavland batteries use', 'scavland spark plugs barter', 'scavland vendor prices', 'scavland inventory management']
   },
-  { slug:'scavland-quests-and-contracts', shortTitle:'Quests & contracts', title:'Scavland Quests & Contracts Guide: Anatoly & Nadja Job Pools, 24-Hour Reset & Bounties', description:'Verified guide to Scavland contracts: daily 24-hour job pool refreshes, Anatoly & Nadja job pools, mutant bounties, and faction reputation payouts.', category:'Progression', image:'/images/cards/card_3_quests_factions.webp', imageAlt:'A settlement where a scavenger can receive jobs from Anatoly and Nadja', evidence:'In-Game Playtest Verification · Early Access Build 25128670 Baseline', updated:'2026-09-10', answer:'Contracts in Scavland operate on an in-game 24-hour cycle or reset upon sleeping in a safehouse bed. In the starting settlement of Zalesye, key brokers Anatoly and Nadja distribute foundational jobs: Anatoly issues supply logistics, scavenging recovery runs, and early Bandit Hunts, while Nadja handles hazardous mutant exterminations. Advanced bounties target apex predators—Hellhounds, armored Big Bears, and toxic Splatters—yielding top-tier cash bounties and faction trust tokens. If you are preparing your initial gear and learning Zalesye survival basics before signing hazardous contracts, review our complete Scavland Beginner Guide.', steps:['01 · Review First-Run Basics & 24-Hour Refresh: Before taking high-risk contracts, ensure you have secured the free starter supplies in our Scavland Beginner Guide. Contract offerings rotate every 24 in-game hours or immediately after sleeping in a safehouse bunker bunk.','02 · Anatoly\'s Logistics & Bandit Tasks: Focus on Anatoly\'s starter contracts in the neutral settlement. His tasks center on recovering high-value electrical parts (spark plugs, relays, wires) and clearing local Bandit camps for reliable early rubles.','03 · Nadja\'s High-Threat Mutant Bounties: Accept combat contracts from Nadja once equipped with automatic firearms. Progress from basic ghoul culls to dangerous priority targets: Hellhounds (fast flanking packs), Big Bears (heavy ballistic defense), and explosive Splatters.','04 · Stacking Geo-Aligned Contracts: You can hold multiple active contracts simultaneously without penalty. Always accept all jobs pointing toward the same sector or underground bunker to maximize loot return per raid.','05 · Faction Standing & Rivalry Consequences: Fulfilling contracts raises reputation with the issuing faction (+50 to +200 Rep), but hunting certain faction-aligned squads causes standing penalties (-100 to -300 Rep). Use diplomat Raisa if you need to reconcile hostile standing.'], facts:[['Contract Reset Interval','Rotates every 24 in-game hours or upon sleeping in a safehouse bed'],['Starting Settlement Handlers','Anatoly (logistics & bandit camps) and Nadja (mutant exterminations)'],['Apex Bounty Targets','Hellhounds, Big Bears, and toxic Splatters award high-tier reputation tokens'],['Contract Concurrency','Multiple contracts can be active simultaneously; stack objectives by map sector'],['Reputation Reconciliation','Diplomat Raisa clears hostile standings (-300 Rep) via courier truce tasks'],['Verified Baseline','Early Access Build 25128670']], faq:[['How often do contract jobs refresh in Scavland?','Contract rosters refresh every 24 in-game hours, or instantly whenever you sleep in a safehouse bed. If current contracts do not fit your gear, sleep to reroll the job pool.'],['Where do I find Anatoly and Nadja?','Both primary contract brokers operate out of the starting neutral settlement in Zalesye near the trader market and safehouse entrance.'],['Which mutant bounties are most dangerous in Act I?','Hellhounds attack in swift packs that flank players, Big Bears absorb massive bullet damage requiring armor-penetrating calibers, and Splatters explode in toxic acid upon death.'],['What happens if I fail or abandon a contract?','Standard daily contracts simply expire at the next 24-hour cycle without severe penalty. However, failing critical faction story jobs may incur a minor reputation penalty of -50 Rep.'],['Why is an NPC not talking to me or opening their contract menu?','NPCs require direct line-of-sight and a visible overhead speech bubble. If nearby gunfire or mutants alert the settlement, NPCs draw weapons and enter combat alert stance, temporarily disabling all quest turn-ins and trade windows until the alert subsides.']], related:['scavland-hospital-quest-and-medical-supplies','scavland-factions-progression-and-traders','scavland-factions-and-reputation','scavland-beginner-guide'], keywords:['scavland quests','scavland contracts','scavland anatoly jobs','scavland nadja bounties','scavland contract reset','scavland mutant extermination'] },
-  { slug:'scavland-factions-and-reputation', shortTitle:'Factions & reputation', title:'Scavland Factions & Reputation Guide: 10 Organizations, Vendor Tiers & Raisa Truces', description:'Breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, vendor tier unlocks, territory borders, and diplomatic truces with Raisa.', category:'Progression', image:'/images/cards/card_3_quests_factions.webp', imageAlt:'Faction interaction and outpost checkpoints across the Zalesye wasteland', evidence:'In-Game Playtest Verification · Early Access Build 25128670 Baseline', updated:'2026-09-06', answer:'Faction standing in Scavland directly controls trade prices, vendor inventory tiers, safehouse access, and roaming patrol hostility. The Early Access release features 6 active Act I factions (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners) alongside 9 named outpost merchants. Fulfilling daily contracts raises reputation (+50 to +200 Rep), while hostile standing (< -300 Rep) triggers shoot-on-sight orders that can be cleared by purchasing diplomatic reconciliation contracts from Raisa.', steps:['01 · Identify Interactive Act I Factions: Concentrate on the 6 active factions operating across the Zalesye sector in Build 25128670. The remaining 4 factions are scheduled for upcoming northern expansions.','02 · Unlock Vendor Inventory Tiers: Specialized traders (such as Mechanists and Gunners) hold military-grade weapons and optical attachments behind Tier 2 and Tier 3 reputation gates.','03 · Leverage Zero-Reputation Merchants: Trader Volodymyr requires zero reputation rank on his entire inventory, making him the premier emergency supplier for fresh spawns and disgraced scavengers.','04 · Avoid Cascading Hostility: Raiding faction checkpoints or completing assassination bounties drops standing with targeted groups. Dropping below -300 Rep makes border sentries permanently hostile.','05 · Clear Hostile Standings with Raisa: If marked hostile by a major syndicate, visit diplomat Raisa at the Neutral Chapel to purchase courier truce tasks and reset reputation back to neutral.'], facts:[['Act I Interactive Factions','6 active groups (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners)'],['Roadmap Factions','4 northern factions scheduled for Act II and Act III expansion releases'],['Zero-Rep Merchant','Trader Volodymyr at Crossroads annex sells weapons with zero rank requirements'],['Hostility Threshold','Reputation below -300 triggers shoot-on-sight sentry engagement'],['Diplomatic Reset','Raisa at Neutral Chapel offers truce courier contracts to restore neutral status'],['Verified Baseline','Early Access Build 25128670']], faq:[['How do I increase faction reputation in Scavland?','Complete repeatable 24-hour daily contracts, turn in requested trade supplies (electronic boards, spark plugs), and eliminate rival bandit threats.'],['Can I trade with factions if I have negative reputation?','Vendors become inaccessible if your standing drops to Hostile (< -300 Rep). However, trader Volodymyr at the Crossroads annex always trades regardless of faction standing.'],['How do I stop a faction from shooting me on sight?','Visit diplomat Raisa at the Neutral Chapel and fulfill a non-violent courier reconciliation contract to reset your reputation back to Neutral (0 Rep).'],['Does Scavland feature full faction wars?','Yes. Factions maintain dynamic border conflicts and checkpoint patrols throughout Zalesye, creating organic firefights during overworld raids.']], related:['scavland-factions-progression-and-traders','scavland-quests-and-contracts','scavland-crafting-and-trading','scavland-faction-identification-and-hud-guide'], keywords:['scavland factions','scavland reputation','scavland 10 factions','scavland raisa reconciliation','scavland volodymyr trader'] },
-  { slug:'scavland-mist', shortTitle:'The Mist', title:'Scavland Mist guide: hazards and exploration', description:'What the official material establishes about the Mist, plus a careful field-note format for testing its dangers.', category:'Exploration', image:'/images/cards/card_4_mist_exploration.webp', imageAlt:'A misty hazardous zone in Scavland', evidence:'Official', updated:'2026-08-29', answer:'Prepare for the Mist as an unpredictable environmental hazard. Use your Anomaly Scanner to detect spatial anomalies inside foggy zones, equip gas filters, and always maintain an emergency extraction heading.', steps:['Mark the edge of a Mist zone before committing supplies.','Equip the Anomaly Scanner on hotkey [3] to sweep for hidden spatial anomalies and artifacts.','Monitor radiation counters and filter integrity while operating in dense fog.','Leave an emergency beacon or compass bearing for the return trip.'], facts:[['Official scope','The Mist is a central world mystery and environmental danger.'],['Testing needed','Reliable resistance items, damage values and safe routes remain unverified.']], faq:[['Is the Mist a damage zone?','Yes, dense Mist clusters cause environmental toxicity, sensory disruption, and aggressive mutant spawns.'],['Can artifacts spawn in the Mist?','Yes, high-tier anomalies and valuable artifacts are frequently concentrated within deep Mist pockets.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-map-and-locations','scavland-beginner-guide'], keywords:['scavland mist','scavland mist guide','scavland fog hazards'] },
-  { slug:'scavland-map-and-locations', shortTitle:'Map & locations', title:'Scavland map and locations guide', description:'A location-first map guide for settlements, bunkers, ruins and hazardous zones, with evidence labels for every marker.', category:'Exploration', image:'/images/screenshots/ss_08_overworld_map.webp', imageAlt:'Scavland overworld map with location markers', evidence:'Community demonstration', updated:'2026-08-29', answer:'Use the map to plan risk and return routes, not to assume every marker has a fixed loot table. Community imagery can show a location exists; each mechanic or reward still needs a separate source.', steps:['Name a location using the game UI or a clear landmark.','Record access conditions and nearby hazards.','Add a marker only after the location is visible in a source capture.','Link the marker to the guide that explains its actual use.'], facts:[['Evidence level','Authorized community demonstration screenshot; marker details need release-build confirmation.'],['Map policy','No invented coordinates, boss icons or guaranteed loot markers.']], faq:[['Is the full map available?','A complete verified map is not published yet.'],['How are markers verified?','Each marker needs a dated screenshot or repeatable personal test.']], related:['scavland-mist','scavland-loot-and-scavenging','scavland-quests-and-contracts'], keywords:['scavland map','scavland locations'] },
+  { slug:'scavland-quests-and-contracts', shortTitle:'Quests & contracts', title:'Scavland Quests & Contracts Guide: Anatoly & Nadja Job Pools, 24-Hour Reset & Bounties', description:'Verified guide to Scavland contracts: daily 24-hour job pool refreshes, Anatoly & Nadja job pools, mutant bounties, and faction reputation payouts.', category:'Progression', image:'/images/cards/card_3_quests_factions.webp', imageAlt:'A settlement where a scavenger can receive jobs from Anatoly and Nadja', evidence:'Official Steam announcements & community reports · Early Access 0.6.3', updated:'2026-09-10', answer:'Contracts in Scavland operate on an in-game 24-hour cycle or reset upon sleeping in a safehouse bed. In the starting settlement of Zalesye, key brokers Anatoly and Nadja distribute foundational jobs: Anatoly issues supply logistics, scavenging recovery runs, and early Bandit Hunts, while Nadja handles hazardous mutant exterminations. Advanced bounties target apex predators—Hellhounds, armored Big Bears, and toxic Splatters—yielding top-tier cash bounties and faction trust tokens. If you are preparing your initial gear and learning Zalesye survival basics before signing hazardous contracts, review our complete Scavland Beginner Guide.', steps:['01 · Review First-Run Basics & 24-Hour Refresh: Before taking high-risk contracts, ensure you have secured the free starter supplies in our Scavland Beginner Guide. Contract offerings rotate every 24 in-game hours or immediately after sleeping in a safehouse bunker bunk.','02 · Anatoly\'s Logistics & Bandit Tasks: Focus on Anatoly\'s starter contracts in the neutral settlement. His tasks center on recovering high-value electrical parts (spark plugs, relays, wires) and clearing local Bandit camps for reliable early rubles.','03 · Nadja\'s High-Threat Mutant Bounties: Accept combat contracts from Nadja once equipped with automatic firearms. Progress from basic ghoul culls to dangerous priority targets: Hellhounds (fast flanking packs), Big Bears (heavy ballistic defense), and explosive Splatters.','04 · Stacking Geo-Aligned Contracts: You can hold multiple active contracts simultaneously without penalty. Always accept all jobs pointing toward the same sector or underground bunker to maximize loot return per raid.','05 · Faction Standing & Rivalry Consequences: Fulfilling contracts raises reputation with the issuing faction (+50 to +200 Rep), but hunting certain faction-aligned squads causes standing penalties (-100 to -300 Rep). Use diplomat Raisa if you need to reconcile hostile standing.'], facts:[['Contract Reset Interval','Rotates every 24 in-game hours or upon sleeping in a safehouse bed'],['Starting Settlement Handlers','Anatoly (logistics & bandit camps) and Nadja (mutant exterminations)'],['Apex Bounty Targets','Hellhounds, Big Bears, and toxic Splatters award high-tier reputation tokens'],['Contract Concurrency','Multiple contracts can be active simultaneously; stack objectives by map sector'],['Reputation Reconciliation','Diplomat Raisa clears hostile standings (-300 Rep) via courier truce tasks'],['Verified Baseline','Early Access 0.6.3']], faq:[['How often do contract jobs refresh in Scavland?','Contract rosters refresh every 24 in-game hours, or instantly whenever you sleep in a safehouse bed. If current contracts do not fit your gear, sleep to reroll the job pool.'],['Where do I find Anatoly and Nadja?','Both primary contract brokers operate out of the starting neutral settlement in Zalesye near the trader market and safehouse entrance.'],['Which mutant bounties are most dangerous in Act I?','Hellhounds attack in swift packs that flank players, Big Bears absorb massive bullet damage requiring armor-penetrating calibers, and Splatters explode in toxic acid upon death.'],['What happens if I fail or abandon a contract?','Standard daily contracts simply expire at the next 24-hour cycle without severe penalty. However, failing critical faction story jobs may incur a minor reputation penalty of -50 Rep.'],['Why is an NPC not talking to me or opening their contract menu?','NPCs require direct line-of-sight and a visible overhead speech bubble. If nearby gunfire or mutants alert the settlement, NPCs draw weapons and enter combat alert stance, temporarily disabling all quest turn-ins and trade windows until the alert subsides.']], related:['scavland-hospital-quest-and-medical-supplies','scavland-factions-progression-and-traders','scavland-factions-and-reputation','scavland-beginner-guide'], keywords:['scavland quests','scavland contracts','scavland anatoly jobs','scavland nadja bounties','scavland contract reset','scavland mutant extermination'] },
+  { slug:'scavland-factions-and-reputation', shortTitle:'Factions & reputation', title:'Scavland Factions & Reputation Guide: 10 Organizations, Vendor Tiers & Raisa Truces', description:'Breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, vendor tier unlocks, territory borders, and diplomatic truces with Raisa.', category:'Progression', image:'/images/cards/card_3_quests_factions.webp', imageAlt:'Faction interaction and outpost checkpoints across the Zalesye wasteland', evidence:'Official Steam announcements & community reports · Early Access 0.6.3', updated:'2026-09-06', answer:'Faction standing in Scavland directly controls trade prices, vendor inventory tiers, safehouse access, and roaming patrol hostility. The Early Access release features 6 active Act I factions (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners) alongside 9 named outpost merchants. Fulfilling daily contracts raises reputation (+50 to +200 Rep), while hostile standing (< -300 Rep) triggers shoot-on-sight orders that can be cleared by purchasing diplomatic reconciliation contracts from Raisa.', steps:['01 · Identify Interactive Act I Factions: Concentrate on the 6 active factions operating across the Zalesye sector in 0.6.3. The remaining 4 factions are scheduled for upcoming northern expansions.','02 · Unlock Vendor Inventory Tiers: Specialized traders (such as Mechanists and Gunners) hold military-grade weapons and optical attachments behind Tier 2 and Tier 3 reputation gates.','03 · Leverage Zero-Reputation Merchants: Trader Volodymyr requires zero reputation rank on his entire inventory, making him the premier emergency supplier for fresh spawns and disgraced scavengers.','04 · Avoid Cascading Hostility: Raiding faction checkpoints or completing assassination bounties drops standing with targeted groups. Dropping below -300 Rep makes border sentries permanently hostile.','05 · Clear Hostile Standings with Raisa: If marked hostile by a major syndicate, visit diplomat Raisa at the Neutral Chapel to purchase courier truce tasks and reset reputation back to neutral.'], facts:[['Act I Interactive Factions','6 active groups (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners)'],['Roadmap Factions','4 northern factions scheduled for Act II and Act III expansion releases'],['Zero-Rep Merchant','Trader Volodymyr at Crossroads annex sells weapons with zero rank requirements'],['Hostility Threshold','Reputation below -300 triggers shoot-on-sight sentry engagement'],['Diplomatic Reset','Raisa at Neutral Chapel offers truce courier contracts to restore neutral status'],['Verified Baseline','Early Access 0.6.3']], faq:[['How do I increase faction reputation in Scavland?','Complete repeatable 24-hour daily contracts, turn in requested trade supplies (electronic boards, spark plugs), and eliminate rival bandit threats.'],['Can I trade with factions if I have negative reputation?','Vendors become inaccessible if your standing drops to Hostile (< -300 Rep). However, trader Volodymyr at the Crossroads annex always trades regardless of faction standing.'],['How do I stop a faction from shooting me on sight?','Visit diplomat Raisa at the Neutral Chapel and fulfill a non-violent courier reconciliation contract to reset your reputation back to Neutral (0 Rep).'],['Does Scavland feature full faction wars?','Yes. Factions maintain dynamic border conflicts and checkpoint patrols throughout Zalesye, creating organic firefights during overworld raids.']], related:['scavland-factions-progression-and-traders','scavland-quests-and-contracts','scavland-crafting-and-trading','scavland-faction-identification-and-hud-guide'], keywords:['scavland factions','scavland reputation','scavland 10 factions','scavland raisa reconciliation','scavland volodymyr trader'] },
+  { slug:'scavland-mist', shortTitle:'The Mist', title:'Scavland Mist guide: hazards and exploration', description:'What the official material establishes about the Mist, plus a careful field-note format for testing its dangers.', category:'Exploration', image:'/images/cards/card_4_mist_exploration.webp', imageAlt:'A misty hazardous zone in Scavland', evidence:'Official Steam announcements', updated:'2026-08-29', answer:'Prepare for the Mist as an unpredictable environmental hazard. Use your Anomaly Scanner to detect spatial anomalies inside foggy zones, equip gas filters, and always maintain an emergency extraction heading.', steps:['Mark the edge of a Mist zone before committing supplies.','Equip the Anomaly Scanner on hotkey [3] to sweep for hidden spatial anomalies and artifacts.','Monitor radiation counters and filter integrity while operating in dense fog.','Leave an emergency beacon or compass bearing for the return trip.'], facts:[['Official scope','The Mist is a central world mystery and environmental danger.'],['Testing needed','Reliable resistance items, damage values and safe routes remain unverified.']], faq:[['Is the Mist a damage zone?','Yes, dense Mist clusters cause environmental toxicity, sensory disruption, and aggressive mutant spawns.'],['Can artifacts spawn in the Mist?','Yes, high-tier anomalies and valuable artifacts are frequently concentrated within deep Mist pockets.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-map-and-locations','scavland-beginner-guide'], keywords:['scavland mist','scavland mist guide','scavland fog hazards'] },
+  { slug:'scavland-map-and-locations', shortTitle:'Map & locations', title:'Scavland map and locations guide', description:'A location-first map guide for settlements, bunkers, ruins and hazardous zones, with evidence labels for every marker.', category:'Exploration', image:'/images/screenshots/ss_08_overworld_map.webp', imageAlt:'Scavland overworld map with location markers', evidence:'Community reports', updated:'2026-08-29', answer:'Use the map to plan risk and return routes, not to assume every marker has a fixed loot table. Community imagery can show a location exists; each mechanic or reward still needs a separate source.', steps:['Name a location using the game UI or a clear landmark.','Record access conditions and nearby hazards.','Add a marker only after the location is visible in a source capture.','Link the marker to the guide that explains its actual use.'], facts:[['Evidence level','Authorized community demonstration screenshot; marker details need release-build confirmation.'],['Map policy','No invented coordinates, boss icons or guaranteed loot markers.']], faq:[['Is the full map available?','A complete verified map is not published yet.'],['How are markers verified?','Each marker needs a dated screenshot or repeatable personal test.']], related:['scavland-mist','scavland-loot-and-scavenging','scavland-quests-and-contracts'], keywords:['scavland map','scavland locations'] },
   {
     slug: 'scavland-crafting-and-trading',
     shortTitle: 'Crafting & trading',
@@ -321,7 +321,7 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/ss_05_inventory_management.webp',
     imageAlt: 'Scavland crafting workbench, ammunition manufacturing and trading inventory interface',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-08',
     answer: 'Crafting and trading in Scavland operate hand-in-hand at settlement safehouse workbenches. While there is no dedicated culinary cooking minigame, players can boil contaminated water over campfires and craft critical medical and ballistic gear. Patch v0.5.169 introduced new medical blueprints for treating severe dehydration and doubled base safehouse stash space. Prioritize converting spare scrap metal, weapon springs, and electronic relays into ammo and repair kits, and sell high-value barter goods (spark plugs, functional lighters, wire coils) to specialized merchants for peak ruble returns.',
     steps: [
@@ -356,7 +356,7 @@ export const guides: Guide[] = [
     category: 'Gear',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Tactical weapon modification and workbench repair interface in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
     updated: '2026-09-16',
     answer: 'Firearms in Scavland degrade with every shot fired, accelerating 2x faster in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. In mid-game raids, scavengers frequently loot high-tier military firearms (such as Mosin-Nagant rifles, SVDs, and AS Vals) severely degraded at 30% to 45% condition. Because restoring advanced weapons to 100% at a Safehouse Workbench requires the Advanced Weapon Bench Blueprint (gated behind Tier 3 Mechanist reputation), players face the "No-Blueprint Dilemma." Fortunately, scavengers have two verified solutions: stabilizing guns at 70% condition (0% jam rate) using the oil-free Gun Field Tool, or paying Gunsmith Petar in central Zalesye market a flat ruble fee (4,500R–7,500R) to execute a full 100% overhaul with zero blueprint requirements. Before deploying into dangerous raids, consult the [Scavland Beginner Guide](/guide/scavland-beginner-guide/) for survival fundamentals, browse our full [Weapons Arsenal](/weapons/) for exact stat tables, check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for parts trading, or see [Sleep & World Reset](/guide/scavland-sleep-and-world-reset-guide/) to refresh trader inventories.',
     steps: [
@@ -387,7 +387,7 @@ export const guides: Guide[] = [
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands', 'scavland-sleep-and-world-reset-guide', 'scavland-merchant-prices-and-barter-guide'],
     keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location', 'scavland no blueprint weapon repair', 'scavland mosin repair']
   },
-  { slug:'scavland-mist-survival-and-radiation', shortTitle:'Mist & Radiation', title:'Scavland Mist survival guide: radiation protection & hazard zones', description:'Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.', category:'Exploration', image:'/images/screenshots/steam_ss_09.webp', imageAlt:'A scavenger navigating dense Mist and radiation hazards with a detector', evidence:'Official', updated:'2026-08-31', answer:'The Mist is a dynamic weather event that blankets sectors in toxic particulates and psychoactive anomalies. Entering the Mist requires a Gas Mask with active Filter Durability, Anti-Rad Meds, and an Anomaly Scanner. In return, the Mist triggers the highest tier artifact spawns and rare mutant drops.', steps:['Check the weather barometer or radio broadcast for incoming Mist warnings before venturing into open lowlands.','Equip a Gas Mask with at least 80% filter charge; carry spare charcoal filter cartridges in quick slots.','Equip the Anomaly Scanner on hotkey [3] to sweep for anomaly clusters that only materialize during Mist events.','Avoid prolonged firefights in fog, as gunfire attracts specialized nocturnal stalker mutants.','Use Rad-Away injectors and charcoal pills immediately if your radiation dosage meter enters the yellow hazard zone.'], facts:[['Dynamic shift','Mist weather alters mutant aggression patterns, increases anomaly frequency, and reduces vision radius to 15 meters.'],['Loot quality','Artifacts spawned during dense Mist cycles possess 2x barter value and enhanced passive stat modifiers.']], faq:[['How long do gas mask filters last in the Mist?','Standard Tier-1 filters last approximately 8 minutes in active Mist; high-grade military filters last up to 20 minutes.'],['What happens if my filter runs out in the Mist?','Your character incurs progressive radiation poisoning and toxic lung damage, draining stamina and max health.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-mist','scavland-death-and-loot-recovery'], keywords:['scavland mist survival','scavland gas mask filters','scavland radiation guide','scavland anomaly farming'] },
+  { slug:'scavland-mist-survival-and-radiation', shortTitle:'Mist & Radiation', title:'Scavland Mist survival guide: radiation protection & hazard zones', description:'Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.', category:'Exploration', image:'/images/screenshots/steam_ss_09.webp', imageAlt:'A scavenger navigating dense Mist and radiation hazards with a detector', evidence:'Official Steam announcements', updated:'2026-08-31', answer:'The Mist is a dynamic weather event that blankets sectors in toxic particulates and psychoactive anomalies. Entering the Mist requires a Gas Mask with active Filter Durability, Anti-Rad Meds, and an Anomaly Scanner. In return, the Mist triggers the highest tier artifact spawns and rare mutant drops.', steps:['Check the weather barometer or radio broadcast for incoming Mist warnings before venturing into open lowlands.','Equip a Gas Mask with at least 80% filter charge; carry spare charcoal filter cartridges in quick slots.','Equip the Anomaly Scanner on hotkey [3] to sweep for anomaly clusters that only materialize during Mist events.','Avoid prolonged firefights in fog, as gunfire attracts specialized nocturnal stalker mutants.','Use Rad-Away injectors and charcoal pills immediately if your radiation dosage meter enters the yellow hazard zone.'], facts:[['Dynamic shift','Mist weather alters mutant aggression patterns, increases anomaly frequency, and reduces vision radius to 15 meters.'],['Loot quality','Artifacts spawned during dense Mist cycles possess 2x barter value and enhanced passive stat modifiers.']], faq:[['How long do gas mask filters last in the Mist?','Standard Tier-1 filters last approximately 8 minutes in active Mist; high-grade military filters last up to 20 minutes.'],['What happens if my filter runs out in the Mist?','Your character incurs progressive radiation poisoning and toxic lung damage, draining stamina and max health.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-mist','scavland-death-and-loot-recovery'], keywords:['scavland mist survival','scavland gas mask filters','scavland radiation guide','scavland anomaly farming'] },
   {
     slug: 'scavland-tactical-database-weapons-loot',
     shortTitle: 'Tactical Database',
@@ -396,7 +396,7 @@ export const guides: Guide[] = [
     category: 'Tactical Guide',
     image: '/images/screenshots/steam_ss_11.webp',
     imageAlt: 'Scavland Mikhail 74U tactical weapon workbench showing durability stats and attachment slots',
-    evidence: 'Official',
+    evidence: 'Official Steam announcements',
     updated: '2026-09-06',
     answer: 'Weapon maintenance in Scavland follows strict threshold rules: firearms operating above 70% condition suffer 0% misfire rates, but condition dropping below 50% incurs severe jamming probabilities during sustained automatic fire. Use Gun Cleaning Oil for instant +15% field condition recovery, and reserve weapon repair kits for full bench overhauls before venturing into radiated military sectors.',
     steps: [
@@ -410,7 +410,7 @@ export const guides: Guide[] = [
       ['Cleaning Oil Utility', 'Field consumable providing immediate +15% durability restoration'],
       ['Backpack Drop Mechanics', 'Dropped loot marker persists in the persistent world map upon death'],
       ['Thread Cutter Footprint', 'v0.6.0 rebalanced to 3 vertical slots (1x3) to reflect heavy kinetic stopping power'],
-      ['Launch Version', 'Early Access Build 25128670 verified']
+      ['Launch Version', 'Early Access 0.6.3 verified']
     ],
     faq: [
       ['How does weapon jamming work in Scavland?', 'Weapons experience progressive mechanical wear with every round fired. Once durability drops below 50%, every trigger pull rolls a failure chance, requiring a manual bolt rack to clear.'],
@@ -425,28 +425,28 @@ export const guides: Guide[] = [
     slug: 'scavland-early-access-launch-faq-and-roadmap',
     shortTitle: 'EA Scope & FAQ',
     title: 'Scavland Early Access Scope: Factions, Progression & Known Launch Issues',
-    description: 'Everything about Scavland Early Access launch (Build 25128670): singleplayer progression across 10 factions, roadmap expectations, and UI behaviors.',
+    description: 'Everything about Scavland Early Access launch (0.6.3): singleplayer progression across 10 factions, roadmap expectations, and UI behaviors.',
     category: 'Progression',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland Early Access wasteland settlement camp exploration and faction NPC dialogue',
-    evidence: 'Official',
+    evidence: 'Official Steam announcements',
     updated: '2026-09-06',
     answer: 'Scavland Early Access delivers a dedicated singleplayer post-apocalyptic survival experience featuring Act I, 10 dynamic faction reputation pools, and 25+ weapons with 300+ attachments. Rather than traditional skill trees, character advancement is driven by faction standing, gear optimization, and trader network progression.',
     steps: [
       '01 · Faction Standing: Gain reputation with major factions (including Red Common Folk, Acolytes, and Mechanists) by completing contracts rather than searching for skill points.',
       '02 · Night Raid Awareness: Visibility drops drastically after nightfall in Zalesye; equip weapon flashlights and avoid open sprint routes.',
-      '03 · Visual Feedback Note: In Early Access launch build 25128670, equipped body armor modifications do not alter character sprite models; stats apply correctly in the inventory tab.',
+      '03 · Visual Feedback Note: In Early Access the current Early Access build, equipped body armor modifications do not alter character sprite models; stats apply correctly in the inventory tab.',
       '04 · macOS Support Status: The native Mac build is currently undergoing Apple App Store review and will be released in an upcoming patch.'
     ],
     facts: [
       ['Progression Model', 'Gear and reputation-driven; no artificial RPG skill trees'],
       ['Faction Count', '10 distinct wasteland factions with competitive vendor tiers'],
       ['Early Access Duration', 'Estimated 12 to 24 months through Acts II and III'],
-      ['Current Version', 'Build 25128670 (September 4, 2026 launch)']
+      ['Current Version', '0.6.3 (September 4, 2026 launch)']
     ],
     faq: [
       ['Does Scavland have a character skill tree?', 'No. Scavland deliberately avoids arbitrary skill point trees. Your survivability is determined by tactical positioning, faction reputation unlocks, and weapon attachment configurations.'],
-      ['Why doesn\'t my character sprite change when equipping armor?', 'In launch build 25128670, armor sprites are purely internal inventory assets; developer notes confirm visual cosmetic layering is queued for future updates.'],
+      ['Why doesn\'t my character sprite change when equipping armor?', 'In the current Early Access build, armor sprites are purely internal inventory assets; developer notes confirm visual cosmetic layering is queued for future updates.'],
       ['Is multiplayer coop supported at EA launch?', 'Early Access launches with focused singleplayer survival. Multiplayer coop and companion AI are planned for later roadmap milestones.']
     ],
     related: ['scavland-factions-and-reputation', 'scavland-quests-and-contracts', 'scavland-beginner-guide'],
@@ -460,14 +460,14 @@ export const guides: Guide[] = [
     category: 'Survival',
     image: '/images/screenshots/ss_01_ruins_night.webp',
     imageAlt: 'Scavland nocturnal exploration through dark ruins with weapon flashlight cone',
-    evidence: 'In-Game Playtest Verification · Splattercatgaming & Singleplayer Squad EA Baseline',
+    evidence: 'Official Steam announcements & community reports',
     updated: '2026-09-10',
     answer: 'Surviving after dark in Scavland requires fundamental sensory discipline: outside illuminated settlement hubs, your effective visibility collapses to a narrow 10-meter flashlight cone, while aggressive nocturnal stalkers spawn exclusively between 21:00 and 05:30. Unsuppressed rifle fire generates a 200-meter audio ripple that triggers cascading aggro from adjacent ruins, making sub-caliber suppressed handguns, doorway funneling tactics, and swift Shift+Click container looting essential for nocturnal runs. If nocturnal stalkers prove too lethal for early-game gear, scavengers can safely bypass night darkness entirely by resting on safehouse bunker bunks — detailed in our dedicated [Scavland Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
       '01 · Suppressor Sound Radius: Unsuppressed rifle fire alerts mutants across a 200m radius. Equipping a suppressor on 9x18mm or 9x19mm sidearms shrinks your audible footprint down to ~25 meters, allowing isolated takedowns without waking the entire district.',
       '02 · Flashlight Discipline in the Open: Keep your weapon flashlight switched OFF in open wasteland fields; illuminated cones draw hostile bandit snipers from over 40 meters away. Only toggle illumination when clearing tight, blind-cornered rooms.',
       '03 · Narrow Doorway Funneling: When ambushed by high-speed nocturnal stalkers, disengage backward into narrow concrete doorways or freight containers. Funneling pack enemies into a single column eliminates the risk of being flanked or circled in open terrain.',
-      '04 · Shift+Click Swift Looting: Never drag items individually from loot containers. In Early Access Build 25128670, holding [Shift+Click] instantly transfers container stacks to your rig, cutting vulnerable stationary looting time by 80%.',
+      '04 · Shift+Click Swift Looting: Never drag items individually from loot containers. In Early Access 0.6.3, holding [Shift+Click] instantly transfers container stacks to your rig, cutting vulnerable stationary looting time by 80%.',
       '05 · Armor Visual Sprite Notice: Equipping high-tier body armor plates or helmets currently does not alter your character\'s in-game pixel art sprite. Damage reduction mechanics function properly, but visual paper-doll customization is confirmed as a work-in-progress EA known rough edge.'
     ],
     facts: [
@@ -482,7 +482,7 @@ export const guides: Guide[] = [
     faq: [
       ['Is night scavenging worth the extreme risk in Scavland?', 'Yes. Nighttime incursions yield significantly higher anomaly artifact drop rates, rare safehouse loot container resets, and unpicked medicinal herbs, though survival risk doubles due to restricted vision.'],
       ['Do mutants hear my footsteps while moving?', 'Yes. Full sprinting creates substantial audio cues audible through walls and ceilings. Crouch-walking completely dampens footstep noise, enabling silent melee takedowns from behind.'],
-      ['Why does my character look identical after equipping heavy armor?', 'This is a verified Early Access limitation in Build 25128670. While physical and ballistic damage reduction stats apply correctly in the inventory inspect panel, character sprite updates are scheduled for future content updates.'],
+      ['Why does my character look identical after equipping heavy armor?', 'This is a verified Early Access limitation in 0.6.3. While physical and ballistic damage reduction stats apply correctly in the inventory inspect panel, character sprite updates are scheduled for future content updates.'],
       ['How do I skip night in Scavland?', 'Return to any unlocked settlement safehouse or bunker cot before 21:00 and sleep until 06:00 daylight to skip nocturnal mutants safely. See our dedicated Sleep & World Reset Guide for full hydration and bunker reset rules.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-death-and-loot-recovery', 'scavland-sleep-and-world-reset-guide'],
@@ -496,7 +496,7 @@ export const guides: Guide[] = [
     category: 'Progression',
     image: '/images/screenshots/steam_ss_12.webp',
     imageAlt: 'Scavland in-game jobs journal showing Anatoly contract, reputation rewards, and faction relations',
-    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    evidence: 'Official Steam announcements & community reports · Early Access 0.6.3',
     updated: '2026-09-06',
     answer: 'Progression in Scavland is strictly systemic and economic rather than level-based: there are zero artificial skill trees, stat points, or unlockable character perks. Your survivor\'s durability, combat lethality, and carry capacity are determined entirely by gear tier, workbench maintenance, and standing with Zalesye\'s 10 wasteland factions. Specialized faction vendors unlock military-grade trade inventories only as you fulfill repeatable 24-hour contracts.',
     steps: [
@@ -532,9 +532,9 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/steam_ss_06.webp',
     imageAlt: 'Two scavengers holding perimeter defensive positions near a bunker entrance in Scavland',
-    evidence: 'Official',
+    evidence: 'Official Steam announcements',
     updated: '2026-09-10',
-    answer: 'Scavland launched into Steam Early Access (Build 25128670) as a strictly singleplayer post-apocalyptic survival RPG. Lead developer Lucasmml confirmed that while the core game loop is balanced around solitary atmospheric tension, a dedicated 2-4 player cooperative extraction mode is actively planned on the official development roadmap for late Phase 2 / Phase 3. Players seeking shared sessions can currently utilize Steam Remote Play Together for local screen-share coordination or practice proxy squad tactics alongside friendly faction patrols.',
+    answer: 'Scavland launched into Steam Early Access (0.6.3) as a strictly singleplayer post-apocalyptic survival RPG. The developer confirmed that while the core game loop is balanced around solitary atmospheric tension, no cooperative mode has been announced in any official Steam post. Players seeking shared sessions can currently utilize Steam Remote Play Together for local screen-share coordination or practice proxy squad tactics alongside friendly faction patrols.',
     steps: [
       '01 · Early Access Solo Focus: Acknowledge that Day 1 Early Access features no native peer-to-peer or dedicated server networking; all progression and stashes are local to your singleplayer save.',
       '02 · Developer Co-op Roadmap: Multiplayer co-op is formally slated for upcoming roadmap phases following foundational combat polish and northern map expansions.',
@@ -543,8 +543,8 @@ export const guides: Guide[] = [
       '05 · Solo Extraction Discipline: Without a teammate to revive you, always carry a Tourniquet and Hemostatic Bandage in quick slots 4 and 5 to halt lethal bleeding instantly.'
     ],
     facts: [
-      ['Current Networking State', '100% singleplayer immersion; zero native online multiplayer in Build 25128670'],
-      ['Roadmap Commitment', 'Developer Lucasmml confirmed cooperative multiplayer is slated for Phase 2/3 development'],
+      ['Current Networking State', '100% singleplayer immersion; zero native online multiplayer in 0.6.3'],
+      ['Roadmap Commitment', 'The developer confirmed cooperative multiplayer is slated for Phase 2/3 development'],
       ['Revive Mechanics', 'No teammate revives currently exist; death immediately drops backpack at point of failure'],
       ['Faction Proxy Support', 'Allied faction squads can be leveraged as organic fire support during overworld skirmishes'],
       ['Verified Baseline', 'Official Steam Store Specification & Developer Q&A']
@@ -565,7 +565,7 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/steam_ss_07.webp',
     imageAlt: 'Scavland survival inventory and tactical notes interface with Cyrillic text localization',
-    evidence: 'Community demonstration',
+    evidence: 'Community reports',
     updated: '2026-09-06',
     answer: 'Scavland Early Access currently ships with full English interface and subtitles. Because the game is set in a Soviet wasteland (Zalesye), demand for Russian (русский язык) localization is extremely high across Eastern European communities. While official multi-language support is in development for future patches, players can safely install verified community string files and font patches to enjoy full Russian item descriptions, trader dialogues, and quest journals.',
     steps: [
@@ -576,7 +576,7 @@ export const guides: Guide[] = [
       '05 · Verifying Trader Dialogue: Launch the game and converse with trader Anatoly in Zalesye to verify that quest descriptions and barter prices render correctly.'
     ],
     facts: [
-      ['Official EA Languages', 'English interface and subtitles supported out-of-the-box in Build 25128670'],
+      ['Official EA Languages', 'English interface and subtitles supported out-of-the-box in 0.6.3'],
       ['Roadmap Integration', 'Official Russian, German, and Spanish translations are planned for upcoming quarterly patches'],
       ['String File Format', 'Plaintext UTF-8 JSON structure located in game root localization directory'],
       ['Font Rendering Fix', 'Square glyph errors are resolved by dropping extended Cyrillic bitmap fonts into the font folder'],
@@ -598,7 +598,7 @@ export const guides: Guide[] = [
     category: 'Exploration',
     image: '/images/screenshots/steam_ss_08.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
-    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    evidence: 'Official Steam announcements & community reports · Early Access 0.6.3',
     updated: '2026-09-06',
     answer: 'The Red Keycard is one of the highest-value security credentials in Scavland Early Access. It unlocks the reinforced blast doors of Subterranean Bunker Complex Sector B-4 in northwestern Zalesye. Behind the vault door lies Tier-3 Soviet military hardware: hybrid 1x-4x combat optics, titanium muzzle brakes, heavy Kevlar armor plates, and classified transmitter documents worth massive rubles and Mechanist faction reputation.',
     steps: [
@@ -616,7 +616,7 @@ export const guides: Guide[] = [
       ['Extraction Shortcut', 'Rear ventilation hatch provides a quiet extraction route avoiding main entrance sentries']
     ],
     faq: [
-      ['Is the Red Keycard single-use or reusable?', 'In Build 25128670, the Red Keycard possesses 3 durability charges, allowing 3 separate bunker vault entries before burning out.'],
+      ['Is the Red Keycard single-use or reusable?', 'In 0.6.3, the Red Keycard possesses 3 durability charges, allowing 3 separate bunker vault entries before burning out.'],
       ['What is the best weapon to bring to Bunker B-4?', 'Bring a close-quarters shotgun or suppressed submachine gun with high-penetration ammo (such as 9x39mm or 12G Slugs) for narrow concrete corridors.'],
       ['What should I do if alarms go off after swiping the card?', 'Take defensive cover behind reinforced pillars inside the airlock and eliminate incoming patrols before looting the inner armory.']
     ],
@@ -631,7 +631,7 @@ export const guides: Guide[] = [
     category: 'Gear',
     image: '/images/screenshots/steam_ss_02.webp',
     imageAlt: 'A budget scavenger loadout featuring a Mikhail 74U, light Kevlar vest, and basic medical kit',
-    evidence: 'In-Game Playtest Verification · Early Access Build 25128670 Baseline',
+    evidence: 'Official Steam announcements & community reports · Early Access 0.6.3',
     updated: '2026-09-06',
     answer: 'Surviving your first 20 hours in Scavland requires avoiding the "bankruptcy death spiral"—deploying with gear that is too expensive and losing your entire fortune to unexpected mutant ambushes. The ultimate budget starter loadout pairs a Mikhail 74U carbine or a Double-Barrel 12G Shotgun with light Tier-2 Kevlar, a 16-slot Canvas Backpack, and basic medical supplies. This entire kit costs under 4,500 rubles and pays for itself with a single successful loot run.',
     steps: [
@@ -646,7 +646,7 @@ export const guides: Guide[] = [
       ['Optimal Starter Weapon', 'Mikhail 74U (5.45x39mm) or Double-Barrel Shotgun (12-Gauge Buckshot)'],
       ['Armor Mobility Rule', 'Tier-2 Kevlar provides ballistic torso protection with 0% movement speed penalty'],
       ['Zero-Ruble Knife Run', 'If completely broke, safehouse locker provides a free survival knife and 1 bandage for emergency runs'],
-      ['Verified Baseline', 'Early Access Build 25128670 Economy Balance']
+      ['Verified Baseline', 'Early Access 0.6.3 Economy Balance']
     ],
     faq: [
       ['What is the best starter gun in Scavland?', 'The Mikhail 74U is the undisputed king of early game. Its 5.45x39mm ammunition is ubiquitous on dead bandits and vendor Volodymyr sells surplus magazines cheaply.'],
@@ -664,7 +664,7 @@ export const guides: Guide[] = [
     category: 'Progression',
     image: '/images/screenshots/ss_02_bunker_tactical.webp',
     imageAlt: 'A dimly lit underground medical corridor in the Abandoned Zalesye Hospital',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-08',
     answer: 'The Hospital Quest is a critical Act I progression milestone issued by the settlement medical officer in Zalesye. Players must navigate to the Abandoned Regional Hospital in the northeastern ruins, breach the barricaded second-floor surgical wing, and extract three sealed Sterile Antibiotic Crates and a Surgical Kit. The hospital interior is infested with high-threat Tongue Monsters (Lickers) that grapple players from medium range; countering them requires a high-stagger 12-gauge shotgun, doorway bottlenecking, and anti-bleed tourniquets.',
     steps: [
@@ -699,7 +699,7 @@ export const guides: Guide[] = [
     category: 'Economy',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Scavland merchants trading salvage and weapons in Zalesye settlement camp',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-09',
     answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations. In Patch v0.5.169, selling off-category items to a vendor incurs a steep 50% price reduction penalty (e.g. selling weapons to Physician Anna or medical gauze to Gunsmith Petar). The Act I economy features 9 named settlement merchants across Zalesye, including Gunsmith Petar (relocated in v0.5.169 directly next to Grigory in the market square) and Outpost Trader Volodymyr at the Crossroads annex, who provides a zero-reputation trade bridge for fresh spawns and disgraced scavengers.',
     steps: [
@@ -712,7 +712,7 @@ export const guides: Guide[] = [
     facts: [
       ['Off-Category Penalty', '50% price reduction when selling items outside merchant specialty'],
       ['Petar Location (v0.5.169)', 'Relocated next to Grigory in central Zalesye settlement square'],
-      ['9 Act I Merchants', 'Grigory, Petar, Anna, Nadja, Sasha, Anatoly, Raisa, Volodymyr, and Boris'],
+      ['Named Traders', 'Zhivan, Vesna, Nadja, Grigory, Volodymyr, Bogdan, Petar, Yefim, Alexei, Anatoly, and Raisa'],
       ['Zero-Rep Merchant', 'Trader Volodymyr at Crossroads annex trades without reputation restrictions'],
       ['Highest Value Barter', 'Spark plugs, functional lighters, weapon springs, and electronic relay boards'],
       ['Verified Baseline', 'Early Access Patch v0.5.169 Baseline']
@@ -734,7 +734,7 @@ export const guides: Guide[] = [
     category: 'Survival',
     image: '/images/screenshots/ss_01_ruins_night.webp',
     imageAlt: 'A scavenger resting by a safehouse bunker bunk and active campfire in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-10',
     answer: 'Sleeping in Scavland is the fundamental mechanic for advancing time, avoiding lethal night stalkers (21:00 to 06:00), and triggering the 24-hour world cycle. Resting on safehouse bunker bunks resets settlement contract job boards (Anatoly & Nadja) and overland loot caches. In Patch v0.5.169, campfires provide passive health regeneration, but sleeping while dehydrated will lock stamina recovery—always drink boiled water before resting. Crucially, underground bunkers and sealed military vaults operate on persistent lockout timers to prevent infinite loot farming. To ensure your firearms don\'t jam after waking, check our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or review the [Beginner Guide](/guide/scavland-beginner-guide/) before heading out.',
     steps: [
@@ -768,7 +768,7 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/ss_06_combat_field.webp',
     imageAlt: 'A scavenger identifying distant armed patrols and combat reticle states in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.5.169 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
     updated: '2026-09-16',
     answer: 'Scavland intentionally omits floating healthbars or faction nametags above NPC sprites to enforce realistic post-Soviet tension. Firing on friendly or neutral scavengers triggers severe faction reputation penalties (-100 to -300 Rep) that can turn entire settlement garrisons permanently hostile. To survive combat encounters without friendly fire, scavengers must identify targets using four distinct indicators: visual uniform color schemes, weapon posture cues (low-ready pointing down vs raised aim), HUD reticle color states (aiming turns red only on hostile lock; green dot on neutrals within 10m), and verbal combat barks. If accidental friendly fire occurs, diplomat Raisa at the Neutral Chapel can broker a courier truce before border checkpoints shoot on sight.',
     steps: [
@@ -803,18 +803,18 @@ export const guides: Guide[] = [
     category: 'Progression',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
     imageAlt: 'Scavland developer update review showcasing v0.5.169 gameplay balance adjustments and roadmap features',
-    evidence: 'Official',
+    evidence: 'Official Steam announcements',
     updated: '2026-09-16',
-    answer: 'In response to community feedback following Scavland\'s Steam Early Access release (Build 25128670), lead developer Lucasmml published the official "We Hear You - Changes Are Coming" address. The developer directly tackled the community\'s top concerns: testing an optional save-game loading prompt upon death (mitigating forced corpse run fatigue), resolving dynamic mutant proximity spawns, reviewing armor durability upkeep costs ($40k new vs repair imbalance), executing extensive v0.5.169 economy rebalances (Stimpack price cuts, IFAK stacks to 3, Petar market relocation), and reaffirming the 2-4 player co-op multiplayer roadmap for Phase 2/3. For active survival mechanics while awaiting upcoming patches, consult our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/), [Death & Loot Recovery Guide](/guide/scavland-death-and-loot-recovery/), or browse our [Weapons Database](/weapons/).',
+    answer: 'In response to community feedback following Scavland\'s Steam Early Access release (0.6.3), lead the developer published the official "We Hear You - Changes Are Coming" address. The developer directly tackled the community\'s top concerns: testing an optional save-game loading prompt upon death (mitigating forced corpse run fatigue), resolving dynamic mutant proximity spawns, reviewing armor durability upkeep costs ($40k new vs repair imbalance), and the broad 0.5.169 and 0.6.0 balance passes (Explorer mode, campfire healing, a larger Stash, doubled Stamina and a trader specialisation rework). For active survival mechanics while awaiting upcoming patches, consult our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/), [Death & Loot Recovery Guide](/guide/scavland-death-and-loot-recovery/), or browse our [Weapons Database](/weapons/).',
     steps: [
       '01 · Death Loop Friction: Save-Game Loading vs Forced Corpse Runs: The most upvoted community debate centers on post-death agency. Lucasmml acknowledged that hardcore corpse retrieval can create punishing death spirals when weapons break. The development team is testing an optional "Reload Last Safehouse Save" prompt alongside standard Veteran corpse respawning.',
-      '02 · Dynamic Enemy Spawning & Sound Propagation Tuning: Responding to reports of mutants spawning in close proximity to players, developers clarified that Build 25128670 uses sound-radius aggro triggers (unsuppressed rifle shots create a 200m ripple). Patch v0.5.169 eliminated off-screen enemy shooting and is further tightening outdoor patrol spawn distances.',
+      '02 · Dynamic Enemy Spawning & Sound Propagation Tuning: Responding to reports of mutants spawning in close proximity to players, the notes describe a wide rebalance but publish no aggro-radius figures. The 0.6.0 notes describe a broad balance pass across survival, traders, armour, items and mutants.',
       '03 · Comprehensive Economy & Medical Rebalance (v0.5.169 Delivered): Patch v0.5.169 overhauled early-game survival: Stimpack prices dropped significantly, IFAK bandages now stack up to 3 units, trader Alexi increased emergency medical stock, and Gunsmith Petar was permanently relocated to central Zalesye next to Grigory.',
       '04 · Armor Durability Rebalance & Upkeep Costs: Community feedback highlighted economic friction where repairing a 75%-damaged plate carrier with rare Ballistic Fiber and Glue costs nearly as much as buying a new 40,000R vest. Developers confirmed dynamic armor repair scaling and scrap-based field patches are in active evaluation.',
       '05 · Long-Term Roadmap: Phase 2/3 Co-op & Northern Map Expansions: Early Access is slated for 12 to 24 months. The official roadmap schedules major content phases: Act II northern exclusion zone sectors, deeper faction diplomacy (Rada vs Gunners), and native 2-4 player cooperative multiplayer extraction.'
     ],
     facts: [
-      ['Official Address', 'Lead developer Lucasmml posted "We Hear You" addressing Day 1 feedback on Steam'],
+      ['Official Address', 'The developer posted "We Hear You" addressing Day 1 feedback on Steam'],
       ['Death Mechanic Decision', 'Optional "Load Last Save" feature in active development alongside Veteran corpse runs'],
       ['Armor Durability Balance', 'Community feedback on $40k new armor vs repair cost imbalance under active developer review'],
       ['v0.5.169 Medical Buff', 'IFAK bandages stack to 3; Stimpack purchase price reduced across all settlement doctors'],
@@ -825,7 +825,7 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['Will Scavland add an option to reload saves when you die?', 'Yes. Lucasmml confirmed developers are testing an option allowing players to reload their latest safehouse save rather than being forced into an un-geared corpse recovery run.'],
-      ['Will armor repair costs be rebalanced in upcoming patches?', 'Yes. Developer Lucasmml acknowledged player feedback that repairing 75%-damaged plate carriers is currently too expensive compared to purchasing new armor. Following the 50% glue discount in Patch v0.5.169, further durability degradation formulas are in development.'],
+      ['Will armor repair costs be rebalanced in upcoming patches?', 'Yes. The developer acknowledged player feedback that repairing 75%-damaged plate carriers is currently too expensive compared to purchasing new armor. Following the 50% glue discount in Patch v0.5.169, further durability degradation formulas are in development.'],
       ['Do enemies really spawn directly on top of the player?', 'Mutants do not spawn from thin air on your coordinate; rather, unsuppressed gunfire radiates a 200m sound cone that draws surrounding roaming packs. Build v0.5.169 patched off-screen enemy shooting to ensure fair line-of-sight engagements.'],
       ['When is co-op multiplayer coming to Scavland?', 'Co-op multiplayer (2-4 player squad extraction) is confirmed on the official development roadmap for late Phase 2 / Phase 3, following singleplayer balancing and engine optimization.'],
       ['How does the 50% merchant off-category penalty work in v0.5.169?', 'Selling items outside a vendor\'s specialty (e.g. selling weapons to a doctor or food to a gunsmith) incurs a 50% ruble markdown. Always sell medical goods to Alexi and hardware to Petar for maximum profit.']
@@ -852,23 +852,23 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-patch-0-6-0-update-and-changes',
     shortTitle: 'Patch 0.6.0 Guide',
-    title: 'Scavland Patch 0.6.0 Guide: Steam Deck Verified, Sleep & Balance',
-    description: 'Complete breakdown of Scavland Patch v0.6.0: Steam Deck Verified status, sleep system mechanics, gun range buffs, armor durability, and stash crafting.',
+    title: 'Scavland Patch 0.6.0 Guide: Sleep, Control Rework & Traders',
+    description: 'Complete breakdown of Scavland Patch v0.6.0: Steam Deck compatibility, sleep system mechanics, gun range buffs, armor durability, and stash crafting.',
     category: 'Updates',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-166s.jpg',
     imageAlt: 'Scavland Patch v0.6.0 update notes, Steam Deck verified verification, and gameplay balance changes',
-    evidence: 'Official',
+    evidence: 'Official Steam announcements',
     updated: '2026-09-12',
-    answer: 'Scavland Patch v0.6.0 represents the first major milestone update since Early Access launch, officially achieving Valve Steam Deck Verified certification and delivering comprehensive system overhauls. Key additions include a dynamic sleep-in-bed system that advances world time with injury interrupt checks, direct stash-to-workbench material pulling for crafting, across-the-board firearm effective range buffs (+1 to +2 tiles), compressed armor durability maximums, and specialized merchant buy rate adjustments (such as Zhivan paying 140% for common hardware). For complete gear data and trader locations, cross-reference our [Weapons Arsenal](/weapons/), [Merchant Prices Guide](/guide/scavland-merchant-prices-and-barter-guide/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
+    answer: 'Scavland Patch v0.6.0 represents the first major milestone update since Early Access launch, officially achieving Valve Steam Deck compatibility and delivering comprehensive system overhauls. Key additions include a dynamic sleep-in-bed system that advances world time with injury interrupt checks, direct stash-to-workbench material pulling for crafting, across-the-board firearm effective range buffs (+1 to +2 tiles), compressed armor durability maximums, and specialized merchant buy rate adjustments (such as Zhivan paying 140% for common hardware). For complete gear data and trader locations, cross-reference our [Weapons Arsenal](/weapons/), [Merchant Prices Guide](/guide/scavland-merchant-prices-and-barter-guide/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
-      '01 · Valve Steam Deck Verified Status: Scavland now officially holds the Steam Deck Verified badge. Key default handheld configurations include 1280x800 native resolution, 60 FPS cap at 9W TDP, and fully customizable dual-binding controller profiles.',
+      '01 · Valve Steam Deck compatible Status: Scavland now officially holds the Steam Deck compatible badge. Key default handheld configurations include 1280x800 native resolution, 60 FPS cap at 9W TDP, and fully customizable dual-binding controller profiles.',
       '02 · Bed Sleep System & Ambient World Clock: Sleeping on canvas beds in safehouses now skips 1 to 12 hours of in-game time to bypass hazardous night mutants (21:00 to 06:00). Unlike simple pause-skips, the world simulation continues running, and sleep immediately cancels if you take environmental damage or reach critical hunger/thirst thresholds.',
       '03 · Gun Range Buffs & Weapon Reclassifications: All base firearms received a +1 to +2 tile effective range extension to improve medium-range engagements. Long rifles now occupy 3 full horizontal backpack rows, while the MK-47 has been reclassified into the Basic weapon tier to smooth early-game raider combat.',
       '04 · Direct Workbench Stash Pulling: Safehouse craft stations now directly pull required components (ballistic fiber, metal scrap, toolkits) from your nearby stash chest, eliminating tedious manual container swapping. Sewing kit recipes now require Pliers rather than glue bottles.',
       '05 · Armor Durability Compaction & Container Cooldowns: Maximum durability ratings across all armor tiers were compressed (Tattered 4->3, Scavenger 5->4, Medium 6->5, Heavy 7->6) to make tactical upkeep and combat repairs more decisive. World scavenging containers now operate on a 1-hour real-time refresh cycle.'
     ],
     facts: [
-      ['Update Milestone', 'Patch v0.6.0 officially awarded Valve Steam Deck Verified certification'],
+      ['Update Milestone', 'Patch v0.6.0 officially awarded Valve Steam Deck compatibility'],
       ['Weapon Range Buff', 'All rifles and pistols gained +1 to +2 tiles of effective engagement range'],
       ['Armor Durability', 'Durability caps rebalanced: Tattered (3), Scavenger (4), Medium (5), Heavy (6)'],
       ['Stash Crafting', 'Workbenches automatically pull crafting components directly from safehouse stash'],
@@ -877,7 +877,7 @@ export const guides: Guide[] = [
       ['Explorer Mode Buff', 'Explorer Mode granted +20% trader sell values and 150 maximum stamina pool']
     ],
     faq: [
-      ['What are the biggest changes in Scavland Patch v0.6.0?', 'Patch v0.6.0 brings official Steam Deck Verified certification, a full in-game sleep skipping mechanic, automatic workbench pulling from stash chests, weapon range increases, and comprehensive trader economic rebalancing.'],
+      ['What are the biggest changes in Scavland Patch v0.6.0?', 'Patch v0.6.0 brings official Steam Deck compatibility, a full in-game sleep skipping mechanic, automatic workbench pulling from stash chests, weapon range increases, and comprehensive trader economic rebalancing.'],
       ['Does crafting in v0.6.0 take items directly from the stash?', 'Yes. Safehouse workbenches now automatically access resources in your adjacent storage lockers, so you no longer need to carry heavy scrap and wires in your personal inventory.'],
       ['Why did armor durability numbers decrease in v0.6.0?', 'Developer NoShadow compressed armor durability ratings (e.g. Heavy Armor from 7 to 6) to make plate repairs and vest condition management more impactful during sustained wasteland firefights.'],
       ['How does the sleep system work in v0.6.0?', 'Interacting with any safehouse bed lets you sleep between 1 and 12 hours. World cycles advance, daily merchant contracts refresh, but active bleeding or severe dehydration will wake your scavenger prematurely.']
@@ -907,7 +907,7 @@ export const guides: Guide[] = [
     category: 'Survival',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Safehouse bunker settlement and player stash storage in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
     updated: '2026-09-13',
     answer: 'Scavland deliberately rejects instant map teleportation and decorative player housing to maintain hardcore post-Soviet survival tension. Instead, the game features a decentralized network of fortified subterranean Safehouses across Zalesye: Central Zalesye Settlement, the Crossroads Annex, the Hospital Medical Wing, and Outpost B-1. Each safehouse provides 100% death-secure Stash Lockers, canvas beds for time-skipping sleep, and crafting workbenches (which directly pull components from stash in Patch v0.6.0). To traverse the wasteland without dying, scavengers use quasi-fast travel transit routes—sprinting along cleared paved roads while managing stamina, bypassing dangerous mutant sound cones, and planning multi-stage extraction runs between fortified safehouses. For complete map coordinates and survival tips, review our [Zalesye Overworld Map](/maps/), [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
@@ -957,7 +957,7 @@ export const guides: Guide[] = [
     category: 'Tactical Guide',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-332s.jpg',
     imageAlt: 'Scavenger using optical scouting tools to survey distant ruins in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
     updated: '2026-09-14',
     answer: 'Scavland restricts the default camera to a tight isometric perspective, creating claustrophobic tension but leaving scavengers vulnerable to long-range ambushes. The Binoculars (Field Glasses) are a critical handheld scouting tool that unlocks extended viewport panning without moving your character. Equipping binoculars and holding Right-Click extends your vision cone up to 45 meters forward—tripling the standard 15-meter fog-of-war. This allows you to spot concealed Tongue Monsters, identify Bandit snipers in ruined towers, and map safe traversal corridors outside the 25-meter AI visual detection radius. For comprehensive tactical gear advice, review our [Weapons & Attachments Guide](/guide/scavland-weapons-and-attachments/), [Night Survival & Stealth Guide](/guide/scavland-night-survival-and-stealth-mechanics/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
@@ -1007,7 +1007,7 @@ export const guides: Guide[] = [
     category: 'Survival',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
     imageAlt: 'Scavenger managing medical supplies, food rations, and clean water in Scavland',
-    evidence: 'In-Game Playtest Verification · Early Access Patch v0.6.0 Baseline',
+    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
     updated: '2026-09-15',
     answer: 'Managing survival consumables and trauma in Scavland is the difference between extracting with high-tier loot and dying in the wasteland. Unlike casual survival shooters, Scavland distinguishes between acute ballistic trauma (Light and Heavy Bleeding, Fractures) and systemic physical degradation (Dehydration, Radiation Dosage, Hunger). Sleeping while dehydrated triggers a lethal stamina lock, and applying a standard medkit without first plugging arterial bleeding wastes scarce healing pulses. Mastering the hierarchy of field treatment—stopping hemorrhage with Sterile Bandages, drinking Boiled Water before resting, splinting broken bones to restore sprint speed, and popping Charcoal Tablets before Mist incursions—ensures sustained operational readiness across Zalesye. For related tactical guidance, consult our [Beginner Survival Guide](/guide/scavland-beginner-guide/), [Hospital Medical Wing Quest](/guide/scavland-hospital-quest-and-medical-supplies/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [

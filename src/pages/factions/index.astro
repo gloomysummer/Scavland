@@ -2,14 +2,14 @@
 import Layout from '../../layouts/Layout.astro';
 import { FACTIONS_DATABASE, TRADERS_DATABASE } from '../../data/factions';
 
-const confirmedFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Confirmed Named (v0.5.117)');
+const confirmedFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Confirmed Named (0.6.3)');
 const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roadmap Unreleased');
 ---
 
 <Layout 
   title="Scavland Factions & Traders — Merchant Stock & Reputations" 
   description="Directory of Scavland's 10 factions (Rada, Commonfolk, Acolytes, Mechanists), 9 confirmed traders, exclusive gear, and Raisa reconciliation mechanics." 
-  keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Volodymyr trader, Sasha gunsmith, Raisa reconciliation, Rada, Mechanists, Scavland wiki" 
+  keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Volodymyr trader, Bogdan mutant parts, Raisa reconciliation, Rada, Mechanists, Scavland wiki" 
   canonical="/factions/"
 >
   <Fragment slot="schema">
@@ -37,7 +37,7 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
       </div>
       <h1 class="page-title">Scavland Factions &amp; 9 Named Traders</h1>
       <p class="lede">Comprehensive intelligence directory of the 10 survivor factions across Zalesye: territories, 9 verified settlement merchants, exclusive gear, and Raisa diplomatic reconciliation.</p>
-      <span class="evidence">Evidence: Public Changelogs (v0.5.117 / v0.5.121) + Steam Verified Data</span>
+      <span class="evidence">Evidence: Official Steam announcements & community reports</span>
     </header>
 
     <div class="article-layout">
@@ -59,7 +59,7 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
           <strong style="color:var(--acid);font-size:1.05rem;">Faction Scope &amp; Trader Baseline</strong>
           <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
             <li><strong>10 Factions Total:</strong> Steam officially confirms 10 factions exist. In the current Early Access Act I build, <strong>6 core factions are publicly named and interactive</strong> (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners). The remaining 4 are scheduled for roadmap expansion.</li>
-            <li><strong>9 Confirmed Named Traders:</strong> Anatoly, Nadja, Raisa, Grigory, Jasna, Marco, Olga, Sasha, and Volodymyr operate across outposts.</li>
+            <li><strong>11 Named Traders in the Official Notes:</strong> Zhivan, Vesna, Nadja, Grigory, Volodymyr, Bogdan, Petar, Yefim, Alexei, Anatoly and Raisa operate across the settlements.</li>
             <li><strong>Crucial Vendor Fact:</strong> Trader <strong>Volodymyr has ZERO rank/reputation requirement</strong> on all goods—ideal for fresh spawns or players who antagonized other factions.</li>
             <li><strong>Raisa Reconciliation:</strong> If your standing with any group dips into hostile (&lt; -300 Rep), visit diplomat <strong>Raisa</strong> to purchase truce contracts instead of taking permanent fire on sight.</li>
           </ul>
@@ -114,8 +114,8 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
         </div>
 
         <!-- Section 2: 9 Confirmed Named Traders Table -->
-        <h2 id="traders">9 Verified Settlement Traders</h2>
-        <p>Public changelog v0.5.117 confirmed 9 named traders operating outposts across Zalesye. Below are their specific trading niches, stock peculiarities, and critical player buying decisions:</p>
+        <h2 id="traders">The Named Settlement Traders</h2>
+        <p>The official 0.6.0 patch notes name eleven traders operating across the settlements and describe how each specialises. Below are their trading niches, stock peculiarities, and critical player buying decisions:</p>
 
         <div style="overflow-x:auto;margin:20px 0 35px;">
           <table class="facts" style="width:100%;border-collapse:collapse;">

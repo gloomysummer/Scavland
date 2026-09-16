@@ -3,144 +3,84 @@ import Layout from '../../layouts/Layout.astro';
 
 const timeline = [
   {
-    date: 'September 10-12, 2026',
-    tag: 'Official Update (v0.6.0) & Steam Deck Verified',
-    title: 'Major Milestone v0.6.0: Steam Deck Verified, Sleep Mechanics & Balance Overhaul',
-    summary: 'Developer NoShadow deployed Patch v0.6.0, securing official Valve Steam Deck Verified status, introducing bed sleeping, automatic workbench stash pulling, gun range buffs, and merchant specialization.',
+    date: 'September 10, 2026',
+    tag: 'Official Hotfix (0.6.3)',
+    title: 'Hotfix 0.6.3: NPC Interaction Fix',
+    summary: 'A second same-day hotfix cleared an interaction blocker introduced by the new sleep system.',
     details: [
-      'Steam Deck Verified: Officially awarded Valve Verified badge; runs locked 60 FPS at 9W TDP with native 1280x800 resolution and custom controller layouts.',
-      'Safehouse Bed Sleep System: Rest in beds to skip 1 to 12 hours of dangerous night cycles; real-time world simulation continues with damage wake interrupts.',
-      'Workbench Stash Integration: Crafting stations now pull ingredients directly from nearby safehouse stash containers without manual inventory transfers.',
-      'Firearm Range Buff (+1/+2 Tiles): All rifles and handguns gained 1 to 2 tiles of effective engagement distance; MK-47 reclassified to Basic tier.',
-      'Merchant Economy Overhaul: Zhivan pays 140% for common hardware, Bogdan pays +40% for mutant trophies, and Volodymyr stocks massive weapon attachments.',
-      'Armor Durability Compaction: Armor durability caps tightened (Heavy 7->6, Medium 6->5, Scavenger 5->4) to make tactical field upkeep decisive.'
+      'Fixed not being able to interact with the Zoran NPC because of the bed-sleep interaction.',
+      'This is the newest public build at the time of writing; the source is the official Steam announcement feed.'
     ]
   },
   {
-    date: 'September 11, 2026',
-    tag: 'Official Developer Address',
-    title: 'Lucasmml "We Hear You" Address: Save-Game Loading, Spawn Tuning & Balance Roadmap',
-    summary: 'Lead developer Lucasmml addressed top player concerns on Steam with 2,600+ upvotes: testing optional save-game loading on death, dynamic mutant spawn refinement, quest inventory storage, and confirming Phase 2/3 co-op multiplayer.',
+    date: 'September 10, 2026',
+    tag: 'Official Hotfix (0.6.2)',
+    title: 'Hotfix 0.6.2: Sleep Healing & Leon 1895 Damage Buff',
+    summary: 'The first post-0.6.0 hotfix made sleeping restorative and raised the damage of the Leon 1895 family.',
     details: [
-      'Death Agency & Save-Game Loading: Actively testing an optional "Reload Last Safehouse Save" choice on death alongside standard Veteran corpse respawning.',
-      'Dynamic Enemy Spawning: Clarified sound propagation mechanics (200m rifle sound ripple vs 25m suppressed) and confirmed ongoing outdoor spawn distance limits following the v0.5.169 off-screen shooting fix.',
-      'Quest Inventory De-cluttering: Confirmed plans to separate quest items from general container limits into dedicated quest inventory pouches.',
-      'v0.5.169 Rebalance Retrospective: Verified Stimpack price drops, IFAK stacking to 3, Alexi inventory expansion, and Petar central market relocation.',
-      'Co-op Extraction Timeline: Reaffirmed 2-4 player cooperative multiplayer remains on track for Phase 2/3 following core singleplayer balance.'
+      'Leon 1895 (short, standard and long) does +50% projectile damage.',
+      'Sleeping now restores 5 health per in-game hour.',
+      "Torch and barrel lighting pass, a Tarja's house fix, and missing trees added.",
+      'Gamepad cancel-job confirmation now moves between No and Yes; notification toasts no longer spawn in the wrong place.'
     ]
   },
   {
-    date: 'September 6, 2026',
-    tag: 'Official Developer Address',
-    title: 'We Hear You: Upcoming Hotfixes & 6-Year Development Vision',
-    summary: 'Lead developer Lucasmml addressed the community directly on Steam, detailing upcoming hotfix priorities for inventory and trade glitches while documenting Scavland\'s 6-year development journey and core design pillars.',
+    date: 'September 9, 2026',
+    tag: 'Official Update (0.6.0)',
+    title: 'Update 0.6.0: Sleeping, Rebuilt Controls, Jobs Overhaul & Trader Rebalance',
+    summary: 'The largest patch of the Early Access period so far.',
     details: [
-      'Upcoming Hotfix Priorities: Investigating trade interface numeric key lockups, edge-case inventory drag-and-drop desyncs, and quicksave stat discrepancies.',
-      'Standalone Design Vision: Addressed community comparisons with top-down extraction predecessors, detailing Scavland\'s custom 6-year engineering timeline, deep 10-faction ecosystem, and dynamic atmospheric Mist mechanics.',
-      'Accessibility Commitment: Gathering telemetry on v0.5.169 Explorer Mode and stamina tuning to ensure early-game progression remains challenging without punishing death spirals.',
-      'Localization Polish: Ongoing translation alignment and font rendering fixes for Simplified Chinese and additional requested languages.'
-    ]
-  },
-  {
-    date: 'September 5, 2026',
-    tag: 'Official Update (v0.5.169)',
-    title: 'Day One Patch: Explorer Mode, Merchant Rebalance & Quality of Life',
-    summary: 'Developer Lucasmml deployed the comprehensive Day One Patch addressing early difficulty curves, trading specializations, and death recovery accessibility.',
-    details: [
-      'Added Explorer Mode: Retain equipped weapons and armor on death, with autosaves and doubled quest rewards.',
-      'Merchant Specialization & 50% Off-Category Penalty: Enforced category trading where off-specialty sales incur a 50% ruble penalty, incentivizing specialized barter loops.',
-      'Gunsmith Petar Relocation: Moved Petar from the distant southern perimeter into central Zalesye market right next to Grigory.',
-      'Campfire Healing: Resting at campfires across Zalesye now actively regenerates player health over time.',
-      'Secondary Player Stash: Unlocked a second permanent stash locker at the Crossroads outpost annex next to trader Volodymyr.',
-      'Weapon Field Tool Buff: Uncoupled basic gun field repair tools from Gun Cleaning Oil for maintenance up to 70% condition.',
-      'Heavy Armor Repair Discount: Reduced industrial glue crafting requirements on Heavy Armor Repair Kits by 50%.',
-      'Inventory & Stamina Buff: Doubled base safehouse locker stash size (200%) and maximum player sprint stamina.',
-      'New Medical Blueprints: Added workbench crafting recipes for treating severe dehydration and bleeding debuffs.',
-      'Known Issues Under Active Fix: Simplified Chinese localization alignment and shotgun excessive bleeding bugs.'
+      'Sleeping added: rest in beds to skip time while the world keeps running. The sleep screen previews how your stats will change, saving is disabled during sleep, and taking damage wakes you.',
+      'Controls & Keybinding rebuilt: the Controls page is split into Movement, Combat, Inventory, Crafting, Trader, Map, Journal and General, with hold/tap combinations and a new context-sensitive Action Hint Bar.',
+      "Jobs & Journal overhaul: track multiple jobs, cancel from the Journal (a cancelled job costs 20% of its reputation reward, minimum 1), partial item turn-ins, and Quest vs Job items shown in different colours.",
+      'Traders & economy rebalance: traders specialise more — Zhivan pays 140% for Common items, Vesna 75%, Nadja 90% for Common and 80% for Crafting, Grigory has dropped Medical/Food/Crafting but pays more for weapon attachments, Volodymyr sells far more attachments and offers the Advanced Weapon Repair Kit recipe at Rank 2, and Bogdan pays 40% more for Mutant Parts.',
+      'Weapons, items and armour: weapon range up by +1 or +2 across the board, MK-47 reclassified as Basic tier, armour durability rebalanced (Tattered 4 to 3, Scavenger 5 to 4, Medium 6 to 5, Heavy 7 to 6), IFAK stacking raised to 3.',
+      'Simplified Chinese added as an early, non-final localisation so the Chinese community can play in their own language ahead of the official translation.'
     ]
   },
   {
     date: 'September 5, 2026',
-    tag: 'Community Tracked Patch (Build 25128670 / v0.5.121 Pending)',
-    title: 'Post-Launch Balance Patch: Enemy Line-of-Sight, Looting Responsiveness & Economy Fixes',
-    summary: 'Developer NoShadow pushed initial Day-1 balance adjustments addressing critical community feedback from initial launch raids (public SteamDB baseline: Build 25128670).',
+    tag: 'Official Update (0.5.169) — Day One Patch',
+    title: 'Day One Patch 0.5.169: Explorer Mode, Campfire Healing & a Wider Stash',
+    summary: 'The Day One patch landed the day after launch, responding to feedback from the first 24 hours.',
     details: [
-      'Enemy LoS Tuning: Addressed long-range AI detection through dense foliation and non-transparent barricades.',
-      'Item Hover Responsiveness: Reduced item tooltip hover delay from 0.25s down to 0.125s for snappier inventory looting.',
-      'Negative Currency Bug: Fixed an edge-case barter transaction calculation that caused player bank balances to underflow into negative numbers.',
-      'Container Highlights: Enhanced subtle outline glow for scavenge containers in pitch-black interiors and subterranean bunkers.',
-      'Trader Balance: Increased Nadja\'s daily screw stockpile; removed Mosin-Nagant 03 from Sasha\'s Level 0 stock to preserve early-game weapon tier progression (Volodymyr remains the primary zero-reputation supply bridge).'
+      'Explorer game mode added. Maximum Stamina is 150 in Explorer and 100 in Returner and Iron Man.',
+      'Campfire healing, a much bigger Stash, doubled Stamina, and new medical blueprints.',
+      'A broad balance pass across survival, traders, armour, items and mutants.',
+      'The developer apologised that Simplified Chinese had been listed as supported at release; that listing was removed until the official localisation is ready, with a community-made unofficial translation available in the meantime.'
     ]
   },
   {
     date: 'September 4, 2026',
-    tag: 'Steam Early Access Launch Build 25128670',
-    title: 'Scavland Officially Launches on Steam with 175,000+ Wishlists',
-    summary: 'Developer NoShadow released Scavland into Steam Early Access at $19.00 USD (10% launch discount), delivering complete Act I content across the Zalesye exclusion zone.',
+    tag: 'Steam Early Access Launch',
+    title: 'Scavland Launches into Early Access',
+    summary: 'After six years of development Scavland launched into Steam Early Access, with more than 230,000 wishlists behind it.',
     details: [
-      'Early Access Live: Available worldwide on PC via Steam ($19.00 USD, 10% launch deal, Build 25128670).',
-      'Act I Content: 25+ verified firearms, 300+ modular attachment configurations, 10 interacting factions, and the dynamic Mist anomaly hazard.',
-      'Pricing Policy: NoShadow pledged to keep the $19 entry price locked in throughout Early Access.',
-      'Community Momentum: Debuted after reaching 175K+ Steam wishlists; handheld Steam Deck verified.',
-      'macOS Review: Apple Silicon macOS client compiled and awaiting final Apple notarization approval.'
+      'The developer thanked the community, noting the project grew from a small team effort into something far bigger than anyone imagined.',
+      'A launch-day livestream ran with the game designer.',
+      'Early Access was framed as "only the beginning", with in-game bug report, suggestion and balance feedback buttons.'
     ]
   },
   {
-    date: 'September 2, 2026',
-    tag: 'Store Overhaul & 175K Wishlists',
-    title: 'Steam Storefront Overhaul, 10 Languages & Combat Warning',
-    summary: 'NoShadow celebrated crossing 175,000 Steam wishlists with a comprehensive storefront revamp, sound overhaul, and crucial combat design clarifications.',
-    details: [
-      'Wishlist Surge: Crossed 175K wishlists worldwide, adding 75,000 players over two weeks.',
-      'Sound & Visual Overhaul: Remastered environmental audio acoustics, weapon gunshot punch, and upgraded 1080p HUD assets.',
-      'Localization: Confirmed 10 supported interface/subtitle languages for Day 1 release.',
-      'Melee Viability Warning: Developers issued a tactical alert emphasizing that melee weapons are purely fallback tools; survival demands gun ballistics and cover management.',
-      'Game Modes: Confirmed two distinct gameplay modes available at Early Access launch.'
-    ]
-  },
-  {
-    date: 'August 31, 2026',
-    tag: 'Engine Build v0.5.117',
-    title: 'Dynamic Mist Weather, Weapon Malfunctions & Death Recovery',
-    summary: 'Internal release branch v0.5.117 solidified hardcore extraction systems ahead of launch preparation.',
-    details: [
-      'Catastrophic Malfunction: Weapons under 30% durability risk critical receiver failure that destroys components.',
-      'Dynamic Mist Anomalies: Integrated randomized green fog events with accelerated gas mask filter depletion.',
-      'Death Loot Log: Coordinates of fallen corpses are now plotted on the overworld map for recovery attempts.'
-    ]
-  },
-  {
-    date: 'August 29, 2026',
-    tag: 'Developer Confirmation',
-    title: 'Lucasmml Steam Developer Q&A: Anomaly Scanner & Core Mechanics',
-    summary: 'Lead developer Lucasmml addressed community feedback on Steam, confirming vital in-game mechanics ahead of launch.',
-    details: [
-      'Anomaly Scanner: Confirmed equipping via slot [3] and following increasing audio beep frequency/pitch to locate hidden artifacts.',
-      'Ammo Management: Stack-aware vertical slot ammo unloading system confirmed in active development.',
-      'Loot Utility: High-value industrial scrap (spark plugs, lighters, toolboxes) has specialized merchant priority; future patches will expand utility of crowbars and blades beyond basic barter.',
-      'Weapon Customization: Dedicated weapon modding, repair stations, and attachment fitting confirmed for ongoing rollout.'
-    ]
-  },
-  {
-    date: 'August 23, 2026',
+    date: 'August 25, 2026',
     tag: 'Milestone',
-    title: '100,000+ Steam Wishlist Milestone Announced',
-    summary: 'NoShadow and community partners celebrated crossing 100K wishlists as development expanded across 6 years from a 3-person team to 15 contributors.',
+    title: '100,000 Steam Wishlists',
+    summary: 'Scavland passed 100,000 wishlists ahead of the September 4 launch date.',
     details: [
-      'Confirmed September 4, 2026 Early Access target launch date.',
-      'Showcased finalized overworld map topology for the Zalesye exclusion zone.',
-      'Highlighted 10 distinct factions with dynamic reputation and trade standing.'
+      'The developer described the game as a six-year journey.',
+      'The team had grown from 3 developers to around 15 over the past year.',
+      'The world is now roughly 3x larger, with new settlements, roads, faction territories and a complete visual overhaul.',
+      'Procedurally generated underground bunkers were added, bringing a different kind of exploration below the surface.'
     ]
   },
   {
-    date: 'June 9, 2026',
-    tag: 'Playtest Patch v0.2.4.1',
-    title: 'Combat Responsiveness & Visual Polish Update',
-    summary: 'Pre-launch build refinements for visual readability, bleeding debuff balancing, and enemy perception ranges.',
+    date: 'June 9, 2025',
+    tag: 'Official Demo Build (v0.2.4.1)',
+    title: 'Scavland Demo Goes Live (v0.2.4.1)',
+    summary: 'The public demo build was released alongside a v0.2.4.1 changelog on the Steam news feed.',
     details: [
-      'Adjusted item hover delay from 0.25s to 0.125s for snappier inventory sorting.',
-      'Capped shotgun bleeding effect trigger to a maximum of 1 stack per blast.',
-      'Enhanced outline visibility radius for containers and distant targets while aiming down sights.'
+      'This is the last pre-release build documented on the official Steam announcement feed.',
+      'The public patch history above resumes with the September 2026 Early Access launch.'
     ]
   }
 ];
@@ -154,24 +94,24 @@ const timeline = [
     <p class="eyebrow">Release watch &amp; verification log</p>
     <h1 class="page-title">Scavland Updates &amp;<br/><span style="color:var(--acid)">Release Timeline.</span></h1>
     <p class="lede" style="max-width:720px;margin-bottom:2.5rem;color:var(--muted)">
-      Every claim on Scavland Field Notes is backed by dated official announcements, developer statements, or reproducible in-game tests.
+      Every claim on Scavland Field Notes is traced to a dated official Steam announcement or an explicitly-labelled community report.
     </p>
 
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));gap:1rem;margin-bottom:3rem;">
       <div style="padding:1.25rem;background:rgba(218,255,125,0.05);border:1px solid rgba(218,255,125,0.2);border-radius:8px;">
-        <span style="font-size:0.8rem;color:var(--acid);font-family:var(--font-mono,monospace);text-transform:uppercase;">Launch Target</span>
+        <span style="font-size:0.8rem;color:var(--acid);font-family:var(--font-mono,monospace);text-transform:uppercase;">Early Access Live</span>
         <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;">Sept 4, 2026</h3>
-        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">Steam Early Access (Act I Region)</p>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">Steam Early Access · Act I</p>
       </div>
       <div style="padding:1.25rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
         <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono,monospace);text-transform:uppercase;">Community Scale</span>
-        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;color:var(--acid);">175K+</h3>
+        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;color:var(--acid);">230K+</h3>
         <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">Global Steam Wishlists</p>
       </div>
       <div style="padding:1.25rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;">
         <span style="font-size:0.8rem;color:var(--text-muted);font-family:var(--font-mono,monospace);text-transform:uppercase;">Launch Scope</span>
-        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;">25+ Guns / 10 Factions</h3>
-        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">300+ Weapon Attachments</p>
+        <h3 style="margin:0.25rem 0 0.5rem;font-size:1.4rem;">25+ Guns</h3>
+        <p style="margin:0;font-size:0.9rem;color:var(--text-muted,#aaa);">Attachment-heavy gunsmithing</p>
       </div>
     </div>
 
@@ -192,7 +132,7 @@ const timeline = [
               <li>{detail}</li>
             ))}
           </ul>
-          {item.date === 'August 29, 2026' && (
+          {item.date === 'September 5, 2026' && (
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;margin-top:0.75rem;">
               <figure style="margin:0;">
                 <img src="/images/screenshots/steam_ss_09.webp" alt="In-game radioactive anomaly scan test" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
@@ -208,7 +148,7 @@ const timeline = [
               </figure>
             </div>
           )}
-          {item.date === 'August 23, 2026' && (
+          {item.date === 'September 4, 2026' && (
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:0.75rem;margin-top:0.75rem;">
               <figure style="margin:0;">
                 <img src="/images/screenshots/steam_ss_08.webp" alt="Zalesye overworld map layout" style="width:100%;height:140px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.1);" loading="lazy" />
@@ -227,7 +167,7 @@ const timeline = [
     <div style="margin-top:2rem;padding:1.25rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:6px;">
       <h3 style="margin-top:0;font-size:1.05rem;">How we update this site</h3>
       <p style="margin-bottom:0;color:var(--text-muted);font-size:0.9rem;">
-        When the September 4 Early Access build goes live, our testing ledger will verify weapon damage tables, artifact spawn coordinates, trader prices, and bunker layout seeds through repeatable in-game test captures.
+        Patch entries on this page are transcribed from the official Steam announcement feed for Scavland. Where a detail is not stated in an official post we either omit it or label it as a community report; we do not publish weapon damage tables, trader prices or spawn coordinates that we have not sourced.
       </p>
     </div>
   </section>

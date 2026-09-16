@@ -10,7 +10,7 @@ export interface Faction {
   keyServices: string[];
   reconciliationRisk: string;
   exclusiveGear: string;
-  confirmedStatus: 'Confirmed Named (v0.5.117)' | 'Roadmap Unreleased';
+  confirmedStatus: 'Confirmed Named (0.6.3)' | 'Roadmap Unreleased';
 }
 
 export interface Trader {
@@ -48,7 +48,7 @@ export const FACTIONS_DATABASE: Faction[] = [
     keyServices: ['Official state bounties', 'High-tier military ammunition exchange', 'Bunker security clearances'],
     reconciliationRisk: 'Attacking Rada patrols triggers high-bounty hunter ambushes on paved highways. Raisa can broker a truce for substantial technological scrap.',
     exclusiveGear: 'Official Rada Officer Armband, Tier-4 Body Armor Vest, 5.45x39mm 7N22 BP Ammunition crates',
-    confirmedStatus: 'Confirmed Named (v0.5.117)'
+    confirmedStatus: 'Confirmed Named (0.6.3)'
   },
   {
     id: 'commonfolk',
@@ -62,7 +62,7 @@ export const FACTIONS_DATABASE: Faction[] = [
     keyServices: ['Cheap staple food and clean water', 'Basic medical triage', 'Safehouse stash locker renting'],
     reconciliationRisk: 'Extremely forgiving. Stealing from their storage bins lowers reputation, easily restored through trade donations to Grigory.',
     exclusiveGear: 'Quilted Padded Stalker Jacket, Improvised Backpack Frames, Low-cost Purified Water filtration recipes',
-    confirmedStatus: 'Confirmed Named (v0.5.117)'
+    confirmedStatus: 'Confirmed Named (0.6.3)'
   },
   {
     id: 'acolytes',
@@ -76,7 +76,7 @@ export const FACTIONS_DATABASE: Faction[] = [
     keyServices: ['High-tier gas mask filter regeneration', 'Anomaly scanner calibration', 'Rare artifact purchasing'],
     reconciliationRisk: 'Attacking Acolyte shrines makes their territory lethal—they will snipe you with silenced rifles while you struggle in toxic fog.',
     exclusiveGear: 'Cultist Gas Hood (Max Chem Resistance), Organic Stimulant Salves, Anomaly Resonance Beacons',
-    confirmedStatus: 'Confirmed Named (v0.5.117)'
+    confirmedStatus: 'Confirmed Named (0.6.3)'
   },
   {
     id: 'mechanists',
@@ -90,7 +90,7 @@ export const FACTIONS_DATABASE: Faction[] = [
     keyServices: ['Safehouse Workbench upgrades (Tier 1-3)', 'Weapon receiver ultrasonic restoration', 'Machined screws and spring supply'],
     reconciliationRisk: 'Refusing their repair contracts increases repair costs across all affiliated workshops by 30%.',
     exclusiveGear: 'Gunsmith Toolsets, High-durability Barrel Liners, Precision CNC Muzzle Brakes (DTK-2)',
-    confirmedStatus: 'Confirmed Named (v0.5.117)'
+    confirmedStatus: 'Confirmed Named (0.6.3)'
   },
   {
     id: 'palatines',
@@ -104,7 +104,7 @@ export const FACTIONS_DATABASE: Faction[] = [
     keyServices: ['NATO weapon sales (5.56mm / 7.62x51mm)', 'Advanced tactical optics (Aimpoint/EOTech)', 'High-threat extraction escort'],
     reconciliationRisk: 'Extremely hostile if triggered. They use thermal optics and patrol in three-man fireteams.',
     exclusiveGear: 'SA58 Paratrooper Battle Rifle, Crye Precision Heavy Helmets, 60-rnd NATO Casket Magazines',
-    confirmedStatus: 'Confirmed Named (v0.5.117)'
+    confirmedStatus: 'Confirmed Named (0.6.3)'
   },
   {
     id: 'gunners',
@@ -118,7 +118,7 @@ export const FACTIONS_DATABASE: Faction[] = [
     keyServices: ['High-caliber assassination bounties', 'Explosives and grenade barter', 'Heavy machine gun parts'],
     reconciliationRisk: 'High. Failing or abandoning a Gunner contract marks you as a debt defaulter with roaming hit-squads.',
     exclusiveGear: 'Saiga-12K Custom Tactical Breacher, 40-rnd Molot RPK Magazines, Heavy Frag Grenades',
-    confirmedStatus: 'Confirmed Named (v0.5.117)'
+    confirmedStatus: 'Confirmed Named (0.6.3)'
   },
 
   // Roadmap Unreleased Factions
@@ -195,18 +195,18 @@ export const TRADERS_DATABASE: Trader[] = [
     title: 'Hardware & Machine Parts Purveyor',
     location: 'Mechanists Railway Workshop',
     specialty: 'Industrial screws, fasteners, springs, and workbench parts',
-    criticalNote: 'BUILD v0.5.117 UPDATE: Developers significantly boosted Nadja’s screw (Screws) inventory to ease safehouse workbench construction bottlenecks.',
+    criticalNote: 'BUILD 0.6.3 UPDATE: Developers significantly boosted Nadja’s screw (Screws) inventory to ease safehouse workbench construction bottlenecks.',
     reputationGated: true,
     priorityStock: ['Box of Steel Screws', 'Recoiling Springs', 'Gun Cleaning Solvent', 'Blowtorch Fuel']
   },
   {
-    name: 'Sasha',
-    title: 'Wasteland Armorer',
-    location: 'Gunners Outpost Bastion',
-    specialty: 'Heavy weapon chassis, muzzle devices, and assault rifles',
-    criticalNote: 'CRITICAL NOTE (v0.5.117): Sasha NO LONGER sells the 3-Line Mosin-Nagant (03). Players must loot it from sniper corpses or find it in Forester Stashes.',
-    reputationGated: true,
-    priorityStock: ['AK-74M Izhmash', 'PBS-4 Silencer', 'Zenitco RK-0 Foregrip', 'Saiga 10-rnd Box Mags']
+    name: 'Bogdan',
+    title: 'Mutant Parts Buyer',
+    location: 'Settlement traders',
+    specialty: 'Mutant parts — pays a documented +40% premium',
+    criticalNote: 'CRITICAL NOTE: the official 0.6.0 notes state that Bogdan pays 40% more for Mutant Parts, with the bonus reflected directly in the displayed price, and that Bogdan no longer sells the Knife. Trader stock and location rotate between patches, so confirm in-game before making a dedicated trip.',
+    reputationGated: false,
+    priorityStock: ['Mutant parts']
   },
   {
     name: 'Raisa',
@@ -227,31 +227,31 @@ export const TRADERS_DATABASE: Trader[] = [
     priorityStock: ['AI-2 Orange Medkit', 'Medical Bandages', 'Canned Beef Tushonka', 'Purified Bottled Water']
   },
   {
-    name: 'Jasna',
-    title: 'Quartermaster & Hydration Specialist',
-    location: 'Commonfolk Outskirts Well',
-    specialty: 'Water canteens, chemical water tablets, and travel gear',
-    criticalNote: 'ESSENTIAL GEAR: Sells Military Canteens. Essential purchase to counteract the severe dehydration caused by painkiller/morphine usage.',
+    name: 'Petar',
+    title: 'Weaponsmith',
+    location: 'Market stall (relocated by 0.6.0)',
+    specialty: 'Mechanical components and the WG-40',
+    criticalNote: 'OFFICIAL 0.6.0: Petar now sells Mechanical Components and the WG-40, the WG-40 is cheaper, and his stall has been moved. Which stall he stands at changes between patches, so confirm in-game before travelling.',
     reputationGated: false,
-    priorityStock: ['Aluminum Military Canteen (1L)', 'Water Purification Tablets', 'Stalker Flask']
+    priorityStock: ['Mechanical Components', 'WG-40']
   },
   {
-    name: 'Marco',
-    title: 'Smuggler & Contraband Dealer',
-    location: 'Basement Bar behind Train Depot',
-    specialty: 'Moonshine, Baikal Soda, glowing mushrooms, cigarettes',
-    criticalNote: 'Barter and morale specialist. Baikal Soda cures severe morphine thirst; cigarettes calm sniper aim sway during high-radiation storms.',
+    name: 'Zhivan',
+    title: 'Common Goods Buyer',
+    location: 'Settlement traders',
+    specialty: 'Pays a documented 140% of value for Common items',
+    criticalNote: 'OFFICIAL 0.6.0: Zhivan now pays 140% value for Common items, the best documented outlet for ordinary scavenged junk. Stock and location rotate between patches; confirm in-game first.',
     reputationGated: false,
-    priorityStock: ['Baikal Soda Bottle', 'Distilled Moonshine', 'Rad-Absorbing Mushrooms', 'Red Star Cigarettes']
+    priorityStock: ['Common items']
   },
   {
-    name: 'Olga',
-    title: 'Bulk Goods Merchant',
-    location: 'Warehouse Dock 3',
-    specialty: 'Heavy bulk supplies, industrial crates, and building steel',
-    criticalNote: 'Stocks larger batch quantities than regular vendors, but shop refresh cycle takes 3 full in-game days.',
-    reputationGated: true,
-    priorityStock: ['Industrial Metal Plates', 'Storage Locker Upgrade Kits', 'Bulk 5.45mm Spam Cans']
+    name: 'Vesna',
+    title: 'Common Goods Buyer',
+    location: 'Settlement traders',
+    specialty: 'Pays 75% of value for Common items; improved Fetch Jobs',
+    criticalNote: 'OFFICIAL 0.6.0: Vesna pays 75% for Common items, and her Fetch Jobs now reward slightly more money and more Reputation than before.',
+    reputationGated: false,
+    priorityStock: ['Common items']
   },
   {
     name: 'Anatoly',
@@ -307,7 +307,7 @@ export const MEDICAL_DATABASE: MedicalItem[] = [
     thirstImpact: '-35 Hydration (CRITICAL THIRST SPIKE)',
     useTimeSec: 1.5,
     recommendedSituation: 'Emergency extraction dash with broken legs. WARNING: Must drink immediately after or suffer dehydration damage.',
-    traderSource: 'Marco / Acolytes / High-tier Stashes'
+    traderSource: 'Petar / Acolytes / high-tier stashes'
   },
   {
     id: 'pills-analgesic',
@@ -318,7 +318,7 @@ export const MEDICAL_DATABASE: MedicalItem[] = [
     thirstImpact: '-15 Hydration',
     useTimeSec: 2.0,
     recommendedSituation: 'Pre-combat prep before entering hostile bunker hallways.',
-    traderSource: 'Grigory / Marco'
+    traderSource: 'Grigory / Petar'
   },
   {
     id: 'baikal-soda',
@@ -329,7 +329,7 @@ export const MEDICAL_DATABASE: MedicalItem[] = [
     thirstImpact: '+65 Hydration (Full Recovery)',
     useTimeSec: 2.0,
     recommendedSituation: 'Immediate counter to Morphine/Painkiller dehydration spikes.',
-    traderSource: 'Marco'
+    traderSource: 'Community reports'
   },
   {
     id: 'canteen-water',
@@ -340,6 +340,6 @@ export const MEDICAL_DATABASE: MedicalItem[] = [
     thirstImpact: '+100 Hydration (3 multi-use sips)',
     useTimeSec: 2.5,
     recommendedSituation: 'Deep radiation marsh expeditions where natural water sources are contaminated.',
-    traderSource: 'Jasna Exclusive'
+    traderSource: 'Community reports'
   }
 ];
