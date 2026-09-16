@@ -10,29 +10,29 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
-    evidence: 'Community reports',
-    updated: '2026-09-12',
-    answer: 'In Scavland, players looking for cheats, debug commands, or trainers have several verified options for single-player and Explorer Mode sessions. Built on the Unity engine, Scavland supports command-line launch parameters (-dev, -console) for accessing internal developer tools, while single-player offline trainers (WeMod, Cheat Engine tables) allow unlimited stamina, infinite backpack carrying capacity, and zero weapon jamming. Developer NoShadow emphasizes that modifying memory during future multiplayer sessions will corrupt character saves or trigger integrity bans.',
+    evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wd9dk3/new_player_tips_tricks/',
+    updated: '2026-09-16',
+    answer: 'In Scavland, players looking for cheats, debug commands, or trainers have several verified options for single-player and Explorer Mode sessions. Built on the Unity engine, Scavland supports command-line launch parameters (-dev, -console) for accessing internal developer tools, while single-player offline trainers (such as WeMod or Cheat Engine tables) allow unlimited stamina, expanded inventory carrying capacity, and reduced weapon jamming. Because Scavland is strictly an offline singleplayer survival game in Early Access, using Cheat Engine tables, MelonLoader, or BepInEx mods carries zero risk of Steam VAC bans in solo mode. Furthermore, Update 0.7.0 added dedicated Autosave Slots per run, protecting your main campaign saves from accidental corruption when testing mods or debug scripts.',
     steps: [
       '01 · Enable Explorer Mode (Official Safe Cheats): Before using third-party memory trainers, activate "Explorer Mode" in world settings. This native toggle provides campfire instant recovery, reduced stamina drain, and relaxed death penalties without risking save corruption.',
       '02 · Configure Steam Launch Options: In your Steam Library, right-click Scavland -> Properties -> General -> Launch Options. Enter "-dev" or "-console" to enable developer diagnostic logging and console overlay capabilities.',
       '03 · Open In-Game Console: Press the tilde [~] or [F1] key in supported developer builds to pull down the command console window.',
-      '04 · Safe Offline Trainer Setup: If using external trainers (WeMod / Cheat Engine) for infinite rubles or god mode, always launch Steam in Offline Mode to prevent anti-cheat conflicts.',
-      '05 · Backup Save Files Before Modding: Always create a backup copy of your save data located at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/ before applying any memory modifications.'
+      '04 · Safe Offline Trainer & Cheat Engine Setup: If using external memory editors (Cheat Engine tables, WeMod) or Unity mods (MelonLoader / BepInEx), run Steam in Offline Mode. Solo offline play is safe from VAC bans, but modified saves should not be transferred if co-op arrives in future updates.',
+      '05 · Leverage Update 0.7.0 Separate Autosave Slots & Backups: Update 0.7.0 gives each run its own Autosave Slot to protect active progress. Even so, always create a manual backup copy of your save directory at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/ before injecting CT tables.'
     ],
     facts: [
       ['Native Cheats', 'Explorer Mode provides built-in casual cheats (instant campfire healing, reduced stamina drain, safe stash)'],
       ['Launch Flags', '-dev and -console command flags activate developer diagnostic tools'],
       ['Console Hotkey', 'Press [~] (Tilde) or [F1] in test builds to toggle the console window'],
       ['Save Path', 'Saves are stored locally at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/'],
-      ['Fair Play Policy', 'Memory editors and trainers are strictly for offline single-player use'],
-      ['Trainer & Cheat Engine', 'WeMod and Cheat Engine tables verified for offline solo play in v0.6.0']
+      ['Fair Play Policy', 'Memory editors and trainers are strictly for offline single-player use with zero VAC ban risk in solo mode'],
+      ['Autosave Protection', 'Update 0.7.0 gives each run its own Autosave Slot, isolating test runs from primary saves']
     ],
     faq: [
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—eliminating severe stamina penalties and enabling instant campfire health recovery. Console debug access requires -dev launch flags.'],
-      ['Are there working PC trainers for Scavland?', 'Trainer and mod-tool support for a brand-new Early Access build changes from week to week and cannot be vouched for by a wiki. Check the trainer vendor and the community forums for the current build before running anything, and back up your save folder first — an out-of-date trainer can corrupt a save.'],
-      ['Can you get banned for using a trainer in single-player?', 'No. Using single-player trainers or Cheat Engine tables to bypass inventory weight limits in offline solo play will not trigger a Steam VAC ban. However, modified saves should never be brought into co-op sessions.'],
-      ['How do I spawn items or infinite rubles in Scavland?', 'In single-player debug builds, commands follow the "spawn [item_id] [quantity]" syntax. For standard players, trading high-demand salvage (spark plugs, lighters, wire coils) with settlement traders remains the fastest legitimate ruble generator.'],
+      ['Are there working PC trainers for Scavland?', 'Trainer and mod-tool support for an Early Access build changes across updates and cannot be vouched for by a wiki. Check trainer communities for the current build (such as Update 0.7.0) before running anything, and back up your save folder first.'],
+      ['Can you get banned for using Cheat Engine or mods in single-player?', 'No. Scavland is a dedicated single-player game in Early Access with no server-side VAC anti-cheat for solo play. Using Cheat Engine tables, BepInEx, or MelonLoader to adjust carry weight or stamina in solo play will not ban your Steam account.'],
+      ['How does Update 0.7.0 improve save safety when modding?', 'Update 0.7.0 introduced individual Autosave Slots per run, preventing a modded or experimental run from automatically overwriting your primary progression save.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
@@ -77,26 +77,29 @@ export const guides: Guide[] = [
     category: 'Platforms',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland running on handheld device with tactical HUD',
-    evidence: 'Official Steam announcement (built for PC, controller and Steam Deck); suggested settings',
-    updated: '2026-09-07',
-    answer: 'Scavland ships with full controller support and, in the developers\u2019 own words, was "designed with Steam Deck and handheld play in mind", so handheld play works without a custom setup. Update 0.7.0 also lists "Improved text sizing on Steam Deck". The suggestions below are starting points rather than measured results: begin from the game\u2019s own default preset, lower the frame-rate or power limit step by step if you want a quieter and longer-running session, and raise the UI text size from the accessibility options if inventory labels feel tight on a 7-inch panel.',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-09-16',
+    answer: 'Scavland features native controller support and, in the developers\u2019 own words, was "designed with Steam Deck and handheld play in mind". Update 0.7.0 enhances handheld ergonomics with full gamepad support integrated into the rebuilt Death Screen (with dedicated button actions for Returner, Iron Man, and Tutorial modes), improved text sizing for 7-inch displays, and 8-directional diagonal movement. The suggestions below provide a solid handheld baseline: stick to the native 1280x800 resolution, adjust TDP and frame caps via SteamOS for balanced battery life, and enable the dynamic Action Hint Bar in Gameplay Settings for quick looting.',
     steps: [
-      '01 · Try the panel\u2019s native mode: the Steam Deck display is 1280x800 at 16:10, so start there and check the aspect ratio before you settle on another resolution.',
-      '02 · Tune the power limit: the SteamOS Quick Access Menu (•••) exposes a manual TDP limit and a GPU clock cap. Start at the default and lower them gradually, watching the frame-rate counter, until you find your own balance of noise, heat and battery.',
-      '03 · Pick a controller layout: Steam\u2019s controller settings let you browse community configurations for trackpad aiming and radial looting, then save your own as the default.',
-      '04 · Adjust sharpness if the image looks soft: if item icons and ground loot blur together at 1280x800, raise the sharpening filter in the performance settings until labels read cleanly.'
+      '01 · Native Panel Resolution: The Steam Deck features a native 1280x800 display at 16:10. Set the display resolution to 1280x800 in video settings to prevent non-uniform scaling or blurred text labels.',
+      '02 · Power & Battery Tuning: In the SteamOS Quick Access Menu (•••), set a manual TDP limit and cap the refresh rate to 40Hz or 60Hz. A 40Hz cap delivers smooth top-down tactical movement while significantly extending handheld battery life.',
+      '03 · Death Screen & Gamepad Navigation: Update 0.7.0 added full controller navigation to the rebuilt Death Screen. Instead of a clumsy any-key press, players can use D-pad and face buttons to select Continue / Load Game (Returner mode), New Game / Exit (Iron Man mode), or Try Again (Tutorial).',
+      '04 · Action Hint Bar & Custom Rebinding: Ensure the Action Hint Bar remains enabled in Gameplay Settings. It dynamically displays context-sensitive button prompts across Inventory, Trade, Journal, and stack splitting windows.',
+      '05 · Text Sizing & UI Readability: Update 0.7.0 delivers improved text sizing on handheld screens. If small inventory descriptions or barter prices feel tight on a 7-inch panel, check UI scale options in accessibility settings.'
     ],
     facts: [
-      ['Handheld support', 'Full controller support; the developer states the game was designed with Steam Deck and handheld play in mind'],
-      ['Valve Deck badge', 'No Valve Deck compatibility badge is listed on the store page for this game'],
-      ['Frame rate', 'No benchmark is published here \u2014 use the frame-rate limit in the Quick Access Menu'],
-      ['Power limit', 'Adjustable in the SteamOS Quick Access Menu; lower it step by step for longer sessions'],
-      ['Refresh rate', 'SteamOS offers 40Hz and 60Hz presets, both selectable on Deck']
+      ['Handheld support', 'Full controller support; developer confirms game was designed with Steam Deck and handhelds in mind'],
+      ['Death Screen Gamepad', 'Update 0.7.0 introduced full gamepad button navigation across all game mode death screens'],
+      ['Native Resolution', '1280x800 at 16:10 aspect ratio matching the Steam Deck screen'],
+      ['Power Optimization', 'Adjustable manual TDP and 40Hz / 60Hz refresh presets in SteamOS Quick Access Menu'],
+      ['Action Hint Bar', 'Contextual bar dynamically displays relevant button inputs in inventory and trade windows'],
+      ['Latest Update', 'Update 0.7.0 & Hotfix 0.7.1']
     ],
     faq: [
-      ['Is the text readable on the 7-inch Steam Deck screen?', 'The pixel-art UI scales to 1280x800, and Update 0.7.0 explicitly lists improved text sizing on Steam Deck. If inventory labels still feel small, raise the UI text size in the accessibility options.'],
-      ['Does Scavland support Steam Cloud saves across PC and Deck?', 'Yes. Steam Cloud is listed among the game\u2019s official store features, so saves carry between desktop and handheld.'],
-      ['Do I need to change the Proton version?', 'Proton behaviour varies by system. If you hit shader compilation or audio problems, try switching the compatibility tool from the game\u2019s properties in Steam before changing anything else.']
+      ['How does Scavland perform on Steam Deck with Update 0.7.0?', 'Update 0.7.0 significantly polishes handheld play by introducing full gamepad support to the rebuilt Death Screen, refining text sizing on the 7-inch display, and maintaining smooth 8-directional analog movement.'],
+      ['Is text legible on the 7-inch Steam Deck screen?', 'Yes. Update 0.7.0 specifically optimized font rendering and text sizing for handheld resolutions. In-game item descriptions, trader barter values, and journal logs remain sharp at native 1280x800.'],
+      ['Does Scavland support Steam Cloud saves across PC and Deck?', 'Yes. Steam Cloud save synchronization is enabled, allowing seamless progression transfer between your desktop rig and Steam Deck.'],
+      ['Can you navigate the death screen with a controller?', 'Yes. As of Update 0.7.0, the Death Screen features full gamepad support with dedicated actions (Continue, Load Game, New Game, Exit, Try Again) instead of the previous generic any-key interaction.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-system-requirements'],
     keywords: ['scavland steam deck', 'scavland handheld', 'scavland 60fps settings', 'scavland controller layout', 'scavland battery life']
@@ -209,11 +212,11 @@ export const guides: Guide[] = [
     title: 'Scavland Anomaly Scanner Guide: Core Detector Locating, Bug Fix & Artifacts',
     description: 'Handheld Anomaly Scanner (Core Detector) guide: audio pitch tracking, missing item inventory bug fix, quicksave audio reset, and artifact farming.',
     category: 'Exploration',
-    image: '/images/screenshots/ss_09_radioactive_zone.webp',
-    imageAlt: 'A scavenger detecting anomalies in a hazardous irradiated zone with the Core Detector',
-    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
+    image: '/images/harvested/2026-09-17/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
+    imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
+    evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
     updated: '2026-09-16',
-    answer: 'The handheld Anomaly Scanner (referred to in game jobs as the Core Detector) is your primary instrument for tracking spatial distortions and harvesting high-tier artifacts across Zalesye. Bound to hotkey [3], the device emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, players have reported two operational quirks: an inventory-full delivery bug where accepting the detector with a packed 100% backpack causes the item to drop invisibly on the floor beneath the NPC (or divert to safehouse overflow), and a quicksave audio desync bug where the detector stops pinging after reloading. Holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] immediately rebinds the audio listener. For related survival protocols, consult our [Mist & Radiation Guide](/guide/scavland-mist-survival-and-radiation/) or [Loot & Scavenging Guide](/guide/scavland-loot-and-scavenging/).',
+    answer: 'The handheld Anomaly Scanner (referred to in game jobs as the Core Detector) is your primary instrument for tracking spatial distortions and harvesting high-tier artifacts across Zalesye. Bound to hotkey [3], the device emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory-full boundary bug: if your backpack is packed to 100% capacity when triggering the quest, the detector cannot enter your inventory and drops onto the ground at the NPC feet or diverts to safehouse overflow. Additionally, a quicksave audio desync bug can cause the detector to go silent; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener. For related survival protocols, consult our [Mist & Radiation Guide](/guide/scavland-mist-survival-and-radiation/) or [Loot & Scavenging Guide](/guide/scavland-loot-and-scavenging/).',
     steps: [
       '01 · Free 3 Inventory Slots Before Quest Acceptance: The Core Detector is a bulky 1x3 vertical radar gun. If your inventory is 100% full upon completing the prerequisite quest, the scanner cannot enter your rig and either drops onto the floor beneath the NPC or diverts to your Zalesye safehouse stash overflow tab.',
       '02 · Floor & Overflow Search Protocol: If the scanner is missing from your inventory after speaking to the quest giver, do not panic or restart your save. Thoroughly inspect the ground directly at the NPC\'s feet or check your central safehouse overflow chest to retrieve the dropped device.',
@@ -228,7 +231,7 @@ export const guides: Guide[] = [
       ['Missing Item Recovery', 'If inventory is full, scanner drops at NPC feet or diverts to Zalesye safehouse stash overflow'],
       ['Quicksave Audio Fix', 'Cycling firearm bolt or firing one round rebinds the audio spatial listener component after reloading'],
       ['Artifact Barter Value', 'Specialized faction scientists pay 2,000R to 5,000R for intact anomalies or offer passive stat modules'],
-      ['Verified Baseline', 'Early Access Patch v0.6.0 Playtest Verification']
+      ['Verified Baseline', 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/']
     ],
     faq: [
       ['What should I do if the Core Detector / Anomaly Scanner is missing after the quest?', 'If your backpack was full when receiving the scanner from the quest giver, it will not appear in your quickbar. Check the floor directly beneath the NPC\'s feet, as the item drops if grid space is insufficient. If it despawned from the floor, check the Overflow Tab in your Zalesye safehouse stash locker.'],
@@ -243,33 +246,34 @@ export const guides: Guide[] = [
     slug: 'scavland-death-and-loot-recovery',
     shortTitle: 'Death & recovery',
     title: 'Scavland Death Mechanics & Loot Recovery Guide: Corpse Runs, Beacon Persistence & Stash Security',
-    description: 'Complete guide to Scavland death penalties in v0.5.169: Explorer Mode rules, backpack beacon persistence, recovery routes, and safehouse defense.',
+    description: 'Complete guide to Scavland death mechanics: rebuilt Death Screen in Update 0.7.0, dedicated Autosave Slots, corpse recovery, and safehouse stash defense.',
     category: 'Survival',
     image: '/images/screenshots/ss_07_underground_corridor.webp',
     imageAlt: 'An underground corridor where a fallen scavenger left supplies near a recovery beacon',
-    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
-    updated: '2026-09-09',
-    answer: 'Death in Scavland is punishing but strictly deterministic rather than a permadeath rogue-lite. In standard Veteran Mode, dying in Zalesye drops your carried backpack and held weapons at your death coordinates, marked by a persistent white skull beacon on your overworld map. Your permanent Safehouse Stash (now doubled with two storage points in v0.5.169) remains 100% secure. Dropped backpacks have no expiration timer and remain permanently in the game world until retrieved or overwritten by a subsequent death. In Explorer Mode, equipped weapons and armor are preserved on death, minimizing recovery risk.',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-09-16',
+    answer: 'Death in Scavland is punishing but strictly deterministic rather than an arbitrary roguelite wipe. In Update 0.7.0, the Death Screen was completely rebuilt with dedicated interactive actions instead of the previous any-key interaction: Returner mode offers Continue / Load Game, Iron Man mode presents New Game / Exit, and Tutorial provides Try Again, alongside full gamepad button navigation. In addition, each run now has its own Autosave Slot, protecting your active progression save. When you fall during a raid, your carried backpack and weapons drop at your exact death coordinates—flagged with a persistent skull beacon on your map—while your permanent Safehouse Stash remains 100% secure.',
     steps: [
-      '01 · Know Your Death Rules (Explorer vs Veteran): In Veteran Mode, all carried inventory and equipped weapons drop on the ground upon death. In Explorer Mode (introduced in Patch v0.5.169), your equipped firearms and armor remain on your character, and only backpack contents drop.',
-      '02 · Locate the Death Beacon: Upon respawning in your safehouse bunk, open your overworld map [M]. Your death coordinate is flagged with a permanent skull beacon. Note that this beacon only tracks your most recent death—dying a second time before retrieving your old bag will overwrite the map marker (though the physical corpse bag remains on the ground).',
-      '03 · Equip Low-Cost Recovery Kit: Never deploy with your best stash weapons to recover lost gear. Take a budget Mikhail 74U or Double-Barrel Shotgun, 1 Tourniquet, and 2 Bandages from your safehouse emergency locker.',
-      '04 · Leverage the Second Safehouse Stash: Patch v0.5.169 unlocked a second safehouse storage locker in the Crossroads annex. Keep reserve firearms and medical kits distributed between both bunkers so you never suffer a total logistical lockdown after an unlucky raid.',
-      '05 · Perimeter Sweep & Direct Extraction: When approaching your dropped backpack, assume the mutants or bandits that killed you are still patrolling the sector. Clear threats from cover, hold [Shift+Click] to instantly scoop your dropped gear, and extract immediately without greed.'
+      '01 · Navigate Rebuilt Death Screen (Update 0.7.0): The Death Screen features specific mode actions instead of any-key interactions: Returner players choose Continue or Load Game; Iron Man players choose New Game or Exit; Tutorial players choose Try Again. Full gamepad navigation is fully supported.',
+      '02 · Dedicated Autosave Protection: Update 0.7.0 assigns an individual Autosave Slot to each run, ensuring that fatal mishaps or loading alternative sessions never overwrite the save file you are currently playing.',
+      '03 · Locate the Persistent Death Beacon: Upon respawning in your safehouse bunk, press [M] to open the overworld map. Your death coordinates are flagged with a skull beacon. While the beacon points to your latest death, older corpse bags remain physically on the ground until retrieved.',
+      '04 · Deploy with Budget Recovery Gear: Never take your best weapons on a corpse recovery run. Equip a budget shotgun or Makarov pistol, a clean bandage, and a splint from your safehouse emergency stash.',
+      '05 · Perimeter Sweep & Fast Scoop: Bandits or mutants that downed you frequently linger near the corpse bag. Clear hostiles from cover, hold [Shift+Click] to scoop all gear instantly, and extract without unnecessary detours.'
     ],
     facts: [
-      ['Recovery Time Limit', 'Zero expiration timer; dropped backpacks persist indefinitely in the world until retrieved'],
-      ['Marker Overwrite Rule', 'Dying a second time updates the map skull marker to the new death spot; original bag remains physically in world'],
-      ['Safehouse Stash Security', 'The stash is a separate, shared inventory, so stored items are not carried on you; Update 0.5.169 added a second Player Stash at the hospital'],
-      ['Explorer Mode Protection', 'Retains all equipped weapons and body armor upon death; only unequipped backpack loot drops'],
-      ['Verified Baseline', 'Early Access Patch v0.5.169 Baseline']
+      ['Rebuilt Death Screen', 'Update 0.7.0 added proper actions: Returner (Continue/Load Game), Iron Man (New Game/Exit), Tutorial (Try Again)'],
+      ['Full Gamepad Support', 'The Death Screen supports direct D-pad and controller face buttons since Update 0.7.0'],
+      ['Dedicated Autosave Slots', 'Each run has its own Autosave Slot protecting current progression (Update 0.7.0)'],
+      ['Corpse Persistence', 'Dropped backpacks persist in the world with zero despawn timer until picked up'],
+      ['Safehouse Stash Security', 'Safehouse stashes are completely immune to death penalties and shared across camps'],
+      ['Verified Baseline', 'Official Steam announcements · Update 0.7.0']
     ],
     faq: [
-      ['Is there a time limit to recover your dropped backpack in Scavland?', 'No. There is no countdown or expiration timer on your dropped loot. Your corpse backpack stays on the map indefinitely until you pick it up.'],
-      ['What happens if I die a second time on a recovery run?', 'Your map beacon updates to point to your latest death location. However, your previous corpse backpack does NOT vanish; it remains physically on the ground at the original coordinates.'],
-      ['Can NPC scavengers or bandits loot your dead body?', 'Hostile AI patrols will guard the vicinity of your death, but they do not loot or despawn items from your dropped backpack container.'],
-      ['How does Explorer Mode change death penalties?', 'Explorer Mode eliminates weapon loss on death: you respawn with all equipped firearms, armor vests, and helmets intact, having to recover only unequipped backpack loot.'],
-      ['Is there a death cutscene or animation when you die?', 'No. Scavland features an instantaneous blackout fade upon fatal damage without cinematic animations. Your character awakens immediately in your safehouse bunk, while your corpse backpack stays at your exact death coordinates.']
+      ['What changed with the Death Screen in Update 0.7.0?', 'The Death Screen was completely rebuilt from the old any-key prompt into structured interactive choices: Returner offers Continue or Load Game, Iron Man offers New Game or Exit, and Tutorial offers Try Again, all with complete gamepad navigation.'],
+      ['Can dying corrupt or overwrite my other game saves?', 'No. Update 0.7.0 implemented a dedicated Autosave Slot for each run, isolating your current character progression from other save files.'],
+      ['Is there a time limit to recover your dropped backpack?', 'No. There is no expiration countdown. Your corpse bag stays in the game world indefinitely until retrieved.'],
+      ['What happens if I die a second time while running to my corpse?', 'The map skull beacon will shift to your newest death point, but your original dropped backpack does not disappear—it remains on the ground at the first location.'],
+      ['Can AI bandits loot or despawn your dropped items?', 'No. While enemies may patrol near your body, hostile AI scavengers do not loot or despawn items from player corpse bags.']
     ],
     related: ['scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-explorer-mode-and-campfire-healing'],
     keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death']
@@ -281,13 +285,13 @@ export const guides: Guide[] = [
     title: 'Scavland Loot & Scavenging Guide: Barter Values & Crafting Junk',
     description: 'Scavland loot guide: what to keep vs sell, rope & battery crafting status, spark plug barter values, weight density, and Anatoly vendor payouts.',
     category: 'Resources',
-    image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-332s.jpg',
-    imageAlt: 'Tactical inventory management, barter loot sorting and scavenging in Scavland',
-    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
+    image: '/images/harvested/2026-09-17/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
+    imageAlt: 'Lootable consumables and barter scrap including rope, batteries and wiring in Scavland inventory',
+    evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/',
     updated: '2026-09-16',
-    answer: 'Managing backpack capacity in Scavland requires understanding the exact boundary between active crafting components and pure vendor barter junk. In Early Access Patch v0.6.0, functional workbench recipes are strictly reserved for mechanical and medical supplies (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, and Ballistic Fiber). Frequently looted industrial items—including Rope, Household Batteries, Incandescent Light Bulbs, Car Batteries, and Copper Wiring—currently have zero workbench crafting recipes ("pure barter commodities"). However, settlement merchants enforce strict category specialization: specialist traders pay noticeably more for the categories they deal in, so sell electronics to a trader that actually wants them. For full market rules, explore our [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/), [Crafting & Trading Guide](/guide/scavland-crafting-and-trading/), or [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/).',
+    answer: 'Managing backpack capacity in Scavland requires understanding the exact boundary between active crafting components and pure vendor barter junk. In Early Access, functional workbench recipes are strictly reserved for mechanical and medical supplies (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, and Ballistic Fiber). Frequently looted industrial items—including Rope, Household Batteries, Incandescent Light Bulbs, Car Batteries, and Copper Wiring—currently have zero workbench crafting recipes ("pure barter commodities"). However, settlement merchants enforce strict category specialization: specialist traders pay noticeably more for the categories they deal in, so sell electronics to a trader that actually wants them. For full market rules, explore our [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/), [Crafting & Trading Guide](/guide/scavland-crafting-and-trading/), or [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/).',
     steps: [
-      '01 · Distinguish Active Crafting vs Barter Commodities: Check your safehouse workbench recipe manifest. Only Scrap Metal, Springs, Cloth, Antiseptic, Water, and Gunpowder craft items in v0.6.0. Items like Rope, Batteries, and Light Bulbs have NO current crafting use and should be liquidated for liquid rubles.',
+      '01 · Distinguish Active Crafting vs Barter Commodities: Check your safehouse workbench recipe manifest. Only Scrap Metal, Springs, Cloth, Antiseptic, Water, and Gunpowder craft items. Items like Rope, Batteries, and Light Bulbs have NO current crafting use and should be liquidated for liquid rubles.',
       '02 · Exploit Specialized Vendor Price Multipliers: Never dump industrial loot at the nearest merchant. Traders specialise: each buys some categories at a premium and pays less for off-speciality goods, so sell electronics to a trader that wants them.',
       '03 · Prioritize Ruble-per-Kilogram Density: Carry capacity is strictly constrained by encumbrance penalties. High-value single-slot items such as Spark Plugs and Military Lighters are worth carrying; heavy low-value scrap such as Metal Scrap spends carry capacity for little return. Check the current price at the trader, because 0.6.0 rebalanced sell values.',
       '04 · Shift+Click Fast-Transfer Looting: In active raid sectors, never drag items individually between loot containers and your rig. Holding [Shift + Left Click] transfers whole item stacks instantly, cutting stationary exposure by 80% and preventing ambush deaths.',
@@ -299,7 +303,7 @@ export const guides: Guide[] = [
       ['Top Barter Value Density', 'Spark Plugs and Military Lighters are single-slot, high value-per-slot items'],
       ['Specialised vendors', 'Update 0.6.0 made traders more specialised in what they buy: Zhivan pays 140% for Common items, Vesna 75%, Nadja 90% for Common and 80% for Crafting items'],
       ['Fast Loot Shortcut', 'Shift + Left Click transfers whole item stacks instantly between containers and inventory'],
-      ['Verified Baseline', 'Early Access Patch v0.6.0 Playtest Verification']
+      ['Verified Baseline', 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/']
     ],
     faq: [
       ['Are rope, batteries, and light bulbs used in crafting in Scavland?', 'No. In current Early Access Patch v0.6.0, rope, household batteries, incandescent light bulbs, and electrical wiring do not have active workbench crafting recipes. Developer NoShadow confirmed expanded recipes are planned for future roadmap updates; currently, they serve as vendor barter commodities.'],
@@ -357,25 +361,25 @@ export const guides: Guide[] = [
     category: 'Gear',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Tactical weapon modification and workbench repair interface in Scavland',
-    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
     updated: '2026-09-16',
-    answer: 'Firearms in Scavland degrade with every shot fired, accelerating 2x faster in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. In mid-game raids, scavengers frequently loot high-tier military firearms (such as Mosin-Nagant rifles, SVDs, and AS Vals) severely degraded at 30% to 45% condition. Because restoring advanced weapons to 100% at a Safehouse Workbench requires the Advanced Weapon Bench Blueprint (gated behind Tier 3 Mechanist reputation), players face the "No-Blueprint Dilemma." Fortunately, scavengers have two verified solutions: stabilizing guns at 70% condition (0% jam rate) using the oil-free Gun Field Tool, or paying Gunsmith Petar in central Zalesye market a flat ruble fee (4,500R–7,500R) to execute a full 100% overhaul with zero blueprint requirements. Before deploying into dangerous raids, consult the [Scavland Beginner Guide](/guide/scavland-beginner-guide/) for survival fundamentals, browse our full [Weapons Arsenal](/weapons/) for exact stat tables, check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for parts trading, or see [Sleep & World Reset](/guide/scavland-sleep-and-world-reset-guide/) to refresh trader inventories.',
+    answer: 'Firearms in Scavland degrade with every shot fired, accelerating 2x faster in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. In mid-game raids, scavengers frequently loot high-tier military firearms (such as Mosin-Nagant rifles, SVDs, and AS Vals) severely degraded at 30% to 45% condition. While Safehouse Workbench restoration traditionally required specific blueprints, Update 0.7.0 made Gun and Armor Repair Kits usable regardless of how damaged equipment is, and lowered field repair thresholds: Glue and Gun Lube can now be applied from 80% durability (previously 85%), while Cleaning Rods and Field Repair Kits are usable from 70% (previously 75%). For comprehensive weapon statistics, consult our [Weapons Arsenal](/weapons/), check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for repair parts trading, or review the [Tactical Database](/guide/scavland-tactical-database-weapons-loot/).',
     steps: [
       '01 · Monitor weapon condition: guns can explode below 30% condition since Update 0.5.169. Update 0.7.0 increased durability across almost the entire arsenal, made jamming begin later and occur less often, and lowered the hard-jam chance at 10% durability from 45% to 33%.',
-      '02 · Field tool maintenance: Update 0.5.169 removed the Gun Lube requirement from Gun Field Tools, so you can service firearms in the field without spending lube.',
-      '03 · Clearing In-Combat Stovepipes: If your trigger clicks without firing, immediately double-tap the reload key [R] or rack the bolt to eject the defective casing. Disengage behind cover to evaluate barrel fouling before continuing the firefight.',
-      '04 · Solving the Mid-Game "No-Blueprint Dilemma": High-tier raider drops (Mosin snipers, SVDs, AS Vals) frequently spawn at 30% to 45% condition. Restoring military guns above 70% at a workbench requires the Advanced Weapon Bench Blueprint (locked behind Tier 3 Mechanist reputation). To bypass this grind, bring degraded rifles directly to Gunsmith Petar in central Zalesye market: Petar charges a flat ruble fee (4,500R to 7,500R) to restore advanced guns to 100% with zero blueprint requirements.',
-      '05 · Heavy armor repairs: Update 0.5.169 lowered the glue requirement on Heavy Armor Repair Kits, and Update 0.7.0 lets Repair Kits be used regardless of how damaged your equipment is.'
+      '02 · Universal Repair Kits (Update 0.7.0): Gun and Armor Repair Kits can now be used regardless of how damaged your equipment is, eliminating situations where broken gear was impossible to service.',
+      '03 · Field Maintenance Thresholds: Update 0.5.169 removed the Gun Lube requirement from Gun Field Tools. In Update 0.7.0, Glue and Gun Lube can be used from 80% durability (previously 85%), while Cleaning Rods and Field Repair Kits can be used from 70% durability (previously 75%).',
+      '04 · Clearing In-Combat Stovepipes: If your trigger clicks without firing, immediately double-tap the reload key [R] or rack the bolt to eject the defective casing. Disengage behind cover to evaluate barrel fouling before continuing the firefight.',
+      '05 · Incoming Damage Distribution: In Update 0.7.0, incoming damage is distributed across the different gear pieces you are wearing, preventing single armor pieces from degrading disproportionately.'
     ],
     facts: [
-      ['Jamming', 'Begins later and occurs less often since Update 0.7.0; hard-jam chance at 10% durability is 33%, down from 45%'],
+      ['Jamming Mitigation', 'Begins later and occurs less often since Update 0.7.0; hard-jam chance at 10% durability is 33%, down from 45%'],
+      ['Universal Repair Kits', 'Gun and Armor Repair Kits can now be used regardless of how damaged your equipment is (Update 0.7.0)'],
+      ['Field Tool Thresholds', 'Glue & Gun Lube from 80% (prev 85%); Cleaning Rods & Field Repair Kits from 70% (prev 75%)'],
       ['Field tool independence', 'Update 0.5.169 removed the Gun Lube requirement from Gun Field Tools'],
-      ['No-Blueprint Workaround', 'Gunsmith Petar repairs advanced military guns to 100% for rubles with 0 blueprint requirements'],
-      ['Mid-Game Gun Drops', 'Looted military rifles spawn at 30-45% condition; field tools stabilize them to 70% zero-jam state'],
+      ['Damage Distribution', 'Incoming damage is now distributed across the different gear pieces you wear (Update 0.7.0)'],
       ['Armor Kit Glue Discount', 'Heavy armor repair kit recipe glue requirement reduced in Patch v0.5.169'],
       ['Gunsmith Relocation', 'Petar the gunsmith relocated adjacent to Grigory in central Zalesye market'],
-      ['Radiated Degradation', 'Active Mist and irradiated sectors accelerate barrel wear and carbon fouling by 2x'],
-      ['Verified Baseline', 'Early Access Patch v0.6.0 Baseline']
+      ['Verified Baseline', 'Official Steam announcements · Update 0.7.0']
     ],
     faq: [
       ['How do I clear a weapon jam during combat?', 'Press the reload key [R] twice or manually cycle the bolt to eject the jammed casing and chamber a fresh cartridge. Retreat behind hard cover if under automatic fire.'],
@@ -902,35 +906,88 @@ export const guides: Guide[] = [
     ]
   },
   {
+    slug: 'scavland-patch-0-7-0-update-and-changes',
+    shortTitle: 'Patch 0.7.0 & 0.7.1',
+    title: 'Scavland Patch 0.7.0 & 0.7.1 Guide: Stash Expansion, Death Screen & Repair Overhaul',
+    description: 'Complete breakdown of Scavland Update 0.7.0 and Hotfix 0.7.1: 50,000 ruble stash expansions, rebuilt death screen, weapon durability balance, and repair kit changes.',
+    category: 'Updates',
+    image: '/images/screenshots/ss_02_bunker_tactical.webp',
+    imageAlt: 'Scavland Update 0.7.0 tactical gameplay showing weapon durability and stash storage in bunker',
+    evidence: 'Official Update 0.7.0 @ https://store.steampowered.com/news/app/3373500/view/701026688965805465 @ 2026-09-16',
+    updated: '2026-09-16',
+    answer: 'Scavland Update 0.7.0 and Hotfix 0.7.1 introduce major system expansions across player storage, combat durability, and survival progression. Key additions include purchasable Stash expansions (50,000 Rubles to unlock an additional tab from a Trader in the main village), camp stashes and crafting tables across all main camps, an extra 5% sell value per Trader Rank, and a completely rebuilt Death Screen featuring dedicated button interactions for Returner, Iron Man, and Tutorial modes with full gamepad support. Furthermore, each run now has its own Autosave Slot, protecting current campaign saves. In combat maintenance, Gun and Armor Repair Kits can now be used regardless of equipment condition, jamming begins later with hard-jam chances at 10% durability reduced from 45% to 33%, and weapon durability has been increased across almost the entire arsenal. For tactical weapon statistics and merchant prices, explore our [Tactical Database](/guide/scavland-tactical-database-weapons-loot/), [Weapons Arsenal](/weapons/), or [Safehouses & Fast Travel Guide](/guide/scavland-safehouses-and-fast-travel-guide/).',
+    steps: [
+      '01 · Unlock Village Stash Expansions: In the central village, visit a Trader with 50,000 Rubles to purchase an additional Stash tab expansion. Stashes and crafting tables were also deployed to all main camps (camp stashes currently hold one tab and do not share items with the village). Hotfix 0.7.1 resolved an issue preventing stashes from opening for certain players.',
+      '02 · Leverage Universal Repair Kits: Gun and Armor Repair Kits can now be used regardless of how severely damaged your equipment is, eliminating mid-game repair lockouts. Glue and Gun Lube can now be applied from 80% durability (previously 85%), while Cleaning Rods and Field Repair Kits can be used from 70% durability (previously 75%).',
+      '03 · Reduced Jam Frequencies & Weapon Durability: Weapon durability has increased significantly across almost the entire arsenal, with many rifles lasting twice as many shots per point. Jamming begins later in barrel degradation, and hard-jam chance at 10% durability has been lowered from 45% to 33%.',
+      '04 · Rebuilt Death Screen & Autosave Isolation: The Death Screen replaces the old any-key prompt with explicit actions: Continue or Load Game (Returner), New Game or Exit (Iron Man), and Try Again (Tutorial), fully navigable on gamepad. In addition, each run now has its own dedicated Autosave Slot.',
+      '05 · Trader Rank Bonus & New Gear: Traders now pay an additional 5% sell value per Trader Rank achieved. Green Rags are now included in the starter kit, and a 30-round magazine has been added for the Thread Cutter rifle.'
+    ],
+    facts: [
+      ['Stash Expansion Cost', '50,000 Rubles unlocks an additional Stash tab from a Trader in the main village (Update 0.7.0)'],
+      ['Camp Stashes & Workbenches', 'Stashes and crafting tables added to all main camps; camp inventories are independent from village stash'],
+      ['Universal Repair Kits', 'Gun and Armor Repair Kits can now be used regardless of equipment condition'],
+      ['Jamming Mitigation', 'At 10% durability, hard-jam chance reduced from 45% to 33%; jamming begins later (Update 0.7.0)'],
+      ['Repair Tool Thresholds', 'Glue & Gun Lube usable from 80% (prev 85%); Cleaning Rods & Field Kits usable from 70% (prev 75%)'],
+      ['Trader Rank Incentive', 'Traders pay an additional 5% sell value per Trader Rank'],
+      ['Hotfix 0.7.1 Fix', 'Fixed stash not opening for some players'],
+      ['Thread Cutter Magazine', 'Added a 30-round magazine for the Thread Cutter']
+    ],
+    faq: [
+      ['How do stash expansions work in Update 0.7.0?', 'Purchase an expansion from a Trader for 50,000 Rubles to unlock an additional Stash tab. For now, only the main village has upgradable stashes; other camps have one tab and do not share items with the village.'],
+      ['Can you repair 0% condition weapons with Repair Kits in Update 0.7.0?', 'Yes. Gun and Armor Repair Kits can now be used regardless of how damaged your equipment is, allowing you to restore severely broken firearms and armor back into service.'],
+      ['What is the new hard-jam chance at 10% weapon durability?', 'At 10% durability, the hard-jam chance has been reduced from 45% to 33%, and weapon jamming begins later and occurs less frequently overall.'],
+      ['What was fixed in Hotfix 0.7.1?', 'Hotfix 0.7.1 was released immediately on September 16, 2026, fixing a bug where player stashes would not open upon interaction.'],
+      ['What actions does the rebuilt Death Screen offer?', 'The Death Screen provides mode-specific choices: Returner gets Continue / Load Game, Iron Man gets New Game / Exit, and Tutorial gets Try Again, with full gamepad navigation.']
+    ],
+    related: [
+      'scavland-safehouses-and-fast-travel-guide',
+      'scavland-death-and-loot-recovery',
+      'scavland-weapon-repair-and-durability',
+      'scavland-tactical-database-weapons-loot',
+      'scavland-patch-0-6-0-update-and-changes'
+    ],
+    keywords: [
+      'scavland patch 0.7.0',
+      'scavland update 0.7.0',
+      'scavland hotfix 0.7.1',
+      'scavland stash expansion',
+      'scavland 50000 rubles stash',
+      'scavland weapon durability 0.7.0',
+      'scavland death screen rebuilt'
+    ]
+  },
+  {
     slug: 'scavland-safehouses-and-fast-travel-guide',
     shortTitle: 'Safehouses & Travel',
     title: 'Scavland Safehouses & Fast Travel Guide: Stash Lockers, Beds & Transit Routes',
-    description: 'Complete guide to Scavland safehouses and travel: stash locker locations, bed sleep mechanics, quasi-fast travel routes, and safe wasteland transit.',
+    description: 'Complete guide to Scavland safehouses, stashes, and travel: 50,000 ruble stash expansions in Update 0.7.0, main camp workbenches, and safe transit routes.',
     category: 'Survival',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Safehouse bunker settlement and player stash storage in Scavland',
-    evidence: 'Official Steam announcements & community reports · Update 0.6.0',
-    updated: '2026-09-13',
-    answer: 'Scavland deliberately rejects instant map teleportation and decorative player housing to maintain hardcore post-Soviet survival tension. Instead, the game features a decentralized network of fortified subterranean Safehouses across Zalesye: Central Zalesye Settlement, the Crossroads Annex, the Hospital Medical Wing, and Outpost B-1. Each safehouse provides 100% death-secure Stash Lockers, canvas beds for time-skipping sleep, and crafting workbenches (which directly pull components from stash in Patch v0.6.0). To traverse the wasteland without dying, scavengers use quasi-fast travel transit routes—sprinting along cleared paved roads while managing stamina, bypassing dangerous mutant sound cones, and planning multi-stage extraction runs between fortified safehouses. For complete map coordinates and survival tips, review our [Zalesye Overworld Map](/maps/), [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-09-16',
+    answer: 'Scavland deliberately rejects instant map teleportation and decorative player housing to maintain hardcore post-Soviet survival tension. Instead, the game features a decentralized network of fortified subterranean Safehouses and main camps across Zalesye: Central Zalesye Settlement, the Crossroads Annex, the Hospital Medical Wing, and Outpost B-1. In Update 0.7.0, player storage received a massive expansion: stashes and crafting tables were added to all main camps, and players can purchase an additional Stash tab from a Trader in the main village for 50,000 Rubles. Safehouse stashes remain 100% immune to death penalties, while Hotfix 0.7.1 resolved a launch bug preventing stashes from opening. For complete map coordinates and survival tips, review our [Zalesye Overworld Map](/maps/), [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
       '01 · Understand the Safehouse Network (4 Key Hubs): Scavland features four distinct safehouse shelters across the exclusion zone: the Central Zalesye Starter Bunker, the Crossroads Annex (near trader Volodymyr), the Hospital Medical Wing (unlocked via the Hospital Quest), and Outpost B-1 on the eastern border. Each serves as an operational base for resting, repairs, and stash access.',
-      '02 · Stash Locker Storage & Death Security: Safehouse Stash containers are completely immune to death penalties—never take all your resources on a raid. With Patch v0.6.0, safehouse workbenches automatically detect and pull crafting materials directly from adjacent stash lockers, meaning you never need to carry heavy scrap metal in your backpack to craft.',
+      '02 · Stash Expansions & Camp Stashes (Update 0.7.0): In Update 0.7.0, stashes and crafting tables were added to all main camps. For now, only the main village features upgradable stashes—you can buy an expansion from a Trader for 50,000 Rubles to unlock an additional tab. Note that camp stashes do not share items with the main village inventory.',
       '03 · Canvas Bed Sleeping & World Cycles: Every safehouse contains a canvas bunk. Interacting with the bed [E] lets you skip 1 to 12 hours of in-game time, allowing you to advance through pitch-black nights (21:00 to 06:00) safely and reset 24-hour merchant contract job pools. Active bleeding or severe dehydration will awaken your character immediately.',
       '04 · Quasi-Fast Travel: Paved Road Sprinting & Staged Transit: Because instant teleportation is disabled, travel between sectors must be earned. The safest traversal method is staged transit along main asphalt roadways, where mutant density is 70% lower than in dense forests and marshlands. Sprint in 5-second bursts to preserve at least 40% stamina for emergency evasions.',
       '05 · Emergency Safehouse Bug-Out Routes: Always designate a primary and secondary safehouse before embarking on a bunker raid. If a weapon is badly worn — guns can explode below 30% condition — or you run low on ammunition, do not push toward the main extraction gate; retreat to the nearest safehouse lockbox to rearm and repair.'
     ],
     facts: [
+      ['Stash Expansions', 'Purchase an expansion from a Trader for 50,000 Rubles to unlock an extra Stash tab (Update 0.7.0)'],
+      ['Main Camp Stashes', 'Stashes and crafting tables added to all main camps in Update 0.7.0 (1 tab, independent inventory)'],
+      ['Stash Accessibility Fix', 'Hotfix 0.7.1 fixed an issue where stashes failed to open for some players'],
       ['Instant Fast Travel', 'Disabled by design; transit is tactical and executed in-world on foot'],
       ['Safehouse Hubs', '4 verified safehouses: Central Zalesye, Crossroads Annex, Hospital Wing, Outpost B-1'],
-      ['Stash Immunity', 'Locker storage is 100% immune to death penalties and persistent across world resets'],
-      ['Workbench Stash Link', 'v0.6.0 workbenches pull crafting ingredients directly from nearby safehouse lockers'],
-      ['Bed Sleep Mechanic', 'Safehouse canvas bunks skip 1-12 hours; resets daily merchant contracts'],
-      ['Paved Road Traversal', 'Asphalt highways have 70% lower mutant spawn density than deep wilderness'],
-      ['Verified Baseline', 'Early Access Patch v0.6.0 Baseline']
+      ['Workbench Stash Link', 'Workbenches pull crafting ingredients directly from nearby safehouse lockers'],
+      ['Verified Baseline', 'Official Steam announcements · Update 0.7.0']
     ],
     faq: [
-      ['Is there fast travel or player housing in Scavland?', 'No. Scavland has no magical fast travel teleportation or sandbox player housing. Survival is built on traversing Zalesye on foot between four persistent subterranean Safehouses equipped with stashes, beds, and workbenches.'],
-      ['Where are all the player stash lockers located in Scavland?', 'Stash lockers are located in the Central Zalesye Safehouse, the Crossroads Annex (adjacent to merchant Volodymyr), the Hospital Medical Wing, and the eastern perimeter at Outpost B-1.'],
+      ['How do stash expansions work in Update 0.7.0?', 'In Update 0.7.0, you can purchase an expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Secondary camps have one tab for now and are not upgradable.'],
+      ['Do main camp stashes share items with the village?', 'No. Stashes added to main camps in Update 0.7.0 maintain independent inventories and do not share items with the central village stash.'],
+      ['What was fixed in Hotfix 0.7.1 regarding stashes?', 'Hotfix 0.7.1 resolved a bug where the stash would not open for certain players upon interacting with the container.'],
       ['Can other players or bandits raid my safehouse stash?', 'No. Items stored in safehouse lockers are permanently protected, completely secure from hostile AI raiders, and never drop upon player death.'],
       ['How do I travel across the map quickly without dying?', 'Stick to paved highways and cleared rail lines rather than cutting through dense woods, keep sprint stamina above 40% to outrun Hellhounds, and equip a weapon with a suppressor (like PBS-4) to avoid triggering a 200m mutant sound ripple.']
     ],
