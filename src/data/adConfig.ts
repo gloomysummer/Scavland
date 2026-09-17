@@ -79,6 +79,13 @@ export const adConfig: AdMonetizationConfig = {
         height: 250,
         scriptUrl: 'https://www.highrevenueformat.com/65cf9132f65fb8c9dd0738fd4a974034/invoke.js',
       },
+      'sidebar-banner': {
+        key: '65cf9132f65fb8c9dd0738fd4a974034',
+        format: 'iframe',
+        width: 300,
+        height: 250,
+        scriptUrl: 'https://www.highrevenueformat.com/65cf9132f65fb8c9dd0738fd4a974034/invoke.js',
+      },
       'feed-native': {
         key: 'b11b1dea8c0f54bab487a9131b28ee45',
         format: 'native',

@@ -1,0 +1,11 @@
+---
+import AdSlot from "./ads/AdSlot.astro";
+
+interface Props {
+  className?: string;
+  label?: string;
+}
+const { className = "", label = "ADVERTISEMENT" } = Astro.props;
+---
+
+<AdSlot slotId="sidebar-banner" className={className} label={label} />
