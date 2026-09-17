@@ -1,0 +1,44 @@
+{
+  "topic_slug": "other-lootable-consumables",
+  "source_url": "https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/",
+  "page_title": "Other Lootable Consumables? : r/Scavland",
+  "harvested_at": "2026-09-18T06:00:06.943940",
+  "authenticated": true,
+  "verified": true,
+  "verification_notes": "Forum URL detected: Bypassing webpage screenshot to prevent forum UI pollution.; Matched official screenshot: steam_ss_11.webp (semantic score: 12)",
+  "images": [
+    {
+      "filename": "other-lootable-consumables-gameplay.webp",
+      "relative_path": "other-lootable-consumables-gameplay.webp",
+      "source_url": "local://steam_ss_11.webp",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 55686,
+      "description": "Scavland Mikhail 74U weapon modification workbench showing durability stats and attachment slots",
+      "downloaded": true,
+      "authenticated": true,
+      "content_kind": "WEBP",
+      "sha256": "075f9e5345a7ab5271b788a987792ee67cf457a71b4f3dfda1cd118e1cf8ec09",
+      "duplicate_of": null,
+      "visual_score": null,
+      "content_check": "ok",
+      "verified": true
+    }
+  ],
+  "text_preview": "跳到主要内容\nOther Lootable Consumables? : r/Scavland\nr/Scavland\n在 Reddit 上投放广告\n打开聊天\n创建\n创建帖子\n打开收件箱\n展开用户菜单\n转到“Scavland”\nr/Scavland\n•\n3天前\ndoublendoublem\nOther Lootable Consumables?\n\nHi all;\n\nLove the ER so far. I was curious if things like rope, batteries, light bulbs, wiring and such are useful for craftin",
+  "clue_verification": {
+    "clue_title": "\"Other Lootable Consumables?\"",
+    "source_url": "https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/",
+    "fetched_page_title": "Other Lootable Consumables? : r/Scavland",
+    "relevance_ok": true,
+    "matched_keywords": [
+      "lootable",
+      "consumables"
+    ],
+    "missing_keywords": [],
+    "required_hits": 1,
+    "score": "2/2",
+    "reason": "matched 2/2 clue keywords (required 1)",
+    "verified_at": "2026-09-18T06:00:06.944155"
+  }
+}

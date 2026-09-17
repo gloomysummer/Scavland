@@ -213,7 +213,7 @@ export const TRADERS_DATABASE: Trader[] = [
     title: 'Faction Diplomatic Intermediary',
     location: 'Neutral Chapel Outpost',
     specialty: 'Reconciliation Contracts & Faction Truces',
-    criticalNote: 'CORE MECHANIC: If you become hostile with Rada, Gunners, or Acolytes, visit Raisa to purchase reconciliation courier missions to restore neutral standing.',
+    criticalNote: 'CORE MECHANIC: If you become hostile with Rada, Gunners, or Acolytes, visit Raisa to purchase reconciliation courier missions to restore neutral standing. In Hotfix 0.7.2, Raisa can offer follow-up jobs without waiting for the current one to finish, alongside a rebalancing of Raisa jobs.',
     reputationGated: false,
     priorityStock: ['Diplomatic Safe-Pass Permits', 'Reconciliation Bounty Contracts', 'Forged ID Papers']
   },
