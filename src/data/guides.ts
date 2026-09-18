@@ -607,27 +607,27 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_08.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-16',
-    answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in Zalesye. The primary fortified complex, Subterranean Bunker Sector B-4, is situated in the rugged northwestern forest sector of Zalesye behind a concrete surface trench and steel blast bulkhead. Accessing the inner military armory requires the rare Red Keycard swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset dynamically across the in-game 24-hour day-night cycle or whenever you sleep in a safehouse bed. For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
+    updated: '2026-09-19',
+    answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in Zalesye. The primary fortified complex, Subterranean Bunker Sector B-4, is situated in the rugged northwestern forest sector of Zalesye behind a concrete surface trench and steel blast bulkhead. Accessing the inner military armory requires the rare Red Keycard swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset 3 hours after leaving them (or across the in-game 24-hour day-night cycle upon safehouse sleep). For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
       '01 · Locate the Bunker B-4 Surface Entrance: Head into the northwestern Zalesye woods, following the overgrown railway spur toward the concrete drainage trench. The entrance is marked by a reinforced blast doorway guarded by patrol sentries and irradiated puddles.',
       '02 · Acquire the Red Keycard: The Red Keycard is a rare military security pass dropped by checkpoint commanders, found in hazardous radioactive zone airdrops, or awarded from Nadja\'s apex mutant extermination contracts. Store it in your safehouse stash until ready.',
       '03 · Secure the Perimeter & Keycard Reader: Clear surface hostiles before descending the stairwell. Insert the Red Keycard into the glowing terminal reader; the mechanical vault door takes 15 seconds to cycle open while audible sirens sound.',
       '04 · Clear Subterranean Corridors & Sweep Vault Lockers: Advance through narrow concrete choke points with close-quarters weapons. Loot military crates containing high-tier attachments, ammunition, and rare electronics.',
-      '05 · Understand the 24-Hour Loot Reset Cycle: Military bunker containers and armory spawns refresh across the world reset cycle (24 in-game hours or after sleeping in a safehouse bed), allowing scavengers to plan repeatable farming runs.',
+      '05 · Understand Bunker Reset Cooldowns (3 Hours / 24-Hour Sleep): Under Update 0.6.0 and Update 0.7.0, subterranean bunkers reset 3 hours after leaving them. Alternatively, advancing the 24-hour day-night cycle by sleeping in a safehouse bed triggers world container refreshes, allowing scavengers to plan repeatable farming runs.',
       '06 · Use the Emergency Ventilation Extract: Avoid backtracking through the alarmed main entrance corridor where roaming patrols congregate. Climb the rear emergency ventilation shaft to extract quietly back to the surface.'
     ],
     facts: [
       ['Bunker Location & Entrance', 'Sector B-4 subterranean complex in northwestern Zalesye, accessed via concrete trench entrance'],
       ['Vault Access Requirement', 'Red Keycard with 3 entry charges swiped at electronic console'],
-      ['Military Loot Reset', 'Bunker armory crates and spawns refresh on 24-hour cycle or upon safehouse sleep'],
+      ['Military Loot Reset', 'Bunkers reset 3 hours after leaving them (Update 0.6.0), or refresh on 24-hour safehouse sleep cycle'],
       ['Alarm & Defense Timer', 'Swiping keycard triggers a 15-second siren alert cycle that draws nearby sector hostiles'],
       ['Emergency Extraction', 'Rear ventilation hatch enables direct escape to the outer surface forest'],
       ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
       ['Where is the subterranean bunker located in Scavland?', 'Subterranean Bunker Complex B-4 is located in northwestern Zalesye. Look for the concrete drainage trench and heavy steel blast door situated at the end of the overgrown rail line.'],
-      ['How do bunker loot and crates respawn?', 'Military bunker loot respawns with the world reset cycle, which occurs every 24 in-game hours or whenever you sleep in a safehouse bed, repopulating unlocked lockers and weapon crates.'],
+      ['How do bunker loot and crates respawn?', 'Under official mechanics introduced in Update 0.6.0 and stabilized in Update 0.7.0, bunkers reset 3 hours after leaving them. Additionally, sleeping in a safehouse bed advances the 24-hour world reset cycle, repopulating unlocked lockers and military crates.'],
       ['Is the Red Keycard single-use or reusable?', 'In current builds, the Red Keycard possesses 3 durability charges, allowing 3 separate bunker vault entries before burning out.'],
       ['What is the best weapon loadout for clearing subterranean bunkers?', 'Bring close-quarters shotguns with buckshot or high-penetration rifles along with a flashlight to handle dark narrow concrete corridors and sudden mutant ambushes.']
     ],
@@ -705,37 +705,38 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-merchant-prices-and-barter-guide',
     shortTitle: 'Merchant Prices & Barter',
-    title: 'Scavland Merchant Prices & Barter Guide: Trader Specialties & Petar’s Relocation',
-    description: 'Complete merchant trading guide for Scavland: which trader buys what after Update 0.6.0, and the relocated gunsmith Petar.',
+    title: 'Scavland Merchant Prices & Barter Guide: Trader Specialties, Rank Bonuses & Stash Expansions',
+    description: 'Complete merchant trading guide for Scavland: Update 0.7.0 trader rank +5% sell bonus, 50,000 Ruble stash expansions, and specialized buy rates.',
     category: 'Economy',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Scavland merchants trading salvage and weapons in Zalesye settlement camp',
-    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
-    updated: '2026-09-09',
-    answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations. In Patch v0.5.169, selling off-category items to a vendor incurs a steep 50% price reduction penalty (e.g. selling weapons to Physician Anna or medical gauze to Gunsmith Petar). The Act I economy features 9 named settlement merchants across Zalesye, including Gunsmith Petar (relocated in v0.5.169 directly next to Grigory in the market square) and Outpost Trader Volodymyr at the Crossroads annex, who provides a zero-reputation trade bridge for fresh spawns and disgraced scavengers.',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-09-19',
+    answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations while leveraging reputation progression. In Update 0.7.0, Traders now pay an additional 5% sell value per Trader Rank, drastically increasing liquidation profits in mid and late game. Furthermore, player storage can be upgraded by purchasing a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab, while independent 1-tab stashes are now accessible across all main camps. Traders maintain distinct specializations: Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, Vesna pays 30% for Common items and 60% for Clothing, and Grigory pays premium rates for Weapon Attachments while buying Common items at 50%. For unaligned scavengers or fresh spawns, Trader Volodymyr at the Crossroads annex continues to provide essential trade bridges with zero reputation requirements, offering weapon attachments at roughly 35% lower prices and stocking Advanced and Expert Repair Kits.',
     steps: [
-      '01 · Match Loot to the Right Trader: Never dump bulk mixed inventory onto the first merchant you meet. Traders have been more specialised in what they buy since Update 0.6.0, so sort your pack before selling: weapons to gunsmiths, medicines to clinics, and electronic junk to tech brokers.',
-      '02 · Locate Relocated Gunsmith Petar (v0.5.169): In Patch v0.5.169, Gunsmith Petar was moved from the distant southern perimeter into the central Zalesye settlement square right beside Grigory\'s general stall. Sell all surplus firearms, ammunition boxes, and weapon attachments to Petar for full 100% ruble valuation.',
-      '03 · Medical Trade with Physician Anna: Bring all combat stims, sterile bandages, antibiotic injectors, and surgery kits to Physician Anna at the settlement clinic. Completing her Hospital Quest unlocks Tier-2 medical barter, granting access to IFAKs and radiation filters.',
-      '04 · Industrial Hardware & Anatoly Barter: Anatoly in Zalesye pays premium rates for high-density electrical scrap. Prioritize saving spark plugs, functioning lighters, electronic relay boards, and copper wire coils from ruin runs to trade for bulk cash.',
-      '05 · Emergency Bridge via Trader Volodymyr: If your faction standing collapses below -300 Rep or you need starter weaponry without faction gates, visit trader Volodymyr at the Crossroads annex bunker. Volodymyr trades all item categories with zero reputation requirements.'
+      '01 · Match Loot to Trader Specializations: Never bulk-sell inventory to the first vendor. Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, and Vesna pays 60% for Clothing and 30% for Common goods. Match each salvage type to the specialized buyer.',
+      '02 · Exploit the +5% Trader Rank Bonus (Update 0.7.0): Traders now pay an additional 5% sell value per Trader Rank. Completing faction jobs to raise trader tiers permanently compounds your return on every scavenged firearm, attachment, and electronic component.',
+      '03 · Invest in 50,000 Ruble Stash Expansions (Update 0.7.0): Purchase an expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Take advantage of newly added camp stashes and workbenches across all main camps for forward operating storage (note that camp stashes hold 1 tab and do not share items with the central village).',
+      '04 · Weapons, Attachments & Hardware Trading: Sell weapon attachments to Grigory (who pays premium rates) or visit Volodymyr at the Crossroads annex, whose attachment prices were reduced by approximately 35% in Update 0.7.0. Gunsmith Petar in the central market square buys firearms at full valuation and stocks Mechanical Components and the WG-40.',
+      '05 · Emergency Zero-Reputation Trading via Volodymyr: If your faction standing collapses below -300 Rep or you need starter weaponry without reputation gates, visit Trader Volodymyr at the Crossroads annex. Volodymyr sells Advanced and Expert Repair Kits (and an Expert Blueprint) with zero reputation restrictions.'
     ],
     facts: [
-      ['Trader specialisation', 'Added in Update 0.6.0: traders buy specific categories (Zhivan pays 140% for Common items, Bogdan 40% more for Mutant Parts, and so on)'],
-      ['Petar Location (v0.5.169)', 'Relocated next to Grigory in central Zalesye settlement square'],
-      ['Named Traders', 'Zhivan, Vesna, Nadja, Grigory, Volodymyr, Bogdan, Petar, Yefim, Alexei, Anatoly, and Raisa'],
-      ['Zero-Rep Merchant', 'Trader Volodymyr at Crossroads annex trades without reputation restrictions'],
-      ['Highest Value Barter', 'Spark plugs, functional lighters, weapon springs, and electronic relay boards'],
-      ['Verified Baseline', 'Early Access Patch v0.5.169 Baseline']
+      ['Trader Rank Sell Bonus', '+5% additional sell value per Trader Rank (Update 0.7.0)'],
+      ['Stash Expansion Cost', '50,000 Rubles from a Trader in the main village for an extra Stash tab (Update 0.7.0)'],
+      ['Trader Specialization Rates', 'Zhivan pays 140% for Common items; Vesna pays 30% Common / 60% Clothing; Nadja pays 90% Common / 80% Crafting; Bogdan pays 40% more for Mutant Parts'],
+      ['Grigory & Volodymyr Updates', 'Grigory buys Common items at 50% and attachments at premium; Volodymyr attachments ~35% cheaper, sells Repair Kits with zero reputation requirement'],
+      ['Petar & Anatoly Focus', 'Petar (guns, attachments, WG-40, mechanical components); Anatoly (spark plugs, electrical wiring, relay boards)'],
+      ['Camp Stash Independence', 'Main camp stashes have 1 tab and do not share items with the village (Update 0.7.0)'],
+      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
-      ['Why are some merchants paying less for my loot?', 'Since Update 0.6.0 traders are specialised in what they buy. Grigory, for example, no longer buys Medical, Food or Crafting items but pays more for Weapon Attachments, while Zhivan pays 140% for Common items. Sell the right goods to the right vendor.'],
-      ['Where is Gunsmith Petar in v0.5.169?', 'Petar is now located directly in the central Zalesye market square, immediately adjacent to trader Grigory. He is no longer stationed at the far southern outpost.'],
-      ['Which merchant pays the most for electronic scrap and spark plugs?', 'Anatoly pays the highest ruble prices for industrial scrap, spark plugs, vacuum tubes, and electrical wiring.'],
-      ['Can I trade with anyone if my faction reputation is hostile (< -300)?', 'Yes. Trader Volodymyr at the Crossroads annex maintains complete neutrality and will buy and sell with you regardless of negative faction standing.']
+      ['How does Trader Rank affect item sell prices in Update 0.7.0?', 'In Update 0.7.0, traders pay an additional 5% sell value per Trader Rank. Increasing your standing with faction merchants directly increases the rubles you receive for every sold item.'],
+      ['How do you unlock extra stash tabs in Scavland?', 'Purchase a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Additionally, stashes and crafting tables were added to all main camps in Update 0.7.0, though camp stashes currently offer one tab and do not share items with the main village.'],
+      ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Clothing at 60% and Common items at 30%; Nadja pays 90% for Common items and 80% for Crafting materials; Grigory pays premium rates for Weapon Attachments and 50% for Common items; and Anatoly pays top prices for electrical scrap.'],
+      ['Where can I trade if my faction reputation is hostile?', 'Trader Volodymyr at the Crossroads annex operates with zero reputation requirements, offering trade access to all players regardless of negative faction standing. In Update 0.7.0, his attachments are roughly 35% cheaper and he sells Advanced and Expert Repair Kits.']
     ],
-    related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-factions-and-reputation', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland merchant prices', 'scavland barter guide', 'scavland 50 percent trade penalty', 'scavland petar location', 'scavland volodymyr trader', 'scavland best items to sell']
+    related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-safehouses-and-fast-travel-guide', 'scavland-weapon-repair-and-durability'],
+    keywords: ['scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland volodymyr trader', 'scavland petar location', 'scavland barter guide']
   },
   {
     slug: 'scavland-sleep-and-world-reset-guide',
