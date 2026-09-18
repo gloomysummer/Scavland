@@ -101,10 +101,9 @@
     "note": "Pre-existing page before today"
   },
   "https://scavland.wiki/guide/scavland-red-keycard-and-bunker-loot-recovery/": {
-    "last_submitted": "2026-09-06T00:00:00Z",
+    "last_submitted": "2026-09-18T22:03:51.610840+00:00",
     "status": 200,
-    "action": "URL_UPDATED",
-    "note": "Pre-existing page before today"
+    "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-starter-loadouts-and-budget-builds/": {
     "last_submitted": "2026-09-06T00:00:00Z",
@@ -536,7 +535,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/guide/scavland-merchant-prices-and-barter-guide/": {
-    "last_submitted": "2026-09-09T02:19:25.617755+00:00",
+    "last_submitted": "2026-09-18T22:03:51.610840+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -546,7 +545,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/ja/guide/": {
-    "last_submitted": "2026-09-09T02:19:25.617755+00:00",
+    "last_submitted": "2026-09-18T22:03:51.610840+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -646,7 +645,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/ja/guide/scavland-red-keycard-and-bunker-loot-recovery/": {
-    "last_submitted": "2026-09-09T02:19:25.617755+00:00",
+    "last_submitted": "2026-09-18T22:03:51.610840+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
