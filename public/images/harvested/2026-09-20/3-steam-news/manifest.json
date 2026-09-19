@@ -1,0 +1,25 @@
+{
+  "topic_slug": "3-steam-news",
+  "source_url": "https://store.steampowered.com/news/app/3373500/view/710034946759065894",
+  "page_title": "Scavland - Update 0.7.0 - Steam 新闻",
+  "harvested_at": "2026-09-20T06:00:10.165958",
+  "authenticated": false,
+  "verified": false,
+  "verification_notes": "",
+  "images": [],
+  "text_preview": "商店\n社区\nGORDON\n聊天\n客服\n安装 Steam \n Gordon\nHK$ 40.00\n \n正在载入…",
+  "clue_verification": {
+    "clue_title": "3 Steam News",
+    "source_url": "https://store.steampowered.com/news/app/3373500/view/710034946759065894",
+    "fetched_page_title": "Scavland - Update 0.7.0 - Steam 新闻",
+    "relevance_ok": false,
+    "matched_keywords": [],
+    "missing_keywords": [
+      "news"
+    ],
+    "required_hits": 1,
+    "score": "0/1",
+    "reason": "only matched 0/1 clue keywords (required 1); fetched page looks unrelated — missing: news",
+    "verified_at": "2026-09-20T06:00:10.166454"
+  }
+}

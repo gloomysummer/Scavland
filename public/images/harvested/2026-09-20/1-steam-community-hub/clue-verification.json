@@ -1,0 +1,16 @@
+{
+  "clue_title": "1 Steam Community Hub",
+  "source_url": "https://steamcommunity.com/app/3373500/discussions/",
+  "fetched_page_title": "Scavland 综合讨论 :: Steam 社区",
+  "relevance_ok": true,
+  "matched_keywords": [
+    "community"
+  ],
+  "missing_keywords": [
+    "hub"
+  ],
+  "required_hits": 1,
+  "score": "1/2",
+  "reason": "matched 1/2 clue keywords (required 1)",
+  "verified_at": "2026-09-20T06:00:06.738452"
+}
