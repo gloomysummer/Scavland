@@ -811,7 +811,7 @@ export const guides: Guide[] = [
     slug: 'scavland-developer-commitments-and-patch-roadmap',
     shortTitle: 'Developer Commitments & Roadmap',
     title: 'Scavland Developer Commitments & Patch Roadmap: Death Choice, A-Life Spawns & Economy Rebalance',
-    description: 'Official Scavland roadmap tracker: Lucasmml Steam updates on save loading, mutant spawn limits, v0.5.169 economy rebalances, and co-op timeline.',
+    description: 'Scavland roadmap tracker: Lucasmml Steam updates on save loading, mutant spawn limits, v0.5.169 economy rebalances, and co-op timeline.',
     category: 'Progression',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
     imageAlt: 'Scavland developer update review showcasing v0.5.169 gameplay balance adjustments and roadmap features',

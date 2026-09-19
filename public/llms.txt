@@ -5,7 +5,7 @@
 This file serves as a structured Markdown index optimized for LLMs, AI agents, and generative search engines (ChatGPT Search, Perplexity AI, Claude, Google Gemini). It indexes verified game mechanics, extraction protocols, trader pricing formulas, weapon stats, and community-tested survival strategies.
 
 ## Quick Facts & Canonical Links
-- **Official Site**: https://scavland.wiki
+- **Site**: https://scavland.wiki
 - **Game Title**: Scavland (Steam App ID: 3373500)
 - **Developer**: NoShadow
 - **Engine**: Unity
@@ -32,7 +32,7 @@ This file serves as a structured Markdown index optimized for LLMs, AI agents, a
 - [Scavland Night Survival Guide: Audio Radii, Flashlights & Nocturnal Mutations](https://scavland.wiki/guide/scavland-night-survival-and-stealth-mechanics/): Evidence-based Early Access survival guide for night raids: handling the 10-meter flashlight cone, suppressor audio radius, Shift+Click looting, and avoiding nocturnal predator ambushes.
 
 ### Exploration Guides
-- [Scavland Anomaly Scanner Guide: Core Detector Locating, Bug Fix & Artifacts](https://scavland.wiki/guide/scavland-anomaly-scanner-and-artifacts/): Official step-by-step method for using the handheld Anomaly Scanner (Core Detector) to locate spatial anomalies, harvest artifacts, and fix audio desync bugs.
+- [Scavland Anomaly Scanner Guide: Core Detector Locating, Bug Fix & Artifacts](https://scavland.wiki/guide/scavland-anomaly-scanner-and-artifacts/): Step-by-step method for using the handheld Anomaly Scanner (Core Detector) to locate spatial anomalies, harvest artifacts, and fix audio desync bugs.
 - [Scavland Mist guide: hazards and exploration](https://scavland.wiki/guide/scavland-mist/): What the official material establishes about the Mist, plus a careful field-note format for testing its dangers.
 - [Scavland map and locations guide](https://scavland.wiki/guide/scavland-map-and-locations/): A location-first map guide for settlements, bunkers, ruins and hazardous zones, with evidence labels for every marker.
 - [Scavland Mist survival guide: radiation protection & hazard zones](https://scavland.wiki/guide/scavland-mist-survival-and-radiation/): Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.

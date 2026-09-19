@@ -47,11 +47,11 @@ const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'commu
       <div class="article-content">
         <div class="media-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;">
           <figure style="margin:0;">
-            <img src="/images/screenshots/steam_ss_05.webp" alt="Official Scavland inventory and item inspection" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="eager" fetchpriority="high" />
+            <img src="/images/screenshots/steam_ss_05.webp" alt="Scavland inventory and item inspection" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="eager" fetchpriority="high" />
             <figcaption class="caption">Item weight, condition metrics, and stack-aware container sorting</figcaption>
           </figure>
           <figure style="margin:0;">
-            <img src="/images/screenshots/steam_ss_11.webp" alt="Official Scavland trading and merchant barter interface" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy" />
+            <img src="/images/screenshots/steam_ss_11.webp" alt="Scavland trading and merchant barter interface" style="width:100%;height:180px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" loading="lazy" />
             <figcaption class="caption">Settlement merchant trading stall and dynamic price indices</figcaption>
           </figure>
         </div>
@@ -205,7 +205,7 @@ const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'commu
         <div class="guide-grid" style="margin:20px 0;">{resources.map((guide) => <GuideCard guide={guide} />)}</div>
 
         <h2 id="gallery">1080p Gameplay Capture Gallery</h2>
-        <p>Official verified captures from the Zalesye exclusion zone.</p>
+        <p>Steam-store captures from the Zalesye exclusion zone.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:16px;margin-top:16px;">
           {gallery.map((item) => (
             <div style="background:var(--panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;">
