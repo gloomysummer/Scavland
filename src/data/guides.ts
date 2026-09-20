@@ -742,73 +742,77 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-merchant-prices-and-barter-guide',
-    shortTitle: 'Merchant Prices & Barter',
-    title: 'Scavland Merchant Prices & Barter Guide: Trader Specialties, Rank Bonuses & Stash Expansions',
-    description: 'Complete merchant trading guide for Scavland: Update 0.7.0 trader rank +5% sell bonus, 50,000 Ruble stash expansions, and specialized buy rates.',
+    shortTitle: 'Merchant Prices & Traders',
+    title: 'Scavland Merchant Prices & Trader Guide: Volodymyr Location, Buy Rates & Stash Expansions (Update 0.7.0)',
+    description: 'Complete Scavland merchant guide: Trader Volodymyr Crossroads location and zero-rep stock, Update 0.7.0 trader rank +5% sell bonus, and 50,000 Ruble stash expansions.',
     category: 'Economy',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Scavland merchants trading salvage and weapons in Zalesye settlement camp',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-19',
-    answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations while leveraging reputation progression. In Update 0.7.0, Traders now pay an additional 5% sell value per Trader Rank, drastically increasing liquidation profits in mid and late game. Furthermore, player storage can be upgraded by purchasing a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab, while independent 1-tab stashes are now accessible across all main camps. Traders maintain distinct specializations: Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, Vesna pays 30% for Common items and 60% for Clothing, and Grigory pays premium rates for Weapon Attachments while buying Common items at 50%. For unaligned scavengers or fresh spawns, Trader Volodymyr at the Crossroads annex continues to provide essential trade bridges with zero reputation requirements, offering weapon attachments at roughly 35% lower prices and stocking Advanced and Expert Repair Kits.',
+    updated: '2026-09-21',
+    answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations while leveraging reputation progression and key vendor locations. Trader Volodymyr, stationed at the Crossroads annex outside central Zalesye, serves as the primary black-market armorer: he operates with zero reputation rank requirements, making him accessible even if your faction standing collapses. In Update 0.7.0, Volodymyr\'s weapon attachments are approximately 35% cheaper, he sells Advanced and Expert Repair Kits as well as an Expert Repair Kit Blueprint, and his contracts focus on high-quality weapons and dangerous mutants. Across the wider economy, Update 0.7.0 introduced a +5% sell value bonus per Trader Rank and allowed purchasing a Stash expansion from a Trader in the main village for 50,000 Rubles. Traders maintain strict specializations: Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, Vesna buys Common items at 30% and Clothing at 60%, and Grigory pays premium rates for attachments while buying Common items at 50% (no longer buying Food or Medical items). For weapon servicing details, see our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or [Tactical Database](/guide/scavland-tactical-database-weapons-loot/).',
     steps: [
-      '01 · Match Loot to Trader Specializations: Never bulk-sell inventory to the first vendor. Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, and Vesna pays 60% for Clothing and 30% for Common goods. Match each salvage type to the specialized buyer.',
-      '02 · Exploit the +5% Trader Rank Bonus (Update 0.7.0): Traders now pay an additional 5% sell value per Trader Rank. Completing faction jobs to raise trader tiers permanently compounds your return on every scavenged firearm, attachment, and electronic component.',
-      '03 · Invest in 50,000 Ruble Stash Expansions (Update 0.7.0): Purchase an expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Take advantage of newly added camp stashes and workbenches across all main camps for forward operating storage (note that camp stashes hold 1 tab and do not share items with the central village).',
-      '04 · Weapons, Attachments & Hardware Trading: Sell weapon attachments to Grigory (who pays premium rates) or visit Volodymyr at the Crossroads annex, whose attachment prices were reduced by approximately 35% in Update 0.7.0. Gunsmith Petar in the central market square buys firearms at full valuation and stocks Mechanical Components and the WG-40.',
-      '05 · Emergency Zero-Reputation Trading via Volodymyr: If your faction standing collapses below -300 Rep or you need starter weaponry without reputation gates, visit Trader Volodymyr at the Crossroads annex. Volodymyr sells Advanced and Expert Repair Kits (and an Expert Blueprint) with zero reputation restrictions.'
+      '01 · Trader Volodymyr Location & Zero-Reputation Trade: Head southwest from central Zalesye toward the Crossroads annex near the Neutral Chapel perimeter to locate Trader Volodymyr. Volodymyr requires zero faction reputation rank to purchase his inventory, making him the premier emergency arms dealer for disgraced or unaligned scavengers.',
+      '02 · Exploit Volodymyr\'s Update 0.7.0 Inventory & Contracts: In Update 0.7.0, Volodymyr\'s weapon attachments were discounted by approximately 35%, and he now sells Advanced and Expert Repair Kits alongside an Expert Repair Kit Blueprint. Additionally, Volodymyr\'s contracts focus on high-quality weapons and dangerous mutants, offering lucrative early ruble payouts.',
+      '03 · Match Salvage to Merchant Category Specializations: Never dump all loot into one trader. Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Clothing at 60% and Common goods at 30%; and Grigory buys Common items at 50% while paying premium rates for weapon attachments (he no longer buys food, medical, or crafting supplies).',
+      '04 · Compound Profits with Trader Rank Bonuses (+5% per Rank): Update 0.7.0 awards an additional 5% sell value per Trader Rank. Completing daily contracts for settlement merchants permanently compounds the rubles earned on every sold firearm, attachment, and scavenged electronic part.',
+      '05 · Purchase 50,000 Ruble Stash Expansions: In the main village, visit a Trader and purchase a Stash expansion for 50,000 Rubles to unlock an additional Stash tab. Take advantage of newly added camp stashes and workbenches across all four main camps (Arcadia, Mechanist Base, Mudlark Camp, Microrayion), noting that outpost stashes feature only one tab and maintain independent inventories from the village.'
     ],
     facts: [
+      ['Trader Volodymyr Location', 'Crossroads annex outside central Zalesye; trades with zero faction reputation requirements'],
+      ['Volodymyr 0.7.0 Adjustments', 'Weapon attachments ~35% cheaper; sells Advanced/Expert Repair Kits & Blueprint; jobs focus on high-quality weapons & mutants'],
       ['Trader Rank Sell Bonus', '+5% additional sell value per Trader Rank (Update 0.7.0)'],
       ['Stash Expansion Cost', '50,000 Rubles from a Trader in the main village for an extra Stash tab (Update 0.7.0)'],
-      ['Trader Specialization Rates', 'Zhivan pays 140% for Common items; Vesna pays 30% Common / 60% Clothing; Nadja pays 90% Common / 80% Crafting; Bogdan pays 40% more for Mutant Parts'],
-      ['Grigory & Volodymyr Updates', 'Grigory buys Common items at 50% and attachments at premium; Volodymyr attachments ~35% cheaper, sells Repair Kits with zero reputation requirement'],
-      ['Petar & Anatoly Focus', 'Petar (guns, attachments, WG-40, mechanical components); Anatoly (spark plugs, electrical wiring, relay boards)'],
+      ['Merchant Specialization Rates', 'Zhivan pays 140% for Common items; Vesna pays 30% Common / 60% Clothing; Grigory buys Common at 50% and attachments at premium; Bogdan pays 40% more for Mutant Parts'],
       ['Camp Stash Independence', 'Main camp stashes have 1 tab and do not share items with the village (Update 0.7.0)'],
-      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
+      ['Evidence Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
-      ['How does Trader Rank affect item sell prices in Update 0.7.0?', 'In Update 0.7.0, traders pay an additional 5% sell value per Trader Rank. Increasing your standing with faction merchants directly increases the rubles you receive for every sold item.'],
-      ['How do you unlock extra stash tabs in Scavland?', 'Purchase a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Additionally, stashes and crafting tables were added to all main camps in Update 0.7.0, though camp stashes currently offer one tab and do not share items with the main village.'],
-      ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Clothing at 60% and Common items at 30%; Nadja pays 90% for Common items and 80% for Crafting materials; Grigory pays premium rates for Weapon Attachments and 50% for Common items; and Anatoly pays top prices for electrical scrap.'],
-      ['Where can I trade if my faction reputation is hostile?', 'Trader Volodymyr at the Crossroads annex operates with zero reputation requirements, offering trade access to all players regardless of negative faction standing. In Update 0.7.0, his attachments are roughly 35% cheaper and he sells Advanced and Expert Repair Kits.']
+      ['Where is Trader Volodymyr located and what does he sell?', 'Trader Volodymyr is located at the Crossroads annex outside the central Zalesye settlement. He trades with zero reputation requirements, meaning even scavengers marked hostile by major factions can trade with him. In Update 0.7.0, his weapon attachments are roughly 35% cheaper, he sells Advanced and Expert Repair Kits plus an Expert Blueprint, and his contracts target high-quality weapons and dangerous mutants.'],
+      ['How does Trader Rank affect item sell prices in Update 0.7.0?', 'In Update 0.7.0, traders pay an additional 5% sell value per Trader Rank. Increasing your standing with faction merchants directly compounds the rubles you receive for every sold item.'],
+      ['How do you unlock extra stash tabs in Scavland?', 'Purchase a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. While stashes were also added to Arcadia, Mechanist Base, Mudlark Camp, and Microrayion in Update 0.7.0, outpost stashes currently feature one tab and do not share items with the village.'],
+      ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Clothing at 60% and Common items at 30%; Grigory pays top prices for Weapon Attachments and 50% for Common items (he no longer buys food or medical supplies); and Anatoly pays top prices for electrical salvage.']
     ],
-    related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-safehouses-and-fast-travel-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland volodymyr trader', 'scavland petar location', 'scavland barter guide']
+    related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-safehouses-and-fast-travel-guide', 'scavland-weapon-repair-and-durability', 'scavland-factions-and-reputation'],
+    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide']
   },
   {
     slug: 'scavland-sleep-and-world-reset-guide',
     shortTitle: 'Sleep & World Reset',
-    title: 'Scavland Sleep & World Reset Guide: 24-Hour Cycle, Campfire Rest & Bunker Respawns',
-    description: 'Master Scavland’s sleep mechanics: 24-hour world resets, avoiding night horrors (21:00-06:00), campfire hydration tricks, and bunker lock rules.',
+    title: 'Scavland Sleep & World Reset Guide: Mattress Rule, 24-Hour Cycle & 3-Hour Bunker Resets (Update 0.7.0)',
+    description: 'Complete guide to Scavland sleep and world resets: Update 0.7.0 mattress-only bed rule, doubled campfire healing, 5 HP/hr bed rest, and 3-hour bunker resets.',
     category: 'Survival',
     image: '/images/screenshots/ss_01_ruins_night.webp',
     imageAlt: 'A scavenger resting by a safehouse bunker bunk and active campfire in Scavland',
-    evidence: 'Official Steam announcements & community reports · Update 0.5.169',
-    updated: '2026-09-10',
-    answer: 'Sleeping in Scavland is the fundamental mechanic for advancing time, avoiding lethal night stalkers (21:00 to 06:00), and triggering the 24-hour world cycle. Resting on safehouse bunker bunks resets settlement contract job boards (Anatoly & Nadja) and overland loot caches. In Patch v0.5.169, campfires provide passive health regeneration, but sleeping while dehydrated will lock stamina recovery—always drink boiled water before resting. Crucially, underground bunkers and sealed military vaults operate on persistent lockout timers to prevent infinite loot farming. To ensure your firearms don\'t jam after waking, check our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or review the [Beginner Guide](/guide/scavland-beginner-guide/) before heading out.',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-09-21',
+    answer: 'Sleeping in Scavland is the essential survival mechanic for skipping time, avoiding deadly night stalkers (21:00 to 06:00), recovering vitality, and cycling settlement contracts. In Update 0.7.0, sleeping rules received fundamental overhauls: only beds with mattresses can now be used for sleeping, meaning bare frames and derelict cots no longer provide rest. Sleeping in a valid bed restores 5 health per in-game hour while world simulation continues running; taking damage, extreme Hunger, or Thirst triggers a notification that interrupts sleep. In the field where mattress beds are unavailable, campfires serve as primary triage stations with doubled health regeneration in Update 0.7.0. World contracts and merchant stocks rotate on a 24-hour cycle, while Subterranean Bunkers reset loot containers 3 hours after leaving them. For related recovery systems, check our [Beginner Guide](/guide/scavland-beginner-guide/), [Bunker Loot Guide](/guide/scavland-red-keycard-and-bunker-loot-recovery/), or [Safehouses Guide](/guide/scavland-safehouses-and-fast-travel-guide/).',
     steps: [
-      '01 · Safehouse Bunker Bunk Sleeping: Locate the canvas cot inside any unlocked settlement safehouse bunker. Interacting with the bunk allows you to set rest duration (1 to 12 hours) to advance daylight and bypass pitch-black night raids.',
-      '02 · 24-Hour World Reset Protocol: Sleeping past a 24-hour in-game threshold triggers the world reset: overland supply crates respawn, merchant stock refreshes, and daily contracts from Anatoly and Nadja reroll fresh bounty targets.',
-      '03 · Bunker & Vault Persistent Lockout: Underground bunkers (such as Bunker B-4 and military silos) do NOT reset immediately upon sleeping or leaving the sector. They follow multi-day instance cooldowns and require keycard renewals to prevent infinite weapon duping.',
-      '04 · Campfire Resting & Hydration Safety: Patch v0.5.169 introduced passive health regeneration when resting near lit campfires. However, resting with severe dehydration drains stamina to zero upon waking. Always boil contaminated water canteens over the campfire first.',
-      '05 · Nighttime Evacuation (21:00 curfew): Night in Zalesye reduces visibility to a narrow 10-meter cone and spawns aggressive nocturnal horrors. Depart on scavenging runs at dawn (06:00) and return to sleep before dusk (21:00).'
+      '01 · Locate Valid Beds with Mattresses (Update 0.7.0): Under Update 0.7.0 rules, only beds with mattresses can be used for sleeping. Bare spring frames, stripped cots, or makeshift benches can no longer be activated. Safehouse bunkers in central Zalesye and established faction outposts contain qualifying mattress beds.',
+      '02 · Bed Rest Vitality & Interruption Checks: Sleeping in a valid mattress bed restores 5 health per in-game hour (established in Hotfix 0.6.2). The Sleep interface displays stat changes before waking. Because the world continues simulating during sleep, taking damage or suffering acute Hunger or Thirst immediately interrupts your rest with an explanatory UI notification.',
+      '03 · Doubled Campfire Healing in the Field: When operating far from mattress beds, utilize campfires scattered across wasteland outposts and camps. Update 0.7.0 doubled campfire passive healing speed, allowing scavengers to rapidly patch injuries between engagements without returning to town.',
+      '04 · 24-Hour Settlement & Contract Reset: Passing a 24-hour in-game threshold rerolls daily contracts offered by Anatoly, Nadja, and Volodymyr, while restocking merchant inventories. Sleeping skips daytime hours safely to refresh high-payout bounty pools.',
+      '05 · Subterranean Bunker 3-Hour Reset Cycle: Unlike surface loot that refreshes across the 24-hour cycle, underground military bunkers (such as Bunker B-4) reset their loot containers 3 hours after you exit the instance (with bunker reset stability resolved in Update 0.7.0).',
+      '06 · Audio Stinger & Chunk Stability: Update 0.7.0 replaced looping sleep music with a subtle audio stinger and quiet snapshot upon waking, and resolved a legacy bug where sleeping after a world chunk unloaded could freeze simulation.'
     ],
     facts: [
-      ['Sleep Location', 'Safehouse bunker cots and unlocked faction beds allow 1-12 hour sleep cycles'],
-      ['24-Hour Reset Cycle', 'Refreshes overland junk crates, merchant inventories, and daily contract job pools'],
-      ['Bunker Lockout Rule', 'Underground bunkers and sealed vaults do not respawn loot on simple safehouse sleep'],
-      ['Campfire Rest Perk', 'v0.5.169 adds passive HP recovery near lit fires; requires clean water to avoid stamina lock'],
-      ['Night Curfew Hours', '21:00 to 06:00 brings zero-visibility darkness and heightened mutant predation']
+      ['Mattress Sleeping Rule', 'Only beds with mattresses can be used for sleeping since Update 0.7.0'],
+      ['Bed Health Regeneration', 'Resting in a valid bed restores 5 health per in-game hour (Hotfix 0.6.2)'],
+      ['Campfire Healing Buff', 'Update 0.7.0 doubled passive health regeneration rate at lit campfires'],
+      ['Sleep Interruptions', 'Taking damage, severe hunger, or thirst halts sleep and displays an explanatory notification (Update 0.6.0)'],
+      ['Bunker Reset Timer', 'Subterranean military bunkers reset containers 3 hours after exiting'],
+      ['Audio & Chunk Fixes', 'Quiet audio stinger snapshot replaces looping sleep music; fixed sleeping after world chunk unloads (Update 0.7.0)'],
+      ['Evidence Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
-      ['How do I sleep and pass time in Scavland?', 'Walk up to a bed or sleeping cot inside any settlement safehouse, press [E] or interaction key, and choose how many hours you wish to rest.'],
-      ['Do underground bunkers reset when you sleep?', 'No. Underground military bunkers and keycard vaults use persistent multi-day cooldowns to prevent loot abuse. Only overland surface crates and daily contracts reset every 24 hours.'],
-      ['Why does my stamina not recover after sleeping?', 'If you go to sleep while suffering from the "Severe Dehydration" debuff, your stamina regeneration remains locked at 0%. Drink clean boiled water and rest near an active campfire to clear the debuff.'],
-      ['What happens if I get caught outside at night?', 'Nighttime (21:00–06:00) reduces visibility to 10 meters and spawns lethal nocturnal predators. Firearm discharge creates sound ripples up to 200m that draw mutant packs.']
+      ['Why can I not sleep in certain beds in Update 0.7.0?', 'Update 0.7.0 strictly enforced that only beds with mattresses can be used for sleeping. Bare bed frames, makeshift cots, and broken bunks without mattresses can no longer be interacted with for sleep.'],
+      ['How much health does sleeping restore in Scavland?', 'Sleeping in a bed with a mattress restores 5 health per in-game hour. Additionally, resting beside a lit campfire provides passive health regeneration, which was doubled in Update 0.7.0.'],
+      ['What happens if my character takes damage or starves while sleeping?', 'The world simulation continues to run while you sleep. If your character takes damage, or if Hunger or Thirst reach critical thresholds, sleep is immediately interrupted and a notification appears explaining why you woke up.'],
+      ['Do underground bunkers reset when you sleep for 24 hours?', 'Underground military bunkers reset independently from surface settlement contracts. Bunkers reset their loot containers 3 hours after leaving them, allowing players to rotate between surface contracts and underground bunker raids.'],
+      ['What changed with sleep audio in Update 0.7.0?', 'Update 0.7.0 replaced the repetitive looping sleep music with a concise audio stinger and a quiet snapshot on wakeup, while fixing chunk unloading bugs that previously disrupted sleep.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-night-survival-and-stealth-mechanics', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-red-keycard-and-bunker-loot-recovery'],
-    keywords: ['scavland sleep', 'scav land sleep', 'scavland wait time', 'scavland rest campfire', 'scavland bunker reset', 'scavland 24 hour reset', 'scavland stamina bug sleep']
+    related: ['scavland-beginner-guide', 'scavland-night-survival-and-stealth-mechanics', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-safehouses-and-fast-travel-guide', 'scavland-map-and-locations'],
+    keywords: ['scavland sleep', 'scav land sleep', 'scavland sleep mechanics', 'scavland bed with mattress', 'scavland sleep heal', 'scavland campfire healing', 'scavland bunker reset 3 hours', 'scavland 24 hour reset', 'scavland wait time']
   },
   {
     slug: 'scavland-faction-identification-and-hud-guide',

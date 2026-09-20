@@ -1,0 +1,45 @@
+{
+  "topic_slug": "core-detector-is-missing",
+  "source_url": "https://www.reddit.com/r/Scavland/comments/（具体",
+  "page_title": "",
+  "harvested_at": "2026-09-21T06:00:05.991106",
+  "authenticated": true,
+  "verified": false,
+  "verification_notes": "Forum URL detected: Bypassing webpage screenshot to prevent forum UI pollution.; Matched official screenshot: steam_ss_11.webp (semantic score: 6)",
+  "images": [
+    {
+      "filename": "core-detector-is-missing-gameplay.webp",
+      "relative_path": "core-detector-is-missing-gameplay.webp",
+      "source_url": "local://steam_ss_11.webp",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 55686,
+      "description": "Scavland Mikhail 74U weapon modification workbench showing durability stats and attachment slots",
+      "downloaded": true,
+      "authenticated": true,
+      "content_kind": "WEBP",
+      "sha256": "075f9e5345a7ab5271b788a987792ee67cf457a71b4f3dfda1cd118e1cf8ec09",
+      "duplicate_of": null,
+      "visual_score": null,
+      "content_check": "ok",
+      "verified": true
+    }
+  ],
+  "text_preview": "Internal Server Error",
+  "clue_verification": {
+    "clue_title": "Core detector is missing",
+    "source_url": "https://www.reddit.com/r/Scavland/comments/（具体",
+    "fetched_page_title": "",
+    "relevance_ok": false,
+    "matched_keywords": [],
+    "missing_keywords": [
+      "core",
+      "detector",
+      "missing"
+    ],
+    "required_hits": 2,
+    "score": "0/3",
+    "reason": "only matched 0/3 clue keywords (required 2); fetched page looks unrelated — missing: core, detector, missing",
+    "verified_at": "2026-09-21T06:00:05.991288"
+  }
+}

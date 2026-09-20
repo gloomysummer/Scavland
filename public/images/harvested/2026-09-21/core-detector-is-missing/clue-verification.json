@@ -1,0 +1,16 @@
+{
+  "clue_title": "Core detector is missing",
+  "source_url": "https://www.reddit.com/r/Scavland/comments/（具体",
+  "fetched_page_title": "",
+  "relevance_ok": false,
+  "matched_keywords": [],
+  "missing_keywords": [
+    "core",
+    "detector",
+    "missing"
+  ],
+  "required_hits": 2,
+  "score": "0/3",
+  "reason": "only matched 0/3 clue keywords (required 2); fetched page looks unrelated — missing: core, detector, missing",
+  "verified_at": "2026-09-21T06:00:05.991288"
+}
