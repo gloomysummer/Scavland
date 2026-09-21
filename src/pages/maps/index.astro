@@ -2,12 +2,90 @@
 import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import { guides } from '../../data/guides';
-const world = guides.filter((guide) => ['Exploration','Resources'].includes(guide.category));
+
+const world = guides.filter((guide) => ['Exploration', 'Resources'].includes(guide.category));
+
+const outposts = [
+  {
+    name: 'Arcadia Outpost',
+    sector: 'Western Sector',
+    features: 'Crafting Station · 1-Tab Player Stash · Safe Resting',
+    description: 'A fortified forward camp serving western salvage expeditions. In Update 0.7.0, dedicated crafting stations and a secure player stash were established here to support long-range scavengers operating near industrial perimeters.',
+    tactics: 'Use the 1-tab stash as an interim depot for heavy scrap and weapon parts before transferring valuables back to Zalesye.'
+  },
+  {
+    name: 'Mechanist Base',
+    sector: 'North-Central Sector',
+    features: 'Crafting Station · 1-Tab Player Stash · Workbench Hub',
+    description: 'Technician stronghold equipped with specialized toolbenches and fabrication facilities. Added in Update 0.7.0, this outpost enables field repairs and ammunition crafting without requiring a full trek to the central village.',
+    tactics: 'Ideal staging point for high-tier weapon maintenance and modification prior to entering bunker zones.'
+  },
+  {
+    name: 'Mudlark Camp',
+    sector: 'Southern Marshland',
+    features: 'Crafting Station · 1-Tab Player Stash · Wetland Staging',
+    description: 'Elevated wooden stilt settlement bordering the southern exclusion marsh. Added in Update 0.7.0 with workbench and stash utilities, offering refuge from waterlogged hazards and mutant ambushes.',
+    tactics: 'Stash anti-radiation meds and clean filters here before traversing the dangerous Swamp Crossing.'
+  },
+  {
+    name: 'Microrayion Outpost',
+    sector: 'Eastern Residential Ruins',
+    features: 'Crafting Station · 1-Tab Player Stash · Urban Extraction Waypoint',
+    description: 'Fortified apartment complex block offering tactical overwatch and storage in the dense eastern ruins. Update 0.7.0 added full crafting bench and local storage capabilities.',
+    tactics: 'Provides a secure sorting post after looting residential apartments and nearby supply caches.'
+  }
+];
+
+const sectors = [
+  {
+    name: 'Zalesye Central Village',
+    danger: 'Neutral / Safe Zone',
+    dangerColor: '#4ade80',
+    keyLoot: 'Merchant Markets · Gunsmith Bench · Safehouse Bed',
+    notes: 'The central civilization hub. Features core vendors (Grigory, Petar, Alexi, Vesna), medical facilities, and the primary player safehouse. Upgradable stash expansions are purchased here from Traders for 50,000 Rubles per extra tab.'
+  },
+  {
+    name: 'Farm M12',
+    danger: 'Low Hazard',
+    dangerColor: '#86efac',
+    keyLoot: 'Agricultural Tools · Food Caches · Seeds',
+    notes: 'Open agricultural fields featuring long sightlines and low mutant patrol density. Excellent early-game foraging zone with minimal line-of-sight ambushes.'
+  },
+  {
+    name: 'Lumber Mill South',
+    danger: 'Moderate Hazard',
+    dangerColor: '#facc15',
+    keyLoot: 'Heavy Timber · Mechanical Scrap · Toolboxes',
+    notes: 'Sprawling industrial yard filled with timber piles and machinery sheds. Patrol routes are active; keep sidearms ready for medium-range raider encounters.'
+  },
+  {
+    name: 'Burned Village',
+    danger: 'Moderate Hazard',
+    dangerColor: '#facc15',
+    keyLoot: 'Residential Salvage · Hardware · Electrical Boards',
+    notes: 'Charred residential ruins. As of Update 0.7.0, enemy spawns are rebalanced with a maximum cap of 1 Big Rat, reducing previous sudden multi-mutant swarms.'
+  },
+  {
+    name: 'Swamp Crossing',
+    danger: 'High Hazard',
+    dangerColor: '#f87171',
+    keyLoot: 'Anomalous Sludge · Biological Samples · Military Footlockers',
+    notes: 'Deep muddy terrain that hampers sprint mobility. Update 0.7.0 repositioned Sucker ambush spawns and reduced projectile spit speeds by approximately 30% for fairer counter-play.'
+  },
+  {
+    name: 'Hospital Beds & Yefim Cemetery',
+    danger: 'Severe Hazard',
+    dangerColor: '#ef4444',
+    keyLoot: 'Advanced Medical Supplies · Surgical Kits · High-Tier Stash',
+    notes: 'Dense contamination zone requiring gas masks and anti-rad medicine. Heavy mutant presence surrounding the cemetery and derelict ward buildings.'
+  }
+];
 ---
+
 <Layout 
-  title="Scavland Map — Zalesye Overworld & Bunker Locations" 
-  description="Verified Scavland map and world guide: Zalesye sector layout, underground bunker locations, radiation hazard zones, Mist anomalies, and extraction routes." 
-  keywords="Scavland map, Scavland locations, Zalesye map, bunker locations, overworld map, Mist zones, extraction points, Scavland wiki" 
+  title="Scavland Map & Locations Guide — Zalesye Sectors, Outposts & Bunker Locations" 
+  description="Verified Scavland tactical map and world guide: Zalesye sector breakdown, Arcadia, Mechanist Base, Mudlark Camp & Microrayion outpost stashes, Bunker B-4 reset timers, and mattress sleep rules." 
+  keywords="Scavland map, Scavland game map, Scavland bunker location, Zalesye map, Scavland outposts, Arcadia, Mechanist Base, Mudlark Camp, Microrayion, bunker reset, Scavland wiki" 
   canonical="/maps/"
 >
   <Fragment slot="schema">
@@ -16,14 +94,215 @@ const world = guides.filter((guide) => ['Exploration','Resources'].includes(guid
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
-        { '@type': 'ListItem', position: 2, name: 'Map & World Locations', item: 'https://scavland.wiki/maps/' }
+        { '@type': 'ListItem', position: 2, name: 'Map & Tactical Cartography', item: 'https://scavland.wiki/maps/' }
+      ]
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Where are the four main outpost camps located in Scavland?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In Update 0.7.0, four main regional outpost camps—Arcadia, Mechanist Base, Mudlark Camp, and Microrayion—were updated with dedicated Crafting Stations and 1-tab Player Stashes. These outpost stashes maintain independent inventories from the central Zalesye village stash.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How often do subterranean military bunkers reset in Scavland?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Subterranean military bunkers, including Bunker B-4, operate on a 3-hour loot container reset cycle. Players can revisit cleared underground facilities every 3 hours for fresh military loot crates and weapon attachments.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you expand your player stash in Scavland?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In Update 0.7.0, players can purchase Stash expansions from Traders in the main village of Zalesye for 50,000 Rubles per additional tab. Outpost camp stashes currently feature one fixed tab.'
+          }
+        },
+        {
+          '@type': 'Question',
+          name: 'What are the sleeping and resting rules in Update 0.7.0?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'As of Update 0.7.0, only beds with mattresses can be used for sleeping to advance time and recover health. Campfire healing has also been doubled, providing reliable field recovery when far from safehouse beds.'
+          }
+        }
       ]
     })} />
   </Fragment>
-  <section class="listing">
-    <p class="eyebrow">World Index · Tactical Cartography</p>
-    <h1 class="page-title">Scavland Map &amp;<br/><span style="color:var(--acid)">Locations.</span></h1>
-    <p class="lede">Locations are useful only when their evidence is clear. Start with the map notes, bunker access rules, and hazard guides.</p>
-    <div class="listing-grid">{world.map((guide) => <GuideCard guide={guide} />)}</div>
-  </section>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Map &amp; Tactical Cartography</span>
+    </nav>
+
+    <header class="article-header">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Update 0.7.0 Cartography Verified</span>
+      </div>
+      <h1 class="page-title">Scavland Map — Zalesye Overworld, Outpost Camps &amp; Bunker Locations</h1>
+      <p class="lede">Comprehensive tactical cartography across the Zalesye exclusion sector: 4 forward outpost hubs (Arcadia, Mechanist Base, Mudlark Camp, Microrayion), Subterranean Bunker B-4 entry coordinates, 3-hour container reset cycles, and mattress sleep rules.</p>
+      <span class="evidence">Evidence: Official Steam announcements &amp; community reports · Update 0.7.0</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <!-- Visual Media Strip -->
+        <div class="media-strip" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 24px;">
+          <figure style="margin:0;">
+            <img 
+              src="/images/screenshots/ss_08_overworld_map.webp" 
+              alt="Scavland overworld tactical map with location markers, outposts, and hazard boundaries" 
+              style="width:100%;height:200px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" 
+              loading="eager" 
+              fetchpriority="high" 
+            />
+            <figcaption class="caption" style="font-size:0.75rem;color:var(--muted);margin-top:6px;">Zalesye overworld tactical grid showing settlement hubs, outpost camps, and perimeter hazards</figcaption>
+          </figure>
+          <figure style="margin:0;">
+            <img 
+              src="/images/screenshots/ss_02_bunker_tactical.webp" 
+              alt="Subterranean military bunker tactical corridor and reinforced blast doors in Scavland" 
+              style="width:100%;height:200px;border-radius:4px;border:1px solid var(--line);object-fit:cover;" 
+              loading="lazy" 
+            />
+            <figcaption class="caption" style="font-size:0.75rem;color:var(--muted);margin-top:6px;">Subterranean military bunker reinforced blast door and tactical interior corridor</figcaption>
+          </figure>
+        </div>
+
+        <!-- Quick Summary Box -->
+        <div class="quick-answer" style="margin-bottom:32px;padding:18px;background:rgba(18,26,22,0.85);border:1px solid var(--line);border-radius:6px;">
+          <strong style="color:var(--acid);font-size:1.05rem;display:block;margin-bottom:10px;">Cartography &amp; Outpost Rules Summary</strong>
+          <ul style="margin:0;padding-left:18px;line-height:1.7;color:var(--ink);">
+            <li><strong>Four Regional Outposts (Update 0.7.0):</strong> Crafting stations and player stashes were officially deployed across Arcadia, Mechanist Base, Mudlark Camp, and Microrayion.</li>
+            <li><strong>Independent Outpost Stashes:</strong> Outpost stashes feature <strong>one storage tab</strong> and <strong>do not mirror</strong> the inventory of the main Zalesye village stash, providing isolated forward storage.</li>
+            <li><strong>Main Village Stash Expansions:</strong> The central Zalesye safehouse stash can be upgraded by purchasing expansion tabs from Traders for <strong>50,000 Rubles</strong> each.</li>
+            <li><strong>Subterranean Bunkers (3-Hour Reset):</strong> Underground military facilities like Bunker B-4 require a Red Keycard and refresh all high-tier weapon crates on a <strong>3-hour reset cycle</strong>.</li>
+            <li><strong>Mattress Sleeping Rule:</strong> Only beds equipped with mattresses can be used to sleep and advance time; ambient campfires provide <strong>doubled passive healing</strong> during field expeditions.</li>
+          </ul>
+        </div>
+
+        <!-- Section 1: Zalesye Sectors -->
+        <h2 id="sectors">Zalesye Sector Breakdown &amp; Landmarks</h2>
+        <p style="color:var(--muted);margin-bottom:1.25rem;">The Zalesye exclusion sector is divided into distinct zones defined by environmental hazard levels, mutant spawns, and scavenging yield:</p>
+
+        <div style="display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:2.5rem;">
+          {sectors.map((sec) => (
+            <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:16px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:6px;">
+                <h3 style="margin:0;font-size:1.15rem;color:#fff;">{sec.name}</h3>
+                <span style={`font-size:0.72rem;font-family:'IBM Plex Mono',monospace;padding:2px 8px;border-radius:3px;background:rgba(0,0,0,0.3);color:${sec.dangerColor};border:1px solid ${sec.dangerColor}40;`}>
+                  {sec.danger}
+                </span>
+              </div>
+              <div style="font-size:0.8rem;color:var(--acid);font-family:'IBM Plex Mono',monospace;margin-bottom:8px;">
+                Key POI &amp; Loot: {sec.keyLoot}
+              </div>
+              <p style="font-size:0.88rem;color:var(--ink);line-height:1.6;margin:0;">
+                {sec.notes}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <!-- Section 2: 4 Outpost Camps -->
+        <h2 id="outposts">Four Forward Outpost Hubs (Update 0.7.0)</h2>
+        <p style="color:var(--muted);margin-bottom:1.25rem;">Update 0.7.0 resolved long-range traversal fatigue by establishing fully functional forward camps equipped with crafting stations and local stashes:</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:14px;margin-bottom:2.5rem;">
+          {outposts.map((op) => (
+            <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:16px;">
+              <div style="font-size:0.72rem;font-family:'IBM Plex Mono',monospace;color:var(--acid);text-transform:uppercase;margin-bottom:4px;">
+                {op.sector}
+              </div>
+              <h3 style="margin:0 0 6px;color:#fff;font-size:1.1rem;">{op.name}</h3>
+              <div style="font-size:0.75rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-bottom:8px;">
+                {op.features}
+              </div>
+              <p style="font-size:0.85rem;color:var(--ink);line-height:1.5;margin:0 0 10px;">
+                {op.description}
+              </p>
+              <div style="padding:8px 10px;background:rgba(0,0,0,0.3);border-radius:4px;font-size:0.8rem;color:var(--muted);border-left:2px solid var(--acid);">
+                <strong style="color:#fff;">Field Tactic:</strong> {op.tactics}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Section 3: Subterranean Bunkers -->
+        <h2 id="bunkers">Subterranean Military Bunkers &amp; 3-Hour Resets</h2>
+        <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:2.5rem;">
+          <h3 style="color:#fff;margin-top:0;font-size:1.15rem;">Bunker B-4 &amp; Underground Complex Layout</h3>
+          <p style="font-size:0.9rem;color:var(--ink);line-height:1.6;margin-bottom:12px;">
+            Subterranean Bunkers (principally Sector B-4) represent the most lucrative endgame loot installations in the Zalesye exclusion zone. Accessing the lower subterranean blast doors requires a verified <strong>Red Keycard</strong>, obtainable from military raider bosses or rare high-tier safehouse caches.
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:12px;margin:16px 0;">
+            <div style="padding:12px;background:rgba(0,0,0,0.3);border-radius:4px;">
+              <span style="font-size:0.72rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;display:block;">Access Requirement</span>
+              <strong style="color:var(--acid);font-size:0.95rem;">Red Keycard Required</strong>
+              <p style="font-size:0.8rem;color:var(--ink);margin:4px 0 0;">Single-use electronic keycard consumed upon opening reinforced blast doors.</p>
+            </div>
+            <div style="padding:12px;background:rgba(0,0,0,0.3);border-radius:4px;">
+              <span style="font-size:0.72rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;display:block;">Container Refresh</span>
+              <strong style="color:var(--acid);font-size:0.95rem;">3-Hour Reset Cycle</strong>
+              <p style="font-size:0.8rem;color:var(--ink);margin:4px 0 0;">Military crates and weapon containers refresh after 3 hours of real-time elapsed.</p>
+            </div>
+            <div style="padding:12px;background:rgba(0,0,0,0.3);border-radius:4px;">
+              <span style="font-size:0.72rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;display:block;">Environmental Threat</span>
+              <strong style="color:#f87171;font-size:0.95rem;">Severe Radiation &amp; CQB</strong>
+              <p style="font-size:0.8rem;color:var(--ink);margin:4px 0 0;">Heavy ionizing radiation in flooded lower decks; requires gas mask and high-caliber buckshot.</p>
+            </div>
+          </div>
+          <p style="font-size:0.85rem;color:var(--muted);margin:0;line-height:1.5;">
+            Detailed breach tactics, enemy patrol patterns, and extraction points are covered in our dedicated <a href="/guide/scavland-red-keycard-and-bunker-loot-recovery/" style="color:var(--acid);text-decoration:underline;">Red Keycard &amp; Bunker Loot Recovery Guide</a>.
+          </p>
+        </div>
+
+        <!-- Section 4: Survival Rules -->
+        <h2 id="survival-rules">Field Rest, Healing &amp; Border Hazards (Update 0.7.0)</h2>
+        <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:2.5rem;">
+          <ul style="margin:0;padding-left:18px;line-height:1.8;color:var(--ink);font-size:0.9rem;">
+            <li><strong>Mattress Sleep Requirement:</strong> In Update 0.7.0, sleeping to skip hazardous night hours (21:00 to 06:00) strictly requires beds equipped with mattresses. Bare wooden frames or canvas cots will not trigger sleep interaction.</li>
+            <li><strong>Doubled Campfire Healing:</strong> To compensate for strict mattress sleep rules while exploring remote sectors, campfire healing has been doubled, making ambient firepits crucial field recovery points.</li>
+            <li><strong>Line-of-Sight Sandbag Borders:</strong> Sandbags placed across wasteland boundaries act as solid physical borders while allowing NPCs to maintain visual line-of-sight, preventing unfair blind-spot exploits.</li>
+            <li><strong>Spiked Barricades:</strong> Update 0.7.0 added Spiked Barricades across major road bottlenecks and perimeter choke points; navigate around them carefully to avoid puncture trauma.</li>
+          </ul>
+        </div>
+
+        <!-- Section 5: World Guides Grid -->
+        <h2 id="world-guides">Cartography &amp; World Exploration Guides</h2>
+        <p style="color:var(--muted);margin-bottom:1.5rem;">Explore tactical deep dives on specific regions, navigation devices, and bunker recovery loops:</p>
+        
+        <div class="listing-grid" style="margin-bottom:2.5rem;">
+          {world.map((guide) => <GuideCard guide={guide} />)}
+        </div>
+
+        <!-- Related Hub Links -->
+        <div class="related-grid">
+          <a href="/guide/scavland-map-and-locations/"><strong>Map &amp; Locations Deep Dive</strong><br/>Detailed navigation routes, outpost coordinates, and Zalesye safehouse hubs</a>
+          <a href="/guide/scavland-red-keycard-and-bunker-loot-recovery/"><strong>Bunker &amp; Red Keycard Guide</strong><br/>Subterranean military bunker infiltration and 3-hour container reset timing</a>
+          <a href="/guide/scavland-sleep-and-world-reset-guide/"><strong>Sleep &amp; World Reset Guide</strong><br/>Mattress sleeping mechanics, campfire healing, and world clock management</a>
+          <a href="/weapons/"><strong>Weapons &amp; Attachments Database</strong><br/>Ballistics charts, modding benches, and tactical firearm stats</a>
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#sectors">Zalesye Sectors</a>
+        <a href="#outposts">4 Outpost Hubs</a>
+        <a href="#bunkers">Military Bunkers</a>
+        <a href="#survival-rules">Rest &amp; Hazard Rules</a>
+        <a href="#world-guides">Exploration Guides</a>
+      </aside>
+    </div>
+  </article>
 </Layout>
