@@ -10,33 +10,35 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
-    evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wd9dk3/new_player_tips_tricks/',
-    updated: '2026-09-16',
-    answer: 'In Scavland, players looking for cheats, debug commands, or trainers have several verified options for single-player and Explorer Mode sessions. Built on the Unity engine, Scavland supports command-line launch parameters (-dev, -console) for accessing internal developer tools, while single-player offline trainers (such as WeMod or Cheat Engine tables) allow unlimited stamina, expanded inventory carrying capacity, and reduced weapon jamming. Because Scavland is strictly an offline singleplayer survival game in Early Access, using Cheat Engine tables, MelonLoader, or BepInEx mods carries zero risk of Steam VAC bans in solo mode. Furthermore, Update 0.7.0 added dedicated Autosave Slots per run, protecting your main campaign saves from accidental corruption when testing mods or debug scripts.',
+    evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
+    updated: '2026-09-23',
+    answer: 'In Scavland, players searching for cheats, debug commands, or Cheat Engine tables have several accessible single-player options. While developer debug menus were restricted following Early Access v0.2.4, players can pass command-line launch parameters (-dev, -console) via Steam to access internal diagnostic overlays. For memory trainers and Cheat Engine (CT) tables, recent patches including Update 0.7.0 and Update 0.7.2 shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, Update 0.7.0 added independent Autosave Slots per run, protecting your main campaign from corruption during mod experiments.',
     steps: [
-      '01 · Enable Explorer Mode (Official Safe Cheats): Before using third-party memory trainers, activate "Explorer Mode" in world settings. This native toggle provides campfire instant recovery, reduced stamina drain, and relaxed death penalties without risking save corruption.',
-      '02 · Configure Steam Launch Options: In your Steam Library, right-click Scavland -> Properties -> General -> Launch Options. Enter "-dev" or "-console" to enable developer diagnostic logging and console overlay capabilities.',
-      '03 · Open In-Game Console: Press the tilde [~] or [F1] key in supported developer builds to pull down the command console window.',
-      '04 · Safe Offline Trainer & Cheat Engine Setup: If using external memory editors (Cheat Engine tables, WeMod) or Unity mods (MelonLoader / BepInEx), run Steam in Offline Mode. Solo offline play is safe from VAC bans, but modified saves should not be transferred if co-op arrives in future updates.',
-      '05 · Leverage Update 0.7.0 Separate Autosave Slots & Backups: Update 0.7.0 gives each run its own Autosave Slot to protect active progress. Even so, always create a manual backup copy of your save directory at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/ before injecting CT tables.'
+      '01 · Enable Explorer Mode (Official Built-in Cheats): Before altering memory tables, consider enabling Explorer Mode in world settings. This native difficulty setting acts as a built-in cheat suite with 1.2x vendor payouts, baseline 150 stamina with reduced roll costs (15 stamina vs 40 in standard modes), and 2x campfire healing without risking save corruption.',
+      '02 · Configure Steam Launch Parameters (-dev / -console): In your Steam Library, right-click Scavland -> Properties -> General -> Launch Options. Enter "-dev" or "-console" to activate developer diagnostic logging and command overlay support.',
+      '03 · Open Diagnostic Console Hotkeys: Launch your run and press the tilde [~] or [F1] key to toggle the in-game developer overlay window.',
+      '04 · Cheat Engine (CT Table) & Trainer Compatibility: With Update 0.7.0 and Update 0.7.2, pointer shifts invalidated legacy CT tables. Ensure you load tables specifically built for Update 0.7.0+ to prevent memory desyncs or game freezes when locking stamina or editing currency.',
+      '05 · Solo Offline Safety & VAC Policy: Scavland operates entirely offline in solo play with no Valve Anti-Cheat (VAC) integration, making Cheat Engine tables and local mods safe from account bans in single-player sessions.',
+      '06 · Leverage Dedicated Autosave Slots & Backups: Update 0.7.0 isolates each run into its own Autosave Slot. Before testing external memory tables or debug injections, create a manual backup of %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/ to preserve campaign progression.'
     ],
     facts: [
-      ['Native Cheats', 'Explorer Mode provides built-in casual cheats (instant campfire healing, reduced stamina drain, safe stash)'],
-      ['Launch Flags', '-dev and -console command flags activate developer diagnostic tools'],
-      ['Console Hotkey', 'Press [~] (Tilde) or [F1] in test builds to toggle the console window'],
-      ['Save Path', 'Saves are stored locally at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/'],
-      ['Fair Play Policy', 'Memory editors and trainers are strictly for offline single-player use with zero VAC ban risk in solo mode'],
-      ['Autosave Protection', 'Update 0.7.0 gives each run its own Autosave Slot, isolating test runs from primary saves']
+      ['Native Cheats', 'Explorer Mode provides built-in casual settings: 1.2x vendor payouts, 15 roll stamina cost, and 2x campfire healing'],
+      ['Launch Flags', 'Passing -dev and -console command flags activates developer diagnostic logging'],
+      ['Console Hotkeys', 'Press [~] (Tilde) or [F1] in test builds to toggle the console window'],
+      ['Cheat Engine Offsets', 'Update 0.7.0 and Update 0.7.2 adjusted memory pointers, requiring updated CT tables for stamina and inventory'],
+      ['Anti-Cheat Policy', 'Scavland is an offline single-player game in Early Access with no server-side VAC bans for solo play'],
+      ['Save File Location', 'Saves are stored locally at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/'],
+      ['Autosave Protection', 'Update 0.7.0 gives each run an independent Autosave Slot, safeguarding primary campaign progress']
     ],
     faq: [
-      ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—eliminating severe stamina penalties and enabling instant campfire health recovery. Console debug access requires -dev launch flags.'],
-      ['Are there working PC trainers for Scavland?', 'Trainer and mod-tool support for an Early Access build changes across updates and cannot be vouched for by a wiki. Check trainer communities for the current build (such as Update 0.7.0) before running anything, and back up your save folder first.'],
-      ['Can you get banned for using Cheat Engine or mods in single-player?', 'No. Scavland is a dedicated single-player game in Early Access with no server-side VAC anti-cheat for solo play. Using Cheat Engine tables, BepInEx, or MelonLoader to adjust carry weight or stamina in solo play will not ban your Steam account.'],
-      ['How does Update 0.7.0 improve save safety when modding?', 'Update 0.7.0 introduced individual Autosave Slots per run, preventing a modded or experimental run from automatically overwriting your primary progression save.'],
+      ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—offering 150 maximum stamina with 15 roll cost (compared to 40 in standard modes) and 2x campfire health recovery. Console debug access requires -dev or -console launch flags.'],
+      ['Why do older Cheat Engine tables crash after Update 0.7.0 / 0.7.2?', 'Update 0.7.0 and Update 0.7.2 refactored internal data structures and inventory serialization, shifting memory pointers. Legacy tables cause memory desyncs or crashes; always use tables updated for the current patch.'],
+      ['Can you get VAC banned for using Cheat Engine or trainers in Scavland?', 'No. Scavland is a dedicated single-player title in Early Access with no server-side VAC anti-cheat for solo play. Modifying local stamina or ruble values in single-player will not ban your Steam account.'],
+      ['How does Update 0.7.0 safeguard saves when using cheats?', 'Update 0.7.0 introduced individual Autosave Slots per run, preventing a modded or experimental session from automatically overwriting your primary progression save.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland cheats', 'scav land cheats', 'scavland console commands', 'scavland trainer', 'scavland pc trainer', 'scavland wemod', 'scavland cheat engine', 'scavland debug mode', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land cheats', 'scavland console commands', 'scavland trainer', 'scavland pc trainer', 'scavland ct table 0.7.0', 'scavland wemod', 'scavland debug mode', 'scavland item spawn', 'scavland god mode']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -210,38 +212,40 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-anomaly-scanner-and-artifacts',
     shortTitle: 'Anomaly Scanner',
-    title: 'Scavland Anomaly Scanner Guide: Core Detector Locating, Bug Fix & Artifacts',
-    description: 'Handheld Anomaly Scanner (Core Detector) guide: audio pitch tracking, missing item inventory bug fix, quicksave audio reset, and artifact farming.',
+    title: 'Scavland Anomaly Scanner & Catching Current Guide: Core Detector, Flux Aspect Core & Artifacts',
+    description: 'Complete guide to the Core Detector anomaly scanner in Catching Current: locating the Flux Aspect Core, audio pitch tracking, missing item bug fix, and quicksave reset.',
     category: 'Exploration',
-    image: '/images/harvested/2026-09-18/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
+    image: '/images/harvested/2026-09-23/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
-    evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
-    updated: '2026-09-16',
-    answer: 'The handheld Anomaly Scanner (referred to in game jobs as the Core Detector) is your primary instrument for tracking spatial distortions and harvesting high-tier artifacts across Zalesye. Bound to hotkey [3], the device emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory-full boundary bug: if your backpack is packed to 100% capacity when triggering the quest, the detector cannot enter your inventory and drops onto the ground at the NPC feet or diverts to safehouse overflow. Additionally, a quicksave audio desync bug can cause the detector to go silent; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener. For related survival protocols, consult our [Mist & Radiation Guide](/guide/scavland-mist-survival-and-radiation/) or [Loot & Scavenging Guide](/guide/scavland-loot-and-scavenging/).',
+    evidence: 'Community-reported @ https://old.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
+    updated: '2026-09-23',
+    answer: 'The handheld Anomaly Scanner (named the Core Detector in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across Zalesye. In the primary storyline quest "Catching Current", you must equip this device to locate and harvest the rare Flux Aspect Core. Bound to hotkey [3], the Core Detector emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the Core Detector occupies 3 vertical slots (1x3), if your inventory is 100% full upon accepting or turning in "Catching Current", the device cannot enter your quickbar and drops onto the ground at the NPC feet or diverts to your Zalesye safehouse stash overflow. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
     steps: [
-      '01 · Free 3 Inventory Slots Before Quest Acceptance: The Core Detector is a bulky 1x3 vertical radar gun. If your inventory is 100% full upon completing the prerequisite quest, the scanner cannot enter your rig and either drops onto the floor beneath the NPC or diverts to your Zalesye safehouse stash overflow tab.',
-      '02 · Floor & Overflow Search Protocol: If the scanner is missing from your inventory after speaking to the quest giver, do not panic or restart your save. Thoroughly inspect the ground directly at the NPC\'s feet or check your central safehouse overflow chest to retrieve the dropped device.',
-      '03 · Equip & Sweep Spatial Grids: Press hotkey [3] to equip the handheld scanner in your offhand. Sweep across contaminated terrain in a disciplined zigzag grid pattern while keeping environmental audio at audible levels.',
-      '04 · Track Accelerating Beep Frequency: Follow the escalating audio cadence. As distance to the anomaly closes from 30m to under 5m, the ping transforms from sporadic chirps to a continuous high-pitched hum indicating immediate artifact proximity.',
-      '05 · Quicksave Audio Desync Fix: If reloading a quicksave renders the detector silent despite active visual anomaly shimmer, holster the scanner, switch to your primary weapon, cycle the bolt once or fire a shot, and re-equip slot [3] to reset spatial audio.',
-      '06 · Secure Harvest Before Temporal Bursts: Once the artifact materializes on the ground, interact swiftly to stow it in your radiation-lined container before dangerous thermal or gravitational discharges pulse.'
+      '01 · Free 3 Inventory Slots Before "Catching Current": The Core Detector occupies 3 vertical inventory slots (1x3 grid footprint). Clear at least 3-4 backpack cells before accepting the "Catching Current" quest from the handler so the scanner can safely enter your gear.',
+      '02 · Floor & Safehouse Overflow Retrieval: If the Core Detector is missing from your inventory after accepting "Catching Current", do not restart your save. Inspect the ground directly beneath the NPC\'s feet where dropped items spawn, or check the Overflow Tab in your Zalesye safehouse stash locker.',
+      '03 · Equip Offhand Scanner & Sweep Terrain: Press hotkey [3] to equip the Core Detector in your offhand. Sweep across the quest search perimeter in a zigzag pattern while keeping in-game master and effects audio enabled.',
+      '04 · Track Accelerating Cadence to Epicenter: Follow the escalating audio ping rate. As you approach the Flux Aspect Core epicenter from ~30m down to under 5m, the sound shifts from sporadic chirps to a continuous high-pitched hum.',
+      '05 · Quicksave Audio Desync Reset: If reloading a quicksave renders the detector silent near visible shimmering anomalies, holster the scanner, switch to your rifle or shotgun, cycle the bolt once or fire a round, and press [3] again to restore spatial audio.',
+      '06 · Harvest the Flux Aspect Core: Once the spatial distortion peaks and the Flux Aspect Core materializes on the ground, interact immediately to stow it before toxic radiation pulses or spatial backlash damage occur.'
     ],
     facts: [
-      ['Official Usage', 'The developer confirmed: Press 3 to equip, aim toward anomaly, move and listen for highest frequency beep'],
+      ['Quest Objective', 'The Core Detector is required to locate and harvest the Flux Aspect Core in the Catching Current quest line'],
+      ['Equipment Hotkey', 'Press [3] to equip the handheld scanner, point toward spatial anomalies, and follow highest frequency pings'],
       ['Grid Footprint', 'Core Detector occupies 3 vertical inventory slots (1x3 grid footprint)'],
-      ['Missing Item Recovery', 'If inventory is full, scanner drops at NPC feet or diverts to Zalesye safehouse stash overflow'],
-      ['Quicksave Audio Fix', 'Cycling firearm bolt or firing one round rebinds the audio spatial listener component after reloading'],
-      ['Artifact Barter Value', 'Specialized faction scientists pay 2,000R to 5,000R for intact anomalies or offer passive stat modules'],
-      ['Verified Baseline', 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/']
+      ['Missing Item Recovery', 'If inventory is full, the scanner drops at the NPC feet or routes to Zalesye safehouse stash overflow'],
+      ['Quicksave Audio Fix', 'Cycling a firearm bolt or firing one round rebinds the audio spatial listener component after reloading'],
+      ['Flux Core Value', 'The Flux Aspect Core fulfills the Catching Current contract and provides critical research barter with faction scientists'],
+      ['Evidence Source', 'Community-reported @ https://old.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/']
     ],
     faq: [
-      ['What should I do if the Core Detector / Anomaly Scanner is missing after the quest?', 'If your backpack was full when receiving the scanner from the quest giver, it will not appear in your quickbar. Check the floor directly beneath the NPC\'s feet, as the item drops if grid space is insufficient. If it despawned from the floor, check the Overflow Tab in your Zalesye safehouse stash locker.'],
-      ['Why is the Anomaly Scanner not beeping near visible anomalies?', 'A known serialization bug in Early Access can desync the spatial audio component when reloading a manual save. Holster the detector, switch to your rifle, cycle the bolt once, and press [3] again to reset the audio listener.'],
-      ['How much space does the Core Detector require in your backpack?', 'The detector requires 3 vertical inventory slots (1x3). Always maintain at least 4-6 free inventory cells before speaking with major contract handlers.'],
-      ['Can artifacts be farmed repeatedly in the same anomaly field?', 'Overworld anomaly clusters enter an in-game 48-hour regeneration cycle. Dense Mist weather events dramatically increase artifact spawn probabilities and yield 2x value anomalies.']
+      ['How do I complete the Catching Current quest and find the Flux Aspect Core?', 'Equip the Core Detector using hotkey [3], traverse the marked anomaly zone, and follow the escalating audio radar frequency. When the pings transition into a continuous high-pitched tone, locate the shimmering epicenter and harvest the Flux Aspect Core directly from the ground.'],
+      ['What should I do if the Core Detector is missing after accepting Catching Current?', 'If your backpack was full when receiving the scanner from the quest giver, it could not enter your grid. Check the ground directly beneath the NPC\'s feet, or check the Overflow Tab in your Zalesye safehouse stash locker where displaced quest items route.'],
+      ['Why is the Anomaly Scanner not beeping near anomalies?', 'A known serialization bug in Early Access can desync the spatial audio component when loading a save. Holster the detector, switch to your firearm, cycle the bolt or fire a test shot, and re-equip slot [3] to reset the audio listener.'],
+      ['How much backpack space does the Core Detector require?', 'The Core Detector requires 3 vertical inventory cells (1x3). Always maintain free slots before talking to major quest givers.'],
+      ['Can anomaly fields be harvested repeatedly for artifacts?', 'Overworld anomaly zones undergo a 48-hour in-game regeneration cycle. Dense Mist events increase artifact spawn probabilities and yield enhanced anomaly loot.']
     ],
     related: ['scavland-mist', 'scavland-loot-and-scavenging', 'scavland-mist-survival-and-radiation', 'scavland-beginner-guide'],
-    keywords: ['scavland anomaly scanner', 'scavland core detector', 'scavland core detector missing', 'scavland artifacts', 'scavland scanner beep', 'scavland core detector bug', 'scavland detector not beeping']
+    keywords: ['scavland catching current', 'scavland flux aspect core', 'catching current quest', 'scavland anomaly scanner', 'scavland core detector', 'scavland core detector missing', 'scavland artifacts', 'scavland scanner beep', 'scavland core detector bug', 'scavland detector not beeping', 'flux aspect core scavland']
   },
   {
     slug: 'scavland-death-and-loot-recovery',
