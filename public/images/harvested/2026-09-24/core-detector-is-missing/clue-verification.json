@@ -1,0 +1,16 @@
+{
+  "clue_title": "Core detector is missing",
+  "source_url": "https://old.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/",
+  "fetched_page_title": "Core detector is missing : Scavland",
+  "relevance_ok": true,
+  "matched_keywords": [
+    "core",
+    "detector",
+    "missing"
+  ],
+  "missing_keywords": [],
+  "required_hits": 2,
+  "score": "3/3",
+  "reason": "matched 3/3 clue keywords (required 2)",
+  "verified_at": "2026-09-24T06:00:06.595398"
+}

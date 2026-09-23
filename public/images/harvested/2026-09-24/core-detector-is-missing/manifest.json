@@ -1,0 +1,45 @@
+{
+  "topic_slug": "core-detector-is-missing",
+  "source_url": "https://old.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/",
+  "page_title": "Core detector is missing : Scavland",
+  "harvested_at": "2026-09-24T06:00:06.594869",
+  "authenticated": true,
+  "verified": true,
+  "verification_notes": "Forum URL detected: Bypassing webpage screenshot to prevent forum UI pollution.; Matched official screenshot: steam_ss_11.webp (semantic score: 12)",
+  "images": [
+    {
+      "filename": "core-detector-is-missing-gameplay.webp",
+      "relative_path": "core-detector-is-missing-gameplay.webp",
+      "source_url": "local://steam_ss_11.webp",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 55686,
+      "description": "Scavland Mikhail 74U weapon modification workbench showing durability stats and attachment slots",
+      "downloaded": true,
+      "authenticated": true,
+      "content_kind": "WEBP",
+      "sha256": "075f9e5345a7ab5271b788a987792ee67cf457a71b4f3dfda1cd118e1cf8ec09",
+      "duplicate_of": null,
+      "visual_score": null,
+      "content_check": "ok",
+      "verified": true
+    }
+  ],
+  "text_preview": "jump to content\nGET NEW REDDIT\nMY SUBREDDITS\nHOME-POPULAR-ALL-USERS | GRAVEYARDKEEPER-SANDUSTRYGAME-SCAVLAND-GRAVEYARDKEEPER2 | ASKREDDIT-PICS-FUNNY-MOVIES-GAMING-WORLDNEWS-NEWS-TODAYILEARNED-NOTTHEONION-EXPLAINLIKEIMFIVE-MILDLYINTERESTING-DIY-VIDEOS-OLDSCHOOLCOOL-TWOXCHROMOSOMES-TIFU-MUSIC-BOOKS-LI",
+  "clue_verification": {
+    "clue_title": "Core detector is missing",
+    "source_url": "https://old.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/",
+    "fetched_page_title": "Core detector is missing : Scavland",
+    "relevance_ok": true,
+    "matched_keywords": [
+      "core",
+      "detector",
+      "missing"
+    ],
+    "missing_keywords": [],
+    "required_hits": 2,
+    "score": "3/3",
+    "reason": "matched 3/3 clue keywords (required 2)",
+    "verified_at": "2026-09-24T06:00:06.595398"
+  }
+}
