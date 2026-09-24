@@ -172,13 +172,13 @@ export const guides: Guide[] = [
     slug: 'scavland-beginner-guide',
     shortTitle: 'Beginner Guide (Update 0.7.0)',
     title: 'Scavland Beginner Guide: Starter Kit, 150 Stamina, Dodge Costs & The Mire Route (Update 0.7.0)',
-    description: 'Definitive Scavland beginner guide: Update 0.7.0 starter kit with Green Rags, unified 150 max stamina, dodge costs by difficulty, rebuilt Death Screen, and The Mire safe route.',
+    description: 'Definitive Scavland beginner guide: Update 0.7.0 starter kit with Green Rags, 150 max stamina, difficulty dodge costs, 2x campfire triage healing, and The Mire safe route.',
     category: 'Survival',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'A scavenger exploring a ruined settlement in daylight near safehouse',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-20',
-    answer: 'Start your journey with daylight scavenging loops around the central settlement of Zalesye and raid the hazard-free supply depot at The Mire northwest of town. Update 0.7.0 introduced significant beginner quality-of-life upgrades: Green Rags are now included in the starter kit for early emergency bleeding control, all game modes feature a unified 150 maximum stamina pool, and stamina recovery is accelerated to approximately 7 seconds (down from 10 seconds). Dodge roll stamina costs are tuned to mode difficulty (Explorer: 15 Stamina, Returner: 40 Stamina, Iron Man: 40 Stamina). In addition, Gun and Armor Repair Kits can now be used regardless of equipment damage condition, and the Death Screen has been rebuilt with dedicated mode-specific actions and gamepad support. If you die in the wasteland, your equipped backpack drops at the coordinate for recovery, while your safehouse stash remains completely secure.',
+    updated: '2026-09-25',
+    answer: 'Start your journey with daylight scavenging loops around the central settlement of Zalesye and raid the hazard-free supply depot at The Mire northwest of town. Update 0.7.0 introduced significant beginner quality-of-life upgrades: Green Rags are now included in the starter kit for early emergency bleeding control, all game modes feature a unified 150 maximum stamina pool, and stamina recovery is accelerated to approximately 7 seconds (down from 10 seconds). Dodge roll stamina costs are tuned to mode difficulty (Explorer: 15 Stamina, Returner: 40 Stamina, Iron Man: 40 Stamina). In addition, Gun and Armor Repair Kits can now be used regardless of equipment damage condition, campfire healing has been doubled for emergency field triage, and the Death Screen has been rebuilt with dedicated mode-specific actions and gamepad support. If you die in the wasteland, your equipped backpack drops at the coordinate for recovery, while your safehouse stash remains completely secure.',
     steps: [
       '01 · Starter Kit & Green Rags (Update 0.7.0): Every new run now includes Green Rags in the starter kit alongside basic field gear. Use Green Rags immediately when suffering lacerations or light bleeding during early skirmishes.',
       '02 · Understand Mode Difficulty & Dodge Costs: All game modes now feature 150 maximum Stamina. However, dodge roll stamina costs vary significantly by chosen mode: Explorer Mode requires only 15 Stamina per dodge roll, whereas Returner Mode and Iron Man Mode demand 40 Stamina per dodge roll.',
@@ -194,6 +194,7 @@ export const guides: Guide[] = [
       ['Maximum Stamina Baseline', 'All game modes now have 150 maximum Stamina (Update 0.7.0)'],
       ['Dodge Roll Stamina Cost', 'Explorer Mode: 15 Stamina; Returner Mode: 40 Stamina; Iron Man Mode: 40 Stamina (Update 0.7.0)'],
       ['Stamina Regeneration Rate', 'Full recovery takes approximately 7 seconds, down from ~10 seconds (Update 0.7.0)'],
+      ['Campfire Triage Healing', 'Campfire healing rate is doubled in Update 0.7.0 for rapid field recovery'],
       ['Starter Supply Cache', 'The Mire northwest of Zalesye provides free boiled water, 12G ammo, and gauze with no bandits'],
       ['Universal Repair Kits', 'Gun and Armor Repair Kits can now be used regardless of damage condition (Update 0.7.0)'],
       ['Rebuilt Death Screen', 'Mode-specific actions (Returner: Continue/Load; Iron Man: New Game/Exit) and run-specific Autosave Slot (Update 0.7.0)'],
@@ -202,12 +203,13 @@ export const guides: Guide[] = [
     faq: [
       ['What was added to the beginner starter kit in Update 0.7.0?', 'Green Rags are now included in the starter kit, giving fresh spawns an immediate remedy for bleeding and lacerations without needing early medical purchases.'],
       ['How much stamina does dodging consume in different modes?', 'Under Update 0.7.0, all modes have 150 maximum stamina, but dodge roll cost is 15 Stamina in Explorer Mode, compared to 40 Stamina in Returner and Iron Man modes.'],
+      ['How does campfire healing work in Update 0.7.0?', 'Campfire healing is doubled in Update 0.7.0, allowing scavengers to rapidly restore baseline health in the field without consuming scarce medkits.'],
       ['Where should I go on my very first raid in Scavland?', 'Head immediately northwest of Zalesye to The Mire wetland cache. It provides clean drinking water, starter ammunition, and medical items without armed bandit opposition.'],
       ['Can I repair severely broken weapons and armor in Update 0.7.0?', 'Yes. Gun and Armor Repair Kits can now be used regardless of how damaged equipment is, removing previous minimum durability restrictions.'],
       ['What happens if I die during a raid?', 'In standard Returner Mode, your equipped gear and backpack remain at your death coordinate for recovery, while your safehouse stash remains completely secure. The rebuilt Death Screen allows you to Continue or Load Game directly.']
     ],
     related: ['scavland-map-and-locations', 'scavland-weapon-repair-and-durability', 'scavland-crafting-and-trading', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-tactical-database-weapons-loot'],
-    keywords: ['scavland beginner guide', 'scavland starter tips', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide']
+    keywords: ['scavland beginner guide', 'scavlands', 'scavlands beginner guide', 'scavland starter tips', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide']
   },
   {
     slug: 'scavland-anomaly-scanner-and-artifacts',

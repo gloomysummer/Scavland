@@ -5,7 +5,7 @@ import Countdown from '../components/Countdown.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki — Tactical Guides, Weapons & Maps" description="The community-run Scavland Wiki: comprehensive survival guides, weapons, ballistics & attachments, Zalesye bunker maps, and extraction mechanics." keywords="Scavland Wiki, Scavland, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
+<Layout title="Scavland Wiki (Scavlands) — Tactical Guides, Weapons & Maps" description="The community-run Scavland Wiki (Scavlands): comprehensive survival guides, weapons, ballistics & attachments, Zalesye bunker maps, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scavlands, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
   <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -13,7 +13,7 @@ const featured = guides.slice(0, 6);
         '@type': 'WebSite',
         '@id': 'https://scavland.wiki/#website',
         'name': 'Scavland Wiki',
-        'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database'],
+        'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database', 'Scavlands'],
         'url': 'https://scavland.wiki',
         'description': 'The definitive community Scavland Wiki: comprehensive survival guides, weapons, attachments, factions, maps, and extraction mechanics for Zalesye.',
         'inLanguage': 'en-US',
@@ -43,7 +43,7 @@ const featured = guides.slice(0, 6);
         '@type': 'VideoGame',
         '@id': 'https://scavland.wiki/#game',
         'name': 'Scavland',
-        'alternateName': ['Scav Land'],
+        'alternateName': ['Scav Land', 'Scavlands'],
         'description': 'Hardcore top-down pixel art survival RPG set in Zalesye, featuring realistic ballistics, 300+ modular attachments, underground bunkers, and dynamic Mist extraction.',
         'url': 'https://store.steampowered.com/app/3373500/Scavland/',
         'genre': ['Survival RPG', 'Extraction Shooter', 'Action RPG'],
@@ -93,7 +93,7 @@ const featured = guides.slice(0, 6);
   <section class="hero">
     <p class="eyebrow">Community Tactical Database · Early Access Baseline</p>
     <h1>Scavland Wiki</h1>
-    <p class="lede">The complete database and tactical survival guide for <strong>Scavland (Scav Land)</strong>, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
+    <p class="lede">The complete database and tactical survival guide for <strong>Scavland (often referred to by players as Scavlands or Scav Land)</strong>, a hardcore top-down pixel art survival RPG set in a post-apocalyptic Soviet wasteland. Explore Zalesye, scavenge abandoned bunkers, master 25+ weapons, navigate 10 factions, and survive the deadly Mist.</p>
     
     <Countdown />
 
