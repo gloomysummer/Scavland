@@ -4,41 +4,43 @@ export type Guide = { slug:string; title:string; shortTitle:string; description:
 export const guides: Guide[] = [
   {
     slug: 'scavland-cheats-and-console-commands',
-    shortTitle: 'Cheats & Console',
-    title: 'Scavland Cheats, Console Commands & Trainer Guide: Debug Mode & Item Spawning',
-    description: 'Complete guide to Scavland cheats, console commands, and debug mode: launch options, item spawning IDs, god mode, stamina toggles, and offline play.',
+    shortTitle: 'Console & Cheats',
+    title: 'Scavland Console Commands & Cheats Guide: Debug Mode (-dev / -console) & Item Spawning',
+    description: 'Definitive Scavland console commands and cheats guide: -dev and -console Steam launch parameters, debug overlay hotkeys, CT table memory offsets, and safe solo testing.',
     category: 'Systems',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
-    updated: '2026-09-23',
-    answer: 'In Scavland, players searching for cheats, debug commands, or Cheat Engine tables have several accessible single-player options. While developer debug menus were restricted following Early Access v0.2.4, players can pass command-line launch parameters (-dev, -console) via Steam to access internal diagnostic overlays. For memory trainers and Cheat Engine (CT) tables, recent patches including Update 0.7.0 and Update 0.7.2 shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, Update 0.7.0 added independent Autosave Slots per run, protecting your main campaign from corruption during mod experiments.',
+    updated: '2026-09-26',
+    answer: 'In Scavland, players seeking developer console commands, debug overlays, or trainer modifications can access internal diagnostic features through verified Steam parameters. While developer debug menus were restricted following Early Access v0.2.4, players can pass command-line launch parameters (-dev, -console) via Steam to activate diagnostic overlays and console functionality. For memory trainers and Cheat Engine (CT) tables, recent patches including Update 0.7.0 and Update 0.7.2 shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, Update 0.7.0 added independent Autosave Slots per run, protecting your main campaign from corruption during experimental testing.',
     steps: [
-      '01 · Enable Explorer Mode (Official Built-in Cheats): Before altering memory tables, consider enabling Explorer Mode in world settings. This native difficulty setting acts as a built-in cheat suite with 1.2x vendor payouts, baseline 150 stamina with reduced roll costs (15 stamina vs 40 in standard modes), and 2x campfire healing without risking save corruption.',
-      '02 · Configure Steam Launch Parameters (-dev / -console): In your Steam Library, right-click Scavland -> Properties -> General -> Launch Options. Enter "-dev" or "-console" to activate developer diagnostic logging and command overlay support.',
-      '03 · Open Diagnostic Console Hotkeys: Launch your run and press the tilde [~] or [F1] key to toggle the in-game developer overlay window.',
+      '01 · Configure Steam Launch Parameters (-dev / -console): To enable the developer console and diagnostic features, right-click Scavland in your Steam Library -> Properties -> General -> Launch Options. Enter "-dev" or "-console" (without quotes) to activate developer diagnostic logging and command overlay support on boot.',
+      '02 · Open Diagnostic Console Hotkeys: Launch your run and press the tilde [~] or [F1] / [F2] key to toggle the in-game developer overlay window for real-time telemetry and debug commands.',
+      '03 · Enable Explorer Mode (Official Built-in Cheats): Before altering memory tables or injecting external code, consider enabling Explorer Mode in world settings. This native difficulty setting acts as a built-in cheat suite with 1.2x vendor payouts, baseline 150 stamina with reduced roll costs (15 stamina vs 40 in standard modes), and 2x campfire healing without risking save corruption.',
       '04 · Cheat Engine (CT Table) & Trainer Compatibility: With Update 0.7.0 and Update 0.7.2, pointer shifts invalidated legacy CT tables. Ensure you load tables specifically built for Update 0.7.0+ to prevent memory desyncs or game freezes when locking stamina or editing currency.',
-      '05 · Solo Offline Safety & VAC Policy: Scavland operates entirely offline in solo play with no Valve Anti-Cheat (VAC) integration, making Cheat Engine tables and local mods safe from account bans in single-player sessions.',
+      '05 · Solo Offline Safety & VAC Policy: Scavland operates entirely offline in solo play with no Valve Anti-Cheat (VAC) integration, making Cheat Engine tables, console commands, and local mods safe from account bans in single-player sessions.',
       '06 · Leverage Dedicated Autosave Slots & Backups: Update 0.7.0 isolates each run into its own Autosave Slot. Before testing external memory tables or debug injections, create a manual backup of %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/ to preserve campaign progression.'
     ],
     facts: [
-      ['Native Cheats', 'Explorer Mode provides built-in casual settings: 1.2x vendor payouts, 15 roll stamina cost, and 2x campfire healing'],
-      ['Launch Flags', 'Passing -dev and -console command flags activates developer diagnostic logging'],
-      ['Console Hotkeys', 'Press [~] (Tilde) or [F1] in test builds to toggle the console window'],
-      ['Cheat Engine Offsets', 'Update 0.7.0 and Update 0.7.2 adjusted memory pointers, requiring updated CT tables for stamina and inventory'],
+      ['Console Launch Flags', 'Passing -dev and -console command flags in Steam activates developer diagnostic logging and console overlay'],
+      ['Console Overlay Hotkeys', 'Press [~] (Tilde) or [F1] / [F2] in test builds to toggle the console window'],
+      ['Built-in Casual Cheats', 'Explorer Mode provides built-in casual settings: 1.2x vendor payouts, 15 roll stamina cost, and 2x campfire healing'],
+      ['Memory Offset Updates', 'Update 0.7.0 and Update 0.7.2 adjusted memory pointers, requiring updated CT tables for stamina and inventory'],
       ['Anti-Cheat Policy', 'Scavland is an offline single-player game in Early Access with no server-side VAC bans for solo play'],
       ['Save File Location', 'Saves are stored locally at %USERPROFILE%/AppData/LocalLow/NoShadow/Scavland/Saves/'],
-      ['Autosave Protection', 'Update 0.7.0 gives each run an independent Autosave Slot, safeguarding primary campaign progress']
+      ['Autosave Protection', 'Update 0.7.0 gives each run an independent Autosave Slot, safeguarding primary campaign progress'],
+      ['Evidence Baseline', 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/']
     ],
     faq: [
+      ['How do you open the console in Scavland?', 'To open the developer console, add -dev or -console to your Steam Launch Options (right-click Scavland -> Properties -> General -> Launch Options). Once in-game, press [~] (Tilde) or [F1] / [F2] to toggle the debug console overlay.'],
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—offering 150 maximum stamina with 15 roll cost (compared to 40 in standard modes) and 2x campfire health recovery. Console debug access requires -dev or -console launch flags.'],
       ['Why do older Cheat Engine tables crash after Update 0.7.0 / 0.7.2?', 'Update 0.7.0 and Update 0.7.2 refactored internal data structures and inventory serialization, shifting memory pointers. Legacy tables cause memory desyncs or crashes; always use tables updated for the current patch.'],
-      ['Can you get VAC banned for using Cheat Engine or trainers in Scavland?', 'No. Scavland is a dedicated single-player title in Early Access with no server-side VAC anti-cheat for solo play. Modifying local stamina or ruble values in single-player will not ban your Steam account.'],
+      ['Can you get VAC banned for using console commands or Cheat Engine in Scavland?', 'No. Scavland is a dedicated single-player title in Early Access with no server-side VAC anti-cheat for solo play. Modifying local stamina or ruble values in single-player will not ban your Steam account.'],
       ['How does Update 0.7.0 safeguard saves when using cheats?', 'Update 0.7.0 introduced individual Autosave Slots per run, preventing a modded or experimental session from automatically overwriting your primary progression save.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land cheats', 'scavland console commands', 'scavland trainer', 'scavland pc trainer', 'scavland ct table 0.7.0', 'scavland wemod', 'scavland debug mode', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland console', 'scavland console commands', 'scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land console', 'scavland debug mode', 'scavland dev mode', 'scavland trainer', 'scavland pc trainer', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -790,39 +792,42 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-merchant-prices-and-barter-guide',
-    shortTitle: 'Merchant Prices & Traders',
+    shortTitle: 'Merchant Prices & Volodymyr',
     title: 'Scavland Merchant Prices & Trader Guide: Volodymyr Location, Buy Rates & Stash Expansions (Update 0.7.0)',
-    description: 'Complete Scavland merchant guide: Trader Volodymyr Crossroads location and zero-rep stock, Update 0.7.0 trader rank +5% sell bonus, and 50,000 Ruble stash expansions.',
+    description: 'Complete Scavland merchant guide: Trader Volodymyr Crossroads location, zero-reputation stock, 35% attachment discount, +5% sell bonus per rank, and 50,000 Ruble stash expansions.',
     category: 'Economy',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Scavland merchants trading salvage and weapons in Zalesye settlement camp',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-21',
-    answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations while leveraging reputation progression and key vendor locations. Trader Volodymyr, stationed at the Crossroads annex outside central Zalesye, serves as the primary black-market armorer: he operates with zero reputation rank requirements, making him accessible even if your faction standing collapses. In Update 0.7.0, Volodymyr\'s weapon attachments are approximately 35% cheaper, he sells Advanced and Expert Repair Kits as well as an Expert Repair Kit Blueprint, and his contracts focus on high-quality weapons and dangerous mutants. Across the wider economy, Update 0.7.0 introduced a +5% sell value bonus per Trader Rank and allowed purchasing a Stash expansion from a Trader in the main village for 50,000 Rubles. Traders maintain strict specializations: Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, Vesna buys Common items at 30% and Clothing at 60%, and Grigory pays premium rates for attachments while buying Common items at 50% (no longer buying Food or Medical items). For weapon servicing details, see our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or [Tactical Database](/guide/scavland-tactical-database-weapons-loot/).',
+    updated: '2026-09-26',
+    answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations while leveraging reputation progression and key vendor locations. Trader Volodymyr, stationed at the Crossroads annex outside central Zalesye, serves as the primary black-market armorer: he operates with zero reputation rank requirements, making him accessible even if your faction standing collapses. In Update 0.7.0, Volodymyr\'s weapon attachments are approximately 35% cheaper, he sells Advanced and Expert Repair Kits as well as an Expert Repair Kit Blueprint, and his contracts focus on high-quality weapons and dangerous mutants. Across the wider economy, Update 0.7.0 introduced a +5% sell value bonus per Trader Rank and allowed purchasing a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Traders maintain strict specializations: Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, Vesna buys Common items at 75% and Clothing at 60%, and Grigory pays premium rates for attachments while buying Common items at 50% (no longer buying Food, Medical, or Crafting items). Items like Rope, Household Batteries, Incandescent Bulbs, Car Batteries, and Copper Wiring currently lack crafting recipes and should be sold as pure barter salvage, while Spark Plugs fetch premium rubles. For weapon servicing details, see our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or [Tactical Database](/guide/scavland-tactical-database-weapons-loot/).',
     steps: [
       '01 · Trader Volodymyr Location & Zero-Reputation Trade: Head southwest from central Zalesye toward the Crossroads annex near the Neutral Chapel perimeter to locate Trader Volodymyr. Volodymyr requires zero faction reputation rank to purchase his inventory, making him the premier emergency arms dealer for disgraced or unaligned scavengers.',
       '02 · Exploit Volodymyr\'s Update 0.7.0 Inventory & Contracts: In Update 0.7.0, Volodymyr\'s weapon attachments were discounted by approximately 35%, and he now sells Advanced and Expert Repair Kits alongside an Expert Repair Kit Blueprint. Additionally, Volodymyr\'s contracts focus on high-quality weapons and dangerous mutants, offering lucrative early ruble payouts.',
-      '03 · Match Salvage to Merchant Category Specializations: Never dump all loot into one trader. Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Clothing at 60% and Common goods at 30%; and Grigory buys Common items at 50% while paying premium rates for weapon attachments (he no longer buys food, medical, or crafting supplies).',
-      '04 · Compound Profits with Trader Rank Bonuses (+5% per Rank): Update 0.7.0 awards an additional 5% sell value per Trader Rank. Completing daily contracts for settlement merchants permanently compounds the rubles earned on every sold firearm, attachment, and scavenged electronic part.',
-      '05 · Purchase 50,000 Ruble Stash Expansions: In the main village, visit a Trader and purchase a Stash expansion for 50,000 Rubles to unlock an additional Stash tab. Take advantage of newly added camp stashes and workbenches across all four main camps (Arcadia, Mechanist Base, Mudlark Camp, Microrayion), noting that outpost stashes feature only one tab and maintain independent inventories from the village.'
+      '03 · Purchase 50,000 Ruble Stash Expansions in Main Village: In the main village, visit a Trader and purchase a Stash expansion for 50,000 Rubles to unlock an additional Stash tab (Update 0.7.0). Note that newly added camp stashes and workbenches across all four main camps (Arcadia, Mechanist Base, Mudlark Camp, Microrayion) feature only one tab and maintain independent inventories from the village; only the main village stash can be upgraded.',
+      '04 · Loot Triage — Barter Salvage vs Workbench Materials: In Early Access, workbench crafting recipes are strictly mechanical and medical (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, Ballistic Fiber). Items such as Rope, Household Batteries, Incandescent Bulbs, Car Batteries, and Copper Wiring have zero crafting use and represent pure barter weight to sell for rubles. Spark Plugs are the exception, fetching high prices from Anatoly and Zhivan.',
+      '05 · Match Salvage to Merchant Category Specializations: Never dump all loot into one trader. Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Common items at 75% and Clothing at 60%; Nadja pays 90% for Common and 80% for Crafting; and Grigory buys Common items at 50% while paying premium rates for weapon attachments (he no longer buys food, medical, or crafting supplies).',
+      '06 · Compound Profits with Trader Rank Bonuses (+5% per Rank): Update 0.7.0 awards an additional 5% sell value per Trader Rank. Completing daily contracts for settlement merchants permanently compounds the rubles earned on every sold firearm, attachment, and scavenged electronic part.'
     ],
     facts: [
       ['Trader Volodymyr Location', 'Crossroads annex outside central Zalesye; trades with zero faction reputation requirements'],
       ['Volodymyr 0.7.0 Adjustments', 'Weapon attachments ~35% cheaper; sells Advanced/Expert Repair Kits & Blueprint; jobs focus on high-quality weapons & mutants'],
       ['Trader Rank Sell Bonus', '+5% additional sell value per Trader Rank (Update 0.7.0)'],
       ['Stash Expansion Cost', '50,000 Rubles from a Trader in the main village for an extra Stash tab (Update 0.7.0)'],
-      ['Merchant Specialization Rates', 'Zhivan pays 140% for Common items; Vesna pays 30% Common / 60% Clothing; Grigory buys Common at 50% and attachments at premium; Bogdan pays 40% more for Mutant Parts'],
+      ['Loot Triage Salvage', 'Rope, Batteries, Bulbs, and Copper Wire have no crafting recipes and should be bartered; Spark Plugs fetch top value'],
+      ['Merchant Specialization Rates', 'Zhivan pays 140% for Common items; Vesna pays 75% Common / 60% Clothing; Grigory buys Common at 50% and attachments at premium; Bogdan pays 40% more for Mutant Parts'],
       ['Camp Stash Independence', 'Main camp stashes have 1 tab and do not share items with the village (Update 0.7.0)'],
       ['Evidence Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
       ['Where is Trader Volodymyr located and what does he sell?', 'Trader Volodymyr is located at the Crossroads annex outside the central Zalesye settlement. He trades with zero reputation requirements, meaning even scavengers marked hostile by major factions can trade with him. In Update 0.7.0, his weapon attachments are roughly 35% cheaper, he sells Advanced and Expert Repair Kits plus an Expert Blueprint, and his contracts target high-quality weapons and dangerous mutants.'],
+      ['Who sells the 50,000 Ruble Stash Expansion in Scavland?', 'The 50,000 Ruble Stash expansion can be purchased from a Trader in the main village to unlock an additional Stash tab (Update 0.7.0). Stashes in outlying camps (Arcadia, Mechanist Base, Mudlark Camp, Microrayion) currently have only one tab and do not share items with the village.'],
+      ['Which looted items have no crafting recipes and should be sold?', 'In Early Access, items like Rope, Household Batteries, Incandescent Bulbs, Car Batteries, and Copper Wiring have zero workbench crafting recipes and should be sold to merchants as pure barter salvage. Spark Plugs also have no crafting recipes but fetch premium prices from Anatoly and Zhivan.'],
       ['How does Trader Rank affect item sell prices in Update 0.7.0?', 'In Update 0.7.0, traders pay an additional 5% sell value per Trader Rank. Increasing your standing with faction merchants directly compounds the rubles you receive for every sold item.'],
-      ['How do you unlock extra stash tabs in Scavland?', 'Purchase a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. While stashes were also added to Arcadia, Mechanist Base, Mudlark Camp, and Microrayion in Update 0.7.0, outpost stashes currently feature one tab and do not share items with the village.'],
-      ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Clothing at 60% and Common items at 30%; Grigory pays top prices for Weapon Attachments and 50% for Common items (he no longer buys food or medical supplies); and Anatoly pays top prices for electrical salvage.']
+      ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Common items at 75% and Clothing at 60%; Grigory pays top prices for Weapon Attachments and 50% for Common items (he no longer buys food or medical supplies); and Nadja pays 90% for Common and 80% for Crafting items.']
     ],
     related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-safehouses-and-fast-travel-guide', 'scavland-weapon-repair-and-durability', 'scavland-factions-and-reputation'],
-    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide']
+    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide', 'scavland loot triage']
   },
   {
     slug: 'scavland-sleep-and-world-reset-guide',
