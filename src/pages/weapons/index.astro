@@ -14,9 +14,9 @@ const categories = [
 ---
 
 <Layout 
-  title="Scavland Weapons Database — Ballistics, Attachments & Stats" 
-  description="Complete Scavland weapons database: verified firearm damage, RPM, 300+ attachments, ammo penetration tiers, ballistics and repair recipes for v0.5.169." 
-  keywords="Scavland weapons, Scavland attachments, firearms database, weapon stats, gun modification, ammo calibers, weapon repair, Scavland wiki" 
+  title="Scavland Weapons Database — Ballistics, Attachments & Stats (Update 0.7.0)" 
+  description="Complete Scavland weapons database: verified firearm damage, RPM, 300+ attachments, ammo penetration tiers, sidearm BIS tiering, and Update 0.7.0 durability & repair balance." 
+  keywords="Scavland weapons, Scavland weapon, Scavland all weapons, Scavland attachments, firearms database, weapon stats, gun modification, ammo calibers, weapon repair, sidearm BIS, Scavland wiki" 
   canonical="/weapons/"
 >
   <Fragment slot="schema">
@@ -41,7 +41,7 @@ const categories = [
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
         <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;">
           <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Build v0.5 Verified</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Update 0.7.0 Verified</span>
         </div>
         <a 
           href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent('https://scavland.wiki/weapons/')}&media=${encodeURIComponent('https://scavland.wiki/images/og-scavland.jpg')}&description=${encodeURIComponent('Scavland Complete Weapons & Attachments Tactical Database (Zalesye Arsenal)')}`}
@@ -55,7 +55,7 @@ const categories = [
       </div>
       <h1 class="page-title">Scavland Weapons &amp; Ballistics Database</h1>
       <p class="lede">Comprehensive field catalog of verified firearms, 300+ modular attachment configurations, ballistic penetration tiers, recoil profiles, and weapon maintenance in Zalesye.</p>
-      <span class="evidence">Evidence: Official Steam store page & announcements</span>
+      <span class="evidence">Evidence: Official Steam store page &amp; announcements · Update 0.7.0</span>
     </header>
 
     <div class="article-layout">
@@ -74,11 +74,12 @@ const categories = [
 
         <!-- Quick Summary Box -->
         <div class="quick-answer" style="margin-bottom:32px;">
-          <strong style="color:var(--acid);font-size:1.05rem;">Zalesye Ballistic &amp; Gunplay Core Rules</strong>
+          <strong style="color:var(--acid);font-size:1.05rem;">Zalesye Ballistic &amp; Gunplay Core Rules (Update 0.7.0 Verified)</strong>
           <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
-            <li><strong>Caliber Dictates Armor Penetration:</strong> Bullet caliber and ammo sub-type determine penetration through enemy armor classes (Tier 1–5). A high-damage shotgun shell will bounce off heavy ceramic armor, while 9x39mm SP-6 melts through it.</li>
-            <li><strong>300+ Attachment Customization:</strong> Every firearm features up to 6 modular modification points. Adding optics, suppressors, foregrips, and extended drums directly affects Aim-Down-Sight (ADS) speed, sound signature, and horizontal recoil drift.</li>
-            <li><strong>Durability, Fouling &amp; Malfunctions:</strong> Weapons operating under 40% condition suffer catastrophic cartridge stovepipes and feed failures mid-firefight. Always carry <strong>Gun Cleaning Oil</strong> into deep bunker runs.</li>
+            <li><strong>Caliber Dictates Armor Penetration:</strong> Bullet caliber and ammo sub-type determine penetration through enemy armor classes (Tier 1–5). In Update 0.7.0, shotguns apply a maximum of one bleed effect per shot instead of per pellet.</li>
+            <li><strong>300+ Attachment Customization:</strong> Every firearm features modular modification points (stocks, magazines, optics, muzzle devices, grips). Update 0.7.0 added a 30-round magazine for the Thread Cutter and expanded stock compatibility across Bahadir, MK-47, 74u, and Borealis families.</li>
+            <li><strong>Durability, Jams &amp; 30% Explosion Threshold (Update 0.7.0):</strong> In Update 0.7.0, weapon durability was significantly increased across almost the entire arsenal, with many rifles lasting twice as many shots per durability point. Hard jamming at 10% durability was reduced from 45% to 33%, and catastrophic weapon explosions only occur below 30% durability (previously 50%).</li>
+            <li><strong>Secondary Weapon (Sidearm) BIS Selection:</strong> To preserve primary rifle durability against minor mutants, carry an efficient sidearm (PM Nikolay PB for silence, Leon 1895 Short for +50% stopping power, or Bahadir 918 Short for 15 shots/point longevity).</li>
           </ul>
         </div>
 
@@ -295,34 +296,89 @@ const categories = [
         </div>
 
         <!-- Section 4: Durability & Jams -->
-        <h2 id="durability">Durability, Jam Probability &amp; Field Repairs</h2>
-        <p>Neglecting gun maintenance in damp radioactive swamps leads to sudden, lethal stoppages:</p>
+        <h2 id="durability">Durability, Jam Probability &amp; Field Repairs (Update 0.7.0)</h2>
+        <p>In Update 0.7.0, weapon durability was significantly increased across almost the entire arsenal. Maintaining your firearms remains crucial, but gun upkeep is far less punishing:</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:14px;margin:20px 0;">
           <div style="padding:14px;background:#121a16;border:1px solid rgba(185,232,108,0.3);border-radius:6px;">
-            <div style="font-size:0.75rem;color:var(--acid);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">100% - 70% Condition</div>
+            <div style="font-size:0.75rem;color:var(--acid);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">100% - 80% Condition</div>
             <h4 style="margin:4px 0 8px;color:#fff;">Pristine Condition</h4>
-            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">0% jam chance. Maximum bullet velocity and pinpoint iron sight accuracy.</p>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">0% jam chance. Maximum bullet velocity and pinpoint accuracy. Glue and Gun Lube can be used from 80% durability (previously 85%) for routine maintenance.</p>
+          </div>
+          <div style="padding:14px;background:#121a16;border:1px solid rgba(136,181,255,0.3);border-radius:6px;">
+            <div style="font-size:0.75rem;color:#88b5ff;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">79% - 70% Condition</div>
+            <h4 style="margin:4px 0 8px;color:#fff;">Field Serviceable</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Cleaning Rods and Field Repair Kits can be used from 70% durability (previously 75%) without needing a workbench station.</p>
           </div>
           <div style="padding:14px;background:#121a16;border:1px solid rgba(227,145,85,0.3);border-radius:6px;">
-            <div style="font-size:0.75rem;color:var(--orange);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">69% - 40% Condition</div>
-            <h4 style="margin:4px 0 8px;color:#fff;">Fouled Chamber</h4>
-            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">2% – 8% jam probability during sustained automatic fire. Slight accuracy degradation.</p>
+            <div style="font-size:0.75rem;color:var(--orange);font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">69% - 30% Condition</div>
+            <h4 style="margin:4px 0 8px;color:#fff;">Fouled Chamber &amp; Jams</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Weapon jamming begins later in Update 0.7.0. At 10% durability, hard-jam chance has been reduced from 45% down to 33%.</p>
           </div>
           <div style="padding:14px;background:#121a16;border:1px solid rgba(255,80,80,0.4);border-radius:6px;">
-            <div style="font-size:0.75rem;color:#ff6b6b;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">Under 40% Condition</div>
-            <h4 style="margin:4px 0 8px;color:#fff;">Catastrophic Wear</h4>
-            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Severe misfeeds, stovepiping, and barrel bulges. Firing under 25% condition risks receiver destruction.</p>
+            <div style="font-size:0.75rem;color:#ff6b6b;font-family:'IBM Plex Mono',monospace;text-transform:uppercase;">Below 30% Condition</div>
+            <h4 style="margin:4px 0 8px;color:#fff;">Catastrophic Explosion Risk</h4>
+            <p style="margin:0;font-size:0.85rem;color:var(--muted);line-height:1.5;">Guns can now explode below 30% durability instead of 50%. Gun and Armor Repair Kits can now be used regardless of equipment damage condition.</p>
           </div>
         </div>
 
-        <p><strong>Field Maintenance Checklist:</strong></p>
+        <p><strong>Field Maintenance Checklist &amp; Repair Kit Loot Tiers:</strong></p>
         <ul style="color:var(--ink);line-height:1.7;">
-          <li><strong>Gun Cleaning Oil (Field consumable):</strong> Restores +15% durability instantly without needing a workbench. Always keep 1 bottle in your rig.</li>
-          <li><strong>Safehouse Weapon Workbench:</strong> Allows deep ultrasonic cleaning and component replacement using <em>Weapon Scrap Parts</em> and <em>Spring Assemblies</em> to restore guns back to 100%.</li>
+          <li><strong>Universal Repair Kits (Update 0.7.0):</strong> Gun and Armor Repair Kits now function at any durability percentage. World loot tiers: Tattered/Scrap (Rare), Scavenger/Basic (Very Rare), Advanced/Expert/Medium/Heavy (Ultra Rare).</li>
+          <li><strong>Maintenance Consumables:</strong> Gun Cleaning Rods require Gun Lube. Gun Field Tools no longer require Gun Lube (Update 0.6.0).</li>
+          <li><strong>Safehouse Workbenches:</strong> Added to all four forward outposts (Arcadia, Mechanist Base, Mudlark Camp, Microrayion) in Update 0.7.0 alongside central Zalesye.</li>
         </ul>
+
+        <!-- Section 5: Secondary Weapon (Sidearm) BIS Selection -->
+        <h2 id="sidearms">Secondary Weapon (Sidearm) BIS Tactical Comparison</h2>
+        <p>Carrying a dedicated secondary sidearm is vital to preserve high-caliber primary ammunition and rifle durability during routine exploration. Below are verified sidearm choices tailored for specific tactical roles:</p>
+
+        <div style="overflow-x:auto;margin:20px 0 35px;">
+          <table class="facts" style="width:100%;border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--line);background:rgba(255,255,255,0.03);">
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">SIDEARM</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">CALIBER</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">TACTICAL ROLE</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">SHOTS / DURABILITY POINT</th>
+                <th style="padding:10px;text-align:left;color:var(--acid);font:.72rem 'IBM Plex Mono';">UPDATE 0.7.0 ADVANTAGE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                <td style="font-weight:700;color:var(--acid);font-family:'IBM Plex Mono',monospace;">PM Nikolay PB</td>
+                <td style="font-size:0.85rem;color:#ccc;">9x18mm</td>
+                <td style="font-size:0.85rem;color:#fff;">Stealth Infiltration (BIS)</td>
+                <td style="font-size:0.85rem;color:var(--acid);">8 shots/pt</td>
+                <td style="font-size:0.82rem;color:var(--muted);line-height:1.4;">Integrated suppressor eliminates audio bloom; accuracy boosted to 35, damage bonus +10%.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                <td style="font-weight:700;color:var(--orange);font-family:'IBM Plex Mono',monospace;">Leon 1895 Short</td>
+                <td style="font-size:0.85rem;color:#ccc;">7.62x38mmR</td>
+                <td style="font-size:0.85rem;color:#fff;">Stopping Power &amp; Mutants (BIS)</td>
+                <td style="font-size:0.85rem;color:var(--acid);">8 shots/pt</td>
+                <td style="font-size:0.82rem;color:var(--muted);line-height:1.4;">+50% projectile damage bonus, fire rate boosted to 75; lethal against charging beasts.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                <td style="font-weight:700;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Bahadir 918 Short</td>
+                <td style="font-size:0.85rem;color:#ccc;">9x18mm</td>
+                <td style="font-size:0.85rem;color:#fff;">Raid Longevity &amp; Economy (BIS)</td>
+                <td style="font-size:0.85rem;color:var(--acid);">15 shots/pt</td>
+                <td style="font-size:0.82rem;color:var(--muted);line-height:1.4;">High 15 shots per point durability; accuracy 37 and range 17 for reliable budget clears.</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.06);">
+                <td style="font-weight:700;color:#bbb;font-family:'IBM Plex Mono',monospace;">Bortovka Tinker</td>
+                <td style="font-size:0.85rem;color:#ccc;">9x18mm</td>
+                <td style="font-size:0.85rem;color:#fff;">Emergency Panic Burst</td>
+                <td style="font-size:0.85rem;color:var(--acid);">6.67 shots/pt</td>
+                <td style="font-size:0.82rem;color:var(--muted);line-height:1.4;">Machine pistol burst capability; effective for fast indoor room clearance when primary jams.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="next">Related Arsenal &amp; Progression Guides</h2>
         <div class="related-grid">
+          <a href="/guide/scavland-weapons-and-attachments/"><strong>Weapons &amp; Attachments Guide</strong><br/>Comprehensive customization, durability balance and mod benches</a>
           <a href="/guide/scavland-weapon-repair-and-durability/"><strong>Weapon Repair &amp; Maintenance</strong><br/>Step-by-step cleaning recipes and jam clearance mechanics</a>
           <a href="/factions/"><strong>10 Factions &amp; Traders</strong><br/>Faction weapon shops, reputation tiers and exclusive guns</a>
           <a href="/guide/scavland-beginner-guide/"><strong>Beginner Survival Guide</strong><br/>Essential inventory management, first safehouse and looting</a>
@@ -335,6 +391,7 @@ const categories = [
         <a href="#ballistics">Ammo Ballistics Matrix</a>
         <a href="#attachments">300+ Attachments</a>
         <a href="#durability">Durability &amp; Jams</a>
+        <a href="#sidearms">Sidearm BIS Roster</a>
         <a href="#next">Related Guides</a>
       </aside>
     </div>

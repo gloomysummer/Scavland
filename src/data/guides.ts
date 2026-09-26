@@ -287,7 +287,44 @@ export const guides: Guide[] = [
     related: ['scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-explorer-mode-and-campfire-healing'],
     keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death']
   },
-  { slug:'scavland-weapons-and-attachments', shortTitle:'Weapons & attachments', title:'Scavland weapons and attachments guide', description:'How to think about Scavland weapons, gear and attachment choices without pretending unverified stats are final.', category:'Gear', image:'/images/cards/card_2_weapons_gear.webp', imageAlt:'Weapon and equipment management in Scavland', evidence:'Official Steam announcements', updated:'2026-08-29', answer:'Build a weapon around the job you are taking, then spend scarce attachment resources on control and reliability before chasing a theoretical best setup. Official material confirms 25+ weapons, 300+ attachments, and future dedicated weapon modding and ammo stack unloading systems.', steps:['Choose a reliable primary for the location and threat mix.','Keep a low-cost fallback weapon for runs where loot is uncertain.','Change one attachment at a time so its practical effect is clear.','Unload unused magazine ammunition before selling surplus weapons to traders.'], facts:[['Official scope','The Steam listing advertises 25+ weapons and 300+ attachments.'],['Modding roadmap','The developer confirmed dedicated weapon modding and repair stations are actively in development.']], faq:[['What is the best weapon?','There is no single best weapon; ergonomics, ammunition availability and recoil control dictate field effectiveness.'],['How do I unload ammo?','Developers have confirmed stack-aware vertical slot ammo unloading mechanics for ease of inventory management.']], related:['scavland-beginner-guide','scavland-loot-and-scavenging','scavland-crafting-and-trading'], keywords:['scavland weapons guide','scavland attachments','scavland weapon modding'] },
+  {
+    slug: 'scavland-weapons-and-attachments',
+    shortTitle: 'Weapons & attachments',
+    title: 'Scavland Weapons & Attachments Guide: 25+ Firearms, Durability Pass & Mod Bench (Update 0.7.0)',
+    description: 'Complete Scavland weapons and attachments guide: 25+ firearms, 300+ attachment components, Update 0.7.0 durability pass, jam clearance, and weapon bench modding.',
+    category: 'Gear',
+    image: '/images/screenshots/steam_ss_10.webp',
+    imageAlt: 'Scavland weapon modification and attachment station with stocks, optics, and magazine assemblies',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-09-26',
+    answer: 'Firearms in Scavland require deliberate tactical customization and proactive maintenance to survive lethal encounters in Zalesye. Official releases confirm an arsenal of over 25 weapons and hundreds of weapon parts and attachments. In Update 0.7.0, developers delivered a sweeping combat and durability overhaul: rifle durability per point doubled across many weapons, hard jams at 10% condition decreased from 45% to 33%, and catastrophic weapon explosions only trigger when fired below 30% durability (improved from 50%). Shotguns were balanced to apply a maximum of one bleed effect per shot, while Repair Kits can now restore equipment regardless of current condition. For weapon stats, calibers, and ballistics tables, explore our full [Interactive Weapons Database](/weapons/) and [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/).',
+    steps: [
+      '01 · Master the 25+ Arsenal & Caliber Roles: Scavland features over 25 verified firearms spanning Assault Rifles, Battle Rifles, SMGs, Shotguns, Snipers/DMRs, and Sidearms. Match your primary to the target threat profile: high-penetration 5.45x39mm or 7.62x39mm for armored scavengers, and buckshot for mutated wildlife. Inspect verified stats in our [Weapons Database](/weapons/).',
+      '02 · Modular Attachment Workbench Customization: Safehouse workbenches allow players to swap stocks, magazines, optics, muzzle devices, and grips. Update 0.7.0 expanded stock compatibility between Bahadir, MK-47, 74u, and Borealis families, while adding a 30-round magazine for the Thread Cutter. Foregrips provide dedicated ergonomics and handling improvements.',
+      '03 · Navigate Update 0.7.0 Durability & Jam Thresholds: In Update 0.7.0, weapon durability was significantly increased across almost the entire arsenal. Rifles now last approximately twice as many shots per durability point, hard-jam chance at 10% durability is reduced to 33%, and catastrophic explosions only occur below 30% durability (down from 50%).',
+      '04 · Field Maintenance & Universal Repair Kits: Perform preventative care before weapons enter danger thresholds: Glue and Gun Lube can be used from 80% durability (previously 85%), while Cleaning Rods and Field Repair Kits can be used from 70% durability (previously 75%). Gun and Armor Repair Kits now restore gear regardless of how damaged it is.',
+      '05 · Secondary Weapon (Sidearm) BIS Selection: To preserve primary rifle durability and scarce ammunition against basic rats, carry a dependable sidearm. The suppressed PM Nikolay PB offers quiet infiltration, the hard-hitting Leon 1895 Short delivers heavy stopping power (+50% projectile damage in Update 0.7.0 / 0.6.2), and the Bahadir 918 Short provides 15 shots per durability point.'
+    ],
+    facts: [
+      ['Verified Arsenal Scope', 'Scavland features 25+ weapons and hundreds of weapon parts and attachments (Update 0.7.0)'],
+      ['Weapon Durability Pass', 'Rifles and larger weapons last roughly twice as many shots per durability point since Update 0.7.0'],
+      ['Explosion Threshold', 'Firearms only risk exploding when fired below 30% durability (improved from 50% in Update 0.7.0)'],
+      ['Jam Probability Reduction', 'At 10% durability, hard jam chance was reduced from 45% to 33% (Update 0.7.0)'],
+      ['Maintenance Thresholds', 'Glue & Gun Lube usable from 80% durability; Cleaning Rods & Field Kits usable from 70% durability'],
+      ['Universal Repair Kits', 'Gun & Armor Repair Kits can be used regardless of equipment damage condition (Update 0.7.0)'],
+      ['Shotgun Bleed Limit', 'Shotguns apply a maximum of one bleed effect per shot instead of per pellet (Update 0.7.0)'],
+      ['Evidence Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
+    ],
+    faq: [
+      ['What changed with weapon durability and jamming in Update 0.7.0?', 'Weapon durability was significantly increased across almost the entire arsenal, with many rifles lasting twice as many shots per point. Hard jamming at 10% durability dropped from 45% to 33%, catastrophic explosions now only occur below 30% durability (previously 50%), and Repair Kits work at any wear level.'],
+      ['What is the best secondary weapon (sidearm) in Scavland?', 'For stealth, the suppressed PM Nikolay PB provides silent takedowns. For raw stopping power, the Leon 1895 Short deals +50% projectile damage with a 75 fire rate. For dependable longevity, the Bahadir 918 Short offers 15 shots per durability point with standard 9x18mm rounds.'],
+      ['At what durability percentage can weapons explode?', 'In Update 0.7.0, the catastrophic failure threshold was lowered to 30% durability (previously 50%). Firing a weapon above 30% durability will never trigger a catastrophic explosion.'],
+      ['How do maintenance consumables work in Update 0.7.0?', 'Glue and Gun Lube can now be applied once durability drops to 80% (previously 85%). Cleaning Rods and Field Repair Kits can be used from 70% durability (previously 75%). Full Repair Kits have no minimum percentage requirement.'],
+      ['Do shotgun pellets stack multiple bleed effects?', 'No. Update 0.7.0 capped shotguns to apply a maximum of one bleed effect per shot, preventing excessive bleed stacking from individual pellets.']
+    ],
+    related: ['scavland-weapon-repair-and-durability', 'scavland-starter-loadouts-and-budget-builds', 'scavland-tactical-database-weapons-loot', 'scavland-beginner-guide'],
+    keywords: ['scavland weapons', 'scavland weapon', 'scavland all weapons', 'scavland attachments', 'scavland weapons guide', 'scavland weapon repair', 'scavland gun durability', 'scavland secondary weapon', 'scavland weapon mods', 'scavland gun jam']
+  },
   {
     slug: 'scavland-loot-and-scavenging',
     shortTitle: 'Loot & Scavenging',
@@ -366,40 +403,41 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-map-and-locations',
     shortTitle: 'Map & Locations',
-    title: 'Scavland Map & Locations Guide: Main Camps, Stash Hubs, Bunkers & Safe Routes (Update 0.7.0)',
-    description: 'Complete Scavland world map guide: Arcadia, Mechanist Base, Mudlark Camp, Microrayion stashes & workbenches, bunker 3-hour resets, mattress sleep spots, and safe exploration routes.',
+    title: 'Scavland Full Map & Locations Guide: Main Camps, Bunker Coordinates & Stash Hubs (Update 0.7.0)',
+    description: 'Complete Scavland full map & locations guide: 3x expanded Zalesye world, Arcadia, Mechanist Base, Mudlark Camp, Microrayion stashes, Bunker B-4 landmarks, and safe routes.',
     category: 'Exploration',
     image: '/images/screenshots/ss_08_overworld_map.webp',
     imageAlt: 'Scavland overworld tactical map with location markers, outposts, and hazard boundaries',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-20',
-    answer: 'Navigating the wasteland in Scavland centers around the central hub of Zalesye and the four major regional outposts: Arcadia, Mechanist Base, Mudlark Camp, and Microrayion. In Update 0.7.0, crafting stations and player stashes were added to all four main camps, giving scavengers localized field bases across the map; non-village camp stashes feature one storage tab and maintain independent inventories from the main village stash. Resting across the map now strictly requires beds with mattresses to skip time and restore vitality, while campfires provide doubled passive health regeneration. Underground Subterranean Bunkers operate on a 3-hour reset cycle, while world borders feature sandbag barriers that maintain visual line-of-sight for NPCs and spiked barricades blocking hazardous choke points. For tactical gear and route planning, consult our [Beginner Guide](/guide/scavland-beginner-guide/) or [Bunker Loot Guide](/guide/scavland-red-keycard-and-bunker-loot-recovery/).',
+    updated: '2026-09-26',
+    answer: 'Navigating the wasteland in Scavland centers around the central hub of Zalesye and the four major regional outposts: Arcadia, Mechanist Base, Mudlark Camp, and Microrayion. Since Early Access, the game world expanded roughly 3x in scale, introducing interconnected roads, faction territories, and secret underground complexes. In Update 0.7.0, crafting stations and player stashes were added to all four main camps, giving scavengers localized field bases across the map; non-village camp stashes feature one storage tab and maintain independent inventories from the main village stash. Subterranean Bunkers (such as Sector B-4 located northwest of Zalesye past the railway embankment) operate on a 3-hour loot reset cycle and require a Red Keycard for entry. Resting across the map strictly requires beds with mattresses to skip time and restore vitality, while campfires provide doubled passive health regeneration. For comprehensive POI layout, inspect our [Tactical Map Hub](/maps/) and [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
-      '01 · Outpost Stashes & Workbenches (Update 0.7.0): Four primary outposts across Zalesye—Arcadia, Mechanist Base, Mudlark Camp, and Microrayion—now feature dedicated Crafting Stations and Player Stashes. These camp stashes have one tab and do not share items with the village, providing secure local drop points for heavy salvage.',
-      '02 · Main Village Hub & Stash Expansions: The central neutral settlement of Zalesye remains your primary operations base. While outpost stashes are fixed at one tab, the main village stash can be upgraded by purchasing stash expansions from a Trader for 50,000 Rubles per additional tab.',
-      '03 · Rest Restrictions & Campfire Healing: In Update 0.7.0, only beds with mattresses can be used for sleeping to pass time and restore health. When operating far from mattress beds, utilize campfires scattered across outposts, which offer doubled healing speed.',
-      '04 · Subterranean Bunkers & 3-Hour Resets: Underground military bunkers provide top-tier weapon crates and electronic components. Bunkers feature an internal 3-hour reset interval (180 in-game minutes) for loot containers, allowing efficient raid rotations between surface camps and underground sectors.',
-      '05 · Environmental Borders & Choke Points: Update 0.7.0 integrated spiked barricades across contested boundaries, while sandbag fortifications now function as physical barriers that block movement but preserve enemy line-of-sight. Sector sweeps also rebalanced the Burned Village to cap at a maximum of one Big Rat, and repositioned Swamp crossing Sucker spawns with 30% slower spit projectile velocity.',
-      '06 · Overworld Journal Map Navigation: Open your Journal Map to track your real-time position arrow, sector boundaries, and active quest markers. Coordinate outward supply runs toward the northwest wetland depot (The Mire) and return before 21:00 dusk to avoid darkness visibility penalties.'
+      '01 · 3x World Expansion & Tactical Map Overview: Since Early Access release, Scavland world map expanded roughly 3x in size across Zalesye, introducing paved road networks, faction-controlled outposts, and hazardous border zones. Use our [Tactical Map Hub](/maps/) alongside the in-game Journal Map [M] to track active player coordinates and sector borders.',
+      '02 · Outpost Stashes & Crafting Stations (Update 0.7.0): Four primary regional outposts across Zalesye—Arcadia, Mechanist Base, Mudlark Camp, and Microrayion—feature dedicated Crafting Tables and Player Stashes. These camp lockers have one tab and do not share items with the village, providing secure local drop points for heavy salvage.',
+      '03 · Main Village Operations Hub & Stash Expansions: The central neutral settlement of Zalesye remains your primary trading and operations base. While outpost lockers are fixed at one tab, the main village stash can be upgraded by purchasing stash expansions from Traders for 50,000 Rubles per additional tab.',
+      '04 · Locating Subterranean Bunkers (Bunker B-4 Landmarks): Addressing player confusion over missing bunker entrances, underground military bunkers are reached by heading northwest from central Zalesye beyond the railway berm into Sector B-4. Look for low-profile reinforced concrete blast structures, hazard-striped steel bulkheads, and red radiation warning signs. Unlocking the inner vault requires a Red Keycard.',
+      '05 · Bunker 3-Hour Loot Container Resets: Subterranean bunkers feature a dedicated 3-hour internal loot reset timer (180 in-game minutes) for military weapon crates and electronic components. Plan an efficient raid rotation between surface contracts and underground bunker sweeps.',
+      '06 · Mattress Sleep Rules, Campfires & Border Safety: In Update 0.7.0, only beds with mattresses can be used for sleeping to pass time and restore health. In the field away from mattress beds, lit campfires grant doubled passive health regeneration. Be aware that world border sandbag walls block movement while preserving enemy visual line-of-sight.'
     ],
     facts: [
+      ['World Scale', 'Scavland world map is roughly 3x larger with new settlements, roads, and faction territories'],
       ['Outpost Crafting & Stashes', 'Update 0.7.0 added crafting stations and stashes to Arcadia, Mechanist Base, Mudlark Camp, and Microrayion (independent inventory, 1 tab)'],
+      ['Bunker B-4 Navigation', 'Underground military bunkers feature reinforced blast doors situated northwest of Zalesye beyond the railway berm'],
+      ['Bunker Reset Timer', 'Subterranean bunkers reset loot containers every 3 in-game hours'],
       ['Village Stash Expansion', 'Main village stash can be expanded for 50,000 Rubles from Traders (Update 0.7.0)'],
       ['Mattress Sleep Requirement', 'Only beds with mattresses can be used for sleeping since Update 0.7.0'],
       ['Campfire Healing Buff', 'Update 0.7.0 doubled health regeneration rate at lit campfires'],
-      ['Bunker Reset Timer', 'Subterranean bunkers reset loot containers every 3 in-game hours'],
-      ['World Border Fortifications', 'Spiked barricades and see-through sandbag barriers added across world sectors (Update 0.7.0)'],
       ['Evidence Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
-      ['Do outpost stashes share items with the main village stash?', 'No. Stashes at Arcadia, Mechanist Base, Mudlark Camp, and Microrayion have one storage tab and keep independent local inventories that do not sync with the village stash.'],
-      ['Where can I sleep to restore health and pass time on the map?', 'Since Update 0.7.0, only beds with mattresses can be used for sleeping. If you cannot reach a mattress bed, rest beside a lit campfire to benefit from doubled passive health regeneration.'],
-      ['How often do underground bunkers reset their loot?', 'Subterranean bunkers reset loot containers every 3 in-game hours (180 minutes), allowing players to plan repeatable farming runs between surface contracts.'],
-      ['How do I expand my storage capacity?', 'Visit a Trader in the main village and purchase a Stash expansion for 50,000 Rubles to unlock an additional Stash tab.'],
-      ['What world changes were made to creature spawns in Update 0.7.0?', 'The Burned Village is now capped at a maximum of one Big Rat, Boss Spiker size increased by 1.5x, and Swamp crossing Sucker spawns were repositioned with spit projectile speed reduced by approximately 30%.']
+      ['Where is the underground bunker entrance located on the map?', 'Bunker entrances (such as Sector B-4) are situated northwest of central Zalesye beyond the northern railway embankment. Look for low-profile reinforced concrete structures with yellow-and-black hazard striping and heavy blast doors. A Red Keycard is required to unlock the inner vault.'],
+      ['Do outpost stashes share items with the main village stash?', 'No. Stashes at Arcadia, Mechanist Base, Mudlark Camp, and Microrayion feature one storage tab and maintain independent local inventories that do not sync with the central village stash.'],
+      ['How often do underground bunkers reset their loot containers?', 'Subterranean bunkers operate on a 3-hour physical reset cycle (180 in-game minutes) once the player exits the zone, allowing repeatable farming runs between surface contracts.'],
+      ['How do I expand my permanent stash capacity?', 'Visit a Trader in the central village and purchase a Stash expansion for 50,000 Rubles to unlock an additional Stash tab. Outpost camp stashes cannot currently be expanded.'],
+      ['Where can I sleep on the map to pass time and restore health?', 'Since Update 0.7.0, only beds with mattresses can be used for sleeping. When away from mattress beds, resting beside a lit campfire grants doubled passive health regeneration.']
     ],
     related: ['scavland-beginner-guide', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-crafting-and-trading', 'scavland-loot-and-scavenging', 'scavland-quests-and-contracts'],
-    keywords: ['scavland map', 'scavland map game', 'scavland locations', 'scavland outpost stashes', 'scavland arcadia', 'scavland mechanist base', 'scavland mudlark camp', 'scavland microrayion', 'scavland bunker reset', 'scavland safehouse beds']
+    keywords: ['scavland map', 'scavland full map', 'scavland map game', 'scavland game map', 'scavland locations', 'scavland bunker location', 'scavland bunker entrance', 'scavland arcadia', 'scavland mechanist base', 'scavland mudlark camp', 'scavland microrayion', 'scavland interactive map', 'scavland map guide']
   },
   {
     slug: 'scavland-crafting-and-trading',
