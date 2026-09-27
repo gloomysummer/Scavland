@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import GuideCard from '../components/GuideCard.astro';
 import Countdown from '../components/Countdown.astro';
+import AdsterraArticleBanner from '../components/AdsterraArticleBanner.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
@@ -306,6 +307,8 @@ const featured = guides.slice(0, 6);
       </ul>
     </div>
   </section>
+
+  <AdsterraArticleBanner label="Sponsored Field Intel" />
 
   <section class="section" id="codes">
     <div class="note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">

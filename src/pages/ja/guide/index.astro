@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import GuideCard from '../../../components/GuideCard.astro';
+import AdSlot from '../../../components/AdSlot.astro';
 import { allJaGuides } from '../../../data/guides-ja';
 ---
 
@@ -12,5 +13,6 @@ import { allJaGuides } from '../../../data/guides-ja';
     <div class="listing-grid">
       {allJaGuides.map((guide) => <GuideCard guide={guide} lang="ja" />)}
     </div>
+    <AdSlot slot="native" label="おすすめリソース" />
   </section>
 </Layout>

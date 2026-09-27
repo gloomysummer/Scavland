@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import GuideCard from '../../../components/GuideCard.astro';
 import AdsterraArticleBanner from '../../../components/AdsterraArticleBanner.astro';
 import AdsterraSidebarBanner from '../../../components/AdsterraSidebarBanner.astro';
+import AdsterraNativeBanner from '../../../components/AdsterraNativeBanner.astro';
 import { allRuGuides, ruGuideBySlug } from '../../../data/guides-ru';
 
 export function getStaticPaths() {
@@ -187,6 +188,8 @@ if (pageTitle.length > 60) {
             </details>
           ))}
         </div>
+
+        <AdsterraNativeBanner />
 
         <h2 id="related">Связанные гайды</h2>
         <div class="related-grid">

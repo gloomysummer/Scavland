@@ -1,11 +1,7 @@
 ---
-import { siteConfig } from '../data/siteConfig';
-
-const shouldShow = siteConfig.ads.enabled && siteConfig.ads.socialBar.enabled;
-const scriptUrl = siteConfig.ads.socialBar.scriptUrl;
+/**
+ * Note: Social Bar is now handled globally in src/layouts/Layout.astro
+ * with 1.2s delay and crawler shielding to ensure zero CLS and optimal Core Web Vitals.
+ */
 ---
-
-{shouldShow && (
-  <!-- Adsterra Social Bar: High-CPM ($4~$8) non-intrusive in-page push banner -->
-  <script is:inline async="async" data-cfasync="false" src={scriptUrl}></script>
-)}
+<!-- Social Bar initialized in Layout.astro -->

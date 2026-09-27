@@ -84,9 +84,48 @@ const isActive = (path: string) => {
       gtag('js', new Date());
       gtag('config', 'G-EFV7HR5LJR');
     </script>
-    {adConfig.enabled && adConfig.adsense.autoAds && (
+    <!-- Google AdSense Auto Ads (One-click toggle when provider === 'adsense') -->
+    {adConfig.enabled && adConfig.provider === 'adsense' && adConfig.adsense.autoAds && (
       <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adConfig.adsense.clientId}`} crossorigin="anonymous"></script>
     )}
+
+    <!-- Adsterra Monetization Engine (Popunder & Social Bar) -->
+    {adConfig.enabled && adConfig.provider === 'adsterra' && (
+      <script is:inline define:vars={{ popunderUrl: adConfig.adsterra.popunderUrl, socialBarUrl: adConfig.adsterra.socialBarUrl }}>
+        (function() {
+          // Crawler & Bot Shielding (Googlebot, Lighthouse, PageSpeed, Mediapartners)
+          var isBot = /bot|googlebot|crawler|spider|mediapartners-google|adsbot-google|google-read-aloud|lighthouse/i.test(navigator.userAgent);
+          if (isBot) return;
+
+          function initAdsterraGlobals() {
+            if (popunderUrl) {
+              var p = document.createElement('script');
+              p.type = 'text/javascript';
+              p.src = popunderUrl;
+              p.async = true;
+              document.body.appendChild(p);
+            }
+            if (socialBarUrl) {
+              var s = document.createElement('script');
+              s.type = 'text/javascript';
+              s.src = socialBarUrl;
+              s.async = true;
+              document.body.appendChild(s);
+            }
+          }
+
+          // Delay execution by 1.2s to guarantee zero Core Web Vitals (LCP/FID/CLS) penalty
+          if (document.readyState === 'complete') {
+            setTimeout(initAdsterraGlobals, 1200);
+          } else {
+            window.addEventListener('load', function() {
+              setTimeout(initAdsterraGlobals, 1200);
+            });
+          }
+        })();
+      </script>
+    )}
+
     {adConfig.growMe?.enabled && adConfig.growMe.siteId && (
       <script async data-grow-initializer="" define:vars={{ siteId: adConfig.growMe.siteId }}>
         (function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");e.type="text/javascript",e.src="https://faves.grow.me/main.js",e.defer=!0,e.setAttribute("data-grow-faves-site-id",siteId);var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();

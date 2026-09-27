@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import GuideCard from '../../../components/GuideCard.astro';
+import AdSlot from '../../../components/AdSlot.astro';
 import { allDeGuides } from '../../../data/guides-de';
 ---
 
@@ -12,5 +13,6 @@ import { allDeGuides } from '../../../data/guides-de';
     <div class="listing-grid">
       {allDeGuides.map((guide) => <GuideCard guide={guide} lang="de" />)}
     </div>
+    <AdSlot slot="native" label="Empfohlene Ressourcen" />
   </section>
 </Layout>

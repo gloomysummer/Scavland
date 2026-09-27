@@ -1,5 +1,5 @@
 ---
-import AdSlot from "./ads/AdSlot.astro";
+import AdSlot from "./AdSlot.astro";
 
 interface Props {
   className?: string;
@@ -8,4 +8,4 @@ interface Props {
 const { className = "", label = "ADVERTISEMENT" } = Astro.props;
 ---
 
-<AdSlot slotId="sidebar-banner" className={className} label={label} />
+<AdSlot slot="banner300x250" className={className} label={label} />

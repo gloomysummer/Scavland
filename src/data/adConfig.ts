@@ -1,18 +1,21 @@
 /**
  * Unified Ad Monetization Configuration for Scavland Wiki
- * Centralized control for Adsterra, Google AdSense Auto Ads, Grow.me, and CLS safety.
- * Modeled after top-performing gaming publisher moonlightpeaks.wiki (55k+ monthly visits).
+ * Standardized after game-wiki-builder SOP & Graveyard Keeper 2 architecture.
+ * Supports dual-track monetization: Adsterra Day-1 + AdSense review switch.
  */
 
 export type AdProvider = 'adsterra' | 'adsense' | 'none';
 
-export interface AdsterraSlotConfig {
+export interface AdsterraBannerConfig {
   key: string;
-  format: 'iframe' | 'native';
+  scriptUrl: string;
   width: number;
   height: number;
+}
+
+export interface AdsterraNativeConfig {
   scriptUrl: string;
-  containerId?: string;
+  containerId: string;
 }
 
 export interface AdSenseSlotConfig {
@@ -21,34 +24,39 @@ export interface AdSenseSlotConfig {
   responsive: boolean;
 }
 
-export interface AdMonetizationConfig {
+export interface SiteAdConfig {
+  enabled: boolean;
   provider: AdProvider;
-  enabled: boolean; // Global master switch: set to true on 9.4 launch to activate
   adsense: {
-    clientId: string; // e.g., 'ca-pub-xxxxxxxxxxxxxxxx'
-    autoAds: boolean; // Enable Google AdSense Auto Ads (AI-driven native insertions like moonlightpeaks.wiki)
-    slots: Record<string, AdSenseSlotConfig>;
+    clientId: string;
+    autoAds: boolean;
+    slots?: Record<string, AdSenseSlotConfig>;
   };
-  growMe: {
-    enabled: boolean; // Mediavine Grow.me 1st-party audience network for 50%+ CPM lift
+  growMe?: {
+    enabled: boolean;
     siteId: string;
   };
   adsterra: {
-    slots: Record<string, AdsterraSlotConfig>;
+    popunderUrl: string;
+    socialBarUrl: string;
+    banner300x250: AdsterraBannerConfig;
+    nativeBanner: AdsterraNativeConfig;
+    // Legacy slots map for backward compatibility
+    slots?: Record<string, any>;
   };
 }
 
-export const adConfig: AdMonetizationConfig = {
-  // Dual-track architecture: active monetization via Adsterra + official AdSense Auto Ads tag retained for review
-  provider: 'adsterra',
-  
-  // Master switch
+export const adConfig: SiteAdConfig = {
+  // Global master switch: set to true to activate ads across the site
   enabled: true,
 
-  // Google AdSense Configuration (Future-proof Auto Ads architecture)
+  // Active monetization provider: 'adsterra' | 'adsense' | 'none'
+  provider: 'adsterra',
+
+  // Google AdSense Configuration (Future-proof Auto Ads architecture & one-click audit switch)
   adsense: {
     clientId: 'ca-pub-9054706633269604',
-    autoAds: true, // Google AI manages automated high-value in-article insertions
+    autoAds: true,
     slots: {
       'article-banner': {
         slotId: '1234567890',
@@ -63,14 +71,34 @@ export const adConfig: AdMonetizationConfig = {
     },
   },
 
-  // Mediavine Grow.me 1st-party audience network interface
   growMe: {
     enabled: false,
     siteId: '',
   },
 
-  // Active Adsterra configuration for Scavland
+  // Active Adsterra configuration for Scavland Wiki
   adsterra: {
+    // Popunder script (bd7b2e7cf4b253d74918a2b6cc1d967a)
+    popunderUrl: 'https://pl31530685.profitableratecpmnetwork.com/bd/7b/2e/bd7b2e7cf4b253d74918a2b6cc1d967a.js',
+
+    // Social Bar script (2b1376f001688d825f1635b410816379)
+    socialBarUrl: 'https://pl31530684.profitableratecpmnetwork.com/2b/13/76/2b1376f001688d825f1635b410816379.js',
+
+    // Banner 300x250 iframe
+    banner300x250: {
+      key: '65cf9132f65fb8c9dd0738fd4a974034',
+      scriptUrl: 'https://www.highrevenueformat.com/65cf9132f65fb8c9dd0738fd4a974034/invoke.js',
+      width: 300,
+      height: 250,
+    },
+
+    // Native Banner 4-widget container
+    nativeBanner: {
+      scriptUrl: 'https://pl31242129.profitableratecpmnetwork.com/b11b1dea8c0f54bab487a9131b28ee45/invoke.js',
+      containerId: 'container-b11b1dea8c0f54bab487a9131b28ee45',
+    },
+
+    // Backwards compatibility with previous slot names
     slots: {
       'article-banner': {
         key: '65cf9132f65fb8c9dd0738fd4a974034',

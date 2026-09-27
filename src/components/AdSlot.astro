@@ -1,0 +1,222 @@
+---
+import { adConfig } from '../data/adConfig';
+
+interface Props {
+  slot?: 'banner300x250' | 'native';
+  slotId?: 'article-banner' | 'sidebar-banner' | 'feed-native';
+  className?: string;
+  label?: string;
+}
+
+const { slot: rawSlot, slotId, className = '', label = 'Advertisement' } = Astro.props;
+
+// Normalize slot type: default to banner300x250, native for feed-native
+const slot: 'banner300x250' | 'native' = rawSlot || (slotId === 'feed-native' ? 'native' : 'banner300x250');
+
+const isAdsterra = adConfig.enabled && adConfig.provider === 'adsterra';
+const isAdSense = adConfig.enabled && adConfig.provider === 'adsense' && !adConfig.adsense.autoAds;
+const isEnabled = isAdsterra || isAdSense;
+
+const bannerConfig = adConfig.adsterra.banner300x250;
+const nativeConfig = adConfig.adsterra.nativeBanner;
+const adsenseSlot = adConfig.adsense.slots?.[slotId || (slot === 'native' ? 'feed-native' : 'article-banner')];
+
+const minHeight = slot === 'banner300x250' ? `${bannerConfig.height}px` : '160px';
+const minWidth = slot === 'banner300x250' ? `${bannerConfig.width}px` : '100%';
+const uniqueId = `ad-${slot}-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+{isEnabled && (
+  <aside 
+    class={`ad-slot-wrapper ad-slot-${slot} ${className}`} 
+    aria-label={label}
+    id={uniqueId}
+    data-slot-type={slot}
+    data-banner-key={bannerConfig.key}
+    data-banner-script={bannerConfig.scriptUrl}
+    data-banner-width={bannerConfig.width}
+    data-banner-height={bannerConfig.height}
+    data-native-script={nativeConfig.scriptUrl}
+    data-native-container={nativeConfig.containerId}
+  >
+    <div class="ad-slot-header">
+      <span class="ad-slot-tag">{label}</span>
+    </div>
+    <div 
+      class="ad-slot-container"
+      style={`min-height: ${minHeight}; min-width: ${minWidth};`}
+      id={`box-${uniqueId}`}
+    >
+      {isAdSense && adsenseSlot && (
+        <div class="adsense-box">
+          <ins 
+            class="adsbygoogle"
+            style="display:block"
+            data-ad-client={adConfig.adsense.clientId}
+            data-ad-slot={adsenseSlot.slotId}
+            data-ad-format={adsenseSlot.format}
+            data-full-width-responsive={adsenseSlot.responsive ? "true" : "false"}
+          ></ins>
+          <script is:inline>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+          </script>
+        </div>
+      )}
+      <!-- Adsterra slots dynamically injected via crawler-shielded lazy loader -->
+    </div>
+  </aside>
+)}
+
+{isAdsterra && (
+  <script is:inline define:vars={{ uniqueId }}>
+    (function () {
+      const el = document.getElementById(uniqueId);
+      if (!el) return;
+
+      // 1. Googlebot & Review Crawler Shielding (protects PageSpeed, GSC index & AdSense eligibility)
+      const isBot = /bot|googlebot|crawler|spider|mediapartners-google|adsbot-google|google-read-aloud|lighthouse/i.test(navigator.userAgent);
+      if (isBot) {
+        el.style.display = 'none';
+        return;
+      }
+
+      const slotType = el.dataset.slotType;
+      const box = document.getElementById('box-' + uniqueId);
+      if (!box) return;
+
+      let hasInjected = false;
+
+      function loadAd() {
+        if (hasInjected) return;
+        hasInjected = true;
+
+        if (slotType === 'banner300x250') {
+          // Serial Promise queue to safely execute Adsterra atOptions without global collision
+          const q = (window.__scavlandAdQueue || window.__adQueue || Promise.resolve()).then(function () {
+            return new Promise(function (resolve) {
+              const timer = setTimeout(function () {
+                resolve();
+              }, 8000);
+
+              try {
+                window.atOptions = {
+                  key: el.dataset.bannerKey,
+                  format: 'iframe',
+                  height: parseInt(el.dataset.bannerHeight || '250', 10),
+                  width: parseInt(el.dataset.bannerWidth || '300', 10),
+                  params: {}
+                };
+
+                const s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.src = el.dataset.bannerScript;
+                s.async = true;
+                s.onload = function () {
+                  clearTimeout(timer);
+                  resolve();
+                };
+                s.onerror = function () {
+                  clearTimeout(timer);
+                  resolve();
+                };
+                box.appendChild(s);
+              } catch (err) {
+                clearTimeout(timer);
+                resolve();
+              }
+            });
+          });
+          window.__scavlandAdQueue = q.then(function () {}, function () {});
+        } else if (slotType === 'native') {
+          try {
+            const containerId = el.dataset.nativeContainer;
+            if (containerId) {
+              const innerContainer = document.createElement('div');
+              innerContainer.id = containerId;
+              box.appendChild(innerContainer);
+            }
+
+            const s = document.createElement('script');
+            s.async = true;
+            s.setAttribute('data-cfasync', 'false');
+            s.src = el.dataset.nativeScript;
+            box.appendChild(s);
+          } catch (err) {
+            console.error('[AdSlot Native Error]', err);
+          }
+        }
+      }
+
+      // 2. IntersectionObserver Lazy Loading with 350px rootMargin for Zero-CLS & smooth scrolling
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              observer.disconnect();
+              setTimeout(loadAd, 350);
+            }
+          });
+        }, { rootMargin: '350px 0px' });
+        observer.observe(el);
+      } else {
+        setTimeout(loadAd, 1000);
+      }
+    })();
+  </script>
+)}
+
+<style>
+  .ad-slot-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.2rem auto;
+    padding: 0.85rem 1rem;
+    background: rgba(18, 20, 22, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .ad-slot-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .ad-slot-tag {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted, #7e8790);
+    opacity: 0.8;
+    user-select: none;
+    font-family: monospace;
+  }
+
+  .ad-slot-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .ad-slot-banner300x250 .ad-slot-container {
+    width: 300px;
+    height: 250px;
+  }
+
+  .adsense-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+</style>

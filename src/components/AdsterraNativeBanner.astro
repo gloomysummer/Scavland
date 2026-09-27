@@ -1,10 +1,11 @@
 ---
-import AdSlot from "./ads/AdSlot.astro";
+import AdSlot from "./AdSlot.astro";
 
 interface Props {
   className?: string;
+  label?: string;
 }
-const { className = "" } = Astro.props;
+const { className = "", label = "Recommended Resources" } = Astro.props;
 ---
 
-<AdSlot slotId="feed-native" className={className} />
+<AdSlot slot="native" className={className} label={label} />
