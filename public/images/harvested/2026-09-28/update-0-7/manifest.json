@@ -1,0 +1,41 @@
+{
+  "topic_slug": "update-0-7",
+  "source_url": "https://old.reddit.com/r/Scavland/comments/1widguk/update_07/",
+  "page_title": "Update 0.7 : Scavland",
+  "harvested_at": "2026-09-28T06:00:09.646019",
+  "authenticated": true,
+  "verified": true,
+  "verification_notes": "Forum URL detected: Bypassing webpage screenshot to prevent forum UI pollution.; Matched official screenshot: steam_ss_11.webp (semantic score: 9)",
+  "images": [
+    {
+      "filename": "update-0-7-gameplay.webp",
+      "relative_path": "update-0-7-gameplay.webp",
+      "source_url": "local://steam_ss_11.webp",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 55686,
+      "description": "Scavland Mikhail 74U weapon modification workbench showing durability stats and attachment slots",
+      "downloaded": true,
+      "authenticated": true,
+      "content_kind": "WEBP",
+      "sha256": "075f9e5345a7ab5271b788a987792ee67cf457a71b4f3dfda1cd118e1cf8ec09",
+      "duplicate_of": null,
+      "visual_score": null,
+      "content_check": "ok",
+      "verified": true
+    }
+  ],
+  "text_preview": "jump to content\nGET NEW REDDIT\nMY SUBREDDITS\nHOME-POPULAR-ALL-USERS | GRAVEYARDKEEPER-SANDUSTRYGAME-SCAVLAND-GRAVEYARDKEEPER2 | ASKREDDIT-PICS-FUNNY-MOVIES-GAMING-WORLDNEWS-NEWS-TODAYILEARNED-NOTTHEONION-EXPLAINLIKEIMFIVE-MILDLYINTERESTING-DIY-VIDEOS-OLDSCHOOLCOOL-TWOXCHROMOSOMES-TIFU-MUSIC-BOOKS-LI",
+  "clue_verification": {
+    "clue_title": "Update 0.7",
+    "source_url": "https://old.reddit.com/r/Scavland/comments/1widguk/update_07/",
+    "fetched_page_title": "Update 0.7 : Scavland",
+    "relevance_ok": true,
+    "matched_keywords": [],
+    "missing_keywords": [],
+    "required_hits": 0,
+    "score": "0/0",
+    "reason": "clue title yielded no discriminative keywords; relevance check skipped",
+    "verified_at": "2026-09-28T06:00:09.646282"
+  }
+}
