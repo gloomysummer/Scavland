@@ -78,13 +78,13 @@ export const adConfig: SiteAdConfig = {
 
   // Active Adsterra configuration for Scavland Wiki
   adsterra: {
-    // Popunder script (bd7b2e7cf4b253d74918a2b6cc1d967a)
-    popunderUrl: 'https://pl31530685.profitableratecpmnetwork.com/bd/7b/2e/bd7b2e7cf4b253d74918a2b6cc1d967a.js',
+    // Popunder script (Disabled for UX & AdSense compliance)
+    popunderUrl: '',
 
-    // Social Bar script (2b1376f001688d825f1635b410816379)
-    socialBarUrl: 'https://pl31530684.profitableratecpmnetwork.com/2b/13/76/2b1376f001688d825f1635b410816379.js',
+    // Social Bar script (Disabled for UX & AdSense compliance)
+    socialBarUrl: '',
 
-    // Banner 300x250 iframe
+    // Banner 300x250 iframe (High CPM $1.035 performer)
     banner300x250: {
       key: '65cf9132f65fb8c9dd0738fd4a974034',
       scriptUrl: 'https://www.highrevenueformat.com/65cf9132f65fb8c9dd0738fd4a974034/invoke.js',
@@ -92,10 +92,10 @@ export const adConfig: SiteAdConfig = {
       height: 250,
     },
 
-    // Native Banner 4-widget container
+    // Native Banner 4-widget container (Disabled due to low ROI, replaced by 300x250)
     nativeBanner: {
-      scriptUrl: 'https://pl31242129.profitableratecpmnetwork.com/b11b1dea8c0f54bab487a9131b28ee45/invoke.js',
-      containerId: 'container-b11b1dea8c0f54bab487a9131b28ee45',
+      scriptUrl: '',
+      containerId: '',
     },
 
     // Backwards compatibility with previous slot names

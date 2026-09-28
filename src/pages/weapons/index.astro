@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AdsterraArticleBanner from '../../components/AdsterraArticleBanner.astro';
 import { WEAPONS_DATABASE, ATTACHMENTS_CATALOG, BALLISTICS_CHART } from '../../data/weapons';
 
 const categories = [
@@ -82,6 +83,8 @@ const categories = [
             <li><strong>Secondary Weapon (Sidearm) BIS Selection:</strong> To preserve primary rifle durability against minor mutants, carry an efficient sidearm (PM Nikolay PB for silence, Leon 1895 Short for +50% stopping power, or Bahadir 918 Short for 15 shots/point longevity).</li>
           </ul>
         </div>
+
+        <AdsterraArticleBanner label="Sponsored Tactical Intel" />
 
         <!-- Section 1: Interactive Weapon Roster -->
         <h2 id="roster">Interactive Firearms Catalog ({WEAPONS_DATABASE.length} Verified)</h2>

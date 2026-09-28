@@ -89,8 +89,8 @@ const isActive = (path: string) => {
       <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adConfig.adsense.clientId}`} crossorigin="anonymous"></script>
     )}
 
-    <!-- Adsterra Monetization Engine (Popunder & Social Bar) -->
-    {adConfig.enabled && adConfig.provider === 'adsterra' && (
+    <!-- Adsterra Monetization Engine (Popunder & Social Bar - Disabled for pristine UX & AdSense compliance) -->
+    {adConfig.enabled && adConfig.provider === 'adsterra' && (adConfig.adsterra.popunderUrl || adConfig.adsterra.socialBarUrl) && (
       <script is:inline define:vars={{ popunderUrl: adConfig.adsterra.popunderUrl, socialBarUrl: adConfig.adsterra.socialBarUrl }}>
         (function() {
           // Crawler & Bot Shielding (Googlebot, Lighthouse, PageSpeed, Mediapartners)
