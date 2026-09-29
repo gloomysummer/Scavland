@@ -2,8 +2,6 @@
 import Layout from '../../../layouts/Layout.astro';
 import GuideCard from '../../../components/GuideCard.astro';
 import AdsterraArticleBanner from '../../../components/AdsterraArticleBanner.astro';
-import AdsterraSidebarBanner from '../../../components/AdsterraSidebarBanner.astro';
-import AdsterraNativeBanner from '../../../components/AdsterraNativeBanner.astro';
 import { allDeGuides, deGuideBySlug } from '../../../data/guides-de';
 
 export function getStaticPaths() {
@@ -189,8 +187,6 @@ if (pageTitle.length > 60) {
           ))}
         </div>
 
-        <AdsterraNativeBanner />
-
         <h2 id="related">Verwandte Guides</h2>
         <div class="related-grid">
           {related.map((item) => <GuideCard guide={item} lang="de" />)}
@@ -203,9 +199,6 @@ if (pageTitle.length > 60) {
         <a href="#evidence">Verifizierte Daten</a>
         <a href="#faq">Fragen</a>
         <a href="#related">Verwandte Guides</a>
-        <div class="toc-ad">
-          <AdsterraSidebarBanner />
-        </div>
       </aside>
     </div>
   </article>
