@@ -7,7 +7,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check:links": "python3 scripts/check-links.py"
+    "check:links": "python3 scripts/check-links.py",
+    "submit:bing": "python3 scripts/submit_bing_indexnow.py"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.3.0",
