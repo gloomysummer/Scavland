@@ -84,8 +84,11 @@ const isActive = (path: string) => {
       gtag('js', new Date());
       gtag('config', 'G-EFV7HR5LJR');
     </script>
-    <!-- Google AdSense Auto Ads (One-click toggle when provider === 'adsense') -->
-    {adConfig.enabled && adConfig.provider === 'adsense' && adConfig.adsense.autoAds && (
+    <!-- Google AdSense Account Verification & Auto Ads Tag (Required for site review & ads.txt crawler) -->
+    {adConfig.adsense.clientId && (
+      <meta name="google-adsense-account" content={adConfig.adsense.clientId} />
+    )}
+    {adConfig.enabled && adConfig.adsense.clientId && (
       <script async src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adConfig.adsense.clientId}`} crossorigin="anonymous"></script>
     )}
 
