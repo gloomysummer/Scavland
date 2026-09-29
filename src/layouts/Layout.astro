@@ -176,20 +176,81 @@ const isActive = (path: string) => {
     </header>
     <main id="main-content"><slot /></main>
     <footer class="site-footer">
-      <div>
-        <strong>Scavland Wiki &amp; Database</strong>
-        <p>{t.common.footerDisclaimer}</p>
+      <div class="site-footer-inner">
+        <div class="footer-mega-grid">
+          <!-- Col 1: Brand & Disclaimer -->
+          <div class="footer-col footer-col-brand">
+            <a class="footer-brand" href={getLocalizedUrl('/', lang)}>
+              <img src="/images/icons/logo.svg" alt="" width="28" height="28" />
+              <span>SCAVLAND WIKI</span>
+            </a>
+            <p class="footer-desc">
+              Independent tactical database, anomaly survival strategies, weapon attachment stats, and progression walkthroughs for Scavland.
+            </p>
+            <p class="footer-disclaimer">
+              Fan-made resource, not affiliated with, endorsed, or sponsored by NoShadow. All game assets and trademarks belong to their respective creators.
+            </p>
+          </div>
+
+          <!-- Col 2: Categories (频道) -->
+          <div class="footer-col">
+            <h4 class="footer-heading">{lang === 'de' ? 'Kategorien' : lang === 'ja' ? 'カテゴリー' : lang === 'ru' ? 'Категории' : 'Categories'}</h4>
+            <ul class="footer-nav-list">
+              <li><a href={getLocalizedUrl('/guide/', lang)}>{t.nav.guides}</a></li>
+              <li><a href={getLocalizedUrl('/weapons/', lang)}>{t.nav.weapons}</a></li>
+              <li><a href={getLocalizedUrl('/factions/', lang)}>{t.nav.factions}</a></li>
+              <li><a href={getLocalizedUrl('/maps/', lang)}>{t.nav.world}</a></li>
+              <li><a href={getLocalizedUrl('/comparisons/scavland-vs-zero-sievert/', lang)}>Scavland vs Zero Sievert</a></li>
+              <li><a href={getLocalizedUrl('/wiki/', lang)}>{t.nav.systems}</a></li>
+              <li><a href={getLocalizedUrl('/updates/', lang)}>{t.nav.updates}</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Featured Guides (重点文章平铺 5-8 篇) -->
+          <div class="footer-col">
+            <h4 class="footer-heading">{lang === 'de' ? 'Top-Guides' : lang === 'ja' ? '主要ガイド' : lang === 'ru' ? 'Популярные гайды' : 'Featured Guides'}</h4>
+            <ul class="footer-nav-list">
+              <li><a href={getLocalizedUrl('/guide/scavland-beginner-guide/', lang)}>Beginner Survival Guide</a></li>
+              <li><a href={getLocalizedUrl('/guide/scavland-weapons-and-attachments/', lang)}>Weapons &amp; Attachments</a></li>
+              <li><a href={getLocalizedUrl('/guide/scavland-mist-survival-and-radiation/', lang)}>Mist Survival &amp; Radiation</a></li>
+              <li><a href={getLocalizedUrl('/guide/scavland-death-and-loot-recovery/', lang)}>Death &amp; Loot Recovery</a></li>
+              <li><a href={getLocalizedUrl('/guide/scavland-factions-and-reputation/', lang)}>Factions &amp; Reputation</a></li>
+              <li><a href={getLocalizedUrl('/guide/scavland-steam-deck-and-handheld-settings/', lang)}>Steam Deck &amp; Handheld Settings</a></li>
+              <li><a href={getLocalizedUrl('/guide/scavland-price-and-regional-editions/', lang)}>Price &amp; Regional Editions</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Resources & Community -->
+          <div class="footer-col">
+            <h4 class="footer-heading">{lang === 'de' ? 'Ressourcen' : lang === 'ja' ? 'リソース' : lang === 'ru' ? 'Ресурсы' : 'Resources'}</h4>
+            <ul class="footer-nav-list">
+              <li><a href={getLocalizedUrl('/release-date/', lang)}>{t.nav.release}</a></li>
+              <li><a href={getLocalizedUrl('/system-requirements/', lang)}>{t.nav.specs}</a></li>
+              <li><a href="/about/">About</a></li>
+              <li><a href="/contact/">Contact</a></li>
+              <li><a href="/privacy-policy/">Privacy Policy</a></li>
+              <li><a href="/terms/">Terms of Service</a></li>
+              <li><a href="/sitemap-index.xml">XML Sitemap</a></li>
+            </ul>
+            <h4 class="footer-heading" style="margin-top:20px;">Official Community</h4>
+            <ul class="footer-nav-list community-links">
+              <li><a href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Steam Store Hub ↗</a></li>
+              <li><a href="https://store.steampowered.com/news/app/3373500" target="_blank" rel="noopener noreferrer">Steam Announcements ↗</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <small>© {new Date().getFullYear()} Scavland Wiki &amp; Database · {t.common.footerUpdated}</small>
+          <div class="footer-bottom-links">
+            <a href={getLocalizedUrl('/guide/', lang)}>{t.nav.guides}</a>
+            <span>·</span>
+            <a href="/privacy-policy/">Privacy</a>
+            <span>·</span>
+            <a href="/contact/">Contact</a>
+          </div>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href={getLocalizedUrl('/release-date/', lang)}>{t.nav.release}</a>
-        <a href={getLocalizedUrl('/system-requirements/', lang)}>{t.nav.specs}</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
-        <a href="/privacy-policy/">Privacy</a>
-        <a href="/terms/">Terms</a>
-        <a href="https://store.steampowered.com/app/3373500/Scavland/" rel="noreferrer">{t.common.officialSteam}</a>
-      </div>
-      <small><time datetime="2026-09-08">{t.common.footerUpdated}</time></small>
     </footer>
   </body>
 </html>
