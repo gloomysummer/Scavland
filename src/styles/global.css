@@ -480,3 +480,121 @@ main{position:relative;z-index:1}
   .guide-card{transition:none}
   .guide-card:hover{transform:none}
 }
+
+/* ==========================================================================
+   Adsterra Placement Matrix & Responsive Layout V2
+   ========================================================================== */
+
+.ad-placement-top {
+  margin: 16px 0 28px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ad-placement-bottom {
+  margin: 36px 0 24px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ad-desktop-only {
+  display: block;
+}
+
+.ad-mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ad-desktop-only {
+    display: none !important;
+  }
+  .ad-mobile-only {
+    display: block !important;
+  }
+}
+
+.sidebar-column {
+  position: sticky;
+  top: 90px;
+  align-self: start;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.sidebar-column .toc {
+  position: static;
+  top: auto;
+}
+
+.sidebar-ad-section {
+  padding: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-ad-section .ad-slot-wrapper {
+  margin: 0 auto;
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.ad-skyscraper-left {
+  display: none;
+}
+
+.guide-layout {
+  position: relative;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+@media (min-width: 1440px) {
+  .guide-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1440px;
+    gap: 32px;
+    padding: 0 20px;
+  }
+
+  .ad-skyscraper-left {
+    display: block;
+    position: sticky;
+    top: 80px;
+    align-self: start;
+    width: 160px;
+    flex-shrink: 0;
+    margin-top: 74px;
+  }
+
+  .ad-skyscraper-left .ad-slot-wrapper {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .guide-layout .article-shell {
+    margin: 0;
+    max-width: 1180px;
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar-column {
+    display: none !important;
+  }
+}
+

@@ -1,1 +1,4 @@
 google.com, pub-9054706633269604, DIRECT, f08c47fec0942fa0
+
+# Adsterra SSP records (pending Adsterra dashboard export by owner):
+# Once available from Adsterra publisher dashboard -> Websites -> Get ads.txt, paste SSP records here.

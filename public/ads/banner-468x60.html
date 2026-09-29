@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advertisement</title>
+  <!--
+    [GREY FEATURE WARNING]: Anti-framing override for Adsterra invoke.js.
+    Spoofs window.top, parent, and frameElement so invoke.js bids at full rate inside iframes.
+    To disable: comment out or remove the <script> block below.
+  -->
+  <script>
+    try {
+      Object.defineProperty(window, 'top', { get: function() { return window.self; } });
+      Object.defineProperty(window, 'parent', { get: function() { return window.self; } });
+      Object.defineProperty(window, 'frameElement', { get: function() { return null; } });
+    } catch (e) {}
+  </script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 468px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+  <script type="text/javascript">
+    atOptions = {
+      'key': '851636fcfbe8d78234076e9762003291',
+      'format': 'iframe',
+      'height': 60,
+      'width': 468,
+      'params': {}
+    };
+  </script>
+  <script type="text/javascript" src="https://www.highperformanceformat.com/851636fcfbe8d78234076e9762003291/invoke.js"></script>
+</body>
+</html>
