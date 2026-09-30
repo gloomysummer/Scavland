@@ -1060,5 +1060,367 @@ main{position:relative;z-index:1}
     align-items: flex-start;
   }
 }
+/* ==========================================================================
+   ROUND 15: CATEGORY PALETTE & DUAL-SIDEBAR V3 ARCHITECTURE
+   ========================================================================== */
 
+/* 1. Category Palette (WCAG AAA compliant against #0b100e) */
+:root {
+  --cat-lime: #b9e86c;
+  --cat-orange: #fb923c;
+  --cat-cyan: #22d3ee;
+  --cat-blue: #38bdf8;
+  --cat-purple: #c084fc;
+  --cat-emerald: #34d399;
+  --cat-amber: #fbbf24;
+  --cat-pink: #f472b6;
+}
 
+.cat-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 3px;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.cat-badge-lime { color: var(--cat-lime); background: rgba(185, 232, 108, 0.12); border: 1px solid rgba(185, 232, 108, 0.3); }
+.cat-badge-orange { color: var(--cat-orange); background: rgba(251, 146, 60, 0.12); border: 1px solid rgba(251, 146, 60, 0.3); }
+.cat-badge-cyan { color: var(--cat-cyan); background: rgba(34, 211, 238, 0.12); border: 1px solid rgba(34, 211, 238, 0.3); }
+.cat-badge-blue { color: var(--cat-blue); background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3); }
+.cat-badge-purple { color: var(--cat-purple); background: rgba(192, 132, 252, 0.12); border: 1px solid rgba(192, 132, 252, 0.3); }
+.cat-badge-emerald { color: var(--cat-emerald); background: rgba(52, 211, 153, 0.12); border: 1px solid rgba(52, 211, 153, 0.3); }
+.cat-badge-amber { color: var(--cat-amber); background: rgba(251, 191, 36, 0.12); border: 1px solid rgba(251, 191, 36, 0.3); }
+.cat-badge-pink { color: var(--cat-pink); background: rgba(244, 114, 182, 0.12); border: 1px solid rgba(244, 114, 182, 0.3); }
+
+/* Monospace Metadata Tags ("Confirmed · category") */
+.article-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.meta-tag, .card-meta-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  color: #8c9791;
+  padding: 2px 7px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-transform: uppercase;
+}
+.meta-updated {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  color: #607265;
+  letter-spacing: 0.04em;
+}
+.card-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* Card top colored accent border/tag */
+.guide-card {
+  position: relative;
+  overflow: hidden;
+}
+.guide-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--card-accent, var(--acid));
+  opacity: 0.75;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
+  z-index: 2;
+}
+.guide-card:hover::before {
+  opacity: 1;
+  box-shadow: 0 0 10px var(--card-accent, var(--acid));
+}
+
+/* Table header & boundary accents */
+.facts {
+  border-top: 2px solid var(--table-accent, var(--acid));
+}
+.facts td:first-child {
+  color: var(--table-accent, var(--acid));
+}
+
+/* 2. Dual-Sidebar V3 Responsive Grid */
+@media (min-width: 1280px) {
+  .article-shell.is-guide-page {
+    max-width: 1380px;
+  }
+  .article-layout.has-dual-sidebar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 210px 290px;
+    gap: 32px;
+    align-items: start;
+  }
+  .article-layout.has-dual-sidebar .sidebars-container {
+    display: contents;
+  }
+  .sidebar-on-this-page {
+    display: block;
+    position: sticky;
+    top: 96px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    background: #171d18;
+    border: 1px solid #334436;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  .sidebar-explore-wiki {
+    display: block;
+    position: sticky;
+    top: 96px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 1279px) and (min-width: 901px) {
+  .article-shell.is-guide-page {
+    max-width: 1180px;
+  }
+  .article-layout.has-dual-sidebar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 32px;
+    align-items: start;
+  }
+  .article-layout.has-dual-sidebar .sidebars-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .sidebar-on-this-page {
+    display: block;
+    position: sticky;
+    top: 96px;
+    background: #171d18;
+    border: 1px solid #334436;
+    border-radius: 4px;
+    padding: 16px;
+  }
+  .sidebar-explore-wiki {
+    display: block;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+}
+
+@media (max-width: 900px) {
+  .article-layout.has-dual-sidebar {
+    display: block;
+  }
+  .article-layout.has-dual-sidebar .sidebars-container {
+    display: block;
+    margin-top: 36px;
+  }
+  .sidebar-on-this-page {
+    display: none !important;
+  }
+  .sidebar-explore-wiki {
+    display: block;
+    position: static;
+    max-height: none;
+  }
+}
+
+/* 3. Column 2: ON THIS PAGE (Narrow) */
+.on-this-page-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 0.78rem 'IBM Plex Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--acid, #b9e86c);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.on-this-page-header svg {
+  color: var(--acid, #b9e86c);
+  flex-shrink: 0;
+}
+.on-this-page-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.toc-step-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  color: var(--muted, #8c9791);
+  text-decoration: none;
+  font-size: 0.82rem;
+  border-left: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+.toc-step-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}
+.toc-step-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #607265;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.toc-step-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.toc-step-link.is-active {
+  color: #fff;
+  background: rgba(185, 232, 108, 0.1);
+  border-left-color: var(--acid, #b9e86c);
+}
+.toc-step-link.is-active .toc-step-num {
+  color: var(--acid, #b9e86c);
+}
+
+/* 4. Column 3: EXPLORE THE WIKI (Wide) */
+.sidebar-explore-wiki {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar-explore-wiki .sidebar-section {
+  margin-bottom: 0;
+}
+.wiki-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.wiki-nav-header .wiki-nav-title {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.wiki-quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+.wiki-quick-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted, #8c9791);
+  text-decoration: none;
+  padding: 3px 7px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+.wiki-quick-link:hover {
+  color: #fff;
+  border-color: var(--acid, #b9e86c);
+}
+.wiki-category-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wiki-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.wiki-category-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #e2e8f0;
+}
+.cat-accent-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cat-title-text {
+  flex-grow: 1;
+}
+.wiki-guide-sublist {
+  list-style: none;
+  padding: 0 0 0 12px;
+  margin: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wiki-guide-subitem {
+  font-size: 0.8rem;
+}
+.wiki-guide-sublink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  color: var(--muted, #8c9791);
+  text-decoration: none;
+  border-radius: 3px;
+  border-left: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+.wiki-guide-sublink:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.04);
+}
+.wiki-guide-subitem.is-active-article .wiki-guide-sublink {
+  font-weight: 600;
+}
+.wiki-guide-sublink .sublink-bullet {
+  font-size: 0.65rem;
+  flex-shrink: 0;
+}
+.wiki-guide-sublink .sublink-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

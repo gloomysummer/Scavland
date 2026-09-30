@@ -4,6 +4,7 @@ import GuideCard from '../../../components/GuideCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
 import VideoEmbed from '../../../components/VideoEmbed.astro';
 import { allRuGuides, ruGuideBySlug } from '../../../data/guides-ru';
+import { getCategoryTheme } from '../../../data/categoryColors';
 
 export function getStaticPaths() {
   return allRuGuides.map((guide) => ({ params: { slug: guide.slug }, props: { guide } }));
@@ -13,6 +14,7 @@ const { guide } = Astro.props;
 const related = guide.related.map((slug) => ruGuideBySlug[slug]).filter(Boolean);
 const canonicalUrl = `https://scavland.wiki/ru/guide/${guide.slug}/`;
 const imageUrl = `https://scavland.wiki${guide.image.startsWith('/images') ? guide.image : '/images/hero/header.webp'}`;
+const catTheme = getCategoryTheme(guide.category);
 
 // Series pagination calculations
 const categoryGuides = allRuGuides.filter((g) => g.category === guide.category);
@@ -121,8 +123,8 @@ if (pageTitle.length > 60) {
       <AdSlot slot="banner-160x600" label="Sponsored Recon" />
     </aside>
 
-    <article class="article-shell">
-      <nav class="breadcrumbs" aria-label="Навигация" style="font-size:0.85rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:gap:0.5rem;align-items:center;">
+    <article class="article-shell is-guide-page">
+      <nav class="breadcrumbs" aria-label="Навигация" style="font-size:0.85rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;">
         <a href="/ru/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">Scavland Wiki</a>
         <span style="opacity:0.4;">/</span>
         <a href="/ru/guide/" style="color:var(--text-muted,#aaa);text-decoration:none;padding:4px 2px;min-height:36px;display:inline-flex;align-items:center;">Гайды</a>
@@ -131,7 +133,11 @@ if (pageTitle.length > 60) {
       </nav>
 
       <header class="article-header">
-        <p class="eyebrow">{guide.category} · Обновлено {guide.updated}</p>
+        <div class="article-meta-row">
+          <span class={`cat-badge cat-badge-${catTheme.slug}`}>{guide.category}</span>
+          <span class="meta-tag">Confirmed · {guide.category}</span>
+          <span class="meta-updated">Обновлено {guide.updated}</span>
+        </div>
         <h1 class="page-title">{coreTitle}</h1>
         {subtitle && (
           <p class="subtitle" style="font-family:'IBM Plex Mono',monospace;font-size:0.9rem;color:var(--acid,#b9e86c);margin:-0.25rem 0 1rem;letter-spacing:0.02em;font-weight:600;">
@@ -165,7 +171,7 @@ if (pageTitle.length > 60) {
         </div>
       </details>
 
-      <div class="article-layout">
+      <div class="article-layout has-dual-sidebar">
         <div class="article-content">
           <div class="quick-answer">
             <strong>Краткий ответ</strong><span set:html={guide.answer} />
@@ -201,7 +207,7 @@ if (pageTitle.length > 60) {
 
           <h2 id="evidence">База фактов и подтверждений</h2>
           <div class="table-responsive" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%;margin:16px 0;">
-            <table class="facts">
+            <table class="facts" style={`--table-accent: ${catTheme.color};`}>
               <tbody>
                 {guide.facts.map(([key, value]) => (
                   <tr>
@@ -269,87 +275,162 @@ if (pageTitle.length > 60) {
           </div>
         </div>
 
-        <div class="sidebar-column">
-          <!-- Ad Placement 3: Right Sidebar 300x250 (Top of sidebar above TOC) -->
-          <div class="sidebar-ad-section">
-            <AdSlot slot="banner-300x250" label="Sponsored Field Intel" />
-          </div>
-
-          <!-- Module 0: Wiki Navigation (Placed above ON THIS PAGE) -->
-          <div class="sidebar-section wiki-navigation-section">
-            <div class="wiki-nav-title">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-              <span>WIKI NAVIGATION</span>
+        <div class="sidebars-container">
+          <!-- Column 2 (≥1280px): ON THIS PAGE (Narrow) -->
+          <aside class="sidebar-on-this-page" aria-label="На этой странице">
+            <div class="on-this-page-header">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              <span>НА ЭТОЙ СТРАНИЦЕ</span>
             </div>
-            <ul class="wiki-nav-list">
-              <li class="wiki-nav-channel">
-                <a href="/ru/" class="wiki-nav-channel-link">
-                  <span class="channel-arrow">›</span>
-                  <span>Главная</span>
+            <ol class="on-this-page-list">
+              <li>
+                <a href="#field-notes" class="toc-step-link" data-section="field-notes">
+                  <span class="toc-step-num">01</span>
+                  <span class="toc-step-title">Тактические заметки</span>
                 </a>
               </li>
-              <li class="wiki-nav-channel">
-                <a href="/ru/guide/" class="wiki-nav-channel-link">
-                  <span class="channel-arrow">›</span>
-                  <span>База гайдов</span>
+              <li>
+                <a href="#evidence" class="toc-step-link" data-section="evidence">
+                  <span class="toc-step-num">02</span>
+                  <span class="toc-step-title">База фактов</span>
                 </a>
               </li>
-              {allCategories.map((cat) => {
-                const isCurrentCat = cat === guide.category;
-                const catGuides = allRuGuides.filter((g) => g.category === cat);
-                const firstGuideOfCat = catGuides[0];
-                return (
-                  <li class={`wiki-nav-channel ${isCurrentCat ? 'is-active-channel' : ''}`}>
-                    <a 
-                      href={`/ru/guide/${firstGuideOfCat.slug}/`} 
-                      class={`wiki-nav-channel-link ${isCurrentCat ? 'is-current' : ''}`}
-                      aria-current={isCurrentCat ? 'page' : undefined}
-                    >
-                      <span class="channel-arrow">{isCurrentCat ? '▼' : '›'}</span>
-                      <span>{cat}</span>
-                      <span class="sidebar-count-badge">{catGuides.length}</span>
-                    </a>
-                    {isCurrentCat && (
-                      <ul class="wiki-nav-sublist">
+              <li>
+                <a href="#faq" class="toc-step-link" data-section="faq">
+                  <span class="toc-step-num">03</span>
+                  <span class="toc-step-title">Частые вопросы</span>
+                </a>
+              </li>
+              <li>
+                <a href="#related" class="toc-step-link" data-section="related">
+                  <span class="toc-step-num">04</span>
+                  <span class="toc-step-title">Связанные гайды</span>
+                </a>
+              </li>
+            </ol>
+          </aside>
+
+          <!-- Column 3 (≥1280px): EXPLORE THE WIKI (Wide) -->
+          <aside class="sidebar-explore-wiki" aria-label="Explore the Wiki">
+            <!-- Ad Placement 3: Right Sidebar 300x250 (Top of sidebar above TOC) -->
+            <div class="sidebar-ad-section">
+              <AdSlot slot="banner-300x250" label="Sponsored Field Intel" />
+            </div>
+
+            <!-- Full Site Navigation Tree grouped by category -->
+            <div class="sidebar-section wiki-navigation-section">
+              <div class="wiki-nav-header">
+                <div class="wiki-nav-title">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                  <span>EXPLORE THE WIKI</span>
+                </div>
+                <span class="sidebar-count-badge">Guides {allRuGuides.length}</span>
+              </div>
+
+              <div class="wiki-quick-links">
+                <a href="/ru/" class="wiki-quick-link">Главная</a>
+                <a href="/ru/guide/" class="wiki-quick-link">База гайдов</a>
+                <a href="/guide/" class="wiki-quick-link">EN Wiki</a>
+              </div>
+
+              <div class="wiki-category-tree">
+                {allCategories.map((cat) => {
+                  const isCurrentCat = cat === guide.category;
+                  const catGuides = allRuGuides.filter((g) => g.category === cat);
+                  const theme = getCategoryTheme(cat);
+                  return (
+                    <div class={`wiki-category-group ${isCurrentCat ? 'is-current-group' : ''}`}>
+                      <div class="wiki-category-header">
+                        <span class="cat-accent-dot" style={`background-color: ${theme.color}; box-shadow: 0 0 6px ${theme.color}66;`}></span>
+                        <span class="cat-title-text">{cat}</span>
+                        <span class="sidebar-count-badge" style={`color: ${theme.color}; border-color: ${theme.color}40; background: ${theme.bg};`}>
+                          {catGuides.length}
+                        </span>
+                      </div>
+                      <ul class="wiki-guide-sublist">
                         {catGuides.map((cg) => {
                           const isCurrentArticle = cg.slug === guide.slug;
                           return (
-                            <li class={`wiki-nav-subitem ${isCurrentArticle ? 'is-active-article' : ''}`}>
-                              <a href={`/ru/guide/${cg.slug}/`} class="wiki-nav-sublink" aria-current={isCurrentArticle ? 'page' : undefined}>
-                                <span class="sublink-bullet">{isCurrentArticle ? '●' : '○'}</span>
+                            <li class={`wiki-guide-subitem ${isCurrentArticle ? 'is-active-article' : ''}`}>
+                              <a 
+                                href={`/ru/guide/${cg.slug}/`} 
+                                class="wiki-guide-sublink" 
+                                aria-current={isCurrentArticle ? 'page' : undefined}
+                                style={isCurrentArticle ? `border-left-color: ${theme.color}; background: ${theme.bg}; color: #fff;` : undefined}
+                              >
+                                <span class="sublink-bullet" style={isCurrentArticle ? `color: ${theme.color};` : undefined}>
+                                  {isCurrentArticle ? '●' : '○'}
+                                </span>
                                 <span class="sublink-text">{cg.shortTitle || cg.title}</span>
                               </a>
                             </li>
                           );
                         })}
                       </ul>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
-
-            <!-- Active Codes Micro-Widget -->
-            <div class="sidebar-codes-widget">
-              <div class="codes-widget-header">
-                <div class="codes-title-group">
-                  <span class="codes-title-text">ACTIVE CODES</span>
-                </div>
-                <span class="codes-badge">VERIFIED</span>
+                    </div>
+                  );
+                })}
               </div>
-              <p class="codes-status">None / No active codes yet. Check back soon!</p>
-            </div>
-          </div>
 
-          <aside class="toc" aria-label="На этой странице">
-            <strong>На этой странице</strong>
-            <a href="#field-notes">Тактические заметки</a>
-            <a href="#evidence">База фактов</a>
-            <a href="#faq">Вопросы</a>
-            <a href="#related">Связанные гайды</a>
+              <!-- Active Codes Micro-Widget -->
+              <div class="sidebar-codes-widget">
+                <div class="codes-widget-header">
+                  <div class="codes-title-group">
+                    <span class="codes-title-text">ACTIVE CODES</span>
+                  </div>
+                  <span class="codes-badge">VERIFIED</span>
+                </div>
+                <p class="codes-status">None / No active codes yet. Check back soon!</p>
+              </div>
+            </div>
           </aside>
         </div>
       </div>
     </article>
   </div>
 </Layout>
+
+<script>
+  function initGuideScrollSpy() {
+    const sections = ['field-notes', 'evidence', 'faq', 'related']
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    const tocLinks = document.querySelectorAll('.toc-step-link');
+
+    if (!sections.length || !tocLinks.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tocLinks.forEach((link) => {
+              if (link.getAttribute('href') === `#${id}`) {
+                link.classList.add('is-active');
+              } else {
+                link.classList.remove('is-active');
+              }
+            });
+          }
+        });
+      },
+      {
+        rootMargin: '-80px 0px -60% 0px',
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((sec) => observer.observe(sec));
+
+    const activeGuideItem = document.querySelector('.sidebar-explore-wiki .is-active-article');
+    if (activeGuideItem) {
+      activeGuideItem.scrollIntoView({ block: 'nearest' });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGuideScrollSpy);
+  } else {
+    initGuideScrollSpy();
+  }
+</script>

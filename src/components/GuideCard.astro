@@ -1,5 +1,6 @@
 ---
 import { getLocalizedUrl, uiTranslations, type Language } from '../data/i18n';
+import { getCategoryTheme } from '../data/categoryColors';
 
 interface Props {
   guide: any;
@@ -11,6 +12,23 @@ const { guide, priority = false, lang = 'en' } = Astro.props;
 const isVideo = guide.image && guide.image.endsWith('.mp4');
 const targetUrl = getLocalizedUrl(`/guide/${guide.slug}/`, lang);
 const t = uiTranslations[lang] || uiTranslations.en;
+const catTheme = getCategoryTheme(guide.category);
 ---
-<a class="guide-card" href={targetUrl}><div class="card-media">{isVideo ? <video src={guide.image} muted loop autoplay playsinline aria-label={guide.imageAlt}></video> : <img src={guide.image} alt={guide.imageAlt} loading={priority ? 'eager' : 'lazy'} fetchpriority={priority ? 'high' : 'auto'} decoding="async" width="480" height="330" />}</div><div class="card-copy"><span class="eyebrow">{guide.category} · {guide.evidence}</span><h3>{guide.shortTitle || guide.title}</h3><p>{guide.description}</p><span class="read-link">{t.common.readFieldNotes} <span aria-hidden="true">↗</span></span></div></a>
-
+<a class={`guide-card guide-card-${catTheme.slug}`} href={targetUrl} style={`--card-accent: ${catTheme.color};`}>
+  <div class="card-media">
+    {isVideo ? (
+      <video src={guide.image} muted loop autoplay playsinline aria-label={guide.imageAlt}></video>
+    ) : (
+      <img src={guide.image} alt={guide.imageAlt} loading={priority ? 'eager' : 'lazy'} fetchpriority={priority ? 'high' : 'auto'} decoding="async" width="480" height="330" />
+    )}
+  </div>
+  <div class="card-copy">
+    <div class="card-meta-row">
+      <span class={`cat-badge cat-badge-${catTheme.slug}`}>{guide.category}</span>
+      <span class="card-meta-tag">Confirmed · {guide.category}</span>
+    </div>
+    <h3>{guide.shortTitle || guide.title}</h3>
+    <p>{guide.description}</p>
+    <span class="read-link">{t.common.readFieldNotes} <span aria-hidden="true">↗</span></span>
+  </div>
+</a>
