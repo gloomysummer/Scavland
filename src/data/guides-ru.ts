@@ -31,7 +31,10 @@ export const ruGuides: Guide[] = [
       ['Как восстановить здоровье без аптечек?', 'В режиме исследователя или возле зажженных костров в безопасных лагерях здоровье медленно восстанавливается.'],
       ['Где найти первую винтовку?', 'Обыщите оружейные ящики в <strong>заброшенном военном блокпосте</strong> на севере первой локации.']
     ],
-    related: ['scavland-weapons-and-attachments', 'scavland-price-and-regional-editions', 'scavland-vs-zero-sievert-comparison']
+    related: ['scavland-weapons-and-attachments', 'scavland-price-and-regional-editions', 'scavland-vs-zero-sievert-comparison'],
+    videoId: 'JRAOxOjeoc8',
+    videoTitle: 'Гайд для новичков по Scavland: как не умирать в начале игры (Mars)',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -62,7 +65,10 @@ export const ruGuides: Guide[] = [
       ['Есть ли демоверсия?', 'Демоверсия была доступна во время Steam Next Fest; на релизе действует стандартная политика возврата Steam (до <strong>2 часов</strong> игры).'],
       ['Включен ли мультиплеер в базовую цену?', '<strong>Кооперативный режим</strong> разрабатывается согласно дорожной карте и будет бесплатным обновлением.']
     ],
-    related: ['scavland-steam-deck-and-handheld-settings', 'scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison']
+    related: ['scavland-steam-deck-and-handheld-settings', 'scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison'],
+    videoId: 'sulLD0aNdOk',
+    videoTitle: 'Обзор Scavland перед покупкой: особенности и цена (The Singleplayer Squad)',
+    videoChannel: 'The Singleplayer Squad'
   },
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
@@ -93,7 +99,10 @@ export const ruGuides: Guide[] = [
       ['Удобно ли целиться стиками?', 'Рекомендуется комбинировать <strong>правый стик</strong> с гироскопом (<strong>Gyro Aiming</strong>) для идеальной точности при стрельбе на дальние дистанции.'],
       ['Читается ли текст интерфейса на 7-дюймовом экране?', 'В настройках игры есть опция <strong>"Крупный шрифт UI"</strong>, делающая описание предметов четким.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-price-and-regional-editions']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-price-and-regional-editions'],
+    videoId: 'Zx0Uon9RJM4',
+    videoTitle: 'Тест производительности Scavland на Steam Deck LCD (ciastek)',
+    videoChannel: 'ciastek'
   },
   {
     slug: 'scavland-vs-zero-sievert-comparison',
@@ -124,7 +133,10 @@ export const ruGuides: Guide[] = [
       ['Что сложнее в освоении?', 'Scavland строже наказывает за ошибки в позиционировании из-за продвинутого ИИ врагов и механики <strong>потери крови</strong>.'],
       ['Можно ли перенести прогресс?', 'Нет, это совершенно независимые проекты от разных разработчиков.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-steam-deck-and-handheld-settings']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-steam-deck-and-handheld-settings'],
+    videoId: 'ETFXsWYOVlM',
+    videoTitle: 'Сравнение изометрических шутеров с эвакуацией: Scavland и аналоги (Oscar Mikey)',
+    videoChannel: 'Oscar Mikey'
   },
   {
     slug: 'scavland-weapons-and-attachments',
@@ -155,7 +167,10 @@ export const ruGuides: Guide[] = [
       ['Где чинить заклинившее оружие?', 'На верстаке в лагере или с помощью портативного <strong>ремкомплекта оружейника</strong>.'],
       ['Влияет ли вес оружия на выносливость?', 'Да, тяжелые модификации с <strong>барабанными магазинами</strong> быстрее расходуют стамину при прицеливании.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison', 'scavland-starter-loadouts-and-budget-builds']
+    related: ['scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison', 'scavland-starter-loadouts-and-budget-builds'],
+    videoId: 'JQDdSAYkOkQ',
+    videoTitle: 'Местоположение лучшего оружия 63 Dragoon в Scavland (Game Detox)',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-mist-survival-and-radiation',
@@ -213,7 +228,10 @@ export const ruGuides: Guide[] = [
       ['Могут ли боты залутать мой труп?', 'Да, <strong>мародеры</strong> собирают ценное оружие, если найдут тело раньше вас.'],
       ['Сохраняются ли квестовые предметы?', 'Квестовые документы сохраняются в специальной вкладке <strong>журнала заданий</strong>.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-mist-survival-and-radiation', 'scavland-factions-and-reputation']
+    related: ['scavland-beginner-guide', 'scavland-mist-survival-and-radiation', 'scavland-factions-and-reputation'],
+    videoId: 'WyI0vB4qE7A',
+    videoTitle: 'Механика смерти и возвращение рюкзака в Scavland (Mars)',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-factions-and-reputation',
@@ -274,7 +292,10 @@ export const ruGuides: Guide[] = [
       ['Почему после сна не восстанавливается выносливость?', 'Это вызвано скрытым дебаффом <strong>"Тяжелое обезвоживание"</strong>. Выпейте кипяченой воды и отдохните у зажженного костра.'],
       ['Респаунится ли лут в подземных бункерах после сна?', 'Нет. <strong>Подземные бункеры</strong> имеют длительный внутренний таймер восстановления, чтобы исключить бесконечный фарм редкого оружия.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts']
+    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts'],
+    videoId: 'IhLy3jap04Y',
+    videoTitle: 'Механика сна и суточный сброс мира в Scavland (Games Quality Zone)',
+    videoChannel: 'Games Quality Zone'
   },
   {
     slug: 'scavland-consumables-and-medical-supplies',
@@ -339,7 +360,10 @@ export const ruGuides: Guide[] = [
       ['Кому выгоднее всего продавать электронику и запчасти?', 'Анатолию в Залесье или торговцам фракции <strong>Механиков</strong>. Продажа оружейнику Петару или доктору Анне облагается 50% штрафом.'],
       ['Что собирать новичку в первую очередь?', 'Медикаменты (бинты, чистая вода), патроны для своего оружия и компактную электронику (свечи, реле, зажигалки).']
     ],
-    related: ['scavland-beginner-guide', 'scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide']
+    related: ['scavland-beginner-guide', 'scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide'],
+    videoId: 'l84-X9wHjeM',
+    videoTitle: 'Фарм денег и ценный лут в Scavland (Nukov)',
+    videoChannel: 'Nukov'
   }
 ];
 

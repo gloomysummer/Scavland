@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import GuideCard from '../../../components/GuideCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
+import VideoEmbed from '../../../components/VideoEmbed.astro';
 import { allDeGuides, deGuideBySlug } from '../../../data/guides-de';
 
 export function getStaticPaths() {
@@ -182,6 +183,15 @@ if (pageTitle.length > 60) {
           </p>
 
           <h2 id="field-notes">Feldnotizen</h2>
+          {guide.videoId && (
+            <VideoEmbed
+              id={guide.videoId}
+              title={guide.videoTitle || guide.title}
+              description={guide.description}
+              channelTitle={guide.videoChannel || "YouTube Creator / Offiziell"}
+              captionLabel="Offizielles Video / Gameplay"
+            />
+          )}
           <ul>
             {guide.steps.map((step) => <li set:html={step} />)}
           </ul>

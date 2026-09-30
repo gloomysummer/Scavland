@@ -31,7 +31,10 @@ export const jaGuides: Guide[] = [
       ['戦闘中に銃が弾詰まり（ジャム）したらどうする？', 'リロードキー[R]を素早く2回押すかボルトを手動で引いて不発弾・薬莢を排出し、遮蔽物に隠れて整備オイルを使用してください。'],
       ['初心者が最初に目指すべき目標は？', '初期集落周辺で安全な日中ルートを回り、アナトリーとナージャの依頼を受けて初期ルーブルと評判を稼ぎましょう。']
     ],
-    related: ['scavland-weapon-repair-and-durability', 'scavland-cheats-and-console-commands', 'scavland-death-and-loot-recovery']
+    related: ['scavland-weapon-repair-and-durability', 'scavland-cheats-and-console-commands', 'scavland-death-and-loot-recovery'],
+    videoId: 'JRAOxOjeoc8',
+    videoTitle: '【Scavland攻略】初心者が生き残るための完全サバイバルガイド (Mars)',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-cheats-and-console-commands',
@@ -93,7 +96,10 @@ export const jaGuides: Guide[] = [
       ['武器修理キットはどこで手に入りますか？', '中立集落のガンスミス工房や、ソビエト軍事バンカー内のロッカーで高確率で見つかります。'],
       ['サプレッサーも摩耗しますか？', 'はい。サプレッサーも一定発砲数で消音性能が低下するため、定期的な点検が必要です。']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands'],
+    videoId: 'G2QsRe2kj_I',
+    videoTitle: '【Scavland 0.7.2】上級・エキスパート武器修理キット設計図と入手方法 (Game Detox)',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-death-and-loot-recovery',
@@ -121,7 +127,10 @@ export const jaGuides: Guide[] = [
       ['敵NPCが私の<strong>バックパック</strong>を漁ることはありますか？', '巡回中のNPCスカベンジャーが遺品付近を警戒している場合がありますが、中身は回収可能です。'],
       ['回収に行く制限時間はありますか？', '時間制限はありませんが、回収前に再度死亡すると古いバックパックの位置が更新される場合があります。']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-mist-survival-and-radiation']
+    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-mist-survival-and-radiation'],
+    videoId: 'WyI0vB4qE7A',
+    videoTitle: 'Scavland 死亡時の仕様と死体回収の鉄則 (Mars)',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
@@ -150,7 +159,10 @@ export const jaGuides: Guide[] = [
       ['文字は7インチ画面でも読みやすいですか？', 'ピクセルUIは<strong>1280x800</strong>にスケールし、<strong>アップデート0.7.0</strong>ではSteam Deckでのテキストサイズ改善が明記されています。それでも小さい場合は<strong>UIテキストサイズ</strong>を調整してください。'],
       ['ジャイロエイムは使えますか？', 'はい。Steam入力からジャイロをマウス操作に割り当てることで、直感的な射撃エイムが可能です。']
     ],
-    related: ['scavland-beginner-guide', 'scavland-price-and-regional-editions', 'scavland-weapons-and-attachments']
+    related: ['scavland-beginner-guide', 'scavland-price-and-regional-editions', 'scavland-weapons-and-attachments'],
+    videoId: 'Zx0Uon9RJM4',
+    videoTitle: 'Scavland Steam Deck実機プレイ＆最適動作検証 (ciastek)',
+    videoChannel: 'ciastek'
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -177,7 +189,10 @@ export const jaGuides: Guide[] = [
       ['デラックス版やDLCはありますか？', '現在は<strong>スタンダード早期アクセス版</strong>のみの販売です。'],
       ['PS5やSwitchへの移植予定はありますか？', '現在はPC（Steam）先行リリースとなっており、コンソール版は早期アクセス終了後に検討予定です。']
     ],
-    related: ['scavland-beginner-guide', 'scavland-steam-deck-and-handheld-settings', 'scavland-vs-zero-sievert-comparison']
+    related: ['scavland-beginner-guide', 'scavland-steam-deck-and-handheld-settings', 'scavland-vs-zero-sievert-comparison'],
+    videoId: 'sulLD0aNdOk',
+    videoTitle: 'Scavland 購入前チェック＆エディション機能解説 (The Singleplayer Squad)',
+    videoChannel: 'The Singleplayer Squad'
   },
   {
     slug: 'scavland-weapons-and-attachments',
@@ -204,7 +219,10 @@ export const jaGuides: Guide[] = [
       ['最強の武器は何ですか？', '絶対的な単一の最強武器はありませんが、入手性と威力のバランスが良いAK系アサルトライフルが序盤から中盤まで重宝します。'],
       ['余った弾薬の抜き方は？', 'インベントリ内の武器を右クリックして「マガジンから排弾」を選択することで弾薬を回収できます。']
     ],
-    related: ['scavland-weapon-repair-and-durability', 'scavland-beginner-guide', 'scavland-cheats-and-console-commands']
+    related: ['scavland-weapon-repair-and-durability', 'scavland-beginner-guide', 'scavland-cheats-and-console-commands'],
+    videoId: 'JQDdSAYkOkQ',
+    videoTitle: '【Scavland】最強武器 63 Dragoon の入手場所・性能 (Game Detox)',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-mist-survival-and-radiation',
@@ -257,7 +275,10 @@ export const jaGuides: Guide[] = [
     faq: [
       ['<strong>ZERO Sievert</strong>が好きなプレイヤーにもおすすめですか？', 'はい。硬派なアイテム管理や緊迫感のある銃撃戦が好きな方には間違いなく刺さる完成度です。']
     ],
-    related: ['scavland-beginner-guide', 'scavland-price-and-regional-editions', 'scavland-steam-deck-and-handheld-settings']
+    related: ['scavland-beginner-guide', 'scavland-price-and-regional-editions', 'scavland-steam-deck-and-handheld-settings'],
+    videoId: 'ETFXsWYOVlM',
+    videoTitle: 'Zero Sievert系見下ろし型脱出サバイバル比較 (Oscar Mikey)',
+    videoChannel: 'Oscar Mikey'
   },
   {
     slug: 'scavland-factions-and-reputation',
@@ -316,7 +337,10 @@ export const jaGuides: Guide[] = [
       ['寝ても地下バンカーの敵や宝箱が復活しません。', '仕様です。地下バンカーやキーカード部屋は高ティアアイテムの無限ファームを防ぐため、通常の睡眠では即時リセットされません。'],
       ['寝起きにスタミナが全く回復しないのはなぜ？', '重度の脱水（Severe Dehydration）デバフが原因です。清潔な水を飲み、焚き火の近くで休むことで解消されます。']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts']
+    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts'],
+    videoId: 'IhLy3jap04Y',
+    videoTitle: 'Scavland 睡眠システムと24時間リセット仕様 (Games Quality Zone)',
+    videoChannel: 'Games Quality Zone'
   },
   {
     slug: 'scavland-consumables-and-medical-supplies',
@@ -382,6 +406,9 @@ export const jaGuides: Guide[] = [
       ['序盤のレイドで優先して持ち帰るべきものは？', '包帯や清潔な水などの医療品、使用中の銃に適合する弾薬、そしてスパークプラグやライターなど1マスで高値のつく電子部品です。']
     ],
     related: ['scavland-beginner-guide', 'scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide'],
+    videoId: 'l84-X9wHjeM',
+    videoTitle: '【Scavland】効率的な金策とおすすめルート攻略 (Nukov)',
+    videoChannel: 'Nukov',
     keywords: ['scavland loot', 'scavland 日本語', 'scavland 換金', 'scavland クラフト素材', 'scavland アイテム']
   },
   {
@@ -418,6 +445,9 @@ export const jaGuides: Guide[] = [
       ['バンカー攻略に最適な装備は？', '狭いコンクリート通路での遭遇戦になるため、散弾銃（ショットガン）や大口径ライフル、暗所用のフラッシュライトの携行を推奨します。']
     ],
     related: ['scavland-beginner-guide', 'scavland-loot-and-scavenging', 'scavland-sleep-and-world-reset-guide', 'scavland-weapon-repair-and-durability'],
+    videoId: 'Xbq3ZHQf1YE',
+    videoTitle: '【Scavland】全地下バンカーの入り方とシークレットルーム攻略 (Game Detox)',
+    videoChannel: 'Game Detox Dopamine',
     keywords: ['scavland バンカー', 'scavland 赤キーカード', 'scavland 地下バンカー', 'scavland bunker', 'scavland bunker entrance', 'scavland red keycard']
   }
 ];

@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import GuideCard from '../../../components/GuideCard.astro';
 import AdSlot from '../../../components/AdSlot.astro';
+import VideoEmbed from '../../../components/VideoEmbed.astro';
 import { allRuGuides, ruGuideBySlug } from '../../../data/guides-ru';
 
 export function getStaticPaths() {
@@ -182,6 +183,15 @@ if (pageTitle.length > 60) {
           </p>
 
           <h2 id="field-notes">Тактические заметки</h2>
+          {guide.videoId && (
+            <VideoEmbed
+              id={guide.videoId}
+              title={guide.videoTitle || guide.title}
+              description={guide.description}
+              channelTitle={guide.videoChannel || "YouTube Creator / Official"}
+              captionLabel="Официальный видеоисточник"
+            />
+          )}
           <ul>
             {guide.steps.map((step) => <li set:html={step} />)}
           </ul>

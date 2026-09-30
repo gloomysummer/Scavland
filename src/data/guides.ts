@@ -1,5 +1,5 @@
 export type Evidence = 'Official' | 'Personal in-game test' | 'Community demonstration' | 'Unverified';
-export type Guide = { slug:string; title:string; shortTitle:string; description:string; category:string; image:string; imageAlt:string; evidence:Evidence; updated:string; answer:string; steps:string[]; facts:[string,string][]; faq:[string,string][]; related:string[]; keywords:string[] };
+export type Guide = { slug:string; title:string; shortTitle:string; description:string; category:string; image:string; imageAlt:string; evidence:Evidence; updated:string; answer:string; steps:string[]; facts:[string,string][]; faq:[string,string][]; related:string[]; keywords:string[]; videoId?: string; videoTitle?: string; videoChannel?: string; };
 
 export const guides: Guide[] = [
   {
@@ -71,7 +71,10 @@ export const guides: Guide[] = [
       ['Is Scavland available on Epic Games or GOG?', 'No, Scavland is currently exclusive to Steam Early Access. Developer NoShadow plans to explore DRM-free GOG distribution closer to V1.0.']
     ],
     related: ['scavland-beginner-guide', 'scavland-release-date', 'scavland-system-requirements'],
-    keywords: ['scavland price', 'scavland steam price', 'scavland cost', 'scavland discount', 'scavland regional price']
+    keywords: ['scavland price', 'scavland steam price', 'scavland cost', 'scavland discount', 'scavland regional price'],
+    videoId: 'sulLD0aNdOk',
+    videoTitle: "SCAVLAND But I Don't Waste Your Time (Before You Buy & Features)",
+    videoChannel: 'The Singleplayer Squad'
   },
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
@@ -106,7 +109,10 @@ export const guides: Guide[] = [
       ['Can you navigate the death screen with a controller?', 'Yes. As of Update 0.7.0, the Death Screen features full gamepad support with dedicated actions (Continue, Load Game, New Game, Exit, Try Again) instead of the previous generic any-key interaction.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-system-requirements'],
-    keywords: ['scavland steam deck', 'scavland handheld', 'scavland 60fps settings', 'scavland controller layout', 'scavland battery life']
+    keywords: ['scavland steam deck', 'scavland handheld', 'scavland 60fps settings', 'scavland controller layout', 'scavland battery life'],
+    videoId: 'Zx0Uon9RJM4',
+    videoTitle: 'Czy SCAVLAND to S.T.A.L.K.E.R. w 2D?! Test wydajności na Steam Deck LCD 512 GB',
+    videoChannel: 'ciastek'
   },
   {
     slug: 'scavland-vs-zero-sievert-comparison',
@@ -137,7 +143,10 @@ export const guides: Guide[] = [
       ['Can I play Scavland with friends?', 'Co-op extraction is currently the #1 priority on developer NoShadow\'s Early Access roadmap, whereas Zero Sievert is exclusively solo.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts'],
-    keywords: ['scavland vs zero sievert', 'scav land vs zero sievert', 'scavland similar games', 'scavland stalker like', 'scavland co op', 'zero sievert alternatives']
+    keywords: ['scavland vs zero sievert', 'scav land vs zero sievert', 'scavland similar games', 'scavland stalker like', 'scavland co op', 'zero sievert alternatives'],
+    videoId: 'ETFXsWYOVlM',
+    videoTitle: "5 Top Down Extraction Shooters That AREN'T ZERO Sievert...",
+    videoChannel: 'Oscar Mikey'
   },
   {
     slug: 'scavland-explorer-mode-and-campfire-healing',
@@ -168,7 +177,10 @@ export const guides: Guide[] = [
       ['Is this mode permanent for my save?', 'Explorer Mode can be selected to tailor the difficulty curve of your survival experience, easing the steep learning curve for new scavengers.']
     ],
     related: ['scavland-beginner-guide', 'scavland-quests-and-contracts', 'scavland-death-and-loot-recovery'],
-    keywords: ['scavland explorer mode', 'scavland campfire healing', 'scavland stamina limit', 'scavland stash size', 'scavland v0.5.169']
+    keywords: ['scavland explorer mode', 'scavland campfire healing', 'scavland stamina limit', 'scavland stash size', 'scavland v0.5.169'],
+    videoId: 'LKSUTqQc0HA',
+    videoTitle: 'Day One Update With MASSIVE Changes to Scavland! | Patch 0.5.169 Notes',
+    videoChannel: 'Empty_Estus'
   },
   {
     slug: 'scavland-beginner-guide',
@@ -211,7 +223,10 @@ export const guides: Guide[] = [
       ['What happens if I die during a raid?', 'In standard Returner Mode, your equipped gear and backpack remain at your death coordinate for recovery, while your safehouse stash remains completely secure. The rebuilt Death Screen allows you to Continue or Load Game directly.']
     ],
     related: ['scavland-map-and-locations', 'scavland-weapon-repair-and-durability', 'scavland-crafting-and-trading', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-tactical-database-weapons-loot'],
-    keywords: ['scavland beginner guide', 'scavlands', 'scavlands beginner guide', 'scavland starter tips', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide']
+    keywords: ['scavland beginner guide', 'scavlands', 'scavlands beginner guide', 'scavland starter tips', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide'],
+    videoId: 'JRAOxOjeoc8',
+    videoTitle: 'SCAVLAND - Stop Dying Early: The Complete Beginner Guide',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-anomaly-scanner-and-artifacts',
@@ -287,7 +302,10 @@ export const guides: Guide[] = [
       ['Can AI bandits loot or despawn your dropped items?', 'No. While enemies may patrol near your body, hostile AI scavengers do not loot or despawn items from player corpse bags.']
     ],
     related: ['scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-explorer-mode-and-campfire-healing'],
-    keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death']
+    keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death'],
+    videoId: 'WyI0vB4qE7A',
+    videoTitle: 'Surviving 4 Hours in Scavland With 0 Deaths is brutal',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-weapons-and-attachments',
@@ -325,7 +343,10 @@ export const guides: Guide[] = [
       ['Do shotgun pellets stack multiple bleed effects?', 'No. Update 0.7.0 capped shotguns to apply a maximum of one bleed effect per shot, preventing excessive bleed stacking from individual pellets.']
     ],
     related: ['scavland-weapon-repair-and-durability', 'scavland-starter-loadouts-and-budget-builds', 'scavland-tactical-database-weapons-loot', 'scavland-beginner-guide'],
-    keywords: ['scavland weapons', 'scavland weapon', 'scavland all weapons', 'scavland attachments', 'scavland weapons guide', 'scavland weapon repair', 'scavland gun durability', 'scavland secondary weapon', 'scavland weapon mods', 'scavland gun jam']
+    keywords: ['scavland weapons', 'scavland weapon', 'scavland all weapons', 'scavland attachments', 'scavland weapons guide', 'scavland weapon repair', 'scavland gun durability', 'scavland secondary weapon', 'scavland weapon mods', 'scavland gun jam'],
+    videoId: 'JQDdSAYkOkQ',
+    videoTitle: 'Scavland Ultimate Weapon - 63 Dragoon Item Location',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-loot-and-scavenging',
@@ -360,7 +381,10 @@ export const guides: Guide[] = [
       ['Should I hoard junk items for future updates?', 'Keep a working reserve of 10x Weapon Springs and 20x Metal Scrap for weapon and armor repairs. Miscellaneous junk like rope, empty tin cans, and light bulbs should be sold immediately for rubles to upgrade your backpack and tactical rig.']
     ],
     related: ['scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-beginner-guide'],
-    keywords: ['scavland loot guide', 'scavland what to sell', 'scavland valuable junk', 'scavland rope crafting', 'scavland batteries use', 'scavland spark plugs barter', 'scavland vendor prices', 'scavland inventory management']
+    keywords: ['scavland loot guide', 'scavland what to sell', 'scavland valuable junk', 'scavland rope crafting', 'scavland batteries use', 'scavland spark plugs barter', 'scavland vendor prices', 'scavland inventory management'],
+    videoId: 'l84-X9wHjeM',
+    videoTitle: 'Making MONEY and Getting LOOT in SCAVLAND',
+    videoChannel: 'Nukov'
   },
   {
     slug: 'scavland-quests-and-contracts',
@@ -398,7 +422,10 @@ export const guides: Guide[] = [
       ['How often do contract boards and merchant jobs reset?', 'Job offerings rotate every 24 in-game hours or immediately after sleeping in a bed with a mattress. In Update 0.7.0, only beds equipped with mattresses allow sleeping to skip time.']
     ],
     related: ['scavland-anomaly-scanner-and-artifacts', 'scavland-hospital-quest-and-medical-supplies', 'scavland-factions-progression-and-traders', 'scavland-factions-and-reputation', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland storyline', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items']
+    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland storyline', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
+    videoId: 'lmeGDw8lihw',
+    videoTitle: 'Scavland Part 9 Catching Current',
+    videoChannel: 'Zquietgamer'
   },
   { slug:'scavland-factions-and-reputation', shortTitle:'Factions & reputation', title:'Scavland Factions & Reputation Guide: 10 Organizations, Vendor Tiers & Raisa Truces', description:'Breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, vendor tier unlocks, territory borders, and diplomatic truces with Raisa.', category:'Progression', image:'/images/cards/card_3_quests_factions.webp', imageAlt:'Faction interaction and outpost checkpoints across the Zalesye wasteland', evidence:'Official Steam announcements & community reports · Early Access 0.7.0', updated:'2026-09-16', answer:'Faction standing in Scavland directly controls trade prices, vendor inventory tiers, safehouse access, and roaming patrol hostility. The Early Access release features 6 active <strong>Act I</strong> factions (<strong>Rada</strong>, <strong>Commonfolk</strong>, <strong>Acolytes</strong>, <strong>Mechanists</strong>, <strong>Palatines</strong>, <strong>Gunners</strong>) alongside 9 named outpost merchants. Fulfilling daily contracts raises reputation (<strong>+50 to +200 Rep</strong>), while hostile standing (< -300 Rep) triggers shoot-on-sight orders that can be cleared by purchasing diplomatic reconciliation contracts from Raisa.', steps:['01 · Identify Interactive Act I Factions: Concentrate on the 6 active factions operating across the <strong>Zalesye</strong> sector in 0.6.3. The remaining 4 factions are scheduled for upcoming northern expansions.','02 · Unlock Vendor Inventory Tiers: Specialized traders (such as Mechanists and Gunners) hold military-grade weapons and optical attachments behind Tier 2 and Tier 3 reputation gates.','03 · Leverage Zero-Reputation Merchants: <strong>Trader Volodymyr</strong> requires zero reputation rank on his entire inventory, making him the premier emergency supplier for fresh spawns and disgraced scavengers.','04 · Avoid Cascading Hostility: Raiding faction checkpoints or completing assassination bounties drops standing with targeted groups. Dropping below -300 Rep makes border sentries permanently hostile.','05 · Clear Hostile Standings with Raisa: If marked hostile by a major syndicate, visit diplomat Raisa at the Neutral Chapel to purchase courier truce tasks and reset reputation back to neutral. In Hotfix 0.7.2, Raisa was updated to offer follow-up jobs without waiting for the current one to finish.'], facts:[['Act I Interactive Factions','6 active groups (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners)'],['Roadmap Factions','4 northern factions scheduled for Act II and Act III expansion releases'],['Zero-Rep Merchant','Trader Volodymyr at Crossroads annex sells weapons with zero rank requirements'],['Hostility Threshold','Reputation below -300 triggers shoot-on-sight sentry engagement'],['Diplomatic Reset','Raisa at Neutral Chapel offers truce courier contracts; Hotfix 0.7.2 allows follow-up jobs without waiting for current job completion'],['Verified Baseline','Early Access 0.7.0']], faq:[['How do I increase faction reputation in Scavland?','Complete repeatable <strong>24-hour</strong> daily contracts, turn in requested trade supplies (electronic boards, spark plugs), and eliminate rival bandit threats.'],['Can I trade with factions if I have negative reputation?','Vendors become inaccessible if your standing drops to Hostile (< -300 Rep). However, trader Volodymyr at the Crossroads annex always trades regardless of faction standing.'],['How do I stop a faction from shooting me on sight?','Visit diplomat Raisa at the Neutral Chapel and fulfill a non-violent courier reconciliation contract to reset your reputation back to Neutral (0 Rep).'],['Does Scavland feature full faction wars?','Yes. Factions maintain dynamic border conflicts and checkpoint patrols throughout Zalesye, creating organic firefights during overworld raids.']], related:['scavland-factions-progression-and-traders','scavland-quests-and-contracts','scavland-crafting-and-trading','scavland-faction-identification-and-hud-guide'], keywords:['scavland factions','scavland reputation','scavland 10 factions','scavland raisa reconciliation','scavland volodymyr trader'] },
   { slug:'scavland-mist', shortTitle:'The Mist', title:'Scavland Mist guide: hazards and exploration', description:'What the official material establishes about the Mist, plus a careful field-note format for testing its dangers.', category:'Exploration', image:'/images/cards/card_4_mist_exploration.webp', imageAlt:'A misty hazardous zone in Scavland', evidence:'Official Steam announcements', updated:'2026-08-29', answer:'Prepare for the <strong>Mist</strong> as an unpredictable environmental hazard. Use your <strong>Anomaly Scanner</strong> to detect spatial anomalies inside foggy zones, equip <strong>gas filters</strong>, and always maintain an emergency extraction heading.', steps:['Mark the edge of a <strong>Mist</strong> zone before committing supplies.','Equip the Anomaly Scanner on hotkey <strong>[3]</strong> to sweep for hidden spatial anomalies and artifacts.','Monitor radiation counters and filter integrity while operating in dense fog.','Leave an <strong>emergency beacon</strong> or compass bearing for the return trip.'], facts:[['Official scope','The Mist is a central world mystery and environmental danger.'],['Testing needed','Reliable resistance items, damage values and safe routes remain unverified.']], faq:[['Is the <strong>Mist</strong> a damage zone?','Yes, dense <strong>Mist</strong> clusters cause environmental toxicity, sensory disruption, and aggressive mutant spawns.'],['Can artifacts spawn in the Mist?','Yes, high-tier anomalies and valuable artifacts are frequently concentrated within deep Mist pockets.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-map-and-locations','scavland-beginner-guide'], keywords:['scavland mist','scavland mist guide','scavland fog hazards'] },
@@ -439,7 +466,10 @@ export const guides: Guide[] = [
       ['Where can I sleep on the map to pass time and restore health?', 'Since Update 0.7.0, only beds with mattresses can be used for sleeping. When away from mattress beds, resting beside a lit campfire grants doubled passive health regeneration.']
     ],
     related: ['scavland-beginner-guide', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-crafting-and-trading', 'scavland-loot-and-scavenging', 'scavland-quests-and-contracts'],
-    keywords: ['scavland map', 'scavland full map', 'scavland map game', 'scavland game map', 'scavland locations', 'scavland bunker location', 'scavland bunker entrance', 'scavland arcadia', 'scavland mechanist base', 'scavland mudlark camp', 'scavland microrayion', 'scavland interactive map', 'scavland map guide']
+    keywords: ['scavland map', 'scavland full map', 'scavland map game', 'scavland game map', 'scavland locations', 'scavland bunker location', 'scavland bunker entrance', 'scavland arcadia', 'scavland mechanist base', 'scavland mudlark camp', 'scavland microrayion', 'scavland interactive map', 'scavland map guide'],
+    videoId: 'yG9k2NjxSWs',
+    videoTitle: 'We Found ARCADIA! Deep Into Bandit Territory | SCAVLAND',
+    videoChannel: 'Mr Feudal'
   },
   {
     slug: 'scavland-crafting-and-trading',
@@ -476,7 +506,10 @@ export const guides: Guide[] = [
       ['What changed with crafting and stashes in Update 0.7.0?', 'Stashes and crafting tables were added to all main camps across Zalesye. Stash expansions can also be purchased from a Trader for 50,000 Rubles to unlock an additional Stash tab in the main village.']
     ],
     related: ['scavland-starter-loadouts-and-budget-builds', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts', 'scavland-merchant-prices-and-barter-guide'],
-    keywords: ['scavland crafting recipes', 'scavland trading guide', 'scavland workbench recipes', 'scavland cooking', 'scavland food crafting', 'scavland campfire cooking', 'scavland campfire healing', 'scavland stamina recovery', 'scavland medical blueprints', 'scavland volodymyr trader']
+    keywords: ['scavland crafting recipes', 'scavland trading guide', 'scavland workbench recipes', 'scavland cooking', 'scavland food crafting', 'scavland campfire cooking', 'scavland campfire healing', 'scavland stamina recovery', 'scavland medical blueprints', 'scavland volodymyr trader'],
+    videoId: '6aY3Lfc_w8g',
+    videoTitle: 'Scavland Locations of Merchants Selling Important Items',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-weapon-repair-and-durability',
@@ -520,7 +553,10 @@ export const guides: Guide[] = [
       ['What spare parts should I carry for emergency field repairs?', 'Always carry 2x Weapon Springs, 1x Electronic Relay, and 1x Gun Field Tool in your tactical rig. In irradiated sectors where weapon degradation accelerates by 2x, these components let you restore guns above the 70% threshold without returning to base.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands', 'scavland-sleep-and-world-reset-guide', 'scavland-merchant-prices-and-barter-guide'],
-    keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location', 'scavland no blueprint weapon repair', 'scavland volodymyr repair blueprint', 'scavland mosin repair']
+    keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location', 'scavland no blueprint weapon repair', 'scavland volodymyr repair blueprint', 'scavland mosin repair'],
+    videoId: 'G2QsRe2kj_I',
+    videoTitle: 'Scavland 0.7.2 "Expert" Weapon Repair Kit: Blueprint, Unlock Requirements, and Details',
+    videoChannel: 'Game Detox Dopamine'
   },
   { slug:'scavland-mist-survival-and-radiation', shortTitle:'Mist & Radiation', title:'Scavland Mist survival guide: radiation protection & hazard zones', description:'Surviving the toxic Mist, managing gas mask filter degradation, and farming high-tier artifacts safely in Zalesye.', category:'Exploration', image:'/images/screenshots/steam_ss_09.webp', imageAlt:'A scavenger navigating dense Mist and radiation hazards with a detector', evidence:'Official Steam announcements', updated:'2026-08-31', answer:'The <strong>Mist</strong> is a dynamic weather event that blankets sectors in toxic particulates and psychoactive anomalies. Entering the <strong>Mist</strong> requires a <strong>Gas Mask</strong> with active Filter Durability, Anti-Rad Meds, and an <strong>Anomaly Scanner</strong>. In return, the <strong>Mist</strong> triggers the highest tier artifact spawns and rare mutant drops.', steps:['Check the weather barometer or radio broadcast for incoming <strong>Mist</strong> warnings before venturing into open lowlands.','Equip a Gas Mask with at least <strong>80%</strong> filter charge; carry spare charcoal filter cartridges in quick slots.','Equip the Anomaly Scanner on hotkey <strong>[3]</strong> to sweep for anomaly clusters that only materialize during Mist events.','Avoid prolonged firefights in fog, as gunfire attracts specialized nocturnal stalker mutants.','Use <strong>Rad-Away</strong> injectors and <strong>charcoal pills</strong> immediately if your radiation dosage meter enters the yellow hazard zone.'], facts:[['Dynamic shift','Mist weather alters mutant aggression patterns, increases anomaly frequency, and reduces vision radius to 15 meters.'],['Loot quality','Artifacts spawned during dense Mist cycles possess 2x barter value and enhanced passive stat modifiers.']], faq:[['How long do gas mask filters last in the <strong>Mist</strong>?','Standard Tier-1 filters last approximately 8 minutes in active <strong>Mist</strong>; high-grade military filters last up to 20 minutes.'],['What happens if my filter runs out in the Mist?','Your character incurs progressive radiation poisoning and toxic lung damage, draining stamina and max health.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-mist','scavland-death-and-loot-recovery'], keywords:['scavland mist survival','scavland gas mask filters','scavland radiation guide','scavland anomaly farming'] },
   {
@@ -555,7 +591,10 @@ export const guides: Guide[] = [
       ['What is the tactical purpose of the Thread Cutter rifle?', 'The Thread Cutter sits in Scavland\u2019s arsenal of 25+ weapons. Update 0.6.0 rebalanced many long guns, including the Thread Cutter, from 2 inventory rows to 3, so carrying long-range firepower trades off against pack space; Update 0.7.0 improved its accuracy, range, durability and fire rate.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland beginner guide', 'scavland weapon durability', 'scavland weapon jamming', 'scavland gun repair', 'scavland cleaning oil']
+    keywords: ['scavland beginner guide', 'scavland weapon durability', 'scavland weapon jamming', 'scavland gun repair', 'scavland cleaning oil'],
+    videoId: 'xQKTC-8BYVU',
+    videoTitle: 'Scavland 0.7.2 "Expert" Firearm Damage Test (Target: Bear)',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-early-access-launch-faq-and-roadmap',
@@ -586,7 +625,10 @@ export const guides: Guide[] = [
       ['Is multiplayer coop supported at EA launch?', 'Early Access launches with focused singleplayer survival. <strong>Multiplayer coop</strong> and companion AI are planned for later roadmap milestones.']
     ],
     related: ['scavland-factions-and-reputation', 'scavland-quests-and-contracts', 'scavland-beginner-guide'],
-    keywords: ['scavland early access', 'scavland factions', 'scavland progression', 'scavland roadmap', 'scavland launch build']
+    keywords: ['scavland early access', 'scavland factions', 'scavland progression', 'scavland roadmap', 'scavland launch build'],
+    videoId: 'GKck5sYNwGw',
+    videoTitle: 'Scavland - Early Access Release Date Trailer',
+    videoChannel: 'Scavland (Official)'
   },
   {
     slug: 'scavland-night-survival-and-stealth-mechanics',
@@ -658,7 +700,10 @@ export const guides: Guide[] = [
       ['What is the best way to earn early rubles?', 'Take basic scavenging contracts from the Red Common Folk in the starting settlement and sell medical supplies specifically to doctors and weapon parts to gunsmiths for full value.']
     ],
     related: ['scavland-factions-and-reputation', 'scavland-quests-and-contracts', 'scavland-crafting-and-trading'],
-    keywords: ['scavland factions guide', 'scavland progression system', 'scavland no skill tree', 'scavland trader tiers', 'scavland daily contracts', 'scavland mechanists']
+    keywords: ['scavland factions guide', 'scavland progression system', 'scavland no skill tree', 'scavland trader tiers', 'scavland daily contracts', 'scavland mechanists'],
+    videoId: 'CNmucSzrD0o',
+    videoTitle: 'Our Reputation Is PAYING OFF! Rank 2 Traders Unlocked | SCAVLAND',
+    videoChannel: 'Mr Feudal'
   },
   {
     slug: 'scavland-coop-and-multiplayer-mechanics',
@@ -760,7 +805,10 @@ export const guides: Guide[] = [
       ['What is the best weapon loadout for clearing subterranean bunkers?', 'Bring close-quarters shotguns with buckshot or high-penetration rifles along with a flashlight to handle dark narrow concrete corridors and sudden mutant ambushes.']
     ],
     related: ['scavland-weapons-and-attachments', 'scavland-loot-and-scavenging', 'scavland-weapon-repair-and-durability', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker entrance', 'scavland bunker b4', 'scavland red keycard', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction']
+    keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker entrance', 'scavland bunker b4', 'scavland red keycard', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction'],
+    videoId: 'Xbq3ZHQf1YE',
+    videoTitle: 'Scavland How do you enter all the currently identified bunkers and secret bunkers?..',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-starter-loadouts-and-budget-builds',
@@ -798,7 +846,10 @@ export const guides: Guide[] = [
       ['What is the best budget firearm to pair with early armor?', 'The Mikhail 74U in 5.45x39mm and 12-gauge shotguns provide the best balance of low repair cost, readily scavenged ammunition, and stopping power against mutant ambushes.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-crafting-and-trading', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland armor', 'scavland body armor', 'scavland armor repair', 'scavland armor durability', 'scavland starter loadout', 'scavland budget build', 'scavland best early weapons', 'scavland mikhail 74u', 'scavland tactical pants', 'scavland armor tiers']
+    keywords: ['scavland armor', 'scavland body armor', 'scavland armor repair', 'scavland armor durability', 'scavland starter loadout', 'scavland budget build', 'scavland best early weapons', 'scavland mikhail 74u', 'scavland tactical pants', 'scavland armor tiers'],
+    videoId: 'uLK0n3hEfhk',
+    videoTitle: "SCAVLAND | Bunker Didn't Stand a Chance Against This Loadout",
+    videoChannel: 'Confused Dango'
   },
   {
     slug: 'scavland-hospital-quest-and-medical-supplies',
@@ -872,7 +923,10 @@ export const guides: Guide[] = [
       ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Common items at 75% and Clothing at 60%; Grigory pays top prices for Weapon Attachments and 50% for Common items (he no longer buys food or medical supplies); and Nadja pays 90% for Common and 80% for Crafting items.']
     ],
     related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-safehouses-and-fast-travel-guide', 'scavland-weapon-repair-and-durability', 'scavland-factions-and-reputation'],
-    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide', 'scavland loot triage']
+    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide', 'scavland loot triage'],
+    videoId: 'UZLVFxYaSnU',
+    videoTitle: "Scavland 0.6.0 Key NPC: Check changes to Volodymyr's sales list.",
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-sleep-and-world-reset-guide',
@@ -910,7 +964,10 @@ export const guides: Guide[] = [
       ['What changed with sleep audio in Update 0.7.0?', 'Update 0.7.0 replaced the repetitive looping sleep music with a concise audio stinger and a quiet snapshot on wakeup, while fixing chunk unloading bugs that previously disrupted sleep.']
     ],
     related: ['scavland-beginner-guide', 'scavland-night-survival-and-stealth-mechanics', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-safehouses-and-fast-travel-guide', 'scavland-map-and-locations'],
-    keywords: ['scavland sleep', 'scav land sleep', 'scavland sleep mechanics', 'scavland bed with mattress', 'scavland sleep heal', 'scavland campfire healing', 'scavland bunker reset 3 hours', 'scavland 24 hour reset', 'scavland wait time']
+    keywords: ['scavland sleep', 'scav land sleep', 'scavland sleep mechanics', 'scavland bed with mattress', 'scavland sleep heal', 'scavland campfire healing', 'scavland bunker reset 3 hours', 'scavland 24 hour reset', 'scavland wait time'],
+    videoId: 'IhLy3jap04Y',
+    videoTitle: 'Scavland Patch 0.6.0 Full Overview: Sleep System, Stash Crafting & Trader Rework',
+    videoChannel: 'Games Quality Zone'
   },
   {
     slug: 'scavland-faction-identification-and-hud-guide',
@@ -945,7 +1002,10 @@ export const guides: Guide[] = [
       ['How do I fix negative reputation after accidental friendly fire?', 'Travel to the Neutral Chapel in central Zalesye and speak to diplomat Raisa. She offers courier truce contracts to reset hostile standings back to Neutral (0 Rep).']
     ],
     related: ['scavland-factions-and-reputation', 'scavland-factions-progression-and-traders', 'scavland-quests-and-contracts', 'scavland-beginner-guide'],
-    keywords: ['scavland faction identification', 'scavland friendly fire', 'scavland hud reticle', 'scavland faction uniforms', 'scavland green dot npc', 'scavland how to tell friendly from hostile']
+    keywords: ['scavland faction identification', 'scavland friendly fire', 'scavland hud reticle', 'scavland faction uniforms', 'scavland green dot npc', 'scavland how to tell friendly from hostile'],
+    videoId: 'Hc7e62PoCsM',
+    videoTitle: 'Scavland: 10 Things the Game DOESN’T Tell You!',
+    videoChannel: 'Gaming Plus TV'
   },
   {
     slug: 'scavland-developer-commitments-and-patch-roadmap',
@@ -1001,7 +1061,10 @@ export const guides: Guide[] = [
       'scavland stash expansion 50000',
       'scavland developer commitments',
       'scavland update 0.7.0'
-    ]
+    ],
+    videoId: 'L502erfg0hU',
+    videoTitle: 'Scavland - Early Access Available Now',
+    videoChannel: 'Scavland (Official)'
   },
   {
     slug: 'scavland-patch-0-6-0-update-and-changes',
@@ -1051,7 +1114,10 @@ export const guides: Guide[] = [
       'scavland steam deck settings',
       'scavland we hear you',
       'scavland balance changes'
-    ]
+    ],
+    videoId: 'al38eVuaieA',
+    videoTitle: "Scavland got updated AGAIN! And it's HUGE... | Patch 0.6.0",
+    videoChannel: 'Oscar Mikey'
   },
   {
     slug: 'scavland-patch-0-7-0-update-and-changes',
@@ -1109,7 +1175,10 @@ export const guides: Guide[] = [
       'scavland 50000 rubles stash',
       'scavland weapon durability 0.7.0',
       'scavland death screen rebuilt'
-    ]
+    ],
+    videoId: 'JGUGZXmNQhQ',
+    videoTitle: 'They pushed ANOTHER HUGE UPDATE For Scavland! | Patch 0.7.0',
+    videoChannel: 'Oscar Mikey'
   },
   {
     slug: 'scavland-safehouses-and-fast-travel-guide',

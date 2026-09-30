@@ -31,7 +31,10 @@ export const deGuides: Guide[] = [
       ['Wie regeneriert man Leben ohne Medkits?', 'Im <strong>Explorer-Modus</strong> oder an entfachten Lagerfeuern in sicheren Camps regeneriert sich die Gesundheit langsam.'],
       ['Wo findet man das erste Gewehr?', 'Durchsuche Waffenbehälter am verlassenen Militärposten im Norden des Startgebiets.']
     ],
-    related: ['scavland-weapons-and-attachments', 'scavland-price-and-regional-editions', 'scavland-vs-zero-sievert-comparison']
+    related: ['scavland-weapons-and-attachments', 'scavland-price-and-regional-editions', 'scavland-vs-zero-sievert-comparison'],
+    videoId: 'JRAOxOjeoc8',
+    videoTitle: 'SCAVLAND Einsteiger-Guide: Überleben im ersten Raid (Mars)',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -61,7 +64,10 @@ export const deGuides: Guide[] = [
       ['Steigt der Preis nach Verlassen des Early Access?', '<strong>NoShadow</strong> hat noch keinen neuen Preis für die Vollversion angekündigt. Solange sich Scavland im Early Access befindet, gilt der aktuelle <strong>Steam-Preis</strong>; Änderungen würden über die Steam-News mitgeteilt.'],
       ['Wird Koop-Multiplayer extra kosten?', 'Nein, das geplante Koop-Update wird für alle Besitzer des Hauptspiels kostenlos nachgeliefert.']
     ],
-    related: ['scavland-steam-deck-and-handheld-settings', 'scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison']
+    related: ['scavland-steam-deck-and-handheld-settings', 'scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison'],
+    videoId: 'sulLD0aNdOk',
+    videoTitle: 'Scavland Kaufberatung & Features vor dem Kauf (The Singleplayer Squad)',
+    videoChannel: 'The Singleplayer Squad'
   },
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
@@ -91,7 +97,10 @@ export const deGuides: Guide[] = [
       ['Ist der Text auf dem Display lesbar?', 'Ja, die Option "<strong>Große Benutzeroberfläche</strong>" in den Einstellungen skaliert Item-Beschreibungen perfekt.'],
       ['Funktioniert Gyro-Zielen?', 'Ja, <strong>Gyroskop-Unterstützung</strong> lässt sich bequem über das Steam-Controller-Menü hinzuschalten.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-price-and-regional-editions']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-price-and-regional-editions'],
+    videoId: 'Zx0Uon9RJM4',
+    videoTitle: 'Scavland Steam Deck Performance & Handheld-Test (ciastek)',
+    videoChannel: 'ciastek'
   },
   {
     slug: 'scavland-vs-zero-sievert-comparison',
@@ -121,7 +130,10 @@ export const deGuides: Guide[] = [
       ['Lohnt sich Scavland für Zero-Sievert-Spieler?', 'Definitiv. Wer die Atmosphäre von <strong>Zero Sievert</strong> mag, findet in Scavland noch mehr taktische Tiefe und Realismus.'],
       ['Welches Spiel ist schwerer?', 'Scavland verzeiht wegen des detaillierten Schadensmodells und <strong>Blutverlusts</strong> weniger Stellungsfehler.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-steam-deck-and-handheld-settings']
+    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-steam-deck-and-handheld-settings'],
+    videoId: 'ETFXsWYOVlM',
+    videoTitle: 'Top-Down Extraction Shooter Vergleich: Scavland & Zero Sievert (Oscar Mikey)',
+    videoChannel: 'Oscar Mikey'
   },
   {
     slug: 'scavland-weapons-and-attachments',
@@ -151,7 +163,10 @@ export const deGuides: Guide[] = [
       ['Welche Waffe ist am besten für Anfänger?', 'Die AK-74 wegen leicht verfügbarer <strong>5.45x39mm-Munition</strong> bei Händlern aller Fraktionen.'],
       ['Wo kann man Waffen reparieren?', 'An der <strong>Werkbank</strong> im Unterschlupf oder per Feldreparatur-Kit.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison', 'scavland-starter-loadouts-and-budget-builds']
+    related: ['scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison', 'scavland-starter-loadouts-and-budget-builds'],
+    videoId: 'JQDdSAYkOkQ',
+    videoTitle: 'Scavland Waffen-Fundort: 63 Dragoon (Game Detox Dopamine)',
+    videoChannel: 'Game Detox Dopamine'
   },
   {
     slug: 'scavland-mist-survival-and-radiation',
@@ -208,7 +223,10 @@ export const deGuides: Guide[] = [
       ['Können KI-Gegner meinen Rucksack plündern?', 'Ja, feindliche Plünderer nehmen hochwertige Waffen mit, wenn sie vor dir eintreffen.'],
       ['Gehen Quest-Gegenstände verloren?', '<strong>Quest-Dokumente</strong> sind im separaten <strong>Auftragsbuch</strong> geschützt.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-mist-survival-and-radiation', 'scavland-factions-and-reputation']
+    related: ['scavland-beginner-guide', 'scavland-mist-survival-and-radiation', 'scavland-factions-and-reputation'],
+    videoId: 'WyI0vB4qE7A',
+    videoTitle: 'Todesmechanik & Loot-Rückholung in Scavland (Mars)',
+    videoChannel: 'Mars'
   },
   {
     slug: 'scavland-factions-and-reputation',
@@ -269,7 +287,10 @@ export const deGuides: Guide[] = [
       ['Warum regeneriert sich meine Ausdauer nach dem Schlafen nicht?', 'Das liegt am verborgenen Debuff "<strong>Starke Dehydrierung</strong>". Trinke sauberes Wasser und raste an einem brennenden Lagerfeuer.'],
       ['Respawnen Kisten in Bunkern nach dem Schlafen?', 'Nein. Bunker und <strong>Kartenschlüssel-Tresore</strong> besitzen eigene mehrstündige Sperrzeiten, um Endlos-Farming zu unterbinden.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts']
+    related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts'],
+    videoId: 'IhLy3jap04Y',
+    videoTitle: 'Scavland Schlafsystem & Welt-Reset Patch 0.6.0 (Games Quality Zone)',
+    videoChannel: 'Games Quality Zone'
   },
   {
     slug: 'scavland-consumables-and-medical-supplies',
