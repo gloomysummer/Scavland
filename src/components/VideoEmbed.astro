@@ -17,7 +17,8 @@ const {
   captionLabel = "Official Video Reference"
 } = Astro.props;
 
-const embedUrl = `https://www.youtube-nocookie.com/embed/${id}`;
+const uniqueId = `yt-${id}-${Math.random().toString(36).substring(2, 7)}`;
+const embedUrl = `https://www.youtube.com/embed/${id}`;
 const thumbnailUrl = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
 
 const schema = {
@@ -32,16 +33,9 @@ const schema = {
 ---
 
 <div class="video-embed-wrapper">
-  <!-- 16:9 Zero-CLS Aspect Ratio Container -->
-  <div class="video-embed-container">
-    <iframe
-      class="video-embed-iframe"
-      src={embedUrl}
-      title={title}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-      loading="lazy"
-    ></iframe>
+  <!-- 16:9 Zero-CLS Aspect Ratio Container with YouTube IFrame API Target -->
+  <div class="video-embed-container" data-yt-container data-video-id={id} data-video-title={title}>
+    <div id={uniqueId} class="yt-player-target"></div>
   </div>
   <p class="video-embed-caption">
     {captionLabel}: <span class="video-title">{title}</span> <span class="video-channel">· {channelTitle}</span>
@@ -50,6 +44,95 @@ const schema = {
   <!-- VideoObject JSON-LD for Google Rich Snippets -->
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
 </div>
+
+<script>
+  declare global {
+    interface Window {
+      YT: any;
+      onYouTubeIframeAPIReady: () => void;
+      __scavland_yt_inited?: boolean;
+    }
+  }
+
+  function initYTPlayers() {
+    const containers = document.querySelectorAll<HTMLElement>('.video-embed-container[data-video-id]:not([data-initialized])');
+    if (!containers.length) return;
+
+    if (!window.YT || !window.YT.Player) {
+      if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScript = document.getElementsByTagName('script')[0];
+        if (firstScript && firstScript.parentNode) {
+          firstScript.parentNode.insertBefore(tag, firstScript);
+        } else {
+          document.head.appendChild(tag);
+        }
+      }
+
+      const prevCallback = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function() {
+        if (typeof prevCallback === 'function') {
+          try { prevCallback(); } catch(e) {}
+        }
+        initYTPlayers();
+      };
+      return;
+    }
+
+    containers.forEach((container) => {
+      container.setAttribute('data-initialized', 'true');
+      const target = container.querySelector<HTMLElement>('.yt-player-target');
+      const videoId = container.getAttribute('data-video-id');
+      const videoTitle = container.getAttribute('data-video-title') || 'YouTube Video';
+      if (!target || !videoId) return;
+
+      let player: any = null;
+      try {
+        player = new window.YT.Player(target, {
+          videoId: videoId,
+          width: '100%',
+          height: '100%',
+          playerVars: {
+            autoplay: 1,
+            mute: 1,
+            loop: 1,
+            playlist: videoId,
+            controls: 1,
+            showinfo: 0,
+            rel: 0,
+            modestbranding: 1,
+            playsinline: 1
+          },
+          events: {
+            onReady: (event: any) => {
+              try {
+                event.target.mute();
+                event.target.playVideo();
+              } catch(e) {}
+            }
+          }
+        });
+
+        // Click to unmute interaction
+        container.addEventListener('click', () => {
+          if (player && typeof player.isMuted === 'function' && player.isMuted()) {
+            player.unMute();
+          }
+        }, { once: true });
+      } catch (err) {
+        console.warn('YT Player init failed:', err);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initYTPlayers);
+  } else {
+    initYTPlayers();
+  }
+  document.addEventListener('astro:page-load', initYTPlayers);
+</script>
 
 <style>
   .video-embed-wrapper {
@@ -65,7 +148,8 @@ const schema = {
     background: #000;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
-  .video-embed-iframe {
+  .video-embed-container iframe,
+  .video-embed-container .yt-player-target {
     position: absolute;
     top: 0;
     left: 0;
