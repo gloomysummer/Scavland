@@ -1558,6 +1558,1275 @@ export const ruGuides: Guide[] = [
 ],
     related: ["scavland-consumables-and-medical-supplies", "scavland-hospital-quest-and-medical-supplies", "scavland-mist-survival-and-radiation", "scavland-sleep-and-world-reset-guide"]
   }
+,
+  {
+    slug: 'scavland-mk47-assault-rifle',
+    category: "\u0421\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: MK-47 Rifle Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "MK-47 Rifle Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e MK-47 Rifle Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Ballistics Manifest & Update 0.6.0 Patch Baseline',
+    updated: '2026-09-30',
+    image: '/images/cards/card_2_weapons_gear.webp',
+    imageAlt: "MK-47 tactical assault rifle with modular attachments and magazine in Scavland",
+    answer: "The <strong>MK-47</strong> is widely celebrated as the most versatile general-purpose assault rifle in Scavland's Early Access arsenal. Chambered in heavy <strong>7.62x39mm Soviet</strong> ammunition, the MK-47 delivers crushing armor-penetrating kinetic energy that punches directly through Tier 2 and Tier 3 bandit plate carriers in 2 to 3 center-mass impacts. In <strong>Update 0.6.0</strong>, developer NoShadow reclassified the MK-47 into the <strong>Basic weapon tier</strong>, making it significantly more accessible from early faction quartermasters. Paired with <strong>Update 0.7.0</strong> durability buffs that doubled rifle longevity per point, a fully modded MK-47 serves as the premier primary weapon for high-threat bunker raids across <strong>Sector B-4</strong>.",
+    steps: [
+      "01 \u00b7 Understand Caliber Superiority (7.62x39mm): Firing standard military 7.62x39mm intermediate cartridges, the MK-47 deals roughly <strong>42 base damage</strong> with high armor penetration, vastly outclassing 9mm carbines against armored deserter squads.",
+      "02 \u00b7 Acquire from Merchants or Bunker Crates: Purchase the MK-47 from <strong>Trader Volodymyr</strong> at the Crossroads annex upon reaching <strong>Trader Rank 2</strong>, or loot military weapon cases inside the subterranean vaults of <strong>Sector B-4</strong>.",
+      "03 \u00b7 Optimal Muzzle & Recoil Brake Selection: Because horizontal recoil climbs sharply during full-auto bursts, install a tactical compensator or muzzle brake at a safehouse workbench to reduce recoil kick by up to <strong>28%</strong>.",
+      "04 \u00b7 Optical Sights Synergy (Kobra vs PSO-1): For close-to-medium clearance, mount a <strong>Kobra red dot sight</strong> to maintain clear peripheral awareness without stamina ADS penalties. For perimeter overwatch, attach a <strong>PU 3.5x scope</strong>.",
+      "05 \u00b7 Magazine Capacities & Reload Drills: While standard steel magazines hold 30 rounds, hunting military caches can yield 40-round extended drum assemblies, eliminating vulnerability during mutant swarms.",
+      "06 \u00b7 Prevent Field Degradation & Jams: Apply <strong>Gun Lube</strong> starting at 80% durability and use cleaning kits before condition drops below <strong>70%</strong>. Never fire the MK-47 below <strong>30% durability</strong> to avoid catastrophic breech explosions."
+],
+    facts: [
+      [
+            "Weapon Classification",
+            "Assault Rifle (Reclassified to Basic Tier in Update 0.6.0)"
+      ],
+      [
+            "Primary Caliber",
+            "7.62x39mm Soviet Intermediate Round"
+      ],
+      [
+            "Effective Range",
+            "Extended by +1 to +2 tiles across all rifles in Update 0.6.0"
+      ],
+      [
+            "Explosion Threshold",
+            "Only risks catastrophic failure when fired below 30% durability"
+      ],
+      [
+            "Magazine Options",
+            "30-round standard steel box / 40-round extended drum"
+      ],
+      [
+            "Barter Price Range",
+            "Approximately 18,500 to 24,000 Rubles from faction brokers"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Ballistics Manifest & Update 0.6.0 Patch Baseline"
+      ]
+],
+    faq: [
+      [
+            "Why was the MK-47 reclassified as Basic tier in Update 0.6.0?",
+            "Developers shifted the MK-47 into the Basic tier so survivors could acquire a viable armor-penetrating assault rifle earlier in the Act I progression loop."
+      ],
+      [
+            "Which merchant sells the MK-47 in Zalesye?",
+            "Trader Volodymyr at the Crossroads annex stocks the MK-47, and Mechanist quartermasters sell it once you achieve Tier 2 faction reputation."
+      ],
+      [
+            "What is the best muzzle attachment for the MK-47?",
+            "The Tactical Muzzle Compensator is recommended because it tames the heavy vertical muzzle climb during 3-round burst firing."
+      ],
+      [
+            "Can the MK-47 equip a suppressor?",
+            "Yes, threading a standard 7.62mm suppressor onto the barrel muffles audio ripple from 200m down to roughly 40m, perfect for stealth night raids."
+      ],
+      [
+            "How does the MK-47 compare to the Mikhail 74U?",
+            "The MK-47 hits harder against plate armor due to 7.62x39mm rounds, while the Mikhail 74U has lighter recoil and uses lighter 5.45x39mm ammunition."
+      ]
+],
+    related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-weapon-repair-and-durability"],
+    videoId: '92NCjgl7aLo',
+    videoTitle: "We Got Some NEW GUNS! | Scavland EP 5",
+    videoChannel: "Oscar Mikey"
+  },
+  {
+    slug: 'scavland-63-dragoon-sniper-rifle',
+    category: "\u0421\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: 63 Dragoon Sniper \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "63 Dragoon Sniper",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e 63 Dragoon Sniper \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Sniper Ballistics Testing & Community Weapon Manifests · Update 0.7.2',
+    updated: '2026-09-30',
+    image: '/images/cards/card_2_weapons_gear.webp',
+    imageAlt: "63 Dragoon designated marksman rifle with PSO-1 optic in Scavland",
+    answer: "For scavengers prioritizing extreme-range lethality, the <strong>63 Dragoon</strong> stands as the pinnacle designated marksman rifle (DMR) in Scavland. Firing full-power <strong>7.62x54mmR rimmed rifle cartridges</strong>, the 63 Dragoon delivers over <strong>85 base kinetic damage</strong>, guaranteeing instantaneous one-shot eliminations on unarmored human sentries and dropping heavily armored Gunner bodyguards in two precise hits. When outfitted with an authentic <strong>PSO-1 4x optical scope</strong> and supported by prone stamina stabilization, the 63 Dragoon allows operatives to neutralize perimeter defenses around <strong>Arcadia</strong> and <strong>Sector B-4</strong> well beyond the enemy AI's <strong>25-meter visual detection radius</strong>.",
+    steps: [
+      "01 \u00b7 Master 7.62x54mmR Stopping Power: The 63 Dragoon penetrates through Tier 1, 2, and 3 body armor vests effortlessly, ignoring up to <strong>75% of passive armor damage reduction</strong> on direct vital chest hits.",
+      "02 \u00b7 Locate the 63 Dragoon in Military Bunkers: This high-tier DMR spawns in locked security weapon footlockers within <strong>Sector B-4</strong> (requiring a <strong>Red Keycard</strong>) or can be bartered from <strong>Tier 3 Mechanist brokers</strong>.",
+      "03 \u00b7 Equip the PSO-1 4x Optical Reticle: Mount a PSO-1 scope at a safehouse workbench. The illuminated rangefinder chevron reticle lets you estimate target distances accurately up to <strong>60 meters</strong>.",
+      "04 \u00b7 Manage Aim-Down-Sights (ADS) Stamina Drain: Holding weapon ADS while aiming through high-magnification glass continuously drains stamina. Crouch or lean against sandbag barricades to halve your stamina consumption rate.",
+      "05 \u00b7 Pair with Suppressed PM Nikolay PB Sidearm: Because unsuppressed 7.62x54mmR rifle fire projects a thunderous <strong>200-meter audio ripple</strong>, always carry a silent sidearm like the <strong>PM Nikolay PB</strong> to deal with stray roaches without alerting the zone.",
+      "06 \u00b7 Prevent Durability Failures: In <strong>Update 0.7.0</strong>, precision rifles last twice as many shots per durability point, but maintaining condition above <strong>70%</strong> with universal repair kits is crucial to prevent mid-fight ejection jams."
+],
+    facts: [
+      [
+            "Weapon Class",
+            "Designated Marksman Rifle (Semi-Automatic Sniper)"
+      ],
+      [
+            "Primary Cartridge",
+            "7.62x54mmR Rimmed Full-Power Military Cartridge"
+      ],
+      [
+            "Base Damage Rating",
+            "85+ Damage (Highest single-shot kinetic impact in class)"
+      ],
+      [
+            "Standard Optic",
+            "PSO-1 4x Optical Scope with Stadiametric Rangefinder"
+      ],
+      [
+            "Magazine Size",
+            "10-round detachable steel box magazine"
+      ],
+      [
+            "Effective Range",
+            "Up to 60+ meters across wasteland clearings"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Sniper Ballistics Testing & Community Weapon Manifests \u00b7 Update 0.7.2"
+      ]
+],
+    faq: [
+      [
+            "Where is the guaranteed spawn location for the 63 Dragoon?",
+            "While not guaranteed, the highest spawn probability is found in the locked armory vault of Sector B-4 behind the Red Keycard door, or through Tier 3 Mechanist barter."
+      ],
+      [
+            "Does the 63 Dragoon kill bandits in one shot?",
+            "Yes, center-mass or headshot impacts on unarmored or light armored targets kill instantly. Heavy plate armored sentries take 2 body hits."
+      ],
+      [
+            "Why does my sniper reticle sway so heavily?",
+            "Weapon sway increases when character stamina is low or when suffering from arm fractures. Crouch to steady your aim and apply a Wooden Splint if fractured."
+      ],
+      [
+            "Can I attach a suppressor to the 63 Dragoon?",
+            "Yes, heavy 7.62x54mm tactical suppressors can be mounted, reducing weapon sound signature significantly during long-range skirmishes."
+      ],
+      [
+            "How does the 63 Dragoon compare to the Leon 1895?",
+            "The Leon 1895 is a budget bolt-action rifle, while the 63 Dragoon is semi-automatic with much higher fire rate, larger magazine capacity, and superior armor penetration."
+      ]
+],
+    related: ["scavland-best-weapons-tier-list", "scavland-weapons-and-attachments", "scavland-ammo-types-and-damage", "scavland-red-keycard-and-bunker-loot-recovery"],
+    videoId: 'JQDdSAYkOkQ',
+    videoTitle: "Scavland Ultimate Weapon - 63 Dragoon Item Location",
+    videoChannel: "Game Detox Dopamine"
+  },
+  {
+    slug: 'scavland-toz34-shotgun',
+    category: "\u0421\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: TOZ-34 Shotgun Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "TOZ-34 Shotgun Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e TOZ-34 Shotgun Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Shotgun Spread Testing & Update 0.7.0 Balance Notes',
+    updated: '2026-09-30',
+    image: '/images/cards/card_2_weapons_gear.webp',
+    imageAlt: "TOZ-34 double-barrel shotgun and 12-gauge ammunition shells in Scavland",
+    answer: "When exploring claustrophobic Soviet corridors or clearing abandoned hospitals, no firearm provides greater stopping power than the iconic <strong>TOZ-34</strong> over-under double-barrel shotgun. Chambered in heavy <strong>12-gauge shells</strong>, the TOZ-34 delivers colossal close-quarters burst damage capable of neutralizing charging <strong>Hellhounds</strong> and staggering lethal <strong>Tongue Monsters (Lickers)</strong> before they can execute grapple maneuvers. In <strong>Update 0.7.0</strong>, shotgun balance was refined to cap bleed status at a maximum of <strong>one bleed effect per shot</strong> rather than stacking per pellet, reinforcing the TOZ-34 as an essential, high-reliability secondary defensive tool.",
+    steps: [
+      "01 \u00b7 Understand High-Stagger Mechanics: Each 12-gauge blast fires a dense cluster of pellets that interrupts enemy attack animations, knocking beasts backward and creating space for tactical reloads.",
+      "02 \u00b7 Acquire from Starter Quests or Settlement Vendors: The TOZ-34 can be bought inexpensively from <strong>Anatoly</strong> in central <strong>Zalesye</strong> for under <strong>5,000 Rubles</strong>, making it the premier Day 1 emergency firearm.",
+      "03 \u00b7 Master the Double-Tap Trigger Technique: With two loaded barrels, fire a double-tap burst in rapid succession to instantly eliminate high-threat mutants before retreating behind doorways.",
+      "04 \u00b7 Swap Ammunition: Buckshot vs Slugs: Use standard <strong>12-gauge Buckshot</strong> against unarmored mutants and feral beasts. When entering bandit checkpoints, swap to <strong>12-gauge Slugs</strong> to punch through steel body armor.",
+      "05 \u00b7 Mitigate the 2-Round Capacity Limit: Because the TOZ-34 only holds 2 shells, bind the reload key to a comfortable mouse thumb button and practice stutter-stepping behind cover while reloading.",
+      "06 \u00b7 Maintain Clean Barrels with Glue and Gun Lube: Shotguns suffer minimal mechanical jam risk compared to automatic rifles, but maintaining condition above <strong>50%</strong> ensures maximum pellet velocity."
+],
+    facts: [
+      [
+            "Weapon Mechanism",
+            "Over-Under Double-Barrel Break Action Shotgun"
+      ],
+      [
+            "Ammunition Type",
+            "12-Gauge (Buckshot / Magnum / Heavy Slug)"
+      ],
+      [
+            "Magazine Capacity",
+            "2 Shells (Instantaneous dual discharge capability)"
+      ],
+      [
+            "Bleed Cap Rule",
+            "Maximum 1 bleed effect per shot since Update 0.7.0"
+      ],
+      [
+            "Best Role",
+            "Point-blank mutant defense and subterranean bunker clearance"
+      ],
+      [
+            "Barter Cost",
+            "Approximately 4,200 to 5,500 Rubles in early settlements"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Shotgun Spread Testing & Update 0.7.0 Balance Notes"
+      ]
+],
+    faq: [
+      [
+            "Is the TOZ-34 shotgun effective against Tongue Monsters?",
+            "Yes! The heavy stagger from 12-gauge buckshot knocks Tongue Monsters out of their grapple windup, making it the most reliable counter to licker ambushes."
+      ],
+      [
+            "Can the TOZ-34 be modded with optical sights?",
+            "The standard TOZ-34 features traditional iron bead sights, but tactical choke adapters can be attached at a workbench to tighten pellet spread."
+      ],
+      [
+            "What should I do if a mutant survives both shotgun barrels?",
+            "Immediately execute an evasive combat roll [Space / Right Stick] backward to open distance while executing a break-action reload."
+      ],
+      [
+            "Are 12-gauge slugs better than buckshot in Scavland?",
+            "Buckshot is superior against soft mutant flesh; slugs are superior against human bandits wearing Tier 2 and Tier 3 ballistic armor vests."
+      ],
+      [
+            "Where can I find cheap 12-gauge shells?",
+            "Physician Anna and settlement traders sell boxes of buckshot, or you can craft shells at your safehouse workbench using Gunpowder and Scrap Metal."
+      ]
+],
+    related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-starter-loadouts-and-budget-builds"],
+    videoId: 'uLK0n3hEfhk',
+    videoTitle: "SCAVLAND | Bunker Didn't Stand a Chance Against This Loadout",
+    videoChannel: "Confused Dango"
+  },
+  {
+    slug: 'scavland-leon1895-rifle',
+    category: "\u0421\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Leon 1895 Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Leon 1895 Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Leon 1895 Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Patch 0.6.2 & 0.7.0 Ballistics Changelogs',
+    updated: '2026-09-30',
+    image: '/images/cards/card_2_weapons_gear.webp',
+    imageAlt: "Leon 1895 bolt-action hunting rifle on workbench in Scavland",
+    answer: "Few firearms in Scavland have undergone as dramatic a transformation as the <strong>Leon 1895</strong> rifle. Originally relegated to a sluggish starter weapon, developer NoShadow delivered a massive combat rework in <strong>Hotfix 0.6.2</strong> and reinforced it in <strong>Update 0.7.0</strong>, granting the entire Leon 1895 family (Short, Standard, and Long variants) a permanent <strong>+50% projectile damage buff</strong> alongside a crisp <strong>75 fire rate</strong>. Operating as a dependable, budget-friendly marksman rifle, the buffed Leon 1895 drops human bandits and mutated stalkers in 1 to 2 shots, making it the premier value-for-money primary weapon for frugal scavengers roaming <strong>Zalesye</strong>.",
+    steps: [
+      "01 \u00b7 Leverage the +50% Damage Overhaul: Thanks to official balance buffs, single-shot chest impacts deal lethal damage that rivals high-end sniper rifles, allowing players to punch well above their economic weight.",
+      "02 \u00b7 Choose the Right Variant (Short vs Long): The <strong>Leon 1895 Short</strong> provides fast handling and lightweight agility for brush fights, while the <strong>Leon 1895 Long</strong> extends effective range and tightens barrel sway for long-range engagements.",
+      "03 \u00b7 Mount Vintage Glass Optics: Attach a period-correct <strong>PU 3.5x optical scope</strong> to turn the Leon into an exceptional precision marksman weapon capable of clearing bandit watchtowers with ease.",
+      "04 \u00b7 Budget Hunting Ammunition Availability: Unlike scarce full-power cartridges, ammunition for the Leon 1895 is widely distributed across civilian dressers, rusted car trunks, and early trader inventories.",
+      "05 \u00b7 Engage Enemies from Cover at Range: Because the Leon relies on manual bolt cycling between shots, always engage hostiles from behind concrete barriers or foliage to avoid return fire during cycling pauses.",
+      "06 \u00b7 Field Care with Cleaning Rods: Apply inexpensive <strong>Cleaning Rods</strong> at 70% durability. With the doubled durability per point added in Update 0.7.0, a single repair keeps the Leon firing for dozens of raids."
+],
+    facts: [
+      [
+            "Damage Buff Status",
+            "+50% Projectile Damage applied in Update 0.6.2 / 0.7.0"
+      ],
+      [
+            "Fire Rate Specification",
+            "Rated at 75 fire rate with smooth bolt-cycling animation"
+      ],
+      [
+            "Available Variants",
+            "Short (High mobility), Standard, and Long (Max range)"
+      ],
+      [
+            "Recommended Optic",
+            "PU 3.5x Optical Scope for 40m+ precision targeting"
+      ],
+      [
+            "Ammo Economy",
+            "Exceptional; abundant civilian ammunition found throughout Act I"
+      ],
+      [
+            "Durability Profile",
+            "Rifle durability pool doubled in Update 0.7.0"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Patch 0.6.2 & 0.7.0 Ballistics Changelogs"
+      ]
+],
+    faq: [
+      [
+            "Did the Leon 1895 get buffed recently in Scavland?",
+            "Yes! Update 0.6.2 and 0.7.0 increased projectile damage across all Leon 1895 models by +50%, making it one of the hardest-hitting budget rifles in the game."
+      ],
+      [
+            "Where can I find the Leon 1895 in early raids?",
+            "The Leon 1895 frequently spawns in rural farmhouses and hunting cabins across northern Zalesye, or can be bartered cheaply from Anatoly."
+      ],
+      [
+            "What is the difference between Leon 1895 Short and Long?",
+            "The Short variant has higher ergonomics and less weight for close encounters, while the Long variant offers tighter accuracy and longer effective range."
+      ],
+      [
+            "Can the Leon 1895 one-shot bandits?",
+            "Yes, center-mass hits on unarmored scavengers and headshots against light helmets will kill human targets in a single shot."
+      ],
+      [
+            "How do I fix barrel sway on the Leon 1895?",
+            "Crouch before aiming down sights and ensure character stamina is above 50% to eliminate reticle drift."
+      ]
+],
+    related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-starter-loadouts-and-budget-builds", "scavland-ammo-types-and-damage"]
+  },
+  {
+    slug: 'scavland-mikhail-74u-carbine',
+    category: "\u0421\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Mikhail 74U Carbine \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Mikhail 74U Carbine",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Mikhail 74U Carbine \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Ballistics Manifest & Update 0.7.0 Stock Overhaul',
+    updated: '2026-09-30',
+    image: '/images/cards/card_2_weapons_gear.webp',
+    imageAlt: "Mikhail 74U compact assault carbine with folded stock in Scavland",
+    answer: "Combining the rapid cyclic fire of an assault rifle with the tight handling ergonomics of a submachine gun, the <strong>Mikhail 74U</strong> is the ultimate compact carbine for room-clearing expeditions across <strong>Zalesye</strong>. Firing standard military <strong>5.45x39mm Soviet</strong> rounds, the 74U delivers high-velocity projectile impacts with manageable recoil. In <strong>Update 0.7.0</strong>, developer NoShadow expanded stock compatibility across the 74u, Bahadir, and MK-47 families, allowing survivors to mount ergonomic tactical folding stocks and reflex red dots that make snapping between targets in subterranean bunkers like <strong>Sector B-4</strong> virtually instantaneous.",
+    steps: [
+      "01 \u00b7 Master 5.45x39mm Military Ballistics: The 5.45mm cartridge offers flat ballistic trajectories with high muzzle velocity, making it superior to pistol-caliber SMGs at medium combat ranges.",
+      "02 \u00b7 Exploit Update 0.7.0 Modular Stock Overhaul: Safehouse workbenches now support cross-family stock attachments. Equipping a skeletonized folding stock reduces weapon weight by <strong>1.2kg</strong> while boosting ADS draw speed.",
+      "03 \u00b7 Optimal Attachments for Bunker Clearing: Attach an <strong>OKP-7</strong> or <strong>Kobra holographic optic</strong> alongside an angled tactical grip. This tightens hip-fire spread when rounding blind bunker corridors.",
+      "04 \u00b7 High Cyclic Rate & Burst Control: The 74U fires rapidly; avoid holding down full-auto at ranges beyond 15 meters. Fire disciplined 2-to-3 round trigger taps to group impacts on target.",
+      "05 \u00b7 Secondary Role in High-Tier Loadouts: Because the 74U occupies minimal inventory grid space, many veteran operatives carry it in secondary weapon slots alongside a long-range <strong>63 Dragoon</strong> DMR.",
+      "06 \u00b7 Universal Repair Kit Upkeep: Keep a supply of <strong>Universal Repair Kits</strong> in your safehouse. Since Update 0.7.0, repair kits restore equipment condition regardless of wear level."
+],
+    facts: [
+      [
+            "Weapon Category",
+            "Compact Assault Carbine (Submachine Profile)"
+      ],
+      [
+            "Caliber",
+            "5.45x39mm Soviet Military Cartridge"
+      ],
+      [
+            "Modular Stocks",
+            "Expanded cross-family stock compatibility in Update 0.7.0"
+      ],
+      [
+            "Weight Efficiency",
+            "Under 3.0kg fully modded (High mobility and low stamina drain)"
+      ],
+      [
+            "Best Application",
+            "Indoor CQB, corridor room-clearing, and bunker raids"
+      ],
+      [
+            "Magazine Sizes",
+            "30-round standard magazine / 45-round RPK extended box"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Ballistics Manifest & Update 0.7.0 Stock Overhaul"
+      ]
+],
+    faq: [
+      [
+            "Where can I find the Mikhail 74U in Scavland?",
+            "The Mikhail 74U frequently drops from military bandit squad leaders near railway checkpoints or can be purchased from Mechanist vendors."
+      ],
+      [
+            "What changed with the 74u in Update 0.7.0?",
+            "Update 0.7.0 expanded stock compatibility between the 74u, Bahadir, and MK-47 platforms, and doubled rifle durability points across the board."
+      ],
+      [
+            "Is the 74U better than the MK-47 for bunker raids?",
+            "In tight bunker corridors, the 74U has faster ADS draw speed and higher fire rate, making it slightly easier to handle around sharp corners than the heavier MK-47."
+      ],
+      [
+            "What ammo type should I load into the 74U?",
+            "Standard 5.45x39mm FMJ rounds handle unarmored targets; load 5.45mm Armor-Piercing (AP) ammo when raiding armored Gunner checkpoints."
+      ],
+      [
+            "Can the Mikhail 74U mount a silencer?",
+            "Yes, standard Soviet 5.45mm suppressors can be installed at any safehouse workbench."
+      ]
+],
+    related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-red-keycard-and-bunker-loot-recovery"],
+    videoId: 'fQC7mMzd7ss',
+    videoTitle: "Scavland Ultimate Weapon - Mikhail 50 (Pristine) Item Location",
+    videoChannel: "Game Detox Dopamine"
+  },
+  {
+    slug: 'scavland-pm-nikolay-pb-pistol',
+    category: "\u0421\u043d\u0430\u0440\u044f\u0436\u0435\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: PM Nikolay PB Pistol \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "PM Nikolay PB Pistol",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e PM Nikolay PB Pistol \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Stealth Audio Waveform Testing · Update 0.7.2',
+    updated: '2026-09-30',
+    image: '/images/cards/card_2_weapons_gear.webp',
+    imageAlt: "PM Nikolay PB integrally suppressed tactical sidearm in Scavland",
+    answer: "In a post-Soviet wasteland where unsuppressed gunfire reverberates across a <strong>200-meter audio ripple</strong>, the <strong>PM Nikolay PB</strong> is the indisputable king of stealth sidearms. Built with an authentic integral barrel sound suppressor, this dedicated covert handgun fires subsonic <strong>9x18mm Makarov</strong> ammunition with virtually zero acoustic signature. In Scavland, firing the PM Nikolay PB alert radius is restricted to less than <strong>15 meters</strong>, allowing operatives to eliminate solitary bandit lookouts, mutated roaches, and perimeter scouts during dangerous night incursions without triggering regional garrison alarms.",
+    steps: [
+      "01 \u00b7 Eliminate Audio Ripple Alerts: Unlike unsuppressed sidearms that attract hostiles from 200m away, the PB's integral silencer ensures shots outside 15m remain completely unheard by enemy AI.",
+      "02 \u00b7 Exploit Low Ammunition Costs: 9x18mm cartridges are the most abundant and inexpensive ammunition in the game, allowing scavengers to clear low-tier threats without burning scarce rifle ammunition.",
+      "03 \u00b7 Aim for Vital Headshots: Because 9x18mm rounds have limited armor penetration, always aim for unarmored heads or faces. Headshots apply a <strong>2.5x critical multiplier</strong>, dropping scouts instantly.",
+      "04 \u00b7 Ideal Night Raid Secondary: Pair the PM Nikolay PB with optical <strong>Binoculars</strong> for nighttime stealth raids between <strong>21:00 and 05:30</strong>, preserving your location against nocturnal snipers.",
+      "05 \u00b7 Upgrade Sights and Grips: Install ergonomic rubberized grips at a workbench to reduce weapon draw time and virtually eliminate horizontal reticle wobble.",
+      "06 \u00b7 Inexpensive Field Repairs: Handguns require very few materials to maintain. Applying basic <strong>Glue</strong> or <strong>Gun Lube</strong> above 80% durability keeps the PB operating reliably for dozens of infiltrations."
+],
+    facts: [
+      [
+            "Weapon Classification",
+            "Integrally Suppressed Semi-Automatic Sidearm"
+      ],
+      [
+            "Caliber Specification",
+            "9x18mm Subsonic Makarov Round"
+      ],
+      [
+            "Sound Signature",
+            "Under 15 meters (Compared to 200m for unsuppressed firearms)"
+      ],
+      [
+            "Magazine Capacity",
+            "8-round single-stack steel box magazine"
+      ],
+      [
+            "Durability Maintenance",
+            "Usable with Glue and Gun Lube from 80% condition"
+      ],
+      [
+            "Weight Profile",
+            "Under 1.0kg (Minimal carry capacity impact)"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Stealth Audio Waveform Testing \u00b7 Update 0.7.2"
+      ]
+],
+    faq: [
+      [
+            "Where can I find the PM Nikolay PB sidearm?",
+            "The PM Nikolay PB spawns in officer lockboxes inside military outposts or can be purchased from Tier 2 Mechanist and Rada traders."
+      ],
+      [
+            "Can the PM Nikolay PB pierce body armor?",
+            "Standard 9x18mm ammo struggles against heavy plate carriers. When using the PB against armored guards, aim exclusively for the unarmored head or legs."
+      ],
+      [
+            "Does the suppressor wear out on the PM Nikolay PB?",
+            "No! Unlike attached screw-on silencers that degrade in some survival games, the PB's integral suppressor has permanent durability linked to the firearm."
+      ],
+      [
+            "Is the PM Nikolay PB better than the Bahadir 918?",
+            "For stealth, yes. The Bahadir offers higher durability per point (15 shots per point), but is unsuppressed and alerts hostiles across 200 meters."
+      ],
+      [
+            "What is the primary role of this sidearm in a raid?",
+            "To silently dispatch solitary roaches, mutant rats, and perimeter sentries without alerting nearby camps or burning expensive rifle ammo."
+      ]
+],
+    related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-night-survival-and-stealth-mechanics", "scavland-ammo-types-and-damage"]
+  },
+  {
+    slug: 'scavland-arcadia-outpost-guide',
+    category: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Arcadia Outpost Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Arcadia Outpost Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Arcadia Outpost Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcement Feed & Update 0.7.0 Outpost Notes',
+    updated: '2026-09-30',
+    image: '/images/screenshots/ss_08_overworld_map.webp',
+    imageAlt: "Arcadia regional outpost camp, fortifications, and player stash in Scavland",
+    answer: "Situated in the dense eastern ruins of <strong>Zalesye</strong> past the fortified rail embankment, <strong>Arcadia</strong> serves as one of the four critical regional forward operating bases introduced to support wasteland survival. In <strong>Update 0.7.0</strong>, developer NoShadow upgraded Arcadia from a passive landmark into a fully operational staging outpost by installing a permanent <strong>Crafting Table</strong> and a dedicated <strong>Player Stash</strong> locker. While outpost lockers feature a fixed single-tab capacity and operate with independent local inventories that do not mirror your central village stash, Arcadia provides an invaluable intermediate resupply and triage station during deep eastern contract runs.",
+    steps: [
+      "01 \u00b7 Navigate to Arcadia from Central Zalesye: Depart central <strong>Zalesye</strong> heading directly east along the main asphalt road. Watch for concrete checkpoint ruins, bypass bandit sandbag barriers, and enter the walled compound of Arcadia.",
+      "02 \u00b7 Utilize the Dedicated Outpost Stash (Update 0.7.0): Store heavy mechanical scrap, spare ammunition boxes, and reserve medical supplies in the camp locker to avoid encumbrance penalties on return trips.",
+      "03 \u00b7 Field Crafting at Arcadia's Workbench: The on-site crafting station allows survivors to craft <strong>Wooden Splints</strong>, assemble <strong>Sterile Bandages</strong>, and repair worn weapons without backtracking across the map.",
+      "04 \u00b7 Interact with Resident Faction Merchants: Arcadia houses local black-market traders who buy regional industrial salvage and offer localized courier tasks for easy reputation gains.",
+      "05 \u00b7 Campfire Resting & Health Regeneration: Rest beside Arcadia's central campfire to double your passive health recovery while consuming boiled water and rations.",
+      "06 \u00b7 Defend Against Roaming Bandit Patrols: Hostile bandit squads patrol the perimeter fringes outside Arcadia's walls. Clear sentries using suppressed sidearms before venturing out on foraging runs."
+],
+    facts: [
+      [
+            "Outpost Geographic Location",
+            "Eastern sector of Zalesye beyond the railway berm"
+      ],
+      [
+            "Workbench Availability",
+            "Crafting Table added in Update 0.7.0"
+      ],
+      [
+            "Player Stash Storage",
+            "1-Tab Player Stash installed in Update 0.7.0 (Independent inventory)"
+      ],
+      [
+            "Key Hub Function",
+            "Eastern forward resupply, field repairs, and loot staging"
+      ],
+      [
+            "Campfire Health Regen",
+            "Active campfire grants 2x passive health recovery (Update 0.7.0)"
+      ],
+      [
+            "Surrounding Hostiles",
+            "Heavy bandit presence and roaming mutant packs on perimeter"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcement Feed & Update 0.7.0 Outpost Notes"
+      ]
+],
+    faq: [
+      [
+            "Where is Arcadia located on the Scavland map?",
+            "Arcadia is located in the eastern region of Zalesye. Follow the eastern road past the railway embankment until you spot fortified perimeter fences."
+      ],
+      [
+            "Does the stash in Arcadia share items with the main Zalesye stash?",
+            "No. Outpost stashes installed in Update 0.7.0 maintain independent local inventories and do not sync with the central village stash."
+      ],
+      [
+            "Can I repair my weapons at Arcadia?",
+            "Yes, Update 0.7.0 added a fully functional crafting table to Arcadia, allowing field repairs and ammo assembly."
+      ],
+      [
+            "Is Arcadia safe from mutant attacks?",
+            "Inside the walled compound is safe; however, hostile bandits and Hellhounds frequently roam the perimeter immediately outside the gates."
+      ],
+      [
+            "Can I sleep at Arcadia to pass the night?",
+            "You can only sleep to advance time if the camp possesses a bed with a mattress (Update 0.7.0 requirement). Otherwise, rest at the campfire for healing."
+      ]
+],
+    related: ["scavland-map-and-locations", "scavland-safehouses-and-fast-travel-guide", "scavland-patch-0-7-0-update-and-changes", "scavland-starter-loadouts-and-budget-builds"],
+    videoId: 'yG9k2NjxSWs',
+    videoTitle: "We Found ARCADIA! Deep Into Bandit Territory | SCAVLAND",
+    videoChannel: "Mr Feudal"
+  },
+  {
+    slug: 'scavland-mechanist-base-guide',
+    category: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Mechanist Base Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Mechanist Base Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Mechanist Base Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcements & Faction Data · Update 0.7.0',
+    updated: '2026-09-30',
+    image: '/images/screenshots/ss_08_overworld_map.webp',
+    imageAlt: "Mechanist industrial base, workbenches, and weapon modifications in Scavland",
+    answer: "Recognized by its industrial orange signage, fortified steel barricades, and mechanical lathe workshops, the <strong>Mechanist Base</strong> is the premier technological and gunsmithing hub in Scavland. Situated in the industrialized northern sector of <strong>Zalesye</strong>, this fortified stronghold houses high-tier weapon specialists who barter rare modular weapon attachments, advanced scopes, and armor repair kits. In <strong>Update 0.7.0</strong>, the Mechanist Base received a dedicated <strong>Player Stash</strong> and advanced <strong>Crafting Station</strong>, establishing it as an essential forward base for scavengers preparing to infiltrate the subterranean vaults of <strong>Sector B-4</strong>.",
+    steps: [
+      "01 \u00b7 Locate the Mechanist Industrial Compound: Head north from central Zalesye toward the factory smokestacks. Pass through outer guard towers where Mechanist sentries in orange jumpsuits stand guard.",
+      "02 \u00b7 Unlock High-Tier Attachment Inventories: Fulfill 24-hour engineering contracts to build reputation. Reaching <strong>Tier 2 and Tier 3 reputation</strong> unlocks high-magnification scopes, compensators, and tactical foregrips.",
+      "03 \u00b7 Utilize Advanced Weapon Workbenches: The base features specialized workbenches equipped for stock modification, barrel threading, and installing 40-round drum magazines on platforms like the <strong>MK-47</strong>.",
+      "04 \u00b7 Barter Industrial Electronics for Weapon Parts: Mechanist quartermasters pay top dollar for salvaged <strong>Spark Plugs</strong>, <strong>Copper Wiring</strong>, and <strong>Household Batteries</strong>, exchanging them directly for rifle components.",
+      "05 \u00b7 Utilize the Update 0.7.0 Camp Stash: Drop off heavy machine tools, iron scrap, and excess weapon receivers into the single-tab local stash to eliminate encumbrance before sweeping Sector B-4.",
+      "06 \u00b7 Maintain Faction Standing above -300 Rep: Never discharge weapons inside the compound. Firing on Mechanists imposes severe penalties (<strong>-100 to -300 Rep</strong>), causing automated sentry turrets to open fire on sight."
+],
+    facts: [
+      [
+            "Faction Alignment",
+            "The Mechanists (Industrial tech and engineering syndicate)"
+      ],
+      [
+            "Geographic Landmark",
+            "Northern industrial sector marked by factory stacks"
+      ],
+      [
+            "Key Specialty",
+            "High-tier weapon attachments, optical scopes, and toolkits"
+      ],
+      [
+            "Workbench Features",
+            "Full weapon attachment station and crafting table (Update 0.7.0)"
+      ],
+      [
+            "Local Stash Facility",
+            "1-Tab Player Stash installed in Update 0.7.0"
+      ],
+      [
+            "Hostility Threshold",
+            "Dropping below -300 Rep triggers shoot-on-sight turret defenses"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcements & Faction Data \u00b7 Update 0.7.0"
+      ]
+],
+    faq: [
+      [
+            "Where is the Mechanist Base located in Scavland?",
+            "In the northern industrial sector of Zalesye, marked by red brick factory smokestacks and orange safety signage."
+      ],
+      [
+            "What items do Mechanist traders specialize in?",
+            "They specialize in weapon attachments, optical scopes (PSO-1), suppressors, extended magazines, and armor repair kits."
+      ],
+      [
+            "How do I increase reputation with the Mechanists?",
+            "Complete repeatable daily jobs involving electronics delivery, scrap collection, and clearing nearby mutant nests."
+      ],
+      [
+            "Can I modify my weapons at the Mechanist Base?",
+            "Yes, Update 0.7.0 added crafting tables to all main camps, allowing full attachment customization and field maintenance."
+      ],
+      [
+            "What happens if I accidentally shoot a Mechanist guard?",
+            "Visit diplomat Raisa at the Neutral Chapel to fulfill a courier truce contract before your reputation drops below -300 Rep."
+      ]
+],
+    related: ["scavland-factions-progression-and-traders", "scavland-weapons-and-attachments", "scavland-factions-and-reputation", "scavland-map-and-locations"],
+    videoId: '6aY3Lfc_w8g',
+    videoTitle: "Scavland Locations of Merchants Selling Important Items",
+    videoChannel: "Game Detox Dopamine"
+  },
+  {
+    slug: 'scavland-mudlark-camp-guide',
+    category: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Mudlark Camp Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Mudlark Camp Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Mudlark Camp Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcement Feed & Update 0.7.0 Outpost Notes',
+    updated: '2026-09-30',
+    image: '/images/screenshots/ss_08_overworld_map.webp',
+    imageAlt: "Mudlark wetland camp, wooden boardwalks, and hunter outposts in Scavland",
+    answer: "Perched on raised wooden boardwalks above the murky southern wetlands of <strong>Zalesye</strong>, <strong>Mudlark Camp</strong> is the primary wilderness outpost for hunters, trappers, and bio-anomaly scavengers. The settlement serves as the home base for <strong>Trader Bogdan</strong>, who pays an exclusive <strong>+40% bonus</strong> for biological trophies including <strong>Hellhound teeth</strong>, mutant claws, and pelt pelts. Enhanced in <strong>Update 0.7.0</strong> with a permanent <strong>Player Stash</strong> and <strong>Crafting Table</strong>, Mudlark Camp allows survivors to stage hunting gear, brew herbal poultices, and resupply clean drinking water without navigating back to the central village.",
+    steps: [
+      "01 \u00b7 Navigate to Southern Wetlands: Travel south from central Zalesye through overgrown marshlands. Look for stilted wooden boardwalks, hanging pelt racks, and lantern posts marking Mudlark Camp.",
+      "02 \u00b7 Liquidate Mutant Trophies to Bogdan (+40% Payout): Sell harvested glands, Hellhound claws, and bear pelts directly to <strong>Bogdan</strong> to capitalize on his +40% biological bounty bonus.",
+      "03 \u00b7 Utilize Local Stash for Heavy Pelts: Mutant pelts and biological specimens weigh heavily. Store them in the single-tab <strong>Player Stash</strong> locker (added in Update 0.7.0) to preserve agility.",
+      "04 \u00b7 Craft Medical Poultices at the Workbench: Collect marsh herbs and clean cloth to craft budget antiseptic dressings and splints using the on-site crafting table.",
+      "05 \u00b7 Prepare for Swamp Acid Hazards: The surrounding marshes are home to acidic <strong>Splatters</strong> and toxic water pools. Equip rubberized boots and keep <strong>Charcoal Tablets</strong> ready.",
+      "06 \u00b7 Rest at Campfire to Counter Wetness & Hypothermia: Resting beside Mudlark Camp's open fire restores character warmth, doubles passive health regeneration, and cleanses minor stamina chills."
+],
+    facts: [
+      [
+            "Outpost Geographic Zone",
+            "Southern wetlands and swamp basin of Zalesye"
+      ],
+      [
+            "Key Merchant",
+            "Trader Bogdan (Pays +40% premium for mutant parts)"
+      ],
+      [
+            "Workbench Availability",
+            "Crafting station installed in Update 0.7.0"
+      ],
+      [
+            "Stash Facility",
+            "1-Tab Player Stash operational since Update 0.7.0"
+      ],
+      [
+            "Surrounding Threats",
+            "Hellhounds, Splatters, and toxic water radiation pools"
+      ],
+      [
+            "Campfire Recovery",
+            "Doubled passive health regeneration rate beside campfire"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcement Feed & Update 0.7.0 Outpost Notes"
+      ]
+],
+    faq: [
+      [
+            "Where is Mudlark Camp on the map?",
+            "Mudlark Camp is located in the southern swamp sector of Zalesye, accessible by following the southern riverbed boardwalks."
+      ],
+      [
+            "Why should I visit Mudlark Camp instead of Zalesye?",
+            "Trader Bogdan pays 40% more for mutant parts and hunting trophies than any other merchant in the game, making it the premier liquidation hub for hunters."
+      ],
+      [
+            "Are there crafting tables at Mudlark Camp?",
+            "Yes, Update 0.7.0 added full crafting tables and local player stashes to Mudlark Camp."
+      ],
+      [
+            "What enemies spawn around Mudlark Camp?",
+            "Feral Hellhound packs roam the reeds, and toxic Splatters lurk in deep water pockets."
+      ],
+      [
+            "Can I drink the water around Mudlark Camp?",
+            "No, marsh water is heavily contaminated. Boil water in clean metal cans at the camp fire before drinking."
+      ]
+],
+    related: ["scavland-map-and-locations", "scavland-loot-and-scavenging", "scavland-money-making-guide", "scavland-mutants-and-enemies-guide"],
+    videoId: 'l84-X9wHjeM',
+    videoTitle: "Making MONEY and Getting LOOT in SCAVLAND",
+    videoChannel: "Nukov"
+  },
+  {
+    slug: 'scavland-microrayion-residential-blocks',
+    category: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Microrayion Blocks \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Microrayion Blocks",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Microrayion Blocks \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcement Feed & Update 0.7.0 Outpost Notes',
+    updated: '2026-09-30',
+    image: '/images/screenshots/ss_08_overworld_map.webp',
+    imageAlt: "Microrayion Soviet residential concrete blocks and rooftop sniper vantage points in Scavland",
+    answer: "Dominated by towering Soviet-era prefabricated concrete housing blocks (khrushchyovkas), the <strong>Microrayion</strong> residential district represents the densest urban scavenging zone in Scavland. Located in the western sector of <strong>Zalesye</strong>, this multi-tiered complex offers vertical room-by-room clearance, locked apartment storage lockers, and commanding rooftop vantage points. In <strong>Update 0.7.0</strong>, developer NoShadow installed a permanent <strong>Player Stash</strong> and <strong>Crafting Station</strong> within the central residential courtyard, allowing operatives to triage domestic salvage, cook rations, and stage military ammunition without returning to central village depots.",
+    steps: [
+      "01 \u00b7 Navigate to the Western Urban District: Head west from central Zalesye across the broken drainage aqueduct until gray multi-story apartment monoliths come into view.",
+      "02 \u00b7 Secure the Courtyard Stash & Crafting Hub: The central apartment courtyard contains the single-tab <strong>Player Stash</strong> and <strong>Crafting Table</strong> installed in Update 0.7.0. Register this point as your urban rally base.",
+      "03 \u00b7 Room-by-Room Interior Triage: Search kitchens for non-perishable canned meat and clean jars. Check bathrooms for medical boxes containing <strong>Sterile Bandages</strong> and <strong>Charcoal Tablets</strong>.",
+      "04 \u00b7 Establish Rooftop Sniper Overwatch: Scale interior stairwells to access apartment rooftops. Outfitted with a <strong>63 Dragoon</strong> or scoped rifle, the elevated concrete lip provides an exceptional 360-degree vantage over ground patrols.",
+      "05 \u00b7 Breaching Locked Apartment Units: Certain heavy security doors require mechanical lockpicks or brute-force shotgun breaching. Inside lie pristine radios, copper wiring, and civilian firearms.",
+      "06 \u00b7 Beware of Narrow Staircase Ambush Chokepoints: Stairwells are tight and dark. Always equip a suppressed sidearm like the <strong>PM Nikolay PB</strong> or a 12-gauge shotgun when rounding blind stair landings."
+],
+    facts: [
+      [
+            "District Location",
+            "Western urban sector of Zalesye past the drainage canal"
+      ],
+      [
+            "Architecture Style",
+            "Soviet prefabricated concrete multi-story apartment blocks"
+      ],
+      [
+            "Workbench Availability",
+            "Courtyard Crafting Station installed in Update 0.7.0"
+      ],
+      [
+            "Stash Facility",
+            "1-Tab Player Stash operational in central courtyard (Update 0.7.0)"
+      ],
+      [
+            "Vertical Advantage",
+            "Rooftops offer high-ground sniper overwatch with minimal cover penalties"
+      ],
+      [
+            "Key Loot Categories",
+            "Civilian electronics, canned provisions, medical supplies, and keys"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcement Feed & Update 0.7.0 Outpost Notes"
+      ]
+],
+    faq: [
+      [
+            "Where are the Microrayion residential blocks in Scavland?",
+            "In the western sector of Zalesye. Follow the paved road west across the bridge until you reach the concrete high-rise district."
+      ],
+      [
+            "Are the apartments safe from mutants?",
+            "Ground floors are frequently prowled by Hellhounds and stray bandits; upper residential floors and rooftops are generally secure once cleared."
+      ],
+      [
+            "What is the best weapon for clearing the Microrayion?",
+            "The TOZ-34 shotgun or Mikhail 74U carbine excel in tight stairwells, while a scoped rifle works best once you reach the roof."
+      ],
+      [
+            "Is there a player stash in the Microrayion?",
+            "Yes! Update 0.7.0 added a permanent player stash and crafting table directly in the central courtyard."
+      ],
+      [
+            "Can I find keys for locked apartment doors?",
+            "Yes, civilian keys spawn inside bedside dressers and on desks throughout neighboring apartment flats."
+      ]
+],
+    related: ["scavland-map-and-locations", "scavland-safehouses-and-fast-travel-guide", "scavland-starter-loadouts-and-budget-builds", "scavland-loot-and-scavenging"]
+  },
+  {
+    slug: 'scavland-sector-b4-bunker-complex',
+    category: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Sector B-4 Bunker \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Sector B-4 Bunker",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Sector B-4 Bunker \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Subterranean Vault Blueprint Testing · Update 0.7.2',
+    updated: '2026-09-30',
+    image: '/images/screenshots/ss_07_underground_corridor.webp',
+    imageAlt: "Sector B-4 subterranean military bunker entrance and concrete blast doors in Scavland",
+    answer: "Concealed beneath the industrial rail yards northwest of <strong>Zalesye</strong>, the <strong>Sector B-4 Bunker Complex</strong> is the most perilous and lucrative subterranean Soviet facility in Scavland's Early Access build. Guarded by a reinforced hydraulic blast bulkhead, entry requires swiping an authentic <strong>Red Keycard</strong>. Inside, the facility is divided into two distinct levels: an upper administrative sector containing armory footlockers and electrical breaker panels, and a flooded sub-level infested with lethal <strong>Tongue Monsters (Lickers)</strong> and radioactive pipe breaches. Successfully raiding Sector B-4 yields S-Tier military firearms, high-magnification optics, and rare <strong>Flux Aspect Cores</strong>.",
+    steps: [
+      "01 \u00b7 Acquire a Red Keycard: Before marching to the facility, secure a Red Keycard from locked hospital director safes or barter with Tier 3 black-market merchants.",
+      "02 \u00b7 Breach the Outer Blast Door: Swipe your Red Keycard at the electronic reader beside the heavy blast doors. Keep your firearm raised, as sirens alert nearby surface patrols.",
+      "03 \u00b7 Clear Upper Administrative Corridors: Systematically sweep office rooms using suppressed firearms. Loot metal desks for weapon attachments, <strong>5.45x39mm</strong> military ammo boxes, and security schematics.",
+      "04 \u00b7 Restore Emergency Reactor Power: Locate the central electrical generator room. Replace damaged fuses and throw the primary breaker to restore overhead lighting and drain flooded lower corridors.",
+      "05 \u00b7 Infiltrate Lower Sub-Level Bio-Vaults: Don a gas mask with at least <strong>80% filter charge</strong> to survive heavy yellow radiation zones. Use a 12-gauge shotgun to eliminate lurking Tongue Monsters.",
+      "06 \u00b7 Loot High-Tier Military Weapon Crates: The deepest vault contains locked green footlockers housing pristine rifles (such as the <strong>63 Dragoon</strong> or <strong>MK-47</strong>). Crates reset every <strong>3 in-game hours</strong>."
+],
+    facts: [
+      [
+            "Complex Landmark",
+            "Sector B-4 Subterranean Soviet Defense Shelter"
+      ],
+      [
+            "Key Access Requirement",
+            "Red Keycard swipe at reinforced electronic blast door"
+      ],
+      [
+            "Sub-Level Hazard",
+            "Heavy localized radiation requiring 80%+ gas mask filter charge"
+      ],
+      [
+            "Apex Inhabitant",
+            "Tongue Monsters (Lickers) lurking in flooded reactor passages"
+      ],
+      [
+            "Loot Container Reset",
+            "Military armory crates refresh on a 180-minute (3-hour) cycle"
+      ],
+      [
+            "Story Climax Point",
+            "Primary objective location for the 'Catching Current' questline"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Subterranean Vault Blueprint Testing \u00b7 Update 0.7.2"
+      ]
+],
+    faq: [
+      [
+            "Where is the entrance to Sector B-4 located?",
+            "Northwest of central Zalesye, nestled against the railway retaining wall behind rusted industrial shipping containers."
+      ],
+      [
+            "Does the Red Keycard break after one use?",
+            "No, keycards possess multi-use electronic durability, but keep a spare stored in your central safehouse stash."
+      ],
+      [
+            "What should I do if the lights go out inside Sector B-4?",
+            "Turn on your weapon flashlight or night vision immediately. The facility has dark corridors where mutants ambush in pitch blackness."
+      ],
+      [
+            "Can I find the Flux Aspect Core in Sector B-4?",
+            "Yes, the Flux Aspect Core is located in the deepest reactor core room and requires an Anomaly Scanner to safely extract."
+      ],
+      [
+            "How long does it take for Sector B-4 loot to respawn?",
+            "All high-tier military footlockers and ammo crates reset every 3 in-game hours (180 minutes)."
+      ]
+],
+    related: ["scavland-red-keycard-and-bunker-loot-recovery", "scavland-walkthrough-advanced-endgame", "scavland-weapons-and-attachments", "scavland-quests-and-contracts"],
+    videoId: 'Xbq3ZHQf1YE',
+    videoTitle: "Scavland How do you enter all the currently identified bunkers and secret bunkers?..",
+    videoChannel: "Game Detox Dopamine"
+  },
+  {
+    slug: 'scavland-rada-faction-contracts',
+    category: "\u0424\u0440\u0430\u043a\u0446\u0438\u0438",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Rada Faction Contracts \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Rada Faction Contracts",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Rada Faction Contracts \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcement Feed & Faction Mechanics · Update 0.7.0',
+    updated: '2026-09-30',
+    image: '/images/cards/card_3_quests_factions.webp',
+    imageAlt: "Rada soldiers in urban camouflage and military checkpoints in Scavland",
+    answer: "Operating as the remnants of organized regular armed forces, the <strong>Rada</strong> represent the most heavily disciplined military faction in Scavland. Instantly recognizable by their distinctive <strong>blue-grey urban camouflage uniforms</strong>, steel ballistic helmets, and standardized <strong>5.45x39mm</strong> rifles, the Rada control fortified road checkpoints and perimeter exclusion gates across <strong>Zalesye</strong>. Fulfilling daily 24-hour courier and clearing contracts for Rada commanders earns substantial faction reputation, unlocking Tier 2 and Tier 3 military quartermasters who supply reinforced <strong>Heavy Tactical Plate Carriers</strong>, pristine ammo crates, and specialized military weapon modifications.",
+    steps: [
+      "01 \u00b7 Identify Rada Uniforms & Sentry Posts: Rada troops wear blue-grey camouflage, high-collar tactical vests, and steel helmets. Their weapon posture remains low-ready unless provoked; reticles show green at 10m.",
+      "02 \u00b7 Accept Repeatable Security Contracts: Speak with Rada border officers at checkpoint sandbag redoubts. Typical assignments involve clearing bandit ambushes or securing lost military couriers.",
+      "03 \u00b7 Avoid Friendly Fire Penalties: Discharging firearms at Rada personnel triggers severe standing penalties (<strong>-100 to -300 Rep</strong>), causing checkpoint heavy machine guns to open fire on sight.",
+      "04 \u00b7 Unlock Tier 2 Military Quartermaster: Achieving <strong>+200 Rep</strong> with the Rada unlocks access to bulk military 5.45x39mm armor-piercing ammunition and professional <strong>Armor Repair Kits</strong>.",
+      "05 \u00b7 Unlock Tier 3 Heavy Plate Carriers: Reaching <strong>+500 Rep</strong> grants the privilege of purchasing military-grade Heavy Plate Carriers, which maximize kinetic damage mitigation in deep bunker raids.",
+      "06 \u00b7 Broker Truces with Diplomat Raisa: If accidental friendly fire occurs, immediately visit diplomat <strong>Raisa</strong> at the Neutral Chapel to complete a courier truce task before border garrisons lock you out."
+],
+    facts: [
+      [
+            "Faction Identity",
+            "The Rada (Organized regular military military remnants)"
+      ],
+      [
+            "Uniform Silhouettes",
+            "Blue-grey urban camouflage uniforms and steel helmets"
+      ],
+      [
+            "Standard Caliber",
+            "5.45x39mm Soviet and 9x18mm sidearms"
+      ],
+      [
+            "Tier 2 Gate",
+            "+200 Reputation unlocks military ammunition crates and repair kits"
+      ],
+      [
+            "Tier 3 Gate",
+            "+500 Reputation unlocks Heavy Tactical Plate Carriers"
+      ],
+      [
+            "Diplomatic Truce",
+            "Brokerable through diplomat Raisa at the Neutral Chapel"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcement Feed & Faction Mechanics \u00b7 Update 0.7.0"
+      ]
+],
+    faq: [
+      [
+            "How do I recognize Rada soldiers from bandits?",
+            "Rada soldiers wear uniform blue-grey camouflage and steel helmets, and your HUD reticle displays a green dot within 10 meters. Bandits wear mismatched civilian coats and ushankas."
+      ],
+      [
+            "What is the benefit of siding with the Rada?",
+            "The Rada offer the best body armor vests, high-penetration military ammunition, and heavy weapon repair kits in Act I."
+      ],
+      [
+            "What happens if my reputation with the Rada turns hostile?",
+            "Checkpoint sentries and automated bunker turrets will engage you on sight from 30+ meters away."
+      ],
+      [
+            "Can I repair my reputation with the Rada if I shot a guard?",
+            "Yes, visit diplomat Raisa at the Neutral Chapel to pay a ruble indemnity or complete a courier truce mission."
+      ],
+      [
+            "Where is the main Rada military outpost located?",
+            "Along the northern highway checkpoint bordering central Zalesye, marked by concrete barriers and military sandbags."
+      ]
+],
+    related: ["scavland-factions-progression-and-traders", "scavland-factions-and-reputation", "scavland-faction-identification-and-hud-guide", "scavland-armor-and-helmets-guide"],
+    videoId: 'CNmucSzrD0o',
+    videoTitle: "Our Reputation Is PAYING OFF! Rank 2 Traders Unlocked | SCAVLAND",
+    videoChannel: "Mr Feudal"
+  },
+  {
+    slug: 'scavland-commonfolk-syndicate-missions',
+    category: "\u0424\u0440\u0430\u043a\u0446\u0438\u0438",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Commonfolk Syndicate \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Commonfolk Syndicate",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Commonfolk Syndicate \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcement Feed & Faction Mechanics · Update 0.7.0',
+    updated: '2026-09-30',
+    image: '/images/cards/card_3_quests_factions.webp',
+    imageAlt: "Commonfolk wasteland scavengers in padded jackets and ushankas in Scavland",
+    answer: "Formed by resilient civilian survivors, farmers, and independent local scavengers, the <strong>Commonfolk</strong> syndicate constitutes the civilian backbone of <strong>Zalesye</strong>. Identified by their <strong>ragged brown padded jackets</strong>, wool ushankas, and improvised civilian shotguns, the Commonfolk maintain open trade markets, community kitchens, and agricultural outposts. Aligning with the Commonfolk grants access to essential survival staples\u2014clean water rations, medical bandages, and basic hunting ammunition\u2014while unlocking premium trade relationships with merchants like <strong>Zhivan</strong>, who pays an incredible <strong>140% buy rate</strong> for common hardware.",
+    steps: [
+      "01 \u00b7 Recognize Commonfolk Visual Silhouettes: Commonfolk operatives wear worn brown civilian jackets, wool ushankas, and carry single-barrel or double-barrel shotguns like the <strong>TOZ-34</strong>.",
+      "02 \u00b7 Undertake Civilian Logistics Contracts: Speak with community brokers like <strong>Anatoly</strong> to accept basic collection jobs: gathering clean tin cans, firewood, electrical wire, and spare cloth.",
+      "03 \u00b7 Capitalize on Zhivan's 140% Common Scrap Rate: Commonfolk hardware vendor <strong>Zhivan</strong> pays a massive <strong>140% multiplier</strong> for common classification scrap, making them your top liquidation partner.",
+      "04 \u00b7 Procure Clean Food and Water Rations: Commonfolk quartermasters stock fresh canned beef, boiled water jars, and herbal tea that restore both hunger and hydration without radiation risk.",
+      "05 \u00b7 Faction Defense Assistance: Commonfolk militia frequently engage stray <strong>Hellhounds</strong> around village perimeters. Assisting them in combat awards instant micro-reputation boosts.",
+      "06 \u00b7 Avoid Aggressive Confrontations: Never discharge firearms inside central village perimeters. Harming Commonfolk turns settlement clinic physicians hostile, revoking medical triage services."
+],
+    facts: [
+      [
+            "Faction Alignment",
+            "The Commonfolk (Civilian survivor & scavenger syndicate)"
+      ],
+      [
+            "Visual Appearance",
+            "Brown padded coats, civilian ushankas, and hunting shotguns"
+      ],
+      [
+            "Core Economic Perk",
+            "Zhivan pays 140% for Common classification items"
+      ],
+      [
+            "Primary Hub",
+            "Central Zalesye settlement square and rural farming plots"
+      ],
+      [
+            "Key Supplies",
+            "Clean canned provisions, boiled water, splints, and hunting ammo"
+      ],
+      [
+            "Hostility Penalty",
+            "-100 to -300 Rep locks players out of central clinic healing"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcement Feed & Faction Mechanics \u00b7 Update 0.7.0"
+      ]
+],
+    faq: [
+      [
+            "Why should I build reputation with the Commonfolk?",
+            "The Commonfolk provide cheap food, clean drinking water, basic medical supplies, and merchant Zhivan's unbeatable 140% scrap buy rate."
+      ],
+      [
+            "Where can I find Commonfolk contracts?",
+            "In the central Zalesye market square from coordinator Anatoly and local farm overseers."
+      ],
+      [
+            "Are Commonfolk guards aggressive?",
+            "No, Commonfolk are neutral-friendly. They will only engage if you draw weapons aggressively or initiate friendly fire."
+      ],
+      [
+            "What is the fastest way to earn Commonfolk reputation?",
+            "Deliver requested hardware items (such as copper wire and spark plugs) to complete daily repeatable journal contracts."
+      ],
+      [
+            "What happens if I accidentally shoot a Commonfolk villager?",
+            "Immediately holster your weapon [H] and visit diplomat Raisa at the Neutral Chapel to broker a truce."
+      ]
+],
+    related: ["scavland-factions-progression-and-traders", "scavland-money-making-guide", "scavland-merchant-prices-and-barter-guide", "scavland-faction-identification-and-hud-guide"]
+  },
+  {
+    slug: 'scavland-acolytes-cult-and-anomaly-tasks',
+    category: "\u0424\u0440\u0430\u043a\u0446\u0438\u0438",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Acolytes Cult Guide \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Acolytes Cult Guide",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Acolytes Cult Guide \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Anomaly Cult Logs & Steam Community Reports · Update 0.7.0',
+    updated: '2026-09-30',
+    image: '/images/cards/card_4_mist_exploration.webp',
+    imageAlt: "Acolytes cultists at a glowing anomaly shrine in the dense Mist in Scavland",
+    answer: "Revering the toxic <strong>Mist</strong> as a divine cleansing event, the <strong>Acolytes</strong> represent the most mysterious and spiritually fanatic faction in Scavland. Cloaked in dark hooded hazard robes and respirators, the Acolytes operate secluded shrines deep within active radiation zones and anomaly clusters. While other factions flee the Mist, the Acolytes venture into dense fog to harvest high-tier artifacts using specialized <strong>Anomaly Scanners</strong>. Aligning with the Acolytes grants access to esoteric bio-protection gear, advanced <strong>Charcoal Tablets</strong>, and coveted artifact barter contracts that yield legendary passive bonuses.",
+    steps: [
+      "01 \u00b7 Locate Secluded Anomaly Shrines: Acolyte shrines are hidden within foggy hollows and dense swamps. Look for wooden totems wrapped in barbed wire and blue-glowing bio-lanterns.",
+      "02 \u00b7 Equip Proper Respiratory Protection: Acolyte camps sit in mild-to-heavy radiation zones. Always equip a gas mask with at least <strong>80% filter durability</strong> before approaching shrine elders.",
+      "03 \u00b7 Fulfill Artifact Harvesting Contracts: Acolyte priests offer unique tasks requiring players to locate and extract floating anomalous nodes using an <strong>Anomaly Scanner</strong> on hotkey [3].",
+      "04 \u00b7 Barter for Advanced Radiation Scrubbers: Acolyte vendors barter high-efficiency <strong>Charcoal Tablets</strong> and rare <strong>Rad-Away</strong> injectors in exchange for raw bio-crystals.",
+      "05 \u00b7 Learn Safe Passage through Anomaly Fields: Cultists possess detailed knowledge of spatial distortions, granting tips on navigating electric arc traps and gravity wells safely.",
+      "06 \u00b7 Maintain Neutrality: Never desecrate an anomaly shrine or open fire on cult acolytes. Their silenced firearms and poison-tipped rounds apply severe lethal debuffs."
+],
+    facts: [
+      [
+            "Faction Philosophy",
+            "Mystical worship of the Mist and anomalous spatial phenomena"
+      ],
+      [
+            "Uniform Visuals",
+            "Dark hooded hazard robes, filtration respirators, and bone amulets"
+      ],
+      [
+            "Primary Territory",
+            "Deep radiation basins, foggy swamps, and secluded shrines"
+      ],
+      [
+            "Key Goods Offered",
+            "Rad-Away injectors, Anomaly Scanners, and bio-protection consumables"
+      ],
+      [
+            "Contract Focus",
+            "Extracting rare artifacts and cleansing biological anomalies"
+      ],
+      [
+            "Combat Style",
+            "Silenced ambushes utilizing toxic and psychological ammunition"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Anomaly Cult Logs & Steam Community Reports \u00b7 Update 0.7.0"
+      ]
+],
+    faq: [
+      [
+            "Where can I find the Acolytes faction in Scavland?",
+            "Their primary shrines are hidden in the southeastern foggy hollows and near toxic swamp boundaries."
+      ],
+      [
+            "Are the Acolytes hostile to players?",
+            "They are neutral unless you fire on them or enter their inner sanctums during active Mist events without permission."
+      ],
+      [
+            "What rewards do Acolyte quests offer?",
+            "High-grade anomaly detection tools, Rad-Away auto-injectors, and rare artifacts with powerful passive stat boosts."
+      ],
+      [
+            "Do I need an Anomaly Scanner to complete Acolyte missions?",
+            "Yes, most of their tasks require scanning and harvesting energetic anomalous nodes."
+      ],
+      [
+            "Can I buy gas mask filters from the Acolytes?",
+            "Yes, Acolyte traders offer military-grade charcoal filter cartridges with extended lifespan in dense Mist."
+      ]
+],
+    related: ["scavland-anomaly-scanner-and-artifacts", "scavland-mist-survival-and-radiation", "scavland-mist", "scavland-factions-and-reputation"]
+  },
+  {
+    slug: 'scavland-gunners-mercenary-contracts',
+    category: "\u0424\u0440\u0430\u043a\u0446\u0438\u0438",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Gunners Mercenaries \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Gunners Mercenaries",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Gunners Mercenaries \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'Official Steam Announcement Feed & Faction Mechanics · Update 0.7.0',
+    updated: '2026-09-30',
+    image: '/images/cards/card_3_quests_factions.webp',
+    imageAlt: "Gunners mercenary contractor in black tactical plate carrier in Scavland",
+    answer: "Operating strictly on liquid currency and ruthless mercenary contracts, the <strong>Gunners</strong> are a heavily armed private security syndicate operating in Scavland. Cloaked in professional <strong>all-black tactical plate carriers</strong>, night-vision goggles, and balaclavas, the Gunners occupy fortified military bunkers and high-value resource depots. Gunners commanders offer high-paying elimination contracts targeting rogue deserters and mutant alpha beasts. Cultivating reputation with the Gunners grants access to Tier 3 black-market weapon platforms, military <strong>7.62x54mmR sniper ammunition</strong>, and optical modifications.",
+    steps: [
+      "01 \u00b7 Identify Gunners Contractors: Gunners wear all-black tactical gear, black ballistic helmets, and modern plate carriers, wielding customized automatic assault rifles and scoped DMRs.",
+      "02 \u00b7 Accept High-Risk Elimination Bounties: Gunners contracts focus on lethal direct action: assassinating bandit commanders, clearing heavy machine gun nests, or securing fortified vaults.",
+      "03 \u00b7 Purchase Premium High-Caliber Ammunition: Gunner quartermasters stock bulk military-grade <strong>7.62x39mm AP</strong> and <strong>7.62x54mmR</strong> cartridges unavailable at civilian markets.",
+      "04 \u00b7 Barter for the 63 Dragoon Sniper Platform: Achieve <strong>Tier 3 reputation (+500 Rep)</strong> with the Gunners to unlock direct purchase of the devastating <strong>63 Dragoon</strong> marksman rifle.",
+      "05 \u00b7 Utilize Gunners Secure Bunkers: Gunner outposts feature heavy steel doors and dedicated ammo reloading benches, providing excellent shelter against nocturnal mutant raids.",
+      "06 \u00b7 Never Default on Gunner Contracts: Cancelling an accepted Gunner contract deducts <strong>20% of the reputation reward</strong> (minimum 1 point). Ensure you have adequate gear before accepting."
+],
+    facts: [
+      [
+            "Faction Designation",
+            "The Gunners (Private military mercenary syndicate)"
+      ],
+      [
+            "Visual Uniform",
+            "All-black tactical plate carriers, balaclavas, and NVG mounts"
+      ],
+      [
+            "Weaponry",
+            "Modernized MK-47s, 63 Dragoon sniper rifles, and tactical shotguns"
+      ],
+      [
+            "Reputation Reward",
+            "Unlocks Tier 3 military ammunition and optical sniper scopes"
+      ],
+      [
+            "Contract Philosophy",
+            "High-ruble bounties targeting bandit warlords and apex mutants"
+      ],
+      [
+            "Contract Cancellation",
+            "Deducts 20% of rep reward upon forfeit (Update 0.6.0)"
+      ],
+      [
+            "Verified Baseline",
+            "Official Steam Announcement Feed & Faction Mechanics \u00b7 Update 0.7.0"
+      ]
+],
+    faq: [
+      [
+            "Where can I find Gunners mercenary contracts?",
+            "At fortified security checkpoints and inside underground bunkers across the western sectors of Zalesye."
+      ],
+      [
+            "Are the Gunners hostile to new players?",
+            "Gunners maintain strict armed neutrality. Approaching with a raised weapon or ignoring verbal warnings will trigger lethal sniper fire."
+      ],
+      [
+            "What is the best item to buy from Gunner traders?",
+            "Bulk military-grade armor-piercing ammunition (7.62x39mm AP and 7.62x54mmR) and tactical 4x optical scopes."
+      ],
+      [
+            "Can I buy the 63 Dragoon sniper rifle from the Gunners?",
+            "Yes, reaching Tier 3 reputation with the Gunners unlocks direct purchase of the 63 Dragoon."
+      ],
+      [
+            "What happens if I fail a Gunner assassination contract?",
+            "Failing or cancelling the contract incurs a 20% reputation deduction penalty."
+      ]
+],
+    related: ["scavland-factions-progression-and-traders", "scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-armor-and-helmets-guide"]
+  },
+  {
+    slug: 'scavland-status-effects-and-debuffs',
+    category: "\u0412\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Status Effects & Debuffs \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Status Effects & Debuffs",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Status Effects & Debuffs \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Debuff Manifest & Medical Treatment Testing · Update 0.7.2',
+    updated: '2026-09-30',
+    image: '/images/cards/card_1_beginner_guide.webp',
+    imageAlt: "Medical triage, status effect icons, and debuff treatment in Scavland",
+    answer: "Surviving combat in Scavland requires understanding the intricate medical status effects and debilitating physical debuffs modeled by the survival engine. Unlike games where health merely acts as a single hitpoint pool, Scavland inflicts realistic physiological penalties: <strong>Arterial Bleeding</strong> drains health at up to <strong>5 HP/sec</strong> while disabling standard medkit recovery; <strong>Bone Fractures</strong> reduce character sprint speed by <strong>40%</strong> and inflate weapon sway by <strong>60%</strong>; and <strong>Dehydration Lockout</strong> completely halts stamina recovery during sleep. Below is the comprehensive medical treatment protocol for diagnosing and curing every negative condition.",
+    steps: [
+      "01 \u00b7 Arterial Bleeding (High-Priority Threat): Caused by bullet lacerations and mutant claws. Drains health rapidly (up to 5 HP/sec). Treatment: Apply a <strong>Sterile Bandage</strong> or <strong>Military Hemostatic Gauze</strong> immediately from quick slot [5].",
+      "02 \u00b7 Bone Fracture (Mobility & Aim Debuff): Caused by high falls, shotgun blasts, or bear charges. Imposes -40% move speed and +60% weapon sway. Treatment: Apply a <strong>Wooden Splint</strong> (crafted from 2x Wood and 1x Clean Cloth).",
+      "03 \u00b7 Radiation Poisoning (mSv Accumulation): Caused by entering yellow/red anomaly fields or unsealed bunkers. Drains maximum stamina and causes vision blur. Treatment: Consume <strong>Charcoal Tablets</strong> (minor) or inject <strong>Rad-Away</strong> (150 mSv purge).",
+      "04 \u00b7 Dehydration & Starvation (Metabolic Lock): Reaching 0% Hydration or Energy blocks stamina regeneration upon waking from sleep. Treatment: Consume <strong>Boiled Water</strong>, soda cans, or canned stew before resting.",
+      "05 \u00b7 Toxic Mist Inhalation (Lung Corrosion): Caused by roaming the Mist with an expired gas mask filter. Degrades maximum health over time. Treatment: Replace the gas mask with an <strong>80%+ filter</strong> and take Antidote Injectors.",
+      "06 \u00b7 Concussion & Shellshock: Caused by explosive blasts or non-fatal helmet bullet impacts. Distorts peripheral vision and muffles audio. Treatment: Rest in cover for 15 seconds; pop <strong>Painkillers</strong> to restore focus."
+],
+    facts: [
+      [
+            "Arterial Bleed Drain",
+            "Up to 5 HP per second; halts natural and medkit regeneration"
+      ],
+      [
+            "Bone Fracture Penalty",
+            "-40% movement speed, +60% weapon sway until splinted"
+      ],
+      [
+            "Dehydration Impact",
+            "Locks stamina recovery at 0% during mattress sleep"
+      ],
+      [
+            "Rad-Away Potency",
+            "Instantly purges 150 mSv of toxic radiation accumulation"
+      ],
+      [
+            "Gas Mask Durability",
+            "Requires 80%+ filter charge to block active toxic Mist damage"
+      ],
+      [
+            "Campfire Healing Buff",
+            "Doubles passive health regeneration rate (Update 0.7.0)"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Debuff Manifest & Medical Treatment Testing \u00b7 Update 0.7.2"
+      ]
+],
+    faq: [
+      [
+            "Why does my health keep dropping even after using a medkit?",
+            "You have an untreated active Bleeding effect. Medkits will not restore health until you apply a Sterile Bandage or Hemostatic Gauze to close the wound."
+      ],
+      [
+            "How do I fix a broken leg in Scavland?",
+            "Use a Wooden Splint. Splints can be crafted at any workbench from 2x Scrap Wood and 1x Clean Cloth or bought from Physician Anna."
+      ],
+      [
+            "What happens if my radiation meter enters the red zone?",
+            "Your maximum HP will permanently decrease, character movement will slow down, and your operative will vomit, losing hydration rapidly."
+      ],
+      [
+            "Can I sleep off radiation sickness in Scavland?",
+            "No! Sleeping with high radiation will cause your character to take continuous damage and potentially die in their sleep. Purge radiation first."
+      ],
+      [
+            "How do I prevent weapon sway from fractures during combat?",
+            "Apply a splint immediately, or take Painkillers which temporarily suppress fracture sway penalties for 90 seconds."
+      ]
+],
+    related: ["scavland-health-hunger-thirst-system", "scavland-consumables-and-medical-supplies", "scavland-hospital-quest-and-medical-supplies", "scavland-mist-survival-and-radiation"]
+  },
+  {
+    slug: 'scavland-mist-anomalies-and-artifacts-list',
+    category: "\u0418\u0441\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u043d\u0438\u0435",
+    title: "\u0413\u0430\u0439\u0434 \u043f\u043e Scavland: Mist Anomalies & Artifacts \u2014 \u0445\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438 \u0438 \u0441\u043e\u0432\u0435\u0442\u044b",
+    shortTitle: "Mist Anomalies & Artifacts",
+    description: "\u041f\u043e\u0434\u0440\u043e\u0431\u043d\u043e\u0435 \u0440\u0443\u043a\u043e\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u043f\u043e Mist Anomalies & Artifacts \u0432 Scavland: \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440\u044b, \u0433\u0434\u0435 \u043d\u0430\u0439\u0442\u0438, \u043c\u043e\u0434\u0438\u0444\u0438\u043a\u0430\u0446\u0438\u0438 \u0438 \u0442\u0430\u043a\u0442\u0438\u043a\u0430 \u0432\u044b\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0432 \u0417\u0430\u043b\u0435\u0441\u044c\u0435.",
+    evidence: 'In-Game Anomaly Field Measurements & Artifact Testing · Update 0.7.2',
+    updated: '2026-09-30',
+    image: '/images/cards/card_4_mist_exploration.webp',
+    imageAlt: "Glowing spatial anomaly and floating artifact extraction during Mist weather in Scavland",
+    answer: "The dynamic <strong>Mist</strong> weather event transforms the wasteland of <strong>Zalesye</strong> into an unpredictable landscape of lethal spatial anomalies and priceless energetic treasures. While electric arc fissures, gravity vortexes, and chemical steam vents kill unprepared scavengers in seconds, they also materialize rare <strong>Artifacts</strong> with immense barter value and powerful passive stat modifiers. Equipped with an <strong>Anomaly Scanner</strong> on hotkey [3], survivors can detect anomalous frequencies, navigate around hazard triggers, and harvest legendary artifacts like the <strong>Flux Aspect Core</strong>, which double in value during dense Mist cycles.",
+    steps: [
+      "01 \u00b7 Equip the Anomaly Scanner (Hotkey [3]): Never enter blue or green shimmering zones without an active scanner. The beep frequency accelerates as you approach dangerous spatial distortions.",
+      "02 \u00b7 Electric Arc Traps (Lightning Anomalies): Visible as crackling blue static arcs. Triggers instant lethal electrocution if stepped on. Toss metal bolts or empty bullet casings ahead to discharge the node safely.",
+      "03 \u00b7 Gravity Fissures (Crush Vortexes): Warps surrounding air in shimmering ripples. Pulls survivors inward and crushes them against terrain. Circumvent vortexes by maintaining at least a 10m perimeter.",
+      "04 \u00b7 Chemical Steam Vents: Erupts in corrosive green gas. Dissolves armor condition rapidly. Wear an 80%+ gas mask filter and sprint past during brief vent dormancy intervals.",
+      "05 \u00b7 Harvest Floating Artifacts at Peak Mist Density: The highest-tier artifacts only materialize during dense Mist weather. Captured artifacts provide passive benefits: +20% stamina regen, +15% carry weight, or +10% bleed resistance.",
+      "06 \u00b7 Store Artifacts in Insulated Containers: Raw artifacts emit low-level passive radiation into your inventory. Store them inside lead-lined artifact cases to safely carry multiple specimens."
+],
+    facts: [
+      [
+            "Anomaly Detection Tool",
+            "Anomaly Scanner bound to hotkey [3] with acoustic frequency detection"
+      ],
+      [
+            "Electric Trap Counter",
+            "Toss metal bolts or casings to harmlessly trigger electric discharges"
+      ],
+      [
+            "Top Story Artifact",
+            "Flux Aspect Core (Extracted during Catching Current storyline)"
+      ],
+      [
+            "Barter Multiplier",
+            "Artifacts spawned during dense Mist cycles sell for 2x market barter value"
+      ],
+      [
+            "Passive Stat Modifiers",
+            "+Stamina regen, +Carry capacity, and +Radiation resistance"
+      ],
+      [
+            "Inventory Radiation",
+            "Raw artifacts emit passive rads; store in lead-lined containers"
+      ],
+      [
+            "Verified Baseline",
+            "In-Game Anomaly Field Measurements & Artifact Testing \u00b7 Update 0.7.2"
+      ]
+],
+    faq: [
+      [
+            "How do I find artifacts in Scavland?",
+            "Equip your Anomaly Scanner on hotkey [3] and explore anomaly fields during active Mist events. Follow the acoustic pitch until the artifact materializes."
+      ],
+      [
+            "How do I survive electric arc anomalies?",
+            "Throw loose metal bolts or empty casings into the anomaly to temporarily discharge the electrical field, allowing safe passage for 5 seconds."
+      ],
+      [
+            "Do artifacts give passive buffs when carried in my backpack?",
+            "Yes! Different artifacts provide permanent passive stat increases such as faster stamina recovery, bonus carry weight, or reduced bleed chance."
+      ],
+      [
+            "Why is my character taking radiation damage while carrying an artifact?",
+            "Unshielded artifacts emit passive radiation into your inventory. Keep them inside an insulated artifact container or take Charcoal Tablets."
+      ],
+      [
+            "Where can I sell artifacts for the highest price?",
+            "Acolyte cult shrines and high-tier Mechanist tech brokers pay double the standard price for pristine artifacts."
+      ]
+],
+    related: ["scavland-anomaly-scanner-and-artifacts", "scavland-mist-survival-and-radiation", "scavland-mist", "scavland-money-making-guide"]
+  }
 ];
 
 const enGuideMap = Object.fromEntries(enGuides.map((g) => [g.slug, g]));
