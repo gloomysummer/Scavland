@@ -167,7 +167,7 @@ if (pageTitle.length > 60) {
       <div class="article-layout">
         <div class="article-content">
           <div class="quick-answer">
-            <strong>Kurzantwort</strong>{guide.answer}
+            <strong>Kurzantwort</strong><span set:html={guide.answer} />
           </div>
 
           <div class="article-media">
@@ -183,7 +183,7 @@ if (pageTitle.length > 60) {
 
           <h2 id="field-notes">Feldnotizen</h2>
           <ul>
-            {guide.steps.map((step) => <li>{step}</li>)}
+            {guide.steps.map((step) => <li set:html={step} />)}
           </ul>
 
           <!-- Ad Placement 4: In-Article Native Intel -->
@@ -196,7 +196,7 @@ if (pageTitle.length > 60) {
                 {guide.facts.map(([key, value]) => (
                   <tr>
                     <td>{key}</td>
-                    <td>{value}</td>
+                    <td set:html={value} />
                   </tr>
                 ))}
               </tbody>
@@ -207,8 +207,8 @@ if (pageTitle.length > 60) {
           <div class="faq-list">
             {guide.faq.map(([question, answer]) => (
               <details>
-                <summary>{question}</summary>
-                <p>{answer}</p>
+                <summary set:html={question} />
+                <p set:html={answer} />
               </details>
             ))}
           </div>

@@ -615,7 +615,13 @@ main{position:relative;z-index:1}
   box-shadow: 0 0 10px rgba(185, 232, 108, 0.4);
 }
 
-/* Article In-Text Links Accent */
+/* Article In-Text Links Accent — covers all descendants (quick-answer, details, table cells, etc.) */
+.article-content a {
+  color: var(--acid, #b9e86c);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
 .article-content p a,
 .article-content li a {
   color: var(--acid, #b9e86c);
@@ -624,9 +630,16 @@ main{position:relative;z-index:1}
   transition: color 0.15s ease;
 }
 
+.article-content a:hover,
 .article-content p a:hover,
 .article-content li a:hover {
   color: #fff;
+}
+
+/* Article Strong Emphasis — mirrors Witchbrook .mdx-content strong pattern */
+.article-content strong {
+  color: var(--acid, #b9e86c);
+  font-weight: 700;
 }
 
 /* Wiki Navigation Sidebar Module */

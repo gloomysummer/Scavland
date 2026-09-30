@@ -11,13 +11,13 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Scavland Einsteiger-Guide — Taktischer Raid und Überlebensstrategie',
-    answer: 'Überprüfe vor jedem Aufbruch die Gebietskarte. Meide dichten Nebel ohne Schutzmaske, priorisiere Munition und Verbandszeug gegenüber schwerem Schrott und merke dir den grünen Extraktionspunkt.',
+    answer: 'Überprüfe vor jedem Aufbruch die Gebietskarte. Meide dichten Nebel ohne Schutzmaske, priorisiere Munition und Verbandszeug gegenüber schwerem Schrott und merke dir den grünen <strong>Extraktionspunkt</strong>.',
     steps: [
-      'Orientierung in Zalesye: Öffne bei Raid-Start sofort die Karte (Taste M) und markiere den nächstgelegenen Evakuierungspunkt. Plane stets eine Ausweichroute ein.',
-      'Inventar-Ökonomie: Deine Kapazität ist durch Gewicht und Gitterplätze limitiert. Behalte Munition, Antirad und seltene Waffenteile; lasse schweren Schrott liegen.',
-      'Ballistik & Geräusche: Schusswechsel locken Mutanten und Plünderer im Umkreis von 120 Metern an. Nutze Halbautomatik und ziele auf ungeschützte Körperstellen.',
-      'Nebel-Dynamik: Wenn die Luft blau schimmert und der Geigerzähler ausschlägt, suche unverzüglich feste Schutzräume auf oder wechsle den Gasmaskenfilter.',
-      'Extraktionszone: An der Evakuierungszone musst du 10 Sekunden ausharren. Gehe hinter Betonblöcken in Deckung und sichere alle Zugänge.'
+      'Orientierung in <strong>Zalesye</strong>: Öffne bei Raid-Start sofort die Karte (Taste M) und markiere den nächstgelegenen Evakuierungspunkt. Plane stets eine Ausweichroute ein.',
+      'Inventar-Ökonomie: Deine Kapazität ist durch Gewicht und Gitterplätze limitiert. Behalte <strong>Munition</strong>, <strong>Antirad</strong> und seltene Waffenteile; lasse schweren Schrott liegen.',
+      'Ballistik & Geräusche: Schusswechsel locken Mutanten und Plünderer im Umkreis von <strong>120 Metern</strong> an. Nutze Halbautomatik und ziele auf ungeschützte Körperstellen.',
+      'Nebel-Dynamik: Wenn die Luft blau schimmert und der <strong>Geigerzähler</strong> ausschlägt, suche unverzüglich feste Schutzräume auf oder wechsle den <strong>Gasmaskenfilter</strong>.',
+      'Extraktionszone: An der Evakuierungszone musst du <strong>10 Sekunden</strong> ausharren. Gehe hinter Betonblöcken in Deckung und sichere alle Zugänge.'
     ],
     facts: [
       ['Genre', 'Hardcore Top-Down Taktik-Survival RPG'],
@@ -27,8 +27,8 @@ export const deGuides: Guide[] = [
       ['Spielversion', 'Steam Early Access v0.5.169']
     ],
     faq: [
-      ['Wie stoppe ich starke Blutungen?', 'Verwende zuerst ein Tourniquet für arterielle Blutungen, danach einen sterilen Verband.'],
-      ['Wie regeneriert man Leben ohne Medkits?', 'Im Explorer-Modus oder an entfachten Lagerfeuern in sicheren Camps regeneriert sich die Gesundheit langsam.'],
+      ['Wie stoppe ich starke Blutungen?', 'Verwende zuerst ein <strong>Tourniquet</strong> für arterielle Blutungen, danach einen sterilen Verband.'],
+      ['Wie regeneriert man Leben ohne Medkits?', 'Im <strong>Explorer-Modus</strong> oder an entfachten Lagerfeuern in sicheren Camps regeneriert sich die Gesundheit langsam.'],
       ['Wo findet man das erste Gewehr?', 'Durchsuche Waffenbehälter am verlassenen Militärposten im Norden des Startgebiets.']
     ],
     related: ['scavland-weapons-and-attachments', 'scavland-price-and-regional-editions', 'scavland-vs-zero-sievert-comparison']
@@ -43,12 +43,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Scavland Steam-Preis, Editionen und Rabattaktion',
-    answer: 'Der Grundpreis für Scavland beträgt 19,99 € auf Steam. In der ersten Launch-Woche gilt ein Rabatt von 10% (17,99 €). Es gibt keine Pay-to-Win-Mikrotransaktionen.',
+    answer: 'Der Grundpreis für Scavland beträgt <strong>19,99 €</strong> auf Steam. In der ersten Launch-Woche gilt ein Rabatt von <strong>10% (17,99 €)</strong>. Es gibt keine Pay-to-Win-Mikrotransaktionen.',
     steps: [
-      'Standard Edition (19,99 €): Beinhaltet den vollen Early-Access-Zugang mit 25+ Waffen, 10 Fraktionen und allen kommenden Inhalts-Updates.',
-      'Launch-Rabatt: 10% Erlass für Frühkäufer in den ersten 7 Tagen nach Veröffentlichung.',
-      'Soundtrack-Bundle: Der atmosphärische Soviet-Wasteland-Soundtrack ist als separates DLC erhältlich.',
-      'Rückgaberecht: Volle Steam-Rückgabegarantie (bis zu 2 Stunden Spielzeit innerhalb von 14 Tagen).'
+      '<strong>Standard Edition</strong> (19,99 €): Beinhaltet den vollen <strong>Early-Access-Zugang</strong> mit 25+ Waffen, 10 Fraktionen und allen kommenden Inhalts-Updates.',
+      'Launch-Rabatt: 10% Erlass für Frühkäufer in den ersten <strong>7 Tagen</strong> nach Veröffentlichung.',
+      '<strong>Soundtrack-Bundle</strong>: Der atmosphärische Soviet-Wasteland-Soundtrack ist als separates DLC erhältlich.',
+      'Rückgaberecht: Volle Steam-Rückgabegarantie (bis zu <strong>2 Stunden Spielzeit</strong> innerhalb von <strong>14 Tagen</strong>).'
     ],
     facts: [
       ['UVP (Europa)', '19,99 €'],
@@ -58,7 +58,7 @@ export const deGuides: Guide[] = [
       ['Mikrotransaktionen', 'Keine']
     ],
     faq: [
-      ['Steigt der Preis nach Verlassen des Early Access?', 'NoShadow hat noch keinen neuen Preis für die Vollversion angekündigt. Solange sich Scavland im Early Access befindet, gilt der aktuelle Steam-Preis; Änderungen würden über die Steam-News mitgeteilt.'],
+      ['Steigt der Preis nach Verlassen des Early Access?', '<strong>NoShadow</strong> hat noch keinen neuen Preis für die Vollversion angekündigt. Solange sich Scavland im Early Access befindet, gilt der aktuelle <strong>Steam-Preis</strong>; Änderungen würden über die Steam-News mitgeteilt.'],
       ['Wird Koop-Multiplayer extra kosten?', 'Nein, das geplante Koop-Update wird für alle Besitzer des Hauptspiels kostenlos nachgeliefert.']
     ],
     related: ['scavland-steam-deck-and-handheld-settings', 'scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison']
@@ -73,12 +73,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland auf einem Handheld-Display mit taktischem HUD',
-    answer: 'Scavland erscheint mit vollem Controller-Support und wurde laut Entwickler „mit Blick auf Steam Deck und Handheld-Spiel entwickelt“, sodass kein eigenes Setup nötig ist. Update 0.7.0 nennt außerdem eine „verbesserte Textgröße auf dem Steam Deck“. Die folgenden Punkte sind Startwerte und keine Messergebnisse: Beginne mit dem Standard-Preset des Spiels und senke Framerate- oder Leistungslimit schrittweise, wenn du es leiser und ausdauernder möchtest.',
+    answer: 'Scavland erscheint mit vollem <strong>Controller-Support</strong> und wurde laut Entwickler „mit Blick auf <strong>Steam Deck</strong> und Handheld-Spiel entwickelt“, sodass kein eigenes Setup nötig ist. Update <strong>0.7.0</strong> nennt außerdem eine „verbesserte Textgröße auf dem Steam Deck“. Die folgenden Punkte sind Startwerte und keine Messergebnisse: Beginne mit dem <strong>Standard-Preset</strong> des Spiels und senke Framerate- oder Leistungslimit schrittweise, wenn du es leiser und ausdauernder möchtest.',
     steps: [
-      'Proton: Das Verhalten hängt vom System ab. Bei Shader- oder Audioproblemen zuerst das Kompatibilitätswerkzeug in den Spiel-Eigenschaften in Steam wechseln.',
-      'Auflösung: Beginne mit der nativen Auflösung des Steam Deck, 1280x800 im 16:10-Vollbildmodus, und passe Schatten und Kantenglättung nach Geschmack an.',
-      'Leistungsmenü (... Taste): SteamOS erlaubt ein Framerate-Limit sowie TDP- und GPU-Takt-Grenzen. Senke die Werte schrittweise und beobachte dabei die Framerate.',
-      'Controller: Das rechte Trackpad lässt sich als Maus belegen; Community-Layouts findest du in den Controller-Einstellungen von Steam.'
+      '<strong>Proton</strong>: Das Verhalten hängt vom System ab. Bei Shader- oder Audioproblemen zuerst das Kompatibilitätswerkzeug in den Spiel-Eigenschaften in Steam wechseln.',
+      'Auflösung: Beginne mit der nativen Auflösung des Steam Deck, <strong>1280x800</strong> im <strong>16:10-Vollbildmodus</strong>, und passe Schatten und Kantenglättung nach Geschmack an.',
+      'Leistungsmenü (... Taste): <strong>SteamOS</strong> erlaubt ein Framerate-Limit sowie TDP- und GPU-Takt-Grenzen. Senke die Werte schrittweise und beobachte dabei die Framerate.',
+      'Controller: Das rechte <strong>Trackpad</strong> lässt sich als Maus belegen; Community-Layouts findest du in den Controller-Einstellungen von Steam.'
     ],
     facts: [
       ['Handheld-Unterstützung', 'Voller Controller-Support laut Store-Seite; laut Entwickler für Steam Deck und Handheld-Spiel ausgelegt'],
@@ -88,8 +88,8 @@ export const deGuides: Guide[] = [
       ['Auflösung', '1280x800 (16:10) ist die native Auflösung des Steam-Deck-Displays']
     ],
     faq: [
-      ['Ist der Text auf dem Display lesbar?', 'Ja, die Option "Große Benutzeroberfläche" in den Einstellungen skaliert Item-Beschreibungen perfekt.'],
-      ['Funktioniert Gyro-Zielen?', 'Ja, Gyroskop-Unterstützung lässt sich bequem über das Steam-Controller-Menü hinzuschalten.']
+      ['Ist der Text auf dem Display lesbar?', 'Ja, die Option "<strong>Große Benutzeroberfläche</strong>" in den Einstellungen skaliert Item-Beschreibungen perfekt.'],
+      ['Funktioniert Gyro-Zielen?', 'Ja, <strong>Gyroskop-Unterstützung</strong> lässt sich bequem über das Steam-Controller-Menü hinzuschalten.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-price-and-regional-editions']
   },
@@ -103,12 +103,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/screenshots/scavland_vs_zero_sievert.webp',
     imageAlt: 'Vergleich Scavland vs Zero Sievert — 7 Kernunterschiede',
-    answer: 'Scavland bietet tiefere Waffenmodifikationen (300+ Teile), ein physikalisches Abprall- und Querschläger-System, dynamischen giftigen Nebel und eine offizielle Koop-Roadmap.',
+    answer: 'Scavland bietet tiefere Waffenmodifikationen (<strong>300+ Teile</strong>), ein physikalisches Abprall- und Querschläger-System, dynamischen giftigen <strong>Nebel</strong> und eine offizielle <strong>Koop-Roadmap</strong>.',
     steps: [
-      'Waffen-Baukasten: Scavland simuliert über 300 Anbauteile (Mündungsbremsen, Schäfte, Visiere, Magazine), die Rückstoß, Ergonomie und Mündungsfeuer spürbar verändern.',
+      'Waffen-Baukasten: Scavland simuliert über 300 Anbauteile (<strong>Mündungsbremsen</strong>, <strong>Schäfte</strong>, Visiere, Magazine), die Rückstoß, Ergonomie und Mündungsfeuer spürbar verändern.',
       'Wetteranomalien: Der Nebel in Scavland zieht physikalisch mit der Windrichtung über die Karte, statt statisch zu verharren.',
-      'KI-Verhalten: Feindliche Plünderer nutzen Deckungsfeuer, flankieren taktisch und kommunizieren per Funk.',
-      'Unterschlupf-Ausbau: Das Versteck bietet modulare Werkbänke zur Patronenherstellung und Wasseraufbereitung.'
+      'KI-Verhalten: Feindliche Plünderer nutzen Deckungsfeuer, flankieren taktisch und kommunizieren per <strong>Funk</strong>.',
+      'Unterschlupf-Ausbau: Das <strong>Versteck</strong> bietet modulare Werkbänke zur <strong>Patronenherstellung</strong> und <strong>Wasseraufbereitung</strong>.'
     ],
     facts: [
       ['Waffen-Modifikationen', 'Scavland: 300+ Teile | Zero Sievert: Basissystem'],
@@ -118,8 +118,8 @@ export const deGuides: Guide[] = [
       ['Fraktionen', 'Scavland: 10 eigenständige Fraktionen mit Rufsystem']
     ],
     faq: [
-      ['Lohnt sich Scavland für Zero-Sievert-Spieler?', 'Definitiv. Wer die Atmosphäre von Zero Sievert mag, findet in Scavland noch mehr taktische Tiefe und Realismus.'],
-      ['Welches Spiel ist schwerer?', 'Scavland verzeiht wegen des detaillierten Schadensmodells und Blutverlusts weniger Stellungsfehler.']
+      ['Lohnt sich Scavland für Zero-Sievert-Spieler?', 'Definitiv. Wer die Atmosphäre von <strong>Zero Sievert</strong> mag, findet in Scavland noch mehr taktische Tiefe und Realismus.'],
+      ['Welches Spiel ist schwerer?', 'Scavland verzeiht wegen des detaillierten Schadensmodells und <strong>Blutverlusts</strong> weniger Stellungsfehler.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-steam-deck-and-handheld-settings']
   },
@@ -133,12 +133,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: 'Scavland Waffen- und Zubehör-Datenbank',
-    answer: 'Scavland umfasst über 25 Primär- und Sekundärwaffen sowie 300+ Anbauteile. Haltbarkeit, Kaliber und Mündungsaufsätze bestimmen Schusspräzision und Lautstärke.',
+    answer: 'Scavland umfasst über <strong>25 Primär- und Sekundärwaffen</strong> sowie <strong>300+ Anbauteile</strong>. Haltbarkeit, Kaliber und Mündungsaufsätze bestimmen Schusspräzision und Lautstärke.',
     steps: [
-      'Waffenkategorien: Sowjetische Klassiker (AK-74, AS VAL, TT-33), westliche Plattformen (M4A1), Repetierbüchsen und Schrotflinten.',
-      'Modulares Tuning: Bis zu 6 Slots pro Waffe: Verschluss, Mündung (Schalldämpfer/Kompensator), Vorderschaft, Visier, Griff und Magazingröße.',
-      'Verschleiß & Ladehemmung: Bei unter 60% Zustand steigt die Gefahr von Klemmern während Feuergefechten rapide.',
-      'Munitionsarten: FMJ für Allround, Hollow-Point gegen ungepanzerte Ziele und AP-Geschosse für schwere Panzerwesten.'
+      'Waffenkategorien: Sowjetische Klassiker (<strong>AK-74</strong>, <strong>AS VAL</strong>, <strong>TT-33</strong>), westliche Plattformen (<strong>M4A1</strong>), Repetierbüchsen und Schrotflinten.',
+      'Modulares Tuning: Bis zu 6 Slots pro Waffe: <strong>Verschluss</strong>, Mündung (<strong>Schalldämpfer</strong>/Kompensator), Vorderschaft, Visier, Griff und Magazingröße.',
+      'Verschleiß & Ladehemmung: Bei unter <strong>60% Zustand</strong> steigt die Gefahr von Klemmern während Feuergefechten rapide.',
+      'Munitionsarten: <strong>FMJ</strong> für Allround, Hollow-Point gegen ungepanzerte Ziele und <strong>AP-Geschosse</strong> für schwere Panzerwesten.'
     ],
     facts: [
       ['Waffenmodelle', '25+ zum Early-Access-Start'],
@@ -148,8 +148,8 @@ export const deGuides: Guide[] = [
       ['Waffenreinigung', 'Erfordert Waffenreinigungsset und passende Ersatzteile']
     ],
     faq: [
-      ['Welche Waffe ist am besten für Anfänger?', 'Die AK-74 wegen leicht verfügbarer 5.45x39mm-Munition bei Händlern aller Fraktionen.'],
-      ['Wo kann man Waffen reparieren?', 'An der Werkbank im Unterschlupf oder per Feldreparatur-Kit.']
+      ['Welche Waffe ist am besten für Anfänger?', 'Die AK-74 wegen leicht verfügbarer <strong>5.45x39mm-Munition</strong> bei Händlern aller Fraktionen.'],
+      ['Wo kann man Waffen reparieren?', 'An der <strong>Werkbank</strong> im Unterschlupf oder per Feldreparatur-Kit.']
     ],
     related: ['scavland-beginner-guide', 'scavland-vs-zero-sievert-comparison', 'scavland-starter-loadouts-and-budget-builds']
   },
@@ -163,12 +163,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/screenshots/steam_ss_09.webp',
     imageAlt: 'Nebelüberleben und Strahlungsschutz in Scavland',
-    answer: 'Ohne intakte Schutzmaske ist der Nebel tödlich. Behalte die Filter-Haltbarkeit im Auge und führe immer mindestens 2 Dosen Strahlenschutzmittel mit.',
+    answer: 'Ohne intakte <strong>Schutzmaske</strong> ist der Nebel tödlich. Behalte die Filter-Haltbarkeit im Auge und führe immer mindestens 2 Dosen <strong>Strahlenschutzmittel</strong> mit.',
     steps: [
       'Nebeldichte: Leichter weißer Dunst verursacht moderate Belastung; tief lilafarbene Zentren führen binnen Sekunden zu Vergiftung und Halluzinationen.',
-      'Filterwechsel: Standardfilter halten ca. 5 Minuten in Randzonen, im Bunker-Epizentrum oft nur 2 Minuten.',
-      'Medizinischer Schutz: Rad-Block halbiert die Strahlenaufnahme; Kaliumjodid senkt die akute Strahlenbelastung.',
-      'Artefaktbergung: Mit dem Anomalie-Scanner lassen sich im dichten Nebel wertvolle thermische und kinetische Artefakte orten.'
+      'Filterwechsel: <strong>Standardfilter</strong> halten ca. <strong>5 Minuten</strong> in Randzonen, im Bunker-Epizentrum oft nur <strong>2 Minuten</strong>.',
+      'Medizinischer Schutz: <strong>Rad-Block</strong> halbiert die Strahlenaufnahme; <strong>Kaliumjodid</strong> senkt die akute Strahlenbelastung.',
+      'Artefaktbergung: Mit dem <strong>Anomalie-Scanner</strong> lassen sich im dichten Nebel wertvolle thermische und kinetische Artefakte orten.'
     ],
     facts: [
       ['Filterlaufzeit', '2 bis 8 Minuten je nach Schutzklasse'],
@@ -177,7 +177,7 @@ export const deGuides: Guide[] = [
       ['Artefakt-Respawn', 'Jeder Nebelsturm mischt Artefakt-Fundorte neu durch']
     ],
     faq: [
-      ['Was tun, wenn der Filter verbraucht ist?', 'Sofort Höhenlagen ansteuern oder in hermetisch verriegelte Bunker flüchten.']
+      ['Was tun, wenn der Filter verbraucht ist?', 'Sofort Höhenlagen ansteuern oder in hermetisch verriegelte <strong>Bunker</strong> flüchten.']
     ],
     related: ['scavland-beginner-guide', 'scavland-death-and-loot-recovery', 'scavland-weapons-and-attachments']
   },
@@ -191,12 +191,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/screenshots/ss_07_underground_corridor.webp',
     imageAlt: 'Todesmechanik und Beutebergung in Scavland',
-    answer: 'Nach dem Tod bleibt dein Rucksack 25 Echtzeit-Minuten lang an Ort und Stelle. Gegenstände im Sicheren Container (2x2) gehen niemals verloren.',
+    answer: 'Nach dem Tod bleibt dein Rucksack <strong>25 Echtzeit-Minuten</strong> lang an Ort und Stelle. Gegenstände im <strong>Sicheren Container (2x2)</strong> gehen niemals verloren.',
     steps: [
-      'Todesmarker: Ein Kreuz auf der Karte markiert die exakten Koordinaten deines Rucksacks.',
-      'Sicherer Behälter: Platziere wertvolle Schlüsselkarten, Barvermögen und teure Zielfernrohre stets im geschützten Slot.',
+      'Todesmarker: Ein Kreuz auf der <strong>Karte</strong> markiert die exakten Koordinaten deines Rucksacks.',
+      'Sicherer Behälter: Platziere wertvolle <strong>Schlüsselkarten</strong>, Barvermögen und teure Zielfernrohre stets im geschützten Slot.',
       'Rettungs-Einsatz: Rüste für den Bergungsraid nur eine günstige Schrotflinte und Verbandszeug aus, um kein zweites Premium-Loadout zu riskieren.',
-      'Fraktions-Versicherung: Händler der Fraktion "Wacht" bieten Versicherungspolicen mit Rückführung nach 24 Ingame-Stunden.'
+      'Fraktions-Versicherung: Händler der Fraktion "<strong>Wacht</strong>" bieten Versicherungspolicen mit Rückführung nach <strong>24 Ingame-Stunden</strong>.'
     ],
     facts: [
       ['Rucksack-Timer', '25 Minuten Echtzeit in der laufenden Spielsession'],
@@ -206,7 +206,7 @@ export const deGuides: Guide[] = [
     ],
     faq: [
       ['Können KI-Gegner meinen Rucksack plündern?', 'Ja, feindliche Plünderer nehmen hochwertige Waffen mit, wenn sie vor dir eintreffen.'],
-      ['Gehen Quest-Gegenstände verloren?', 'Quest-Dokumente sind im separaten Auftragsbuch geschützt.']
+      ['Gehen Quest-Gegenstände verloren?', '<strong>Quest-Dokumente</strong> sind im separaten <strong>Auftragsbuch</strong> geschützt.']
     ],
     related: ['scavland-beginner-guide', 'scavland-mist-survival-and-radiation', 'scavland-factions-and-reputation']
   },
@@ -220,12 +220,12 @@ export const deGuides: Guide[] = [
     updated: '2026-09-07',
     image: '/images/cards/card_3_quests_factions.webp',
     imageAlt: '10 Fraktionen und Rufsystem in Scavland',
-    answer: 'Scavland bietet 10 Fraktionen mit eigenen Agenden. Durch Aufträge steigerst du deinen Ruf und schaltest 4 Händler-Stufen mit High-End-Equipment frei.',
+    answer: 'Scavland bietet <strong>10 Fraktionen</strong> mit eigenen Agenden. Durch Aufträge steigerst du deinen Ruf und schaltest <strong>4 Händler-Stufen</strong> mit High-End-Equipment frei.',
     steps: [
-      'Bündniswahl: "Freie Schürfer" eignen sich für Elektronikverkauf; die "Wacht" gewährt Zugriff auf schwere Schutzwesten der Klasse 5.',
+      'Bündniswahl: "<strong>Freie Schürfer</strong>" eignen sich für Elektronikverkauf; die "Wacht" gewährt Zugriff auf schwere Schutzwesten der <strong>Klasse 5</strong>.',
       'Auftragssystem: Tägliche Aufträge für Sektor-Säuberungen, medizinische Lieferungen und Aufklärung.',
-      'Feindseligkeit: Bei negativem Ruf eröffnen Fraktionskämpfer ab 50m Entfernung sofort das Feuer.',
-      'Schwarzmarkt: Neutrale Händler verlangen 20% Gebühr, akzeptieren dafür aber Schmuggelware ohne Rufverlust.'
+      'Feindseligkeit: Bei negativem Ruf eröffnen Fraktionskämpfer ab <strong>50m Entfernung</strong> sofort das Feuer.',
+      'Schwarzmarkt: Neutrale Händler verlangen <strong>20% Gebühr</strong>, akzeptieren dafür aber Schmuggelware ohne Rufverlust.'
     ],
     facts: [
       ['Fraktionsanzahl', '10 Gruppen (3 neutral, 4 verbündet via Quests, 3 feindlich)'],
@@ -235,7 +235,7 @@ export const deGuides: Guide[] = [
     ],
     faq: [
       ['Kann man mit allen Fraktionen neutral bleiben?', 'Ja, wenn man aggressive Sabotage-Aufträge vermeidet und Handelsstationen nutzt.'],
-      ['Wer verkauft die besten Scharfschützenvisiere?', 'Die Omega-Forschungsgruppe im Tiefbunker B-4.']
+      ['Wer verkauft die besten Scharfschützenvisiere?', 'Die <strong>Omega-Forschungsgruppe</strong> im <strong>Tiefbunker B-4</strong>.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-death-and-loot-recovery']
   },
@@ -249,13 +249,13 @@ export const deGuides: Guide[] = [
     updated: '2026-09-09',
     image: '/images/screenshots/ss_01_ruins_night.webp',
     imageAlt: 'Ein Scavenger ruht an einer Pritsche im Schutzbunker von Scavland',
-    answer: 'Schlafen ist in Scavland die zentrale Mechanik zum Voranschreiten der Zeit, Vermeiden der tödlichen Nachtmutanten (21:00 bis 06:00 Uhr) und Auslösen des 24-Stunden-Weltzyklus. Das Schlafen in Safehouse-Pritschen setzt Vertragstafeln (Anatoly & Nadja) sowie Oberflächen-Beutekisten zurück. In Patch v0.5.169 regenerieren Lagerfeuer passive Gesundheit, jedoch blockiert Schlafen bei starker Dehydrierung die Ausdauerregeneration — trinke stets abgekochtes Wasser vor dem Schlafengehen.',
+    answer: 'Schlafen ist in Scavland die zentrale Mechanik zum Voranschreiten der Zeit, Vermeiden der tödlichen <strong>Nachtmutanten</strong> (21:00 bis 06:00 Uhr) und Auslösen des <strong>24-Stunden-Weltzyklus</strong>. Das Schlafen in Safehouse-Pritschen setzt Vertragstafeln (<strong>Anatoly</strong> & <strong>Nadja</strong>) sowie Oberflächen-Beutekisten zurück. In Patch v0.5.169 regenerieren Lagerfeuer passive Gesundheit, jedoch blockiert Schlafen bei starker <strong>Dehydrierung</strong> die Ausdauerregeneration — trinke stets abgekochtes Wasser vor dem Schlafengehen.',
     steps: [
-      '01 · Schlafen im Safehouse: Interagiere mit der Pritsche in einem Schutzbunker, um 1 bis 12 Stunden zu rasten und sicher den Tagesanbruch (06:00 Uhr) abzuwarten.',
-      '02 · 24-Stunden-Welt-Reset: Das Überschreiten von 24 Ingame-Stunden setzt Händler-Bestände, Oberflächenkisten und Kopfgeldverträge von Anatoly und Nadja zurück.',
-      '03 · Bunker-Sperrzeiten: Unterirdische Militärbunker (z. B. Bunker B-4) respawnen nicht durch einfaches Schlafen, um unbegrenztes Beutefarmen zu verhindern.',
-      '04 · Lagerfeuer-Rast & Hydrierung: Lagerfeuer bieten passive Heilung. Koche kontaminiertes Wasser ab, um tödliche Dehydrierungs-Debuffs nach dem Aufwachen zu vermeiden.',
-      '05 · Ausgangssperre bei Nacht (21:00 Uhr): Nachts schrumpft die Sicht auf 10 Meter und gefährliche Mutanten lauern in der Dunkelheit. Starte bei Sonnenaufgang und kehre vor der Dämmerung zurück.'
+      '01 · Schlafen im Safehouse: Interagiere mit der Pritsche in einem Schutzbunker, um <strong>1 bis 12 Stunden</strong> zu rasten und sicher den Tagesanbruch (06:00 Uhr) abzuwarten.',
+      '02 · 24-Stunden-Welt-Reset: Das Überschreiten von <strong>24 Ingame-Stunden</strong> setzt Händler-Bestände, Oberflächenkisten und Kopfgeldverträge von Anatoly und Nadja zurück.',
+      '03 · Bunker-Sperrzeiten: Unterirdische Militärbunker (z. B. <strong>Bunker B-4</strong>) respawnen nicht durch einfaches Schlafen, um unbegrenztes Beutefarmen zu verhindern.',
+      '04 · Lagerfeuer-Rast & Hydrierung: <strong>Lagerfeuer</strong> bieten passive Heilung. Koche kontaminiertes Wasser ab, um tödliche Dehydrierungs-Debuffs nach dem Aufwachen zu vermeiden.',
+      '05 · Ausgangssperre bei Nacht (<strong>21:00 Uhr</strong>): Nachts schrumpft die Sicht auf <strong>10 Meter</strong> und gefährliche Mutanten lauern in der Dunkelheit. Starte bei Sonnenaufgang und kehre vor der Dämmerung zurück.'
     ],
     facts: [
       ['Schlaforte', 'Pritschen in Safehouses und befreundeten Lagern (1–12 Stunden)'],
@@ -266,8 +266,8 @@ export const deGuides: Guide[] = [
     ],
     faq: [
       ['Wie kann man die Zeit im Spiel vorspulen?', 'Nähere dich einem Bett in einem Safehouse, drücke die Interaktionstaste [E] und wähle die gewünschte Stundenzahl.'],
-      ['Warum regeneriert sich meine Ausdauer nach dem Schlafen nicht?', 'Das liegt am verborgenen Debuff "Starke Dehydrierung". Trinke sauberes Wasser und raste an einem brennenden Lagerfeuer.'],
-      ['Respawnen Kisten in Bunkern nach dem Schlafen?', 'Nein. Bunker und Kartenschlüssel-Tresore besitzen eigene mehrstündige Sperrzeiten, um Endlos-Farming zu unterbinden.']
+      ['Warum regeneriert sich meine Ausdauer nach dem Schlafen nicht?', 'Das liegt am verborgenen Debuff "<strong>Starke Dehydrierung</strong>". Trinke sauberes Wasser und raste an einem brennenden Lagerfeuer.'],
+      ['Respawnen Kisten in Bunkern nach dem Schlafen?', 'Nein. Bunker und <strong>Kartenschlüssel-Tresore</strong> besitzen eigene mehrstündige Sperrzeiten, um Endlos-Farming zu unterbinden.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapon-repair-and-durability', 'scavland-quests-and-contracts']
   },
@@ -281,13 +281,13 @@ export const deGuides: Guide[] = [
     updated: '2026-09-15',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
     imageAlt: 'Scavenger verwaltet Vorräte, Verbandszeug und sauberes Wasser in Scavland',
-    answer: 'Die richtige Handhabung von Vorräten und Traumata in Scavland entscheidet über erfolgreiche Evakuierung oder Tod im Ödland. Blutungen müssen vor der Medkit-Nutzung gestillt werden, und Dehydrierung blockiert die Ausdauerregeneration nach dem Schlafen.',
+    answer: 'Die richtige Handhabung von Vorräten und Traumata in Scavland entscheidet über erfolgreiche Evakuierung oder Tod im Ödland. Blutungen müssen vor der <strong>Medkit-Nutzung</strong> gestillt werden, und Dehydrierung blockiert die Ausdauerregeneration nach dem Schlafen.',
     steps: [
-      '01 · Sauberes Trinkwasser priorisieren: Verunreinigtes Wasser aus Waschbecken stets an Lagerfeuern abkochen. Schlafen bei Dehydrierung blockiert die Ausdauerregeneration vollständig.',
-      '02 · Blutungen vor Medkits stoppen: Arterielle Blutungen leeren bis zu 5 TP/s. Nutze sterile Verbände oder Hämostase-Gaze auf Schnelltaste [5], bevor du Heilmittel anwendest.',
-      '03 · Knochenbrüche schienen: Stürze und Schrotflintreffer verursachen Frakturen (-40% Tempo, +60% Waffenwackeln). Holzschienen stellen die normale Mobilität sofort wieder her.',
-      '04 · Strahlenschutz & Rad-Away: Bei gelbem Strahlungswert Aktivkohletabletten schlucken. Spare militärische Rad-Away-Injektoren für rote Gefahrenzonen im dichten Nebel auf.',
-      '05 · Kampfdoping & Kalorien: Dosenfleisch (Tuschonka) stellt verlorene Ausdauerkapazitäten wieder her. Adrenalin-Stims gewähren temporär +10kg Tragekraft für Flucht-Sprints.'
+      '01 · Sauberes Trinkwasser priorisieren: Verunreinigtes Wasser aus Waschbecken stets an <strong>Lagerfeuern</strong> abkochen. Schlafen bei <strong>Dehydrierung</strong> blockiert die Ausdauerregeneration vollständig.',
+      '02 · Blutungen vor Medkits stoppen: Arterielle Blutungen leeren bis zu <strong>5 TP/s</strong>. Nutze sterile Verbände oder <strong>Hämostase-Gaze</strong> auf Schnelltaste [5], bevor du Heilmittel anwendest.',
+      '03 · Knochenbrüche schienen: Stürze und Schrotflintreffer verursachen <strong>Frakturen</strong> (-40% Tempo, +60% Waffenwackeln). <strong>Holzschienen</strong> stellen die normale Mobilität sofort wieder her.',
+      '04 · Strahlenschutz & Rad-Away: Bei gelbem Strahlungswert <strong>Aktivkohletabletten</strong> schlucken. Spare militärische <strong>Rad-Away-Injektoren</strong> für rote Gefahrenzonen im dichten Nebel auf.',
+      '05 · Kampfdoping & Kalorien: Dosenfleisch (<strong>Tuschonka</strong>) stellt verlorene Ausdauerkapazitäten wieder her. <strong>Adrenalin-Stims</strong> gewähren temporär <strong>+10kg Tragekraft</strong> für Flucht-Sprints.'
     ],
     facts: [
       ['Abgekochtes Wasser', 'Kuriert Dehydrierung; wird an Lagerfeuern aus Schmutzwasser hergestellt'],
@@ -298,9 +298,9 @@ export const deGuides: Guide[] = [
       ['Dehydrierungs-Sperre', 'Schlafen bei Dehydrierung friert die Ausdauerregeneration komplett ein']
     ],
     faq: [
-      ['Wie stoppe ich Blutungen in Scavland?', 'Lege Verbände auf eine Schnelltaste. Normale Medkits stellen keine Gesundheit wieder her, solange eine aktive arterielle Blutung besteht.'],
+      ['Wie stoppe ich Blutungen in Scavland?', 'Lege <strong>Verbände</strong> auf eine Schnelltaste. Normale Medkits stellen keine Gesundheit wieder her, solange eine aktive arterielle Blutung besteht.'],
       ['Warum regeneriert sich meine Ausdauer nach dem Schlafen nicht?', 'Starke Dehydrierung blockiert die Ausdauererholung. Trinke stets abgekochtes Wasser, bevor du dich schlafen legst.'],
-      ['Wo findet man die meisten Medikamente?', 'Der Krankenhaustrakt von Zalesye bietet die dichtesten Fundorte für Pharmazeutika, wird jedoch von Zungenmonstern bewacht.']
+      ['Wo findet man die meisten Medikamente?', 'Der Krankenhaustrakt von <strong>Zalesye</strong> bietet die dichtesten Fundorte für Pharmazeutika, wird jedoch von <strong>Zungenmonstern</strong> bewacht.']
     ],
     related: ['scavland-beginner-guide', 'scavland-sleep-and-world-reset-guide', 'scavland-hospital-quest-and-medical-supplies']
   }
