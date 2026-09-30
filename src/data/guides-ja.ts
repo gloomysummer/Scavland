@@ -128,12 +128,12 @@ export const jaGuides: Guide[] = [
     category: 'プラットフォーム',
     title: 'Scavland Steam Deck・携帯ゲーミングPC 設定ガイド：コントローラーと表示の調整',
     shortTitle: 'Steam Deck 最適設定',
-    description: 'Steam DeckやROG Allyなど携帯機でScavlandを遊ぶための設定の出発点：解像度、フレームレートとTDPの目安、コントローラー配置、文字サイズ。ここに載せているのは実測値ではなくおすすめ設定です。',
+    description: 'Steam Deckや<strong>ROG Ally</strong>など携帯機でScavlandを遊ぶための設定の出発点：解像度、フレームレートとTDPの目安、コントローラー配置、文字サイズ。ここに載せているのは実測値ではなくおすすめ設定です。',
     evidence: 'Steam公式アナウンス（コントローラー対応・Steam Deckを想定して設計）／設定はおすすめ',
     updated: '2026-09-08',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Steam Deck上でScavlandを表示しているゲーム画面',
-    answer: 'Scavlandはフルコントローラー対応で、開発者によれば「Steam Deckと携帯機でのプレイを想定して設計」されているため、特別な設定をしなくても遊べます。アップデート0.7.0では「Steam Deckでのテキストサイズ改善」も挙げられています。以下はあくまで出発点となるおすすめ設定で、実測値ではありません。まずはゲーム標準のプリセットから始め、静音性やバッテリーを持たせたい場合はフレームレート上限やTDPを少しずつ下げて調整してください。',
+    answer: 'Scavlandはフルコントローラー対応で、開発者によれば「Steam Deckと携帯機でのプレイを想定して設計」されているため、特別な設定をしなくても遊べます。<strong>アップデート0.7.0</strong>では「Steam Deckでのテキストサイズ改善」も挙げられています。以下はあくまで出発点となるおすすめ設定で、実測値ではありません。まずはゲーム標準のプリセットから始め、静音性やバッテリーを持たせたい場合はフレームレート上限やTDPを少しずつ下げて調整してください。',
     steps: [
       '01 · 画面解像度：Steam Deckのパネルは<strong>1280x800</strong>（16:10）です。まずはこの解像度を基準にし、別の解像度にする場合はアスペクト比を確認しましょう。',
       '02 · 電力設定の調整：SteamOSのクイックアクセス（•••）では<strong>TDP上限</strong>と<strong>GPUクロック上限</strong>を設定できます。初期値から少しずつ下げ、フレームレートを確認しながら自分に合うバランスを探してください。',
@@ -147,7 +147,7 @@ export const jaGuides: Guide[] = [
       ['TDP上限', 'SteamOSのクイックアクセスで調整可能。必要に応じて少しずつ下げてください']
     ],
     faq: [
-      ['文字は7インチ画面でも読みやすいですか？', 'ピクセルUIは<strong>1280x800</strong>にスケールし、アップデート0.7.0ではSteam Deckでのテキストサイズ改善が明記されています。それでも小さい場合は<strong>UIテキストサイズ</strong>を調整してください。'],
+      ['文字は7インチ画面でも読みやすいですか？', 'ピクセルUIは<strong>1280x800</strong>にスケールし、<strong>アップデート0.7.0</strong>ではSteam Deckでのテキストサイズ改善が明記されています。それでも小さい場合は<strong>UIテキストサイズ</strong>を調整してください。'],
       ['ジャイロエイムは使えますか？', 'はい。Steam入力からジャイロをマウス操作に割り当てることで、直感的な射撃エイムが可能です。']
     ],
     related: ['scavland-beginner-guide', 'scavland-price-and-regional-editions', 'scavland-weapons-and-attachments']
