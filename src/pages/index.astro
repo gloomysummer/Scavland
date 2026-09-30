@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import GuideCard from '../components/GuideCard.astro';
 import Countdown from '../components/Countdown.astro';
+import VideoEmbed from '../components/VideoEmbed.astro';
 import AdsterraArticleBanner from '../components/AdsterraArticleBanner.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
@@ -127,6 +128,23 @@ const featured = guides.slice(0, 6);
         <span class="metric-sub">Active Patch v0.6.0 ➔</span>
       </a>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;padding-bottom:1.5rem;">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Official Media</p>
+        <h2>Early Access Gameplay Trailer</h2>
+      </div>
+      <p>Watch the official Scavland launch trailer: exploration, modular gunsmithing, and underground bunker raids in Zalesye.</p>
+    </div>
+    <VideoEmbed
+      id="L502erfg0hU"
+      title="Scavland - Official Early Access Launch Trailer"
+      description="Official Early Access launch trailer showcasing top-down extraction gameplay, Soviet ruins, modular weapon modification, and underground bunker raids in Scavland."
+      uploadDate="2026-09-04"
+      channelTitle="Scavland (Official Channel)"
+    />
   </section>
 
   <section class="section">

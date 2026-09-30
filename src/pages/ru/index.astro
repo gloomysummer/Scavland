@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import Countdown from '../../components/Countdown.astro';
+import VideoEmbed from '../../components/VideoEmbed.astro';
 import { allRuGuides } from '../../data/guides-ru';
 
 const featured = allRuGuides.slice(0, 6);
@@ -86,6 +87,24 @@ const featured = allRuGuides.slice(0, 6);
         <span class="metric-sub">Патч v0.5.169 активен ➔</span>
       </a>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;padding-bottom:1.5rem;">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Официальное видео</p>
+        <h2>Геймплейный трейлер раннего доступа</h2>
+      </div>
+      <p>Официальный трейлер запуска Scavland в раннем доступе: рейды по бункерам, баллистика оружия и выживание в Тумане.</p>
+    </div>
+    <VideoEmbed
+      id="L502erfg0hU"
+      title="Scavland - Официальный трейлер запуска раннего доступа"
+      description="Официальный трейлер запуска Scavland: хардкорный геймплей выживания, модификация оружия и рейды по бункерам Залесья."
+      uploadDate="2026-09-04"
+      channelTitle="Scavland (Официальный канал)"
+      captionLabel="Официальный видеоисточник"
+    />
   </section>
 
   <section class="section">

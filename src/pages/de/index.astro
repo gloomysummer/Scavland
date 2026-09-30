@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import Countdown from '../../components/Countdown.astro';
+import VideoEmbed from '../../components/VideoEmbed.astro';
 import { allDeGuides } from '../../data/guides-de';
 
 const featured = allDeGuides.slice(0, 6);
@@ -60,6 +61,24 @@ const featured = allDeGuides.slice(0, 6);
         <span class="metric-sub">Aktiver Patch v0.5.169 ➔</span>
       </a>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;padding-bottom:1.5rem;">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Offizielles Video</p>
+        <h2>Early-Access-Gameplay-Trailer</h2>
+      </div>
+      <p>Sieh dir den offiziellen Scavland Early-Access-Launch-Trailer an: Erkundung, Bunkerkämpfe, Waffenmodifikationen und der Nebel.</p>
+    </div>
+    <VideoEmbed
+      id="L502erfg0hU"
+      title="Scavland - Offizieller Early-Access-Launch-Trailer"
+      description="Offizieller Early-Access-Trailer zu Scavland mit Gameplay-Einblicken in Erkundung, Bunkerkämpfe und Waffen-Modifikation."
+      uploadDate="2026-09-04"
+      channelTitle="Scavland (Offizieller Kanal)"
+      captionLabel="Offizielles Video"
+    />
   </section>
 
   <section class="section">

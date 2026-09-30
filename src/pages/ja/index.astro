@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import Countdown from '../../components/Countdown.astro';
+import VideoEmbed from '../../components/VideoEmbed.astro';
 import { allJaGuides } from '../../data/guides-ja';
 
 const featured = allJaGuides.slice(0, 6);
@@ -61,6 +62,24 @@ const featured = allJaGuides.slice(0, 6);
         <span class="metric-sub">最新パッチ v0.5.169 対応 ➔</span>
       </a>
     </div>
+  </section>
+
+  <section class="section" style="padding-top:0.5rem;padding-bottom:1.5rem;">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">公式映像</p>
+        <h2>アーリーアクセス ゲームプレイトレーラー</h2>
+      </div>
+      <p>『Scavland』公式アーリーアクセスローンチトレーラー：危険地帯の探索、地下バンカー、銃器改造システムを紹介。</p>
+    </div>
+    <VideoEmbed
+      id="L502erfg0hU"
+      title="Scavland - 公式アーリーアクセスローンチトレーラー"
+      description="Scavlandの公式アーリーアクセストレーラー。過酷なソビエト廃墟、地下バンカー攻略、銃器改造システムを紹介。"
+      uploadDate="2026-09-04"
+      channelTitle="Scavland（公式チャンネル）"
+      captionLabel="公式動画参照"
+    />
   </section>
 
   <section class="section">
