@@ -44,8 +44,8 @@ export interface SiteAdConfig {
     socialBarUrl: string;
     banners: {
       'banner-728x90': AdsterraBannerConfig;
-      'banner-468x60': AdsterraBannerConfig;
       'banner-160x600': AdsterraBannerConfig;
+      'banner-160x300': AdsterraBannerConfig;
       'banner-320x50': AdsterraBannerConfig;
       'banner-300x250': AdsterraBannerConfig;
     };
@@ -101,19 +101,20 @@ export const adConfig: SiteAdConfig = {
         height: 90,
         enabled: true,
       },
-      'banner-468x60': {
-        key: '851636fcfbe8d78234076e9762003291',
-        scriptUrl: 'https://www.highperformanceformat.com/851636fcfbe8d78234076e9762003291/invoke.js',
-        width: 468,
-        height: 60,
-        enabled: true,
-      },
       'banner-160x600': {
         key: '7a9a1aa19491dace26d002fed60168d3',
         scriptUrl: 'https://www.highperformanceformat.com/7a9a1aa19491dace26d002fed60168d3/invoke.js',
         width: 160,
         height: 600,
         enabled: true,
+      },
+      // 160x300: 最高单价尺寸。待在 Adsterra 后台创建 160x300 banner 后，把 key 填进来并改 enabled: true。
+      'banner-160x300': {
+        key: '',
+        scriptUrl: '',
+        width: 160,
+        height: 300,
+        enabled: false,
       },
       'banner-320x50': {
         key: 'a136a53ee2ba898cd6c66c8f8b077bd9',

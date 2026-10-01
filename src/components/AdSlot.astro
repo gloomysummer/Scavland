@@ -3,8 +3,8 @@ import { adConfig } from '../data/adConfig';
 
 type AdSlotType =
   | 'banner-728x90'
-  | 'banner-468x60'
   | 'banner-160x600'
+  | 'banner-160x300'
   | 'banner-320x50'
   | 'banner-300x250'
   | 'banner300x250'
@@ -21,7 +21,7 @@ const { slot, className = '', label = 'Advertisement' } = Astro.props;
 const isGlobalEnabled = adConfig.enabled && adConfig.provider === 'adsterra';
 
 // Normalize slot alias
-type BannerKey = 'banner-728x90' | 'banner-468x60' | 'banner-160x600' | 'banner-320x50' | 'banner-300x250';
+type BannerKey = 'banner-728x90' | 'banner-160x600' | 'banner-160x300' | 'banner-320x50' | 'banner-300x250';
 const normalizedSlot: BannerKey | 'native' = slot === 'banner300x250' ? 'banner-300x250' : (slot as BannerKey | 'native');
 
 // Determine slot configuration and validity
@@ -219,9 +219,9 @@ const uniqueId = `ad-${normalizedSlot}-${Math.random().toString(36).substring(2,
     height: 90px;
   }
 
-  .ad-slot-banner-468x60 .ad-slot-container {
-    width: 468px;
-    height: 60px;
+  .ad-slot-banner-160x300 .ad-slot-container {
+    width: 160px;
+    height: 300px;
   }
 
   .ad-slot-banner-160x600 .ad-slot-container {

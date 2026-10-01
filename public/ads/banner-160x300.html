@@ -25,21 +25,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 468px;
-      height: 60px;
+      width: 160px;
+      height: 300px;
     }
   </style>
 </head>
 <body>
+  <!-- TODO: 在 Adsterra 后台创建 160x300 Banner 后，把 key 填到下面两处（atOptions.key 和 invoke.js URL），并到 src/site_config.ts 把 banner-160x300 的 enabled 改为 true -->
   <script type="text/javascript">
     atOptions = {
-      'key': '851636fcfbe8d78234076e9762003291',
+      'key': 'REPLACE_WITH_160x300_KEY',
       'format': 'iframe',
-      'height': 60,
-      'width': 468,
+      'height': 300,
+      'width': 160,
       'params': {}
     };
   </script>
-  <script type="text/javascript" src="https://www.highperformanceformat.com/851636fcfbe8d78234076e9762003291/invoke.js"></script>
+  <script type="text/javascript" src="https://www.highperformanceformat.com/REPLACE_WITH_160x300_KEY/invoke.js"></script>
 </body>
 </html>

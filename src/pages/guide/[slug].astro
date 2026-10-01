@@ -117,9 +117,10 @@ if (pageTitle.length > 60) {
   </Fragment>
 
   <div class="guide-layout">
-    <!-- Ad Placement 2: Left Skyscraper (>= 1440px only) -->
+    <!-- Ad Placement 2: Left Skyscraper (>= 1280px only, 160x600 + 160x300 stacked) -->
     <aside class="ad-skyscraper-left" aria-label="Sponsored Recon">
       <AdSlot slot="banner-160x600" label="Sponsored Recon" />
+      <AdSlot slot="banner-160x300" label="Sponsored Recon" />
     </aside>
 
     <article class="article-shell is-guide-page">
@@ -226,6 +227,9 @@ if (pageTitle.length > 60) {
               </details>
             ))}
           </div>
+
+          <!-- Ad Placement 4b: Article-End Native Intel (second native, before Related) -->
+          <AdSlot slot="native" label="Sponsored Strategic Intel" />
 
           <h2 id="related">Related guides</h2>
           <div class="related-grid">
