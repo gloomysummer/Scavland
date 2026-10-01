@@ -178,7 +178,7 @@ main{position:relative;z-index:1}
 .article-content p,.article-content li{color:#c4cec7}
 .article-content ul{padding-left:20px}
 .quick-answer{background:#17251b;border:1px solid #3f5c42;padding:22px;margin:0 0 32px;border-radius:4px}
-.quick-answer strong{display:block;color:var(--acid);font:.7rem 'IBM Plex Mono';text-transform:uppercase;margin-bottom:8px}
+.quick-answer > strong{display:block;color:var(--acid);font:.7rem 'IBM Plex Mono';text-transform:uppercase;margin-bottom:8px}
 .facts{width:100%;border-collapse:collapse;margin:18px 0}
 .facts td{border-bottom:1px solid var(--line);padding:11px 8px;color:#c4cec7;vertical-align:top}
 .facts td:first-child{width:32%;color:var(--acid);font:.72rem 'IBM Plex Mono';text-transform:uppercase}
