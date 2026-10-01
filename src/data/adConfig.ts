@@ -108,13 +108,13 @@ export const adConfig: SiteAdConfig = {
         height: 600,
         enabled: true,
       },
-      // 160x300: 最高单价尺寸。待在 Adsterra 后台创建 160x300 banner 后，把 key 填进来并改 enabled: true。
+      // 160x300: 最高单价尺寸（key 由 Adsterra 后台 2026-10-01 创建）
       'banner-160x300': {
-        key: '',
-        scriptUrl: '',
+        key: 'eb9708b5cb31992c442f10336754183f',
+        scriptUrl: 'https://www.highrevenueformat.com/eb9708b5cb31992c442f10336754183f/invoke.js',
         width: 160,
         height: 300,
-        enabled: false,
+        enabled: true,
       },
       'banner-320x50': {
         key: 'a136a53ee2ba898cd6c66c8f8b077bd9',
