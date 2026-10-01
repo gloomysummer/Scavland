@@ -141,7 +141,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/maps/": {
-    "last_submitted": "2026-09-29T18:06:46.249550+00:00",
+    "last_submitted": "2026-10-01T07:13:30.370039+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -170,7 +170,7 @@
     "note": "Pre-existing static page"
   },
   "https://scavland.wiki/weapons/": {
-    "last_submitted": "2026-09-26T22:03:56.516534+00:00",
+    "last_submitted": "2026-10-01T07:13:30.370039+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -180,7 +180,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/": {
-    "last_submitted": "2026-09-24T22:02:35.683774+00:00",
+    "last_submitted": "2026-10-01T07:13:30.370039+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
@@ -291,7 +291,7 @@
     "action": "URL_UPDATED"
   },
   "https://scavland.wiki/updates/": {
-    "last_submitted": "2026-09-11T22:02:39.150329+00:00",
+    "last_submitted": "2026-10-01T07:13:30.370039+00:00",
     "status": 200,
     "action": "URL_UPDATED"
   },
