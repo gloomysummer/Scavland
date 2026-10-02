@@ -11,7 +11,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
-    updated: '2026-09-29',
+    updated: '2026-10-02',
     answer: 'In Scavland, players seeking developer console commands, debug overlays, or trainer modifications can access internal diagnostic features through verified Steam parameters. While developer debug menus were restricted following Early Access <strong>v0.2.4</strong>, players can pass command-line launch parameters (<strong>-dev</strong>, <strong>-console</strong>) via Steam to activate diagnostic overlays and console functionality. For memory trainers and <strong>Cheat Engine</strong> (CT) tables, recent patches including <strong>Update 0.7.0</strong> and <strong>Update 0.7.2</strong> shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, <strong>Update 0.7.0</strong> added independent <strong>Autosave Slots</strong> per run, protecting your main campaign from corruption during experimental testing.',
     steps: [
       '01 · Configure Steam Launch Parameters (-dev / -console): To enable the developer console and diagnostic features, right-click Scavland in your Steam Library -> Properties -> General -> Launch Options. Enter "-dev" or "-console" (without quotes) to activate developer diagnostic logging and command overlay support on boot.',
@@ -34,13 +34,14 @@ export const guides: Guide[] = [
     faq: [
       ['How do you open the console in Scavland?', 'To open the developer console, add -dev or -console to your Steam Launch Options (right-click Scavland -> Properties -> General -> Launch Options). Once in-game, press [~] (Tilde) or [F1] / [F2] to toggle the debug console overlay.'],
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—offering 150 maximum stamina with 15 roll cost (compared to 40 in standard modes) and 2x campfire health recovery. Console debug access requires -dev or -console launch flags.'],
+      ['Are single-player trainers (Fling, WeMod, Cheat Engine) safe to use in Scavland?', 'Yes. Scavland is strictly an offline single-player experience during Early Access with no server-side VAC anti-cheat. While external trainers and CT tables will not trigger bans, always ensure you use tables built for Update 0.7.0+ to prevent memory pointer crashes, and take advantage of the independent Autosave Slots to protect your main campaign.'],
       ['Why do older Cheat Engine tables crash after Update 0.7.0 / 0.7.2?', 'Update 0.7.0 and Update 0.7.2 refactored internal data structures and inventory serialization, shifting memory pointers. Legacy tables cause memory desyncs or crashes; always use tables updated for the current patch.'],
       ['Can you get VAC banned for using console commands or Cheat Engine in Scavland?', 'No. Scavland is a dedicated single-player title in Early Access with no server-side VAC anti-cheat for solo play. Modifying local stamina or ruble values in single-player will not ban your Steam account.'],
       ['How does Update 0.7.0 safeguard saves when using cheats?', 'Update 0.7.0 introduced individual Autosave Slots per run, preventing a modded or experimental session from automatically overwriting your primary progression save.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland console', 'scavland console commands', 'scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land console', 'scavland debug mode', 'scavland dev mode', 'scavland trainer', 'scavland pc trainer', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland console', 'scavland console commands', 'scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land console', 'scavland debug mode', 'scavland dev mode', 'scavland trainer', 'scavland pc trainer', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -234,10 +235,10 @@ export const guides: Guide[] = [
     title: 'Scavland Anomaly Scanner & Catching Current Guide: Core Detector, Flux Aspect Core & Artifacts',
     description: 'Complete guide to the Core Detector anomaly scanner in Catching Current: locating the Flux Aspect Core, audio pitch tracking, missing item bug fix, and quicksave reset.',
     category: 'Exploration',
-    image: '/images/harvested/2026-09-30/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
+    image: '/images/harvested/2026-10-03/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
-    updated: '2026-09-29',
+    updated: '2026-10-02',
     answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is 100% full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
     steps: [
       '01 · Free 3 Inventory Slots Before "<strong>Catching Current</strong>": The <strong>Core Detector</strong> occupies 3 vertical inventory slots (1x3 grid footprint). Clear at least 3-4 backpack cells before accepting the "<strong>Catching Current</strong>" quest from the handler so the scanner can safely enter your gear.',
@@ -1712,14 +1713,14 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-console-release-status',
-    shortTitle: "Console Release Status",
-    title: "Is Scavland Coming to PS5, Xbox Series X & Switch? Console Status 2026",
-    description: "Official status of Scavland console ports: PS5, Xbox Series X/S, and Nintendo Switch release timelines, controller compatibility, and developer statements.",
+    shortTitle: "Console & Xbox Release",
+    title: "Scavland Console & Xbox Release: PS5, Series X & Switch Status (2026)",
+    description: "Official status of Scavland on Xbox Series X/S, PS5, and Nintendo Switch: Steam Early Access exclusivity, Game Pass status, controller support, and 2026 roadmap.",
     category: "Platforms",
     image: '/images/screenshots/steam_ss_08.webp',
     imageAlt: "Scavland tactical map and console release overview",
     evidence: 'Developer Steam Store Disclosures & Q&A Statements · September 2026',
-    updated: '2026-09-30',
+    updated: '2026-10-02',
     answer: "As of September 2026, Scavland is strictly an exclusive PC release available through <strong>Steam Early Access</strong>. Studio developer <strong>NoShadow</strong> has officially stated that their primary focus remains completing the planned <strong>Act II</strong> and <strong>Act III</strong> expansions, optimizing world simulation stability, and delivering promised <strong>co-op multiplayer</strong> before committing development resources to dedicated console ports on <strong>PlayStation 5</strong>, <strong>Xbox Series X/S</strong>, or <strong>Nintendo Switch</strong>. However, because Scavland was built from day one with full controller support, native gamepad HUD navigation, and optimized <strong>Steam Deck</strong> compatibility, a future console launch following the full <strong>Version 1.0</strong> PC release is highly feasible.",
     steps: [
       "01 \u00b7 Current Platform Availability (PC Steam Exclusive): Scavland launched on September 4, 2026 exclusively for PC Windows (App ID <strong>3373500</strong>), alongside an Apple Silicon macOS version submitted for store review.",
@@ -1748,7 +1749,7 @@ export const guides: Guide[] = [
       ],
       [
             "Controller Compatibility",
-            "100% native support for Xbox Wireless, DualSense, and DualShock 4"
+            "Full native support for Xbox Wireless, DualSense, and DualShock 4"
       ],
       [
             "Steam App ID",
@@ -1765,7 +1766,7 @@ export const guides: Guide[] = [
             "No. Scavland is currently exclusive to PC Steam Early Access. The developers have stated that PlayStation console versions will only be considered after the PC game leaves Early Access."
       ],
       [
-            "Is Scavland coming to Xbox Game Pass?",
+            "Is Scavland coming to Xbox Game Pass or Xbox Series X/S?",
             "There is currently no official announcement regarding Xbox Series X/S or Xbox Game Pass inclusion. The team is prioritizing PC bug fixes and roadmap expansions."
       ],
       [
@@ -1782,7 +1783,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-price-and-regional-editions", "scavland-steam-deck-and-handheld-settings", "scavland-early-access-launch-faq-and-roadmap", "scavland-developer-commitments-and-patch-roadmap"],
-    keywords: ["is scavland on ps5", "scavland console release date", "scavland xbox series x", "scavland nintendo switch", "scavland ps4 release", "scavland controller support"]
+    keywords: ["scavland xbox", "scavland on xbox", "scavland console", "is scavland on xbox", "is scavland on ps5", "scavland console release date", "scavland xbox series x", "scavland nintendo switch", "scavland ps4 release", "scavland controller support"]
   },
   {
     slug: 'scavland-tips-and-tricks',

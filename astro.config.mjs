@@ -14,7 +14,7 @@ const sectionDateMap = {
   maps: '2026-09-30',        // Subterranean Bunker B-4 and outposts
   weapons: '2026-09-28',     // Update 0.7.0 weapon durability pass
   updates: '2026-09-28',     // Update 0.7.0/0.7.1/0.7.2 changelog
-  factions: '2026-09-16',    // Faction vendor tiers & reputation
+  factions: '2026-10-02',    // Faction vendor tiers & trader barter cross-reference
   faq: '2026-09-26',         // General launch and troubleshooting FAQ
   resources: '2026-09-16',   // Loot & salvage materials
   comparisons: '2026-09-10', // Scavland vs Zero Sievert
