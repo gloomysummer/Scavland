@@ -86,8 +86,8 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland running on handheld device with tactical HUD',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-16',
-    answer: 'Scavland features native controller support and, in the developers\u2019 own words, was "designed with Steam Deck and handheld play in mind". <strong>Update 0.7.0</strong> enhances handheld ergonomics with full gamepad support integrated into the rebuilt <strong>Death Screen</strong> (with dedicated button actions for <strong>Returner</strong>, <strong>Iron Man</strong>, and Tutorial modes), improved text sizing for 7-inch displays, and 8-directional diagonal movement. The suggestions below provide a solid handheld baseline: stick to the native 1280x800 resolution, adjust TDP and frame caps via SteamOS for balanced battery life, and enable the dynamic Action Hint Bar in Gameplay Settings for quick looting.',
+    updated: '2026-10-02',
+    answer: 'Scavland features native controller support and, in the developers’ own words, was "designed with Steam Deck and handheld play in mind". <strong>Update 0.7.0</strong> enhances handheld ergonomics with full gamepad support integrated into the rebuilt <strong>Death Screen</strong> (with dedicated button actions for <strong>Returner</strong>, <strong>Iron Man</strong>, and Tutorial modes), improved text sizing for 7-inch displays, and 8-directional diagonal movement. The suggestions below provide a solid handheld baseline: stick to the native 1280x800 resolution, adjust TDP and frame caps via SteamOS for balanced battery life, and enable the dynamic Action Hint Bar in Gameplay Settings for quick looting.',
     steps: [
       '01 · Native Panel Resolution: The Steam Deck features a native 1280x800 display at 16:10. Set the display resolution to 1280x800 in video settings to prevent non-uniform scaling or blurred text labels.',
       '02 · Power & Battery Tuning: In the SteamOS Quick Access Menu (•••), set a manual TDP limit and cap the refresh rate to 40Hz or 60Hz. A 40Hz cap delivers smooth top-down tactical movement while significantly extending handheld battery life.',
@@ -110,7 +110,7 @@ export const guides: Guide[] = [
       ['Can you navigate the death screen with a controller?', 'Yes. As of Update 0.7.0, the Death Screen features full gamepad support with dedicated actions (Continue, Load Game, New Game, Exit, Try Again) instead of the previous generic any-key interaction.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-system-requirements'],
-    keywords: ['scavland steam deck', 'scavland handheld', 'scavland 60fps settings', 'scavland controller layout', 'scavland battery life'],
+    keywords: ['scavland steam deck', 'scavland steam deck settings', 'scavland handheld', 'scavland handheld settings', 'scavland steam deck 60fps', 'scavland steam deck controller', 'scavland controller layout', 'scavland battery life'],
     videoId: 'Zx0Uon9RJM4',
     videoTitle: 'Czy SCAVLAND to S.T.A.L.K.E.R. w 2D?! Test wydajności na Steam Deck LCD 512 GB',
     videoChannel: 'ciastek'
@@ -778,10 +778,10 @@ export const guides: Guide[] = [
     title: 'Scavland Bunker & Red Keycard Guide: Subterranean Vaults, Entrance Locations & Military Loot',
     description: 'Complete Scavland bunker guide: subterranean bunker entrance locations in northwestern Zalesye, Red Keycard vault access, military loot respawn cycles, and emergency extract routes.',
     category: 'Exploration',
-    image: '/images/screenshots/steam_ss_08.webp',
+    image: '/images/harvested/2026-10-04/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-19',
+    updated: '2026-10-02',
     answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in <strong>Zalesye</strong>. The primary fortified complex, Subterranean Bunker <strong>Sector B-4</strong>, is situated in the rugged northwestern forest sector of <strong>Zalesye</strong> behind a concrete surface trench and steel blast bulkhead. Accessing the inner military armory requires the rare <strong>Red Keycard</strong> swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset 3 hours after leaving them (or across the in-game 24-hour day-night cycle upon safehouse sleep). For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
       '01 · Locate the Bunker B-4 Surface Entrance: Head into the northwestern <strong>Zalesye</strong> woods, following the overgrown railway spur toward the concrete drainage trench. The entrance is marked by a reinforced blast doorway guarded by patrol sentries and irradiated puddles.',
@@ -806,7 +806,7 @@ export const guides: Guide[] = [
       ['What is the best weapon loadout for clearing subterranean bunkers?', 'Bring close-quarters shotguns with buckshot or high-penetration rifles along with a flashlight to handle dark narrow concrete corridors and sudden mutant ambushes.']
     ],
     related: ['scavland-weapons-and-attachments', 'scavland-loot-and-scavenging', 'scavland-weapon-repair-and-durability', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker entrance', 'scavland bunker b4', 'scavland red keycard', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction'],
+    keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker entrance', 'scavland bunker b4', 'scavland no bunkers', 'scavland red keycard', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction'],
     videoId: 'Xbq3ZHQf1YE',
     videoTitle: 'Scavland How do you enter all the currently identified bunkers and secret bunkers?..',
     videoChannel: 'Game Detox Dopamine'
@@ -1495,7 +1495,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: "Modded inventory grid and custom UI telemetry in Scavland",
     evidence: 'Community Modding Reports & Nexus Mods · Update 0.7.2',
-    updated: '2026-09-30',
+    updated: '2026-10-02',
     answer: "While official <strong>Steam Workshop</strong> support is scheduled for post-launch roadmap phases, Scavland boasts an active modding community centered around the <strong>BepInEx 5.4</strong> Unity/C# injection framework and <strong>Nexus Mods</strong>. Because Scavland operates strictly as an offline, single-player survival sandbox during Early Access, installing community balance modifications, custom inventory grid rebalancers, FOV camera adjusters, and third-party UI localizations carries zero risk of <strong>VAC bans</strong>. However, significant patches like <strong>Update 0.7.0</strong> frequently alter internal game assembly offsets, meaning scavengers must verify plugin compatibility before loading high-value safehouse campaigns.",
     steps: [
       "01 \u00b7 Install BepInEx 5.4 Unity Framework: Download the 64-bit BepInEx 5.4 release from GitHub or Nexus Mods. Extract the archive directly into your root game directory at <strong>Steam\\steamapps\\common\\Scavland\\</strong> alongside the executable.",
@@ -1520,7 +1520,7 @@ export const guides: Guide[] = [
       ],
       [
             "VAC Ban Risk",
-            "0% risk; Scavland is strictly offline singleplayer with no Valve Anti-Cheat"
+            "Zero risk; Scavland is strictly offline singleplayer with no Valve Anti-Cheat"
       ],
       [
             "Primary Mod Types",
@@ -1558,7 +1558,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-cheats-and-console-commands", "scavland-save-file-location-and-backups", "scavland-russian-language-and-font-fix", "scavland-patch-0-7-0-update-and-changes"],
-    keywords: ["scavland mods", "scavland modding guide", "scavland nexus mods", "scavland bepinex install", "scavland steam workshop", "scavland cheats mods"]
+    keywords: ["scavland mods", "scavland modding guide", "scavland nexus mods", "scavland bepinex install", "scavland steam workshop", "scavland cheats mods", "scavland cheat table", "scavland mods cheat engine"]
   },
   {
     slug: 'scavland-steam-deck-performance-optimization',
