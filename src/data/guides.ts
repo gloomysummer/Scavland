@@ -235,11 +235,11 @@ export const guides: Guide[] = [
     title: 'Scavland Anomaly Scanner & Catching Current Guide: Core Detector, Flux Aspect Core & Artifacts',
     description: 'Complete guide to the Core Detector anomaly scanner in Catching Current: locating the Flux Aspect Core, audio pitch tracking, missing item bug fix, and quicksave reset.',
     category: 'Exploration',
-    image: '/images/harvested/2026-10-03/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
+    image: '/images/harvested/2026-10-05/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
     updated: '2026-10-02',
-    answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is 100% full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
+    answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is completely full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
     steps: [
       '01 · Free 3 Inventory Slots Before "<strong>Catching Current</strong>": The <strong>Core Detector</strong> occupies 3 vertical inventory slots (1x3 grid footprint). Clear at least 3-4 backpack cells before accepting the "<strong>Catching Current</strong>" quest from the handler so the scanner can safely enter your gear.',
       '02 · Floor & Safehouse Overflow Retrieval: If the <strong>Core Detector</strong> is missing from your inventory after accepting "<strong>Catching Current</strong>", do not restart your save. Inspect the ground directly beneath the NPC\'s feet where dropped items spawn, or check the Overflow Tab in your Zalesye safehouse stash locker.',
@@ -257,7 +257,7 @@ export const guides: Guide[] = [
       ['Respawn Check', 'Drop junk to free slots, fast travel away and return to trigger an object respawn check'],
       ['Bolt-Cycle Audio Fix', 'Cycling a firearm bolt rebinds the audio spatial listener component if the detector goes silent'],
       ['Flux Core Value', 'The Flux Aspect Core fulfills the Catching Current contract and provides critical research barter with faction scientists'],
-      ['Evidence Source', 'Community-reported @ https://old.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/']
+      ['Evidence Source', 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/']
     ],
     faq: [
       ['How do I complete the <strong>Catching Current</strong> quest and find the Flux Aspect Core?', 'Equip the Core Detector using hotkey [3], traverse the marked anomaly zone, and follow the escalating audio radar frequency. When the pings transition into a continuous high-pitched tone, locate the shimmering epicenter and harvest the Flux Aspect Core directly from the ground.'],
@@ -267,7 +267,7 @@ export const guides: Guide[] = [
       ['Can anomaly fields be harvested repeatedly for artifacts?', 'Overworld anomaly zones undergo a 48-hour in-game regeneration cycle. Dense Mist events increase artifact spawn probabilities and yield enhanced anomaly loot.']
     ],
     related: ['scavland-mist', 'scavland-loot-and-scavenging', 'scavland-mist-survival-and-radiation', 'scavland-beginner-guide'],
-    keywords: ['scavland catching current', 'scavland flux aspect core', 'catching current quest', 'scavland anomaly scanner', 'scavland core detector', 'scavland core detector missing', 'scavland artifacts', 'scavland scanner beep', 'scavland core detector bug', 'scavland detector not beeping', 'flux aspect core scavland']
+    keywords: ['scavland catching current', 'scavland flux aspect core', 'catching current quest', 'scavland anomaly scanner', 'scavland core detector', 'scavland core detector missing', 'scavland core detector missing bug', 'core detector not in inventory', 'scavland catching current bug', 'scavland artifacts', 'scavland scanner beep', 'scavland core detector bug', 'scavland detector not beeping', 'flux aspect core scavland']
   },
   {
     slug: 'scavland-death-and-loot-recovery',
@@ -396,7 +396,7 @@ export const guides: Guide[] = [
     image: '/images/harvested/2026-09-24/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Scavland quest journal showing main story progression, contract tracking, and inventory item colors',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-24',
+    updated: '2026-10-02',
     answer: 'Progression in Scavland is bifurcated into primary storyline Quests and repeatable faction Jobs (Contracts). Main quests guide your overarching narrative through <strong>Zalesye</strong>—commencing with the tutorial objective \'Dead Man\'s Rest\' and advancing to core contracts like \'Catching Current\' to secure the Flux Aspect Core. To safeguard quest items, Update 0.6.0 and Update 0.7.0 introduced explicit visual item segregation: Quest Items are colored <strong>orange</strong>, while Job Items appear in <strong>green</strong>. Furthermore, equipped clothing can no longer be accidentally handed in for jobs, and quest containers automatically vanish once their objective completes. You can track multiple jobs simultaneously in your Journal, but cancelling an accepted contract deducts 20% of that Job\'s Reputation reward (with a minimum penalty of 1). Contracts and job rosters refresh across an in-game 24-hour cycle or upon sleeping in a bed with a mattress.',
     steps: [
       '01 · Distinguish Main Quests vs Faction Jobs: Main Quests (such as \'Dead Man\'s Rest\' and \'<strong>Catching Current</strong>\') advance world lore and unlock critical survival gear. Faction Jobs are repeatable economic contracts taken from brokers like <strong>Anatoly</strong> (logistics and bandit camps) and <strong>Nadja</strong> (mutant hunts).',
@@ -420,10 +420,11 @@ export const guides: Guide[] = [
       ['Why are some items orange and others green in my inventory?', 'Under Update 0.6.0, Quest Items are color-coded in orange to prevent accidental disposal or sale, while repeatable Job Items are color-coded in green. Equipped clothing cannot be accidentally turned in for jobs.'],
       ['What is the penalty for cancelling a Job in Scavland?', 'Cancelling an accepted Job directly from the Journal deducts 20% of that Job\'s Reputation reward, with a minimum penalty of 1 reputation point.'],
       ['Can I track more than one contract at the same time?', 'Yes. The rebuilt Journal allows tracking multiple jobs concurrently. Notifications appear exclusively for the tasks you have actively marked for tracking.'],
-      ['How often do contract boards and merchant jobs reset?', 'Job offerings rotate every 24 in-game hours or immediately after sleeping in a bed with a mattress. In Update 0.7.0, only beds equipped with mattresses allow sleeping to skip time.']
+      ['How often do contract boards and merchant jobs reset?', 'Job offerings rotate every 24 in-game hours or immediately after sleeping in a bed with a mattress. In Update 0.7.0, only beds equipped with mattresses allow sleeping to skip time.'],
+      ['What should I do after completing Nadja\'s main questline?', 'After completing Nadja\'s main questline, progression transitions into high-tier faction contracts and bunker exploration. Take on advanced military jobs from Volodymyr at the Crossroads annex, pursue Diplomat Raisa\'s follow-up truce jobs (which under Hotfix 0.7.2 can be accepted continuously without waiting for current tasks to clear), explore Subterranean Bunker Sector B-4 on its 3-hour reset cycle, and level up Trader Ranks for the 5% sell value bonus per rank.']
     ],
     related: ['scavland-anomaly-scanner-and-artifacts', 'scavland-hospital-quest-and-medical-supplies', 'scavland-factions-progression-and-traders', 'scavland-factions-and-reputation', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland storyline', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
+    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland storyline', 'scavland after nadja quest', 'scavland post main quest', 'scavland endgame loop', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
     videoId: 'lmeGDw8lihw',
     videoTitle: 'Scavland Part 9 Catching Current',
     videoChannel: 'Zquietgamer'
@@ -439,7 +440,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/ss_08_overworld_map.webp',
     imageAlt: 'Scavland overworld tactical map with location markers, outposts, and hazard boundaries',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-26',
+    updated: '2026-10-02',
     answer: 'Navigating the wasteland in Scavland centers around the central hub of <strong>Zalesye</strong> and the four major regional outposts: Arcadia, Mechanist Base, Mudlark Camp, and Microrayion. Since Early Access, the game world expanded roughly 3x in scale, introducing interconnected roads, faction territories, and secret underground complexes. In <strong>Update 0.7.0</strong>, crafting stations and player stashes were added to all four main camps, giving scavengers localized field bases across the map; non-village camp stashes feature one storage tab and maintain independent inventories from the main village stash. Subterranean Bunkers (such as <strong>Sector B-4</strong> located northwest of <strong>Zalesye</strong> past the railway embankment) operate on a 3-hour loot reset cycle and require a <strong>Red Keycard</strong> for entry. Resting across the map strictly requires beds with mattresses to skip time and restore vitality, while campfires provide doubled passive health regeneration. For comprehensive POI layout, inspect our [Tactical Map Hub](/maps/) and [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
       '01 · 3x World Expansion & Tactical Map Overview: Since Early Access release, Scavland world map expanded roughly 3x in size across Zalesye, introducing paved road networks, faction-controlled outposts, and hazardous border zones. Use our [Tactical Map Hub](/maps/) alongside the in-game Journal Map [M] to track active player coordinates and sector borders.',
@@ -467,7 +468,7 @@ export const guides: Guide[] = [
       ['Where can I sleep on the map to pass time and restore health?', 'Since Update 0.7.0, only beds with mattresses can be used for sleeping. When away from mattress beds, resting beside a lit campfire grants doubled passive health regeneration.']
     ],
     related: ['scavland-beginner-guide', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-crafting-and-trading', 'scavland-loot-and-scavenging', 'scavland-quests-and-contracts'],
-    keywords: ['scavland map', 'scavland full map', 'scavland map game', 'scavland game map', 'scavland locations', 'scavland bunker location', 'scavland bunker entrance', 'scavland arcadia', 'scavland mechanist base', 'scavland mudlark camp', 'scavland microrayion', 'scavland interactive map', 'scavland map guide'],
+    keywords: ['scavland map', 'scavland full map', 'scavland map game', 'scavland game map', 'scavland locations', 'scavland bunker location', 'scavland bunker entrance', 'scavland no bunkers', 'scavland find bunkers', 'scavland arcadia', 'scavland mechanist base', 'scavland mudlark camp', 'scavland microrayion', 'scavland interactive map', 'scavland map guide'],
     videoId: 'yG9k2NjxSWs',
     videoTitle: 'We Found ARCADIA! Deep Into Bandit Territory | SCAVLAND',
     videoChannel: 'Mr Feudal'
@@ -778,7 +779,7 @@ export const guides: Guide[] = [
     title: 'Scavland Bunker & Red Keycard Guide: Subterranean Vaults, Entrance Locations & Military Loot',
     description: 'Complete Scavland bunker guide: subterranean bunker entrance locations in northwestern Zalesye, Red Keycard vault access, military loot respawn cycles, and emergency extract routes.',
     category: 'Exploration',
-    image: '/images/harvested/2026-10-04/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
+    image: '/images/harvested/2026-10-05/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
     updated: '2026-10-02',
