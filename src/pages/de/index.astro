@@ -4,6 +4,7 @@ import GuideCard from '../../components/GuideCard.astro';
 import Countdown from '../../components/Countdown.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import { allDeGuides } from '../../data/guides-de';
+import AdSlot from '../../components/AdSlot.astro';
 
 const featured = allDeGuides.slice(0, 6);
 ---
@@ -80,6 +81,11 @@ const featured = allDeGuides.slice(0, 6);
       captionLabel="Offizielles Video"
     />
   </section>
+
+  <!-- This page carried no ads at all. -->
+  <div class="ad-home-slot">
+    <AdSlot slot="banner-300x250" label="Empfohlene Ressourcen" />
+  </div>
 
   <section class="section">
     <div class="section-head">

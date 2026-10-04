@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import AdSlot from '../../components/AdSlot.astro';
 
 const faqs = [
   {
@@ -267,6 +268,10 @@ const schemaData = {
     <p class="lede" style="max-width:720px;margin-bottom:2.5rem;color:var(--muted)">
       Everything you need to know about Scavland's September 4, 2026 Early Access launch, core survival mechanics, developer-confirmed systems, and wasteland extraction.
     </p>
+
+    <!-- This page carried no ads at all. Placed above the FAQ list so it is seen without scrolling
+         past a long wall of collapsed questions. -->
+    <AdSlot slot="banner-300x250" label="Sponsored Field Intel" />
 
     <div class="prose faq-list">
       {faqs.map((faq, index) => (

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import GuideCard from '../../components/GuideCard.astro';
 import { guides } from '../../data/guides';
+import AdSlot from '../../components/AdSlot.astro';
 
 const world = guides.filter((guide) => ['Exploration', 'Resources'].includes(guide.category));
 
@@ -198,6 +199,10 @@ const sectors = [
           </ul>
         </div>
 
+        <!-- This page carried no ads at all despite 354 sessions/30d (5% of the site's traffic).
+             Two distinct formats, since Adsterra de-duplicates same-key slots within a pageview. -->
+        <AdSlot slot="banner-728x90" label="Sponsored Recon" />
+
         <!-- Section 1: Zalesye Sectors -->
         <h2 id="sectors">Zalesye Sector Breakdown &amp; Landmarks</h2>
         <p style="color:var(--muted);margin-bottom:1.25rem;">The Zalesye exclusion sector is divided into distinct zones defined by environmental hazard levels, mutant spawns, and scavenging yield:</p>
@@ -300,6 +305,8 @@ const sectors = [
           <a href="/guide/scavland-sleep-and-world-reset-guide/"><strong>Sleep &amp; World Reset Guide</strong><br/>Mattress sleeping mechanics, campfire healing, and world clock management</a>
           <a href="/weapons/"><strong>Weapons &amp; Attachments Database</strong><br/>Ballistics charts, modding benches, and tactical firearm stats</a>
         </div>
+
+        <AdSlot slot="banner-300x250" label="Sponsored Recon" />
       </div>
 
       <aside class="toc" aria-label="On this page">

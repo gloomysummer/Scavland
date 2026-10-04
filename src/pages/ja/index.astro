@@ -4,6 +4,7 @@ import GuideCard from '../../components/GuideCard.astro';
 import Countdown from '../../components/Countdown.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import { allJaGuides } from '../../data/guides-ja';
+import AdSlot from '../../components/AdSlot.astro';
 
 const featured = allJaGuides.slice(0, 6);
 ---
@@ -81,6 +82,11 @@ const featured = allJaGuides.slice(0, 6);
       captionLabel="公式動画参照"
     />
   </section>
+
+  <!-- This page carried no ads at all despite 195 sessions/30d. -->
+  <div class="ad-home-slot">
+    <AdSlot slot="banner-300x250" label="おすすめリソース" />
+  </div>
 
   <section class="section">
     <div class="section-head">

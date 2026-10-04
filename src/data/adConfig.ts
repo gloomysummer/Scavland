@@ -108,7 +108,10 @@ export const adConfig: SiteAdConfig = {
         height: 600,
         enabled: true,
       },
-      // 160x300: 最高单价尺寸（key 由 Adsterra 后台 2026-10-01 创建）
+      // 160x300: 待观察，不是最高单价尺寸。
+      // 更正（2026-10-04）：曾据单日 3 次展示的 CPM $10.70 判其为「最高单价」，据此铺量属误判。
+      // 30 天实测：160x300 CPM $0.71（114 展示）< 300x250 CPM $1.32（3,037 展示，本站最高）。
+      // 规则：CPM 类决策需 ≥30 天 且 该尺寸展示量 ≥100 次，否则只作低样本观察，不作全局调配依据。
       'banner-160x300': {
         key: 'eb9708b5cb31992c442f10336754183f',
         scriptUrl: 'https://www.highrevenueformat.com/eb9708b5cb31992c442f10336754183f/invoke.js',

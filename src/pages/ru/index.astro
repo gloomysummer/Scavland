@@ -4,6 +4,7 @@ import GuideCard from '../../components/GuideCard.astro';
 import Countdown from '../../components/Countdown.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import { allRuGuides } from '../../data/guides-ru';
+import AdSlot from '../../components/AdSlot.astro';
 
 const featured = allRuGuides.slice(0, 6);
 ---
@@ -106,6 +107,11 @@ const featured = allRuGuides.slice(0, 6);
       captionLabel="Официальный видеоисточник"
     />
   </section>
+
+  <!-- This page carried no ads at all despite 106 sessions/30d. -->
+  <div class="ad-home-slot">
+    <AdSlot slot="banner-300x250" label="Рекомендуемые ресурсы" />
+  </div>
 
   <section class="section">
     <div class="section-head">

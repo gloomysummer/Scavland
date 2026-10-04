@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { FACTIONS_DATABASE, TRADERS_DATABASE } from '../../data/factions';
+import AdSlot from '../../components/AdSlot.astro';
 
 const confirmedFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Confirmed Named (0.6.3)');
 const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roadmap Unreleased');
@@ -64,6 +65,10 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
             <li><strong>Raisa Reconciliation:</strong> If your standing with any group dips into hostile (&lt; -300 Rep), visit diplomat <strong>Raisa</strong> to purchase truce contracts instead of taking permanent fire on sight.</li>
           </ul>
         </div>
+
+        <!-- This page carried no ads at all despite 178 sessions/30d. Two distinct formats,
+             since Adsterra de-duplicates same-key slots within a pageview. -->
+        <AdSlot slot="banner-728x90" label="Sponsored Recon" />
 
         <!-- Section 1: 6 Confirmed Factions Grid -->
         <h2 id="confirmed-factions">6 Confirmed Act I Factions</h2>
@@ -207,6 +212,8 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
           <a href="/resources/"><strong>Loot &amp; Barter Tables</strong><br/>Medical items, hydration canteens, and scrap salvage values</a>
           <a href="/guide/scavland-beginner-guide/"><strong>Beginner Survival Guide</strong><br/>Essential inventory loops, safehouse upgrades, and extraction routes</a>
         </div>
+
+        <AdSlot slot="banner-300x250" label="Sponsored Recon" />
       </div>
 
       <aside class="toc" aria-label="On this page">

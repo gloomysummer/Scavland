@@ -10,6 +10,7 @@ import { allRuGuides } from '../../../data/guides-ru';
     <p class="eyebrow">Основной каталог</p>
     <h1 class="page-title">Гайды Scavland <br/><span style="color:var(--acid)">и руководства.</span></h1>
     <p class="lede">Начните с базового гайда для новичков, затем переходите к детальному изучению арсенала оружия, погодных аномалий и подземных бункеров.</p>
+    <AdSlot slot="banner-728x90" label="Рекомендуемые ресурсы" />
     <div class="listing-grid">
       {allRuGuides.map((guide) => <GuideCard guide={guide} lang="ru" />)}
     </div>

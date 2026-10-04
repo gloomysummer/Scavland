@@ -4,6 +4,7 @@ import GuideCard from '../../components/GuideCard.astro';
 import { guides } from '../../data/guides';
 import { media } from '../../data/media';
 import { MEDICAL_DATABASE, TRADERS_DATABASE } from '../../data/factions';
+import AdSlot from '../../components/AdSlot.astro';
 
 const resources = guides.filter((guide) => ['Resources','Gear','Systems','Exploration','Economy'].includes(guide.category));
 const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'community');
@@ -66,6 +67,9 @@ const gallery = media.filter((m) => m.kind === 'screenshot' || m.kind === 'commu
         </div>
 
         <!-- Section 1: Medical & Hydration System -->
+        <!-- This page carried no ads at all despite being a linked hub page. -->
+        <AdSlot slot="banner-300x250" label="Sponsored Recon" />
+
         <h2 id="medical">Medical Items &amp; Thirst Matrix</h2>
         <p>Surviving firefights in Zalesye requires managing both physical trauma (bleeds and fractures) and metabolic penalties (severe thirst triggered by analgesics):</p>
 

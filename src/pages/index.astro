@@ -4,6 +4,7 @@ import GuideCard from '../components/GuideCard.astro';
 import Countdown from '../components/Countdown.astro';
 import VideoEmbed from '../components/VideoEmbed.astro';
 import AdsterraArticleBanner from '../components/AdsterraArticleBanner.astro';
+import AdSlot from '../components/AdSlot.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
@@ -146,6 +147,19 @@ const featured = guides.slice(0, 6);
       channelTitle="Scavland (Official Channel)"
     />
   </section>
+
+  <!-- Homepage carries 1,263 of 7,032 sessions (18%) — the busiest page on this domain — with a
+       single 300x250 sitting far down the page (after six sections). This is a distinct format
+       (Adsterra de-duplicates same-key slots within a pageview), placed just below the hero/video
+       so it actually gets seen. Scavland's own 728x90 CPM is modest ($0.22 / 216 imp) — the point
+       is the impression, not the size. -->
+  <!-- NOTE: the wrapper div is REQUIRED, not cosmetic. `slot="..."` is Astro's named-slot
+       attribute — as a direct child of <Layout> it would be read as "assign to a slot named
+       banner-728x90", and since Layout has no such slot the AdSlot is silently dropped entirely.
+       Nested inside an element, `slot` is just a regular prop again. -->
+  <div class="ad-home-leaderboard">
+    <AdSlot slot="banner-728x90" label="Sponsored Field Intel" />
+  </div>
 
   <section class="section">
     <div class="section-head">

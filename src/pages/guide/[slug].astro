@@ -228,8 +228,11 @@ if (pageTitle.length > 60) {
             ))}
           </div>
 
-          <!-- Ad Placement 4b: Article-End Native Intel (second native, before Related) -->
-          <AdSlot slot="native" label="Sponsored Strategic Intel" />
+          <!-- Ad Placement 4b removed (2026-10-04): it was a second native on a page that already
+               had one at line 205. Adsterra de-duplicates impressions for the same placement key
+               within a pageview (see the equivalent fix on GK2, commit cba0189), so this earned
+               nothing — just clutter and an extra ad request. The in-article native above keeps
+               the single native impression. -->
 
           <h2 id="related">Related guides</h2>
           <div class="related-grid">
