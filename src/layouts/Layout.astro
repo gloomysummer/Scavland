@@ -9,6 +9,7 @@ interface Props {
   keywords?: string;
   canonical?: string;
   lang?: Language;
+  robots?: string;
 }
 
 const { 
@@ -16,7 +17,8 @@ const {
   description = 'The complete Scavland Wiki: evidence-led guides for survival, weapons, loot, quests, factions, maps, and system mechanics.', 
   keywords = 'Scavland, Scavland Wiki, survival RPG, weapons, loot, quests, factions, Mist, crafting, release date, system requirements', 
   canonical = Astro.url.pathname,
-  lang: propLang
+  lang: propLang,
+  robots = 'index, follow, max-image-preview:large'
 } = Astro.props;
 
 const siteUrl = 'https://scavland.wiki';
@@ -41,7 +43,7 @@ const isActive = (path: string) => {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="robots" content={robots} />
     <link rel="canonical" href={`${siteUrl}${canonical}`} />
     
     <!-- Multi-language hreflang SEO cluster for Googlebot (Dynamic & Reciprocal) -->

@@ -1,0 +1,182 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const SITE_NAME = 'Scavland Wiki';
+const TITLE = `Page Not Found (404) | ${SITE_NAME}`;
+const DESCRIPTION = 'The page you requested does not exist. Return to the Scavland Wiki homepage or browse our guides, weapons database, and faction intel.';
+
+const quickLinks = [
+  { href: '/',             label: 'Wiki Home' },
+  { href: '/guide/',       label: 'All Guides' },
+  { href: '/weapons/',     label: 'Weapons Database' },
+  { href: '/factions/',    label: 'Factions & Traders' },
+  { href: '/wiki/',        label: 'Game Systems' },
+  { href: '/search/',      label: 'Search the Wiki' },
+];
+---
+<Layout
+  title={TITLE}
+  description={DESCRIPTION}
+  keywords="Scavland 404, page not found, Scavland Wiki"
+  canonical="/404.html"
+  robots="noindex, follow"
+>
+
+  <section class="notfound-shell">
+    <div class="error-badge">Error 404</div>
+
+    <h1 class="page-title">
+      Signal Lost<span style="color:var(--acid)">.</span>
+    </h1>
+
+    <p class="lede" style="max-width:640px;color:var(--muted);">
+      The page you are looking for does not exist — it may have been moved, deleted,
+      or the link you followed contains a typo.
+    </p>
+
+    <div class="notfound-actions">
+      <a class="button primary" href="/">
+        Return to Homepage
+        <span aria-hidden="true">→</span>
+      </a>
+      <a class="button" href="/search/">
+        Search the Wiki
+      </a>
+    </div>
+
+    <div class="quick-links">
+      <strong class="quick-links-title">Or jump to a section:</strong>
+      <ul>
+        {quickLinks.map(link => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <p class="search-hint">
+      <strong style="color:var(--acid);">Tip:</strong> Most Scavland content lives under
+      <a href="/guide/" style="color:var(--acid);"> Guides</a> or the
+      <a href="/weapons/" style="color:var(--acid);"> Weapons Database</a>.
+      Use <a href="/search/" style="color:var(--acid);">Search</a> to find specific topics
+      like mist survival, weapon repair, or faction reputation.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .notfound-shell {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 96px 24px 120px;
+    text-align: left;
+  }
+  .error-badge {
+    display: inline-block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--acid);
+    padding: 6px 12px;
+    border: 1px solid var(--acid);
+    border-radius: 3px;
+    background: rgba(185, 232, 108, 0.06);
+    margin-bottom: 1.5rem;
+  }
+  .page-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    margin: 0 0 1.25rem;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+  }
+  .lede {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .notfound-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 1.5rem 0 2.5rem;
+  }
+  .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid var(--line);
+    color: var(--ink);
+    background: var(--panel);
+    transition: all 0.2s ease;
+  }
+  .button:hover {
+    border-color: var(--acid);
+    color: var(--acid);
+  }
+  .button.primary {
+    background: var(--acid);
+    color: #0b100e;
+    border-color: var(--acid);
+  }
+  .button.primary:hover {
+    background: #c6f07a;
+    color: #0b100e;
+  }
+  .quick-links {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .quick-links-title {
+    display: block;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    margin-bottom: 0.85rem;
+  }
+  .quick-links ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 10px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .quick-links a {
+    color: var(--ink);
+    font-weight: 500;
+    transition: color 0.15s ease;
+  }
+  .quick-links a:hover {
+    color: var(--acid);
+  }
+  .search-hint {
+    margin-top: 2rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 640px;
+  }
+  .search-hint a {
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+  .search-hint a:hover {
+    color: var(--acid);
+    border-color: var(--acid);
+  }
+</style>
