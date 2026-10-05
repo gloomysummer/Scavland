@@ -235,10 +235,10 @@ export const guides: Guide[] = [
     title: 'Scavland Anomaly Scanner & Catching Current Guide: Core Detector, Flux Aspect Core & Artifacts',
     description: 'Complete guide to the Core Detector anomaly scanner in Catching Current: locating the Flux Aspect Core, audio pitch tracking, missing item bug fix, and quicksave reset.',
     category: 'Exploration',
-    image: '/images/harvested/2026-10-05/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
+    image: '/images/harvested/2026-10-06/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
-    updated: '2026-10-02',
+    updated: '2026-10-05',
     answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is completely full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
     steps: [
       '01 · Free 3 Inventory Slots Before "<strong>Catching Current</strong>": The <strong>Core Detector</strong> occupies 3 vertical inventory slots (1x3 grid footprint). Clear at least 3-4 backpack cells before accepting the "<strong>Catching Current</strong>" quest from the handler so the scanner can safely enter your gear.',
@@ -779,10 +779,10 @@ export const guides: Guide[] = [
     title: 'Scavland Bunker & Red Keycard Guide: Subterranean Vaults, Entrance Locations & Military Loot',
     description: 'Complete Scavland bunker guide: subterranean bunker entrance locations in northwestern Zalesye, Red Keycard vault access, military loot respawn cycles, and emergency extract routes.',
     category: 'Exploration',
-    image: '/images/harvested/2026-10-05/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
+    image: '/images/harvested/2026-10-06/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-02',
+    updated: '2026-10-05',
     answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in <strong>Zalesye</strong>. The primary fortified complex, Subterranean Bunker <strong>Sector B-4</strong>, is situated in the rugged northwestern forest sector of <strong>Zalesye</strong> behind a concrete surface trench and steel blast bulkhead. Accessing the inner military armory requires the rare <strong>Red Keycard</strong> swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset 3 hours after leaving them (or across the in-game 24-hour day-night cycle upon safehouse sleep). For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
       '01 · Locate the Bunker B-4 Surface Entrance: Head into the northwestern <strong>Zalesye</strong> woods, following the overgrown railway spur toward the concrete drainage trench. The entrance is marked by a reinforced blast doorway guarded by patrol sentries and irradiated puddles.',
@@ -857,13 +857,13 @@ export const guides: Guide[] = [
     slug: 'scavland-hospital-quest-and-medical-supplies',
     shortTitle: 'Hospital Quest & Meds',
     title: 'Scavland Hospital Quest Guide: Zalesye Medical Wing, Keycard & Tongue Monsters',
-    description: 'Walkthrough for Scavland Hospital Quest: locating Zalesye Central Hospital, surviving tongue monsters, surgical crates, and unlocking doctor barter tiers.',
+    description: 'Walkthrough for Scavland Hospital Quest: locating the northeastern Zalesye Hospital complex, counters for Tongue Monsters, Room 204 keycard and breach methods, and unlocking Physician Anna medical barter tiers.',
     category: 'Progression',
     image: '/images/screenshots/ss_02_bunker_tactical.webp',
     imageAlt: 'A dimly lit underground medical corridor in the Abandoned Zalesye Hospital',
     evidence: 'Official Steam announcements & community reports · Update 0.5.169',
-    updated: '2026-09-08',
-    answer: 'The Hospital Quest is a critical Act I progression milestone issued by the settlement medical officer in <strong>Zalesye</strong>. Players must navigate to the <strong>Abandoned Regional Hospital</strong> in the northeastern ruins, breach the barricaded second-floor surgical wing, and extract three sealed Sterile Antibiotic Crates and a Surgical Kit. The hospital interior is infested with high-threat <strong>Tongue Monsters (Lickers)</strong> that grapple players from medium range; countering them requires a high-stagger <strong>12-gauge shotgun</strong>, doorway bottlenecking, and anti-bleed tourniquets.',
+    updated: '2026-10-05',
+    answer: 'The Hospital Quest is a critical Act I progression milestone issued by settlement physician Anna in <strong>Zalesye</strong>. To complete the contract, travel to the <strong>Abandoned Regional Hospital</strong> situated in the far northeastern ruins of Zalesye past the train depot. Players must breach the barricaded second-floor surgical wing to secure three Sterile Antibiotic Crates and a Surgical Kit from <strong>Room 204</strong>. The interior corridors are prowled by lethal <strong>Tongue Monsters (Lickers)</strong> with long-range whip grapples; counter them by bottlenecking doorways, sidestepping tongue thrusts, and staggering them with heavy <strong>12-gauge Buckshot</strong> before bandaging acute lacerations.',
     steps: [
       '01 · Contract Activation & Route Preparation: Accept the quest from Settlement <strong>Physician Anna</strong> in <strong>Zalesye</strong>. Pack at least 2 Tourniquets, 1 Morphine injector, and a close-quarters shotgun (<strong>TOZ-34</strong> or <strong>Mikhail 74U</strong> with <strong>Buckshot</strong>) before departing toward the northeastern sector.',
       '02 · Breaching the Ground Floor Lobby: Approach the hospital complex via the western ambulance bay to avoid open-field sniper crossfire. The ground floor lobby contains 4 Ghoul sentries; neutralize them silently with a suppressed 9mm sidearm to avoid waking the entire facility.',
@@ -886,7 +886,7 @@ export const guides: Guide[] = [
       ['What rewards do you get for completing the Hospital Quest?', 'Completing the quest grants <strong>3,800 Rubles</strong>, <strong>+250 Commonfolk</strong> faction reputation, and unlocks Physician Anna\'s Tier-2 medical shop containing Morphine, Hemostatic Gauze, and IFAKs.']
     ],
     related: ['scavland-quests-and-contracts', 'scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds'],
-    keywords: ['scavland hospital quest', 'scavland hospital walkthrough', 'scavland tongue monster', 'scavland medical supplies', 'scavland physician anna']
+    keywords: ['scavland hospital', 'scavland hospital quest', 'scavland hospital location', 'scavland where is the hospital', 'scavland hospital keycard', 'scavland room 204', 'scavland hospital walkthrough', 'scavland tongue monster', 'scavland medical supplies', 'scavland physician anna']
   },
   {
     slug: 'scavland-merchant-prices-and-barter-guide',
@@ -897,7 +897,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Scavland merchants trading salvage and weapons in Zalesye settlement camp',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-26',
+    updated: '2026-10-05',
     answer: 'Trading in Scavland requires matching scavenged loot to merchant specializations while leveraging reputation progression and key vendor locations. Trader <strong>Volodymyr</strong>, stationed at the <strong>Crossroads annex</strong> outside central <strong>Zalesye</strong>, serves as the primary black-market armorer: he operates with zero reputation rank requirements, making him accessible even if your faction standing collapses. In <strong>Update 0.7.0</strong>, Volodymyr\'s weapon attachments are approximately 35% cheaper, he sells Advanced and Expert Repair Kits as well as an Expert Repair Kit Blueprint, and his contracts focus on high-quality weapons and dangerous mutants. Across the wider economy, Update 0.7.0 introduced a <strong>+5%</strong> sell value bonus per <strong>Trader Rank</strong> and allowed purchasing a Stash expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Traders maintain strict specializations: Zhivan pays 140% for Common items, Bogdan pays 40% more for Mutant Parts, Vesna buys Common items at 75% and Clothing at 60%, and Grigory pays premium rates for attachments while buying Common items at 50% (no longer buying Food, Medical, or Crafting items). Items like Rope, Household Batteries, Incandescent Bulbs, Car Batteries, and Copper Wiring currently lack crafting recipes and should be sold as pure barter salvage, while Spark Plugs fetch premium rubles. For weapon servicing details, see our [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/) or [Tactical Database](/guide/scavland-tactical-database-weapons-loot/).',
     steps: [
       '01 · Trader Volodymyr Location & Zero-Reputation Trade: Head southwest from central <strong>Zalesye</strong> toward the Crossroads annex near the Neutral Chapel perimeter to locate Trader Volodymyr. Volodymyr requires zero faction reputation rank to purchase his inventory, making him the premier emergency arms dealer for disgraced or unaligned scavengers.',
@@ -925,7 +925,7 @@ export const guides: Guide[] = [
       ['Which merchant pays the most for each item type?', 'Zhivan pays 140% for Common items; Bogdan pays 40% more for Mutant Parts; Vesna buys Common items at 75% and Clothing at 60%; Grigory pays top prices for Weapon Attachments and 50% for Common items (he no longer buys food or medical supplies); and Nadja pays 90% for Common and 80% for Crafting items.']
     ],
     related: ['scavland-crafting-and-trading', 'scavland-starter-loadouts-and-budget-builds', 'scavland-safehouses-and-fast-travel-guide', 'scavland-weapon-repair-and-durability', 'scavland-factions-and-reputation'],
-    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide', 'scavland loot triage'],
+    keywords: ['scavland volodymyr location', 'volodymyr scavland', 'scavland volodymyr', 'scavland trader volodymyr', 'volodymyr location', 'scavland where is volodymyr', 'scavland traders', 'scavland merchant prices', 'scavland trader rank bonus', 'scavland trader specialization', 'scavland stash expansion 50000', 'scavland barter guide', 'scavland loot triage'],
     videoId: 'UZLVFxYaSnU',
     videoTitle: "Scavland 0.6.0 Key NPC: Check changes to Volodymyr's sales list.",
     videoChannel: 'Game Detox Dopamine'
@@ -1012,37 +1012,36 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-developer-commitments-and-patch-roadmap',
     shortTitle: 'Developer Commitments & Roadmap',
-    title: 'Scavland Developer Commitments & Patch Roadmap: Delivered 0.7.0 Features, Save Reload & Future Co-op',
-    description: 'Scavland roadmap tracker: Lucasmml updates on delivered Update 0.7.0 features (Death Screen rebuild, autosave slots, 50k stash), balance passes, and future co-op timeline.',
+    title: 'Scavland Developer Commitments & Patch Roadmap: One Month Milestone, Official Roadmap & Community Picks #1',
+    description: 'Scavland roadmap tracker: Lucas and NoShadow one-month Early Access milestone, official website launch at scavland.com, interactive roadmap, and Community Picks #1 preview.',
     category: 'Progression',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-498s.jpg',
     imageAlt: 'Scavland developer update review showcasing Update 0.7.0 gameplay balance adjustments and roadmap features',
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-22',
-    answer: 'Following the Early Access release and early community feedback in the "We Hear You - Changes Are Coming" address, lead developer Lucasmml has progressively delivered on major roadmap commitments. In <strong>Update 0.7.0</strong>, developers completely rebuilt the <strong>Death Screen</strong> with dedicated agency (<strong>Returner</strong>: Continue / Load Game; <strong>Iron Man</strong>: New Game / Exit; Tutorial: Try Again; full gamepad support), added run-specific <strong>Autosave Slots</strong> to protect active progress, enabled Stash tab expansions from Traders for 50,000 Rubles, added independent 1-tab stashes and crafting benches to four major outpost camps (Arcadia, Mechanist Base, Mudlark Camp, Microrayion), and granted +5% sell value per Trader Rank. On the future roadmap, native 2-4 player cooperative multiplayer extraction and northern Act II/III sectors remain confirmed for full release. For active mechanics, consult our [Map & Locations Guide](/guide/scavland-map-and-locations/), [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/), or [Weapons Database](/weapons/).',
+    evidence: 'Official Steam announcements · 2026-10-05',
+    updated: '2026-10-05',
+    answer: 'Marking one month since Early Access release on October 5, 2026, developer NoShadow published an official milestone update celebrating community reception and launching the brand-new official website and interactive roadmap at <strong>scavland.com</strong>. The public roadmap outlines major upcoming expansions introducing new locations, biomes, creatures, weapons, and equipment beyond core headline mechanics. In the immediate pipeline, the next update—<strong>Community Picks #1</strong>—is fully prepared to launch alongside Scavland\'s very first <strong>Video DevLog</strong> while maintaining full traditional written changelogs. This builds upon delivered <strong>Update 0.7.0</strong> commitments including rebuilt <strong>Death Screen</strong> actions (<strong>Returner</strong>: Continue / Load Game), run-specific <strong>Autosave Slots</strong>, 50,000 Ruble Stash expansions, and forward camp workbenches. For current mechanics, consult our [Map & Locations Guide](/guide/scavland-map-and-locations/), [Weapon Repair Guide](/guide/scavland-weapon-repair-and-durability/), or [Weapons Database](/weapons/).',
     steps: [
-      '01 · <strong>Death Screen</strong> Rebuilt & <strong>Autosave Slots</strong> (Delivered in <strong>Update 0.7.0</strong>): Post-death agency was completely overhauled with dedicated actions: <strong>Returner</strong> mode now offers "Continue" and "Load Game", Tutorial features "Try Again", and <strong>Iron Man</strong> provides "New Game" or "Exit", complete with full gamepad support. Furthermore, each run now receives its own dedicated <strong>Autosave Slot</strong>, ensuring your active campaign cannot be overwritten or wiped accidentally.',
-      '02 · Stash Expansions & Forward Outpost Hubs (Delivered in <strong>Update 0.7.0</strong>): Solving stash capacity friction, players can purchase Stash expansions from Traders for 50,000 Rubles per additional tab at the main village. Moreover, dedicated crafting stations and single-tab player stashes were established across four major forward camps: Arcadia, Mechanist Base, Mudlark Camp, and Microrayion (independent inventories from <strong>Zalesye</strong>).',
-      '03 · Weapon Durability, Jamming & Combat Rebalance (Delivered in <strong>Update 0.7.0</strong>): Addressing durability upkeep complaints, weapons last approximately twice as many shots per durability point across many rifles, jamming occurs less frequently (hard jam reduced from 45% to 33% at <strong>10% durability</strong>), Gun and Armor Repair Kits work at any damage percentage, and incoming damage distributes across worn gear pieces.',
-      '04 · Trader Progression & Field Survival Economy (Delivered in Update 0.7.0): Traders now reward loyalty by paying an additional 5% sell value per Trader Rank. Early survival received starter Green Rags, campfires now grant doubled passive health regeneration, and resting strictly requires beds with mattresses.',
-      '05 · Long-Term Roadmap: 2-4 Player Co-op & Northern Map Expansions: Early Access is slated for a 12 to 24 month duration. Confirmed development targets for full release include 2-4 player cooperative multiplayer squad extraction, expanded northern exclusion zone sectors (Act II/III), and deeper faction diplomacy between Rada and Gunners.'
+      '01 · One Month Milestone & Official Website Launch: Exactly one month after entering Early Access, NoShadow officially launched <strong>https://scavland.com/</strong>, establishing a dedicated web portal and an interactive roadmap detailing upcoming major game updates.',
+      '02 · Roadmap Pipeline & Content Expansions: The new roadmap reveals that future major updates will systematically introduce new locations, biomes, creatures, weapons, equipment, and core gameplay systems as development advances.',
+      '03 · Upcoming "Community Picks #1" & First Video DevLog: The next game update, <strong>Community Picks #1</strong>, is already prepared and ready to drop, accompanied by Scavland\'s first Video DevLog showcasing features in action alongside traditional written changelogs.',
+      '04 · Delivered Quality-of-Life (Update 0.7.0): Prior commitments already delivered include rebuilt Death Screen actions (Returner: Continue / Load Game, Iron Man: New Game / Exit), independent Autosave Slots, 50,000 Ruble Stash expansions, and forward camp crafting stations.',
+      '05 · Long-Term Full Release Targets: Development remains on track for the projected 12 to 24 month Early Access window, with full release goals including 2-4 player cooperative squad extraction, northern Act II/III sectors, and deeper faction diplomacy.'
     ],
     facts: [
-      ['Delivered Death Agency', 'Rebuilt Death Screen with Continue / Load Game for Returner mode, and run-specific Autosave Slots'],
-      ['Delivered Stash Expansion', '50,000 Rubles at Traders unlocks extra Stash tabs; 4 outposts gained 1-tab stashes'],
-      ['Combat & Durability Overhaul', 'Rifles last ~2x shots per durability point; jam chance dropped from 45% to 33% at 10% durability in Update 0.7.0'],
-      ['Trader Progression', 'Traders pay an additional 5% sell value per Trader Rank'],
-      ['Starter Survival Buff', 'Green Rags added to starter kit; campfire healing doubled'],
+      ['Official Website & Roadmap', 'Brand-new official website and interactive roadmap live at scavland.com (2026-10-05)'],
+      ['Next Update: Community Picks #1', 'Prepared and ready to drop, accompanied by the first Video DevLog and written changelog'],
+      ['Content Expansion Scope', 'Major updates will introduce new locations, biomes, creatures, weapons, and equipment'],
+      ['Delivered Death Screen Rebuild', 'Update 0.7.0 added Returner Continue/Load Game and dedicated Autosave Slots per run'],
+      ['Delivered Stash Expansion', '50,000 Rubles from Traders unlocks additional Stash tabs; 4 outposts gained 1-tab stashes'],
       ['Roadmap: Co-op Multiplayer', '2-4 player squad extraction mode confirmed for full release during 12-24 month Early Access'],
-      ['Roadmap: Northern Expansions', 'Act II northern exclusion zone sectors and faction diplomacy slated for future roadmap phases'],
-      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
+      ['Verified Baseline', 'Official Steam announcements · 2026-10-05']
     ],
     faq: [
-      ['Has Scavland added an option to reload saves when you die?', 'Yes! In Update 0.7.0, the Death Screen was completely rebuilt with dedicated actions instead of any-key respawning: Returner mode features Continue and Load Game, Iron Man features New Game or Exit, and Tutorial features Try Again, supported by run-specific Autosave Slots.'],
-      ['How do Stash expansions work in Update 0.7.0?', 'Players can purchase Stash expansions from a Trader for 50,000 Rubles per additional tab at the main village. Furthermore, four outpost camps (Arcadia, Mechanist Base, Mudlark Camp, Microrayion) now feature independent 1-tab stashes and crafting tables.'],
-      ['Have armor and weapon repair costs been rebalanced?', 'Yes. In Update 0.7.0, weapon durability was significantly increased across almost the entire arsenal, rifle durability doubled per point, jam thresholds were relaxed (down to 33% at 10% durability), and Repair Kits can now be used regardless of current equipment wear.'],
-      ['When is co-op multiplayer coming to Scavland?', 'Co-op multiplayer (2-4 player squad extraction) is confirmed on the official development roadmap for full release during the 12 to 24 month Early Access window, following single-player balance and world expansion.'],
-      ['How do Trader rank bonuses work?', 'Starting in Update 0.7.0, Traders pay an additional 5% sell value per Trader Rank, providing continuous economic incentive as your regional reputation grows.']
+      ['Where can I view the official Scavland development roadmap?', 'The official interactive roadmap is live on the brand-new official website at <strong>scavland.com</strong>, detailing planned major updates, new biomes, weapons, and upcoming systems.'],
+      ['What is the next upcoming update for Scavland?', 'The next update is "Community Picks #1", which is already prepared to release alongside Scavland\'s first Video DevLog showcasing upcoming gameplay features.'],
+      ['Will Scavland continue publishing written patch notes?', 'Yes. Developer NoShadow confirmed that traditional written changelogs will still be published for every patch alongside the new video devlogs.'],
+      ['Has Scavland added an option to reload saves when you die?', 'Yes. In Update 0.7.0, the Death Screen was completely rebuilt with dedicated actions: Returner mode features Continue and Load Game, Iron Man features New Game or Exit, and each run has its own Autosave Slot.'],
+      ['When is co-op multiplayer coming to Scavland?', 'Co-op multiplayer (2-4 player squad extraction) is confirmed on the official development roadmap for full release during the 12 to 24 month Early Access window.']
     ],
     related: [
       'scavland-map-and-locations',
@@ -1054,15 +1053,17 @@ export const guides: Guide[] = [
     keywords: [
       'scavland roadmap',
       'scav land roadmap',
+      'scavland official website',
+      'scavland.com',
+      'scavland community picks 1',
+      'scavland video devlog',
+      'scavland new update',
+      'scavland roadmap 2026',
       'scavland coop',
       'scavland co-op',
-      'scavland co-op roadmap',
       'scavland multiplayer release',
       'scavland save reload',
-      'scavland death screen update',
-      'scavland stash expansion 50000',
-      'scavland developer commitments',
-      'scavland update 0.7.0'
+      'scavland developer commitments'
     ],
     videoId: 'L502erfg0hU',
     videoTitle: 'Scavland - Early Access Available Now',
