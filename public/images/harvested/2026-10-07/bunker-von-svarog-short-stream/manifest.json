@@ -1,0 +1,48 @@
+{
+  "topic_slug": "bunker-von-svarog-short-stream",
+  "source_url": "https://www.reddit.com/r/Scavland/comments/1wspp47/bunker_von_svarog_short_stream_around",
+  "page_title": "Bunker von Svarog Short Stream around : r/Scavland",
+  "harvested_at": "2026-10-07T02:00:13.695034",
+  "authenticated": true,
+  "verified": true,
+  "verification_notes": "Forum URL detected: Bypassing webpage screenshot to prevent forum UI pollution.; Matched official screenshot: steam_ss_11.webp (semantic score: 6)",
+  "images": [
+    {
+      "filename": "bunker-von-svarog-short-stream-gameplay.webp",
+      "relative_path": "bunker-von-svarog-short-stream-gameplay.webp",
+      "source_url": "local://steam_ss_11.webp",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 55686,
+      "description": "Scavland Mikhail 74U weapon modification workbench showing durability stats and attachment slots",
+      "downloaded": true,
+      "authenticated": true,
+      "content_kind": "WEBP",
+      "sha256": "075f9e5345a7ab5271b788a987792ee67cf457a71b4f3dfda1cd118e1cf8ec09",
+      "duplicate_of": null,
+      "visual_score": null,
+      "content_check": "ok",
+      "verified": true
+    }
+  ],
+  "text_preview": "跳到主要内容\nr/Scavland\n在 Reddit 上投放广告\n打开聊天\n创建\n创建帖子\n打开收件箱\n展开用户菜单\n转到“Scavland”\nr/Scavland\n•\n8天前\nu/Careful-Answer-210\nBunker von Svarog Short Stream around\n\nScavland - Svarog around | casual ü40 #scavland #livestream #gaming #games\nhttps://youtube.com/live/njj5xXT1TQc?feature=share\n\n评论区域\n\n第一个发表评论\n\n还没有人回复此帖子",
+  "clue_verification": {
+    "clue_title": "\"Bunker von Svarog Short Stream around\"",
+    "source_url": "https://www.reddit.com/r/Scavland/comments/1wspp47/bunker_von_svarog_short_stream_around",
+    "fetched_page_title": "Bunker von Svarog Short Stream around : r/Scavland",
+    "relevance_ok": true,
+    "matched_keywords": [
+      "bunker",
+      "von",
+      "svarog",
+      "short",
+      "stream",
+      "around"
+    ],
+    "missing_keywords": [],
+    "required_hits": 3,
+    "score": "6/6",
+    "reason": "matched 6/6 clue keywords (required 3)",
+    "verified_at": "2026-10-07T02:00:13.695270"
+  }
+}
