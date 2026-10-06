@@ -4,14 +4,14 @@ export type Guide = { slug:string; title:string; shortTitle:string; description:
 export const guides: Guide[] = [
   {
     slug: 'scavland-cheats-and-console-commands',
-    shortTitle: 'Console & Cheats',
-    title: 'Scavland Console Commands & Cheats Guide: Debug Mode (-dev / -console) & Item Spawning',
-    description: 'Definitive Scavland console commands and cheats guide: -dev and -console Steam launch parameters, debug overlay hotkeys, CT table memory offsets, and safe solo testing.',
+    shortTitle: 'Cheats & Trainer',
+    title: 'Scavland Cheats & Trainer Guide: Console Commands (-dev / -console), CT Tables & Mod Safety',
+    description: 'Scavland trainer and cheats guide: -dev & -console launch flags, single-player trainer & CT table compatibility, memory offset updates, and save backup protection.',
     category: 'Systems',
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
-    updated: '2026-10-02',
+    updated: '2026-10-06',
     answer: 'In Scavland, players seeking developer console commands, debug overlays, or trainer modifications can access internal diagnostic features through verified Steam parameters. While developer debug menus were restricted following Early Access <strong>v0.2.4</strong>, players can pass command-line launch parameters (<strong>-dev</strong>, <strong>-console</strong>) via Steam to activate diagnostic overlays and console functionality. For memory trainers and <strong>Cheat Engine</strong> (CT) tables, recent patches including <strong>Update 0.7.0</strong> and <strong>Update 0.7.2</strong> shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, <strong>Update 0.7.0</strong> added independent <strong>Autosave Slots</strong> per run, protecting your main campaign from corruption during experimental testing.',
     steps: [
       '01 · Configure Steam Launch Parameters (-dev / -console): To enable the developer console and diagnostic features, right-click Scavland in your Steam Library -> Properties -> General -> Launch Options. Enter "-dev" or "-console" (without quotes) to activate developer diagnostic logging and command overlay support on boot.',
@@ -35,13 +35,14 @@ export const guides: Guide[] = [
       ['How do you open the console in Scavland?', 'To open the developer console, add -dev or -console to your Steam Launch Options (right-click Scavland -> Properties -> General -> Launch Options). Once in-game, press [~] (Tilde) or [F1] / [F2] to toggle the debug console overlay.'],
       ['Are there official cheat codes in Scavland?', 'Scavland provides an official "Explorer Mode" difficulty preset that functions like built-in cheats—offering 150 maximum stamina with 15 roll cost (compared to 40 in standard modes) and 2x campfire health recovery. Console debug access requires -dev or -console launch flags.'],
       ['Are single-player trainers (Fling, WeMod, Cheat Engine) safe to use in Scavland?', 'Yes. Scavland is strictly an offline single-player experience during Early Access with no server-side VAC anti-cheat. While external trainers and CT tables will not trigger bans, always ensure you use tables built for Update 0.7.0+ to prevent memory pointer crashes, and take advantage of the independent Autosave Slots to protect your main campaign.'],
+      ['What trainer options are available for Scavland on PC?', 'Because Scavland is an offline solo title, players frequently utilize standalone memory trainers (such as Fling or WeMod) alongside community Cheat Engine CT tables for stamina locking, inventory weight bypass, and infinite rubles. Always ensure trainer versions match Update 0.7.0+ to prevent memory pointer crashes.'],
       ['Why do older Cheat Engine tables crash after Update 0.7.0 / 0.7.2?', 'Update 0.7.0 and Update 0.7.2 refactored internal data structures and inventory serialization, shifting memory pointers. Legacy tables cause memory desyncs or crashes; always use tables updated for the current patch.'],
       ['Can you get VAC banned for using console commands or Cheat Engine in Scavland?', 'No. Scavland is a dedicated single-player title in Early Access with no server-side VAC anti-cheat for solo play. Modifying local stamina or ruble values in single-player will not ban your Steam account.'],
       ['How does Update 0.7.0 safeguard saves when using cheats?', 'Update 0.7.0 introduced individual Autosave Slots per run, preventing a modded or experimental session from automatically overwriting your primary progression save.'],
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland console', 'scavland console commands', 'scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land console', 'scavland debug mode', 'scavland dev mode', 'scavland trainer', 'scavland pc trainer', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland console', 'scavland console commands', 'scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land console', 'scavland debug mode', 'scavland dev mode', 'scavland trainer', 'scavland pc trainer', 'scavland trainer download', 'scavland fling trainer', 'scavland wemod', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -351,14 +352,14 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-loot-and-scavenging',
-    shortTitle: 'Loot & Scavenging',
-    title: 'Scavland Loot & Scavenging Guide: Barter Values & Crafting Junk',
-    description: 'Scavland loot guide: what to keep vs sell, rope & battery crafting status, spark plug barter values, weight density, and Anatoly vendor payouts.',
+    shortTitle: 'Loot & Backpacks',
+    title: 'Scavland Loot & Backpack Inventory Guide: Carry Capacity, Barter & Junk (Update 0.7.0)',
+    description: 'Scavland loot and backpack guide: maximizing carry weight capacity, barter values vs crafting junk, spark plug payouts, and fast inventory management.',
     category: 'Resources',
     image: '/images/harvested/2026-09-30/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
-    imageAlt: 'Lootable consumables and barter scrap including rope, batteries and wiring in Scavland inventory',
+    imageAlt: 'Lootable consumables, tactical backpacks, and barter scrap in Scavland inventory',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/',
-    updated: '2026-09-29',
+    updated: '2026-10-06',
     answer: 'Managing backpack capacity in Scavland requires understanding the exact boundary between active crafting components and pure vendor barter junk. In Early Access, functional workbench recipes are strictly reserved for mechanical and medical supplies (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, and Ballistic Fiber). Frequently looted industrial items—including Rope, Household Batteries, Incandescent Light Bulbs, Car Batteries, and Copper Wiring—currently have zero workbench crafting recipes ("pure barter commodities"). However, settlement merchants enforce strict category specialization: specialist traders pay noticeably more for the categories they deal in, so sell electronics to a trader that actually wants them. For full market rules, explore our [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/), [Crafting & Trading Guide](/guide/scavland-crafting-and-trading/), or [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/).',
     steps: [
       '01 · Distinguish Active Crafting vs Barter Commodities: Check your safehouse workbench recipe manifest. Only <strong>Scrap Metal</strong>, <strong>Springs</strong>, Cloth, Antiseptic, Water, and Gunpowder craft items. Items like Rope, Batteries, and Light Bulbs have NO current crafting use and should be liquidated for liquid rubles.',
@@ -376,13 +377,14 @@ export const guides: Guide[] = [
       ['Verified Baseline', 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/']
     ],
     faq: [
+      ['How do you increase backpack space and carry capacity in Scavland?', 'In Scavland, backpack space is expanded by equipping higher-capacity tactical backpacks and chest rigs bought from settlement traders or looted from subterranean bunkers. Furthermore, Update 0.7.0 allows purchasing extra Stash tabs for 50,000 Rubles in the main village. Maximize raid profit by discarding heavy zero-recipe scrap (like Car Batteries) and keeping high-density items like Spark Plugs and Weapon Springs.'],
       ['Are rope, batteries, and light bulbs used in crafting in Scavland?', 'No. In current Early Access Patch <strong>v0.6.0</strong>, rope, household batteries, incandescent light bulbs, and electrical wiring do not have active workbench crafting recipes. Developer NoShadow confirmed expanded recipes are planned for future roadmap updates; currently, they serve as vendor barter commodities.'],
       ['Which merchant pays the most for scrap and industrial components?', 'Traders are specialised since Update 0.6.0. Bogdan pays 40% more for Mutant Parts, Zhivan pays 140% for Common items, and Grigory no longer buys Medical, Food or Crafting items but pays more for Weapon Attachments. Match the goods to the vendor.'],
       ['What loot should I prioritize during early-game raids?', 'Prioritize medical consumables (bandages, clean water), ammunition matching your equipped firearms, and high-value 1-slot electronics (spark plugs, relays, lighters). Leave heavy metal scrap behind unless needed for immediate safehouse repairs.'],
       ['Should I hoard junk items for future updates?', 'Keep a working reserve of 10x Weapon Springs and 20x Metal Scrap for weapon and armor repairs. Miscellaneous junk like rope, empty tin cans, and light bulbs should be sold immediately for rubles to upgrade your backpack and tactical rig.']
     ],
     related: ['scavland-crafting-and-trading', 'scavland-merchant-prices-and-barter-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-beginner-guide'],
-    keywords: ['scavland loot guide', 'scavland what to sell', 'scavland valuable junk', 'scavland rope crafting', 'scavland batteries use', 'scavland spark plugs barter', 'scavland vendor prices', 'scavland inventory management'],
+    keywords: ['scavland backpack', 'scavland backpack upgrade', 'scavland carry capacity', 'scavland inventory capacity', 'scavland more inventory space', 'scavland how to increase backpack', 'scavland loot guide', 'scavland what to sell', 'scavland valuable junk', 'scavland rope crafting', 'scavland batteries use', 'scavland spark plugs barter', 'scavland vendor prices', 'scavland inventory management'],
     videoId: 'l84-X9wHjeM',
     videoTitle: 'Making MONEY and Getting LOOT in SCAVLAND',
     videoChannel: 'Nukov'
@@ -782,10 +784,10 @@ export const guides: Guide[] = [
     image: '/images/harvested/2026-10-06/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-05',
-    answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in <strong>Zalesye</strong>. The primary fortified complex, Subterranean Bunker <strong>Sector B-4</strong>, is situated in the rugged northwestern forest sector of <strong>Zalesye</strong> behind a concrete surface trench and steel blast bulkhead. Accessing the inner military armory requires the rare <strong>Red Keycard</strong> swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset 3 hours after leaving them (or across the in-game 24-hour day-night cycle upon safehouse sleep). For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
+    updated: '2026-10-06',
+    answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in <strong>Zalesye</strong>. The primary fortified complex, Subterranean Bunker <strong>Sector B-4</strong>, is situated in the rugged northwestern forest sector of <strong>Zalesye</strong> behind a concrete surface trench and steel blast bulkhead (cross-reference our [Zalesye Bunkers Map](/maps/) or [Sector B-4 Complex Guide](/guide/scavland-sector-b4-bunker-complex/)). Accessing the inner military armory requires the rare <strong>Red Keycard</strong> swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset 3 hours after leaving them (or across the in-game 24-hour day-night cycle upon safehouse sleep). For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
     steps: [
-      '01 · Locate the Bunker B-4 Surface Entrance: Head into the northwestern <strong>Zalesye</strong> woods, following the overgrown railway spur toward the concrete drainage trench. The entrance is marked by a reinforced blast doorway guarded by patrol sentries and irradiated puddles.',
+      '01 · Locate the Bunker B-4 Surface Entrance: Head into the northwestern <strong>Zalesye</strong> woods, following the overgrown railway spur toward the concrete drainage trench (verify coordinates on the [Zalesye Interactive Map](/maps/)). The entrance is marked by a reinforced blast doorway guarded by patrol sentries and irradiated puddles.',
       '02 · Acquire the <strong>Red Keycard</strong>: The <strong>Red Keycard</strong> is a rare military security pass dropped by checkpoint commanders, found in hazardous radioactive zone airdrops, or awarded from Nadja\'s apex mutant extermination contracts. Store it in your safehouse stash until ready.',
       '03 · Secure the Perimeter & Keycard Reader: Clear surface hostiles before descending the stairwell. Insert the Red Keycard into the glowing terminal reader; the mechanical vault door takes 15 seconds to cycle open while audible sirens sound.',
       '04 · Clear Subterranean Corridors & Sweep Vault Lockers: Advance through narrow concrete choke points with close-quarters weapons. Loot military crates containing high-tier attachments, ammunition, and rare electronics.',
@@ -801,12 +803,12 @@ export const guides: Guide[] = [
       ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
-      ['Where is the subterranean bunker located in Scavland?', 'Subterranean Bunker Complex B-4 is located in northwestern <strong>Zalesye</strong>. Look for the concrete drainage trench and heavy steel blast door situated at the end of the overgrown rail line.'],
+      ['Where is the subterranean bunker located in Scavland?', 'Subterranean Bunker Complex B-4 is located in northwestern <strong>Zalesye</strong>. Look for the concrete drainage trench and heavy steel blast door situated at the end of the overgrown rail line, or consult our [Zalesye Bunkers Map](/maps/).'],
       ['How do bunker loot and crates respawn?', 'Under official mechanics introduced in Update 0.6.0 and stabilized in Update 0.7.0, bunkers reset 3 hours after leaving them. Additionally, sleeping in a safehouse bed advances the 24-hour world reset cycle, repopulating unlocked lockers and military crates.'],
       ['Is the Red Keycard single-use or reusable?', 'In current builds, the Red Keycard possesses 3 durability charges, allowing 3 separate bunker vault entries before burning out.'],
       ['What is the best weapon loadout for clearing subterranean bunkers?', 'Bring close-quarters shotguns with buckshot or high-penetration rifles along with a flashlight to handle dark narrow concrete corridors and sudden mutant ambushes.']
     ],
-    related: ['scavland-weapons-and-attachments', 'scavland-loot-and-scavenging', 'scavland-weapon-repair-and-durability', 'scavland-sleep-and-world-reset-guide'],
+    related: ['scavland-sector-b4-bunker-complex', 'scavland-weapons-and-attachments', 'scavland-loot-and-scavenging', 'scavland-weapon-repair-and-durability', 'scavland-sleep-and-world-reset-guide'],
     keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker entrance', 'scavland bunker b4', 'scavland no bunkers', 'scavland red keycard', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction'],
     videoId: 'Xbq3ZHQf1YE',
     videoTitle: 'Scavland How do you enter all the currently identified bunkers and secret bunkers?..',
@@ -1236,14 +1238,14 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-binoculars-and-scouting-guide',
-    shortTitle: 'Binoculars & Recon',
-    title: 'Scavland Binoculars & Scouting Guide: Vision & Long-Range Recon',
-    description: 'Master binoculars and field scouting in Scavland: camera pan controls, scouting ranges, sniper detection, foliage vision, and night recon tactics.',
+    shortTitle: 'Binoculars & Zoom',
+    title: 'Scavland Binoculars Guide: How to Get, Use & Pan Camera View (Update 0.7.0)',
+    description: 'How to get and use Binoculars in Scavland: vendor locations (Anatoly & Volodymyr), tower loot spawns, camera pan controls (Right-Click), and scouting range.',
     category: 'Tactical Guide',
     image: '/images/harvested/2026-09-11/we-hear-you-changes-are-coming/we-hear-you-changes-are-coming-frame-332s.jpg',
     imageAlt: 'Scavenger using optical scouting tools to survey distant ruins in Scavland',
     evidence: 'Official Steam announcements & community reports · Update 0.6.0',
-    updated: '2026-09-14',
+    updated: '2026-10-06',
     answer: 'Scavland restricts the default camera to a tight isometric perspective, creating claustrophobic tension but leaving scavengers vulnerable to long-range ambushes. The <strong>Binoculars (Field Glasses)</strong> are a critical handheld scouting tool that unlocks extended viewport panning without moving your character. Equipping binoculars and holding Right-Click extends your vision cone up to <strong>45 meters</strong> forward—tripling the standard <strong>15-meter</strong> fog-of-war. This allows you to spot concealed <strong>Tongue Monsters</strong>, identify <strong>Bandit</strong> snipers in ruined towers, and map safe traversal corridors outside the <strong>25-meter</strong> AI visual detection radius. For comprehensive tactical gear advice, review our [Weapons & Attachments Guide](/guide/scavland-weapons-and-attachments/), [Night Survival & Stealth Guide](/guide/scavland-night-survival-and-stealth-mechanics/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
       '01 · Acquire & Equip Field Binoculars: Binoculars spawn in military observation towers, outpost lookout nests, or can be bartered directly from trader <strong>Anatoly</strong> or <strong>Volodymyr</strong>. Drag them into a hotkey quick slot (e.g. slot [4]) or your secondary active tool slot.',
@@ -1262,6 +1264,7 @@ export const guides: Guide[] = [
       ['Verified Baseline', 'Early Access Patch v0.6.0 Baseline']
     ],
     faq: [
+      ['Where do you find or buy binoculars in Scavland?', 'Binoculars can be bartered from trader Anatoly or arms dealer Volodymyr in the Zalesye settlement, or looted from observation towers and lookout nests across outer military perimeter zones.'],
       ['How do you use binoculars in Scavland?', 'Place the binoculars in a hotkey slot (such as [4]), press the key to hold them, and hold [Right Mouse Button]. Drag your cursor toward the screen edges to pan your camera viewport up to 45 meters in that direction.'],
       ['Can binoculars see enemies inside buildings or underground bunkers?', 'No. Binoculars require an unobstructed physical line-of-sight. They cannot see through bunker blast doors, solid brick walls, or underground facility bulkheads.'],
       ['Do binoculars consume battery power or durability?', 'No. Unlike the electronic Anomaly Scanner or Night Vision Goggles, optical binoculars possess infinite durability and require no battery cells or cleaning oil.'],
@@ -1277,6 +1280,10 @@ export const guides: Guide[] = [
     keywords: [
       'scavland binoculars',
       'how to use binoculars scavland',
+      'how to get binoculars in scavland',
+      'where to find binoculars scavland',
+      'scavland how to zoom out',
+      'scavland camera pan',
       'scavland scouting guide',
       'scavland camera zoom',
       'scavland fov fix',
@@ -1722,8 +1729,8 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_08.webp',
     imageAlt: "Scavland tactical map and console release overview",
     evidence: 'Developer Steam Store Disclosures & Q&A Statements · September 2026',
-    updated: '2026-10-02',
-    answer: "As of September 2026, Scavland is strictly an exclusive PC release available through <strong>Steam Early Access</strong>. Studio developer <strong>NoShadow</strong> has officially stated that their primary focus remains completing the planned <strong>Act II</strong> and <strong>Act III</strong> expansions, optimizing world simulation stability, and delivering promised <strong>co-op multiplayer</strong> before committing development resources to dedicated console ports on <strong>PlayStation 5</strong>, <strong>Xbox Series X/S</strong>, or <strong>Nintendo Switch</strong>. However, because Scavland was built from day one with full controller support, native gamepad HUD navigation, and optimized <strong>Steam Deck</strong> compatibility, a future console launch following the full <strong>Version 1.0</strong> PC release is highly feasible.",
+    updated: '2026-10-06',
+    answer: "As of October 2026, Scavland is strictly an exclusive PC release available through <strong>Steam Early Access</strong>. Studio developer <strong>NoShadow</strong> has officially stated that their primary focus remains completing the planned <strong>Act II</strong> and <strong>Act III</strong> expansions, optimizing world simulation stability, and delivering promised <strong>co-op multiplayer</strong> before committing development resources to dedicated console ports on <strong>PlayStation 5</strong>, <strong>Xbox Series X/S</strong>, or <strong>Nintendo Switch</strong>. However, because Scavland was built from day one with full controller support, native gamepad HUD navigation, and optimized <strong>Steam Deck</strong> compatibility, a future console launch following the full <strong>Version 1.0</strong> PC release is highly feasible.",
     steps: [
       "01 \u00b7 Current Platform Availability (PC Steam Exclusive): Scavland launched on September 4, 2026 exclusively for PC Windows (App ID <strong>3373500</strong>), alongside an Apple Silicon macOS version submitted for store review.",
       "02 \u00b7 PlayStation 5 (PS5) Port Outlook: Developer NoShadow confirmed in community Q&A sessions that console ports will be evaluated after the PC version reaches commercial feature completion (Version 1.0). No PS5 release date currently exists.",
@@ -1759,7 +1766,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "Developer Steam Store Disclosures & Q&A Statements \u00b7 September 2026"
+            "Developer Steam Store Disclosures & Q&A Statements \u00b7 October 2026"
       ]
 ],
     faq: [
@@ -1785,7 +1792,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-price-and-regional-editions", "scavland-steam-deck-and-handheld-settings", "scavland-early-access-launch-faq-and-roadmap", "scavland-developer-commitments-and-patch-roadmap"],
-    keywords: ["scavland xbox", "scavland on xbox", "scavland console", "is scavland on xbox", "is scavland on ps5", "scavland console release date", "scavland xbox series x", "scavland nintendo switch", "scavland ps4 release", "scavland controller support"]
+    keywords: ["scavland xbox", "scavland ps5", "scavland ps5 release", "scavland xbox release", "scavland game pass", "scavland xbox one", "scavland ps4", "scavland on xbox", "scavland console", "is scavland on xbox", "is scavland on ps5", "scavland console release date", "scavland xbox series x", "scavland nintendo switch", "scavland ps4 release", "scavland controller support"]
   },
   {
     slug: 'scavland-tips-and-tricks',

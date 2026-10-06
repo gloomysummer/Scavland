@@ -8,7 +8,7 @@ import AdSlot from '../components/AdSlot.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki (Scavlands) — Tactical Guides, Weapons & Maps" description="The community-run Scavland Wiki (Scavlands): comprehensive survival guides, weapons, ballistics & attachments, Zalesye bunker maps, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scavlands, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
+<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
   <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -103,6 +103,7 @@ const featured = guides.slice(0, 6);
     <div class="hero-actions">
       <a class="button" href="/guide/scavland-beginner-guide/">Scavland Beginner Guide <span aria-hidden="true">➔</span></a>
       <a class="button secondary" href="/maps/">Zalesye Bunkers &amp; Map ➔</a>
+      <a class="button secondary" href="/release-date/">Roadmap &amp; Release Info</a>
       <a class="button secondary" href="/weapons/">Tactical Arsenal</a>
       <a class="button secondary" href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">Play on Steam <span aria-hidden="true">↗</span></a>
     </div>
