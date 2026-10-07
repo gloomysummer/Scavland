@@ -356,10 +356,10 @@ export const guides: Guide[] = [
     title: 'Scavland Loot & Backpack Inventory Guide: Carry Capacity, Barter & Junk (Update 0.7.0)',
     description: 'Scavland loot and backpack guide: maximizing carry weight capacity, barter values vs crafting junk, spark plug payouts, and fast inventory management.',
     category: 'Resources',
-    image: '/images/harvested/2026-09-30/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
+    image: '/images/harvested/2026-10-08/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
     imageAlt: 'Lootable consumables, tactical backpacks, and barter scrap in Scavland inventory',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/',
-    updated: '2026-10-06',
+    updated: '2026-10-08',
     answer: 'Managing backpack capacity in Scavland requires understanding the exact boundary between active crafting components and pure vendor barter junk. In Early Access, functional workbench recipes are strictly reserved for mechanical and medical supplies (Scrap Metal, Weapon Springs, Clean Cloth, Antiseptic, Water Bottles, Gunpowder, and Ballistic Fiber). Frequently looted industrial items—including Rope, Household Batteries, Incandescent Light Bulbs, Car Batteries, and Copper Wiring—currently have zero workbench crafting recipes ("pure barter commodities"). However, settlement merchants enforce strict category specialization: specialist traders pay noticeably more for the categories they deal in, so sell electronics to a trader that actually wants them. For full market rules, explore our [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/), [Crafting & Trading Guide](/guide/scavland-crafting-and-trading/), or [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/).',
     steps: [
       '01 · Distinguish Active Crafting vs Barter Commodities: Check your safehouse workbench recipe manifest. Only <strong>Scrap Metal</strong>, <strong>Springs</strong>, Cloth, Antiseptic, Water, and Gunpowder craft items. Items like Rope, Batteries, and Light Bulbs have NO current crafting use and should be liquidated for liquid rubles.',
@@ -378,7 +378,7 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['How do you increase backpack space and carry capacity in Scavland?', 'In Scavland, backpack space is expanded by equipping higher-capacity tactical backpacks and chest rigs bought from settlement traders or looted from subterranean bunkers. Furthermore, Update 0.7.0 allows purchasing extra Stash tabs for 50,000 Rubles in the main village. Maximize raid profit by discarding heavy zero-recipe scrap (like Car Batteries) and keeping high-density items like Spark Plugs and Weapon Springs.'],
-      ['Are rope, batteries, and light bulbs used in crafting in Scavland?', 'No. In current Early Access Patch <strong>v0.6.0</strong>, rope, household batteries, incandescent light bulbs, and electrical wiring do not have active workbench crafting recipes. Developer NoShadow confirmed expanded recipes are planned for future roadmap updates; currently, they serve as vendor barter commodities.'],
+      ['Are rope, batteries, and light bulbs used in crafting in Scavland?', 'No. In current Early Access builds (<strong>0.7.0</strong> / <strong>0.7.2</strong>), rope, household batteries, incandescent light bulbs, and electrical wiring do not have active workbench crafting recipes. Developer NoShadow confirmed expanded recipes are planned for future roadmap updates; currently, they serve as vendor barter commodities.'],
       ['Which merchant pays the most for scrap and industrial components?', 'Traders are specialised since Update 0.6.0. Bogdan pays 40% more for Mutant Parts, Zhivan pays 140% for Common items, and Grigory no longer buys Medical, Food or Crafting items but pays more for Weapon Attachments. Match the goods to the vendor.'],
       ['What loot should I prioritize during early-game raids?', 'Prioritize medical consumables (bandages, clean water), ammunition matching your equipped firearms, and high-value 1-slot electronics (spark plugs, relays, lighters). Leave heavy metal scrap behind unless needed for immediate safehouse repairs.'],
       ['Should I hoard junk items for future updates?', 'Keep a working reserve of 10x Weapon Springs and 20x Metal Scrap for weapon and armor repairs. Miscellaneous junk like rope, empty tin cans, and light bulbs should be sold immediately for rubles to upgrade your backpack and tactical rig.']
@@ -1502,8 +1502,8 @@ export const guides: Guide[] = [
     category: "Systems",
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: "Modded inventory grid and custom UI telemetry in Scavland",
-    evidence: 'Community Modding Reports & Nexus Mods · Update 0.7.2',
-    updated: '2026-10-02',
+    evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
+    updated: '2026-10-08',
     answer: "While official <strong>Steam Workshop</strong> support is scheduled for post-launch roadmap phases, Scavland boasts an active modding community centered around the <strong>BepInEx 5.4</strong> Unity/C# injection framework and <strong>Nexus Mods</strong>. Because Scavland operates strictly as an offline, single-player survival sandbox during Early Access, installing community balance modifications, custom inventory grid rebalancers, FOV camera adjusters, and third-party UI localizations carries zero risk of <strong>VAC bans</strong>. However, significant patches like <strong>Update 0.7.0</strong> frequently alter internal game assembly offsets, meaning scavengers must verify plugin compatibility before loading high-value safehouse campaigns.",
     steps: [
       "01 \u00b7 Install BepInEx 5.4 Unity Framework: Download the 64-bit BepInEx 5.4 release from GitHub or Nexus Mods. Extract the archive directly into your root game directory at <strong>Steam\\steamapps\\common\\Scavland\\</strong> alongside the executable.",
@@ -1540,7 +1540,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "Community Modding Reports & Nexus Mods \u00b7 Update 0.7.2"
+            "Community-reported @ https://steamcommunity.com/app/3373500/discussions/"
       ]
 ],
     faq: [
@@ -1566,7 +1566,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-cheats-and-console-commands", "scavland-save-file-location-and-backups", "scavland-russian-language-and-font-fix", "scavland-patch-0-7-0-update-and-changes"],
-    keywords: ["scavland mods", "scavland modding guide", "scavland nexus mods", "scavland bepinex install", "scavland steam workshop", "scavland cheats mods", "scavland cheat table", "scavland mods cheat engine"]
+    keywords: ["scavland mods", "scavland mod", "scavland modding guide", "scavland nexus mods", "scavland bepinex install", "scavland steam workshop", "scavland cheats mods", "scavland cheat table", "scavland mods download"]
   },
   {
     slug: 'scavland-steam-deck-performance-optimization',
@@ -1727,8 +1727,8 @@ export const guides: Guide[] = [
     category: "Platforms",
     image: '/images/screenshots/steam_ss_08.webp',
     imageAlt: "Scavland tactical map and console release overview",
-    evidence: 'Developer Steam Store Disclosures & Q&A Statements · September 2026',
-    updated: '2026-10-06',
+    evidence: 'Official Steam announcements · Store page & FAQ',
+    updated: '2026-10-08',
     answer: "As of October 2026, Scavland is strictly an exclusive PC release available through <strong>Steam Early Access</strong>. Studio developer <strong>NoShadow</strong> has officially stated that their primary focus remains completing the planned <strong>Act II</strong> and <strong>Act III</strong> expansions, optimizing world simulation stability, and delivering promised <strong>co-op multiplayer</strong> before committing development resources to dedicated console ports on <strong>PlayStation 5</strong>, <strong>Xbox Series X/S</strong>, or <strong>Nintendo Switch</strong>. However, because Scavland was built from day one with full controller support, native gamepad HUD navigation, and optimized <strong>Steam Deck</strong> compatibility, a future console launch following the full <strong>Version 1.0</strong> PC release is highly feasible.",
     steps: [
       "01 \u00b7 Current Platform Availability (PC Steam Exclusive): Scavland launched on September 4, 2026 exclusively for PC Windows (App ID <strong>3373500</strong>), alongside an Apple Silicon macOS version submitted for store review.",
@@ -2334,8 +2334,8 @@ export const guides: Guide[] = [
     category: "Gear",
     image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: "Tactical body armor vests, ballistic helmets, and armor plates in Scavland",
-    evidence: 'Official Steam Armor Rebalance Notes · Update 0.6.0 & 0.7.0',
-    updated: '2026-09-30',
+    evidence: 'Official Steam announcements · Update 0.7.0',
+    updated: '2026-10-08',
     answer: "Wearing appropriate ballistic protection in Scavland marks the difference between surviving an ambush and losing your entire carried backpack. In <strong>Update 0.6.0</strong>, developer NoShadow completely rebalanced armor durability pools across all four protection classes: <strong>Tattered (4\u21923)</strong>, <strong>Scavenger (5\u21924)</strong>, <strong>Medium (6\u21925)</strong>, and <strong>Heavy (7\u21926)</strong>. While heavier ballistic vests absorb lethal high-caliber rounds from sniper rifles, they impose noticeable movement speed and stamina recovery penalties. Pairing a reinforced vest with a steel or composite helmet prevents fatal headshot trauma when clearing fortified bandit checkpoints across <strong>Zalesye</strong>.",
     steps: [
       "01 \u00b7 Tier 1 (Tattered & Improvised Vests): Crafted from cloth scraps and light leather. Provides baseline protection against mutant bites and low-velocity 9x18mm shrapnel, but shatters quickly after 2-3 impacts.",
@@ -2372,7 +2372,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "Official Steam Armor Rebalance Notes \u00b7 Update 0.6.0 & 0.7.0"
+            "Official Steam announcements · Update 0.7.0"
       ]
 ],
     faq: [
@@ -2398,7 +2398,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-starter-loadouts-and-budget-builds", "scavland-weapons-and-attachments", "scavland-patch-0-6-0-update-and-changes", "scavland-death-and-loot-recovery"],
-    keywords: ["scavland armor guide", "scavland helmets", "scavland best armor", "scavland body armor tiers", "scavland plate carrier", "scavland armor durability update"]
+    keywords: ["scavland armor", "scavland body armor", "scavland armor guide", "scavland helmets", "scavland best armor", "scavland body armor tiers", "scavland plate carrier", "scavland armor durability update"]
   },
   {
     slug: 'scavland-mutants-and-enemies-guide',
@@ -3319,10 +3319,10 @@ export const guides: Guide[] = [
     title: "Scavland Sector B-4 Bunker Guide: Red Keycard, Subterranean Vaults & Traps",
     description: "Comprehensive tactical guide to the Sector B-4 subterranean bunker in Scavland: Red Keycard access, ventilation shafts, radioactive valves, and high-tier military vaults.",
     category: "Exploration",
-    image: '/images/screenshots/ss_07_underground_corridor.webp',
+    image: '/images/harvested/2026-10-07/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
     imageAlt: "Sector B-4 subterranean military bunker entrance and concrete blast doors in Scavland",
-    evidence: 'In-Game Subterranean Vault Blueprint Testing · Update 0.7.2',
-    updated: '2026-09-30',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-10-08',
     answer: "Concealed beneath the industrial rail yards northwest of <strong>Zalesye</strong>, the <strong>Sector B-4 Bunker Complex</strong> is the most perilous and lucrative subterranean Soviet facility in Scavland's Early Access build. Guarded by a reinforced hydraulic blast bulkhead, entry requires swiping an authentic <strong>Red Keycard</strong>. Inside, the facility is divided into two distinct levels: an upper administrative sector containing armory footlockers and electrical breaker panels, and a flooded sub-level infested with lethal <strong>Tongue Monsters (Lickers)</strong> and radioactive pipe breaches. Successfully raiding Sector B-4 yields S-Tier military firearms, high-magnification optics, and rare <strong>Flux Aspect Cores</strong>.",
     steps: [
       "01 \u00b7 Acquire a Red Keycard: Before marching to the facility, secure a Red Keycard from locked hospital director safes or barter with Tier 3 black-market merchants.",
@@ -3359,7 +3359,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "In-Game Subterranean Vault Blueprint Testing \u00b7 Update 0.7.2"
+            "Official Steam announcements & community reports · Update 0.7.0"
       ]
 ],
     faq: [
