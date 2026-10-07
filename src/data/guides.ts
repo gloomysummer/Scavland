@@ -477,17 +477,17 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-crafting-and-trading',
-    shortTitle: 'Crafting & trading',
-    title: 'Scavland Crafting & Trading Guide: Workbench Recipes, Campfire Cooking & Barter Loops',
-    description: 'Complete Scavland crafting, cooking, and merchant guide: safehouse workbench recipes, campfire water boiling, stamina recovery, medical blueprints, and trader specialization.',
+    shortTitle: 'Cooking & crafting',
+    title: 'Scavland Cooking, Crafting & Trading Guide: Campfire Boiling, Workbench Recipes & Barter Loops',
+    description: 'How to cook and craft in Scavland: campfire water boiling, hunger & stamina management, workbench recipes, safehouse stashes, and trader specialization in Update 0.7.0.',
     category: 'Systems',
     image: '/images/screenshots/ss_05_inventory_management.webp',
     imageAlt: 'Scavland crafting workbench, ammunition manufacturing and trading inventory interface',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-16',
-    answer: 'Crafting and trading in Scavland operate hand-in-hand at settlement safehouses and campfires across <strong>Zalesye</strong>. While Scavland does not feature an elaborate culinary minigame, campfire thermal processing and cooking are vital for survival: boiling contaminated water canteens over open flames produces clean potable water (preventing radiation poisoning and dysentery), while eating provisions, canned <strong>Tushonka</strong>, and dried meats restores hunger and sustains your maximum stamina pool (150 in <strong>Explorer Mode</strong>, 100 in <strong>Returner</strong> and <strong>Iron Man</strong>). In <strong>Update 0.7.0</strong>, stashes and crafting tables were added to all main camps. At safehouse workbenches, craft essential ammunition, medical kits, and cleaning tools from scrap metal, weapon springs, clean cloth, and gunpowder. For related nutrition and medical item details, explore our [Consumables & Medical Guide](/guide/scavland-consumables-and-medical-supplies/), [Loot & Scavenging Guide](/guide/scavland-loot-and-scavenging/), or [Merchant Prices & Barter Guide](/guide/scavland-merchant-prices-and-barter-guide/).',
+    updated: '2026-10-07',
+    answer: 'To cook in Scavland, players utilize lit campfires across <strong>Zalesye</strong> as functional survival stations rather than an intricate culinary crafting minigame. Cooking in Scavland centers on boiling contaminated water bottles over campfire flames to produce clean, safe drinking water (preventing radiation poisoning and dysentery), while lit campfires actively restore character health (healing rate doubled in <strong>Update 0.7.0</strong>). Character nutrition is managed by consuming packaged rations, canned <strong>Tushonka</strong>, and dried meats to clear Hunger and sustain your maximum stamina pool (150 in <strong>Explorer Mode</strong>, 100 in <strong>Returner</strong> and <strong>Iron Man</strong> modes). In Update 0.7.0, stashes and crafting tables were added to all main camps across Zalesye. At safehouse workbenches, craft essential ammunition, medical kits, and cleaning tools from scrap metal, weapon springs, clean cloth, and gunpowder.',
     steps: [
-      '01 · Campfire Cooking & Water Purification: Campfires in safe camps and outposts act as primary survival stations. Place Contaminated Water canteens directly on a lit campfire to boil clean potable water. Sleeping near campfires or beds restores health (5 health per in-game hour in beds) and skipping time keeps the world simulation active.',
+      '01 · How to Cook & Purify Water at Campfires: Campfires in safe camps and outposts act as primary survival stations. Place Contaminated Water canteens directly on a lit campfire to boil clean potable water. Lit campfires also emit soothing warmth that regenerates health over time (healing rate doubled in Update 0.7.0).',
       '02 · Nutrition & Stamina Cap Management: Scavland food crafting is streamlined—consume canned rations (<strong>Tushonka</strong>, sardines, beans) and dried meats to keep Hunger low. Neglecting food depletes stamina regeneration and caps maximum stamina below baseline (150 in <strong>Explorer Mode</strong>, 100 in <strong>Returner</strong> and <strong>Iron Man</strong>).',
       '03 · Master Workbench Crafting Loops: At safehouse workbenches, combine 2x Metal Scrap + 1x Weapon Spring to assemble Basic Gun Cleaning Kits. For ammunition, combine Gunpowder with Lead Pellets to produce 12-Gauge Buckshot or 9x18mm rounds.',
       '04 · Exploit Trader Category Specialization: Traders specialize in specific goods: Zhivan pays 140% for Common items, Vesna 75%, and Nadja 90% for Common and 80% for Crafting items. Grigory no longer buys food or medical items, paying premiums for weapon attachments instead.',
@@ -495,7 +495,7 @@ export const guides: Guide[] = [
       '06 · Unrestricted Trading with Volodymyr: If your faction reputation has dropped from hostile engagements, trader Volodymyr at the Crossroads annex continues to buy and sell all items without reputation rank restrictions.'
     ],
     facts: [
-      ['Campfire Cooking & Boiling', 'Campfires purify contaminated water canteens into clean water; food is eaten to prevent stamina cap penalties'],
+      ['Campfire Cooking & Boiling', 'Lit campfires purify contaminated water canteens into clean water and double health regeneration (Update 0.7.0)'],
       ['Stamina Pool Baselines', 'Maximum stamina is 150 in Explorer Mode and 100 in Returner and Iron Man modes'],
       ['Safehouse Workbenches', 'Stashes and crafting tables were added to all main camps in Update 0.7.0'],
       ['Trader Rank Bonus', 'Traders pay an additional 5% sell value per Trader Rank since Update 0.7.0'],
@@ -504,16 +504,14 @@ export const guides: Guide[] = [
       ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
     ],
     faq: [
-      ['How does cooking work in Scavland?', 'Scavland does not have a complex cooking menu with raw meat recipes. Instead, food is eaten as packaged provisions (canned Tushonka, dried meat, sardines) to satisfy hunger and prevent stamina cap penalties. Campfires are used to boil contaminated water canteens into clean potable water.'],
+      ['How do you cook in Scavland?', 'Scavland does not have a complex cooking menu with raw meat recipes. Instead, food is eaten as packaged provisions (canned Tushonka, dried meat, sardines) to satisfy hunger and prevent stamina cap penalties. Campfires are used to boil contaminated water canteens into clean potable water and provide active health regeneration.'],
+      ['How do I boil water at a campfire?', 'Approach any lit campfire in the wilderness or settlement outposts. Interact with the fire to boil contaminated water bottles into clean, safe drinking water, removing dysentery and radiation risks.'],
       ['Why is my maximum stamina reduced?', 'Severe hunger, thirst, or exhaustion penalizes your stamina bar. Keep your character fed with rations and hydrated with boiled clean water to maintain full stamina (150 in Explorer Mode, 100 in Returner and Iron Man).'],
       ['Which trader gives the best price for crafting components?', 'Nadja pays 80% for Crafting items and 90% for Common goods. Grigory no longer purchases food, medical, or crafting items, focusing on weapon attachments.'],
       ['What changed with crafting and stashes in Update 0.7.0?', 'Stashes and crafting tables were added to all main camps across Zalesye. Stash expansions can also be purchased from a Trader for 50,000 Rubles to unlock an additional Stash tab in the main village.']
     ],
     related: ['scavland-starter-loadouts-and-budget-builds', 'scavland-weapons-and-attachments', 'scavland-quests-and-contracts', 'scavland-merchant-prices-and-barter-guide'],
-    keywords: ['scavland crafting recipes', 'scavland trading guide', 'scavland workbench recipes', 'scavland cooking', 'scavland food crafting', 'scavland campfire cooking', 'scavland campfire healing', 'scavland stamina recovery', 'scavland medical blueprints', 'scavland volodymyr trader'],
-    videoId: '6aY3Lfc_w8g',
-    videoTitle: 'Scavland Locations of Merchants Selling Important Items',
-    videoChannel: 'Game Detox Dopamine'
+    keywords: ['scavland crafting recipes', 'scavland trading guide', 'scavland workbench recipes', 'scavland cooking', 'scavland how to cook', 'scavland food crafting', 'scavland campfire cooking', 'scavland campfire healing', 'scavland stamina recovery', 'scavland medical blueprints', 'scavland volodymyr trader', 'scavland boiled water']
   },
   {
     slug: 'scavland-weapon-repair-and-durability',
@@ -717,30 +715,31 @@ export const guides: Guide[] = [
     category: 'Systems',
     image: '/images/screenshots/steam_ss_06.webp',
     imageAlt: 'Two scavengers holding perimeter defensive positions near a bunker entrance in Scavland',
-    evidence: 'Official Steam announcements',
-    updated: '2026-09-10',
-    answer: 'Scavland launched into Steam Early Access (<strong>0.6.3</strong>) as a strictly singleplayer post-apocalyptic survival RPG. The developer confirmed that while the core game loop is balanced around solitary atmospheric tension, no cooperative mode has been announced in any official Steam post. Players seeking shared sessions can currently utilize <strong>Steam Remote Play Together</strong> for local screen-share coordination or practice proxy squad tactics alongside friendly faction patrols.',
+    evidence: 'Official Steam announcements · October 5 Roadmap',
+    updated: '2026-10-07',
+    answer: 'Scavland is currently a strictly singleplayer post-apocalyptic survival RPG in Steam Early Access (<strong>0.7.2</strong>). In the official one-month roadmap announcement (October 5, 2026) published alongside the new official website (<strong>scavland.com</strong>), developer NoShadow confirmed that cooperative multiplayer and squad-based extraction features are actively planned across upcoming roadmap milestones. For players seeking shared sessions today, you can use <strong>Steam Remote Play Together</strong> for tactical screen-sharing and inventory co-piloting, or coordinate movement alongside friendly faction squads in high-threat sectors.',
     steps: [
-      '01 · Early Access Solo Focus: Acknowledge that Day 1 Early Access features no native peer-to-peer or dedicated server networking; all progression and stashes are local to your singleplayer save.',
-      '02 · Developer Co-op Roadmap: Multiplayer co-op is formally slated for upcoming roadmap phases following foundational combat polish and northern map expansions.',
+      '01 · Early Access Solo Focus: Acknowledge that current Early Access builds (0.7.0 / 0.7.2) feature no native peer-to-peer or dedicated server networking; all progression, stashes, and quests are local to your singleplayer save.',
+      '02 · Official Roadmap & scavland.com: Developer NoShadow confirmed on October 5, 2026 that the official roadmap is live at scavland.com, outlining planned updates including cooperative squad mechanics as development progresses.',
       '03 · Proxy Fireteam Tactics: In high-threat military zones, trail behind friendly <strong>Rada</strong> or <strong>Commonfolk</strong> patrol squads to draw fire from hostile snipers and mutant packs.',
       '04 · Steam Remote Play Options: For couch co-op enthusiasts, <strong>Steam Remote Play Together</strong> allows a spectator/tactical co-pilot to manage inventory mapping and radio scanner frequencies.',
       '05 · Solo Extraction Discipline: Without a teammate to revive you, always carry a <strong>Tourniquet</strong> and <strong>Hemostatic Bandage</strong> in quick slots 4 and 5 to halt lethal bleeding instantly.'
     ],
     facts: [
-      ['Current Networking State', '100% singleplayer immersion; zero native online multiplayer in 0.6.3'],
-      ['Roadmap Commitment', 'The developer confirmed cooperative multiplayer is slated for Phase 2/3 development'],
+      ['Current Networking State', 'Strictly singleplayer in Early Access 0.7.2; zero native online multiplayer currently enabled'],
+      ['Roadmap Commitment', 'Developer NoShadow officially launched the roadmap at scavland.com on October 5, 2026'],
       ['Revive Mechanics', 'No teammate revives currently exist; death immediately drops backpack at point of failure'],
       ['Faction Proxy Support', 'Allied faction squads can be leveraged as organic fire support during overworld skirmishes'],
-      ['Verified Baseline', 'Official Steam Store Specification & Developer Q&A']
+      ['Verified Baseline', 'Official Steam announcements · October 5 Roadmap']
     ],
     faq: [
-      ['Is there multiplayer or co-op in Scavland?', 'Not currently. Scavland is designed from the ground up as a focused <strong>singleplayer</strong> hardcore survival RPG. However, <strong>co-op multiplayer</strong> is officially scheduled in the Early Access roadmap.'],
-      ['Can I play Scavland with friends using mods?', 'Community modders are exploring basic netcode hooks, but official multiplayer will arrive with dedicated developer backend support in future major content milestones.'],
+      ['Is there multiplayer or co-op in Scavland?', 'Not currently. Scavland is designed from the ground up as a focused <strong>singleplayer</strong> hardcore survival RPG in Early Access. However, cooperative multiplayer is planned on the official development roadmap hosted at <strong>scavland.com</strong>.'],
+      ['When will Scavland co-op multiplayer be released?', 'Developer NoShadow revealed the development roadmap on October 5, 2026 at scavland.com. Future major milestones will introduce co-op networking, new biomes, weapons, and systems during the Early Access cycle.'],
+      ['Can I play Scavland with friends using mods or Steam Remote Play?', 'While native online co-op is not yet live, players can utilize <strong>Steam Remote Play Together</strong> for shared screen sessions or take turns managing scouting, navigation, and inventory management.'],
       ['What happens when you die without a squad?', 'Your backpack stays at your coordinate of death as a persistent recovery beacon. You respawn safely in your bunker stash room to re-arm for a corpse recovery raid.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-death-and-loot-recovery', 'scavland-early-access-launch-faq-and-roadmap'],
-    keywords: ['scavland coop', 'scavland multiplayer', 'scav land multiplayer', 'scavland co op', 'scavland play with friends', 'scavland co-op roadmap', 'scavland extraction squad']
+    related: ['scavland-beginner-guide', 'scavland-death-and-loot-recovery', 'scavland-early-access-launch-faq-and-roadmap', 'scavland-developer-commitments-and-patch-roadmap'],
+    keywords: ['scavland coop', 'scavland multiplayer', 'scav land multiplayer', 'scavland co op', 'scavland play with friends', 'scavland co-op roadmap', 'scavland extraction squad', 'scavland multiplayer release', 'scavland co op release date', 'scavland coop release']
   },
   {
     slug: 'scavland-russian-language-and-font-fix',

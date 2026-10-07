@@ -71,7 +71,7 @@ const faqs = [
   {
     category: 'Release & Platforms',
     question: 'Will Scavland have co-op or multiplayer support?',
-    answer: 'At Early Access launch on September 4, 2026, Scavland is strictly single-player to ensure tight ballistics, AI tension, and atmospheric immersion. However, developer NoShadow has officially confirmed that a 2-player cooperative (Co-op) multiplayer mode is on the post-launch development roadmap for the full v1.0 release.'
+    answer: 'At Early Access launch on September 4, 2026, Scavland is strictly single-player to ensure tight ballistics, AI tension, and atmospheric immersion. However, developer NoShadow has officially confirmed that a 2-player cooperative (Co-op) multiplayer mode is on the post-launch development roadmap for the full release. For current networking status, Steam Remote Play setups, and tactical tips, read our dedicated <a href="/guide/scavland-coop-and-multiplayer-mechanics/" style="color:var(--acid);text-decoration:underline;">Scavland Co-op & Multiplayer Guide</a>.'
   },
   {
     category: 'Release & Platforms',
@@ -121,7 +121,7 @@ const faqs = [
   {
     category: 'Gameplay & Mechanics',
     question: 'Is there a cooking system in Scavland, and how do food and hunger work?',
-    answer: 'No. Scavland does not feature a culinary cooking mini-game or raw meat cooking mechanics. Hunger and nutrition are sustained by pre-packaged military rations, canned stew (Tushonka), and dried jerky scavenged from wasteland cupboards. However, campfires serve a crucial survival purpose: you must boil contaminated water bottles at a campfire to produce clean drinking water, and resting near a campfire provides passive health regeneration (added in Patch v0.5.169).'
+    answer: 'No. Scavland does not feature a culinary cooking mini-game or raw meat cooking mechanics. Hunger and nutrition are sustained by pre-packaged military rations, canned stew (Tushonka), and dried jerky scavenged from wasteland cupboards. However, campfires serve a crucial survival purpose: you must boil contaminated water bottles at a campfire to produce clean drinking water, and resting near a campfire provides passive health regeneration (added in Patch v0.5.169). For campfire purification steps and stamina details, check our <a href="/guide/scavland-crafting-and-trading/" style="color:var(--acid);text-decoration:underline;">Scavland Cooking, Crafting & Trading Guide</a>.'
   },
   {
     category: 'Gameplay & Mechanics',
@@ -248,7 +248,7 @@ const schemaData = {
     'name': faq.question,
     'acceptedAnswer': {
       '@type': 'Answer',
-      'text': faq.answer
+      'text': faq.answer.replace(/<[^>]*>/g, '')
     }
   }))
 };
@@ -280,9 +280,7 @@ const schemaData = {
             <span>{faq.question}</span>
             <span style="font-size:0.75rem;padding:0.2rem 0.5rem;border-radius:4px;background:rgba(218,255,125,0.1);color:var(--acid,#daff7d);font-family:var(--font-mono,monospace);">{faq.category}</span>
           </summary>
-          <p style="margin-top:0.75rem;margin-bottom:0;color:var(--text-muted,#c5c5c5);line-height:1.6;">
-            {faq.answer}
-          </p>
+          <p style="margin-top:0.75rem;margin-bottom:0;color:var(--text-muted,#c5c5c5);line-height:1.6;" set:html={faq.answer} />
         </details>
       ))}
     </div>
