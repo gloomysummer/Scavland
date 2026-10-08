@@ -1,4 +1,5 @@
-google.com, pub-9054706633269604, DIRECT, f08c47fec0942fa0
-
+# ads.txt — Scavland Wiki
+# Google AdSense 授权已移除（纯 Adsterra 变现，解除 IAB Drop Bid 锁价）
+#
 # Adsterra SSP records (pending Adsterra dashboard export by owner):
 # Once available from Adsterra publisher dashboard -> Websites -> Get ads.txt, paste SSP records here.
