@@ -11,8 +11,8 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
-    updated: '2026-10-06',
-    answer: 'In Scavland, players seeking developer console commands, debug overlays, or trainer modifications can access internal diagnostic features through verified Steam parameters. While developer debug menus were restricted following Early Access <strong>v0.2.4</strong>, players can pass command-line launch parameters (<strong>-dev</strong>, <strong>-console</strong>) via Steam to activate diagnostic overlays and console functionality. For memory trainers and <strong>Cheat Engine</strong> (CT) tables, recent patches including <strong>Update 0.7.0</strong> and <strong>Update 0.7.2</strong> shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, <strong>Update 0.7.0</strong> added independent <strong>Autosave Slots</strong> per run, protecting your main campaign from corruption during experimental testing.',
+    updated: '2026-10-08',
+    answer: 'For players searching for a <strong>Scavland trainer</strong>, <strong>cheat codes</strong>, or developer console commands, internal diagnostic functions and single-player assists can be accessed safely through verified Steam parameters. While developer debug menus were restricted following Early Access <strong>v0.2.4</strong>, players can pass command-line launch parameters (<strong>-dev</strong>, <strong>-console</strong>) via Steam to activate diagnostic overlays and console functionality. For memory trainers and <strong>Cheat Engine</strong> (CT) tables, recent patches including <strong>Update 0.7.0</strong> and <strong>Update 0.7.2</strong> shifted dynamic memory offsets for stamina, carry weight, and durability, requiring updated pointers. Because Scavland is strictly an offline single-player survival RPG in Early Access, third-party memory trainers carry no risk of Steam VAC bans in solo sessions. Furthermore, <strong>Update 0.7.0</strong> added independent <strong>Autosave Slots</strong> per run, protecting your main campaign from corruption during experimental testing.',
     steps: [
       '01 · Configure Steam Launch Parameters (-dev / -console): To enable the developer console and diagnostic features, right-click Scavland in your Steam Library -> Properties -> General -> Launch Options. Enter "-dev" or "-console" (without quotes) to activate developer diagnostic logging and command overlay support on boot.',
       '02 · Open Diagnostic Console Hotkeys: Launch your run and press the tilde [~] or [F1] / [F2] key to toggle the in-game developer overlay window for real-time telemetry and debug commands.',
@@ -42,7 +42,7 @@ export const guides: Guide[] = [
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland console', 'scavland console commands', 'scavland cheats', 'scavland cheat engine', 'scavland cheat', 'scav land console', 'scavland debug mode', 'scavland dev mode', 'scavland trainer', 'scavland pc trainer', 'scavland trainer download', 'scavland fling trainer', 'scavland wemod', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland trainer', 'scavland cheat', 'scavland cheats', 'scavland trainer download', 'scavland pc trainer', 'scavland console', 'scavland console commands', 'scavland cheat engine', 'scav land trainer', 'scav land console', 'scavlands trainer', 'scavland debug mode', 'scavland dev mode', 'scavland fling trainer', 'scavland wemod', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -239,12 +239,12 @@ export const guides: Guide[] = [
     image: '/images/harvested/2026-10-06/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
-    updated: '2026-10-05',
-    answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is completely full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
+    updated: '2026-10-08',
+    answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is completely full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check, or reload a recent quicksave. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
     steps: [
       '01 · Free 3 Inventory Slots Before "<strong>Catching Current</strong>": The <strong>Core Detector</strong> occupies 3 vertical inventory slots (1x3 grid footprint). Clear at least 3-4 backpack cells before accepting the "<strong>Catching Current</strong>" quest from the handler so the scanner can safely enter your gear.',
       '02 · Floor & Safehouse Overflow Retrieval: If the <strong>Core Detector</strong> is missing from your inventory after accepting "<strong>Catching Current</strong>", do not restart your save. Inspect the ground directly beneath the NPC\'s feet where dropped items spawn, or check the Overflow Tab in your Zalesye safehouse stash locker.',
-      '03 · Fast-Travel Reload Check: If the scanner is not visible on the floor, drop several unneeded items to guarantee empty inventory cells, then fast travel away to an outpost safehouse and return to the quest giver to force an object respawn check.',
+      '03 · Fast-Travel Reload or Quicksave Reset: If the scanner is not visible on the floor, drop several unneeded items to guarantee empty inventory cells, then fast travel away to an outpost safehouse and return to the quest giver to force an object respawn check. If it still fails to spawn, load your recent quicksave from before accepting the task or cancel and re-accept the contract job.',
       '04 · Equip Offhand Scanner & Sweep Terrain: Press hotkey [3] to equip the Core Detector in your offhand. Sweep across the quest search perimeter in a zigzag pattern while keeping in-game master and effects audio enabled.',
       '05 · Track Accelerating Cadence to Epicenter: Follow the escalating audio ping rate. As you approach the Flux Aspect Core epicenter from ~30m down to under 5m, the sound shifts from sporadic chirps to a continuous high-pitched hum.',
       '06 · Bolt-Cycle Audio Listener Reset: If loading a save renders the detector completely silent near visible shimmering anomalies, holster the scanner, switch to your primary firearm, cycle the bolt once, and re-equip slot [3] to reinitialize the spatial audio listener.',
@@ -262,7 +262,7 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['How do I complete the <strong>Catching Current</strong> quest and find the Flux Aspect Core?', 'Equip the Core Detector using hotkey [3], traverse the marked anomaly zone, and follow the escalating audio radar frequency. When the pings transition into a continuous high-pitched tone, locate the shimmering epicenter and harvest the Flux Aspect Core directly from the ground.'],
-      ['What should I do if the Core Detector is missing after accepting Catching Current?', 'If your backpack was full when receiving the scanner from the quest giver, it could not enter your grid. Return to the quest giver and check the floor directly beneath the NPC\'s feet. If it does not appear, drop some junk to free up slots, fast travel away to another zone, and return to force an engine respawn check.'],
+      ['What should I do if the Core Detector is missing after accepting Catching Current?', 'If your backpack was full when receiving the scanner from the quest giver, it could not enter your grid. Return to the quest giver and check the floor directly beneath the NPC\'s feet. If it does not appear, drop some junk to free up slots, fast travel away to another zone, and return to force an engine respawn check. You can also reload a recent quicksave or cancel and re-accept the contract job to re-grant the device.'],
       ['Why is the Anomaly Scanner not beeping near anomalies?', 'A known serialization bug in Early Access can desync the spatial audio component when loading a save. Holster the detector, cycle your firearm\'s bolt once, and re-equip slot [3] to reset the audio listener.'],
       ['How much backpack space does the Core Detector require?', 'The Core Detector requires 3 vertical inventory cells (1x3). Always maintain free slots before talking to major quest givers.'],
       ['Can anomaly fields be harvested repeatedly for artifacts?', 'Overworld anomaly zones undergo a 48-hour in-game regeneration cycle. Dense Mist events increase artifact spawn probabilities and yield enhanced anomaly loot.']
@@ -356,7 +356,7 @@ export const guides: Guide[] = [
     title: 'Scavland Loot & Backpack Inventory Guide: Carry Capacity, Barter & Junk (Update 0.7.0)',
     description: 'Scavland loot and backpack guide: maximizing carry weight capacity, barter values vs crafting junk, spark plug payouts, and fast inventory management.',
     category: 'Resources',
-    image: '/images/harvested/2026-10-08/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
+    image: '/images/harvested/2026-10-09/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
     imageAlt: 'Lootable consumables, tactical backpacks, and barter scrap in Scavland inventory',
     evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wg9rk0/other_lootable_consumables/',
     updated: '2026-10-08',
@@ -1878,8 +1878,8 @@ export const guides: Guide[] = [
     category: "Gear",
     image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: "Scavland weapon tier list ranking and modular firearm comparisons",
-    evidence: 'In-Game Ballistics Testing & Community Weapon Manifests · Update 0.7.2',
-    updated: '2026-09-30',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-10-08',
     answer: "Selecting the best firearm in Scavland depends on your combat engagement profile, ammunition availability, and target armor rating. Following sweeping combat overhauls in <strong>Update 0.7.0</strong> and <strong>Hotfix 0.7.2</strong>, rifle durability was doubled, effective range increased by <strong>+1 to +2 tiles</strong>, and the <strong>Leon 1895</strong> family received a massive <strong>+50% damage buff</strong>. Top-tier dominance is held by versatile platforms like the <strong>MK-47</strong> (reclassified to Basic tier for early availability), the long-range <strong>63 Dragoon</strong> designated marksman rifle, and the close-quarters <strong>TOZ-34</strong> 12-gauge shotgun loaded with heavy buckshot for shredding mutated predators.",
     steps: [
       "01 \u00b7 S-Tier Primary: MK-47 & Mikhail 74U: The <strong>MK-47</strong> chambered in 7.62x39mm delivers unmatched armor penetration against armored scavengers and bandit sentries. Paired with a muzzle brake and extended magazine, it provides reliable stopping power at all ranges.",
@@ -1916,7 +1916,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "In-Game Ballistics Testing & Community Weapon Manifests \u00b7 Update 0.7.2"
+            "Official Steam announcements & community reports · Update 0.7.0"
       ]
 ],
     faq: [
@@ -1927,6 +1927,10 @@ export const guides: Guide[] = [
       [
             "Where can I find the 63 Dragoon sniper rifle?",
             "The 63 Dragoon spawns in high-security military crates inside subterranean bunkers (such as Sector B-4) or can be bartered from Tier 2 Mechanist and Gunner merchants."
+      ],
+      [
+            "What is the best secondary weapon or sidearm (Best in Slot) in Scavland?",
+            "The Best in Slot (BIS) sidearm depends on tactical requirements: for stealth raids, the integrally suppressed PM Nikolay PB is unmatched as it avoids triggering audio ripples. For emergency stopping power and high durability, the Bahadir 918 / 920 delivers 15 shots per durability point (buffed in Update 0.7.0) with rapid semi-automatic fire, making it the most reliable backup when your primary rifle jams."
       ],
       [
             "Are shotguns effective against armored human bandits?",
@@ -1942,7 +1946,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-weapons-and-attachments", "scavland-weapon-repair-and-durability", "scavland-starter-loadouts-and-budget-builds", "scavland-tactical-database-weapons-loot"],
-    keywords: ["scavland best weapons", "scavland weapon tier list", "scavland best guns", "scavland 63 dragoon", "scavland mk47", "scavland weapons meta"],
+    keywords: ["scavland best weapons", "scavland weapon tier list", "scavland best secondary weapon", "scavland secondary weapon tier list", "scavland best sidearm", "scavland best guns", "scavland 63 dragoon", "scavland mk47", "scavland weapons meta"],
     videoId: 'JQDdSAYkOkQ',
     videoTitle: "Scavland Ultimate Weapon - 63 Dragoon Item Location",
     videoChannel: "Game Detox Dopamine"
@@ -2408,8 +2412,8 @@ export const guides: Guide[] = [
     category: "Tactical Guide",
     image: '/images/screenshots/ss_03_forest_mutants.jpg',
     imageAlt: "Mutant creatures, mutated wildlife, and bandit patrols in Scavland wasteland",
-    evidence: 'In-Game Bestiary Field Testing & Community Combat Manuals · Update 0.7.2',
-    updated: '2026-09-30',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
+    updated: '2026-10-08',
     answer: "The exclusion zone of <strong>Zalesye</strong> is inhabited by aggressive mutant wildlife, bio-engineered abominations, and heavily armed deserter factions. Hostile encounters fall into two categories: biological predators that rely on aggressive lunges and flesh grapples, and tactical human scavengers who utilize cover, flank maneuvers, and long-range optics. Overcoming apex threats\u2014such as the dreaded <strong>Tongue Monsters (Lickers)</strong> in subterranean bunkers, feral <strong>Hellhound packs</strong> along forest perimeters, and <strong>Big Bears</strong> with massive bullet sponges\u2014demands matching specific ammunition calibers, utilizing sound cones, and keeping stamina reserves ready for evasive rolls.",
     steps: [
       "01 \u00b7 Tongue Monsters (Lickers) \u2014 Bunker Apex Predators: Found lurking inside underground facilities like <strong>Sector B-4</strong>. They launch high-velocity flesh tongues that grapple and pull survivors. Maintain distance, listen for wet clicking audio cues, and fire high-stagger 12-gauge shotgun blasts directly into their mouth.",
@@ -2446,7 +2450,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "In-Game Bestiary Field Testing & Community Combat Manuals \u00b7 Update 0.7.2"
+            "Official Steam announcements & community reports · Update 0.7.0"
       ]
 ],
     faq: [
@@ -2457,6 +2461,10 @@ export const guides: Guide[] = [
       [
             "What caliber is recommended for hunting Big Bears?",
             "Use heavy 7.62x39mm (MK-47) or 7.62x54mmR (63 Dragoon). Standard 9mm pistol rounds deal negligible damage against bear hide."
+      ],
+      [
+            "Why do enemies and mutants seem to detect players through walls or in dark areas?",
+            "In Early Access (Update 0.7.0 / 0.7.2), enemy AI perception is heavily driven by acoustic alert propagation. Firing unsuppressed firearms or sprinting alerts hostiles within a broad radius, causing them to pursue your last known acoustic coordinate even if you break line of sight behind thin obstacles. To counter aggressive AI tracking, immediately disengage after loud gunshots, use suppressed weapons like the PM Nikolay PB, and navigate without weapon flashlights within 40 meters of hostile zones."
       ],
       [
             "Why do bandits keep spotting me at night from far away?",
@@ -2472,7 +2480,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-night-survival-and-stealth-mechanics", "scavland-hospital-quest-and-medical-supplies"],
-    keywords: ["scavland mutants guide", "scavland enemies", "scavland tongue monster", "scavland licker", "scavland hellhounds", "scavland big bear combat"],
+    keywords: ["scavland mutants guide", "scavland enemies", "scavland enemy ai", "scavland ai see through walls", "scavland enemies op", "scavland tongue monster", "scavland licker", "scavland hellhounds", "scavland big bear combat"],
     videoId: 'xQKTC-8BYVU',
     videoTitle: "Scavland 0.7.2 \"Expert\" Firearm Damage Test (Target: Bear)",
     videoChannel: "Game Detox Dopamine"
@@ -3378,6 +3386,10 @@ export const guides: Guide[] = [
       [
             "Can I find the Flux Aspect Core in Sector B-4?",
             "Yes, the Flux Aspect Core is located in the deepest reactor core room and requires an Anomaly Scanner to safely extract."
+      ],
+      [
+            "Can enemies or mutants enter closed rooms inside the Sector B-4 bunker?",
+            "In Early Access, community reports note an occasional pathfinding quirk where alerted enemies can push through or open closed interior doors without full door-opening animations. When exploring subterranean bunkers, never rely on a closed interior door as permanent cover—keep your weapon raised, hold corner angles, and keep a high-stagger shotgun ready."
       ],
       [
             "How long does it take for Sector B-4 loot to respawn?",
