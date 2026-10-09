@@ -397,15 +397,15 @@ export const guides: Guide[] = [
     category: 'Progression',
     image: '/images/harvested/2026-09-24/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Scavland quest journal showing main story progression, contract tracking, and inventory item colors',
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-02',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0 & Hotfix 0.7.2',
+    updated: '2026-10-09',
     answer: 'Progression in Scavland is bifurcated into primary storyline Quests and repeatable faction Jobs (Contracts). Main quests guide your overarching narrative through <strong>Zalesye</strong>—commencing with the tutorial objective \'Dead Man\'s Rest\' and advancing to core contracts like \'Catching Current\' to secure the Flux Aspect Core. To safeguard quest items, Update 0.6.0 and Update 0.7.0 introduced explicit visual item segregation: Quest Items are colored <strong>orange</strong>, while Job Items appear in <strong>green</strong>. Furthermore, equipped clothing can no longer be accidentally handed in for jobs, and quest containers automatically vanish once their objective completes. You can track multiple jobs simultaneously in your Journal, but cancelling an accepted contract deducts 20% of that Job\'s Reputation reward (with a minimum penalty of 1). Contracts and job rosters refresh across an in-game 24-hour cycle or upon sleeping in a bed with a mattress.',
     steps: [
       '01 · Distinguish Main Quests vs Faction Jobs: Main Quests (such as \'Dead Man\'s Rest\' and \'<strong>Catching Current</strong>\') advance world lore and unlock critical survival gear. Faction Jobs are repeatable economic contracts taken from brokers like <strong>Anatoly</strong> (logistics and bandit camps) and <strong>Nadja</strong> (mutant hunts).',
       '02 · Color-Coded Quest Item Identification: In your inventory, Quest Items are highlighted in orange, whereas repeatable Job Items are highlighted in green. Quest items can be transferred between stash inventories with a confirmation warning, preventing accidental loss.',
       '03 · Multi-Job Tracking & Map Navigation: The Journal allows tracking multiple Jobs simultaneously; notifications only trigger for actively tracked objectives. The Journal Map can stay open while walking, continuously updating your player marker in real time.',
       '04 · Contract Cancellation & Reputation Penalty: You can cancel unwanted contracts directly from the Journal interface, but cancelling costs 20% of that Job\'s Reputation reward (with a minimum penalty of 1). Only abandon jobs if their objective sector is heavily contested.',
-      '05 · Faction Broker Roles & Volodymyr\'s Jobs: In Update 0.7.0, gunsmith <strong>Volodymyr</strong> offers specialized jobs focused on high-quality weapons and dangerous mutants. Bogdan\'s fetch jobs reward expanded reputation, and Diplomat Raisa offers truce contracts (updated in Hotfix 0.7.2 to offer follow-up jobs without waiting for current job completion).',
+      '05 · Faction Broker Roles & Diplomat Raisa Rebalance: In Update 0.7.0, gunsmith <strong>Volodymyr</strong> offers specialized jobs focused on high-quality weapons and dangerous mutants. Under <strong>Hotfix 0.7.2</strong>, developer NoShadow rebalanced Raisa\'s jobs so Diplomat Raisa can offer a follow-up job immediately without forcing players to wait for their current contract to finish.',
       '06 · World Refresh & Mattress Sleeping: Job rosters refresh every 24 in-game hours. Under <strong>Update 0.7.0</strong>, sleeping to advance time requires a bed with a mattress. Safehouse sleep cycles both merchant stocks and daily contract boards.'
     ],
     facts: [
@@ -420,13 +420,14 @@ export const guides: Guide[] = [
     faq: [
       ['What is the difference between Main Quests and Jobs in Scavland?', 'Main Quests (such as Dead Man\'s Rest and Catching Current) drive central narrative progression, introduce core tools like the Core Detector, and carry orange-bordered items. Jobs are repeatable contracts offered by local brokers like Anatoly, Nadja, and Volodymyr to earn rubles and faction reputation.'],
       ['Why are some items orange and others green in my inventory?', 'Under Update 0.6.0, Quest Items are color-coded in orange to prevent accidental disposal or sale, while repeatable Job Items are color-coded in green. Equipped clothing cannot be accidentally turned in for jobs.'],
+      ['How does Raisa\'s job assignment work after Hotfix 0.7.2?', 'In Hotfix 0.7.2, developer NoShadow overhauled Diplomat Raisa\'s contracts: Raisa can now offer a follow-up job without waiting for your current task to complete, alongside a comprehensive rebalancing of her diplomatic job requirements and payouts.'],
       ['What is the penalty for cancelling a Job in Scavland?', 'Cancelling an accepted Job directly from the Journal deducts 20% of that Job\'s Reputation reward, with a minimum penalty of 1 reputation point.'],
       ['Can I track more than one contract at the same time?', 'Yes. The rebuilt Journal allows tracking multiple jobs concurrently. Notifications appear exclusively for the tasks you have actively marked for tracking.'],
       ['How often do contract boards and merchant jobs reset?', 'Job offerings rotate every 24 in-game hours or immediately after sleeping in a bed with a mattress. In Update 0.7.0, only beds equipped with mattresses allow sleeping to skip time.'],
       ['What should I do after completing Nadja\'s main questline?', 'After completing Nadja\'s main questline, progression transitions into high-tier faction contracts and bunker exploration. Take on advanced military jobs from Volodymyr at the Crossroads annex, pursue Diplomat Raisa\'s follow-up truce jobs (which under Hotfix 0.7.2 can be accepted continuously without waiting for current tasks to clear), explore Subterranean Bunker Sector B-4 on its 3-hour reset cycle, and level up Trader Ranks for the 5% sell value bonus per rank.']
     ],
     related: ['scavland-anomaly-scanner-and-artifacts', 'scavland-hospital-quest-and-medical-supplies', 'scavland-factions-progression-and-traders', 'scavland-factions-and-reputation', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland storyline', 'scavland after nadja quest', 'scavland post main quest', 'scavland endgame loop', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
+    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland quest guide', 'scavland main quests', 'scavland raisa jobs', 'scavland storyline', 'scavland after nadja quest', 'scavland post main quest', 'scavland endgame loop', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
     videoId: 'lmeGDw8lihw',
     videoTitle: 'Scavland Part 9 Catching Current',
     videoChannel: 'Zquietgamer'
@@ -519,10 +520,10 @@ export const guides: Guide[] = [
     title: 'Scavland Weapon Repair & Durability Guide: Field Tools, Workbench Kits & Jam Fixes',
     description: 'Scavland weapon repair guide: field tools without Gun Lube, durability and jamming changes in Updates 0.5.169 and 0.7.0, Volodymyr Rank 2 blueprints, and universal kits.',
     category: 'Gear',
-    image: '/images/screenshots/steam_ss_10.webp',
-    imageAlt: 'Tactical weapon modification and workbench repair interface in Scavland',
+    image: '/images/harvested/2026-10-09/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
+    imageAlt: 'Scavland Mikhail 74U weapon modification workbench showing durability stats and attachment slots',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-28',
+    updated: '2026-10-09',
     answer: 'Firearms in Scavland degrade with every shot fired, accelerating 2x faster in muddy or irradiated zones. When condition drops below 50%, jam probability increases exponentially. In mid-game raids, scavengers frequently loot high-tier military firearms severely degraded at 30% to 45% condition. While players often struggle to restore these guns with basic cleaning rods, <strong>Update 0.7.0</strong> made Gun and Armor <strong>Repair Kits</strong> usable regardless of how damaged equipment is, eliminating previous minimum durability lockouts. For permanent crafting, arms dealer Volodymyr sells the Advanced Weapon Repair Kit recipe once you attain Trader Rank 2. Additionally, field repair thresholds have been lowered: Glue and Gun Lube can now be applied from <strong>80% durability</strong> (previously 85%), while Cleaning Rods and Field <strong>Repair Kits</strong> are usable from 70% (previously 75%). For comprehensive weapon statistics, consult our [Weapons Arsenal](/weapons/), check [Merchant Prices](/guide/scavland-merchant-prices-and-barter-guide/) for repair parts trading, or review the [Tactical Database](/guide/scavland-tactical-database-weapons-loot/).',
     steps: [
       '01 · Monitor weapon condition: guns can explode below 30% condition since <strong>Update 0.5.169</strong>. <strong>Update 0.7.0</strong> increased durability across almost the entire arsenal, made jamming begin later and occur less often, and lowered the hard-jam chance at <strong>10% durability</strong> from 45% to 33%.',
@@ -547,6 +548,7 @@ export const guides: Guide[] = [
     ],
     faq: [
       ['How do I clear a weapon jam during combat?', 'Press the reload key [R] twice or manually cycle the bolt to eject the jammed casing and chamber a fresh cartridge. Retreat behind hard cover if under automatic fire.'],
+      ['What are the exact durability thresholds for field repair tools in Update 0.7.0?', 'Under Update 0.7.0: Gun and Armor Repair Kits have NO minimum durability restriction and can be used on equipment at any condition (even below 30%). Glue and Gun Lube can be used starting at 80% durability (previously 85%). Cleaning Rods and Field Repair Kits can be used starting at 70% durability (previously 75%). At 10% durability, hard-jam chance has been reduced from 45% to 33%.'],
       ['How do I repair advanced military guns sitting at 30-40% durability?', 'In Update 0.7.0, Gun and Armor Repair Kits can now be used regardless of how damaged your equipment is. You can obtain Repair Kits as world loot (Scavenger/Basic: Very Rare, Advanced/Expert: Ultra Rare), buy the Advanced Weapon Repair Kit recipe from arms dealer Volodymyr once you reach Trader Rank 2, service weapons with Cleaning Rods and Field Repair Kits from 70% durability (Glue & Gun Lube from 80%), or pay Gunsmith Petar in the central Zalesye market for repairs.'],
       ['Where do I get the Advanced Weapon Repair Kit blueprint?', 'Volodymyr sells the Advanced Weapon Repair Kit recipe at Trader Rank 2. Complete weapon delivery and attachment contracts to raise your reputation standing with him.'],
       ['Do field repair tools still require Gun Lube?', 'No. Update 0.5.169 removed the Gun Lube requirement from the basic Gun Field Tool, so you can perform emergency maintenance without spending lube.'],
@@ -555,7 +557,7 @@ export const guides: Guide[] = [
       ['What spare parts should I carry for emergency field repairs?', 'Always carry 2x Weapon Springs, 1x Electronic Relay, and 1x Gun Field Tool in your tactical rig. In irradiated sectors where weapon degradation accelerates by 2x, these components let you restore guns above the 70% threshold without returning to base.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-cheats-and-console-commands', 'scavland-sleep-and-world-reset-guide', 'scavland-merchant-prices-and-barter-guide'],
-    keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location', 'scavland no blueprint weapon repair', 'scavland volodymyr repair blueprint', 'scavland mosin repair'],
+    keywords: ['scavland weapon repair', 'scavland gun durability', 'scavland clear jam', 'scavland weapon repair guide', 'scavland weapon durability', 'scavland repair kit', 'scavland armor repair', 'scavland weapon jam', 'scavland repair tools', 'scavland gun maintenance', 'scavland gun field tool', 'scavland petar location', 'scavland no blueprint weapon repair', 'scavland volodymyr repair blueprint', 'scavland mosin repair'],
     videoId: 'G2QsRe2kj_I',
     videoTitle: 'Scavland 0.7.2 "Expert" Weapon Repair Kit: Blueprint, Unlock Requirements, and Details',
     videoChannel: 'Game Detox Dopamine'
