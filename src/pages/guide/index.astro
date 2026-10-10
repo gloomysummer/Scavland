@@ -5,19 +5,23 @@ import AdSlot from '../../components/AdSlot.astro';
 import { guides } from '../../data/guides';
 ---
 
-<Layout title="Scavland Guides & Scav Land Walkthroughs | Scavland Wiki" description="Browse verified Scavland (Scav Land) survival guides: beginner tips, cheats & console commands, weapons, repair, crafting, cooking, multiplayer, and extraction mechanics." canonical="/guide/" keywords="Scavland guides, Scav Land guide, Scavland walkthrough, Scavland cheats, Scavland beginner guide, Scavland survival tips, scavland how to cook, scavland multiplayer">
+<Layout title="Scavland (Scav Land) Tactical Guides & Walkthrough Hub — Scavland Wiki" description="The complete Scavland (Scav Land) guide directory: beginner starter walkthroughs, main quests, weapons & armor, cheats & console commands, cooking, interactive maps, and Xbox/PS5 console status." canonical="/guide/" keywords="Scavland guides, Scav Land guide, Scavland walkthrough, Scavland guide, Scavland beginner guide, Scavland main quest, Scavland xbox, Scavland ps5, Scavland armor, Scavland catching current, Scavland cheats, Scavland survival tips, scavland how to cook">
   <section class="listing">
     <p class="eyebrow">Primary index</p>
     <h1 class="page-title">All<br/><span style="color:var(--acid)">guides.</span></h1>
     <p class="lede">Start with the learning path, then move into systems and locations as your runs become more ambitious.</p>
     <div class="quick-jump-bar" style="margin: 20px 0 28px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
       <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--muted); text-transform: uppercase;">Direct Briefings:</span>
-      <a href="/guide/scavland-developer-commitments-and-patch-roadmap/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--acid);">Roadmap & scavland.com</a>
-      <a href="/guide/scavland-coop-and-multiplayer-mechanics/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Co-op & Multiplayer</a>
-      <a href="/guide/scavland-crafting-and-trading/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Cooking & Crafting</a>
-      <a href="/guide/scavland-merchant-prices-and-barter-guide/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Trader Volodymyr & Barter</a>
-      <a href="/guide/scavland-hospital-quest-and-medical-supplies/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Hospital Quest & Meds</a>
-      <a href="/guide/scavland-anomaly-scanner-and-artifacts/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Core Detector & Artifacts</a>
+      <a href="/guide/scavland-beginner-guide/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--acid); border-radius: 3px; background: rgba(185,232,108,0.06); color: var(--acid); font-weight: 600;">Beginner Starter Guide</a>
+      <a href="/guide/scavland-quests-and-contracts/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Main Quests &amp; Contracts</a>
+      <a href="/guide/scavland-anomaly-scanner-and-artifacts/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Catching Current &amp; Detector</a>
+      <a href="/guide/scavland-armor-and-helmets-guide/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Armor &amp; Helmets</a>
+      <a href="/guide/scavland-weapon-repair-and-durability/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Weapon Repair &amp; Jams</a>
+      <a href="/guide/scavland-console-release-status/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Xbox &amp; PS5 Status</a>
+      <a href="/guide/scavland-coop-and-multiplayer-mechanics/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Co-op &amp; Multiplayer</a>
+      <a href="/guide/scavland-crafting-and-trading/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Cooking &amp; Crafting</a>
+      <a href="/guide/scavland-merchant-prices-and-barter-guide/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Trader Volodymyr &amp; Barter</a>
+      <a href="/guide/scavland-developer-commitments-and-patch-roadmap/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Roadmap &amp; scavland.com</a>
       <a href="/guide/scavland-cheats-and-console-commands/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">Cheats &amp; Trainer</a>
     </div>
     <!-- Distinct format from the 300x250 below: Adsterra de-duplicates impressions for the same

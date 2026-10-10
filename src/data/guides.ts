@@ -186,14 +186,14 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-beginner-guide',
-    shortTitle: 'Beginner Guide (Update 0.7.0)',
-    title: 'Scavland Beginner Guide: Starter Kit, 150 Stamina, Dodge Costs & The Mire Route (Update 0.7.0)',
-    description: 'Definitive Scavland beginner guide: Update 0.7.0 starter kit with Green Rags, 150 max stamina, difficulty dodge costs, 2x campfire triage healing, and The Mire safe route.',
+    shortTitle: 'Beginner Guide (Update 0.7.2)',
+    title: 'Scavland Guide: Definitive Beginner Survival Walkthrough & Starter Route (Update 0.7.2)',
+    description: 'Definitive Scavland beginner guide & starter walkthrough: Update 0.7.0 & Hotfix 0.7.2 mechanics, Green Rags starter kit, 150 max stamina, difficulty dodge costs, 2x campfire healing, and The Mire safe route.',
     category: 'Survival',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'A scavenger exploring a ruined settlement in daylight near safehouse',
     evidence: 'Official Update 0.7.0 @ https://store.steampowered.com/news/app/3373500/view/710034946759065894 @ 2026-09-16',
-    updated: '2026-09-29',
+    updated: '2026-10-10',
     answer: 'Start your journey with daylight scavenging loops around the central settlement of <strong>Zalesye</strong> and raid the hazard-free supply depot at <strong>The Mire</strong> northwest of town. <strong>Update 0.7.0</strong> introduced significant beginner quality-of-life upgrades: <strong>Green Rags</strong> are now included in the starter kit for early emergency bleeding control, all game modes feature a unified 150 maximum stamina pool, and stamina recovery is accelerated to approximately <strong>7 seconds</strong> (down from <strong>10 seconds</strong>). Dodge roll stamina costs are tuned to mode difficulty (<strong>Explorer</strong>: <strong>15 Stamina</strong>, <strong>Returner</strong>: <strong>40 Stamina</strong>, <strong>Iron Man</strong>: 40 Stamina). In addition, Gun and Armor Repair Kits can now be used regardless of equipment damage condition, campfire healing has been doubled for emergency field triage, and the Death Screen has been rebuilt with dedicated mode-specific actions and gamepad support. If you die in the wasteland, your equipped backpack drops at the coordinate for recovery, while your safehouse stash remains completely secure.',
     steps: [
       '01 · Starter Kit & Green Rags (Update 0.7.0): Every new run now includes Green Rags in the starter kit alongside basic field gear. Use Green Rags immediately when suffering lacerations or light bleeding during early skirmishes.',
@@ -224,8 +224,8 @@ export const guides: Guide[] = [
       ['Can I repair severely broken weapons and armor in Update 0.7.0?', 'Yes. Gun and Armor Repair Kits can now be used regardless of how damaged equipment is, removing previous minimum durability restrictions.'],
       ['What happens if I die during a raid?', 'In standard Returner Mode, your equipped gear and backpack remain at your death coordinate for recovery, while your safehouse stash remains completely secure. The rebuilt Death Screen allows you to Continue or Load Game directly.']
     ],
-    related: ['scavland-map-and-locations', 'scavland-weapon-repair-and-durability', 'scavland-crafting-and-trading', 'scavland-red-keycard-and-bunker-loot-recovery', 'scavland-tactical-database-weapons-loot'],
-    keywords: ['scavland beginner guide', 'scavlands', 'scavlands beginner guide', 'scavland starter tips', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide'],
+    related: ['scavland-map-and-locations', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-crafting-and-trading', 'scavland-console-release-status'],
+    keywords: ['scavland guide', 'scavland beginner guide', 'scavland starter guide', 'scavlands beginner guide', 'scavland starter tips', 'scavland beginner walkthrough', 'scavland early game guide', 'scavland how to play', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide'],
     videoId: 'JRAOxOjeoc8',
     videoTitle: 'SCAVLAND - Stop Dying Early: The Complete Beginner Guide',
     videoChannel: 'Mars'
@@ -718,7 +718,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_06.webp',
     imageAlt: 'Two scavengers holding perimeter defensive positions near a bunker entrance in Scavland',
     evidence: 'Official Steam announcements · October 5 Roadmap',
-    updated: '2026-10-07',
+    updated: '2026-10-10',
     answer: 'Scavland is currently a strictly singleplayer post-apocalyptic survival RPG in Steam Early Access (<strong>0.7.2</strong>). In the official one-month roadmap announcement (October 5, 2026) published alongside the new official website (<strong>scavland.com</strong>), developer NoShadow confirmed that cooperative multiplayer and squad-based extraction features are actively planned across upcoming roadmap milestones. For players seeking shared sessions today, you can use <strong>Steam Remote Play Together</strong> for tactical screen-sharing and inventory co-piloting, or coordinate movement alongside friendly faction squads in high-threat sectors.',
     steps: [
       '01 · Early Access Solo Focus: Acknowledge that current Early Access builds (0.7.0 / 0.7.2) feature no native peer-to-peer or dedicated server networking; all progression, stashes, and quests are local to your singleplayer save.',
@@ -741,7 +741,7 @@ export const guides: Guide[] = [
       ['What happens when you die without a squad?', 'Your backpack stays at your coordinate of death as a persistent recovery beacon. You respawn safely in your bunker stash room to re-arm for a corpse recovery raid.']
     ],
     related: ['scavland-beginner-guide', 'scavland-death-and-loot-recovery', 'scavland-early-access-launch-faq-and-roadmap', 'scavland-developer-commitments-and-patch-roadmap'],
-    keywords: ['scavland coop', 'scavland multiplayer', 'scav land multiplayer', 'scavland co op', 'scavland play with friends', 'scavland co-op roadmap', 'scavland extraction squad', 'scavland multiplayer release', 'scavland co op release date', 'scavland coop release']
+    keywords: ['scavland coop', 'scavland multiplayer', 'scav land multiplayer', 'is scavland multiplayer', 'scavland co op', 'scavland play with friends', 'scavland multiplayer coop', 'scavland co-op roadmap', 'scavland extraction squad', 'scavland multiplayer release', 'scavland co op release date', 'scavland coop release']
   },
   {
     slug: 'scavland-russian-language-and-font-fix',
@@ -1724,13 +1724,13 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-console-release-status',
     shortTitle: "Console & Xbox Release",
-    title: "Scavland Console & Xbox Release: PS5, Series X & Switch Status (2026)",
-    description: "Official status of Scavland on Xbox Series X/S, PS5, and Nintendo Switch: Steam Early Access exclusivity, Game Pass status, controller support, and 2026 roadmap.",
+    title: "Scavland Console Release: PS5, Xbox Series X/S & Game Pass Status (2026)",
+    description: "Official status of Scavland on Xbox Series X/S, PS5, and Game Pass: Steam Early Access exclusivity, native controller support, and 2026-2027 roadmap.",
     category: "Platforms",
     image: '/images/screenshots/steam_ss_08.webp',
     imageAlt: "Scavland tactical map and console release overview",
     evidence: 'Official Steam announcements · Store page & FAQ',
-    updated: '2026-10-08',
+    updated: '2026-10-10',
     answer: "As of October 2026, Scavland is strictly an exclusive PC release available through <strong>Steam Early Access</strong>. Studio developer <strong>NoShadow</strong> has officially stated that their primary focus remains completing the planned <strong>Act II</strong> and <strong>Act III</strong> expansions, optimizing world simulation stability, and delivering promised <strong>co-op multiplayer</strong> before committing development resources to dedicated console ports on <strong>PlayStation 5</strong>, <strong>Xbox Series X/S</strong>, or <strong>Nintendo Switch</strong>. However, because Scavland was built from day one with full controller support, native gamepad HUD navigation, and optimized <strong>Steam Deck</strong> compatibility, a future console launch following the full <strong>Version 1.0</strong> PC release is highly feasible.",
     steps: [
       "01 \u00b7 Current Platform Availability (PC Steam Exclusive): Scavland launched on September 4, 2026 exclusively for PC Windows (App ID <strong>3373500</strong>), alongside an Apple Silicon macOS version submitted for store review.",
@@ -1792,8 +1792,8 @@ export const guides: Guide[] = [
             "If console development proceeds after the PC Version 1.0 release, ports would likely target late 2027 or 2028 at the earliest."
       ]
 ],
-    related: ["scavland-price-and-regional-editions", "scavland-steam-deck-and-handheld-settings", "scavland-early-access-launch-faq-and-roadmap", "scavland-developer-commitments-and-patch-roadmap"],
-    keywords: ["scavland xbox", "scavland ps5", "scavland ps5 release", "scavland xbox release", "scavland game pass", "scavland xbox one", "scavland ps4", "scavland on xbox", "scavland console", "is scavland on xbox", "is scavland on ps5", "scavland console release date", "scavland xbox series x", "scavland nintendo switch", "scavland ps4 release", "scavland controller support"]
+    related: ["scavland-beginner-guide", "scavland-quests-and-contracts", "scavland-steam-deck-and-handheld-settings", "scavland-price-and-regional-editions", "scavland-developer-commitments-and-patch-roadmap"],
+    keywords: ["scavland xbox", "scavland ps5", "scavland ps5 release", "scavland xbox release", "scavland game pass", "scavland xbox one", "scavland ps4", "scavland on xbox", "scavland on ps5", "is scavland on console", "scavland console", "is scavland on xbox", "is scavland on ps5", "scavland console release date", "scavland console release", "scavland xbox series x", "scavland xbox series s", "scavland ps5 game", "scavland nintendo switch", "scavland controller support"]
   },
   {
     slug: 'scavland-tips-and-tricks',
@@ -2341,7 +2341,7 @@ export const guides: Guide[] = [
     image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: "Tactical body armor vests, ballistic helmets, and armor plates in Scavland",
     evidence: 'Official Steam announcements · Update 0.7.0',
-    updated: '2026-10-08',
+    updated: '2026-10-10',
     answer: "Wearing appropriate ballistic protection in Scavland marks the difference between surviving an ambush and losing your entire carried backpack. In <strong>Update 0.6.0</strong>, developer NoShadow completely rebalanced armor durability pools across all four protection classes: <strong>Tattered (4\u21923)</strong>, <strong>Scavenger (5\u21924)</strong>, <strong>Medium (6\u21925)</strong>, and <strong>Heavy (7\u21926)</strong>. While heavier ballistic vests absorb lethal high-caliber rounds from sniper rifles, they impose noticeable movement speed and stamina recovery penalties. Pairing a reinforced vest with a steel or composite helmet prevents fatal headshot trauma when clearing fortified bandit checkpoints across <strong>Zalesye</strong>.",
     steps: [
       "01 \u00b7 Tier 1 (Tattered & Improvised Vests): Crafted from cloth scraps and light leather. Provides baseline protection against mutant bites and low-velocity 9x18mm shrapnel, but shatters quickly after 2-3 impacts.",
@@ -2403,8 +2403,8 @@ export const guides: Guide[] = [
             "Mechanist armorers and Gunner syndicate merchants sell Tier 3 and Tier 4 plate carriers once you unlock Tier 2 and Tier 3 reputation ranks."
       ]
 ],
-    related: ["scavland-starter-loadouts-and-budget-builds", "scavland-weapons-and-attachments", "scavland-patch-0-6-0-update-and-changes", "scavland-death-and-loot-recovery"],
-    keywords: ["scavland armor", "scavland body armor", "scavland armor guide", "scavland helmets", "scavland best armor", "scavland body armor tiers", "scavland plate carrier", "scavland armor durability update"]
+    related: ["scavland-starter-loadouts-and-budget-builds", "scavland-weapons-and-attachments", "scavland-weapon-repair-and-durability", "scavland-patch-0-6-0-update-and-changes", "scavland-death-and-loot-recovery"],
+    keywords: ["scavland armor", "scavland body armor", "scavland armor guide", "scavland helmets", "scavland best armor", "scavland armor tiers", "scavland vests", "scavland body armor tiers", "scavland plate carrier", "scavland armor durability update"]
   },
   {
     slug: 'scavland-mutants-and-enemies-guide',
