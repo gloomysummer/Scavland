@@ -279,7 +279,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/ss_07_underground_corridor.webp',
     imageAlt: 'An underground corridor where a fallen scavenger left supplies near a recovery beacon',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-16',
+    updated: '2026-10-10',
     answer: 'Death in Scavland is punishing but strictly deterministic rather than an arbitrary roguelite wipe. In <strong>Update 0.7.0</strong>, the <strong>Death Screen</strong> was completely rebuilt with dedicated interactive actions instead of the previous any-key interaction: <strong>Returner</strong> mode offers Continue / Load Game, <strong>Iron Man</strong> mode presents New Game / Exit, and Tutorial provides Try Again, alongside full gamepad button navigation. In addition, each run now has its own <strong>Autosave Slot</strong>, protecting your active progression save. When you fall during a raid, your carried backpack and weapons drop at your exact death coordinates—flagged with a persistent skull beacon on your map—while your permanent Safehouse Stash remains 100% secure.',
     steps: [
       '01 · Navigate Rebuilt <strong>Death Screen</strong> (<strong>Update 0.7.0</strong>): The <strong>Death Screen</strong> features specific mode actions instead of any-key interactions: <strong>Returner</strong> players choose Continue or Load Game; <strong>Iron Man</strong> players choose New Game or Exit; Tutorial players choose Try Again. Full gamepad navigation is fully supported.',
@@ -293,7 +293,7 @@ export const guides: Guide[] = [
       ['Full Gamepad Support', 'The Death Screen supports direct D-pad and controller face buttons since Update 0.7.0'],
       ['Dedicated Autosave Slots', 'Each run has its own Autosave Slot protecting current progression (Update 0.7.0)'],
       ['Corpse Persistence', 'Dropped backpacks persist in the world with zero despawn timer until picked up'],
-      ['Safehouse Stash Security', 'Safehouse stashes are completely immune to death penalties and shared across camps'],
+      ['Safehouse Stash Security', 'Safehouse stashes are immune to death penalties; camp stashes added in Update 0.7.0 do not share village items'],
       ['Verified Baseline', 'Official Steam announcements · Update 0.7.0']
     ],
     faq: [
@@ -301,10 +301,11 @@ export const guides: Guide[] = [
       ['Can dying corrupt or overwrite my other game saves?', 'No. Update 0.7.0 implemented a dedicated Autosave Slot for each run, isolating your current character progression from other save files.'],
       ['Is there a time limit to recover your dropped backpack?', 'No. There is no expiration countdown. Your corpse bag stays in the game world indefinitely until retrieved.'],
       ['What happens if I die a second time while running to my corpse?', 'The map skull beacon will shift to your newest death point, but your original dropped backpack does not disappear—it remains on the ground at the first location.'],
-      ['Can AI bandits loot or despawn your dropped items?', 'No. While enemies may patrol near your body, hostile AI scavengers do not loot or despawn items from player corpse bags.']
+      ['Can AI bandits loot or despawn your dropped items?', 'No. While enemies may patrol near your body, hostile AI scavengers do not loot or despawn items from player corpse bags.'],
+      ['Do camp stashes share items with the main village?', 'No. Update 0.7.0 added stashes and craft tables to all main camps, but they do not share items with the village stash. Only the main village stash can be upgraded with an additional tab for 50,000 Rubles.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-explorer-mode-and-campfire-healing'],
-    keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death'],
+    related: ['scavland-beginner-guide', 'scavland-starter-loadouts-and-budget-builds', 'scavland-quests-and-contracts', 'scavland-loot-and-scavenging'],
+    keywords: ['scavland death mechanics', 'scavland recover loot', 'scavland backpack drop', 'scavland corpse run', 'scavland death penalty', 'scavland explorer mode death', 'scavland stash expansion 50000'],
     videoId: 'WyI0vB4qE7A',
     videoTitle: 'Surviving 4 Hours in Scavland With 0 Deaths is brutal',
     videoChannel: 'Mars'
@@ -432,7 +433,41 @@ export const guides: Guide[] = [
     videoTitle: 'Scavland Part 9 Catching Current',
     videoChannel: 'Zquietgamer'
   },
-  { slug:'scavland-factions-and-reputation', shortTitle:'Factions & reputation', title:'Scavland Factions & Reputation Guide: 10 Organizations, Vendor Tiers & Raisa Truces', description:'Breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, vendor tier unlocks, territory borders, and diplomatic truces with Raisa.', category:'Progression', image:'/images/cards/card_3_quests_factions.webp', imageAlt:'Faction interaction and outpost checkpoints across the Zalesye wasteland', evidence:'Official Steam announcements & community reports · Early Access 0.7.0', updated:'2026-09-16', answer:'Faction standing in Scavland directly controls trade prices, vendor inventory tiers, safehouse access, and roaming patrol hostility. The Early Access release features 6 active <strong>Act I</strong> factions (<strong>Rada</strong>, <strong>Commonfolk</strong>, <strong>Acolytes</strong>, <strong>Mechanists</strong>, <strong>Palatines</strong>, <strong>Gunners</strong>) alongside 9 named outpost merchants. Fulfilling daily contracts raises reputation (<strong>+50 to +200 Rep</strong>), while hostile standing (< -300 Rep) triggers shoot-on-sight orders that can be cleared by purchasing diplomatic reconciliation contracts from Raisa.', steps:['01 · Identify Interactive Act I Factions: Concentrate on the 6 active factions operating across the <strong>Zalesye</strong> sector in 0.6.3. The remaining 4 factions are scheduled for upcoming northern expansions.','02 · Unlock Vendor Inventory Tiers: Specialized traders (such as Mechanists and Gunners) hold military-grade weapons and optical attachments behind Tier 2 and Tier 3 reputation gates.','03 · Leverage Zero-Reputation Merchants: <strong>Trader Volodymyr</strong> requires zero reputation rank on his entire inventory, making him the premier emergency supplier for fresh spawns and disgraced scavengers.','04 · Avoid Cascading Hostility: Raiding faction checkpoints or completing assassination bounties drops standing with targeted groups. Dropping below -300 Rep makes border sentries permanently hostile.','05 · Clear Hostile Standings with Raisa: If marked hostile by a major syndicate, visit diplomat Raisa at the Neutral Chapel to purchase courier truce tasks and reset reputation back to neutral. In Hotfix 0.7.2, Raisa was updated to offer follow-up jobs without waiting for the current one to finish.'], facts:[['Act I Interactive Factions','6 active groups (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners)'],['Roadmap Factions','4 northern factions scheduled for Act II and Act III expansion releases'],['Zero-Rep Merchant','Trader Volodymyr at Crossroads annex sells weapons with zero rank requirements'],['Hostility Threshold','Reputation below -300 triggers shoot-on-sight sentry engagement'],['Diplomatic Reset','Raisa at Neutral Chapel offers truce courier contracts; Hotfix 0.7.2 allows follow-up jobs without waiting for current job completion'],['Verified Baseline','Early Access 0.7.0']], faq:[['How do I increase faction reputation in Scavland?','Complete repeatable <strong>24-hour</strong> daily contracts, turn in requested trade supplies (electronic boards, spark plugs), and eliminate rival bandit threats.'],['Can I trade with factions if I have negative reputation?','Vendors become inaccessible if your standing drops to Hostile (< -300 Rep). However, trader Volodymyr at the Crossroads annex always trades regardless of faction standing.'],['How do I stop a faction from shooting me on sight?','Visit diplomat Raisa at the Neutral Chapel and fulfill a non-violent courier reconciliation contract to reset your reputation back to Neutral (0 Rep).'],['Does Scavland feature full faction wars?','Yes. Factions maintain dynamic border conflicts and checkpoint patrols throughout Zalesye, creating organic firefights during overworld raids.']], related:['scavland-factions-progression-and-traders','scavland-quests-and-contracts','scavland-crafting-and-trading','scavland-faction-identification-and-hud-guide'], keywords:['scavland factions','scavland reputation','scavland 10 factions','scavland raisa reconciliation','scavland volodymyr trader'] },
+  {
+    slug: 'scavland-factions-and-reputation',
+    shortTitle: 'Factions & Reputation',
+    title: 'Scavland Factions & Reputation Guide: 10 Organizations, Bandit Clans & Raisa Truces (Hotfix 0.7.2)',
+    description: 'Breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, bandit clans of the zone, vendor tier unlocks, and Hotfix 0.7.2 Raisa diplomatic truces.',
+    category: 'Progression',
+    image: '/images/cards/card_3_quests_factions.webp',
+    imageAlt: 'Faction interaction and outpost checkpoints across the Zalesye wasteland',
+    evidence: 'Official Steam announcements & community reports · Update 0.7.0 & Hotfix 0.7.2',
+    updated: '2026-10-10',
+    answer: 'Faction standing in Scavland directly controls trade prices, vendor inventory tiers, safehouse access, and roaming patrol hostility. The Early Access release features 6 active <strong>Act I</strong> factions (<strong>Rada</strong>, <strong>Commonfolk</strong>, <strong>Acolytes</strong>, <strong>Mechanists</strong>, <strong>Palatines</strong>, <strong>Gunners</strong>) alongside 9 named outpost merchants. Fulfilling daily contracts raises reputation (<strong>+50 to +200 Rep</strong>), while hostile standing (< -300 Rep) triggers shoot-on-sight orders that can be cleared by purchasing diplomatic reconciliation contracts from Raisa. Under <strong>Hotfix 0.7.2</strong>, developer NoShadow overhauled Raisa\'s jobs so Diplomat Raisa can offer follow-up truce tasks immediately without forcing scavengers to wait for their current contract to finish.',
+    steps: [
+      '01 · Identify Interactive Act I Factions: Concentrate on the 6 active factions operating across the Zalesye sector. The remaining 4 northern clans are scheduled for upcoming roadmap expansions.',
+      '02 · Unlock Vendor Inventory Tiers: Specialized traders (such as Mechanists and Gunners) hold military-grade weapons and optical attachments behind Tier 2 and Tier 3 reputation gates.',
+      '03 · Leverage Zero-Reputation Merchants: Trader Volodymyr at Crossroads annex requires zero reputation rank on his entire inventory, making him the premier emergency supplier for fresh spawns and disgraced scavengers.',
+      '04 · Avoid Cascading Hostility: Raiding faction checkpoints or completing assassination bounties drops standing with targeted groups. Dropping below -300 Rep makes border sentries permanently hostile.',
+      '05 · Clear Hostile Standings with Diplomat Raisa (Hotfix 0.7.2): If marked hostile by a major syndicate, visit diplomat Raisa at the Neutral Chapel to purchase courier truce tasks and reset reputation back to neutral. Under Hotfix 0.7.2, Raisa can offer follow-up jobs immediately without waiting for the current contract to complete.'
+    ],
+    facts: [
+      ['Act I Interactive Factions', '6 active groups (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners)'],
+      ['Roadmap Factions', '4 northern factions scheduled for future expansion releases'],
+      ['Zero-Rep Merchant', 'Trader Volodymyr at Crossroads annex sells weapons with zero rank requirements'],
+      ['Hostility Threshold', 'Reputation below -300 triggers shoot-on-sight sentry engagement'],
+      ['Diplomatic Reset Overhaul', 'Raisa offers truce courier contracts; Hotfix 0.7.2 allows follow-up jobs without waiting for current job completion'],
+      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0 & Hotfix 0.7.2']
+    ],
+    faq: [
+      ['How do I increase faction reputation in Scavland?', 'Complete repeatable 24-hour daily contracts, turn in requested trade supplies (electronic boards, spark plugs), and eliminate rival bandit threats.'],
+      ['Can I trade with factions if I have negative reputation?', 'Vendors become inaccessible if your standing drops to Hostile (< -300 Rep). However, trader Volodymyr at the Crossroads annex always trades regardless of faction standing.'],
+      ['How do I stop a faction from shooting me on sight?', 'Visit diplomat Raisa at the Neutral Chapel and fulfill a non-violent courier reconciliation contract to reset your reputation back to Neutral (0 Rep). Hotfix 0.7.2 allows taking follow-up jobs continuously from Raisa.'],
+      ['What are the Clans of the Zone in Scavland?', 'The wasteland features 10 total factions (6 active in Act I). Armed syndicates and bandit clans maintain dynamic borders and checkpoint patrols throughout Zalesye, creating organic firefights during overworld raids.']
+    ],
+    related: ['scavland-factions-progression-and-traders', 'scavland-quests-and-contracts', 'scavland-beginner-guide', 'scavland-merchant-prices-and-barter-guide'],
+    keywords: ['scavland factions', 'scavland reputation', 'scavland 10 factions', 'scavland raisa reconciliation', 'scavland volodymyr trader', 'scavland bandit reputation', 'scavland clans of the zone', 'scavland hostile faction fix', 'scavland raisa truce']
+  },
   { slug:'scavland-mist', shortTitle:'The Mist', title:'Scavland Mist guide: hazards and exploration', description:'What the official material establishes about the Mist, plus a careful field-note format for testing its dangers.', category:'Exploration', image:'/images/cards/card_4_mist_exploration.webp', imageAlt:'A misty hazardous zone in Scavland', evidence:'Official Steam announcements', updated:'2026-08-29', answer:'Prepare for the <strong>Mist</strong> as an unpredictable environmental hazard. Use your <strong>Anomaly Scanner</strong> to detect spatial anomalies inside foggy zones, equip <strong>gas filters</strong>, and always maintain an emergency extraction heading.', steps:['Mark the edge of a <strong>Mist</strong> zone before committing supplies.','Equip the Anomaly Scanner on hotkey <strong>[3]</strong> to sweep for hidden spatial anomalies and artifacts.','Monitor radiation counters and filter integrity while operating in dense fog.','Leave an <strong>emergency beacon</strong> or compass bearing for the return trip.'], facts:[['Official scope','The Mist is a central world mystery and environmental danger.'],['Testing needed','Reliable resistance items, damage values and safe routes remain unverified.']], faq:[['Is the <strong>Mist</strong> a damage zone?','Yes, dense <strong>Mist</strong> clusters cause environmental toxicity, sensory disruption, and aggressive mutant spawns.'],['Can artifacts spawn in the Mist?','Yes, high-tier anomalies and valuable artifacts are frequently concentrated within deep Mist pockets.']], related:['scavland-anomaly-scanner-and-artifacts','scavland-map-and-locations','scavland-beginner-guide'], keywords:['scavland mist','scavland mist guide','scavland fog hazards'] },
   {
     slug: 'scavland-map-and-locations',
@@ -821,10 +856,10 @@ export const guides: Guide[] = [
     title: 'Scavland Starter Loadouts & Armor Guide: Body Armor Tiers, Damage Distribution & Budget Builds',
     description: 'Complete guide to Scavland armor mechanics and starter loadouts: body armor hit durability tiers, Update 0.7.0 damage distribution, repair kits, and budget Mikhail 74U kits.',
     category: 'Gear',
-    image: '/images/harvested/2026-09-24/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
+    image: '/images/harvested/2026-10-09/other-lootable-consumables/other-lootable-consumables-gameplay.webp',
     imageAlt: 'Scavland tactical armor tiers, damage distribution across gear, and budget starter loadouts',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-24',
+    updated: '2026-10-10',
     answer: 'Surviving your early excursions in Scavland requires understanding body armor mechanics alongside budget weapon builds. Following <strong>Update 0.7.0</strong>, combat survivability changed fundamentally: incoming damage is now distributed across the different gear pieces you are wearing, making a full set of armor, head protection, and trousers (such as Old Tactical Pants) vastly more effective at mitigating lethality. Furthermore, <strong>Update 0.6.0</strong> rebalanced baseline armor hit points across four tiers (Tattered absorbs 3 hits, Scavenger absorbs 4 hits, Medium absorbs 5 hits, and Heavy absorbs 6 hits). Under <strong>Update 0.7.0</strong>, Gun and Armor <strong>Repair Kits</strong> can now be applied regardless of how damaged your equipment is, eliminating past minimum condition lockouts. Pairing a Mikhail 74U or 12-gauge shotgun with scavenged torso protection ensures high survivability without risking expensive liquid reserves.',
     steps: [
       '01 · Understand Distributed Damage Mechanics: In <strong>Update 0.7.0</strong>, incoming ballistic and mutant damage is distributed across each equipped gear piece rather than hitting a single total health pool. Wearing headgear, chest armor, and tactical pants simultaneously disperses impact force across multiple items.',
@@ -850,8 +885,8 @@ export const guides: Guide[] = [
       ['Where do you craft Medium Armor?', 'In Update 0.6.0, Medium Armor crafting was moved to the Equipment Bench instead of the Medical Bench.'],
       ['What is the best budget firearm to pair with early armor?', 'The Mikhail 74U in 5.45x39mm and 12-gauge shotguns provide the best balance of low repair cost, readily scavenged ammunition, and stopping power against mutant ambushes.']
     ],
-    related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-crafting-and-trading', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland armor', 'scavland body armor', 'scavland armor repair', 'scavland armor durability', 'scavland starter loadout', 'scavland budget build', 'scavland best early weapons', 'scavland mikhail 74u', 'scavland tactical pants', 'scavland armor tiers'],
+    related: ['scavland-beginner-guide', 'scavland-armor-and-helmets-guide', 'scavland-weapons-and-attachments', 'scavland-factions-and-reputation', 'scavland-weapon-repair-and-durability'],
+    keywords: ['scavland starter loadouts', 'scavland budget builds', 'scavland armor', 'scavland body armor', 'scavland armor repair', 'scavland armor durability', 'scavland starter loadout', 'scavland budget build', 'scavland best early weapons', 'scavland mikhail 74u', 'scavland tactical pants', 'scavland armor tiers'],
     videoId: 'uLK0n3hEfhk',
     videoTitle: "SCAVLAND | Bunker Didn't Stand a Chance Against This Loadout",
     videoChannel: 'Confused Dango'
