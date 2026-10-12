@@ -5,11 +5,26 @@ import AdSlot from '../../../components/AdSlot.astro';
 import { allJaGuides } from '../../../data/guides-ja';
 ---
 
-<Layout title="Scavland 攻略ガイド一覧 | Scavland Wiki 日本語" description="Scavland（スカブランド）の全攻略ガイド一覧：初心者向けサバイバル、武器耐久度・ジャム修理、チート・コンソールコマンド、派閥、脱出ルートを網羅。" canonical="/ja/guide/" lang="ja">
+<Layout title="Scavland 攻略ガイド一覧 | Scavland Wiki 日本語" description="Scavland（スカブランド）の全攻略ガイド一覧：初心者向けサバイバル、メインクエスト進行、商人Volodymyr取引・金策、武器耐久度・修理キット、チート・コンソールコマンド、バンカー探索を網羅。" canonical="/ja/guide/" keywords="scavland 攻略, scavland メインクエスト, scavland volodymyr, scavland バンカー, scavland 初心者, scavland チート, scavland 武器修理" lang="ja">
   <section class="listing">
     <p class="eyebrow">ガイド一覧</p>
     <h1 class="page-title">Scavland <br/><span style="color:var(--acid)">攻略ガイド一覧.</span></h1>
-    <p class="lede">まずは初心者サバイバルガイドから始め、武器の耐久度管理、バンカー探索、派閥取引の知識を深めましょう。</p>
+    <p class="lede">まずは初心者サバイバルガイドから始め、メインクエスト進行、武器の耐久度管理、バンカー探索、商人（Volodymyr等）との派閥取引の知識を深めましょう。</p>
+    <div class="quick-jump-bar" style="margin: 20px 0 20px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; color: var(--muted); text-transform: uppercase;">主要ガイド直通:</span>
+      <a href="/ja/guide/scavland-beginner-guide/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--acid); border-radius: 3px; background: rgba(185,232,108,0.06); color: var(--acid); font-weight: 600;">初心者サバイバル攻略</a>
+      <a href="/ja/guide/scavland-walkthrough-beginner-to-mid/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">メインクエスト攻略 (序盤〜中盤)</a>
+      <a href="/ja/guide/scavland-walkthrough-advanced-endgame/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">終盤＆Sector B-4攻略</a>
+      <a href="/ja/guide/scavland-money-making-guide/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">商人取引＆金策 (Volodymyr)</a>
+      <a href="/ja/guide/scavland-weapon-repair-and-durability/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">武器耐久度＆修理キット</a>
+      <a href="/ja/guide/scavland-red-keycard-and-bunker-loot-recovery/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">バンカー＆赤カードキー</a>
+      <a href="/ja/guide/scavland-factions-and-reputation/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">派閥・Raisa外交＆評判</a>
+      <a href="/ja/guide/scavland-cheats-and-console-commands/" style="font-size: 0.8rem; padding: 6px 12px; border: 1px solid var(--line); border-radius: 3px; background: rgba(255,255,255,0.03); color: var(--ink);">チート＆コンソール</a>
+    </div>
+    <div style="margin: 0 0 24px; padding: 14px 18px; border: 1px solid var(--line); border-left: 3px solid var(--acid); border-radius: 4px; background: rgba(255,255,255,0.02); font-size: 0.88rem; line-height: 1.65;">
+      <strong>戦術クイックアンサー（メインクエスト＆商人 Volodymyr）：</strong>
+      <strong>Update 0.7.0</strong> および <strong>Hotfix 0.7.2</strong> では、外交官 <strong>Raisa</strong> が現在の依頼完了を待たずに次のジョブを連続提示できるようになり、商人ランク（Trader Rank）ごとに売却価格が <strong>5%</strong> ずつ上昇します。また、メイン集落の保管庫（Stash）は商人から <strong>50,000 Rubles</strong> でタブ拡張が可能です（各主要キャンプに追加された保管庫と作業台は初期集落とアイテムを共有しません）。詳細なストーリー進行は <a href="/ja/guide/scavland-walkthrough-beginner-to-mid/" style="color:var(--acid);text-decoration:underline;">序盤〜中盤ウォークスルー</a>、商人レートと物々交換は <a href="/ja/guide/scavland-money-making-guide/" style="color:var(--acid);text-decoration:underline;">金策＆商人売却ガイド</a>（英語版詳細：<a href="/guide/scavland-quests-and-contracts/" style="color:var(--acid);text-decoration:underline;">Main Quests</a> / <a href="/guide/scavland-merchant-prices-and-barter-guide/" style="color:var(--acid);text-decoration:underline;">Trader Volodymyr Guide</a>）をご参照ください。
+    </div>
     <AdSlot slot="banner-728x90" label="おすすめリソース" />
     <div class="listing-grid">
       {allJaGuides.map((guide) => <GuideCard guide={guide} lang="ja" />)}

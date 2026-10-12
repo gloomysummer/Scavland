@@ -14,3 +14,31 @@
 
 # Sitemap Fallback
 /sitemap.xml    /sitemap-index.xml  301
+
+# Legacy Untranslated Fallback Consolidation (GSC 404 & SERP Signal Recovery)
+/ja/guide/scavland-quests-and-contracts             /guide/scavland-quests-and-contracts/             301
+/ja/guide/scavland-quests-and-contracts/            /guide/scavland-quests-and-contracts/             301
+/ja/guide/scavland-crafting-and-trading             /guide/scavland-crafting-and-trading/             301
+/ja/guide/scavland-crafting-and-trading/            /guide/scavland-crafting-and-trading/             301
+/ja/guide/scavland-merchant-prices-and-barter-guide  /guide/scavland-merchant-prices-and-barter-guide/ 301
+/ja/guide/scavland-merchant-prices-and-barter-guide/ /guide/scavland-merchant-prices-and-barter-guide/ 301
+/ja/guide/scavland-anomaly-scanner-and-artifacts    /guide/scavland-anomaly-scanner-and-artifacts/    301
+/ja/guide/scavland-anomaly-scanner-and-artifacts/   /guide/scavland-anomaly-scanner-and-artifacts/    301
+/de/guide/scavland-cheats-and-console-commands      /guide/scavland-cheats-and-console-commands/      301
+/de/guide/scavland-cheats-and-console-commands/     /guide/scavland-cheats-and-console-commands/      301
+/de/guide/scavland-anomaly-scanner-and-artifacts    /guide/scavland-anomaly-scanner-and-artifacts/    301
+/de/guide/scavland-anomaly-scanner-and-artifacts/   /guide/scavland-anomaly-scanner-and-artifacts/    301
+/de/guide/scavland-quests-and-contracts             /guide/scavland-quests-and-contracts/             301
+/de/guide/scavland-quests-and-contracts/            /guide/scavland-quests-and-contracts/             301
+/de/guide/scavland-crafting-and-trading             /guide/scavland-crafting-and-trading/             301
+/de/guide/scavland-crafting-and-trading/            /guide/scavland-crafting-and-trading/             301
+/de/guide/scavland-weapon-repair-and-durability     /guide/scavland-weapon-repair-and-durability/     301
+/de/guide/scavland-weapon-repair-and-durability/    /guide/scavland-weapon-repair-and-durability/     301
+/ru/guide/scavland-cheats-and-console-commands      /guide/scavland-cheats-and-console-commands/      301
+/ru/guide/scavland-cheats-and-console-commands/     /guide/scavland-cheats-and-console-commands/      301
+/ru/guide/scavland-quests-and-contracts             /guide/scavland-quests-and-contracts/             301
+/ru/guide/scavland-quests-and-contracts/            /guide/scavland-quests-and-contracts/             301
+/ru/guide/scavland-crafting-and-trading             /guide/scavland-crafting-and-trading/             301
+/ru/guide/scavland-crafting-and-trading/            /guide/scavland-crafting-and-trading/             301
+/ru/guide/scavland-weapon-repair-and-durability     /guide/scavland-weapon-repair-and-durability/     301
+/ru/guide/scavland-weapon-repair-and-durability/    /guide/scavland-weapon-repair-and-durability/     301
