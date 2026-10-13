@@ -8,7 +8,7 @@ import AdSlot from '../components/AdSlot.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
+<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, scav lands game, scave land, scavland trainer, scavland mod, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
   <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -16,11 +16,11 @@ const featured = guides.slice(0, 6);
         '@type': 'WebSite',
         '@id': 'https://scavland.wiki/#website',
         'name': 'Scavland Wiki',
-        'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database', 'Scavlands', 'Scav Land game', 'Scavland game'],
+        'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database', 'Scavlands', 'Scav Land game', 'Scavland game', 'scav lands game', 'scave land'],
         'url': 'https://scavland.wiki',
         'description': 'The definitive community Scavland Wiki: comprehensive survival guides, weapons, attachments, factions, maps, and extraction mechanics for Zalesye.',
         'inLanguage': 'en-US',
-        'dateModified': '2026-10-08T00:00:00Z',
+        'dateModified': '2026-10-12T00:00:00Z',
         'about': { '@id': 'https://scavland.wiki/#game' },
         'sameAs': [
           'https://store.steampowered.com/app/3373500/Scavland/',
@@ -70,7 +70,7 @@ const featured = guides.slice(0, 6);
             'name': 'Are there official promo codes or cheat console commands for Scavland?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Currently in Early Access v0.6.0, there are no official promo codes or cheat console commands enabled for Scavland. Verified offline debug launch parameters and safe trainer utilities are documented in our Cheats Guide.'
+              'text': 'Currently in Early Access Update 0.7.0 and Hotfix 0.7.2, there are no official promo codes or cheat console commands enabled for Scavland. Verified offline debug launch parameters (-dev, -console) and safe single-player trainer utilities are documented in our Cheats & Trainer Guide.'
             }
           },
           {

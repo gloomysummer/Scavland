@@ -193,7 +193,7 @@ export const guides: Guide[] = [
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'A scavenger exploring a ruined settlement in daylight near safehouse',
     evidence: 'Official Update 0.7.0 @ https://store.steampowered.com/news/app/3373500/view/710034946759065894 @ 2026-09-16',
-    updated: '2026-10-10',
+    updated: '2026-10-12',
     answer: 'Start your journey with daylight scavenging loops around the central settlement of <strong>Zalesye</strong> and raid the hazard-free supply depot at <strong>The Mire</strong> northwest of town. <strong>Update 0.7.0</strong> introduced significant beginner quality-of-life upgrades: <strong>Green Rags</strong> are now included in the starter kit for early emergency bleeding control, all game modes feature a unified 150 maximum stamina pool, and stamina recovery is accelerated to approximately <strong>7 seconds</strong> (down from <strong>10 seconds</strong>). Dodge roll stamina costs are tuned to mode difficulty (<strong>Explorer</strong>: <strong>15 Stamina</strong>, <strong>Returner</strong>: <strong>40 Stamina</strong>, <strong>Iron Man</strong>: 40 Stamina). In addition, Gun and Armor Repair Kits can now be used regardless of equipment damage condition, campfire healing has been doubled for emergency field triage, and the Death Screen has been rebuilt with dedicated mode-specific actions and gamepad support. If you die in the wasteland, your equipped backpack drops at the coordinate for recovery, while your safehouse stash remains completely secure.',
     steps: [
       '01 · Starter Kit & Green Rags (Update 0.7.0): Every new run now includes Green Rags in the starter kit alongside basic field gear. Use Green Rags immediately when suffering lacerations or light bleeding during early skirmishes.',
@@ -225,7 +225,7 @@ export const guides: Guide[] = [
       ['What happens if I die during a raid?', 'In standard Returner Mode, your equipped gear and backpack remain at your death coordinate for recovery, while your safehouse stash remains completely secure. The rebuilt Death Screen allows you to Continue or Load Game directly.']
     ],
     related: ['scavland-map-and-locations', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-crafting-and-trading', 'scavland-console-release-status'],
-    keywords: ['scavland guide', 'scavland beginner guide', 'scavland starter guide', 'scavlands beginner guide', 'scavland starter tips', 'scavland beginner walkthrough', 'scavland early game guide', 'scavland how to play', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide'],
+    keywords: ['scavland guide', 'scavland beginner guide', 'scavland starter guide', 'beginner starter guide', 'scavland beginner starter guide', 'scavlands beginner guide', 'scavland starter tips', 'scavland starter route', 'scavland beginner walkthrough', 'scavland early game guide', 'scavland how to play', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide'],
     videoId: 'JRAOxOjeoc8',
     videoTitle: 'SCAVLAND - Stop Dying Early: The Complete Beginner Guide',
     videoChannel: 'Mars'
@@ -399,7 +399,7 @@ export const guides: Guide[] = [
     image: '/images/harvested/2026-09-24/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Scavland quest journal showing main story progression, contract tracking, and inventory item colors',
     evidence: 'Official Steam announcements & community reports · Update 0.7.0 & Hotfix 0.7.2',
-    updated: '2026-10-09',
+    updated: '2026-10-12',
     answer: 'Progression in Scavland is bifurcated into primary storyline Quests and repeatable faction Jobs (Contracts). Main quests guide your overarching narrative through <strong>Zalesye</strong>—commencing with the tutorial objective \'Dead Man\'s Rest\' and advancing to core contracts like \'Catching Current\' to secure the Flux Aspect Core. To safeguard quest items, Update 0.6.0 and Update 0.7.0 introduced explicit visual item segregation: Quest Items are colored <strong>orange</strong>, while Job Items appear in <strong>green</strong>. Furthermore, equipped clothing can no longer be accidentally handed in for jobs, and quest containers automatically vanish once their objective completes. You can track multiple jobs simultaneously in your Journal, but cancelling an accepted contract deducts 20% of that Job\'s Reputation reward (with a minimum penalty of 1). Contracts and job rosters refresh across an in-game 24-hour cycle or upon sleeping in a bed with a mattress.',
     steps: [
       '01 · Distinguish Main Quests vs Faction Jobs: Main Quests (such as \'Dead Man\'s Rest\' and \'<strong>Catching Current</strong>\') advance world lore and unlock critical survival gear. Faction Jobs are repeatable economic contracts taken from brokers like <strong>Anatoly</strong> (logistics and bandit camps) and <strong>Nadja</strong> (mutant hunts).',
@@ -428,7 +428,7 @@ export const guides: Guide[] = [
       ['What should I do after completing Nadja\'s main questline?', 'After completing Nadja\'s main questline, progression transitions into high-tier faction contracts and bunker exploration. Take on advanced military jobs from Volodymyr at the Crossroads annex, pursue Diplomat Raisa\'s follow-up truce jobs (which under Hotfix 0.7.2 can be accepted continuously without waiting for current tasks to clear), explore Subterranean Bunker Sector B-4 on its 3-hour reset cycle, and level up Trader Ranks for the 5% sell value bonus per rank.']
     ],
     related: ['scavland-anomaly-scanner-and-artifacts', 'scavland-hospital-quest-and-medical-supplies', 'scavland-factions-progression-and-traders', 'scavland-factions-and-reputation', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland main quest', 'scavland quests', 'scavland contracts', 'scavland quest guide', 'scavland main quests', 'scavland raisa jobs', 'scavland storyline', 'scavland after nadja quest', 'scavland post main quest', 'scavland endgame loop', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
+    keywords: ['scavland main quest', 'scavland main quest walkthrough', 'scavland main questline', 'scavland story quests', 'scavland quests', 'scavland contracts', 'scavland quest guide', 'scavland main quests', 'scavland raisa jobs', 'scavland storyline', 'scavland after nadja quest', 'scavland post main quest', 'scavland endgame loop', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items'],
     videoId: 'lmeGDw8lihw',
     videoTitle: 'Scavland Part 9 Catching Current',
     videoChannel: 'Zquietgamer'
