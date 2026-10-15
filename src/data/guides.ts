@@ -11,7 +11,7 @@ export const guides: Guide[] = [
     image: '/images/screenshots/steam_ss_10.webp',
     imageAlt: 'Scavland developer console, cheats, trainer tools, and item spawning reference',
     evidence: 'Community-reported @ https://steamcommunity.com/app/3373500/discussions/',
-    updated: '2026-10-12',
+    updated: '2026-10-15',
     answer: 'For players searching for a <strong>Scavland trainer</strong>, <strong>Scavland cheat</strong> codes, <strong>Cheat Engine</strong> tables, or developer console commands, internal diagnostic functions and single-player assists can be accessed safely through verified Steam parameters. While developer debug menus were restricted following Early Access <strong>v0.2.4</strong>, players can pass command-line launch parameters (<strong>-dev</strong>, <strong>-console</strong>) via Steam to activate diagnostic overlays and console functionality. For standalone trainers and <strong>Cheat Engine</strong> (CT) tables, recent patches including <strong>Update 0.7.0</strong> and <strong>Hotfix 0.7.2</strong> shifted dynamic memory offsets for stamina, carry weight, and weapon durability, requiring updated pointers. Because Scavland is an offline single-player survival RPG in Early Access, local memory trainers and mods carry no risk of server-side bans in solo sessions. Furthermore, <strong>Update 0.7.0</strong> gives each run its own independent <strong>Autosave Slot</strong>, protecting the save you are currently playing during experimental testing. For framework setup and save backups, see our [Mods & Modding Guide](/guide/scavland-mods-and-mod-support/) and [Save File Location & Backups Guide](/guide/scavland-save-file-location-and-backups/).',
     steps: [
       '01 · Configure Steam Launch Parameters (-dev / -console): To enable the developer console and diagnostic features, right-click Scavland in your Steam Library -> Properties -> General -> Launch Options. Enter "-dev" or "-console" (without quotes) to activate developer diagnostic logging and command overlay support on boot.',
@@ -42,7 +42,7 @@ export const guides: Guide[] = [
       ['Where are Scavland save files located on PC?', 'Local saves are found at C:\\Users\\<Username>\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\ on Windows systems.']
     ],
     related: ['scavland-mods-and-mod-support', 'scavland-save-file-location-and-backups', 'scavland-explorer-mode-and-campfire-healing', 'scavland-beginner-guide', 'scavland-weapon-repair-and-durability'],
-    keywords: ['scavland trainer', 'scavland cheat', 'scavland cheats', 'scavland cheat engine', 'scavland trainer download', 'scavland pc trainer', 'scavland console', 'scavland console commands', 'scavland mod', 'scavland mods', 'scav land trainer', 'scav land console', 'scavlands trainer', 'scavland debug mode', 'scavland dev mode', 'scavland fling trainer', 'scavland wemod', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode']
+    keywords: ['scavland trainer', 'scavland cheat', 'scavland cheats', 'scavland cheat engine', 'scavland trainer download', 'scavland pc trainer', 'scavland console', 'scavland console commands', 'scavland mod', 'scavland mods', 'scav land trainer', 'scav land console', 'scavlands trainer', 'scavland debug mode', 'scavland dev mode', 'scavland fling trainer', 'scavland wemod', 'scavland 트레이너', 'scavland ct table 0.7.0', 'scavland item spawn', 'scavland god mode', 'scavland game trainer', 'scav lands trainer', 'scavland trainer pc', 'scav land cheats', 'scav lands cheats', 'scavland game cheats']
   },
   {
     slug: 'scavland-price-and-regional-editions',
@@ -196,7 +196,7 @@ export const guides: Guide[] = [
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'A scavenger exploring a ruined settlement in daylight near safehouse',
     evidence: 'Official Update 0.7.0 @ https://store.steampowered.com/news/app/3373500/view/710034946759065894 @ 2026-09-16',
-    updated: '2026-10-12',
+    updated: '2026-10-15',
     answer: 'Start your journey with daylight scavenging loops around the central settlement of <strong>Zalesye</strong> and raid the hazard-free supply depot at <strong>The Mire</strong> northwest of town. <strong>Update 0.7.0</strong> introduced significant beginner quality-of-life upgrades: <strong>Green Rags</strong> are now included in the starter kit for early emergency bleeding control, all game modes feature a unified 150 maximum stamina pool, and stamina recovery is accelerated to approximately <strong>7 seconds</strong> (down from <strong>10 seconds</strong>). Dodge roll stamina costs are tuned to mode difficulty (<strong>Explorer</strong>: <strong>15 Stamina</strong>, <strong>Returner</strong>: <strong>40 Stamina</strong>, <strong>Iron Man</strong>: 40 Stamina). In addition, Gun and Armor Repair Kits can now be used regardless of equipment damage condition, campfire healing has been doubled for emergency field triage, and the Death Screen has been rebuilt with dedicated mode-specific actions and gamepad support. If you die in the wasteland, your equipped backpack drops at the coordinate for recovery, while your safehouse stash remains completely secure.',
     steps: [
       '01 · Starter Kit & Green Rags (Update 0.7.0): Every new run now includes Green Rags in the starter kit alongside basic field gear. Use Green Rags immediately when suffering lacerations or light bleeding during early skirmishes.',
@@ -217,7 +217,7 @@ export const guides: Guide[] = [
       ['Starter Supply Cache', 'The Mire northwest of Zalesye provides free boiled water, 12G ammo, and gauze with no bandits'],
       ['Universal Repair Kits', 'Gun and Armor Repair Kits can now be used regardless of damage condition (Update 0.7.0)'],
       ['Rebuilt Death Screen', 'Mode-specific actions (Returner: Continue/Load; Iron Man: New Game/Exit) and run-specific Autosave Slot (Update 0.7.0)'],
-      ['Evidence Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
+      ['Evidence Baseline', 'Official Update 0.7.0 @ https://store.steampowered.com/news/app/3373500/view/710034946759065894 @ 2026-09-16']
     ],
     faq: [
       ['What was added to the beginner starter kit in Update 0.7.0?', 'Green Rags are now included in the starter kit, giving fresh spawns an immediate remedy for bleeding and lacerations without needing early medical purchases.'],
@@ -228,7 +228,7 @@ export const guides: Guide[] = [
       ['What happens if I die during a raid?', 'In standard Returner Mode, your equipped gear and backpack remain at your death coordinate for recovery, while your safehouse stash remains completely secure. The rebuilt Death Screen allows you to Continue or Load Game directly.']
     ],
     related: ['scavland-map-and-locations', 'scavland-quests-and-contracts', 'scavland-weapon-repair-and-durability', 'scavland-crafting-and-trading', 'scavland-console-release-status'],
-    keywords: ['scavland guide', 'scavland beginner guide', 'scavland starter guide', 'beginner starter guide', 'scavland beginner starter guide', 'scavlands beginner guide', 'scavland starter tips', 'scavland starter route', 'scavland beginner walkthrough', 'scavland early game guide', 'scavland how to play', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide'],
+    keywords: ['scavland guide', 'scavland beginner guide', 'scavland starter guide', 'beginner starter guide', 'scavland beginner starter guide', 'scavlands beginner guide', 'scavland starter tips', 'scavland starter route', 'scavland beginner walkthrough', 'scavland early game guide', 'scavland how to play', 'scavland green rags', 'scavland stamina 150', 'scavland dodge stamina', 'scavland the mire', 'scavland campfire healing', 'scavland death screen', 'scavland repair kits 0.7.0', 'scav land guide', 'scavland game', 'scav land game', 'scav lands', 'scav lands game', 'scavlands game', 'scave land'],
     videoId: 'JRAOxOjeoc8',
     videoTitle: 'SCAVLAND - Stop Dying Early: The Complete Beginner Guide',
     videoChannel: 'Mars'
@@ -1391,8 +1391,8 @@ export const guides: Guide[] = [
     category: "Buyer Guide",
     image: '/images/screenshots/steam_ss_01.webp',
     imageAlt: "Scavland atmospheric ruins and tactical survival gameplay showcase",
-    evidence: 'Official Steam announcements & community reviews · Update 0.7.2',
-    updated: '2026-09-30',
+    evidence: 'Official Steam store page & news announcements @ https://store.steampowered.com/news/app/3373500/view/710034946759065894 @ 2026-09-16',
+    updated: '2026-10-15',
     answer: "Priced at <strong>$19.99 USD</strong> (\u20ac19.50 EUR / \u00a316.75 GBP) with zero predatory microtransactions, Scavland delivers remarkable value for fans of hardcore top-down extraction RPGs like S.T.A.L.K.E.R. and Escape from Tarkov. Built over six years by indie studio <strong>NoShadow</strong>, the launch build provides a handcrafted <strong>Act I</strong> exclusion zone roughly <strong>3x larger</strong> than the initial demo, containing <strong>25+ weapons</strong>, over <strong>300 modular attachments</strong>, and 10 dynamic factions. Thanks to rapid post-launch support\u2014including the <strong>Update 0.5.169</strong> Day One patch introducing <strong>Explorer Mode</strong>, <strong>Update 0.6.0</strong> adding rest mechanics, and <strong>Update 0.7.0</strong> overhauling weapon durability and <strong>Autosave Slots</strong>\u2014the title is exceptionally stable for an Early Access debut. If you enjoy tense tactical combat, inventory tetris, and procedural bunker exploration, Scavland is definitively worth buying at launch.",
     steps: [
       "01 \u00b7 Assess Content Depth & Playtime: The initial Early Access release offers between <strong>35 to 60 hours</strong> of content across the <strong>Zalesye</strong> sector alone. Players uncover subterranean Soviet vaults in <strong>Sector B-4</strong>, negotiate contracts with <strong>10 wasteland factions</strong>, and engage in high-risk extractions through the deadly <strong>Mist</strong> weather cycle.",
@@ -1429,7 +1429,7 @@ export const guides: Guide[] = [
       ],
       [
             "Verified Baseline",
-            "Steam Early Access Update 0.7.2 Baseline"
+            "Official Steam store page & news announcements @ 2026-09-16"
       ]
 ],
     faq: [
@@ -1455,7 +1455,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-beginner-guide", "scavland-price-and-regional-editions", "scavland-vs-zero-sievert-comparison", "scavland-explorer-mode-and-campfire-healing"],
-    keywords: ["is scavland worth it", "scavland review 2026", "scavland buy or pass", "scavland steam price value", "scavland gameplay review", "scavland worth buying early access"],
+    keywords: ["is scavland worth it", "scavland review 2026", "scavland buy or pass", "scavland steam price value", "scavland gameplay review", "scavland worth buying early access", "scavland game", "scav lands", "scav lands game", "scavland game review", "is scav lands worth it", "scave land"],
     videoId: '6gZGUJTnqWI',
     videoTitle: "Scavland Is It Worth Your Money?! Spoiler: Yes!",
     videoChannel: "Sergeant Kelvin"
