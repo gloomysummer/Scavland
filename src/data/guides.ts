@@ -241,13 +241,13 @@ export const guides: Guide[] = [
     category: 'Exploration',
     image: '/images/harvested/2026-10-06/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Core detector missing troubleshooting and anomaly scanner detection gameplay in Scavland',
-    evidence: 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/',
-    updated: '2026-10-08',
-    answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In the current Early Access build, community reports document a common inventory boundary issue: because the <strong>Core Detector</strong> occupies 3 vertical slots (1x3), if your inventory is completely full upon accepting or turning in "<strong>Catching Current</strong>", the device cannot enter your quickbar and drops onto the ground directly near the NPC feet or diverts to your <strong>Zalesye</strong> safehouse stash overflow. If looking on the floor does not reveal it, drop junk to free slots, then fast travel away and return to force a respawn check, or reload a recent quicksave. Additionally, a quicksave audio desync bug can silence the scanner; holstering the unit, cycling a firearm bolt once, and re-equipping slot [3] resets the audio listener component.',
+    evidence: 'Official Steam announcements & community reports · Hotfix 0.8.8',
+    updated: '2026-10-19',
+    answer: 'The handheld <strong>Anomaly Scanner</strong> (named the <strong>Core Detector</strong> in game contracts) is your primary instrument for tracking spatial anomalies and harvesting artifacts across <strong>Zalesye</strong>. In the primary storyline quest "<strong>Catching Current</strong>", you must equip this device to locate and harvest the rare <strong>Flux Aspect Core</strong>. Bound to hotkey [3], the <strong>Core Detector</strong> emits audio radar pings that rapidly accelerate in pitch and tempo as you home in on anomalous epicenters. In <strong>Hotfix 0.8.8</strong>, developer NoShadow permanently resolved the inventory loss bug: accepting "<strong>Catching Current</strong>" with a full backpack no longer loses Anatoly\'s Detector—it automatically drops at your feet, and any earlier saves stuck without it have the detector restored upon load. Other dialogue quest rewards also safely drop to the ground when inventory is full. Additionally, if an audio desync occurs, cycling your equipped firearm bolt once re-equips the spatial audio listener component.',
     steps: [
-      '01 · Free 3 Inventory Slots Before "<strong>Catching Current</strong>": The <strong>Core Detector</strong> occupies 3 vertical inventory slots (1x3 grid footprint). Clear at least 3-4 backpack cells before accepting the "<strong>Catching Current</strong>" quest from the handler so the scanner can safely enter your gear.',
-      '02 · Floor & Safehouse Overflow Retrieval: If the <strong>Core Detector</strong> is missing from your inventory after accepting "<strong>Catching Current</strong>", do not restart your save. Inspect the ground directly beneath the NPC\'s feet where dropped items spawn, or check the Overflow Tab in your Zalesye safehouse stash locker.',
-      '03 · Fast-Travel Reload or Quicksave Reset: If the scanner is not visible on the floor, drop several unneeded items to guarantee empty inventory cells, then fast travel away to an outpost safehouse and return to the quest giver to force an object respawn check. If it still fails to spawn, load your recent quicksave from before accepting the task or cancel and re-accept the contract job.',
+      '01 · Full Backpack Safeguard (Hotfix 0.8.8): While the Core Detector occupies 3 vertical slots (1x3 grid footprint), Hotfix 0.8.8 ensures that accepting "Catching Current" with a full backpack will drop Anatoly\'s Detector directly at your feet rather than losing the item.',
+      '02 · Broken Save Restoration: If your save was previously stuck without Anatoly\'s Detector after accepting "Catching Current", loading your game under Hotfix 0.8.8 or newer automatically restores the detector to your character.',
+      '03 · Floor & Ground Retrieval: If you did not immediately receive the device into your hands due to a full bag, simply check the ground beneath the quest giver\'s feet where dialogue rewards now drop.',
       '04 · Equip Offhand Scanner & Sweep Terrain: Press hotkey [3] to equip the Core Detector in your offhand. Sweep across the quest search perimeter in a zigzag pattern while keeping in-game master and effects audio enabled.',
       '05 · Track Accelerating Cadence to Epicenter: Follow the escalating audio ping rate. As you approach the Flux Aspect Core epicenter from ~30m down to under 5m, the sound shifts from sporadic chirps to a continuous high-pitched hum.',
       '06 · Bolt-Cycle Audio Listener Reset: If loading a save renders the detector completely silent near visible shimmering anomalies, holster the scanner, switch to your primary firearm, cycle the bolt once, and re-equip slot [3] to reinitialize the spatial audio listener.',
@@ -255,19 +255,19 @@ export const guides: Guide[] = [
     ],
     facts: [
       ['Quest Objective', 'The Core Detector is required to locate and harvest the Flux Aspect Core in the Catching Current quest line'],
+      ['Hotfix 0.8.8 Fix', 'Accepting Catching Current with a full backpack drops Anatoly\'s Detector at your feet; stuck saves regain it on load'],
       ['Equipment Hotkey', 'Press [3] to equip the handheld scanner, point toward spatial anomalies, and follow highest frequency pings'],
       ['Grid Footprint', 'Core Detector occupies 3 vertical inventory slots (1x3 grid footprint)'],
-      ['Missing Item Recovery', 'If inventory is full, the scanner drops at the NPC feet or routes to Zalesye safehouse stash overflow'],
-      ['Respawn Check', 'Drop junk to free slots, fast travel away and return to trigger an object respawn check'],
+      ['Dialogue Reward Drop', 'Other dialogue rewards also drop on the ground instead of being lost when inventory is full (Hotfix 0.8.8)'],
       ['Bolt-Cycle Audio Fix', 'Cycling a firearm bolt rebinds the audio spatial listener component if the detector goes silent'],
       ['Flux Core Value', 'The Flux Aspect Core fulfills the Catching Current contract and provides critical research barter with faction scientists'],
-      ['Evidence Source', 'Community-reported @ https://www.reddit.com/r/Scavland/comments/1wfkjue/core_detector_is_missing/']
+      ['Evidence Source', 'Official Steam announcements · Hotfix 0.8.8']
     ],
     faq: [
       ['How do I complete the <strong>Catching Current</strong> quest and find the Flux Aspect Core?', 'Equip the Core Detector using hotkey [3], traverse the marked anomaly zone, and follow the escalating audio radar frequency. When the pings transition into a continuous high-pitched tone, locate the shimmering epicenter and harvest the Flux Aspect Core directly from the ground.'],
-      ['What should I do if the Core Detector is missing after accepting Catching Current?', 'If your backpack was full when receiving the scanner from the quest giver, it could not enter your grid. Return to the quest giver and check the floor directly beneath the NPC\'s feet. If it does not appear, drop some junk to free up slots, fast travel away to another zone, and return to force an engine respawn check. You can also reload a recent quicksave or cancel and re-accept the contract job to re-grant the device.'],
-      ['Why is the Anomaly Scanner not beeping near anomalies?', 'A known serialization bug in Early Access can desync the spatial audio component when loading a save. Holster the detector, cycle your firearm\'s bolt once, and re-equip slot [3] to reset the audio listener.'],
-      ['How much backpack space does the Core Detector require?', 'The Core Detector requires 3 vertical inventory cells (1x3). Always maintain free slots before talking to major quest givers.'],
+      ['What happens if my inventory was full when accepting Catching Current?', 'In Hotfix 0.8.8, accepting Catching Current with a full backpack drops Anatoly\'s Detector at your feet. Older saves stuck without the detector automatically receive it back upon loading the game.'],
+      ['Why is the Anomaly Scanner not beeping near anomalies?', 'If audio desyncs when loading a save, holster the detector, cycle your firearm\'s bolt once, and re-equip slot [3] to reset the audio listener.'],
+      ['How much backpack space does the Core Detector require?', 'The Core Detector requires 3 vertical inventory cells (1x3). In Hotfix 0.8.8, overflowing rewards now drop at your feet.'],
       ['Can anomaly fields be harvested repeatedly for artifacts?', 'Overworld anomaly zones undergo a 48-hour in-game regeneration cycle. Dense Mist events increase artifact spawn probabilities and yield enhanced anomaly loot.']
     ],
     related: ['scavland-mist', 'scavland-loot-and-scavenging', 'scavland-mist-survival-and-radiation', 'scavland-beginner-guide'],
@@ -1227,36 +1227,37 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-safehouses-and-fast-travel-guide',
     shortTitle: 'Safehouses & Travel',
-    title: 'Scavland Safehouses & Fast Travel Guide: Stash Lockers, Beds & Transit Routes',
-    description: 'Complete guide to Scavland safehouses, stashes, and travel: 50,000 ruble stash expansions in Update 0.7.0, main camp workbenches, and safe transit routes.',
+    title: 'Scavland Safehouses & Fast Travel Guide: Dogface Rides, Stash Lockers & Transit Routes (Update 0.8.0)',
+    description: 'Complete guide to Scavland safehouses, stashes, and Dogface Rides fast travel in Update 0.8.0: 6 bike transit stops, On the Road quest, Ride Tickets, and stash expansions.',
     category: 'Survival',
     image: '/images/screenshots/ss_04_settlement_camp.webp',
     imageAlt: 'Safehouse bunker settlement and player stash storage in Scavland',
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-09-16',
-    answer: 'Scavland deliberately rejects instant map teleportation and decorative player housing to maintain hardcore post-Soviet survival tension. Instead, the game features a decentralized network of fortified subterranean Safehouses and main camps across <strong>Zalesye</strong>: Central <strong>Zalesye</strong> Settlement, the Crossroads Annex, the Hospital Medical Wing, and Outpost B-1. In <strong>Update 0.7.0</strong>, player storage received a massive expansion: stashes and crafting tables were added to all main camps, and players can purchase an additional Stash tab from a Trader in the main village for 50,000 Rubles. Safehouse stashes remain 100% immune to death penalties, while Hotfix 0.7.1 resolved a launch bug preventing stashes from opening. For complete map coordinates and survival tips, review our [<strong>Zalesye</strong> Overworld Map](/maps/), [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
+    evidence: 'Official Steam announcements & community reports · Update 0.8.0 / Hotfix 0.8.8',
+    updated: '2026-10-19',
+    answer: 'Scavland combines hardcore post-Soviet survival tension with structured transit. In <strong>Update 0.8.0</strong>, developer NoShadow officially introduced <strong>Dogface Rides</strong>, a dedicated in-game fast travel network. After completing the "<strong>On the Road</strong>" quest for NPC <strong>Dogface</strong>, scavengers can request transit ("I need a ride") between six designated stops across <strong>Zalesye</strong>: <strong>Arcadia</strong>, the <strong>Mire</strong>, <strong>Sontse Station</strong>, <strong>Microrayon</strong>, <strong>North Pier</strong>, and the <strong>Quarry Settlement</strong>. Rides departing from the Quarry Settlement are completely free while Dogface remains stationed there. Each transit trip generates a <strong>Ride Ticket</strong> displaying fare cost, travel duration, and projected Hunger/Thirst consumption while your bike traverses wasteland roadways in real time. Complementing transit, player safehouses provide death-immune stash storage (upgradable for 50,000 Rubles in the main village) and canvas beds for time skipping. For complete travel coordination, consult our [Zalesye Overworld Map](/maps/), [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/), or [Beginner Survival Guide](/guide/scavland-beginner-guide/).',
     steps: [
-      '01 · Understand the Safehouse Network (4 Key Hubs): Scavland features four distinct safehouse shelters across the exclusion zone: the Central <strong>Zalesye</strong> Starter Bunker, the Crossroads Annex (near trader Volodymyr), the Hospital Medical Wing (unlocked via the Hospital Quest), and Outpost B-1 on the eastern border. Each serves as an operational base for resting, repairs, and stash access.',
-      '02 · Stash Expansions & Camp Stashes (<strong>Update 0.7.0</strong>): In <strong>Update 0.7.0</strong>, stashes and crafting tables were added to all main camps. For now, only the main village features upgradable stashes—you can buy an expansion from a Trader for 50,000 Rubles to unlock an additional tab. Note that camp stashes do not share items with the main village inventory.',
-      '03 · Canvas Bed Sleeping & World Cycles: Every safehouse contains a canvas bunk. Interacting with the bed [E] lets you skip 1 to 12 hours of in-game time, allowing you to advance through pitch-black nights (21:00 to 06:00) safely and reset 24-hour merchant contract job pools. Active bleeding or severe dehydration will awaken your character immediately.',
-      '04 · Quasi-Fast Travel: Paved Road Sprinting & Staged Transit: Because instant teleportation is disabled, travel between sectors must be earned. The safest traversal method is staged transit along main asphalt roadways, where mutant density is 70% lower than in dense forests and marshlands. Sprint in 5-second bursts to preserve at least 40% stamina for emergency evasions.',
-      '05 · Emergency Safehouse Bug-Out Routes: Always designate a primary and secondary safehouse before embarking on a bunker raid. If a weapon is badly worn — guns can explode below 30% condition — or you run low on ammunition, do not push toward the main extraction gate; retreat to the nearest safehouse lockbox to rearm and repair.'
+      '01 · Unlock Dogface Rides Fast Travel (Update 0.8.0): Speak with the new NPC Dogface and complete his introductory quest "On the Road". Once finished, interact with Dogface at any unlocked stop on your Journal Map and choose "I need a ride" to open the destination travel interface.',
+      '02 · Navigate the 6 Verified Transit Stops: Dogface services six strategic wasteland stops: Arcadia, the Mire, Sontse Station, Microrayon, North Pier, and the Quarry Settlement. A location becomes a valid destination on your Journal Map once you discover it. Crucially, rides departing from the Quarry Settlement are free of charge while Dogface remains there.',
+      '03 · Inspect Ride Tickets & Metabolism Forecasts: Before embarking, review your Ride Ticket. It displays the ruble fare, total travel time, and a forecast of your character\'s Hunger and Thirst depletion during the trip. Ensure you consume clean water and rations before traveling so you do not arrive dehydrated or starving.',
+      '04 · Stash Expansions & Camp Lockers: In Update 0.7.0 and Hotfix 0.7.1, stashes and crafting tables were installed across all main camps. Main village stashes can be expanded by purchasing an additional tab from a Trader for 50,000 Rubles. Secondary camp stashes currently offer one standard tab and maintain separate inventory storage.',
+      '05 · Canvas Beds & Safehouse Bug-Out Routes: Every safehouse bunker features a canvas bed for skipping 1 to 12 hours of night cycles. Safehouse lockers remain 100% death-immune. When undertaking deep bunker raids or facing severe weapon wear, plan fall-back routes to the nearest Dogface stop or safehouse outpost.'
     ],
     facts: [
+      ['Dogface Rides (Fast Travel)', 'Unlocked after completing "On the Road" quest for NPC Dogface (Update 0.8.0)'],
+      ['6 Transit Stops', 'Arcadia, the Mire, Sontse Station, Microrayon, North Pier, Quarry Settlement'],
+      ['Quarry Free Transit', 'Rides with Dogface departing from Quarry Settlement are free while he is stationed there'],
+      ['Ride Ticket Forecast', 'Displays fare cost, in-game travel duration, and Hunger/Thirst consumption forecasts'],
       ['Stash Expansions', 'Purchase an expansion from a Trader for 50,000 Rubles to unlock an extra Stash tab (Update 0.7.0)'],
       ['Main Camp Stashes', 'Stashes and crafting tables added to all main camps in Update 0.7.0 (1 tab, independent inventory)'],
-      ['Stash Accessibility Fix', 'Hotfix 0.7.1 fixed an issue where stashes failed to open for some players'],
-      ['Instant Fast Travel', 'Disabled by design; transit is tactical and executed in-world on foot'],
-      ['Safehouse Hubs', '4 verified safehouses: Central Zalesye, Crossroads Annex, Hospital Wing, Outpost B-1'],
-      ['Workbench Stash Link', 'Workbenches pull crafting ingredients directly from nearby safehouse lockers'],
-      ['Verified Baseline', 'Official Steam announcements · Update 0.7.0']
+      ['Stash Immunity', 'Safehouse stash items never drop upon player death and cannot be looted by hostile AI'],
+      ['Verified Baseline', 'Official Steam announcements · Update 0.8.0 / Hotfix 0.8.8']
     ],
     faq: [
-      ['How do stash expansions work in <strong>Update 0.7.0</strong>?', 'In <strong>Update 0.7.0</strong>, you can purchase an expansion from a Trader in the main village for 50,000 Rubles to unlock an additional Stash tab. Secondary camps have one tab for now and are not upgradable.'],
-      ['Do main camp stashes share items with the village?', 'No. Stashes added to main camps in Update 0.7.0 maintain independent inventories and do not share items with the central village stash.'],
-      ['What was fixed in Hotfix 0.7.1 regarding stashes?', 'Hotfix 0.7.1 resolved a bug where the stash would not open for certain players upon interacting with the container.'],
-      ['Can other players or bandits raid my safehouse stash?', 'No. Items stored in safehouse lockers are permanently protected, completely secure from hostile AI raiders, and never drop upon player death.'],
-      ['How do I travel across the map quickly without dying?', 'Stick to paved highways and cleared rail lines rather than cutting through dense woods, keep sprint stamina above 40% to outrun Hellhounds, and equip a weapon with a suppressor (like PBS-4) to avoid triggering a 200m mutant sound ripple.']
+      ['How do you unlock fast travel in Scavland?', 'Fast travel is available via Dogface Rides introduced in Update 0.8.0. Complete the "On the Road" quest for NPC Dogface, then speak with him at any Dogface stop and select "I need a ride" to choose an unlocked destination on your Journal Map.'],
+      ['Which locations have Dogface Rides fast travel stops?', 'There are six official Dogface stops: Arcadia, the Mire, Sontse Station, Microrayon, North Pier, and the Quarry Settlement. A stop becomes an active travel destination once its marker is recorded on your Journal Map.'],
+      ['Are Dogface fast travel rides free?', 'Rides departing from the Quarry Settlement are free of charge while Dogface is located there. For trips originating from other stops, a fare is calculated on the Ride Ticket along with travel time and hunger/thirst projections.'],
+      ['What is shown on a Scavland Ride Ticket?', 'A Ride Ticket previews your transit destination, ruble cost, total travel duration, and expected hunger and thirst depletion, allowing you to top up hydration and nutrition before committing to the journey.'],
+      ['Do camp stashes share items with the main village?', 'No. Stashes installed at secondary camps maintain distinct inventories and do not link to your central village stash locker.']
     ],
     related: [
       'scavland-sleep-and-world-reset-guide',

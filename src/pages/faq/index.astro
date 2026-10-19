@@ -211,12 +211,12 @@ const faqs = [
   {
     category: 'Gameplay & Mechanics',
     question: 'Why do my hunger, thirst, or detector audio settings reset after loading a quicksave?',
-    answer: 'Early Access 0.6.3 has a known serialization issue where reloading a manual quicksave during an active raid can occasionally reset character hydration meters and desync the Core Detector audio listener. The developer confirmed a fix is coming in an upcoming hotfix. In the meantime, carry spare boiled water bottles and cycle your equipped firearm once to reset audio if your detector fails to beep.'
+    answer: 'Early Access 0.6.3 had an audio serialization desync where reloading could mute the Core Detector listener. Developer NoShadow resolved save corruption and quest reward handling in Update 0.8.0 and Hotfix 0.8.8: accepting the Catching Current quest with a full backpack no longer loses Anatoly\'s Detector (it safely drops at your feet), and stuck saves regain the device upon loading. If audio ever desyncs on older versions, cycle your equipped firearm bolt once to reinitialize spatial sound.'
   },
   {
     category: 'Gameplay & Mechanics',
     question: 'Is there player housing or fast travel in Scavland?',
-    answer: 'Scavland does not feature free-form base building or instant fast travel teleporters. Instead, survival revolves around 4 designated safehouses across Zalesye (such as Central Zalesye and Crossroads Annex). Safehouses provide death-immune stash lockers, canvas beds for time skipping, and craft benches. Fast transit is achieved by traversing cleared patrol sectors or paying neutral cart drivers.'
+    answer: 'Scavland does not feature free-form base building, but fast travel is officially supported via the Dogface Rides transit network introduced in Update 0.8.0. After completing the "On the Road" quest for NPC Dogface, players can request transit ("I need a ride") between six designated map stops: Arcadia, the Mire, Sontse Station, Microrayon, North Pier, and the Quarry Settlement (rides departing from Quarry Settlement are free while Dogface remains there). Each trip generates a Ride Ticket displaying travel duration, ruble cost, and hunger/thirst depletion forecasts while the bike navigates the roads in real time. In addition, safehouses across Zalesye provide death-immune stash lockers, canvas beds for time skipping, and crafting tables.'
   },
   {
     category: 'Gameplay & Mechanics',

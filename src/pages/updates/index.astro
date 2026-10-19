@@ -4,6 +4,33 @@ import VideoEmbed from '../../components/VideoEmbed.astro';
 
 const timeline = [
   {
+    date: 'October 19, 2026',
+    tag: 'Official Hotfix (0.8.8)',
+    title: 'Hotfix 0.8.8: Gun Part Management, Ammo Memory & Quest Inventory Fix',
+    summary: 'A focused stability hotfix introducing inventory weapon mod stripping, magazine ammo memory, and quest reward drop safeguards.',
+    details: [
+      'Unload, Remove Sight and Remove Muzzle now work on guns inside containers, your stash and corpses.',
+      'Each magazine now remembers its ammo type, so reloading an empty magazine refills the same type (e.g. sidearms stay on AP while main weapons use FMJ).',
+      'Dried Steak now needs Salt and turns up more often in loot.',
+      'Accepting Catching Current with a full backpack no longer loses Anatoly\'s Detector—it drops at your feet; saves stuck without it get the Detector back on load. Other dialogue rewards also drop on the ground instead of being lost when inventory is full.',
+      'Clicking the Map tab while the map is open no longer breaks the map or brings HUD over Journal; leaving opening dialogue closes screen; controller Take All (Left Stick) no longer switches weapons; fixed bunker save load error with active jobs.'
+    ]
+  },
+  {
+    date: 'October 17, 2026',
+    tag: 'Official Update (0.8.0)',
+    title: 'Update 0.8.0: Dogface Fast Travel, Staged Reloads, Armor Penetration & New Loot',
+    summary: 'A major milestone update adding Dogface bike transit, universal staged reloads, inspect animations, human armor penetration mechanics, and save file fixes.',
+    details: [
+      'Dogface NPC & Dogface Rides (fast travel): complete the "On the Road" quest, then request a ride at any Dogface stop on your Journal Map (Arcadia, the Mire, Sontse Station, Microrayon, North Pier, and Quarry Settlement). Rides from Quarry Settlement are free while Dogface is there. Ride Tickets show fare cost, ride time, and Hunger/Thirst forecasts.',
+      'Staged reloads for every gun: interrupted reloads continue from where they stopped instead of restarting from scratch.',
+      'Weapon Inspect: tap Y on PC or D-pad Down on gamepad (rebindable) to inspect weapons and check ammo.',
+      'Armor Penetration overhaul: human enemies wear armor (Gunners 45%/40% with Health 70 to 50, Mechanists and Palatines 20%/20%, Vultures 15%/15%, Bandits 10%/10%, Rada 10%/20%). AP rounds subtract up to 50% armor; HP rounds add 25% or 50% to armored targets. Armor is capped at 80%.',
+      'New shotgun ammo: Buckshot, Hollow Point Slugs, and Sabot Hard-Cast. Free Stamina Zone over main city. Automatic re-rack on interrupted bolt/pump cycles, and 30% faster rack speed.',
+      'Fix for corrupted saves; new official localizations: Polish, Turkish, and Korean.'
+    ]
+  },
+  {
     date: 'October 5, 2026',
     tag: 'Official Milestone & Roadmap',
     title: 'One Month in Early Access: scavland.com Portal & Community Picks #1 Announced',
@@ -135,8 +162,8 @@ const timeline = [
 ---
 <Layout 
   title="Scavland Updates, Patch Notes & Roadmap Timeline — Scavland Wiki" 
-  description="Verified timeline of Scavland announcements, patch notes (Update 0.7.0 / 0.7.2), Community Picks #1 preview, scavland.com roadmap, and Early Access changelogs." 
-  keywords="Scavland patch, Scavland updates, Scavland patch notes, Scavland update 0.7.0, Scavland update 0.7.2, Scavland community picks 1, Scavland roadmap, scavland.com, Scavland changelog" 
+  description="Verified timeline of Scavland announcements, patch notes (Update 0.8.0 / Hotfix 0.8.8 / 0.7.0), Dogface fast travel, staged reloads, scavland.com roadmap, and Early Access changelogs." 
+  keywords="Scavland patch, Scavland updates, Scavland patch notes, Scavland update 0.8.0, Scavland hotfix 0.8.8, Scavland update 0.7.0, Scavland fast travel, Scavland staged reload, Scavland roadmap, scavland.com, Scavland changelog" 
   canonical="/updates/"
 >
   <section class="listing">
