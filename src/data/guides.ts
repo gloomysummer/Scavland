@@ -52,13 +52,13 @@ export const guides: Guide[] = [
     category: 'Platforms',
     image: '/images/cards/card_1_beginner_guide.webp',
     imageAlt: 'Scavland price, editions, launch discount and Steam purchase breakdown',
-    evidence: 'Official Steam store page & news announcements @ https://store.steampowered.com/news/app/3373500/view/701026688965805465 @ 2026-09-05',
-    updated: '2026-10-14',
-    answer: 'Scavland launched on Steam Early Access on September 4, 2026 (Steam App ID 3373500, developed by NoShadow and co-published with UNSUBSCRIBE), at a base price of <strong>$19.99 USD</strong>, featuring a <strong>10%</strong> promotional launch discount down to <strong>$17.99 USD</strong>. Early Access buyers gain automatic access to all upcoming content updates, including Community Picks #1, new wasteland locations, biomes, creatures, weapons, and equipment detailed on the official scavland.com roadmap.',
+    evidence: 'Official Steam store page & news announcements · Update 0.8.0 / Hotfix 0.8.8',
+    updated: '2026-10-19',
+    answer: 'Scavland launched on Steam Early Access on September 4, 2026 (Steam App ID 3373500, developed by NoShadow and co-published with UNSUBSCRIBE), at a base price of <strong>$19.99 USD</strong>, featuring a <strong>10%</strong> promotional launch discount down to <strong>$17.99 USD</strong>. Early Access buyers gain automatic access to all upcoming content updates (including Update 0.8.0, Hotfix 0.8.8, and Community Picks #1), new wasteland locations, biomes, creatures, weapons, and equipment detailed on the official scavland.com roadmap.',
     steps: [
-      '01 · Official Steam Store Hub: Access the game directly via the official Steam Store page (App ID 3373500) to receive verified builds, automatic patch updates (0.7.0, 0.7.1, 0.7.2), and Steam Cloud synchronization.',
+      '01 · Official Steam Store Hub & Download: Download the game directly via the official Steam Store page (App ID 3373500) to receive verified builds, automatic patch updates (0.8.0, 0.8.8), and Steam Cloud synchronization.',
       '02 · Regional Pricing Breakdown: Steam provides tailored regional pricing (such as RM46.99 in Southeast Asia) to match local purchasing power, with zero microtransactions or paid DLC.',
-      '03 · Verify PC System Requirements: Ensure your machine meets the minimum hardware baseline (Windows 10/11, 8GB RAM, GTX 960) before purchase to avoid frame drops across dense wasteland sectors.',
+      '03 · Verify PC System Requirements: Ensure your machine meets the minimum hardware baseline (Windows 10/11, 4GB RAM minimum / 8GB recommended, 4-6GB storage) before downloading to guarantee stable 60 FPS performance.',
       '04 · Track the Live Roadmap: Early Access purchases include all planned milestone patches and video DevLogs announced on the official developer portal at scavland.com.'
     ],
     facts: [
@@ -67,16 +67,17 @@ export const guides: Guide[] = [
       ['Launch Discount', '10% promotional discount ($17.99 USD)'],
       ['Regional Pricing', 'Supported across local currencies (e.g. RM46.99)'],
       ['Monetization', 'Zero paid DLC or microtransactions; all roadmap content included'],
-      ['Active Version', 'Update 0.7.0 & Hotfix 0.7.2 (with Community Picks #1 upcoming)']
+      ['Active Version', 'Update 0.8.0 & Hotfix 0.8.8 (with Community Picks #1 upcoming)']
     ],
     faq: [
       ['How much does Scavland cost on Steam?', 'Scavland retails at a baseline price of $19.99 USD on Steam Early Access, with regional pricing tiers (such as RM46.99) applied automatically by Steam.'],
+      ['Where can I download Scavland on PC?', 'Scavland can be safely downloaded via Steam Early Access (App ID 3373500) on PC. Purchasing on Steam provides the full game, automatic updates (including Update 0.8.0 and Hotfix 0.8.8), and Steam Cloud save syncing.'],
       ['Is there a Deluxe or Collector\'s Edition on Steam?', 'Currently only the Standard Early Access Edition is available on Steam. All future Early Access updates and roadmap expansions are included without additional paid tiers.'],
       ['Will Scavland go on sale on Steam?', 'Following the initial 10% launch discount, Steam seasonal sales may feature occasional discounts, but standard Steam store policies regulate discount cool-down periods.'],
       ['Can I play Scavland on Steam Deck?', 'Yes, Scavland runs smoothly on Steam Deck and handheld PCs with full controller support, native 1280x800 resolution, and gamepad-enabled death screens as of Update 0.7.0.']
     ],
     related: ['scavland-beginner-guide', 'scavland-release-date', 'scavland-system-requirements', 'scavland-steam-deck-and-handheld-settings'],
-    keywords: ['scavland steam', 'scavland on steam', 'scavland steam price', 'scavland steam store', 'scavland price', 'scavland cost', 'scavland discount', 'scavland regional price', 'scavland game steam', 'scav lands steam', 'scavland buy', 'scav lands game steam'],
+    keywords: ['scavland steam', 'scavland download', 'download scavland', 'scavland pc download', 'scavland steam download', 'scavland on steam', 'scavland steam price', 'scavland steam store', 'scavland price', 'scavland cost', 'scavland discount', 'scavland regional price', 'scavland game steam', 'scav lands steam', 'scavland buy', 'scav lands game steam'],
     videoId: 'sulLD0aNdOk',
     videoTitle: "SCAVLAND But I Don't Waste Your Time (Before You Buy & Features)",
     videoChannel: 'The Singleplayer Squad'
