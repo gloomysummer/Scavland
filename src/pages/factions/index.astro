@@ -8,9 +8,9 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
 ---
 
 <Layout 
-  title="Scavland Factions & Traders — Merchant Stock & Reputations" 
-  description="Directory of Scavland's 10 factions (Rada, Commonfolk, Acolytes, Mechanists), 9 confirmed traders, exclusive gear, and Raisa reconciliation mechanics." 
-  keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Volodymyr trader, Bogdan mutant parts, Raisa reconciliation, Rada, Mechanists, Scavland wiki" 
+  title="Scavland Factions & Traders — Merchant Stock, Reputations & Armor Stats (Update 0.8.0)" 
+  description="Directory of Scavland's 10 factions (Rada, Gunners, Mechanists), 11 traders, Update 0.8.0 enemy armor values (Gunners 45%/40%), Dogface NPC, and Raisa reconciliation." 
+  keywords="Scavland factions, wasteland factions, reputation system, faction vendors, Volodymyr trader, Bogdan mutant parts, Raisa reconciliation, Rada, Mechanists, Gunners armor, Dogface, Scavland wiki" 
   canonical="/factions/"
 >
   <Fragment slot="schema">
@@ -34,11 +34,11 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
     <header class="article-header">
       <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
         <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
-        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Build v0.5 Verified Baseline</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Update 0.8.0 &amp; Hotfix 0.8.8 Verified Baseline</span>
       </div>
       <h1 class="page-title">Scavland Factions &amp; 9 Named Traders</h1>
       <p class="lede">Comprehensive intelligence directory of the 10 survivor factions across Zalesye: territories, 9 verified settlement merchants, exclusive gear, and Raisa diplomatic reconciliation.</p>
-      <span class="evidence">Evidence: Official Steam announcements & community reports</span>
+      <span class="evidence">Evidence: Official Steam announcements &amp; community reports · Update 0.8.0 / Hotfix 0.8.8</span>
     </header>
 
     <div class="article-layout">
@@ -57,12 +57,13 @@ const roadmapFactions = FACTIONS_DATABASE.filter(f => f.confirmedStatus === 'Roa
 
         <!-- Quick Summary Box -->
         <div class="quick-answer" style="margin-bottom:32px;">
-          <strong style="color:var(--acid);font-size:1.05rem;">Faction Scope &amp; Trader Baseline</strong>
+          <strong style="color:var(--acid);font-size:1.05rem;">Faction Scope, Combat Armor &amp; Trader Baseline (Update 0.8.0 Verified)</strong>
           <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
-            <li><strong>10 Factions Total:</strong> Steam officially confirms 10 factions exist. In the current Early Access Act I build, <strong>6 core factions are publicly named and interactive</strong> (Rada, Commonfolk, Acolytes, Mechanists, Palatines, Gunners). The remaining 4 are scheduled for roadmap expansion.</li>
-            <li><strong>11 Named Traders in the Official Notes:</strong> Zhivan, Vesna, Nadja, Grigory, Volodymyr, Bogdan, Petar, Yefim, Alexei, Anatoly and Raisa operate across the settlements.</li>
-            <li><strong>Crucial Vendor Fact:</strong> Trader <strong>Volodymyr has ZERO rank/reputation requirement</strong> on all goods—ideal for fresh spawns or players who antagonized other factions.</li>
-            <li><strong>Raisa Reconciliation:</strong> If your standing with any group dips into hostile (&lt; -300 Rep), visit diplomat <strong>Raisa</strong> to purchase truce contracts instead of taking permanent fire on sight.</li>
+            <li><strong>Faction Armor Penetration (Update 0.8.0):</strong> Human enemies now wear armor (ballistic / slash): Gunners 45% / 40% (Health 70 → 50), Mechanists and Palatines 20% / 20%, Vultures 15% / 15%, Bandits 10% / 10%, and Rada 10% / 20%. AP rounds subtract up to 50% armor, making caliber selection vital.</li>
+            <li><strong>Journal Map NPC Pins (Update 0.8.0):</strong> NPCs appear as pins on your Journal Map once you get close to them or talk to them. Zoom in and hover over a pin to inspect their name.</li>
+            <li><strong>Dogface NPC &amp; Fast Travel (Update 0.8.0):</strong> Introduces Dogface and his quest "On the Road", unlocking the Dogface Rides transit network across 6 wasteland stops (Arcadia, the Mire, Sontse Station, Microrayon, North Pier, Quarry Settlement).</li>
+            <li><strong>11 Named Traders &amp; Rank Payouts:</strong> Zhivan, Vesna, Nadja, Grigory, Volodymyr, Bogdan, Petar, Yefim, Alexei, Anatoly, and Raisa. Traders pay an additional 5% sell value per Trader Rank (Update 0.7.0). Volodymyr maintains ZERO reputation requirement on all goods.</li>
+            <li><strong>Raisa Reconciliation:</strong> If standing drops below -300 Rep, visit diplomat Raisa at the Neutral Chapel. Under Hotfix 0.7.2, Raisa can offer follow-up jobs immediately without waiting for current jobs to finish.</li>
           </ul>
         </div>
 
