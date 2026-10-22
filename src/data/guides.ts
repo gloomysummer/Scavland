@@ -2306,75 +2306,79 @@ export const guides: Guide[] = [
     slug: 'scavland-ammo-types-and-damage',
     shortTitle: "Ammo & Calibers",
     title: "Scavland Ammo Guide: All Calibers, Armor Penetration & Flesh Damage Meta",
-    description: "Comprehensive Scavland ammunition guide: 9x18mm, 9x19mm, 5.45x39mm, 7.62x39mm, 7.62x54mmR, and 12-gauge shotgun shells ballistics breakdown.",
+    description: "Comprehensive Scavland ammunition guide: Update 0.8.0 armor penetration rework, HP/AP modifiers, magazine ammo memory, new shotgun shells, and ballistics breakdown.",
     category: "Gear",
     image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: "Ammunition boxes, magazine loading, and caliber ballistics in Scavland",
-    evidence: 'In-Game Ballistics Manifest & Steam Community Testing · Update 0.7.2',
-    updated: '2026-09-30',
-    answer: "Understanding ammunition ballistics in Scavland is just as critical as choosing your firearm. The combat engine models two distinct damage parameters: <strong>Armor Penetration (AP)</strong> and <strong>Flesh Damage</strong>. Firing budget pistol ammunition like <strong>9x18mm</strong> or buckshot into heavy plate armor deflects with minimal damage, while high-velocity <strong>7.62x39mm</strong> or <strong>7.62x54mmR</strong> rounds slice through ballistic vests to drop armored scavengers in seconds. In <strong>Update 0.7.0</strong>, shotguns were balanced to apply a maximum of <strong>one bleed effect per shot</strong> rather than stacking per pellet, cementing buckshot as the premier tool for hunting mutated beasts like <strong>Hellhounds</strong> and <strong>Tongue Monsters</strong>.",
+    evidence: 'Official Steam Announcements · Update 0.8.0 & Hotfix 0.8.8',
+    updated: '2026-10-21',
+    answer: "Understanding ammunition ballistics in Scavland is just as critical as choosing your firearm. In <strong>Update 0.8.0</strong>, armor and ammo were completely reworked so that choosing the right round matters: <strong>Armor Penetration (AP)</strong> now subtracts directly from armor instead of scaling it. AP rounds (50% penetration) cut through up to 50% armor, which covers every human enemy in the game (Gunners 45%, Mechanists/Palatines 20%, Vultures 15%, Bandits 10%, Rada 10%). Conversely, <strong>HP rounds</strong> add +25% (pistol) or +50% (rifle, shotgun, high caliber) to the armor of anything that already has some, meaning HP must be saved strictly for unarmored targets and mutants. Armor is capped at 80% (though HP rounds can push it higher). Furthermore, each round now carries its own accuracy, bleed chance, and bleed amount, alongside new shotgun options: <strong>Buckshot</strong>, <strong>Hollow Point Slugs</strong>, and <strong>Sabot Hard-Cast</strong>. In <strong>Hotfix 0.8.8</strong>, magazines now remember their ammo type upon empty reload (e.g. sidearms stay loaded with AP while your primary rifle feeds FMJ), and Unload, Remove Sight, and Remove Muzzle function directly on guns inside containers, your stash, and corpses.",
     steps: [
-      "01 \u00b7 9x18mm Makarov (Early-Game Budget Caliber): Plentiful and inexpensive. Excellent for killing baseline roaches, rats, and unarmored scavengers using sidearms like the <strong>PM Nikolay PB</strong> or <strong>Bahadir 918</strong>. Ineffective against armored military vests.",
-      "02 \u00b7 9x19mm Parabellum (Balanced Sidearm & SMG Round): Fires with flatter trajectories and higher velocity. Deals reliable flesh damage with light armor penetration when loaded into submachine guns like the <strong>Borealis 9mm</strong>.",
-      "03 \u00b7 5.45x39mm Soviet (Standard Assault Rifle Caliber): The workhorse military round for the <strong>Mikhail 74U</strong>. Offers high muzzle velocity, minimal recoil, and reliable penetration against Tier 1 and Tier 2 body armor.",
-      "04 \u00b7 7.62x39mm Intermediate (High Armor Penetration): Chambered in heavy platforms like the <strong>MK-47</strong>. Delivers crushing kinetic energy that shatters Tier 3 bandit plate carriers in 2-3 direct chest impacts.",
-      "05 \u00b7 7.62x54mmR Full-Power Rifle (Sniper & DMR BIS): The premier long-range sniper cartridge used by the <strong>63 Dragoon</strong>. Guarantees one-shot vital eliminations against virtually all human targets at extreme engagement distances.",
-      "06 \u00b7 12-Gauge Shotgun (Buckshot vs Slugs): 12-gauge Buckshot deals massive spread damage that staggers charging mutants instantly. When facing armored sentries, load specialized 12-gauge Slugs to punch directly through armor plates."
-],
+      "01 · Armor Penetration Subtraction (AP): AP rounds feature 50% armor penetration that subtracts directly from target armor. Because human enemies have capped armor ratings (Gunners 45%, Mechanists/Palatines 20%, Vultures 15%, Bandits 10%, Rada 10%), AP rounds completely neutralize all human armor.",
+      "02 · Hollow Point (HP) Target Discipline: HP rounds add 25% (pistol) or 50% (rifle, shotgun, high caliber) to the armor of targets that already possess armor. Never fire HP into armored humans; reserve HP exclusively for flesh damage against mutants and unarmored targets.",
+      "03 · Caliber & Specific Ammo Stats: Every individual round now features dedicated accuracy, bleed chance, and bleed amount parameters. Firing mode and loaded ammo type display directly on the HUD (e.g. SEMI · FMJ).",
+      "04 · Expanded Shotgun Ammunition: Update 0.8.0 introduces specialized 12-gauge variants: standard Buckshot for wide mutant stagger, Hollow Point Slugs for unarmored targets, and Sabot Hard-Cast slugs for punching through armored sentries.",
+      "05 · Magazine Ammo Type Memory (Hotfix 0.8.8): Each magazine now remembers its specific loaded ammo type. Reloading an empty magazine automatically refills the same type from your backpack (e.g. your sidearm stays on AP while your main rifle loads FMJ).",
+      "06 · Container & Corpse Unloading (Hotfix 0.8.8): You no longer need to transfer looted firearms into your backpack to strip them. Unload Ammo, Remove Sight, and Remove Muzzle work directly on weapons located inside containers, safehouse stashes, and corpses."
+    ],
     facts: [
       [
-            "Top Armor-Piercing Caliber",
-            "7.62x54mmR (Defeats all known body armor tiers)"
+        "AP Penetration Math",
+        "50% penetration subtracts directly from target armor (Update 0.8.0)"
       ],
       [
-            "Best All-Round Rifle Round",
-            "7.62x39mm (Optimal balance of punch and availability)"
+        "HP Armor Penalty",
+        "Adds +25% (pistol) or +50% (rifle/shotgun) to target armor if armor is present"
       ],
       [
-            "Best Mutant Hunting Round",
-            "12-Gauge Buckshot (High stagger; max 1 bleed per shot)"
+        "Human Armor Ratings",
+        "Gunners 45% (HP 50), Mechanists/Palatines 20%, Vultures 15%, Bandits 10%, Rada 10%"
       ],
       [
-            "Stealth Infiltration Caliber",
-            "9x18mm Subsonic when paired with suppressed PM Nikolay PB"
+        "Armor Cap",
+        "Base armor capped at 80% (HP rounds can push effective armor higher)"
       ],
       [
-            "Shotgun Bleed Cap",
-            "Capped at 1 bleed effect per shot since Update 0.7.0"
+        "Shotgun Ammo Options",
+        "Buckshot, Hollow Point Slugs, and Sabot Hard-Cast (Update 0.8.0)"
       ],
       [
-            "Ammunition Unloading",
-            "Right-click magazines in inventory to unload loose rounds for repackaging"
+        "Magazine Ammo Memory",
+        "Empty magazine reloads automatically refill the same remembered ammo type (Hotfix 0.8.8)"
       ],
       [
-            "Verified Baseline",
-            "In-Game Ballistics Manifest & Steam Community Testing \u00b7 Update 0.7.2"
+        "Container Unloading",
+        "Unload, Remove Sight, and Remove Muzzle work on guns in containers, stash, and corpses"
+      ],
+      [
+        "Verified Baseline",
+        "Official Steam Announcements · Update 0.8.0 & Hotfix 0.8.8"
       ]
-],
+    ],
     faq: [
       [
-            "Which ammo type is best against armored human bandits?",
-            "7.62x39mm and 7.62x54mmR are the best armor-piercing calibers. They punch through Tier 2 and Tier 3 body armor vests without suffering severe damage reduction."
+        "How does the Armor Penetration (AP) rework work in Update 0.8.0?",
+        "Armor penetration now subtracts from armor instead of scaling it. AP rounds (50% penetration) cut through up to 50% armor, which covers every human enemy in the game (Gunners 45%, Mechanists/Palatines 20%, Vultures 15%, Bandits 10%, Rada 10%)."
       ],
       [
-            "Why are shotgun pellets doing less bleed damage now?",
-            "In Update 0.7.0, developers capped shotguns to apply a maximum of one bleed effect per trigger pull, preventing instant bleed-out deaths from single buckshot blasts."
+        "When should I use Hollow Point (HP) ammunition?",
+        "HP rounds add 25% (pistol) or 50% (rifle, shotgun, high caliber) to the armor of targets that already have armor. Save HP rounds strictly for unarmored hostiles and mutants."
       ],
       [
-            "Can I craft ammunition at safehouse workbenches?",
-            "Yes! Workbench recipes require Gunpowder, Scrap Metal, and Clean Water to craft standard 9x18mm, 5.45x39mm, and 12-gauge shells."
+        "Does reloading an empty magazine mix my ammo types?",
+        "No. As of Hotfix 0.8.8, each magazine remembers its ammo type, so reloading an empty magazine refills the same type automatically (e.g. sidearms stay on AP while your main gun uses FMJ)."
       ],
       [
-            "How do I unload ammunition from weapons I scavenge?",
-            "In your inventory grid, right-click the firearm and select 'Unload Ammo' or drag the magazine off the weapon to strip loose cartridges into your stash."
+        "Can I unload ammo and remove attachments from guns inside loot containers?",
+        "Yes! Hotfix 0.8.8 allows Unload, Remove Sight, and Remove Muzzle actions to work directly on weapons inside containers, your stash, and enemy corpses without transferring them to your hands."
       ],
       [
-            "Where can I barter for cheap 7.62x39mm rifle rounds?",
-            "Trader Volodymyr at the Crossroads annex and Mechanist quartermasters sell military ammunition boxes in exchange for electronic scrap and rubles."
+        "What new shotgun ammunition types were added in Update 0.8.0?",
+        "Update 0.8.0 added Buckshot, Hollow Point Slugs, and Sabot Hard-Cast shells, each with distinct accuracy, bleed chance, and bleed amount profiles."
       ]
-],
+    ],
     related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-starter-loadouts-and-budget-builds", "scavland-tactical-database-weapons-loot"],
-    keywords: ["scavland ammo guide", "scavland calibers", "scavland armor penetration", "scavland best ammo", "scavland 7.62x39", "scavland 12 gauge buckshot"]
+    keywords: ["scavland ammo guide", "scavland calibers", "scavland armor penetration", "scavland best ammo", "scavland 7.62x39", "scavland 12 gauge buckshot", "scavland ap ammo", "scavland hp ammo", "scavland magazine ammo memory"]
   },
   {
     slug: 'scavland-armor-and-helmets-guide',
