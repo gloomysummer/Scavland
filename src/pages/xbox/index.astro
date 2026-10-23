@@ -1,0 +1,196 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AdsterraArticleBanner from '../../components/AdsterraArticleBanner.astro';
+
+const CHECKED = '23 October 2026';
+
+const faqs = [
+  {
+    q: 'Is Scavland on Xbox Series X/S?',
+    a: `No. Scavland has no Xbox Series X/S version as of ${CHECKED}. It launched on 4 September 2026 as a PC release sold only through Steam Early Access (App ID 3373500), and neither the Steam store page nor the official scavland.com website lists any console platform or Xbox release date.`
+  },
+  {
+    q: 'Is Scavland on Xbox Game Pass or PC Game Pass?',
+    a: 'No. There is no announced Scavland version on Xbox Game Pass or PC Game Pass. The only official distribution channel is the Scavland Steam store page; scavland.com links exclusively to Steam and lists the platform as "PC — Steam".'
+  },
+  {
+    q: 'Will Scavland come to Xbox eventually?',
+    a: 'Nothing is announced, so no Xbox date can be claimed. Two documented facts frame the question: the developer describes Early Access as lasting roughly 12 to 24 months toward the Version 1.0 release with three story acts, and NoShadow has stated that console ports — including Xbox Series X/S — are only evaluated after Version 1.0 feature completion. For the full platform analysis, see our Console & Xbox Status guide.'
+  },
+  {
+    q: 'Can I play Scavland with an Xbox controller?',
+    a: 'Yes — on PC. The Steam store page lists full controller support in the Early Access build, and Scavland was built with gamepad HUD navigation in mind, including Xbox Wireless Controller button glyphs alongside DualSense and DualShock 4. Steam Deck players can also dock a Steam Deck to a TV for a couch setup.'
+  },
+  {
+    q: 'What platforms is Scavland available on?',
+    a: `PC only. Scavland is a Windows game distributed through Steam Early Access since its 4 September 2026 launch, and the system requirements on the store page list Windows 10. It also runs on Steam Deck and other handheld PCs, but there is no PS5, Xbox or Nintendo Switch build.`
+  },
+  {
+    q: 'Is Scavland on PS5 or Nintendo Switch?',
+    a: 'No. The same PC-only status applies to PlayStation 5, PS4 and Nintendo Switch. The console-wide status, port outlook and controller workarounds are covered in the Scavland Console Release guide.'
+  }
+];
+
+const statusRows = [
+  ['Xbox Series X|S', 'Not released · not announced', 'No store listing, no developer release date'],
+  ['Xbox One', 'Not released · not announced', 'No last-gen Xbox build exists or has been announced'],
+  ['Xbox Game Pass / PC Game Pass', 'Not announced', 'Scavland is not part of any announced Game Pass line-up'],
+  ['PC (Windows via Steam)', 'Out now — Early Access', 'Launched 4 September 2026, App ID 3373500'],
+  ['Steam Deck & handheld PCs', 'Runs on Steam Deck', 'Store page states the game was built with Steam Deck and controller support in mind'],
+  ['Xbox controller on PC', 'Works today', 'Full controller support with Xbox button glyphs in-game']
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+    { '@type': 'ListItem', position: 2, name: 'Xbox Status', item: 'https://scavland.wiki/xbox/' }
+  ]
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a }
+  }))
+};
+---
+
+<Layout
+  title="Is Scavland on Xbox? No — PC Steam Exclusive, No Date Yet"
+  description="Scavland is not on Xbox Series X/S, Xbox One or Game Pass as of October 2026 — it is a PC-only Steam Early Access release. What the official store page, website and developer statements confirm."
+  keywords="scavland xbox, is scavland on xbox, scavland on xbox, scavland xbox release, scavland xbox one, scavland xbox series x, scavland xbox series s, scavland game pass, scavland console, scavland console release, scavland pc only, scavland controller support"
+  canonical="/xbox/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Xbox Status</span>
+    </nav>
+
+    <header class="article-header">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">PC Only — Verified {CHECKED}</span>
+      </div>
+      <h1 class="page-title">Is Scavland on Xbox or Game Pass?</h1>
+      <p class="lede">No. As of {CHECKED}, Scavland has no Xbox Series X/S, Xbox One or Game Pass version. It is a PC-only release sold through Steam Early Access since 4 September 2026 (App ID 3373500), and the official store page and website list Windows/PC as the only platform.</p>
+      <span class="evidence">Evidence: Official Steam store page @ https://store.steampowered.com/app/3373500/Scavland/ @ 2026-10-23 · Official website @ https://scavland.com/ @ 2026-10-23</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="quick-answer" style="margin-bottom:32px;">
+          <strong style="color:var(--acid);font-size:1.05rem;">Short answer: Scavland is not on Xbox</strong>
+          <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
+            <li><strong>No Xbox build exists:</strong> Scavland launched on 4 September 2026 as a Steam Early Access PC game; no Xbox Series X/S or Xbox One version has been released or announced.</li>
+            <li><strong>No Game Pass version:</strong> there is no announced Scavland release on Xbox Game Pass or PC Game Pass.</li>
+            <li><strong>PC is the only platform:</strong> the Steam store page system requirements list Windows 10, and scavland.com states the platform as "PC — Steam".</li>
+            <li><strong>Controller players are covered:</strong> the PC build ships with full controller support, including Xbox Wireless Controller glyphs, and runs on Steam Deck.</li>
+          </ul>
+        </div>
+
+        <h2 id="status">Platform status at a glance</h2>
+        <p>Every row below reflects the official channels checked on {CHECKED}: the Scavland Steam store page (App ID 3373500) and the developer's official website.</p>
+
+        <div style="overflow-x:auto;margin:20px 0 28px;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+            <thead>
+              <tr style="text-align:left;border-bottom:1px solid var(--line);">
+                <th style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;">Platform</th>
+                <th style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;">Status</th>
+                <th style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.78rem;text-transform:uppercase;">Source note</th>
+              </tr>
+            </thead>
+            <tbody>
+              {statusRows.map((row) => (
+                <tr style="border-bottom:1px solid var(--line);">
+                  <td style="padding:10px 12px;color:#fff;font-weight:600;">{row[0]}</td>
+                  <td style="padding:10px 12px;color:var(--ink);">{row[1]}</td>
+                  <td style="padding:10px 12px;color:var(--muted,#bbb);">{row[2]}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <AdsterraArticleBanner label="Sponsored Platform Intel" />
+
+        <h2 id="sources">What the official sources actually say</h2>
+        <p>Platform questions are exactly where rumours grow, so this page only repeats what the official channels document — nothing is inferred:</p>
+        <ul style="padding-left:18px;line-height:1.75;color:var(--ink);">
+          <li><strong>Steam store page (App ID 3373500):</strong> Scavland is published as a Windows PC game — the system requirements list Windows 10, and the release is labelled Steam Early Access from 4 September 2026, developed and published by NoShadow together with UNSUBSCRIBE.</li>
+          <li><strong>Early Access scope:</strong> the developers describe Early Access as lasting roughly <strong>12 to 24 months</strong>, expanding the Act I release into a three-act full version. That roadmap is a PC roadmap; it contains no console milestone.</li>
+          <li><strong>Official website scavland.com:</strong> the platform line reads <strong>"PC — Steam"</strong> and every purchase button links to the Steam store page. No Microsoft Store, Xbox or console link appears anywhere on the site.</li>
+          <li><strong>No announcement exists:</strong> as of {CHECKED} there is no developer announcement for an Xbox Series X/S port, an Xbox One version, or a Game Pass inclusion.</li>
+        </ul>
+
+        <div class="article-media">
+          <img src="/images/screenshots/ss_04_settlement_camp.webp" alt="Scavland settlement camp — the PC Steam Early Access build, currently the only way to play" loading="lazy" />
+          <p class="caption">Scavland as it exists today: the PC Steam Early Access build, playable on desktop and Steam Deck</p>
+        </div>
+
+        <h2 id="when">When could Scavland come to Xbox?</h2>
+        <p>Honestly: nobody can give a date, and this page will not invent one. Two documented facts frame the timeline instead:</p>
+        <ul style="padding-left:18px;line-height:1.75;color:var(--ink);">
+          <li>The Version 1.0 release is still ahead of the studio — Early Access is expected to run roughly 12 to 24 months while Acts II and III are built on PC.</li>
+          <li>Developer NoShadow has stated that dedicated console ports, including Xbox Series X/S, are only <strong>evaluated after Version 1.0 feature completion</strong>, with co-op multiplayer and modding tools taking priority during Early Access.</li>
+        </ul>
+        <p>So the truthful answer to "when is Scavland on Xbox?" is: <strong>after the PC game is finished, if the studio chooses to port it</strong> — no earlier, and not yet announced. Any site promising a 2026 or 2027 Xbox date is speculating. The full multi-platform breakdown (PS5, Switch, controller workarounds) lives in our <a href="/guide/scavland-console-release-status/" style="color:var(--acid);">Console &amp; Xbox Status guide</a>.</p>
+
+        <h2 id="bigscreen">How to play Scavland on the big screen today</h2>
+        <p>Xbox-searching players usually want a couch experience. That part is already possible without a console build:</p>
+        <ul style="padding-left:18px;line-height:1.75;color:var(--ink);">
+          <li><strong>Xbox controller on PC:</strong> the store page lists full controller support, and the in-game HUD shows native Xbox button glyphs (DualSense and DualShock 4 are supported too).</li>
+          <li><strong>Steam Deck in the living room:</strong> Scavland runs on Steam Deck and can be docked to a 4K TV — the handheld build is the closest thing to a console version that exists today.</li>
+          <li><strong>Cloud streaming:</strong> no officially documented Xbox Cloud Gaming or console streaming support exists, so this page makes no claim about it.</li>
+        </ul>
+        <p>For display scaling, controller layouts and text sizing on handhelds, see the <a href="/guide/scavland-steam-deck-and-handheld-settings/" style="color:var(--acid);">Steam Deck &amp; Handheld Settings guide</a>.</p>
+
+        <h2 id="faq">Xbox &amp; Game Pass FAQ</h2>
+        <div class="faq-list" style="margin:20px 0 35px;display:flex;flex-direction:column;gap:14px;">
+          {faqs.map((faq) => (
+            <div style="padding:16px 20px;background:#121a16;border:1px solid var(--line);border-radius:6px;">
+              <h3 style="margin:0 0 8px;font-size:1.1rem;color:#fff;display:flex;align-items:baseline;gap:8px;">
+                <span style="color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.9rem;">Q:</span>
+                {faq.q}
+              </h3>
+              <p style="margin:0;font-size:0.9rem;line-height:1.6;color:var(--ink);padding-left:22px;">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <h2 id="next">Related Scavland field guides</h2>
+        <div class="related-grid">
+          <a href="/guide/scavland-console-release-status/"><strong>Console &amp; Game Pass Status</strong><br/>Xbox Series X/S, PS5 and Switch port outlook, controller mapping</a>
+          <a href="/release-date/"><strong>Release Date &amp; Roadmap</strong><br/>Early Access timeline, pricing and the official scavland.com roadmap</a>
+          <a href="/guide/scavland-steam-deck-and-handheld-settings/"><strong>Steam Deck &amp; Handheld Settings</strong><br/>Controller layouts, display scaling and docked TV play</a>
+          <a href="/system-requirements/"><strong>System Requirements</strong><br/>Windows PC hardware baseline and performance targets</a>
+          <a href="/guide/scavland-price-and-regional-editions/"><strong>Steam Store &amp; Price</strong><br/>Regional pricing, editions and what Early Access includes</a>
+          <a href="/guide/scavland-beginner-guide/"><strong>Beginner Survival Guide</strong><br/>First-day routing, stamina rules and extraction basics</a>
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#status">Platform Status</a>
+        <a href="#sources">Official Sources</a>
+        <a href="#when">Xbox Port Timeline</a>
+        <a href="#bigscreen">Big-Screen Options</a>
+        <a href="#faq">Xbox FAQ</a>
+      </aside>
+    </div>
+  </article>
+</Layout>
