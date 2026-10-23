@@ -1,0 +1,190 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AdsterraArticleBanner from '../../components/AdsterraArticleBanner.astro';
+
+const faqs = [
+  {
+    q: "Is Scavland on Xbox Series X or Xbox Series S?",
+    a: "No. Scavland is currently not available on Xbox Series X or Xbox Series S. The game launched into Steam Early Access on September 4, 2026 as a PC-exclusive title (Windows). Developer NoShadow confirmed that dedicated console editions will only be evaluated after Version 1.0 commercial feature completion."
+  },
+  {
+    q: "Is Scavland on Xbox Game Pass (PC or Console)?",
+    a: "No. Scavland is not included in Xbox Game Pass or PC Game Pass. The game is sold exclusively via Steam Early Access at a standard retail baseline of $19.99 with no subscription service integration during Early Access."
+  },
+  {
+    q: "Can I play Scavland on PC using an Xbox Controller?",
+    a: "Yes! Scavland features full native controller support with official Xbox button glyphs (A/B/X/Y, RT/LT, D-pad). Update 0.7.0 added full controller navigation for the rebuilt Death Screen, and Update 0.8.0 added weapon inspect mapped natively to D-pad Down."
+  },
+  {
+    q: "Will Scavland release on Xbox One?",
+    a: "A last-generation Xbox One release is highly improbable. Developer discussions emphasize modern multi-threaded CPU handling for large 3x-expanded overworld sectors and procedural bunker simulations, focusing potential post-1.0 console evaluation strictly on modern hardware like Xbox Series X/S and PS5."
+  },
+  {
+    q: "Will Scavland have Xbox cross-progression or cross-play?",
+    a: "Cross-progression and cross-play have not been announced because console builds are not currently in production. However, PC players can seamlessly move saves between desktop PCs and Steam Deck via Steam Cloud save synchronization."
+  }
+];
+---
+
+<Layout 
+  title="Is Scavland on Xbox? Series X/S, Game Pass & Controller Guide (2026)" 
+  description="Is Scavland coming to Xbox? Get verified answers on Xbox Series X/S availability, Xbox Game Pass status, native Xbox PC controller mapping, and the official console roadmap." 
+  keywords="scavland xbox, is scavland on xbox, scavland xbox series x, scavland xbox series s, scavland game pass, scavland xbox game pass, scavland xbox release date, scavland controller support, scavland console" 
+  canonical="/xbox/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          'itemListElement': [
+            { '@type': 'ListItem', 'position': 1, 'name': 'Scavland Wiki', 'item': 'https://scavland.wiki/' },
+            { '@type': 'ListItem', 'position': 2, 'name': 'Xbox & Console Guide', 'item': 'https://scavland.wiki/xbox/' }
+          ]
+        },
+        {
+          '@type': 'FAQPage',
+          'mainEntity': faqs.map(item => ({
+            '@type': 'Question',
+            'name': item.q,
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': item.a
+            }
+          }))
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Xbox &amp; Console Guide</span>
+    </nav>
+
+    <header class="article-header">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Console Status Intel · October 2026</span>
+      </div>
+      <h1 class="page-title">Is Scavland on Xbox? Series X/S &amp; Game Pass Status</h1>
+      <p class="lede">
+        <strong>Direct Answer: No. Scavland is currently not available on Xbox Series X, Xbox Series S, Xbox One, or Xbox Game Pass.</strong> The game launched on September 4, 2026 as a PC-exclusive title on Steam Early Access ($19.99). However, PC players can play using full native Xbox wireless controller support.
+      </p>
+      <span class="evidence">Evidence Source: Official Steam store manifest (AppID 3373500) &amp; NoShadow developer announcements</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <!-- Triage Quick Status Box -->
+        <div style="background:rgba(185,232,108,0.05);border:1px solid var(--line,#27382b);border-left:3px solid var(--acid,#b9e86c);border-radius:6px;padding:1.25rem 1.5rem;margin-bottom:28px;">
+          <h2 style="font-size:1.05rem;margin:0 0 8px;color:var(--acid);font-family:var(--font-mono,monospace);text-transform:uppercase;letter-spacing:0.03em;">
+            ⚡ Quick Tactical Triage: Scavland on Xbox
+          </h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;">
+            <div style="background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:4px;border:1px solid rgba(255,255,255,0.06);">
+              <span style="display:block;font-size:0.75rem;color:var(--muted);text-transform:uppercase;">Xbox Series X/S</span>
+              <strong style="color:#ff6b6b;font-size:1rem;">Not Available (PC Only)</strong>
+            </div>
+            <div style="background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:4px;border:1px solid rgba(255,255,255,0.06);">
+              <span style="display:block;font-size:0.75rem;color:var(--muted);text-transform:uppercase;">Xbox Game Pass</span>
+              <strong style="color:#ff6b6b;font-size:1rem;">Not Included ($19.99 on Steam)</strong>
+            </div>
+            <div style="background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:4px;border:1px solid rgba(255,255,255,0.06);">
+              <span style="display:block;font-size:0.75rem;color:var(--muted);text-transform:uppercase;">Xbox Controller on PC</span>
+              <strong style="color:var(--acid);font-size:1rem;">100% Native Support</strong>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="availability">Current Platform Availability &amp; PC Exclusivity</h2>
+        <p>
+          Scavland entered Steam Early Access on <strong>September 4, 2026</strong>, developed by <strong>NoShadow</strong> and published by NoShadow and <strong>UNSUBSCRIBE</strong>. The official Steam store metadata lists <strong>Windows PC</strong> as the sole operational platform.
+        </p>
+        <p>
+          Because Scavland is in active Early Access development—receiving frequent mechanical overhauls such as <strong>Update 0.7.0</strong> (stash expansion, death screen rebuild, durability passes) and <strong>Update 0.8.0</strong> (Dogface fast travel, staged reloads, armor penetration rework)—the small independent team is concentrating all development bandwidth on PC stability, mouse/keyboard gunplay ergonomics, and Steam Deck optimization.
+        </p>
+
+        <h2 id="game-pass">Xbox Game Pass &amp; Console Roadmap Evaluation</h2>
+        <p>
+          A frequent question among console survival fans is whether Scavland will debut on <strong>Xbox Game Pass</strong>. Currently, there is <strong>no agreement or release plan for Xbox Game Pass</strong>. The game follows a traditional Early Access purchase model:
+        </p>
+        <ul>
+          <li><strong>Base Price:</strong> $19.99 USD on Steam Early Access.</li>
+          <li><strong>All-Inclusive Early Access:</strong> Purchasing Early Access grants full ownership of all future content updates, balance patches, and the final Version 1.0 release without additional cost.</li>
+          <li><strong>Post-1.0 Console Evaluation:</strong> Developer Lucas (NoShadow) confirmed that console ports for Xbox Series X/S and PlayStation 5 will only be formally evaluated after Version 1.0 is finalized and launched on PC.</li>
+          <li><strong>Roadmap Horizon:</strong> The Early Access window is projected at approximately 12 to 24 months, placing any prospective console arrival in 2027 or beyond.</li>
+        </ul>
+
+        <!-- Strategic In-Content Ad Placement (1 Display Banner per Page Rule) -->
+        <AdsterraArticleBanner className="my-6" />
+
+        <h2 id="controller">Native Xbox Controller Support on PC</h2>
+        <p>
+          While you cannot download Scavland onto an Xbox console today, you can enjoy an authentic console-grade controller experience playing the PC build. Scavland features full plug-and-play Xbox wireless and wired controller support:
+        </p>
+        <ul>
+          <li><strong>Official Button Glyphs:</strong> Connecting an Xbox Wireless Controller immediately switches all in-game HUD prompts to green (A), red (B), blue (X), and yellow (Y) icons, along with bumpers (LB/RB) and triggers (LT/RT).</li>
+          <li><strong>Rebuilt Death Screen Navigation (Update 0.7.0):</strong> Full D-pad and button support allows players to seamlessly select Returner (Continue / Load Game), Iron Man (New Game / Exit), or Tutorial actions without touching a mouse.</li>
+          <li><strong>Weapon Inspect &amp; Ammo Wheel (Update 0.8.0):</strong> Tapping <strong>D-pad Down</strong> triggers the weapon inspect animation to visually check loaded ammunition, while holding D-pad Down accesses the ammo selection menu.</li>
+          <li><strong>Container Take All Fix (Hotfix 0.8.8):</strong> Clicking the Left Stick to "Take All" items from loot containers now reliably moves items without accidentally cycling your equipped weapon.</li>
+        </ul>
+
+        <h2 id="alternatives">How to Play Scavland Today (PC &amp; Handheld Options)</h2>
+        <p>
+          If you do not want to wait for a hypothetical Xbox release, Scavland is readily playable on standard modern PC hardware and handheld gaming devices:
+        </p>
+        <div style="background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;padding:1.25rem 1.5rem;margin:20px 0;">
+          <h3 style="color:#fff;margin-top:0;font-size:1.1rem;">Verified Play Options</h3>
+          <ul style="margin-bottom:0;color:var(--ink,#dcdcdc);line-height:1.7;">
+            <li><strong>PC Desktop &amp; Laptops:</strong> Available on <a href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer" style="color:var(--acid);">Steam Early Access ($19.99)</a>. Lightweight 2.5D pixel art allows it to run smoothly on budget discrete and integrated GPUs.</li>
+            <li><strong>Steam Deck &amp; Windows Handhelds (ROG Ally, Lenovo Legion Go):</strong> Runs at a locked 60 FPS on Steam Deck with 9W TDP battery optimization. Handheld players experience genuine portable twin-stick console ergonomics today.</li>
+          </ul>
+        </div>
+
+        <h2 id="faq">Scavland Xbox Frequently Asked Questions</h2>
+        <div class="faq-list" style="margin-top:20px;">
+          {faqs.map(f => (
+            <div style="background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;padding:1rem 1.25rem;margin-bottom:12px;">
+              <h3 style="color:var(--acid);font-size:1rem;margin:0 0 6px;">{f.q}</h3>
+              <p style="color:var(--ink,#dcdcdc);margin:0;font-size:0.9rem;line-height:1.6;">{f.a}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 id="related">Related Guides &amp; Tactical Systems</h2>
+        <div class="related-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px;">
+          <a href="/guide/scavland-console-release-status/" style="display:block;padding:12px;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:#fff;">
+            <strong style="color:var(--acid);display:block;margin-bottom:4px;">Console &amp; PS5 Release Status</strong>
+            Detailed platform evaluation, Sony PS5 port status, and DualSense controller testing.
+          </a>
+          <a href="/release-date/" style="display:block;padding:12px;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:#fff;">
+            <strong style="color:var(--acid);display:block;margin-bottom:4px;">Official Early Access Roadmap</strong>
+            Chronological breakdown of shipped updates (0.7.0, 0.8.0, 0.8.8) and future milestones.
+          </a>
+          <a href="/guide/scavland-steam-deck-performance-optimization/" style="display:block;padding:12px;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:#fff;">
+            <strong style="color:var(--acid);display:block;margin-bottom:4px;">Steam Deck 60 FPS Setup</strong>
+            TDP configuration, battery optimization, and twin-stick controller mapping.
+          </a>
+          <a href="/guide/scavland-beginner-guide/" style="display:block;padding:12px;background:var(--panel,#121a16);border:1px solid var(--line,#27382b);border-radius:6px;text-decoration:none;color:#fff;">
+            <strong style="color:var(--acid);display:block;margin-bottom:4px;">Beginner Survival Walkthrough</strong>
+            First day routing, Green Rags, 150 stamina &amp; safehouse stash rules.
+          </a>
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#availability">Platform Availability</a>
+        <a href="#game-pass">Xbox Game Pass</a>
+        <a href="#controller">Controller Support</a>
+        <a href="#alternatives">How to Play Today</a>
+        <a href="#faq">Xbox FAQ</a>
+        <a href="#related">Related Guides</a>
+      </aside>
+    </div>
+  </article>
+</Layout>
