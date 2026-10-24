@@ -49,7 +49,7 @@ This file serves as a structured Markdown index optimized for LLMs, AI agents, a
 ### Progression Guides
 - [Scavland Quests & Contracts Guide: Anatoly & Nadja Job Pools, 24-Hour Reset & Bounties](https://scavland.wiki/guide/scavland-quests-and-contracts/): Verified Early Access guide to Scavland contracts: daily 24-hour job pool refreshes, Anatoly & Nadja contract pools, mutant bounties (Hellhounds, Big Bears, Splatters), and faction reputation payouts.
 - [Scavland Factions & Reputation Guide: 10 Organizations, Vendor Tiers & Raisa Truces](https://scavland.wiki/guide/scavland-factions-and-reputation/): Evidence-based breakdown of Scavland’s 10 wasteland factions: Act I interactive syndicates, vendor tier unlocks, territory borders, and diplomatic truces with Raisa.
-- [Scavland Early Access Scope: Factions, Progression & Known Launch Issues](https://scavland.wiki/guide/scavland-early-access-launch-faq-and-roadmap/): Everything you need to know about Scavland Early Access launch (Build 25128670): singleplayer progression across 10 factions, roadmap expectations, and known UI behaviors.
+- [Scavland Early Access Scope: Factions, Progression & Known Launch Issues](https://scavland.wiki/guide/scavland-early-access-launch-faq-and-roadmap/): Everything you need to know about Scavland Early Access launch: singleplayer progression across 10 factions, roadmap expectations, and known UI behaviors.
 - [Scavland 10 Factions & Progression Guide: No Skill Tree, Vendor Tiers & Daily Contracts](https://scavland.wiki/guide/scavland-factions-progression-and-traders/): Systemic character progression in Scavland: zero artificial skill trees, 10 wasteland factions, trader inventory tiers, and 24-hour contract refreshes in Zalesye.
 
 ### Tactical Guide Guides

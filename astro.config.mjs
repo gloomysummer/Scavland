@@ -20,6 +20,7 @@ const sectionDateMap = {
   comparisons: '2026-09-10', // Scavland vs Zero Sievert
   'system-requirements': '2026-09-06',
   'release-date': '2026-09-06',
+  'multiplayer': '2026-10-23',
 };
 
 export default defineConfig({
