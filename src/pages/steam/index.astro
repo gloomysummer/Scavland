@@ -1,0 +1,177 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AdsterraArticleBanner from '../../components/AdsterraArticleBanner.astro';
+
+const faqs = [
+  {
+    q: 'Where can I find and download Scavland on Steam?',
+    a: 'Scavland is available on Steam Early Access under App ID 3373500. The official store page is located at <a href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer">store.steampowered.com/app/3373500/Scavland/</a>.'
+  },
+  {
+    q: 'How much does Scavland cost on Steam?',
+    a: 'Scavland retails at a baseline price of $19.99 USD in North America (19,50€ in Europe). There are no paid microtransactions, battle passes, or pay-to-win DLCs in the Early Access release.'
+  },
+  {
+    q: 'Does Scavland run on Steam Deck?',
+    a: 'Yes. Scavland was built with Steam Deck support in mind, featuring full controller support, customizable text scaling, native gamepad glyphs, and solid 60 FPS performance.'
+  },
+  {
+    q: 'What Steam features are integrated into Scavland?',
+    a: 'The game officially supports Steam Achievements, Steam Cloud save synchronization between PC desktops and handhelds, and Steam Family Sharing.'
+  },
+  {
+    q: 'Is there a free playable demo available on Steam?',
+    a: 'A playable demo was released during Steam Next Fest leading up to the September 4, 2026 launch. Currently, the full Early Access version (Update 0.8.0 / Hotfix 0.8.8) is available for purchase and play on Steam.'
+  }
+];
+---
+
+<Layout
+  title="Scavland on Steam: Store Link, $19.99 Price & Early Access"
+  description="Scavland is out now on Steam Early Access ($19.99). Get the official store link (App ID 3373500), Steam Deck performance notes, and system specs."
+  keywords="scavland steam, scavland steam store, scavland steam download, scavland app id 3373500, scavland price steam, scavland steam deck"
+  canonical="/steam/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+            { '@type': 'ListItem', position: 2, name: 'Steam Store Hub', item: 'https://scavland.wiki/steam/' }
+          ]
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(f => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') }
+          }))
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Steam Store Hub</span>
+    </nav>
+
+    <header class="article-header">
+      <p class="eyebrow">Steam Store Hub · App ID 3373500 · Released September 4, 2026</p>
+      <h1 class="page-title">Scavland Steam Store Hub &amp; Early Access Info</h1>
+      <p class="lede">Everything you need to know about Scavland on Steam: official store link, $19.99 pricing, Steam Deck performance, features, and community updates.</p>
+      <span class="evidence">Evidence: Official Steam store page (App ID 3373500) &amp; Steam Community Announcements · Developer NoShadow · Verified October 2026</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="quick-answer">
+          <strong>Quick Answer: Steam Store Overview</strong>
+          <p style="margin:0 0 10px;font-size:0.98rem;color:var(--ink);line-height:1.6;">
+            <b>Scavland is officially available on Steam Early Access.</b> Developed by <b>NoShadow</b> and published alongside <b>UNSUBSCRIBE</b>, the game launched on <b>September 4, 2026</b> under Steam App ID <b>3373500</b>. It is sold at a baseline price of <b>$19.99 USD</b> with full singleplayer gameplay, Steam Achievements, Steam Cloud, and full controller support.
+          </p>
+          <div style="margin-top:12px;">
+            <a href="https://store.steampowered.com/app/3373500/Scavland/" target="_blank" rel="noopener noreferrer" style="display:inline-block;background:var(--acid,#b9e86c);color:#0d0d0d;padding:8px 18px;border-radius:4px;font-weight:700;font-size:0.9rem;text-decoration:none;">Open Scavland on Steam ↗</a>
+          </div>
+        </div>
+
+        <h2 id="steam-details">Steam Store Metadata &amp; Key Facts</h2>
+        <div style="overflow-x:auto;margin:20px 0;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+            <tbody>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;width:30%;">Steam App ID</td>
+                <td style="padding:10px 12px;color:var(--ink);"><strong>3373500</strong></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Release Date</td>
+                <td style="padding:10px 12px;color:var(--ink);">September 4, 2026 (Early Access)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Standard Price</td>
+                <td style="padding:10px 12px;color:var(--ink);">$19.99 USD / 19,50€ EUR</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Developer</td>
+                <td style="padding:10px 12px;color:var(--ink);">NoShadow</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Publishers</td>
+                <td style="padding:10px 12px;color:var(--ink);">NoShadow, UNSUBSCRIBE</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Supported Platforms</td>
+                <td style="padding:10px 12px;color:var(--ink);">Windows PC (macOS version in review)</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;">Steam Features</td>
+                <td style="padding:10px 12px;color:var(--ink);">Single-player, Steam Achievements, Steam Cloud, Family Sharing, Full Controller Support</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="article-media">
+          <img src="/images/screenshots/steam_ss_01.webp" alt="Scavland Steam Early Access gameplay screenshot showcasing tactical top-down combat in Zalesye" loading="lazy" />
+          <p class="caption">Tactical combat and looting in Scavland — official Steam store screenshot</p>
+        </div>
+
+        <h2 id="steam-deck">Steam Deck &amp; Controller Integration</h2>
+        <p>
+          Scavland was built with handheld optimization as a priority. On Steam Deck:
+        </p>
+        <ul>
+          <li><strong>Native Controller Glyphs:</strong> Automatically displays Xbox, PlayStation DualSense, and Steam Deck controller button glyphs.</li>
+          <li><strong>60 FPS Performance:</strong> Optimized pixel-art rendering engine delivers a consistent 60 frames per second at native 1280x800 resolution.</li>
+          <li><strong>Customizable UI:</strong> Includes font and HUD text scaling options specifically designed for smaller 7-inch and 8-inch screens.</li>
+          <li><strong>Steam Cloud:</strong> Seamlessly transfers save games between your desktop PC and your Steam Deck.</li>
+        </ul>
+
+        <AdsterraArticleBanner label="Sponsored Steam Intel" />
+
+        <h2 id="updates-roadmap">Steam Community Updates &amp; Version History</h2>
+        <p>
+          Developer NoShadow actively publishes patch notes, hotfixes, and roadmap updates directly to the Steam Community Hub:
+        </p>
+        <ul>
+          <li><strong>Update 0.8.0 &amp; Hotfix 0.8.8:</strong> Introduced Dogface fast travel, staged reloads, armor penetration overhaul, weapon inspect, and extensive bug fixes.</li>
+          <li><strong>Update 0.7.0 Series:</strong> Completely rebuilt the Death Screen with Returner / Iron Man options, added weapon durability tuning, and stabilized save persistence.</li>
+          <li><strong>October Roadmap Announcement:</strong> Unveiled the upcoming major content milestones, including "The Descent (Bunkers)" and "Blood Brothers (Co-Op)".</li>
+        </ul>
+
+        <h2 id="steam-faq">Frequently Asked Questions</h2>
+        {faqs.map(f => (
+          <div style="background:var(--panel);border:1px solid var(--line);padding:16px 20px;margin:12px 0;border-radius:4px;">
+            <strong style="color:var(--acid);display:block;margin-bottom:6px;font-size:0.95rem;">{f.q}</strong>
+            <p style="margin:0;font-size:0.9rem;color:var(--ink);line-height:1.65;" set:html={f.a} />
+          </div>
+        ))}
+
+        <h2 id="related-hubs">Related Guides &amp; Hubs</h2>
+        <div class="related-grid">
+          <a href="/guide/scavland-price-and-regional-editions/"><strong>Price &amp; Regional Editions</strong><br/>Global currency tiers, launch discounts &amp; purchase guide</a>
+          <a href="/system-requirements/"><strong>System Requirements</strong><br/>PC hardware specifications &amp; Steam Deck tuning</a>
+          <a href="/release-date/"><strong>Release Date &amp; Roadmap</strong><br/>Early Access timeline and development milestones</a>
+          <a href="/updates/"><strong>Patch Notes &amp; Changelogs</strong><br/>Update 0.8.0 and Hotfix 0.8.8 changelogs</a>
+          <a href="/coop/"><strong>Co-Op Status Guide</strong><br/>Blood Brothers cooperative mode timeline</a>
+          <a href="/xbox/"><strong>Xbox &amp; Console Status</strong><br/>Console port evaluations and controller mapping</a>
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#steam-details">Store Metadata</a>
+        <a href="#steam-deck">Steam Deck Support</a>
+        <a href="#updates-roadmap">Updates &amp; Patches</a>
+        <a href="#steam-faq">Steam FAQ</a>
+        <a href="#related-hubs">Related Guides</a>
+      </aside>
+    </div>
+  </article>
+</Layout>

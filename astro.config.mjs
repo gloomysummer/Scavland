@@ -22,6 +22,7 @@ const sectionDateMap = {
   'release-date': '2026-09-06',
   'multiplayer': '2026-10-23',
   'coop': '2026-10-24',
+  'steam': '2026-10-24',
 };
 
 export default defineConfig({
