@@ -1,0 +1,184 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AdsterraArticleBanner from '../../components/AdsterraArticleBanner.astro';
+
+const faqs = [
+  {
+    q: 'Does Scavland have co-op right now?',
+    a: 'No. Scavland is strictly singleplayer in Steam Early Access (Update 0.8.0 / Hotfix 0.8.8). The Steam store page lists only Single-player, and the current build contains no networking or online co-op features.'
+  },
+  {
+    q: 'When is co-op coming to Scavland?',
+    a: 'Co-op is officially confirmed on the development roadmap at scavland.com under the update name "Scavland: Blood Brothers (Co-Op)", with a target window of December 15, 2026 to February 28, 2027.'
+  },
+  {
+    q: 'How will co-op work in Scavland?',
+    a: 'According to the official roadmap, the Blood Brothers update will allow friends to team up in the Zalesye open world, help a host advance story quests, divide up NPC jobs, and clear procedural bunkers together.'
+  },
+  {
+    q: 'Will Scavland support local split-screen or couch co-op?',
+    a: 'No split-screen or local couch co-op has been announced. The planned cooperative multiplayer is designed as online co-op for PC on Steam.'
+  },
+  {
+    q: 'Does Scavland co-op include PvP or friendly fire?',
+    a: 'No PvP has been announced. Developer NoShadow has consistently described multiplayer strictly as cooperative survival. There are no battle royale, raid extraction, or deathmatch modes on the roadmap.'
+  }
+];
+---
+
+<Layout
+  title="Is Scavland Co-Op? No — Co-Op Planned for Dec 2026–Feb 2027"
+  description="No, Scavland does not have co-op yet in Early Access. Official roadmap confirms Blood Brothers co-op update is planned for the Dec 2026–Feb 2027 target window."
+  keywords="scavland coop, scavland co-op, is scavland coop, scavland coop release date, scavland multiplayer coop, scavland play with friends, scavland blood brothers"
+  canonical="/coop/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+            { '@type': 'ListItem', position: 2, name: 'Co-Op Status & Guide', item: 'https://scavland.wiki/coop/' }
+          ]
+        },
+        {
+          '@type': 'FAQPage',
+          mainEntity: faqs.map(f => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a }
+          }))
+        }
+      ]
+    })} />
+  </Fragment>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Co-Op Status</span>
+    </nav>
+
+    <header class="article-header">
+      <p class="eyebrow">Co-Op Status · Updated October 2026 (Update 0.8.0 / Hotfix 0.8.8)</p>
+      <h1 class="page-title">Scavland Co-Op Mode &amp; Multiplayer Status</h1>
+      <p class="lede">Scavland is strictly singleplayer today in Early Access. Cooperative play is officially planned under the Blood Brothers update targeting the Dec 2026 – Feb 2027 window. Here is the verified status.</p>
+      <span class="evidence">Evidence: Official Steam store page (App ID 3373500) &amp; Early Access notes · Official roadmap (scavland.com/roadmap.json) · Verified October 2026</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+        <div class="quick-answer">
+          <strong>Quick Answer</strong>
+          <p style="margin:0 0 10px;font-size:0.98rem;color:var(--ink);line-height:1.6;">
+            <b>No — Scavland does not have co-op right now.</b> The current Steam Early Access build (Update 0.8.0 / Hotfix 0.8.8) is singleplayer-only. However, co-op is an officially confirmed roadmap milestone: developer NoShadow announced <b>“Scavland: Blood Brothers (Co-Op)”</b> on the public roadmap at scavland.com, with a target release window of <b>December 15, 2026 – February 28, 2027</b>.
+          </p>
+          <p style="margin:0;font-size:0.88rem;color:var(--text-muted,#aaa);line-height:1.5;">
+            Roadmap target windows may shift during development. The dates represent the current development plan rather than a locked launch guarantee.
+          </p>
+        </div>
+
+        <h2 id="current-status">Current Early Access Status: Singleplayer Only</h2>
+        <p>
+          Scavland launched into Steam Early Access on September 4, 2026 as a solo tactical survival experience. Across Update 0.8.0 and Hotfix 0.8.8, the game remains dedicated singleplayer:
+        </p>
+        <ul>
+          <li><strong>Steam Store Features:</strong> Tagged strictly as <em>Single-player</em>, with Steam Achievements, Steam Cloud, and Family Sharing. There are no online co-op or LAN tags.</li>
+          <li><strong>No In-Game Networking:</strong> The client currently features no peer-to-peer or client-server networking architecture.</li>
+          <li><strong>All Entities Are AI:</strong> Every trader, hostile raider squad, and companion in the Zalesye zone is fully controlled by the game's AI engine.</li>
+        </ul>
+
+        <div class="article-media">
+          <img src="/images/screenshots/ss_04_settlement_camp.webp" alt="Scavland settlement camp — all NPCs and traders in Early Access are AI controlled" loading="lazy" />
+          <p class="caption">NPC settlements in Zalesye — current Early Access gameplay is 100% singleplayer</p>
+        </div>
+
+        <h2 id="blood-brothers">Official Co-Op Plan: Blood Brothers Update</h2>
+        <p>
+          Co-op is officially confirmed in primary sources. On October 5, 2026, alongside the one-month Early Access milestone, developer NoShadow published the official interactive roadmap at <a href="https://scavland.com/" target="_blank" rel="noopener noreferrer">scavland.com</a>.
+        </p>
+
+        <div style="background:var(--panel);border-left:3px solid var(--acid);padding:16px 20px;margin:20px 0;border-radius:0 4px 4px 0;">
+          <strong style="color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.85rem;text-transform:uppercase;display:block;margin-bottom:6px;">
+            Confirmed Co-Op Mechanics (Blood Brothers)
+          </strong>
+          <ul style="margin:0;padding-left:18px;font-size:0.92rem;color:var(--ink);line-height:1.6;">
+            <li><strong>Open World Teaming:</strong> Explore and survive the radioactive wasteland of Zalesye together with friends.</li>
+            <li><strong>Host Story Progression:</strong> Visiting players can join a host's world and help complete main story quests.</li>
+            <li><strong>Independent NPC Jobs:</strong> Squad members can divide and tackle different faction contracts simultaneously.</li>
+            <li><strong>Procedural Bunker Raids:</strong> Delve into multi-floor subterranean bunkers as a coordinated tactical unit.</li>
+            <li><strong>Bunker Hideouts &amp; Customization:</strong> Personal bunker hideout systems and character appearance customization are planned alongside the co-op release.</li>
+          </ul>
+        </div>
+
+        <AdsterraArticleBanner label="Sponsored Co-Op Intel" />
+
+        <h2 id="roadmap-timeline">Roadmap Timeline &amp; Release Window</h2>
+        <p>
+          Blood Brothers is scheduled as the third major milestone on the official roadmap:
+        </p>
+        <div style="overflow-x:auto;margin:20px 0;">
+          <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--line);">
+                <th style="text-align:left;padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-transform:uppercase;">Milestone</th>
+                <th style="text-align:left;padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-transform:uppercase;">Target Window</th>
+                <th style="text-align:left;padding:10px 12px;color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.75rem;text-transform:uppercase;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--ink);">Community Picks #1</td>
+                <td style="padding:10px 12px;color:var(--text-muted,#bbb);">Sep 1 – Oct 15, 2026</td>
+                <td style="padding:10px 12px;"><span style="color:#7ddb8a;">Completed</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--ink);">The Descent (Bunkers)</td>
+                <td style="padding:10px 12px;color:var(--text-muted,#bbb);">Sep 1 – Dec 15, 2026</td>
+                <td style="padding:10px 12px;"><span style="color:var(--acid);">In Progress</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);background:rgba(185,232,108,0.05);">
+                <td style="padding:10px 12px;color:var(--ink);"><strong>Blood Brothers (Co-Op)</strong></td>
+                <td style="padding:10px 12px;color:var(--text-muted,#bbb);"><strong>Dec 15, 2026 – Feb 28, 2027</strong></td>
+                <td style="padding:10px 12px;"><span style="color:#e0b354;">Planned</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--line);">
+                <td style="padding:10px 12px;color:var(--ink);">Beyond Nature (Anomalies)</td>
+                <td style="padding:10px 12px;color:var(--text-muted,#bbb);">Feb 28 – Jun 1, 2027</td>
+                <td style="padding:10px 12px;"><span style="color:#e0b354;">Planned</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 id="coop-faq">Frequently Asked Questions</h2>
+        {faqs.map(f => (
+          <div style="background:var(--panel);border:1px solid var(--line);padding:16px 20px;margin:12px 0;border-radius:4px;">
+            <strong style="color:var(--acid);display:block;margin-bottom:6px;font-size:0.95rem;">{f.q}</strong>
+            <p style="margin:0;font-size:0.9rem;color:var(--ink);line-height:1.65;">{f.a}</p>
+          </div>
+        ))}
+
+        <h2 id="related-resources">Related Guides &amp; Status Hubs</h2>
+        <div class="related-grid">
+          <a href="/multiplayer/"><strong>Multiplayer Overview</strong><br/>Comprehensive multiplayer &amp; PvP status breakdown</a>
+          <a href="/guide/scavland-coop-and-multiplayer-mechanics/"><strong>Co-op Tactics Guide</strong><br/>Solo extraction strategies and squad mechanics</a>
+          <a href="/release-date/"><strong>Release Date &amp; Roadmap</strong><br/>Early Access milestones and updates timeline</a>
+          <a href="/updates/"><strong>Update Changelogs</strong><br/>Update 0.8.0 and Hotfix 0.8.8 patch notes</a>
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#current-status">Current Status</a>
+        <a href="#blood-brothers">Blood Brothers Co-Op</a>
+        <a href="#roadmap-timeline">Roadmap Timeline</a>
+        <a href="#coop-faq">Co-Op FAQ</a>
+        <a href="#related-resources">Related Guides</a>
+      </aside>
+    </div>
+  </article>
+</Layout>
