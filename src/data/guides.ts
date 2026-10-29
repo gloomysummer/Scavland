@@ -85,34 +85,35 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-steam-deck-and-handheld-settings',
     shortTitle: 'Steam Deck & Handheld Guide',
-    title: 'Scavland Steam Deck & Handheld Guide: Controller Setup, Display and Settings Tips',
-    description: 'Handheld setup for Scavland on Steam Deck and portable PCs: display scaling, frame-rate and power options, controller layouts, and text sizing. The settings below are suggestions to try, not measured benchmarks.',
+    title: 'Scavland Steam Deck & Handheld Guide: Controller Setup, Aim Overhaul & Settings Tips',
+    description: 'Handheld and controller setup for Scavland on Steam Deck and portable PCs: Update 0.8.17 Aim Dot mechanics, aim assist, 8-way melee, performance tuning, and layout tips.',
     category: 'Platforms',
     image: '/images/screenshots/steam_ss_04.webp',
     imageAlt: 'Scavland running on handheld device with tactical HUD',
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-02',
-    answer: 'Scavland features native controller support and, in the developers’ own words, was "designed with Steam Deck and handheld play in mind". <strong>Update 0.7.0</strong> enhances handheld ergonomics with full gamepad support integrated into the rebuilt <strong>Death Screen</strong> (with dedicated button actions for <strong>Returner</strong>, <strong>Iron Man</strong>, and Tutorial modes), improved text sizing for 7-inch displays, and 8-directional diagonal movement. The suggestions below provide a solid handheld baseline: stick to the native 1280x800 resolution, adjust TDP and frame caps via SteamOS for balanced battery life, and enable the dynamic Action Hint Bar in Gameplay Settings for quick looting.',
+    evidence: 'Official Steam announcements & community reports · Update 0.8.17',
+    updated: '2026-10-28',
+    answer: 'Scavland features native controller support and, in the developers’ own words, was "designed with Steam Deck and handheld play in mind". <strong>Update 0.8.17</strong> brings a major overhaul to controller mechanics: the <strong>Aim Dot</strong> no longer drifts and moves like a mouse via the right stick (with an optional <strong>Legacy Aiming</strong> setting), aim assist now prioritizes hostile targets and functions while aiming down sights, and melee combat follows the Aim Dot allowing strikes in all <strong>8 directions</strong> on gamepad. Alongside a dedicated Gamepad category under Gameplay settings and hold-to-inspect inventory controls, Update 0.8.17 reduces GPU overhead for radiation fog, ensuring solid frame rates at native <strong>1280x800</strong> resolution.',
     steps: [
       '01 · Native Panel Resolution: The Steam Deck features a native 1280x800 display at 16:10. Set the display resolution to 1280x800 in video settings to prevent non-uniform scaling or blurred text labels.',
-      '02 · Power & Battery Tuning: In the SteamOS Quick Access Menu (•••), set a manual TDP limit and cap the refresh rate to 40Hz or 60Hz. A 40Hz cap delivers smooth top-down tactical movement while significantly extending handheld battery life.',
-      '03 · <strong>Death Screen</strong> & Gamepad Navigation: <strong>Update 0.7.0</strong> added full controller navigation to the rebuilt <strong>Death Screen</strong>. Instead of a clumsy any-key press, players can use D-pad and face buttons to select Continue / Load Game (<strong>Returner</strong> mode), New Game / Exit (Iron Man mode), or Try Again (Tutorial).',
-      '04 · Action Hint Bar & Custom Rebinding: Ensure the Action Hint Bar remains enabled in Gameplay Settings. It dynamically displays context-sensitive button prompts across Inventory, Trade, Journal, and stack splitting windows.',
-      '05 · Text Sizing & UI Readability: Update 0.7.0 delivers improved text sizing on handheld screens. If small inventory descriptions or barter prices feel tight on a 7-inch panel, check UI scale options in accessibility settings.'
+      '02 · Configure Update 0.8.17 Aim Dot & Stick Sensitivity: Navigate to the new Gamepad category under Gameplay settings. The Aim Dot now operates like a mouse with zero drift. Fine-tune Aim Stick Deadzone and Aim Stick Response settings, or toggle Legacy Aiming if you prefer direct directional stick aiming.',
+      '03 · Enable Hostile Aim Assist & ADS Tracking: In Gamepad settings, adjust the Aim Assist Strength slider. Aim assist now actively tracks hostile target movement and remains fully operational while aiming down sights (ADS).',
+      '04 · 8-Direction Melee Combat & Unarmed Reticle: Melee swings now dynamically track your Aim Dot, unlocking fluid attacks across all 8 directions on gamepad. The Aim Dot also remains visible while unarmed for smooth navigation.',
+      '05 · Inventory & Button Interactions: Hold R2 / RT (rebindable) to inspect inventory items, press Square / X to unequip items into your backpack (or drop if full), and use Left Stick to Take All without accidentally switching weapons.',
+      '06 · Power Tuning & GPU Optimization: In SteamOS Quick Access, cap the refresh rate to 40Hz or 60Hz. Update 0.8.17 lowers GPU costs for radiation effects and speeds up fog rendering, reducing memory use and loading hitches on portable APUs.'
     ],
     facts: [
       ['Handheld support', 'Full controller support; developer confirms game was designed with Steam Deck and handhelds in mind'],
-      ['Death Screen Gamepad', 'Update 0.7.0 introduced full gamepad button navigation across all game mode death screens'],
+      ['Update 0.8.17 Gamepad Overhaul', 'Aim Dot mouse-like movement, no drift, Legacy Aiming option, and 8-way melee tracking'],
+      ['Aim Assist Features', 'Hostile target prioritization, operational down sights (ADS), and custom Aim Assist Strength'],
       ['Native Resolution', '1280x800 at 16:10 aspect ratio matching the Steam Deck screen'],
-      ['Power Optimization', 'Adjustable manual TDP and 40Hz / 60Hz refresh presets in SteamOS Quick Access Menu'],
-      ['Action Hint Bar', 'Contextual bar dynamically displays relevant button inputs in inventory and trade windows'],
-      ['Latest Update', 'Update 0.7.0 & Hotfix 0.7.1']
+      ['Controller Interactions', 'Hold R2/RT to inspect, Square/X to unequip, Left Stick Take All without weapon swap'],
+      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.8.17']
     ],
     faq: [
-      ['How does Scavland perform on Steam Deck with Update 0.7.0?', 'Update 0.7.0 significantly polishes handheld play by introducing full gamepad support to the rebuilt Death Screen, refining text sizing on the 7-inch display, and maintaining smooth 8-directional analog movement.'],
-      ['Is text legible on the 7-inch Steam Deck screen?', 'Yes. Update 0.7.0 specifically optimized font rendering and text sizing for handheld resolutions. In-game item descriptions, trader barter values, and journal logs remain sharp at native 1280x800.'],
-      ['Does Scavland support Steam Cloud saves across PC and Deck?', 'Yes. Steam Cloud save synchronization is enabled, allowing seamless progression transfer between your desktop rig and Steam Deck.'],
-      ['Can you navigate the death screen with a controller?', 'Yes. As of Update 0.7.0, the Death Screen features full gamepad support with dedicated actions (Continue, Load Game, New Game, Exit, Try Again) instead of the previous generic any-key interaction.']
+      ['How does Scavland play on Steam Deck after Update 0.8.17?', 'Update 0.8.17 overhauls controller gameplay: the Aim Dot behaves like a mouse with zero drift, aim assist works while aiming down sights, melee attacks follow all 8 directions, and radiation fog performance has been optimized for portable GPUs.'],
+      ['How do I inspect items in inventory using a controller?', 'In Update 0.8.17, inspecting an item requires holding the assigned controller button (R2 / RT by default, rebindable in settings). The ammo HUD also correctly displays when inspecting rebound guns.'],
+      ['What is Legacy Aiming in Scavland?', 'Legacy Aiming is a setting introduced in Update 0.8.17 for players who prefer aiming directly in the direction of the right stick, rather than using the new mouse-like Aim Dot system.'],
+      ['Can I play Scavland offline on Steam Deck?', 'Yes. Scavland is strictly an offline single-player experience. Once authenticated and downloaded on Steam, you can play offline indefinitely on Steam Deck without an internet connection.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-system-requirements'],
     keywords: ['scavland steam deck', 'scavland steam deck settings', 'scavland handheld', 'scavland handheld settings', 'scavland steam deck 60fps', 'scavland steam deck controller', 'scavland controller layout', 'scavland battery life'],
@@ -1699,71 +1700,34 @@ export const guides: Guide[] = [
     category: "Troubleshooting",
     image: '/images/screenshots/steam_ss_06.webp',
     imageAlt: "Scavland error troubleshooting and technical stability guide",
-    evidence: 'Steam Community Technical Discussions & Patch 0.7.2 Changelogs',
-    updated: '2026-09-30',
-    answer: "While Scavland is generally well-optimized for an Early Access title, certain hardware configurations, corrupted cache files, and outdated third-party overlays can trigger launch crashes, black screens, or inventory interaction freezes. The development team deployed consecutive emergency patches\u2014including <strong>Hotfix 0.7.1</strong> addressing settlement storage container lockups and <strong>Hotfix 0.7.2</strong> resolving wasteland chunk loading hangs. If your client encounters instability, launching with verified Steam parameters like <strong>-force-d3d11</strong>, verifying local game cache integrity, and managing independent <strong>Autosave Slots</strong> will resolve over 95% of technical issues.",
+    evidence: 'Steam Community Technical Discussions & Update 0.8.17 / Hotfix 0.8.8 Changelogs',
+    updated: '2026-10-28',
+    answer: "While Scavland is well-optimized in Early Access, specific driver handshakes, regional keyboard layouts, and drive space limits can cause technical hitches. In <strong>Update 0.8.17</strong>, developer NoShadow added disk-space safe handling: if saving fails due to insufficient disk space, the game displays a clear warning and keeps you in the game instead of corrupting the file or crashing to the Main Menu. For players experiencing the Unity keyboard bug where key names appear in German (such as '<strong>Eingabe</strong>' instead of '<strong>Enter</strong>'), switching your Windows keyboard input method to English resolves the display mapping. Launching with <strong>-force-d3d11</strong> and verifying file integrity via Steam resolves remaining display and chunk-loading errors.",
     steps: [
-      "01 \u00b7 Fix Black Screen on Startup (-force-d3d11 Flag): If Scavland launches to audio with a persistent black screen, right-click the game in your Steam Library -> Properties -> Launch Options -> enter <strong>-force-d3d11</strong> to bypass DirectX 12 driver handshake conflicts.",
-      "02 \u00b7 Resolve Stash Interaction Freeze (Hotfix 0.7.1 Baseline): If opening your permanent Safehouse Stash freezes player input, ensure your client is updated to <strong>Update 0.7.1</strong> or newer, which resolved storage container pointer locks across all faction camps.",
-      "03 \u00b7 Fix Missing World Chunks & Void Falling (Hotfix 0.7.2): If wasteland terrain fails to load when transitioning between central <strong>Zalesye</strong> and outpost zones, verify game file integrity via Steam: Properties -> Installed Files -> 'Verify integrity of game files'.",
-      "04 \u00b7 Repair Corrupted Save Profiles: If loading a save results in an infinite loading spinner, navigate to <strong>%USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\</strong>, delete the affected slot's corrupted index, and replace it with its automated <strong>_autosave.bak</strong> copy.",
-      "05 \u00b7 Eliminate Micro-Stutter & Frame Drops: Disable third-party background recording overlays (Discord Game Overlay, GeForce Experience, Razer Cortex). Set V-Sync to 'On' in your graphics driver control panel and match your monitor's native refresh rate.",
-      "06 \u00b7 Submit Diagnostic Logs to Developer NoShadow: If unresolvable crashes persist, locate your crash report at <strong>%USERPROFILE%\\AppData\\Local\\Temp\\NoShadow\\Scavland\\Crashes\\</strong> and upload the <strong>Player.log</strong> to the official Steam Bug Reports sub-forum."
-],
+      "01 · Fix Black Screen on Startup (-force-d3d11 Flag): If Scavland launches to audio with a persistent black screen, right-click the game in your Steam Library -> Properties -> Launch Options -> enter <strong>-force-d3d11</strong> to bypass DirectX 12 driver handshake conflicts.",
+      "02 · Fix German/Foreign Key Labels ('Eingabe' vs 'Enter'): The Unity engine reads key display names from your Windows active keyboard layout rather than in-game text language. If keys show as 'Eingabe', add English (United States) to Windows Settings -> Time & Language -> Language, switch to English input layout (Alt+Shift or Win+Space), and restart Scavland.",
+      "03 · Disk Space Full Protection (Update 0.8.17): If a save attempt fails due to insufficient hard drive space, Update 0.8.17 displays an on-screen warning and keeps your session active, preventing false corruption errors and preserving your previous save.",
+      "04 · Resolve Stash Interaction Freeze (Hotfix 0.7.1 / 0.8.8 Baseline): Container and stash pointer locks were resolved across recent hotfixes. In Hotfix 0.8.8 and Update 0.8.17, stripping weapon mods and unloading magazines inside containers and stashes works smoothly without freezing player input.",
+      "05 · Fix Missing World Chunks & Void Falling: If wasteland terrain fails to load when transitioning between central Zalesye and outpost zones, verify game file integrity via Steam: Properties -> Installed Files -> 'Verify integrity of game files'.",
+      "06 · Submit Diagnostic Logs to Developer NoShadow: If unresolvable crashes persist, locate your crash report at <strong>%USERPROFILE%\\AppData\\Local\\Temp\\NoShadow\\Scavland\\Crashes\\</strong> and upload the <strong>Player.log</strong> from <strong>%USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\</strong> to the official Steam Bug Reports sub-forum."
+    ],
     facts: [
-      [
-            "Primary Launch Parameter",
-            "-force-d3d11 forces stable DirectX 11 backend rendering"
-      ],
-      [
-            "Save File Recovery",
-            "Rename .bak files in %USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\"
-      ],
-      [
-            "Critical Patches",
-            "Hotfix 0.7.1 fixed stash freeze; Hotfix 0.7.2 resolved world chunk loading"
-      ],
-      [
-            "Log File Path",
-            "%USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Player.log"
-      ],
-      [
-            "Overlay Incompatibilities",
-            "Disable Discord and RivaTuner overlays to prevent startup hooks from failing"
-      ],
-      [
-            "RAM Overhead",
-            "Requires 8GB minimum; close memory-intensive browsers on 8GB systems"
-      ],
-      [
-            "Verified Baseline",
-            "Steam Community Technical Discussions & Patch 0.7.2 Changelogs"
-      ]
-],
+      ["Primary Launch Parameter", "-force-d3d11 forces stable DirectX 11 backend rendering"],
+      ["Disk Full Save Safety", "Update 0.8.17 warns on low disk space and keeps player in session without corrupting saves"],
+      ["Keyboard Input Bug", "Unity displays foreign key labels (e.g. Eingabe); switch Windows input layout to English to resolve"],
+      ["Log File Path", "%USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Player.log"],
+      ["Corrupted Save Fix", "Update 0.8.0 native engine fix restores previously corrupted save files on load"],
+      ["Verified Baseline", "Steam Community Technical Discussions & Update 0.8.17 / Hotfix 0.8.8 Changelogs"]
+    ],
     faq: [
-      [
-            "How do I fix Scavland crashing on launch?",
-            "Add '-force-d3d11' to your Steam Launch Options, disable fullscreen optimizations on the game executable, and verify that your GPU drivers are updated to the latest release."
-      ],
-      [
-            "Why does my game freeze when opening the safehouse stash?",
-            "This was a known bug in early 0.7.0 builds where container inventories desynced. Update your game to Hotfix 0.7.1 or newer through Steam to automatically resolve this."
-      ],
-      [
-            "How do I recover a broken or corrupted save file in Scavland?",
-            "Navigate to '%USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\', delete the corrupted 'slot_01.dat', and rename 'slot_01_autosave.bak' to 'slot_01.dat'."
-      ],
-      [
-            "Why does Scavland drop frames in dense Mist fog?",
-            "Volumetric fog particles can tax older GPUs. In video settings, reduce 'Particle Quality' and 'Shadow Resolution' to High or Medium to restore smooth frame rates."
-      ],
-      [
-            "Where can I find Scavland error logs to report a bug?",
-            "Find your diagnostic log file at '%USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Player.log' and share it on the Steam community technical support subforum."
-      ]
-],
+      ["Why does Scavland show German key names like 'Eingabe' instead of 'Enter'?", "Unity pulls key display names from your active Windows system keyboard layout instead of the in-game text language. Add English input language in Windows Settings, switch to English layout, and restart the game to show English key names."],
+      ["What happens if my disk runs out of space while saving in Update 0.8.17?", "In Update 0.8.17, if saving fails due to insufficient disk space, the game displays a clear warning message and keeps you in the game without corrupting your previous save or kicking you to the Main Menu."],
+      ["How do I fix Scavland crashing on launch?", "Add '-force-d3d11' to your Steam Launch Options, disable third-party overlays (Discord/RivaTuner), and verify game integrity via Steam."],
+      ["How do I recover a corrupted save file in Scavland?", "Update 0.8.0 introduced native fixes that automatically repair corrupted saves upon loading. You can also restore backups from %USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Saves\\."],
+      ["Where can I find Scavland error logs to report a bug?", "Diagnostic logs are located at %USERPROFILE%\\AppData\\LocalLow\\NoShadow\\Scavland\\Player.log. Share this file on the official Steam Bug Reports subforum."]
+    ],
     related: ["scavland-save-file-location-and-backups", "scavland-patch-0-7-0-update-and-changes", "scavland-steam-deck-and-handheld-settings", "scavland-cheats-and-console-commands"],
-    keywords: ["scavland crash fix", "scavland black screen", "scavland wont launch", "scavland freezing stash", "scavland directx error", "scavland troubleshooting guide"]
+    keywords: ["scavland crash fix", "scavland black screen", "scavland wont launch", "scavland freezing stash", "scavland directx error", "scavland troubleshooting guide", "scavland eingabe fix", "scavland keyboard input bug"]
   },
   {
     slug: 'scavland-console-release-status',
@@ -2457,80 +2421,39 @@ export const guides: Guide[] = [
   {
     slug: 'scavland-mutants-and-enemies-guide',
     shortTitle: "Mutants & Enemies",
-    title: "Scavland Mutants & Enemies Guide: Bestiary, Weak Points & Combat Tactics",
-    description: "Master combat against all Scavland hostiles: Tongue Monsters (Lickers), Hellhounds, Big Bears, Splatters, and armored bandit sentry tactics.",
+    title: "Scavland Mutants & Enemies Guide: Irradiated Variants, Bestiary & Combat Tactics",
+    description: "Master combat against all Scavland hostiles: Update 0.8.17 Irradiated Creatures, Tongue Monsters (Lickers), Hellhounds, Big Bears, Splatters, and bandit AI.",
     category: "Tactical Guide",
     image: '/images/screenshots/ss_03_forest_mutants.jpg',
     imageAlt: "Mutant creatures, mutated wildlife, and bandit patrols in Scavland wasteland",
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-08',
-    answer: "The exclusion zone of <strong>Zalesye</strong> is inhabited by aggressive mutant wildlife, bio-engineered abominations, and heavily armed deserter factions. Hostile encounters fall into two categories: biological predators that rely on aggressive lunges and flesh grapples, and tactical human scavengers who utilize cover, flank maneuvers, and long-range optics. Overcoming apex threats\u2014such as the dreaded <strong>Tongue Monsters (Lickers)</strong> in subterranean bunkers, feral <strong>Hellhound packs</strong> along forest perimeters, and <strong>Big Bears</strong> with massive bullet sponges\u2014demands matching specific ammunition calibers, utilizing sound cones, and keeping stamina reserves ready for evasive rolls.",
+    evidence: 'Official Steam announcements & community reports · Update 0.8.17',
+    updated: '2026-10-28',
+    answer: "The exclusion zone of <strong>Zalesye</strong> is inhabited by aggressive mutant wildlife, bio-engineered abominations, and tactical human factions. In <strong>Update 0.8.17</strong>, developer NoShadow introduced dangerous <strong>Irradiated Creatures</strong> surrounded by swirling radioactive fog clouds. Irradiated variants deal <strong>25% more melee damage</strong> and possess significantly elevated status effect chances (such as <strong>100% Bleeding</strong> on Big Rats and <strong>60% Fracture</strong> on Big Bears). Furthermore, apex mutants like <strong>Neurogeists</strong> (which drop 1 to 3 rare items) and <strong>King Spikers</strong> retaliate against attacks from outside their field of vision, demanding disciplined standoff distances and armor-piercing calibers.",
     steps: [
-      "01 \u00b7 Tongue Monsters (Lickers) \u2014 Bunker Apex Predators: Found lurking inside underground facilities like <strong>Sector B-4</strong>. They launch high-velocity flesh tongues that grapple and pull survivors. Maintain distance, listen for wet clicking audio cues, and fire high-stagger 12-gauge shotgun blasts directly into their mouth.",
-      "02 \u00b7 Hellhounds (Feral Canines) \u2014 Swift Pack Stalkers: Roam in packs of 2 to 4 along forest edges. They possess rapid sprint speeds and attempt to circle your flanks. Use high-capacity SMGs or sidearms (like the <strong>Bahadir 918</strong>) to drop them during straight-line charges.",
-      "03 \u00b7 Big Bears \u2014 Colossal Wasteland Tanks: Possess massive health pools capable of absorbing entire assault rifle magazines. Target their head with high-penetration <strong>7.62x39mm</strong> or <strong>7.62x54mmR</strong> rounds from behind solid obstacles; avoid open-field firefights.",
-      "04 \u00b7 Splatters \u2014 Acidic Bio-Anomalies: Pulsing biological clumps that erupt into toxic puddles upon death. Eliminate them exclusively from long range with rifles to prevent lethal chemical splash damage that dissolves armor durability.",
-      "05 \u00b7 Armored Bandit Sentries \u2014 Human Marksmen: Wear ballistic vests and deploy tactical shotguns or rifles. Aim for the legs if they wear heavy chest armor, or use armor-piercing 7.62mm rounds to penetrate plate carriers before they alert nearby garrisons.",
-      "06 \u00b7 Nocturnal Stalkers \u2014 The 21:00 Threat: Spawning exclusively between <strong>21:00 and 05:30</strong>, night mutants possess heightened hearing and track flashlight beams from 40m away. Travel with weapon lights toggled off and use optical <strong>Binoculars</strong> for quiet recon."
-],
+      "01 · Irradiated Creatures & Radiation Fog (Update 0.8.17): Dangerous irradiated variants spawn across Zalesye surrounded by swirling radiation clouds. They deal 25% more melee damage and inflict severe debuffs. Engage them from outside their radioactive aura.",
+      "02 · Small & Big Rats — Swarm Bleeders: Irradiated Small Rats deal 6.25 damage with a 35% bleed chance (up from 5 and 25%). Irradiated Big Rats deal 12.5 damage (up from 10) with a guaranteed 100% Bleeding chance. Drop them quickly with wide buckshot or compact SMGs.",
+      "03 · Hellhounds — Swift Pack Stalkers: Feral hounds roam in packs along forest perimeters. In Update 0.8.17, irradiated Hellhounds deal 15 damage with a 43% bleed chance (up from 12 and 33%). Backpedal and fire rapid bursts into straight-line charges.",
+      "04 · Big Bears — Wasteland Colossi: Massive bullet sponges. Irradiated Big Bears deal 62.5 melee damage (up from 50) with a 60% Fracture chance (up from 50%). Engage only from behind solid barricades with high-penetration 7.62x39mm or 7.62x54mmR rounds.",
+      "05 · Suckers & Neurogeists — Anomalous Threats: Irradiated Suckers deliver 43.75 melee damage (up from 35). Neurogeists retaliate against shooters outside their field of vision, but now drop 1 to 3 items, including Very Rare weapon attachments, repair kits, and crafting materials.",
+      "06 · King Spikers & Tactical Human AI: King Spikers retaliate against shooters outside visual range regardless of distance by spawning spikes. Human factions roam more dynamically (Bandit population +40%, Gunners +20%), with cleared camps remaining empty for a 30 in-game minute cooldown."
+    ],
     facts: [
-      [
-            "Deadliest Mutant",
-            "Tongue Monsters (Lickers) \u2014 Grapple attacks pull players into melee"
-      ],
-      [
-            "Deadliest Wildlife",
-            "Big Bears \u2014 Massive health pool; requires armor-piercing 7.62mm calibers"
-      ],
-      [
-            "Night Spawns Window",
-            "Nocturnal mutants roam exclusively between 21:00 and 05:30"
-      ],
-      [
-            "Acid Hazard",
-            "Splatters explode into chemical pools on death; kill from 15m+ distance"
-      ],
-      [
-            "Human Faction AI",
-            "Bandits use cover, callouts, and flank maneuvers; reticle turns red on lock"
-      ],
-      [
-            "Trophy Payout",
-            "Bogdan pays a +40% bounty premium for mutant glands and teeth"
-      ],
-      [
-            "Verified Baseline",
-            "Official Steam announcements & community reports · Update 0.7.0"
-      ]
-],
+      ["Irradiated Creatures", "Deal +25% melee damage with increased status effects and swirling radiation fog (Update 0.8.17)"],
+      ["Rat Status Changes", "Small Rat: 6.25 dmg / 35% bleed; Big Rat: 12.5 dmg / 100% bleed chance"],
+      ["Hellhound & Bear Stats", "Hellhound: 15 dmg / 43% bleed; Big Bear: 62.5 dmg / 60% fracture chance"],
+      ["Neurogeist Loot", "Drops 1 to 3 items: Very Rare / Ultra Rare weapon attachments, repair kits, or crafting loot"],
+      ["Faction Camp Cooldown", "Cleared faction outposts remain free of the original faction for 30 in-game minutes"],
+      ["Verified Baseline", "Official Steam announcements & community reports · Update 0.8.17"]
+    ],
     faq: [
-      [
-            "How do I break free from a Tongue Monster grapple?",
-            "Spam the dodge roll button [Space / Right Stick] while firing point-blank shotgun shells to stagger the creature and sever the flesh tongue."
-      ],
-      [
-            "What caliber is recommended for hunting Big Bears?",
-            "Use heavy 7.62x39mm (MK-47) or 7.62x54mmR (63 Dragoon). Standard 9mm pistol rounds deal negligible damage against bear hide."
-      ],
-      [
-            "Why do enemies and mutants seem to detect players through walls or in dark areas?",
-            "In Early Access (Update 0.7.0 / 0.7.2), enemy AI perception is heavily driven by acoustic alert propagation. Firing unsuppressed firearms or sprinting alerts hostiles within a broad radius, causing them to pursue your last known acoustic coordinate even if you break line of sight behind thin obstacles. To counter aggressive AI tracking, immediately disengage after loud gunshots, use suppressed weapons like the PM Nikolay PB, and navigate without weapon flashlights within 40 meters of hostile zones."
-      ],
-      [
-            "Why do bandits keep spotting me at night from far away?",
-            "Flashlights and weapon torches project visible cones that AI marksmen detect up to 40 meters away. Turn off flashlights and use binoculars or night vision to scout."
-      ],
-      [
-            "Do mutants fight against bandit patrols?",
-            "Yes! Scavland features dynamic faction infighting. If pursued by Hellhounds, running toward a bandit checkpoint often causes enemies to engage each other, allowing you to escape."
-      ],
-      [
-            "Where can I turn in mutant teeth and pelts for rubles?",
-            "Trader Bogdan at the forest perimeter outpost specializes in biological bounties, paying 40% more for mutant parts than any other merchant."
-      ]
-],
+      ["What are Irradiated Creatures in Update 0.8.17?", "Irradiated Creatures are dangerous world variants surrounded by a swirling radioactive cloud. They deal 25% bonus melee damage and have heightened chances of inflicting Bleeding and Fractures."],
+      ["What loot do Neurogeists drop in Update 0.8.17?", "Neurogeists drop between 1 and 3 items upon defeat, including Very Rare or Ultra Rare weapon attachments and repair kits, alongside Rare or Very Rare crafting materials."],
+      ["How does faction AI behave around outposts in Update 0.8.17?", "Human factions now distribute forces more naturally, assigning one defending squad per outpost before reinforcements arrive. Cleared camps stay free of that faction for 30 in-game minutes."],
+      ["How do King Spikers retaliate against sniper fire?", "In Update 0.8.17, King Spikers retaliate against shooters outside their field of vision, regardless of distance, by spawning spikes directly around the player."],
+      ["What caliber is recommended for hunting Big Bears?", "Use heavy 7.62x39mm (MK-47) or 7.62x54mmR (63 Dragoon). Standard 9mm pistol rounds deal negligible damage against bear hide."]
+    ],
     related: ["scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-night-survival-and-stealth-mechanics", "scavland-hospital-quest-and-medical-supplies"],
-    keywords: ["scavland mutants guide", "scavland enemies", "scavland enemy ai", "scavland ai see through walls", "scavland enemies op", "scavland tongue monster", "scavland licker", "scavland hellhounds", "scavland big bear combat"],
+    keywords: ["scavland mutants guide", "scavland enemies", "scavland enemy ai", "scavland ai see through walls", "scavland enemies op", "scavland tongue monster", "scavland licker", "scavland hellhounds", "scavland big bear combat", "scavland irradiated creatures"],
     videoId: 'xQKTC-8BYVU',
     videoTitle: "Scavland 0.7.2 \"Expert\" Firearm Damage Test (Target: Bear)",
     videoChannel: "Game Detox Dopamine"
