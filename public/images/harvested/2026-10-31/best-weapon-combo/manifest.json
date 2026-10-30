@@ -1,0 +1,45 @@
+{
+  "topic_slug": "best-weapon-combo",
+  "source_url": "https://steamcommunity.com/app/3373500/discussions/0/",
+  "page_title": "Scavland General Discussions :: Steam Community",
+  "harvested_at": "2026-10-31T02:00:13.780511",
+  "authenticated": true,
+  "verified": true,
+  "verification_notes": "Forum URL detected: Bypassing webpage screenshot to prevent forum UI pollution.; Matched official screenshot: steam_ss_01.webp (semantic score: 9)",
+  "images": [
+    {
+      "filename": "best-weapon-combo-gameplay.webp",
+      "relative_path": "best-weapon-combo-gameplay.webp",
+      "source_url": "local://steam_ss_01.webp",
+      "width": 1920,
+      "height": 1080,
+      "size_bytes": 167410,
+      "description": "Scavland desolate wasteland surface ruins and starter exploration",
+      "downloaded": true,
+      "authenticated": true,
+      "content_kind": "WEBP",
+      "sha256": "69b991cbb5d91f3ec49a39b4cd58bdfde29de52231f5fcf11df1bda1c56d4f9c",
+      "duplicate_of": null,
+      "visual_score": null,
+      "content_check": "ok",
+      "verified": true
+    }
+  ],
+  "text_preview": "STORE\nCOMMUNITY\nGORDON\nCHAT\nSUPPORT\nInstall Steam \n Gordon\nHK$ 40.00\n \nStore Page\nScavland\nAll\nDiscussions\nScreenshots\nArtwork\nBroadcasts\nVideos\nNews\nGuides\nReviews\n<\n1 2 3 4 5 6 ... 19\n>\nShowing 1-15 of 283 active topics\n 1\n15 hours ago\nPINNED: GAMEPAD & STEAM DECK IMPROVEMENTS — AVAILABLE FOR TEST",
+  "clue_verification": {
+    "clue_title": "\"BEST\" weapon combo?",
+    "source_url": "https://steamcommunity.com/app/3373500/discussions/0/",
+    "fetched_page_title": "Scavland General Discussions :: Steam Community",
+    "relevance_ok": true,
+    "matched_keywords": [
+      "best",
+      "weapon",
+      "combo"
+    ],
+    "missing_keywords": [],
+    "required_hits": 2,
+    "score": "3/3",
+    "reason": "matched 3/3 clue keywords (required 2)",
+    "verified_at": "2026-10-31T02:00:13.780748"
+  }
+}

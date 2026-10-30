@@ -397,47 +397,43 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-quests-and-contracts',
-    shortTitle: 'Quests & contracts',
-    title: 'Scavland Main Quests & Contracts Guide: Storyline Chain, Job Tracking & Reputation Rules',
-    description: 'Complete guide to Scavland main quests and contracts: storyline progression from Dead Man\'s Rest to Catching Current, orange vs green quest items, and job penalties.',
+    shortTitle: 'Quests & Contracts',
+    title: 'Scavland Main Quests & Contracts Guide: Storyline Chain, Act 1 Progression & Job Rewards (Update 0.8.17)',
+    description: 'Complete guide to Scavland main quests and contracts: storyline milestones from Dead Man\'s Rest to the Airplane Crash Site, Act 1 progression (~80%), Update 0.8.17 food job 3x/4x rewards, and automatic tracking.',
     category: 'Progression',
     image: '/images/harvested/2026-09-24/core-detector-is-missing/core-detector-is-missing-gameplay.webp',
     imageAlt: 'Scavland quest journal showing main story progression, contract tracking, and inventory item colors',
-    evidence: 'Official Steam announcements & community reports · Update 0.8.0 & Hotfix 0.8.8',
-    updated: '2026-10-21',
-    answer: 'Progression in Scavland is bifurcated into primary storyline Quests and repeatable faction Jobs (Contracts). Main quests guide your overarching narrative through <strong>Zalesye</strong>—commencing with the tutorial objective \'Dead Man\'s Rest\' and advancing to core contracts like \'Catching Current\' to secure the Flux Aspect Core. To safeguard quest items, Update 0.6.0 and Update 0.7.0 introduced explicit visual item segregation: Quest Items are colored <strong>orange</strong>, while Job Items appear in <strong>green</strong>. In <strong>Update 0.8.0</strong>, developer NoShadow added the new NPC <strong>Dogface</strong> and his quest \'<strong>On the Road</strong>\', alongside Journal Map NPC pins. Crucially, <strong>Hotfix 0.8.8</strong> resolved a critical quest blocker: accepting \'Catching Current\' or completing contracts with a full backpack now drops dialogue rewards directly at your feet rather than losing them permanently. Cancelling an accepted contract deducts 20% of that Job\'s Reputation reward (with a minimum penalty of 1). Contracts refresh across a 24-hour cycle or upon sleeping in a bed with a mattress.',
+    evidence: 'Official Steam announcements & community reports · Update 0.8.17 / Hotfix 0.8.8',
+    updated: '2026-10-30',
+    answer: 'Progression in Scavland is structured into core storyline Quests and repeatable faction Jobs (Contracts). Main quests guide your overarching narrative through <strong>Zalesye</strong>—commencing with the tutorial \'Dead Man\'s Rest\', proceeding through \'Catching Current\' for the Flux Aspect Core, and leading up to the <strong>Airplane Quest</strong> at the Crash Site landmark (which represents approximately <strong>80% of Act 1 completed</strong> in current Early Access). In <strong>Update 0.8.17</strong>, developer NoShadow added automatic tracking for chained main quests, so follow-up objectives activate with on-screen map hints without manual menu browsing. Furthermore, Update 0.8.17 radically rebalanced Job economics: settlement food supply jobs now pay <strong>3x money and 4x reputation</strong>, while Kill Squad job givers (such as Yelena) continue offering bounties even after nearby hostile squads have been eliminated.',
     steps: [
-      '01 · Distinguish Main Quests vs Faction Jobs: Main Quests (such as \'Dead Man\'s Rest\', \'<strong>Catching Current</strong>\', and Dogface\'s \'<strong>On the Road</strong>\') advance world lore and unlock critical survival systems like fast travel. Faction Jobs are repeatable economic contracts taken from brokers like <strong>Anatoly</strong> (logistics and bandit camps) and <strong>Nadja</strong> (mutant hunts).',
-      '02 · Color-Coded Quest Item Identification: In your inventory, Quest Items are highlighted in orange, whereas repeatable Job Items are highlighted in green. Quest items can be transferred between stash inventories with a confirmation warning, preventing accidental loss.',
-      '03 · Multi-Job Tracking & Journal Map Pins (Update 0.8.0): The Journal allows tracking multiple Jobs simultaneously; notifications only trigger for actively tracked objectives. In Update 0.8.0, NPCs appear as persistent pins on your Journal Map once you get close to them or talk to them. Zoom in and hover over a pin to view their name.',
-      '04 · Contract Cancellation & Reputation Penalty: You can cancel unwanted contracts directly from the Journal interface, but cancelling costs 20% of that Job\'s Reputation reward (with a minimum penalty of 1). Only abandon jobs if their objective sector is heavily contested.',
-      '05 · Faction Broker Roles & Diplomat Raisa Rebalance: In Update 0.7.0, gunsmith <strong>Volodymyr</strong> offers specialized jobs focused on high-quality weapons and dangerous mutants. Under <strong>Hotfix 0.7.2</strong>, developer NoShadow rebalanced Raisa\'s jobs so Diplomat Raisa can offer a follow-up job immediately without forcing players to wait for their current contract to finish.',
-      '06 · World Refresh & Mattress Sleeping: Job rosters refresh every 24 in-game hours. Under <strong>Update 0.7.0</strong>, sleeping to advance time requires a bed with a mattress. Safehouse sleep cycles both merchant stocks and daily contract boards.',
-      '07 · Dialogue Rewards & Inventory Drop Safety (Hotfix 0.8.8): In Hotfix 0.8.8, turning in contracts or accepting Catching Current with a full backpack safely drops dialogue rewards onto the ground at your feet, and previously stuck saves automatically have Anatoly\'s Detector restored upon load.'
+      '01 · Main Storyline Progression & Act 1 Scope (~80% Milestone): The narrative chain advances through foundational milestones: \'Dead Man\'s Rest\', \'<strong>Catching Current</strong>\', Dogface\'s \'<strong>On the Road</strong>\', and the <strong>Airplane Quest</strong>. Finishing the Airplane Quest at the Crash Site marks the current boundary of Early Access story content (~80% of Act 1 complete), shifting progression toward faction rep, Dogface fast travel, and high-tier bunker raiding.',
+      '02 · Automatic Main Quest Tracking (Update 0.8.17): In Update 0.8.17, main quests that begin immediately after completing another quest are now automatically tracked in your Journal, including on-screen map hints and quest update notifications.',
+      '03 · Food Supply & Kill Squad Job Rebalance (Update 0.8.17): Regional food supply jobs across settlements now pay <strong>3x the money and 4x the reputation</strong>, making them the most lucrative early contracts. Meanwhile, Kill Squad givers like <strong>Yelena</strong> continue offering contracts even when nearby squads are eliminated.',
+      '04 · Journal Map POI Icons & NPC Pins: Update 0.8.17 added dedicated Journal Map icons for <strong>Microrayon</strong>, <strong>Dubravka Camp</strong>, <strong>Gunners Base</strong>, <strong>Arcadia</strong>, <strong>Burned Villa</strong>, <strong>Cemetery</strong>, and the <strong>Crash Site</strong>. NPCs appear as pins when you approach or speak with them.',
+      '05 · Color-Coded Quest Item Identification: In your inventory, non-droppable Quest Items are highlighted in <strong>orange</strong>, whereas repeatable contract Job Items appear in <strong>green</strong> to prevent accidental vendor sales.',
+      '06 · Contract Cancellation & Reputation Penalty: You can cancel unwanted contracts directly from the Journal interface, but cancelling costs 20% of that Job\'s Reputation reward (minimum penalty of 1). Abandon only if objectives become unreachable.',
+      '07 · Dialogue Rewards & Full-Backpack Safeguard (Hotfix 0.8.8): If your backpack is full upon turning in a quest or receiving Anatoly\'s Detector in Catching Current, rewards safely drop at your feet rather than disappearing permanently.'
     ],
     facts: [
-      ['Main Quest Line', 'Narrative progression runs through foundational milestones including Dead Man\'s Rest, Catching Current, and On the Road'],
-      ['Item Color Separation', 'Quest Items are visually highlighted in orange; Job Items appear in green (Update 0.6.0)'],
+      ['Storyline Milestones', 'Dead Man\'s Rest -> Catching Current -> On the Road -> Airplane Quest (~80% of Act 1)'],
+      ['Automatic Quest Tracking', 'Chained main quests auto-track on completion in Update 0.8.17 with map hints'],
+      ['Food Supply Job Buff', 'Settlement food supply jobs pay 3x money & 4x reputation (Update 0.8.17)'],
+      ['Kill Squad Continuous Jobs', 'Kill squad job givers (Yelena) continue offering jobs after nearby squads die (Update 0.8.17)'],
+      ['Journal Map POI Icons', 'Added map icons for Crash Site, Gunners Base, Dubravka Camp, Arcadia, Microrayon, Cemetery (Update 0.8.17)'],
       ['Reward Drop Safeguard', 'Dialogue rewards and Anatoly\'s Detector drop at your feet if inventory is full (Hotfix 0.8.8)'],
-      ['Journal Map NPC Pins', 'NPCs appear as pins on Journal Map upon proximity or dialogue; hover to view names (Update 0.8.0)'],
-      ['Job Cancellation Penalty', 'Cancelling a Job directly from the Journal costs 20% of that Job\'s Reputation reward with a minimum penalty of 1'],
-      ['Simultaneous Job Tracking', 'Multiple jobs can be tracked at once; notifications only display for actively tracked jobs'],
-      ['Trader Volodymyr Jobs', 'Volodymyr offers jobs focused on high-quality weapons and dangerous mutants (Update 0.7.0)'],
-      ['Diplomat Raisa Overhaul', 'Raisa can offer follow-up jobs without waiting for current one to finish (Hotfix 0.7.2)'],
-      ['24-Hour Reset Cycle', 'Contract rosters refresh every 24 in-game hours or upon sleeping in a bed with a mattress (Update 0.7.0)']
+      ['Job Cancellation Penalty', 'Cancelling a Job from the Journal costs 20% of that Job\'s Reputation reward (minimum 1)'],
+      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.8.17 / Hotfix 0.8.8']
     ],
     faq: [
-      ['What is the difference between Main Quests and Jobs in Scavland?', 'Main Quests (such as Dead Man\'s Rest, Catching Current, and On the Road) drive central narrative progression, introduce core tools like the Core Detector, and carry orange-bordered items. Jobs are repeatable contracts offered by local brokers like Anatoly, Nadja, and Volodymyr to earn rubles and faction reputation.'],
-      ['Why are some items orange and others green in my inventory?', 'Under Update 0.6.0, Quest Items are color-coded in orange to prevent accidental disposal or sale, while repeatable Job Items are color-coded in green. Equipped clothing cannot be accidentally turned in for jobs.'],
-      ['What happens if my backpack is full when receiving a quest reward?', 'In Hotfix 0.8.8, accepting Catching Current or completing contract hand-ins with a full backpack automatically drops Anatoly\'s Detector and other dialogue rewards at your feet rather than losing them.'],
-      ['How does Raisa\'s job assignment work after Hotfix 0.7.2?', 'In Hotfix 0.7.2, developer NoShadow overhauled Diplomat Raisa\'s contracts: Raisa can now offer a follow-up job without waiting for your current task to complete, alongside a comprehensive rebalancing of her diplomatic job requirements and payouts.'],
-      ['What is the penalty for cancelling a Job in Scavland?', 'Cancelling an accepted Job directly from the Journal deducts 20% of that Job\'s Reputation reward, with a minimum penalty of 1 reputation point.'],
-      ['Can I track more than one contract at the same time?', 'Yes. The rebuilt Journal allows tracking multiple jobs concurrently. Notifications appear exclusively for the tasks you have actively marked for tracking.'],
-      ['How often do contract boards and merchant jobs reset?', 'Job offerings rotate every 24 in-game hours or immediately after sleeping in a bed with a mattress. In Update 0.7.0, only beds equipped with mattresses allow sleeping to skip time.'],
-      ['What should I do after completing Nadja\'s main questline?', 'After completing Nadja\'s main questline, progression transitions into high-tier faction contracts and bunker exploration. Take on advanced military jobs from Volodymyr at the Crossroads annex, pursue Diplomat Raisa\'s follow-up truce jobs (which under Hotfix 0.7.2 can be accepted continuously without waiting for current tasks to clear), explore Subterranean Bunker Sector B-4 on its 3-hour reset cycle, and level up Trader Ranks for the 5% sell value bonus per rank.']
+      ['Where do I go after completing the Airplane Quest in Scavland?', 'The Airplane Quest (at the newly marked Crash Site) marks the current boundary of Early Access story content, representing approximately 80% completion of Act 1. After completing it, progression shifts into endgame loops: leveling up Trader Ranks for the 5% sell value bonus, mastering Dogface Rides fast travel routes, and farming subterranean Bunkers like Sector B-4.'],
+      ['How did Job rewards change in Update 0.8.17?', 'In Update 0.8.17, settlement food supply jobs pay 3x the money and 4x the reputation. Certain fetch and bandit hunt jobs had reputation rewards rebalanced, while Kill Squad givers like Yelena continue offering tasks continuously even after nearby hostile squads are eliminated.'],
+      ['How does automatic main quest tracking work in Update 0.8.17?', 'Main quests that begin immediately after completing another quest are now automatically tracked, displaying updated map hints and objective notifications without requiring manual Journal navigation.'],
+      ['What happens if my backpack is full when completing a quest?', 'Under Hotfix 0.8.8 and Update 0.8.17, dialogue rewards and Anatoly\'s Detector automatically drop on the ground at your feet if your backpack is full, preventing lost quest items.'],
+      ['Why are some items orange and others green in my inventory?', 'Quest Items are highlighted in orange to prevent accidental sale or disposal. Repeatable Job Items appear with green borders.']
     ],
     related: ['scavland-anomaly-scanner-and-artifacts', 'scavland-hospital-quest-and-medical-supplies', 'scavland-factions-progression-and-traders', 'scavland-factions-and-reputation', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland main quest', 'scavland main quest walkthrough', 'scavland main questline', 'scavland story quests', 'scavland quests', 'scavland contracts', 'scavland quest guide', 'scavland main quests', 'scavland raisa jobs', 'scavland storyline', 'scavland after nadja quest', 'scavland post main quest', 'scavland endgame loop', 'scavland dead mans rest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland nadja bounties', 'scavland contract reset', 'scavland orange quest items', 'scavland on the road quest'],
+    keywords: ['scavland main quest', 'scavland main quest walkthrough', 'scavland main questline', 'scavland story quests', 'scavland quests', 'scavland contracts', 'scavland quest guide', 'scavland main quests', 'scavland airplane quest', 'scavland where to go after airplane quest', 'scavland act 1 progress', 'scavland crash site quest', 'scavland job tracking', 'scavland anatoly jobs', 'scavland orange quest items', 'scavland on the road quest'],
     videoId: 'lmeGDw8lihw',
     videoTitle: 'Scavland Part 9 Catching Current',
     videoChannel: 'Zquietgamer'
@@ -822,39 +818,41 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-red-keycard-and-bunker-loot-recovery',
-    shortTitle: 'Red Keycard & Bunkers',
-    title: 'Scavland Bunker & Red Keycard Guide: Subterranean Vaults, Entrance Locations & Military Loot',
-    description: 'Complete Scavland bunker guide: subterranean bunker entrance locations in northwestern Zalesye, Red Keycard vault access, military loot respawn cycles, and emergency extract routes.',
+    shortTitle: 'Bunker Locations & Red Keycard',
+    title: 'Scavland Bunker Locations & Red Keycard Guide: Subterranean Vaults, Entrances & Reset Rules (Update 0.8.17)',
+    description: 'Complete Scavland bunker guide: subterranean bunker entrance locations, Red Keycard console access, Update 0.8.17 container reset rules, and military loot extraction.',
     category: 'Exploration',
     image: '/images/harvested/2026-10-06/bunker-von-svarog-short-stream/bunker-von-svarog-short-stream-gameplay.webp',
     imageAlt: 'A heavy blast door inside a Soviet subterranean bunker requiring a Red Keycard scanner',
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-06',
-    answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in <strong>Zalesye</strong>. The primary fortified complex, Subterranean Bunker <strong>Sector B-4</strong>, is situated in the rugged northwestern forest sector of <strong>Zalesye</strong> behind a concrete surface trench and steel blast bulkhead (cross-reference our [Zalesye Bunkers Map](/maps/) or [Sector B-4 Complex Guide](/guide/scavland-sector-b4-bunker-complex/)). Accessing the inner military armory requires the rare <strong>Red Keycard</strong> swiped at the security console. Behind the vault door lies Tier-3 military hardware: hybrid optics, titanium muzzle attachments, heavy Kevlar armor plates, and classified transmitter documents. Bunker armory containers and high-tier military loot reset 3 hours after leaving them (or across the in-game 24-hour day-night cycle upon safehouse sleep). For related combat preparations, check our [Starter Loadouts Guide](/guide/scavland-starter-loadouts-and-budget-builds/), [Weapons Arsenal](/weapons/), or [Sleep & World Reset Guide](/guide/scavland-sleep-and-world-reset-guide/).',
+    evidence: 'Official Steam announcements & community reports · Update 0.8.17 / 0.8.0',
+    updated: '2026-10-30',
+    answer: 'Subterranean Bunkers in Scavland represent the highest-risk, highest-yield extraction destinations in <strong>Zalesye</strong>. The primary fortified complex, Subterranean Bunker <strong>Sector B-4</strong>, is situated in the rugged northwestern forest sector of <strong>Zalesye</strong> behind a concrete surface trench and steel blast bulkhead (cross-reference our [Zalesye Bunkers Map](/maps/) or [Sector B-4 Complex Guide](/guide/scavland-sector-b4-bunker-complex/)). Accessing the inner military armory requires the rare <strong>Red Keycard</strong> swiped at the security console (not the physical door panel itself). In <strong>Update 0.8.17</strong>, developer NoShadow clarified bunker loot respawn mechanics: bunker containers no longer refill or change while you are inside a bunker—their contents refresh strictly when the bunker itself resets (following a 3-hour cooldown or safehouse mattress sleep).',
     steps: [
       '01 · Locate the Bunker B-4 Surface Entrance: Head into the northwestern <strong>Zalesye</strong> woods, following the overgrown railway spur toward the concrete drainage trench (verify coordinates on the [Zalesye Interactive Map](/maps/)). The entrance is marked by a reinforced blast doorway guarded by patrol sentries and irradiated puddles.',
-      '02 · Acquire the <strong>Red Keycard</strong>: The <strong>Red Keycard</strong> is a rare military security pass dropped by checkpoint commanders, found in hazardous radioactive zone airdrops, or awarded from Nadja\'s apex mutant extermination contracts. Store it in your safehouse stash until ready.',
-      '03 · Secure the Perimeter & Keycard Reader: Clear surface hostiles before descending the stairwell. Insert the Red Keycard into the glowing terminal reader; the mechanical vault door takes 15 seconds to cycle open while audible sirens sound.',
+      '02 · Acquire the Red Keycard & Check Durability: The <strong>Red Keycard</strong> carries 3 durability charges before burning out. It drops from checkpoint commanders, radioactive airdrops, or Nadja\'s apex mutant extermination contracts. Store it in your safehouse stash until fully geared.',
+      '03 · Swipe Keycard at Security Console (Not Door Panel): Clear surface hostiles before descending the stairwell. Swipe the Red Keycard at the electronic security console next to the bulkhead. The mechanical vault door takes 15 seconds to cycle open while audible sirens alert nearby hostiles.',
       '04 · Clear Subterranean Corridors & Sweep Vault Lockers: Advance through narrow concrete choke points with close-quarters weapons. Loot military crates containing high-tier attachments, ammunition, and rare electronics.',
-      '05 · Understand Bunker Reset Cooldowns (3 Hours / 24-Hour Sleep): Under Update 0.6.0 and Update 0.7.0, subterranean bunkers reset 3 hours after leaving them. Alternatively, advancing the 24-hour day-night cycle by sleeping in a safehouse bed triggers world container refreshes, allowing scavengers to plan repeatable farming runs.',
+      '05 · Master Bunker Container Refresh Rules (Update 0.8.17): In Update 0.8.17, bunker containers no longer refill or alter their loot tables while you remain inside the facility. Crate contents refresh strictly when the bunker itself completes its reset cycle (3 hours after departure, or upon a 24-hour safehouse sleep).',
       '06 · Use the Emergency Ventilation Extract: Avoid backtracking through the alarmed main entrance corridor where roaming patrols congregate. Climb the rear emergency ventilation shaft to extract quietly back to the surface.'
     ],
     facts: [
       ['Bunker Location & Entrance', 'Sector B-4 subterranean complex in northwestern Zalesye, accessed via concrete trench entrance'],
-      ['Vault Access Requirement', 'Red Keycard with 3 entry charges swiped at electronic console'],
-      ['Military Loot Reset', 'Bunkers reset 3 hours after leaving them (Update 0.6.0), or refresh on 24-hour safehouse sleep cycle'],
+      ['Vault Access Requirement', 'Red Keycard with 3 entry charges swiped at electronic security console (not door panel)'],
+      ['Update 0.8.17 Container Rule', 'Bunker containers do not refill or change while inside; refresh strictly upon full bunker reset'],
+      ['Loot Reset Cooldown', 'Bunkers reset 3 hours after leaving them (Update 0.6.0), or refresh on 24-hour safehouse sleep cycle'],
       ['Alarm & Defense Timer', 'Swiping keycard triggers a 15-second siren alert cycle that draws nearby sector hostiles'],
       ['Emergency Extraction', 'Rear ventilation hatch enables direct escape to the outer surface forest'],
-      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.7.0']
+      ['Verified Baseline', 'Official Steam announcements & community reports · Update 0.8.17 / 0.8.0']
     ],
     faq: [
-      ['Where is the subterranean bunker located in Scavland?', 'Subterranean Bunker Complex B-4 is located in northwestern <strong>Zalesye</strong>. Look for the concrete drainage trench and heavy steel blast door situated at the end of the overgrown rail line, or consult our [Zalesye Bunkers Map](/maps/).'],
-      ['How do bunker loot and crates respawn?', 'Under official mechanics introduced in Update 0.6.0 and stabilized in Update 0.7.0, bunkers reset 3 hours after leaving them. Additionally, sleeping in a safehouse bed advances the 24-hour world reset cycle, repopulating unlocked lockers and military crates.'],
-      ['Is the Red Keycard single-use or reusable?', 'In current builds, the Red Keycard possesses 3 durability charges, allowing 3 separate bunker vault entries before burning out.'],
-      ['What is the best weapon loadout for clearing subterranean bunkers?', 'Bring close-quarters shotguns with buckshot or high-penetration rifles along with a flashlight to handle dark narrow concrete corridors and sudden mutant ambushes.']
+      ['Where are bunker locations in Scavland?', 'The primary Subterranean Bunker Complex B-4 is located in northwestern Zalesye along the overgrown railway spur leading to a concrete drainage trench and reinforced blast door. Consult our [Zalesye Bunkers Map](/maps/) for exact map coordinates.'],
+      ['Where do I swipe the Red Keycard to open the red locked bunker door?', 'Swipe the Red Keycard at the glowing electronic security terminal console located beside the doorway, not directly on the red blast door panel. Swiping burns 1 of the keycard\'s 3 durability charges and triggers a 15-second siren alert.'],
+      ['Do bunker crates and containers respawn while I am inside?', 'No. In Update 0.8.17, developer NoShadow explicitly patched bunker containers so they no longer refill or change while you are inside a bunker. Their loot contents only refresh when the entire bunker resets (after a 3-hour cooldown or safehouse sleep).'],
+      ['How many times can I use the Red Keycard?', 'The Red Keycard possesses 3 charges. Each successful swipe at a bunker security console expends one charge.'],
+      ['What is the best weapon loadout for clearing subterranean bunkers?', 'Bring close-quarters shotguns (TOZ-34 or Borealis 12-TAK with Buckshot) and high-penetration rifles like the MK-47 or Mikhail 74u, along with flashlights for dark corridors.']
     ],
     related: ['scavland-sector-b4-bunker-complex', 'scavland-weapons-and-attachments', 'scavland-loot-and-scavenging', 'scavland-weapon-repair-and-durability', 'scavland-sleep-and-world-reset-guide'],
-    keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker entrance', 'scavland bunker b4', 'scavland no bunkers', 'scavland red keycard', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction'],
+    keywords: ['scavland bunker', 'scavland bunker location', 'scavland bunker locations', 'scavland bunker entrance', 'scavland bunker b4', 'scavland red keycard', 'scavland red locked bunkers', 'scavland bunker red door', 'scavland where are bunkers', 'scavland subterranean bunker', 'scavland bunker respawn', 'scavland bunker extraction'],
     videoId: 'Xbq3ZHQf1YE',
     videoTitle: 'Scavland How do you enter all the currently identified bunkers and secret bunkers?..',
     videoChannel: 'Game Detox Dopamine'
@@ -1882,81 +1880,41 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-best-weapons-tier-list',
-    shortTitle: "Weapons Tier List",
-    title: "Scavland Weapons Tier List: Best Firearms, Attachments & Damage Meta (Update 0.7.2)",
-    description: "Definitive Scavland weapon tier list: S-Tier assault rifles, BIS sniper rifles, high-stopping shotguns, attachment synergies, and Update 0.7.2 balance meta.",
+    shortTitle: "Weapons Tier List & Combos",
+    title: "Scavland Weapons Tier List & Best Loadout Combos: S-Tier Guns, Secondary Slot & Meta (Update 0.8.17)",
+    description: "Definitive Scavland weapon tier list and best loadout combos: S-Tier assault rifles, BIS sniper rifles, Update 0.8.17 compact secondary slot weapons, and shotgun close-range meta.",
     category: "Gear",
-    image: '/images/cards/card_2_weapons_gear.webp',
-    imageAlt: "Scavland weapon tier list ranking and modular firearm comparisons",
-    evidence: 'Official Steam announcements & community reports · Update 0.7.0',
-    updated: '2026-10-08',
-    answer: "Selecting the best firearm in Scavland depends on your combat engagement profile, ammunition availability, and target armor rating. Following sweeping combat overhauls in <strong>Update 0.7.0</strong> and <strong>Hotfix 0.7.2</strong>, rifle durability was doubled, effective range increased by <strong>+1 to +2 tiles</strong>, and the <strong>Leon 1895</strong> family received a massive <strong>+50% damage buff</strong>. Top-tier dominance is held by versatile platforms like the <strong>MK-47</strong> (reclassified to Basic tier for early availability), the long-range <strong>63 Dragoon</strong> designated marksman rifle, and the close-quarters <strong>TOZ-34</strong> 12-gauge shotgun loaded with heavy buckshot for shredding mutated predators.",
+    image: '/images/harvested/2026-10-31/best-weapon-combo/best-weapon-combo-gameplay.webp',
+    imageAlt: "Scavland weapon tier list, S-tier firearms, compact secondary slot weapons, and best weapon combos",
+    evidence: 'Official Steam announcements & community demonstrations · Update 0.8.17 / 0.8.0',
+    updated: '2026-10-30',
+    answer: "Selecting the best firearm combo in Scavland depends on your combat engagement profile, target armor rating, and secondary weapon slot synergy. In <strong>Update 0.8.17</strong>, developer NoShadow overhauled secondary weapon options: compact weapons—including <strong>SMGs</strong>, <strong>Bahadir 918</strong>, <strong>Bahadir 920</strong>, <strong>Mikhail 74u</strong>, <strong>PM1270</strong>, and <strong>Thread Cutter Short</strong>—can now fit directly in the secondary weapon slot even with stocks attached. Furthermore, shotguns gained a close-range bonus where each buckshot pellet adds <strong>+1 damage</strong> when all pellets hit the same target, and <strong>Cutter</strong> variants reduce AI hearing distance by <strong>84%</strong>. Top community meta loadouts pair heavy armor-shredding primaries (like the <strong>63 Dragoon</strong> DMR or <strong>MK-47</strong> in 7.62mm) with high-stagger crowd-clear secondaries (like the <strong>Borealis 12-TAK</strong> with drum magazine or compact <strong>Mikhail 74u</strong>).",
     steps: [
-      "01 \u00b7 S-Tier Primary: MK-47 & Mikhail 74U: The <strong>MK-47</strong> chambered in 7.62x39mm delivers unmatched armor penetration against armored scavengers and bandit sentries. Paired with a muzzle brake and extended magazine, it provides reliable stopping power at all ranges.",
-      "02 \u00b7 S-Tier Marksman / DMR: 63 Dragoon: For long-range perimeter clearing, the <strong>63 Dragoon</strong> DMR reigns supreme. Equipping a <strong>PSO-1</strong> optical scope enables precision headshots that drop human hostiles in 1-2 rounds well outside their 25m aggro radius.",
-      "03 \u00b7 A-Tier Mutant Defense: TOZ-34 & Saiga 12: High-threat mutants (like <strong>Tongue Monsters</strong> and <strong>Big Bears</strong>) possess heavy flesh health. The <strong>TOZ-34</strong> shotgun applies high-stagger buckshot damage, safely halting charging beasts before they grapple.",
-      "04 \u00b7 A-Tier Stealth Sidearm: PM Nikolay PB: The integrally suppressed <strong>PM Nikolay PB</strong> is essential for covert raids. Firing standard 9x18mm rounds, it eliminates solitary scouts with minimal audio ripple, preventing regional bandit alerts.",
-      "05 \u00b7 B-Tier Budget Workhorses: Leon 1895 & Bahadir 918: Following Update 0.6.2 and 0.7.0, the <strong>Leon 1895</strong> deals +50% projectile damage, making it a lethal budget hunting rifle. The <strong>Bahadir 918</strong> offers an impressive 15 shots per durability point.",
-      "06 \u00b7 Optimal Modding Strategy at the Workbench: Maximize ergonomics and horizontal recoil control first. Attaching an angled foregrip and tactical muzzle compensator tightens weapon sway by up to <strong>35%</strong>, ensuring rapid follow-up shots connect."
-],
+      "01 · S-Tier Primary Assault Rifles: MK-47 & Mikhail 74U: The <strong>MK-47</strong> chambered in 7.62x39mm delivers unmatched armor penetration against armored Gunners and bandit sentries. In Update 0.8.17, weapons with low Ergonomics and Handling respond faster with reduced accuracy bloom, making aggressive follow-up shots far more lethal.",
+      "02 · S-Tier Marksman & Sniper: 63 Dragoon: For long-range perimeter clearing, the <strong>63 Dragoon</strong> (7.62x54mmR) with a <strong>PSO-1</strong> optical scope drops armored targets in 1-2 precision rounds, well outside enemy AI detection radius.",
+      "03 · S-Tier Shotgun Close-Range Meta (Update 0.8.17): The <strong>TOZ-34</strong> and <strong>Borealis 12-TAK</strong> dominate mutant defense. In Update 0.8.17, shotguns deal bonus damage at close range when every buckshot pellet hits the same target (+1 damage per pellet, reduced by armor). Load Hollow Point Slugs for solitary beasts or Buckshot for swarms.",
+      "04 · Compact Weapons in Secondary Slot (Update 0.8.17): Take advantage of the secondary slot overhaul: SMGs, <strong>Bahadir 918</strong>, <strong>Bahadir 920</strong>, <strong>Mikhail 74u</strong>, <strong>PM1270</strong>, and <strong>Thread Cutter Short</strong> occupy reduced inventory space and can be equipped as sidearms with stocks attached (avoid over-length suppressors or extended tubes if space is tight).",
+      "05 · Community Best Loadout Combos: The consensus meta pairs a hard-hitting rifle with a rapid-clear secondary: (A) <strong>Borealis 12-TAK</strong> (drum mag with Buckshot/HP for creatures) + <strong>Mikhail 74u</strong> (loaded with AP for armored Gunners), or (B) <strong>63 Dragoon</strong> (suppressed long-range picks) + <strong>Borealis 12-TAK</strong> (emergency point-blank stops).",
+      "06 · Covert & Stealth Optimization: Cutter rifle variants reduce AI hearing distance by <strong>84%</strong>, while the integrally suppressed <strong>PM Nikolay PB</strong> eliminates scouts without triggering regional alert cones. Empty magazines now remember their ammo type, preserving AP rounds on sidearms automatically."
+    ],
     facts: [
-      [
-            "Top S-Tier Assault Rifle",
-            "MK-47 (7.62x39mm) \u2014 High armor penetration & durability"
-      ],
-      [
-            "Top S-Tier Sniper / DMR",
-            "63 Dragoon (7.62x54mmR) \u2014 1-2 shot kill range with PSO-1 scope"
-      ],
-      [
-            "Top S-Tier Shotgun",
-            "TOZ-34 (12-Gauge) \u2014 Maximum stagger against mutant chargers"
-      ],
-      [
-            "Top Stealth Sidearm",
-            "PM Nikolay PB (9x18mm) \u2014 Integrally suppressed silent takedowns"
-      ],
-      [
-            "Most Improved Weapon",
-            "Leon 1895 (+50% projectile damage in Update 0.7.0 / 0.6.2)"
-      ],
-      [
-            "Attachment Compatibility",
-            "Over 300 modular optics, stocks, grips, and muzzle devices"
-      ],
-      [
-            "Verified Baseline",
-            "Official Steam announcements & community reports · Update 0.7.0"
-      ]
-],
+      ["Secondary Slot Compact Weapons", "SMGs, Bahadir 918/920, Mikhail 74u, PM1270, and Thread Cutter Short fit secondary slot (Update 0.8.17)"],
+      ["Shotgun Close-Range Pellet Bonus", "Each buckshot pellet adds +1 damage when all pellets strike the same target (Update 0.8.17)"],
+      ["Cutter Audio Suppression", "Cutter variants reduce AI hearing distance by 84% (Update 0.8.17)"],
+      ["Magazine Ammo Memory", "Reloading an empty magazine prioritizes the ammunition type it last held (Hotfix 0.8.8)"],
+      ["Top S-Tier Sniper / DMR", "63 Dragoon (7.62x54mmR) — 1-2 shot kill range with PSO-1 scope"],
+      ["Top Close-Quarters Shotgun", "Borealis 12-TAK & TOZ-34 with high stagger and pellet bonus"],
+      ["Verified Baseline", "Official Steam announcements & community demonstrations · Update 0.8.17 / 0.8.0"]
+    ],
     faq: [
-      [
-            "What is the absolute best weapon in Scavland overall?",
-            "The MK-47 is widely regarded as the best overall weapon due to its heavy 7.62x39mm stopping power, broad attachment compatibility, and generous durability pool since Update 0.7.0."
-      ],
-      [
-            "Where can I find the 63 Dragoon sniper rifle?",
-            "The 63 Dragoon spawns in high-security military crates inside subterranean bunkers (such as Sector B-4) or can be bartered from Tier 2 Mechanist and Gunner merchants."
-      ],
-      [
-            "What is the best secondary weapon or sidearm (Best in Slot) in Scavland?",
-            "The Best in Slot (BIS) sidearm depends on tactical requirements: for stealth raids, the integrally suppressed PM Nikolay PB is unmatched as it avoids triggering audio ripples. For emergency stopping power and high durability, the Bahadir 918 / 920 delivers 15 shots per durability point (buffed in Update 0.7.0) with rapid semi-automatic fire, making it the most reliable backup when your primary rifle jams."
-      ],
-      [
-            "Are shotguns effective against armored human bandits?",
-            "Shotguns excel against unarmored mutants, but standard buckshot struggles against plate armor. Use high-penetration slug ammunition or switch to 7.62mm rifles for armored factions."
-      ],
-      [
-            "Did Update 0.7.0 nerf or buff weapons?",
-            "Update 0.7.0 delivered massive buffs: weapon durability per point roughly doubled, hard jam chances dropped to 33%, and weapons no longer explode above 30% condition."
-      ],
-      [
-            "What is the best budget gun for fresh spawns?",
-            "The Leon 1895 or standard Makarov sidearm. The Leon 1895 received a +50% damage boost, allowing scavengers to drop bandits cheaply without expensive weapon mods."
-      ]
-],
+      ["What is considered the BEST weapon combo in Scavland?", "The top community loadout meta is the Borealis 12-TAK (loaded with Buckshot or HP for mutants and rat swarms) paired with a compact Mikhail 74u (loaded with Armor-Piercing ammo for Gunners). Alternatively, players favor the 63 Dragoon for long-range single-shot picks paired with a Borealis 12-TAK or Bahadir 920 for close-range defense."],
+      ["Which weapons can fit in the secondary weapon slot in Update 0.8.17?", "In Update 0.8.17, compact weapons including SMGs, Bahadir 918, Bahadir 920, Mikhail 74u, PM1270, and Thread Cutter Short fit into the secondary weapon slot even with stocks attached, provided longer attachments like suppressors or extended tubes do not exceed inventory limits."],
+      ["How did shotguns change in Update 0.8.17?", "Shotguns now deal bonus damage at close range when every buckshot pellet connects with the same target. Each pellet contributes 1 additional damage (which is reduced by armor). AI shooters also benefit from this bonus."],
+      ["How does magazine ammo memory work in Scavland?", "Each magazine remembers its ammunition type. Reloading an empty magazine automatically prioritizes the last-used ammo (e.g. keeping your sidearm on AP while your primary rifle stays on FMJ)."],
+      ["What is the quietest stealth weapon in Update 0.8.17?", "The integrally suppressed PM Nikolay PB sidearm and Thread Cutter variants. In Update 0.8.17, Cutter variants explicitly reduce AI hearing distance by 84%, enabling silent takedowns without alerting nearby garrisons."]
+    ],
     related: ["scavland-weapons-and-attachments", "scavland-weapon-repair-and-durability", "scavland-starter-loadouts-and-budget-builds", "scavland-tactical-database-weapons-loot"],
-    keywords: ["scavland best weapons", "scavland weapon tier list", "scavland best secondary weapon", "scavland secondary weapon tier list", "scavland best sidearm", "scavland best guns", "scavland 63 dragoon", "scavland mk47", "scavland weapons meta"],
+    keywords: ["scavland best weapons", "scavland weapon tier list", "scavland best weapon combo", "scavland best secondary weapon", "scavland weapon loadout", "scavland best sidearm", "scavland best guns", "scavland 63 dragoon", "scavland mk47", "scavland weapons meta", "scavland secondary weapon slot", "best weapon combo scavland"],
     videoId: 'JQDdSAYkOkQ',
     videoTitle: "Scavland Ultimate Weapon - 63 Dragoon Item Location",
     videoChannel: "Game Detox Dopamine"
