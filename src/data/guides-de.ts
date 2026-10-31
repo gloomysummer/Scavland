@@ -105,32 +105,39 @@ export const deGuides: Guide[] = [
   {
     slug: 'scavland-vs-zero-sievert-comparison',
     category: 'Vergleich',
-    title: 'Scavland vs Zero Sievert: 7 zentrale Unterschiede für Hardcore-Survival-Fans',
-    shortTitle: 'Scavland vs Zero Sievert',
-    description: 'Direkter Systemvergleich zwischen Scavland und Zero Sievert: Ballistik, 300+ Waffenaufsätze, dynamischer Giftnebel und Mehrspieler-Roadmap.',
-    evidence: 'Vergleich auf Basis öffentlicher Informationen',
-    updated: '2026-09-07',
+    title: 'Zero Sievert vs Scavland Wiki: 7 Unterschiede, Waffen, Nebel & Koop',
+    shortTitle: 'Zero Sievert vs Scavland',
+    description: 'Detaillierter Vergleich für Zero Sievert & Scavland Spieler: Extraktions-Gameplay, 300+ Waffenaufsätze, Update 0.8.17 Zielsystem, giftiger Nebel und Koop-Roadmap.',
+    evidence: 'Vergleich auf Basis offizieller Steam Patchnotes (Update 0.8.17 / 0.8.0) & Community-Erfahrungen',
+    updated: '2026-10-31',
     image: '/images/screenshots/scavland_vs_zero_sievert.webp',
-    imageAlt: 'Vergleich Scavland vs Zero Sievert — 7 Kernunterschiede',
-    answer: 'Scavland bietet tiefere Waffenmodifikationen (<strong>300+ Teile</strong>), ein physikalisches Abprall- und Querschläger-System, dynamischen giftigen <strong>Nebel</strong> und eine offizielle <strong>Koop-Roadmap</strong>.',
+    imageAlt: 'Vergleich Scavland vs Zero Sievert — 7 Kernunterschiede und Waffen-Mechaniken',
+    answer: 'Für Fans von <strong>Zero Sievert</strong> bietet <strong>Scavland</strong> eine noch kompromisslosere Top-Down-Extraction-Erfahrung: Über <strong>300 modulare Waffenaufsätze</strong>, physikalischer Geschossabprall und Querschläger, ein dynamisch mit dem Wind ziehender <strong>toxischer Nebel</strong> und das in <strong>Update 0.8.17</strong> grundlegend überarbeitete Controller- und Fadenkreuz-Zielsystem heben das taktische Überleben auf ein neues Niveau.',
     steps: [
-      'Waffen-Baukasten: Scavland simuliert über 300 Anbauteile (<strong>Mündungsbremsen</strong>, <strong>Schäfte</strong>, Visiere, Magazine), die Rückstoß, Ergonomie und Mündungsfeuer spürbar verändern.',
-      'Wetteranomalien: Der Nebel in Scavland zieht physikalisch mit der Windrichtung über die Karte, statt statisch zu verharren.',
-      'KI-Verhalten: Feindliche Plünderer nutzen Deckungsfeuer, flankieren taktisch und kommunizieren per <strong>Funk</strong>.',
-      'Unterschlupf-Ausbau: Das <strong>Versteck</strong> bietet modulare Werkbänke zur <strong>Patronenherstellung</strong> und <strong>Wasseraufbereitung</strong>.'
+      '01 · Waffen-Baukasten & Modulares Tuning: Scavland simuliert über 300 Anbauteile (Mündungsbremsen, Schäfte, Visiere, Magazine). In Update 0.8.17 können kompakte Waffen wie MPs und die Mikhail 74u sogar mit montiertem Schaft im Sekundärslot getragen werden.',
+      '02 · Ballistik & Querschläger-Physik: Geschosse in Scavland prallen an hartem Beton oder Panzerplatten physikalisch ab. Schrotflinten erhalten in Update 0.8.17 auf kurze Distanz einen Nahkampfbonus (+1 Schaden pro Schrotkugel, wenn alle Pellets dasselbe Ziel treffen).',
+      '03 · Wetter & Dynamischer Giftnebel: Während Anomalien in Zero Sievert statisch verteilt sind, zieht der toxische Nebel in Scavland windgetrieben über Zalesye und erfordert taktische Gasmaskenfilter-Planung.',
+      '04 · Zielsystem & Steuerung (Update 0.8.17): Das Zielen mit Controller und Maus wurde durch anpassbare Fadenkreuz-Punkte (Aim Dot) und optimierte Ergonomie-Reaktionszeiten für Waffen mit geringem Handling modernisiert.',
+      '05 · KI-Taktik & Schleichen: Banditen und Gunner kommunizieren über Funk, flankieren aggressiv und suchen Deckung. Gewehrvarianten wie der Thread Cutter reduzieren das KI-Hörvermögen um 84%.',
+      '06 · Unterschlupf & Ressourcenkreislauf: Dauerhafter Unterschlupf-Ausbau mit modularen Werkbänken zur Munitionsherstellung, Wasseraufbereitung und medizinischer Triage.',
+      '07 · Koop-Roadmap & Zukunft: Während Zero Sievert rein auf Einzelspieler ausgelegt ist, befindet sich der Koop-Mehrspielermodus auf der offiziellen Early-Access-Roadmap von Scavland.'
     ],
     facts: [
-      ['Waffen-Modifikationen', 'Scavland: 300+ Teile | Zero Sievert: Basissystem'],
-      ['Ballistik-Modell', 'Scavland: Querschläger, Geschossabfall, Rüstungsdurchschlag'],
-      ['Koop-Modus', 'Scavland: Geplant in Early-Access-Roadmap'],
-      ['Grafikstil', 'Scavland: Moderner Pixel-Art mit dynamischer Beleuchtung'],
-      ['Fraktionen', 'Scavland: 10 eigenständige Fraktionen mit Rufsystem']
+      ['Waffen-Modifikationen', 'Scavland: 300+ modulare Teile | Zero Sievert: Festes Modsystem'],
+      ['Ballistik-Modell', 'Scavland: Querschläger, Penetration & Schrot-Nahkampfbonus (+1/Pellet)'],
+      ['Sekundärwaffen-Slot', 'Kompakte MPs, Bahadir 918/920 & Mikhail 74u passen mit Schaft (Update 0.8.17)'],
+      ['Zielsystem-Overhaul', 'Einstellbarer Aim Dot & verbesserte Controller-Steuerung (Update 0.8.17)'],
+      ['Nebel-Anomalie', 'Dynamisch windgetriebene toxische Wolken erfordern Gasmasken'],
+      ['Koop-Modus', 'Auf offizieller Scavland Early-Access-Roadmap geplant']
     ],
     faq: [
-      ['Lohnt sich Scavland für Zero-Sievert-Spieler?', 'Definitiv. Wer die Atmosphäre von <strong>Zero Sievert</strong> mag, findet in Scavland noch mehr taktische Tiefe und Realismus.'],
-      ['Welches Spiel ist schwerer?', 'Scavland verzeiht wegen des detaillierten Schadensmodells und <strong>Blutverlusts</strong> weniger Stellungsfehler.']
+      ['Lohnt sich Scavland für Spieler von Zero Sievert?', 'Ja, absolut. Wer die düstere postapokalyptische Atmosphäre und den Extraktions-Loop von Zero Sievert schätzt, erhält in Scavland tiefere ballistische Physik, 300+ Modifikationen und intensivere Feuergefechte.'],
+      ['Gibt es in Scavland oder Zero Sievert Multiplayer / Koop?', 'Zero Sievert ist ein reines Einzelspieler-Erlebnis. Für Scavland hat Entwickler NoShadow einen kooperativen Mehrspielermodus fest in der Early-Access-Roadmap verankert.'],
+      ['Welche Neuerungen bringt Update 0.8.17 für Taktik-Shooter-Fans?', 'Update 0.8.17 überarbeitet das Fadenkreuz mit anpassbarem Aim Dot, erlaubt das Tragen kompakter Langwaffen im Sekundärslot und fügt Schrotflinten einen verheerenden Nahkampf-Pellet-Bonus hinzu.'],
+      ['Welches Spiel ist schwerer zu meistern?', 'Scavland verzeiht wegen realistischer Status-Effekte (arterielle Blutungen, Knochenbrüche, Dehydrierungs-Lockouts) und unbarmherziger Schussfeld-Geometrie weniger Stellungsfehler.']
     ],
     related: ['scavland-beginner-guide', 'scavland-weapons-and-attachments', 'scavland-steam-deck-and-handheld-settings'],
+    keywords: ['zero sievert wiki', 'zero sievert scavland', 'scavland vs zero sievert', 'zero sievert tipps', 'spiele wie zero sievert', 'zero sievert multiplayer', 'top down extraction shooter wiki'],
     videoId: 'ETFXsWYOVlM',
     videoTitle: 'Top-Down Extraction Shooter Vergleich: Scavland & Zero Sievert (Oscar Mikey)',
     videoChannel: 'Oscar Mikey'
