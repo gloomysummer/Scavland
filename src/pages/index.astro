@@ -8,7 +8,7 @@ import AdSlot from '../components/AdSlot.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, scav lands game, scave land, scavland trainer, scavland mod, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
+<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, scav lands game, scave land, 스캐브랜드, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
   <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -16,11 +16,11 @@ const featured = guides.slice(0, 6);
         '@type': 'WebSite',
         '@id': 'https://scavland.wiki/#website',
         'name': 'Scavland Wiki',
-        'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database', 'Scavlands', 'Scav Land game', 'Scavland game', 'scav lands game', 'scave land', 'scavland steam', 'scavland game steam'],
+        'alternateName': ['Scav Land', 'Scav Land Guide', 'Scavland Database', 'Scavlands', 'Scav Land game', 'Scavland game', 'scav lands game', 'scave land', '스캐브랜드'],
         'url': 'https://scavland.wiki',
         'description': 'The definitive community Scavland Wiki: comprehensive survival guides, weapons, attachments, factions, maps, and extraction mechanics for Zalesye.',
         'inLanguage': 'en-US',
-        'dateModified': '2026-10-19T00:00:00Z',
+        'dateModified': '2026-10-31T00:00:00Z',
         'about': { '@id': 'https://scavland.wiki/#game' },
         'sameAs': [
           'https://store.steampowered.com/app/3373500/Scavland/',
@@ -67,10 +67,10 @@ const featured = guides.slice(0, 6);
         'mainEntity': [
           {
             '@type': 'Question',
-            'name': 'Are there official promo codes, trainers, or cheat console commands for the Scavland game?',
+            'name': 'Are there official promo redeem codes for the Scavland game?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Currently in Early Access Update 0.8.0 and Hotfix 0.8.8, there are no official promo codes enabled for the Scavland game. Verified offline debug launch parameters (-dev, -console) and safe single-player PC trainer utilities are documented in our Cheats & Trainer Guide.'
+              'text': 'Currently in Early Access, there are no official promo redeem codes or microtransaction redemption systems in Scavland. All progression, weapons, and attachments are earned through in-game scavenging, trading, and surviving extraction runs in Zalesye. Offline console parameters and diagnostic options are detailed in our dedicated guide.'
             }
           },
           {
@@ -363,8 +363,8 @@ const featured = guides.slice(0, 6);
     <div class="note" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem;background:var(--card-bg,#161616);border:1px solid var(--border-color,#333);padding:1.5rem;border-radius:8px;">
       <div>
         <span style="font-size:0.75rem;text-transform:uppercase;color:var(--accent,#ffaa00);font-weight:700;letter-spacing:1px;">Community Notice</span>
-        <h3 style="margin:0.35rem 0 0.5rem 0;color:#fff;">Scavland Codes, Cheats &amp; Trainer Status</h3>
-        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;margin:0;">While there are <strong>no promo redeem codes</strong> in Early Access, players can utilize Steam launch flags (<code>-dev</code>, <code>-console</code>), native Explorer Mode assists, or offline single-player PC memory trainers. Third-party memory tables require updated pointers for Update 0.7.0 / 0.7.2.</p>
+        <h3 style="margin:0.35rem 0 0.5rem 0;color:#fff;">Scavland Promo Codes &amp; Rewards Status</h3>
+        <p style="color:var(--text-muted,#aaa);font-size:0.95rem;margin:0;">There are <strong>no promo redeem codes</strong> or microtransactions in Early Access. All survival gear, weapons, and attachments must be scavenged or earned through contracts in Zalesye. For single-player console launch flags and diagnostic tools, see our dedicated guide.</p>
       </div>
       <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
         <a class="button" href="/guide/scavland-cheats-and-console-commands/" style="font-size:0.85rem;padding:0.4rem 0.8rem;">Cheats &amp; Trainer Guide →</a>

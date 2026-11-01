@@ -1218,6 +1218,7 @@ export const guides: Guide[] = [
       'scavland update 0.7.0',
       'scavland hotfix 0.7.1',
       'scavland hotfix 0.7.2',
+      'scavland 0.7.2',
       'scavland raisa jobs',
       'scavland stash expansion',
       'scavland 50000 rubles stash',
@@ -1884,10 +1885,10 @@ export const guides: Guide[] = [
     title: "Scavland Weapons Tier List & Best Loadout Combos: S-Tier Guns, Secondary Slot & Meta (Update 0.8.17)",
     description: "Definitive Scavland weapon tier list and best loadout combos: S-Tier assault rifles, BIS sniper rifles, Update 0.8.17 compact secondary slot weapons, and shotgun close-range meta.",
     category: "Gear",
-    image: '/images/harvested/2026-11-01/best-weapon-combo/best-weapon-combo-gameplay.webp',
+    image: '/images/harvested/2026-11-02/best-weapon-combo/best-weapon-combo-gameplay.webp',
     imageAlt: "Scavland weapon tier list, S-tier firearms, compact secondary slot weapons, and best weapon combos",
     evidence: 'Official Steam announcements & community demonstrations · Update 0.8.17 / 0.8.0',
-    updated: '2026-10-31',
+    updated: '2026-11-01',
     answer: "Selecting the best firearm combo in Scavland depends on your combat engagement profile, target armor rating, and secondary weapon slot synergy. In <strong>Update 0.8.17</strong>, developer NoShadow overhauled secondary weapon options: compact weapons—including <strong>SMGs</strong>, <strong>Bahadir 918</strong>, <strong>Bahadir 920</strong>, <strong>Mikhail 74u</strong>, <strong>PM1270</strong>, and <strong>Thread Cutter Short</strong>—can now fit directly in the secondary weapon slot even with stocks attached. Furthermore, shotguns gained a close-range bonus where each buckshot pellet adds <strong>+1 damage</strong> when all pellets hit the same target, and <strong>Cutter</strong> variants reduce AI hearing distance by <strong>84%</strong>. Top community meta loadouts pair heavy armor-shredding primaries (like the <strong>63 Dragoon</strong> DMR or <strong>MK-47</strong> in 7.62mm) with high-stagger crowd-clear secondaries (like the <strong>Borealis 12-TAK</strong> with drum magazine or compact <strong>Mikhail 74u</strong>).",
     steps: [
       "01 · S-Tier Primary Assault Rifles: MK-47 & Mikhail 74U: The <strong>MK-47</strong> chambered in 7.62x39mm delivers unmatched armor penetration against armored Gunners and bandit sentries. In Update 0.8.17, weapons with low Ergonomics and Handling respond faster with reduced accuracy bloom, making aggressive follow-up shots far more lethal.",
@@ -3019,7 +3020,7 @@ export const guides: Guide[] = [
       ]
 ],
     related: ["scavland-map-and-locations", "scavland-safehouses-and-fast-travel-guide", "scavland-patch-0-7-0-update-and-changes", "scavland-starter-loadouts-and-budget-builds"],
-    keywords: ["scavland arcadia", "scavland arcadia location", "scavland arcadia outpost", "scavland arcadia stash", "scavland map arcadia", "scavland east base"],
+    keywords: ["scavland arcadia", "scavland arcadia location", "scavland arcadia outpost", "scavland arcadia stash", "scavland map arcadia", "scavland east base", "camp arcadia", "camp arcadia 攻略", "scavland camp arcadia"],
     videoId: 'yG9k2NjxSWs',
     videoTitle: "We Found ARCADIA! Deep Into Bandit Territory | SCAVLAND",
     videoChannel: "Mr Feudal"
