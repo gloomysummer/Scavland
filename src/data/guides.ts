@@ -2648,77 +2648,86 @@ export const guides: Guide[] = [
   },
   {
     slug: 'scavland-toz34-shotgun',
-    shortTitle: "TOZ-34 Shotgun Guide",
-    title: "Scavland TOZ-34 Shotgun Guide: 12-Gauge Stats, Stagger & Mutant Defense",
-    description: "Definitive guide to the TOZ-34 over-under shotgun in Scavland: 12-gauge buckshot spread, bleed mechanics in Update 0.7.0, and mutant hunting tactics.",
+    shortTitle: "TOZ-34 Shotgun",
+    title: "TOZ-34 Shotgun Guide in Scavland: 12-Gauge Stats, Close-Range Pellet Bonus & Loadouts (Update 0.8.17)",
+    description: "Definitive TOZ-34 shotgun guide in Scavland: 12-gauge close-range pellet bonus (+1 damage per pellet in Update 0.8.17), bleed caps, staged reloads, and mutant defense.",
     category: "Gear",
     image: '/images/cards/card_2_weapons_gear.webp',
     imageAlt: "TOZ-34 double-barrel shotgun and 12-gauge ammunition shells in Scavland",
-    evidence: 'In-Game Shotgun Spread Testing & Update 0.7.0 Balance Notes',
-    updated: '2026-09-30',
-    answer: "When exploring claustrophobic Soviet corridors or clearing abandoned hospitals, no firearm provides greater stopping power than the iconic <strong>TOZ-34</strong> over-under double-barrel shotgun. Chambered in heavy <strong>12-gauge shells</strong>, the TOZ-34 delivers colossal close-quarters burst damage capable of neutralizing charging <strong>Hellhounds</strong> and staggering lethal <strong>Tongue Monsters (Lickers)</strong> before they can execute grapple maneuvers. In <strong>Update 0.7.0</strong>, shotgun balance was refined to cap bleed status at a maximum of <strong>one bleed effect per shot</strong> rather than stacking per pellet, reinforcing the TOZ-34 as an essential, high-reliability secondary defensive tool.",
+    evidence: 'Official Steam announcements & patch balance notes · Update 0.8.17 / 0.7.0',
+    updated: '2026-11-02',
+    answer: "When exploring claustrophobic Soviet corridors or clearing abandoned hospitals, no firearm provides greater stopping power than the iconic <strong>TOZ-34</strong> over-under double-barrel shotgun. Chambered in heavy <strong>12-gauge shells</strong>, the TOZ-34 delivers colossal close-quarters burst damage capable of neutralizing charging <strong>Hellhounds</strong> and staggering lethal <strong>Tongue Monsters (Lickers)</strong>. In <strong>Update 0.8.17</strong>, developer NoShadow introduced a major shotgun mechanic: shotguns now deal bonus damage at close range when every buckshot pellet hits the same target, with each pellet contributing <strong>+1 additional damage</strong> (reduced by armor). Combined with the bleed cap introduced in <strong>Update 0.7.0</strong> (maximum <strong>one bleed effect per shot</strong> rather than stacking per pellet) and staged reloads from <strong>Update 0.8.0</strong>, the TOZ-34 stands as an essential, high-reliability secondary defensive tool.",
     steps: [
-      "01 \u00b7 Understand High-Stagger Mechanics: Each 12-gauge blast fires a dense cluster of pellets that interrupts enemy attack animations, knocking beasts backward and creating space for tactical reloads.",
-      "02 \u00b7 Acquire from Starter Quests or Settlement Vendors: The TOZ-34 can be bought inexpensively from <strong>Anatoly</strong> in central <strong>Zalesye</strong> for under <strong>5,000 Rubles</strong>, making it the premier Day 1 emergency firearm.",
-      "03 \u00b7 Master the Double-Tap Trigger Technique: With two loaded barrels, fire a double-tap burst in rapid succession to instantly eliminate high-threat mutants before retreating behind doorways.",
-      "04 \u00b7 Swap Ammunition: Buckshot vs Slugs: Use standard <strong>12-gauge Buckshot</strong> against unarmored mutants and feral beasts. When entering bandit checkpoints, swap to <strong>12-gauge Slugs</strong> to punch through steel body armor.",
-      "05 \u00b7 Mitigate the 2-Round Capacity Limit: Because the TOZ-34 only holds 2 shells, bind the reload key to a comfortable mouse thumb button and practice stutter-stepping behind cover while reloading.",
-      "06 \u00b7 Maintain Clean Barrels with Glue and Gun Lube: Shotguns suffer minimal mechanical jam risk compared to automatic rifles, but maintaining condition above <strong>50%</strong> ensures maximum pellet velocity."
-],
+      "01 · Master Close-Range Pellet Bonus (Update 0.8.17): In Update 0.8.17, shotguns gain bonus damage at point-blank range when every buckshot pellet connects with the same target. Each pellet adds +1 damage (reduced by armor), allowing a single well-placed blast to disintegrate mutants.",
+      "02 · Understand High-Stagger Mechanics: Each 12-gauge blast fires a dense cluster of pellets that interrupts enemy attack animations, knocking beasts backward and creating space for tactical reloads.",
+      "03 · Acquire from Settlement Vendors or Barter: The TOZ-34 can be bought inexpensively from settlement vendors in central <strong>Zalesye</strong> for under <strong>5,000 Rubles</strong>, making it the premier Day 1 emergency firearm.",
+      "04 · Master the Double-Tap Trigger Technique: With two loaded barrels, fire a double-tap burst in rapid succession to instantly eliminate high-threat mutants before retreating behind doorways.",
+      "05 · Swap Ammunition: Buckshot vs Slugs: Use standard <strong>12-gauge Buckshot</strong> against unarmored mutants and feral beasts. When entering bandit checkpoints, swap to <strong>12-gauge Slugs</strong> to punch through steel body armor.",
+      "06 · Leverage Staged Reloads (Update 0.8.0): If an evasive roll interrupts your break-action reload, staged reload checkpoints preserve spent shell ejection so you don't restart from scratch.",
+      "07 · Maintain Clean Barrels with Glue and Gun Lube: Shotguns suffer minimal mechanical jam risk compared to automatic rifles, but maintaining condition above <strong>50%</strong> ensures maximum pellet velocity."
+    ],
     facts: [
       [
-            "Weapon Mechanism",
-            "Over-Under Double-Barrel Break Action Shotgun"
+        "Weapon Mechanism",
+        "Over-Under Double-Barrel Break Action Shotgun"
       ],
       [
-            "Ammunition Type",
-            "12-Gauge (Buckshot / Magnum / Heavy Slug)"
+        "Ammunition Type",
+        "12-Gauge (Buckshot / Magnum / Heavy Slug)"
       ],
       [
-            "Magazine Capacity",
-            "2 Shells (Instantaneous dual discharge capability)"
+        "Magazine Capacity",
+        "2 Shells (Instantaneous dual discharge capability)"
       ],
       [
-            "Bleed Cap Rule",
-            "Maximum 1 bleed effect per shot since Update 0.7.0"
+        "Close-Range Pellet Bonus",
+        "Each pellet adds +1 damage when all pellets hit the same target (Update 0.8.17)"
       ],
       [
-            "Best Role",
-            "Point-blank mutant defense and subterranean bunker clearance"
+        "Bleed Cap Rule",
+        "Maximum 1 bleed effect per shot since Update 0.7.0"
       ],
       [
-            "Barter Cost",
-            "Approximately 4,200 to 5,500 Rubles in early settlements"
+        "Best Role",
+        "Point-blank mutant defense and subterranean bunker clearance"
       ],
       [
-            "Verified Baseline",
-            "In-Game Shotgun Spread Testing & Update 0.7.0 Balance Notes"
+        "Barter Cost",
+        "Approximately 4,200 to 5,500 Rubles in early settlements"
+      ],
+      [
+        "Verified Baseline",
+        "Official Steam announcements & patch balance notes · Update 0.8.17 / 0.7.0"
       ]
-],
+    ],
     faq: [
       [
-            "Is the TOZ-34 shotgun effective against Tongue Monsters?",
-            "Yes! The heavy stagger from 12-gauge buckshot knocks Tongue Monsters out of their grapple windup, making it the most reliable counter to licker ambushes."
+        "How did shotguns change in Update 0.8.17?",
+        "In Update 0.8.17, shotguns deal bonus damage at close range when every buckshot pellet hits the same target. Each pellet contributes 1 additional damage (which is reduced by armor). AI shooters also benefit from this bonus."
       ],
       [
-            "Can the TOZ-34 be modded with optical sights?",
-            "The standard TOZ-34 features traditional iron bead sights, but tactical choke adapters can be attached at a workbench to tighten pellet spread."
+        "Is the TOZ-34 shotgun effective against Tongue Monsters?",
+        "Yes! The heavy stagger from 12-gauge buckshot knocks Tongue Monsters out of their grapple windup, making it the most reliable counter to licker ambushes."
       ],
       [
-            "What should I do if a mutant survives both shotgun barrels?",
-            "Immediately execute an evasive combat roll [Space / Right Stick] backward to open distance while executing a break-action reload."
+        "Can the TOZ-34 be modded with optical sights?",
+        "The standard TOZ-34 features traditional iron bead sights, but tactical choke adapters can be attached at a workbench to tighten pellet spread."
       ],
       [
-            "Are 12-gauge slugs better than buckshot in Scavland?",
-            "Buckshot is superior against soft mutant flesh; slugs are superior against human bandits wearing Tier 2 and Tier 3 ballistic armor vests."
+        "What should I do if a mutant survives both shotgun barrels?",
+        "Immediately execute an evasive combat roll [Space / Right Stick] backward to open distance while executing a break-action reload with staged reload support."
       ],
       [
-            "Where can I find cheap 12-gauge shells?",
-            "Physician Anna and settlement traders sell boxes of buckshot, or you can craft shells at your safehouse workbench using Gunpowder and Scrap Metal."
+        "Are 12-gauge slugs better than buckshot in Scavland?",
+        "Buckshot is superior against soft mutant flesh; slugs are superior against human bandits wearing Tier 2 and Tier 3 ballistic armor vests."
+      ],
+      [
+        "Where can I find cheap 12-gauge shells?",
+        "Settlement traders and medical supply vendors sell boxes of buckshot, or you can craft shells at your safehouse workbench using Gunpowder and Scrap Metal."
       ]
-],
+    ],
     related: ["scavland-weapons-and-attachments", "scavland-best-weapons-tier-list", "scavland-ammo-types-and-damage", "scavland-starter-loadouts-and-budget-builds"],
-    keywords: ["scavland toz 34", "scavland shotgun guide", "scavland 12 gauge", "scavland best shotgun", "scavland toz34 location", "scavland mutant defense weapon"],
+    keywords: ["toz 34 shotgun", "toz-34 shotgun", "toz 34", "scavland toz 34 shotgun", "toz 34 scavland", "scavland toz 34", "scavland shotgun guide", "scavland 12 gauge", "scavland best shotgun", "scavland mutant defense weapon"],
     videoId: 'uLK0n3hEfhk',
     videoTitle: "SCAVLAND | Bunker Didn't Stand a Chance Against This Loadout",
     videoChannel: "Confused Dango"

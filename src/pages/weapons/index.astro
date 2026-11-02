@@ -15,8 +15,8 @@ const categories = [
 ---
 
 <Layout 
-  title="Scavland Weapons Database — Ballistics, Attachments & Stats (Update 0.8.0 / Hotfix 0.8.8)" 
-  description="Complete Scavland weapons database: verified firearm damage, RPM, 300+ attachments, staged reloads, armor penetration rework, weapon inspect, and Hotfix 0.8.8 inventory stripping." 
+  title="Scavland Weapons & Ballistics Database: Stats, 300+ Attachments & Meta (Update 0.8.17)" 
+  description="Complete Scavland weapons database: verified firearm damage, RPM, 300+ attachments, Update 0.8.17 compact secondary slot rules, shotgun pellet bonus, staged reloads, and ballistics." 
   keywords="Scavland weapons, Scavland weapon, Scavland all weapons, Scavland attachments, firearms database, weapon stats, gun modification, ammo calibers, weapon repair, staged reload, armor penetration, Scavland wiki" 
   canonical="/weapons/"
 >
@@ -42,7 +42,7 @@ const categories = [
       <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px;">
         <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;">
           <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Update 0.8.0 &amp; Hotfix 0.8.8 Verified</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Early Access Update 0.8.17 &amp; Hotfix 0.8.8 Verified</span>
         </div>
         <a 
           href={`https://pinterest.com/pin/create/button/?url=${encodeURIComponent('https://scavland.wiki/weapons/')}&media=${encodeURIComponent('https://scavland.wiki/images/og-scavland.jpg')}&description=${encodeURIComponent('Scavland Complete Weapons & Attachments Tactical Database (Zalesye Arsenal)')}`}
@@ -56,7 +56,7 @@ const categories = [
       </div>
       <h1 class="page-title">Scavland Weapons &amp; Ballistics Database</h1>
       <p class="lede">Comprehensive field catalog of verified firearms, 300+ modular attachment configurations, ballistic penetration tiers, recoil profiles, and weapon maintenance in Zalesye.</p>
-      <span class="evidence">Evidence: Official Steam store page &amp; announcements · Update 0.8.0 / Hotfix 0.8.8</span>
+      <span class="evidence">Evidence: Official Steam store page &amp; announcements · Update 0.8.17 / Hotfix 0.8.8</span>
       <div style="margin: 1.25rem 0 0.5rem; padding: 0.75rem 1rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 6px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
         <span style="font-size: 0.85rem; color: var(--text-muted,#aaa);">Looking for body armor vests, plate carriers &amp; damage reduction?</span>
         <a href="/guide/scavland-armor-and-helmets-guide/" style="font-size: 0.82rem; color: var(--acid,#b9e86c); font-weight: 600; text-decoration: underline;">View Armor &amp; Helmets Guide →</a>
@@ -79,8 +79,9 @@ const categories = [
 
         <!-- Quick Summary Box -->
         <div class="quick-answer" style="margin-bottom:32px;">
-          <strong style="color:var(--acid);font-size:1.05rem;">Zalesye Ballistic &amp; Gunplay Core Rules (Update 0.8.0 &amp; Hotfix 0.8.8 Verified)</strong>
+          <strong style="color:var(--acid);font-size:1.05rem;">Zalesye Ballistic &amp; Gunplay Core Rules (Update 0.8.17 &amp; Hotfix 0.8.8 Verified)</strong>
           <ul style="margin:8px 0 0;padding-left:18px;line-height:1.7;color:var(--ink);">
+            <li><strong>Secondary Slot Overhaul &amp; Shotgun Buffs (Update 0.8.17):</strong> Compact firearms (SMGs, Bahadir 918, Bahadir 920, Mikhail 74u, PM1270, and Thread Cutter Short) fit into the secondary weapon slot even with stocks attached. Shotguns gain a close-range bonus where each buckshot pellet adds +1 damage when all strike the same target (reduced by armor). Cutter variants reduce AI hearing distance by 84%.</li>
             <li><strong>Staged Reloads &amp; Weapon Inspect (Update 0.8.0):</strong> Reloads play in stages—if interrupted by rolling, melee, holstering, or switching weapons, finished stages are preserved. Tap Y on PC or D-pad Down on gamepad to inspect weapons. Bolt and pump guns cycle 30% faster with automatic re-rack after interrupted actions.</li>
             <li><strong>Armor Penetration Overhaul (Update 0.8.0):</strong> AP rounds cut up to 50% armor (subtraction instead of scaling), covering all armored humans (Gunners 45%/40%, Mechanists/Palatines 20%/20%, Vultures 15%/15%, Bandits 10%/10%, Rada 10%/20%). HP rounds add 25% or 50% to target armor, making them ideal for unarmored mutants.</li>
             <li><strong>Inventory Part Stripping &amp; Ammo Memory (Hotfix 0.8.8):</strong> Unload, Remove Sight, and Remove Muzzle now function directly on guns inside containers, stashes, and corpses. Each magazine remembers its ammo type so reloads automatically refill matching calibers.</li>
