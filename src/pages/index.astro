@@ -8,7 +8,7 @@ import AdSlot from '../components/AdSlot.astro';
 import { guides } from '../data/guides';
 const featured = guides.slice(0, 6);
 ---
-<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, scav lands game, scave land, 스캐브랜드, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
+<Layout title="Scavland Wiki (Scav Land / Scavlands) — Tactical Guides, Weapons & Maps" description="The definitive community Scavland Wiki (Scav Land / Scavlands): verified survival guides, weapons & attachments, Zalesye bunker maps, repair tables, and extraction mechanics." keywords="Scavland Wiki, Scavland, Scav Land, Scavlands, Scav Land game, Scavland game, scav lands game, scave land, scavland mobile, 스캐브랜드, weapons, attachments, maps, bunkers, survival guide, extraction, factions, Mist, crafting, Steam Deck" canonical="/">
   <Fragment slot="schema"><script type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org',
     '@graph': [
@@ -95,6 +95,14 @@ const featured = guides.slice(0, 6);
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Scavland launched on Steam Early Access on September 4, 2026 for PC (Windows) and is fully playable on Steam Deck at 60 FPS. It is currently not available on Xbox Series X/S or Xbox Game Pass, though native Xbox controllers are fully supported on PC. See our dedicated Xbox Guide (/xbox/).'
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Scavland available on mobile (Android or iOS)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scavland is currently not natively available on mobile devices (Android or iOS) during Early Access, as it is a dedicated PC release on Steam with full Steam Deck optimization. However, players can stream Scavland to Android and iOS mobile devices using the official Steam Link mobile app or Moonlight, featuring complete gamepad glyph support and configurable touch controls.'
             }
           }
         ]
@@ -384,6 +392,7 @@ const featured = guides.slice(0, 6);
     <div class="prose">
       <p>Scavland is a hardcore top-down pixel art survival RPG set in Zalesye, a post-apocalyptic land devastated by war and the mysterious Mist. You play as a Vulture, a scavenger who survives by exploring dangerous locations, finding useful supplies, completing jobs, and fighting mutants and hostile survivors.</p>
       <p>Survival depends on preparation, careful combat, inventory management, trading, and knowing when to push deeper into the wasteland. The handcrafted open world includes abandoned settlements, bunkers, forests, irradiated swamps, factions, NPCs, quests, hidden locations, and dangerous underground areas.</p>
+      <p><strong>Platform &amp; Mobile Status:</strong> Scavland is exclusively available on PC (Windows) via Steam Early Access with 60 FPS Steam Deck optimization. While there is no native Android or iOS app, mobile players can stream full gameplay to smartphones and tablets via the official Steam Link mobile app with full controller and touch support.</p>
     </div>
     <div class="hero-actions">
       <a class="button" href="/guide/">Explore all guides</a>
