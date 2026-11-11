@@ -1,0 +1,17 @@
+# GSC 90 天有展示/点击的未翻译 slug（按展示量降序，2026-11-11 扫描）。
+# 只有名单内的缺失页会生成 301 规则 —— Cloudflare Pages 只认前 ~100 条规则。
+scavland-anomaly-scanner-and-artifacts
+scavland-merchant-prices-and-barter-guide
+scavland-coop-and-multiplayer-mechanics
+scavland-starter-loadouts-and-budget-builds
+scavland-tactical-database-weapons-loot
+scavland-map-and-locations
+scavland-red-keycard-and-bunker-loot-recovery
+scavland-explorer-mode-and-campfire-healing
+scavland-factions-progression-and-traders
+scavland-hospital-quest-and-medical-supplies
+scavland-night-survival-and-stealth-mechanics
+scavland-mist
+scavland-russian-language-and-font-fix
+scavland-early-access-launch-faq-and-roadmap
+scavland-loot-and-scavenging

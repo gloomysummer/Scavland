@@ -6,11 +6,11 @@
 /ru/guide/scavland-anomaly-scanner-and-artifacts/ 前 30 天还有 36 次点击），
 404 等于把已经积累的信号扔掉。统一 301 到英文对应页。
 
-另一个实测约束（2026-11-11）：Cloudflare Pages 只认 _redirects 里前 ~100 条规则，
-超出的会被静默忽略。所以本脚本额外做两件事：
-  1. 每个 slug 只写一条规则（不带结尾斜杠），不再成对写两遍；
-  2. 对手写段落里「仅差结尾斜杠」的重复项去重，腾出配额。
-规则顺序保持：手写段落原样在前，生成块在最后（`--sort` 可把源路径按字典序排）。
+另一个实测约束（2026-11-11 部署验证）：Cloudflare Pages 只认 _redirects 里前 ~100 条
+规则，超出的被静默忽略；且带/不带结尾斜杠要各写一条（不会互相兜底）。
+所以配额按「GSC 有信号的 slug 优先」分配：scripts/locale-fallback-priority.txt
+里列出的 slug（一行一个，按展示量排序）生成成对规则；不在名单里的缺失 slug
+保持 404（它们在 GSC 里没有展示，留着 404 不损失任何信号）。
 
 用法：
     python3 scripts/gen_locale_fallbacks.py          # 打印到 stdout
@@ -24,6 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 BEGIN = "# >>> locale-fallback (generated) >>>"
 END = "# <<< locale-fallback <<<"
 LOCALES = ["ru", "de", "ja"]
+DUAL_VARIANTS = 8   # 名单前 N 个 slug 写「带+不带斜杠」两条；其余只写带斜杠的一条
 
 
 def slugs(path: Path) -> set:
@@ -60,19 +61,28 @@ def parse_rules(text: str):
 
 def build_block(existing_rules: set) -> str:
     en = slugs(ROOT / "src/data/guides.ts")
+    prio_file = ROOT / "scripts/locale-fallback-priority.txt"
+    priority = [l.strip() for l in prio_file.read_text(encoding="utf-8").splitlines()
+                if l.strip() and not l.startswith("#")]
     out = [BEGIN,
            "# 未翻译的本地化 URL 一律 301 到英文对应页，避免 404 丢掉已积累的展示与点击。",
-           "# 每个 slug 一条（Cloudflare Pages 会处理结尾斜杠变体）。",
+           "# Cloudflare Pages 只认前 ~100 条规则，且带/不带斜杠要各写一条（不互相兜底）。",
+           "# 配额分配：名单前 DUAL_VARIANTS 个 slug 写双变体，其余只写带斜杠变体",
+           "#（GSC 里出现过的 canonical URL 全部带斜杠，这是必须保住的）。",
            "# 由 scripts/gen_locale_fallbacks.py 生成，不要手改。"]
     added = 0
     for loc in LOCALES:
-        missing = sorted(en - slugs(ROOT / f"src/data/guides-{loc}.ts"))
-        for slug in missing:
-            src = f"/{loc}/guide/{slug}"
-            if src in existing_rules:
-                continue
-            out.append(f"{src}   /guide/{slug}/   301")
-            added += 1
+        missing = [s for s in priority if s in en and s not in slugs(ROOT / f"src/data/guides-{loc}.ts")]
+        for idx, slug in enumerate(missing):
+            dst = f"/guide/{slug}/"
+            variants = [f"/{loc}/guide/{slug}/"]
+            if idx < DUAL_VARIANTS:
+                variants.insert(0, f"/{loc}/guide/{slug}")
+            for src in variants:
+                if src in existing_rules:
+                    continue
+                out.append(f"{src}   {dst}   301")
+                added += 1
     out.append(END)
     return "\n".join(out) + "\n", added
 
