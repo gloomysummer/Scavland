@@ -1,0 +1,275 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AdSlot from '../../../components/AdSlot.astro';
+
+// 本页定位：/maps/ 的「地图本体」子页。
+// - /maps/           = 地图总目录（区域概览 + 四个前哨 + 掩体摘要）
+// - /maps/zalesye/   = 本页：把 Zalesye 当作一张「可读的地图」来用（区域分区图 + 据点方位 + 区域到据点的对应）
+// - /guide/scavland-map-and-locations/ = 流程式攻略（走位、目标、任务线），不抢本页的词
+// 数据来源：本页所有区域/危险等级/掉落/据点方位，均取自已上线内容（/maps/ 与 Update 0.7.0/0.8.17 事实基线），未新增未经证实的坐标。
+
+const sectors = [
+  { name: 'Zalesye Central Village', dir: 'Center', danger: 'Safe', color: '#4ade80', loot: 'Vendors · Gunsmith · Safehouse bed', nearest: '—', bring: 'Nothing. Bank loot and restock here.' },
+  { name: 'Farm M12', dir: 'South-west of the village', danger: 'Low', color: '#86efac', loot: 'Food caches · Seeds · Farm tools', nearest: 'Arcadia Outpost (west)', bring: 'Empty backpack. Long sightlines, thin patrols.' },
+  { name: 'Lumber Mill South', dir: 'South', danger: 'Moderate', color: '#facc15', loot: 'Heavy timber · Mechanical scrap · Toolboxes', nearest: 'Mudlark Camp (south marsh)', bring: 'A sidearm for mid-range raiders.' },
+  { name: 'Burned Village', dir: 'West, past the fields', danger: 'Moderate', color: '#facc15', loot: 'Residential salvage · Hardware · Electrical boards', nearest: 'Arcadia Outpost (west)', bring: 'Nothing exotic — spawn cap is 1 Big Rat since 0.7.0.' },
+  { name: 'Swamp Crossing', dir: 'Far south', danger: 'High', color: '#f87171', loot: 'Anomalous sludge · Biological samples · Military footlockers', nearest: 'Mudlark Camp (south marsh)', bring: 'Anti-rad meds, clean filters. Sprint is slowed in mud.' },
+  { name: 'Hospital Beds & Yefim Cemetery', dir: 'North-east', danger: 'Severe', color: '#ef4444', loot: 'Advanced medical supplies · Surgical kits · High-tier stash', nearest: 'Microrayion Outpost (east ruins)', bring: 'Gas mask + anti-rad medicine. Dense contamination.' },
+  { name: 'Railway Embankment & B-4 Approach', dir: 'North-west', danger: 'Severe', color: '#ef4444', loot: 'Bunker access · Patrol sentries · Rad puddles', nearest: 'Mechanist Base (north-central)', bring: 'Red Keycard before you commit to the approach.' },
+  { name: 'Subterranean Bunker B-4', dir: 'North-west, beyond the embankment', danger: 'Extreme', color: '#ef4444', loot: 'Military weapon crates · Attachments · Flux Aspect Cores', nearest: 'Mechanist Base (north-central)', bring: 'Gas mask at 80%+ filter charge. 3-hour container reset.' }
+];
+
+const outposts = [
+  { name: 'Arcadia Outpost', dir: 'West', serves: 'Farm M12, Burned Village', note: 'Crafting station + 1-tab stash for western salvage runs.' },
+  { name: 'Mechanist Base', dir: 'North-central', serves: 'Railway embankment, B-4 approach', note: 'Workbench hub — repair and re-mod before entering the bunker.' },
+  { name: 'Mudlark Camp', dir: 'South marsh', serves: 'Lumber Mill South, Swamp Crossing', note: 'Stilt camp above the marsh; stash anti-rad supplies here.' },
+  { name: 'Microrayion Outpost', dir: 'East ruins', serves: 'Hospital, cemetery, apartment blocks', note: 'Overwatch position for the eastern residential grid.' }
+];
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Scavland Wiki', item: 'https://scavland.wiki/' },
+    { '@type': 'ListItem', position: 2, name: 'Map & Tactical Cartography', item: 'https://scavland.wiki/maps/' },
+    { '@type': 'ListItem', position: 3, name: 'Zalesye Map', item: 'https://scavland.wiki/maps/zalesye/' }
+  ]
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Scavland Interactive Map — Zalesye Sectors, Outposts & Routes',
+  description: 'Annotated Scavland map of the Zalesye exclusion sector: hazard tier, loot table and nearest forward outpost for every zone.',
+  url: 'https://scavland.wiki/maps/zalesye/',
+  inLanguage: 'en-US',
+  isPartOf: { '@type': 'WebSite', name: 'Scavland Wiki', url: 'https://scavland.wiki/' },
+  about: { '@type': 'VideoGame', name: 'Scavland', url: 'https://store.steampowered.com/app/3373500/Scavland/' }
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is there an interactive map for Scavland?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Scavland ships with an in-game Journal map (default key M) that shows your coordinates and sector borders, but no browser-based interactive map with live player position. This page reproduces the Zalesye layout sector by sector: hazard tier, loot table, the nearest forward outpost and what to carry into each zone.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Which outpost is closest to each Zalesye sector?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Arcadia Outpost covers the west (Farm M12 and Burned Village). Mechanist Base covers the north-central rail corridor and the B-4 bunker approach. Mudlark Camp covers the southern marsh (Lumber Mill South and Swamp Crossing). Microrayion Outpost covers the eastern ruins, the hospital and Yefim Cemetery.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'How big is the Scavland map?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Since Early Access the Zalesye world map expanded roughly three times in scale, adding paved road networks, faction-controlled outposts and hazardous border zones. The playable area is ringed by sandbag borders that block movement while enemies keep line of sight across them.'
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Scavland Interactive Map: Zalesye Sectors & Outposts"
+  description="Annotated Scavland map of Zalesye: every sector's hazard tier, loot table and nearest forward outpost, plus the route into the B-4 bunker approach."
+  keywords="scavland interactive map, scavland map, zalesye map, scavland map zalesye, scavland sectors, scavland outposts, scavland map locations, scavland world map"
+  canonical="/maps/zalesye/"
+>
+  <Fragment slot="schema">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <article class="article-shell">
+    <nav class="breadcrumbs" aria-label="Breadcrumb" style="font-size:0.82rem;color:var(--text-muted,#888);margin-bottom:1.25rem;display:flex;flex-wrap:wrap;gap:0.4rem;align-items:center;">
+      <a href="/" style="color:var(--acid,#b9e86c);text-decoration:none;font-weight:600;">Scavland Wiki</a>
+      <span style="opacity:0.4;">/</span>
+      <a href="/maps/" style="color:var(--muted,#aaa);text-decoration:none;">Map</a>
+      <span style="opacity:0.4;">/</span>
+      <span style="color:#bbb;">Zalesye</span>
+    </nav>
+
+    <header class="article-header">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;background:rgba(185,232,108,0.1);border:1px solid var(--acid,#b9e86c);border-radius:4px;margin-bottom:12px;">
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acid,#b9e86c);"></span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--acid,#b9e86c);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Zalesye Sector Map · Update 0.8.17 baseline</span>
+      </div>
+      <h1 class="page-title">Scavland Interactive Map — Zalesye Sectors, Outposts &amp; Routes</h1>
+      <p class="lede">There is no browser-based live map for Scavland, so this page does the next useful thing: it turns Zalesye into a readable layout. Each sector is listed with its hazard tier, what it actually drops, which of the four forward outposts is nearest, and what to carry in. Use it to plan a run before you open the in-game Journal map (M).</p>
+      <span class="evidence">Evidence: Official Steam announcements &amp; community reports · Update 0.7.0 → 0.8.17</span>
+    </header>
+
+    <div class="article-layout">
+      <div class="article-content">
+
+        <!-- 分区示意图：依各区域与据点的方位描述绘制，非游戏内坐标 -->
+        <h2 id="layout">Zalesye sector layout at a glance</h2>
+        <p style="color:var(--muted);margin-bottom:14px;">Schematic, not a coordinate-accurate minimap: positions below follow the direction each zone and outpost is described in relative to the central village. Read it as "what is next to what", not as a GPS grid.</p>
+
+        <div style="position:relative;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,auto);gap:8px;margin:0 0 12px;padding:14px;background:#101613;border:1px solid var(--line);border-radius:8px;">
+          <div style="grid-area:1/1;padding:10px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.35);border-radius:5px;font-size:0.78rem;">
+            <div style="color:#f87171;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">North-west</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Railway embankment</strong>
+            <span style="color:var(--muted);">B-4 approach · patrol sentries</span>
+          </div>
+          <div style="grid-area:1/2;padding:10px;background:rgba(24,32,28,0.9);border:1px solid var(--line);border-radius:5px;font-size:0.78rem;">
+            <div style="color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">North-central</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Mechanist Base</strong>
+            <span style="color:var(--muted);">Workbench hub</span>
+          </div>
+          <div style="grid-area:1/3;padding:10px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.35);border-radius:5px;font-size:0.78rem;">
+            <div style="color:#f87171;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">North-east</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Hospital &amp; Yefim Cemetery</strong>
+            <span style="color:var(--muted);">Medical loot · heavy contamination</span>
+          </div>
+          <div style="grid-area:2/1;padding:10px;background:rgba(185,232,108,0.07);border:1px solid rgba(185,232,108,0.3);border-radius:5px;font-size:0.78rem;">
+            <div style="color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">West</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Arcadia Outpost</strong>
+            <span style="color:var(--muted);">Farm M12 · Burned Village</span>
+          </div>
+          <div style="grid-area:2/2;padding:12px;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.5);border-radius:5px;font-size:0.8rem;text-align:center;">
+            <div style="color:#4ade80;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">Center</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Zalesye Central Village</strong>
+            <span style="color:var(--muted);">Vendors · Safehouse · Stash upgrades</span>
+          </div>
+          <div style="grid-area:2/3;padding:10px;background:rgba(185,232,108,0.07);border:1px solid rgba(185,232,108,0.3);border-radius:5px;font-size:0.78rem;">
+            <div style="color:var(--acid);font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">East</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Microrayion Outpost</strong>
+            <span style="color:var(--muted);">Residential ruins · apartment blocks</span>
+          </div>
+          <div style="grid-area:3/1;padding:10px;background:rgba(250,204,21,0.07);border:1px solid rgba(250,204,21,0.3);border-radius:5px;font-size:0.78rem;">
+            <div style="color:#facc15;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">South-west</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Farm M12</strong>
+            <span style="color:var(--muted);">Food · seeds · open fields</span>
+          </div>
+          <div style="grid-area:3/2;padding:10px;background:rgba(250,204,21,0.07);border:1px solid rgba(250,204,21,0.3);border-radius:5px;font-size:0.78rem;">
+            <div style="color:#facc15;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">South</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Lumber Mill South</strong>
+            <span style="color:var(--muted);">Timber · scrap · toolboxes</span>
+          </div>
+          <div style="grid-area:3/3;padding:10px;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.35);border-radius:5px;font-size:0.78rem;">
+            <div style="color:#f87171;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;text-transform:uppercase;">Far south</div>
+            <strong style="color:#fff;display:block;margin:2px 0 3px;">Swamp Crossing</strong>
+            <span style="color:var(--muted);">Sludge · bio samples · slowed sprint</span>
+          </div>
+        </div>
+        <p style="font-size:0.78rem;color:var(--muted);margin:0 0 26px;">Mudlark Camp sits south of the marsh belt and is the staging point for both southern zones. The B-4 bunker itself is underground, entered from the north-western trench beyond the embankment.</p>
+
+        <AdSlot slot="banner-728x90" label="Sponsored Recon" />
+
+        <!-- 区域表 -->
+        <h2 id="sectors">Every Zalesye sector: hazard, loot, nearest outpost</h2>
+        <p style="color:var(--muted);margin-bottom:14px;">Sort your next run by what you actually need. If the loot column matches your shopping list, the hazard tier tells you how much kit to bring, and the outpost column tells you which stash you can dump into on the way back.</p>
+
+        <div class="table-responsive" style="overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 26px;">
+          <table class="facts" style="--table-accent: #b9e86c;width:100%;">
+            <thead>
+              <tr>
+                <th style="text-align:left;">Sector</th>
+                <th style="text-align:left;">Where</th>
+                <th style="text-align:left;">Hazard</th>
+                <th style="text-align:left;">What it drops</th>
+                <th style="text-align:left;">Nearest outpost</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sectors.map((s) => (
+                <tr>
+                  <td style="font-weight:600;color:#fff;">{s.name}</td>
+                  <td style="color:var(--muted);font-size:0.85rem;">{s.dir}</td>
+                  <td><span style={`color:${s.color};font-family:'IBM Plex Mono',monospace;font-size:0.78rem;font-weight:600;`}>{s.danger}</span></td>
+                  <td style="font-size:0.85rem;">{s.loot}</td>
+                  <td style="font-size:0.85rem;">{s.nearest}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 据点 -->
+        <h2 id="outposts">Four outposts and the ground each one covers</h2>
+        <p style="color:var(--muted);margin-bottom:14px;">Update 0.7.0 gave all four camps a crafting station and a one-tab stash. The stashes are independent of the village stash, so pick the camp that sits next to where you are farming — not the one that sits next to your base.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:26px;">
+          {outposts.map((o) => (
+            <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:14px;">
+              <div style="font-size:0.66rem;font-family:'IBM Plex Mono',monospace;color:var(--accent,#b9e86c);text-transform:uppercase;margin-bottom:3px;">{o.dir}</div>
+              <h3 style="margin:0 0 6px;font-size:1.02rem;color:#fff;">{o.name}</h3>
+              <div style="font-size:0.76rem;color:var(--muted);font-family:'IBM Plex Mono',monospace;margin-bottom:7px;">Covers: {o.serves}</div>
+              <p style="font-size:0.83rem;color:var(--ink);line-height:1.5;margin:0;">{o.note}</p>
+            </div>
+          ))}
+        </div>
+
+        <!-- 进区清单 -->
+        <h2 id="loadout">What to carry into each hazard tier</h2>
+        <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:26px;">
+          <ul style="margin:0;padding-left:18px;line-height:1.8;color:var(--ink);font-size:0.9rem;">
+            <li><strong>Low (Farm M12):</strong> empty bag and nothing else. Long sightlines, thin patrol density, no filter needed.</li>
+            <li><strong>Moderate (Lumber Mill South, Burned Village):</strong> a sidearm for mid-range raiders. Burned Village spawns were capped at 1 Big Rat in 0.7.0, so it is no longer a swarm zone.</li>
+            <li><strong>High (Swamp Crossing):</strong> anti-rad meds and clean filters. Mud slows sprint, and Sucker spit was reduced roughly 30% in 0.7.0 — it is survivable, not free.</li>
+            <li><strong>Severe (Hospital &amp; Yefim Cemetery, railway approach):</strong> gas mask plus anti-rad medicine. Do not start the north-western approach without a Red Keycard already in the bag.</li>
+            <li><strong>Extreme (Bunker B-4):</strong> 80%+ gas mask filter charge, shotgun for the flooded lower decks, and a plan for the 3-hour container reset — crates only refresh once the facility finishes its cycle.</li>
+          </ul>
+        </div>
+
+        <AdSlot slot="banner-300x250" label="Sponsored Recon" />
+
+        <!-- 导航规则 -->
+        <h2 id="navigation">How the map actually behaves</h2>
+        <div style="background:#121a16;border:1px solid var(--line);border-radius:6px;padding:18px;margin:26px 0;">
+          <ul style="margin:0;padding-left:18px;line-height:1.8;color:var(--ink);font-size:0.9rem;">
+            <li><strong>In-game map is the Journal (M).</strong> It shows your coordinates and sector borders. This page is the planning layer on top of it — nothing here replaces the in-game map for live position.</li>
+            <li><strong>World border sandbags block you, not them.</strong> Sandbag walls stop your movement but enemies keep line of sight across them. Do not treat the border as cover.</li>
+            <li><strong>Spiked barricades sit on the main road choke points</strong> (added 0.7.0). Route around them instead of pushing through — puncture damage adds up silently.</li>
+            <li><strong>Sleeping requires a mattress bed.</strong> For long northern runs, plan the return leg around a mattress, not a bare frame. Campfires give doubled passive healing in the field.</li>
+          </ul>
+        </div>
+
+        <h2 id="faq">Questions this map answers</h2>
+        <div style="margin-bottom:26px;">
+          <details style="border-bottom:1px solid var(--line);padding:10px 0;">
+            <summary style="cursor:pointer;font-weight:600;color:#fff;">Is there a real interactive map for Scavland?</summary>
+            <p style="margin:8px 0 0;font-size:0.9rem;color:var(--ink);">No browser-based live map exists. The game ships an in-game Journal map (M) with your position and sector borders. This page is the static planning version: layout, hazard tiers, loot and nearest outpost per zone.</p>
+          </details>
+          <details style="border-bottom:1px solid var(--line);padding:10px 0;">
+            <summary style="cursor:pointer;font-weight:600;color:#fff;">Which outpost should I use for the bunker run?</summary>
+            <p style="margin:8px 0 0;font-size:0.9rem;color:var(--ink);">Mechanist Base. It is the north-central workbench hub, so you can repair and re-mod before the north-western approach, and dump overflow into a local stash on the way back.</p>
+          </details>
+          <details style="padding:10px 0;">
+            <summary style="cursor:pointer;font-weight:600;color:#fff;">Where do I get coordinates for the bunker entrance?</summary>
+            <p style="margin:8px 0 0;font-size:0.9rem;color:var(--ink);">The entrance sits north-west of the village past the railway embankment, at a concrete drainage trench behind a reinforced blast door. Step-by-step approach and keycard sourcing are in our <a href="/guide/scavland-red-keycard-and-bunker-loot-recovery/" style="color:var(--accent,#b9e86c);">bunker locations &amp; Red Keycard guide</a>.</p>
+          </details>
+        </div>
+
+        <div class="related-grid">
+          <a href="/maps/"><strong>Map Hub</strong><br/>Outpost stashes, bunker summary and the full sector directory</a>
+          <a href="/guide/scavland-map-and-locations/"><strong>Map &amp; Locations Walkthrough</strong><br/>Route-by-route navigation with outpost coordinates</a>
+          <a href="/guide/scavland-red-keycard-and-bunker-loot-recovery/"><strong>Bunker Locations &amp; Red Keycard</strong><br/>Entrance approach, keycard sources, 3-hour reset rules</a>
+          <a href="/guide/scavland-safehouses-and-fast-travel-guide/"><strong>Safehouses &amp; Fast Travel</strong><br/>Where you can sleep, and how travel actually works</a>
+        </div>
+      </div>
+
+      <aside class="toc" aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#layout">Sector layout</a>
+        <a href="#sectors">Sector table</a>
+        <a href="#outposts">Four outposts</a>
+        <a href="#loadout">Loadout by tier</a>
+        <a href="#navigation">Map behaviour</a>
+        <a href="#faq">FAQ</a>
+      </aside>
+    </div>
+  </article>
+</Layout>
